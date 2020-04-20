@@ -2177,7 +2177,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             MessageData msg = new MessageData();
             try
             {
-               
+                var savedt = new Gallery_menu_upper();
                 var check_electexistornot = luminous.UsersLists.Where(c => c.UserId == user_id && c.isActive == 1).Count();
 
 
