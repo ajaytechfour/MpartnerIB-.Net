@@ -398,6 +398,8 @@
     <Compile Include="MpartnerIB_Api\Model\Catalog_Menu_Upper.cs" />
     <Compile Include="MpartnerIB_Api\Model\ContactUs.cs" />
     <Compile Include="MpartnerIB_Api\Model\ContactusImage.cs" />
+    <Compile Include="MpartnerIB_Api\Model\Gallery_Details.cs" />
+    <Compile Include="MpartnerIB_Api\Model\Gallery_Menu_Upper.cs" />
     <Compile Include="MpartnerIB_Api\Model\HomePage.cs" />
     <Compile Include="MpartnerIB_Api\Model\MessageData.cs" />
     <Compile Include="MpartnerIB_Api\Model\ParentCategory.cs" />

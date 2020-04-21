@@ -81,6 +81,60 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         }
 
         [System.Web.Http.HttpGet]
+        [ActionName("DealerCreation")]
+        public object DealerCreation(string user_id, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+
+            try
+            {
+
+                var getAppMessage = getAppversion(app_version, os_type, channel);
+
+
+
+
+                if (getAppMessage.Status != "")
+                {
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "'";
+                    string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    return getJson_LoginAuthentication(getAppMessage.Message, getAppMessage.Status);
+
+                }
+                else
+                {
+                    var logincreate_otp = func_LoginCreateOtp(user_id, device_id, os_version_code, device_name, app_version);
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "";
+                    string ResponseParameter = "Message : " + logincreate_otp.Message + ",Status : " + logincreate_otp.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, logincreate_otp.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    //End Save Api log data//
+
+                    return getJson_LoginAuthentication(logincreate_otp.Message, logincreate_otp.Status);
+                }
+
+            }
+            catch (Exception exc)
+            {
+                var exception = getTryCatchExc();
+
+                #region save request and response data in api log
+                string RequestParameter = "UserID :" + user_id + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "'";
+                string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
+                #endregion
+                SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                return getJson_LoginAuthentication(exception.Message, exception.Status);
+            }
+
+            return "";
+
+        }
+
+        [System.Web.Http.HttpGet]
         [ActionName("OTPAuthentication")]
         public object OTPAuthentication(string user_id, string otp, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel)
         {
@@ -2177,7 +2231,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             MessageData msg = new MessageData();
             try
             {
-                var savedt = new Gallery_menu_upper();
+             
                 var check_electexistornot = luminous.UsersLists.Where(c => c.UserId == user_id && c.isActive == 1).Count();
 
 
