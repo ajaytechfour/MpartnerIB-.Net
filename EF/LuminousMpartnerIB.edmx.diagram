@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="80ba7ffeb1f049eab9669eea2075cd87" Name="Diagram1">
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.AppVersion" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.DealersMaster" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.DealersMaster_History" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.DistributorMaster" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.DistributorMaster_History" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Logger" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Mapping_Company_Distributor_Dealers" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.MHrOtp" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.State" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.sysdiagram" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.User" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Users_History" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.UsersList" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.UserVerification" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.AlertNotificationAccessTable" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.AlertNotificationReadStatu" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.AlertNotification" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.AlertNotifications_History" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.App_Log" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Auditlog_Userverificationstatus" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Card_ActionMaster" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Card_CardData" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Card_ColourMaster" Width="1.5" PointX="8.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Card_dynamicPage" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Card_dynamicPage_History" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Card_LanguageMaster" Width="1.5" PointX="16.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Card_ProviderMaster" Width="1.5" PointX="10.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.catalog_MainPdf" Width="1.5" PointX="12.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.city" Width="1.5" PointX="16.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.city_history" Width="1.5" PointX="14.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.contactUsDetail" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.contactUsDetail_History" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.CustomerModule" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.CustomerPermission" Width="1.5" PointX="18.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.CustomerType" Width="1.5" PointX="18.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.EscalationMatrix" Width="1.5" PointX="18.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.EscalationMatrix_History" Width="1.5" PointX="18.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.FAQ" Width="1.5" PointX="6.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.FAQ_History" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.FooterCategory" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.FooterCategoryHistory" Width="1.5" PointX="20.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.MappingUrl_Page" Width="1.5" PointX="8.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.MediaData" Width="1.5" PointX="10.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.MediaDataHistory" Width="1.5" PointX="20.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.MPartnerServiceLog" Width="1.5" PointX="20.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurvey" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ParentCategory" Width="1.5" PointX="14.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ParentCategoryhistory" Width="1.5" PointX="20.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Price_SchemeAccessTable" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductAccessTable" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductAccessTableForProduct" Width="1.5" PointX="22.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductCatergoryHistory" Width="1.5" PointX="22.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelOne" Width="1.5" PointX="22.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelOneHistory" Width="1.5" PointX="16.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelThree" Width="1.5" PointX="22.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelThreeHistory" Width="1.5" PointX="6.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelTwo" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelTwoHistory" Width="1.5" PointX="24.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductthreeImageMapping" Width="1.5" PointX="8.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Region" Width="1.5" PointX="24.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Suggestion" Width="1.5" PointX="24.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.useraccount" Width="1.5" PointX="24.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.useraccounthistory" Width="1.5" PointX="24.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.UsersListHistory" Width="1.5" PointX="2.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductCatergory" Width="1.5" PointX="17" PointY="31.5" />
+        <AssociationConnector Association="LuminousMpartnerIBModel.fk_Prntid" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.MostSearchItem" Width="1.5" PointX="15.375" PointY="26.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.SaveNotificationSurvey" Width="1.5" PointX="27.375" PointY="0.75" />
+        <AssociationConnector Association="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.UserVerification_log" Width="1.5" PointX="19.375" PointY="25.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Dealer_Save_Image" Width="1.5" PointX="27.375" PointY="5.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
