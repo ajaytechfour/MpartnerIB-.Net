@@ -1,0 +1,71 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000987377</td><td>1910100944</td><td>2019-06-27</td><td>F1135C446160</td><td> 12V160AH PC 20042TT FNSD BTY V19 R1</td><td>25.000</td><td>206500.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1100</td><td>Ludhiana Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000987377</td><td>1910100944</td><td>2019-06-27</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>25.000</td><td>204000.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1100</td><td>Ludhiana Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000987377</td><td>1910100944</td><td>2019-06-27</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>25.000</td><td>226875.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1100</td><td>Ludhiana Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000987381</td><td>1910100945</td><td>2019-06-27</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1100</td><td>Ludhiana Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000005</td><td>0000987440</td><td>1910100946</td><td>2019-06-27</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>50.000</td><td>400000.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1100</td><td>Ludhiana Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000991801</td><td>1910101015</td><td>2019-06-30</td><td>F1135C446160</td><td> 12V160AH PC 20042TT FNSD BTY V19 R1</td><td>25.000</td><td>206500.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1100</td><td>Ludhiana Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000975082</td><td>1911101573</td><td>2019-06-10</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>6.000</td><td>30660.20</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000008</td><td>0000975084</td><td>1911101574</td><td>2019-06-10</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>6.000</td><td>23460.20</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000982054</td><td>1911101855</td><td>2019-06-20</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>10.000</td><td>0.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000982054</td><td>1911101855</td><td>2019-06-20</td><td>T30000001608</td><td>NXG1100-B150HTT1N-P165W1N</td><td>10.000</td><td>196050.50</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000011</td><td>0000982054</td><td>1911101855</td><td>2019-06-20</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>10.000</td><td>0.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000012</td><td>0000982054</td><td>1911101855</td><td>2019-06-20</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000984449</td><td>1911101904</td><td>2019-06-24</td><td>F1135C446160</td><td> 12V160AH PC 20042TT FNSD BTY V19 R1</td><td>25.000</td><td>206500.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000984599</td><td>1911101917</td><td>2019-06-24</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>25.000</td><td>241250.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000986148</td><td>1911101955</td><td>2019-06-25</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>25.000</td><td>73125.06</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000986148</td><td>1911101955</td><td>2019-06-25</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>200.000</td><td>508000.44</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0000986152</td><td>1911101956</td><td>2019-06-25</td><td>F19305003751</td><td>SOLAR RETROFIT 48V50AMP SHINE4850 Rev.01</td><td>1.000</td><td>5395.24</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000018</td><td>0000987381</td><td>1911102007</td><td>2019-06-27</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000019</td><td>0000987440</td><td>1911102008</td><td>2019-06-27</td><td>F1135C446160</td><td> 12V160AH PC 20042TT FNSD BTY V19 R1</td><td>5.000</td><td>41300.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000987440</td><td>1911102008</td><td>2019-06-27</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>15.000</td><td>122400.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000987440</td><td>1911102008</td><td>2019-06-27</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>15.000</td><td>136125.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000987441</td><td>1911102009</td><td>2019-06-27</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>5.000</td><td>21550.03</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000023</td><td>0000987441</td><td>1911102009</td><td>2019-06-27</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.37</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000024</td><td>0000987441</td><td>1911102009</td><td>2019-06-27</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>25.000</td><td>67375.10</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000025</td><td>0000990022</td><td>1911102100</td><td>2019-06-29</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>50.000</td><td>99750.00</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000026</td><td>0060057001</td><td>1911600441</td><td>2019-06-06</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>1.000</td><td>4978.61</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0060057003</td><td>1911600442</td><td>2019-06-06</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5184.34</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0060057005</td><td>1911600443</td><td>2019-06-06</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>1.000</td><td>4978.62</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0060056998</td><td>1911600445</td><td>2019-06-06</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>1.000</td><td>4860.41</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000030</td><td>0060057000</td><td>1911600446</td><td>2019-06-06</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>1.000</td><td>4860.41</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0060057006</td><td>1911600447</td><td>2019-06-06</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>1.000</td><td>4860.41</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0060058477</td><td>1911600503</td><td>2019-06-20</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5185.21</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0060058478</td><td>1911600505</td><td>2019-06-20</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7403.48</td><td>0001100605</td><td>R K TRADERS</td><td>19</td><td>Punjab</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr>
+</table>

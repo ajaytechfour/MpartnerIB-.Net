@@ -1,0 +1,172 @@
+﻿@model  IEnumerable<Luminous.EF.GetPromotionAccessTable_Price_Scheme_Result>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    table.permissionTbl tr {
+    background: none;
+    border: 1px solid #eee;
+    display: inline-table;
+    width: 100%;
+}
+</style>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css"
+      rel="stylesheet" type="text/css" />
+<script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"
+        type="text/javascript"></script>
+
+<script src="/Scripts/Permission.js" type="text/javascript"></script>
+<script>
+    function GetRegions() {
+        $.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },
+                 "Json");
+        $("#RegionList_chosen").show();
+    }
+    function SetProdcutCategory(data, id) {
+        option = "";
+        var procat = $("#" + id);
+        procat.empty();
+        // procat.append("<option value=0 disabled='disabled' >Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+        });
+        procat.append(option);
+        procat.multiselect({
+            nonSelectedText: 'Select Region!',
+            includeSelectAllOption: true,
+            enableFiltering: true,
+            maxHeight: 200,
+            buttonWidth: 120,
+            enableClickableOptGroups: true,
+            enableCollapsibleOptGroups: true
+        });
+
+    }
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Price List - </span> Edit Permission</h1>
+        </div>
+    </div>
+    <div id="form" style="margin-bottom:11px" ng-app="Per">
+        @using (@Html.BeginForm("Save", "EditPromotion_Price_Permission"))
+        {
+
+            <div class="" id="GridView">
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">                        
+                        <div class="" id="GridView">
+                            <h2 style="font-size: 15px; font-weight: bold;border-bottom: none; margin-bottom: 0px;"> Selected Permission</h2>
+                            <div style="overflow:scroll; max-height:200px; overflow-x:hidden;">
+                                <table class="permissionTbl">
+                                    <tr>
+                                        <th style="width:25%;padding:10px;">All</th>
+                                        <th style="width:25%;    padding: 10px;">Regions</th>
+                                        <th style="width:25%;    padding: 10px;"> distributor</th>
+                                        <th style="width:25%;    padding: 10px;">Dealer</th>
+                                    </tr>                                  
+                                        @foreach (var a in Model)
+                                        {
+                                        
+                                            <tr>
+                                            <td>
+                                                @* @Html.HiddenFor(model => a.promotionid)*@
+                                                @{
+                                            bool all = a.AllAcess ?? false;
+                                            <input type="checkbox" disabled="disabled" checked="@all" style="height: inherit; width: auto;" />
+
+                                                }
+                                            </td>
+                                            <td>
+                                                @{
+                                            string region;
+                                            try
+                                            {
+                                                region = a.RegionName;
+                                            }
+                                            catch (NullReferenceException ex)
+                                            {
+                                                region = "";
+
+                                            }
+                                            if (region == "")
+                                            {
+                                                region = "*";
+                                            }
+                                            <text> @region </text>
+                                                }
+                                            </td>
+                                            <td>
+                                                @{
+                                            bool Destri = a.AllDestriAccess ?? false;
+                                            <input type="checkbox" disabled="disabled" checked="@Destri" style="height: inherit; width: auto;" />
+                                                }
+                                            </td>
+                                            <td>
+                                                @{
+                                            bool Dealer = a.AllDealerAccess ?? false;
+                                            <input type="checkbox" disabled="disabled" checked="@Dealer" style="height: inherit; width: auto;" />
+                                                }
+                                            </td>
+                                        </tr>
+                                        }
+                                    </table>
+                                </div>
+                            <h2 style="font-size: 15px; font-weight: bold;border-bottom: none; margin-bottom: 0px;">Permission For <span class="required">*</span></h2>                               
+                            <table class="permissionTbl">
+                                <tr>
+                                    <th style="width:25%;padding:10px;">All</th>
+                                    <th style="width:25%;padding:10px;">Region</th>
+                                    <th style="width:25%;padding:10px;">Distributor</th>
+                                    <th style="width:25%;padding:10px;">Dealer</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="Alls" onchange="Allch();" id="All" style="height: inherit; width: auto;" />
+                                    </td>
+                                    <td valign="top">
+                                        <select id="RegionList" data-placeholder="Select" onchange="SetRegion();" multiple="multiple" 
+                                                style=" color: black;"></select>
+                                        <input type="hidden" id="RgList" name="rglist" />
+                                    </td>
+                                    <td valign="top">
+                                        <input type="checkbox" id="checkDistri" name="DistriCheck" style="height: inherit; width: auto;" />
+                                    </td>
+                                    <td valign="top">
+                                        <input type="checkbox" id="checkDeal" name="DealCheck" style="height: inherit; width: auto;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        @Html.ValidationMessageFor(a => a.FirstOrDefault().RegionName, "", new { @class = "required" })
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>                        
+                        <div class="" style="margin-bottom:20px;">
+                            <input type="submit" value="Submit" class="submitBtn" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 Luminous | All Rights Reserved
+            </div>
+        </div>
+    </div>
+    </div>
+

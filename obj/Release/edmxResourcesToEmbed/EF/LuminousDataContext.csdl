@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LuminousModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="LuminousEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AllProfiles" EntityType="LuminousModel.AllProfile" />
+    <EntitySet Name="Users" EntityType="LuminousModel.User" />
+    <AssociationSet Name="FK__Users__ProfileTy__0DAF0CB0" Association="LuminousModel.FK__Users__ProfileTy__0DAF0CB0">
+      <End Role="AllProfile" EntitySet="AllProfiles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="Banners" EntityType="LuminousModel.Banner" />
+    <EntitySet Name="BannerHistories" EntityType="LuminousModel.BannerHistory" />
+    <AssociationSet Name="FK__BannerHis__Banne__1367E606" Association="LuminousModel.FK__BannerHis__Banne__1367E606">
+      <End Role="Banner" EntitySet="Banners" />
+      <End Role="BannerHistory" EntitySet="BannerHistories" />
+    </AssociationSet>
+    <EntitySet Name="contactUsDetails" EntityType="LuminousModel.contactUsDetail" />
+    <EntitySet Name="contactUsDetail_History" EntityType="LuminousModel.contactUsDetail_History" />
+    <AssociationSet Name="FK__contactUs__ContI__1DE57479" Association="LuminousModel.FK__contactUs__ContI__1DE57479">
+      <End Role="contactUsDetail" EntitySet="contactUsDetails" />
+      <End Role="contactUsDetail_History" EntitySet="contactUsDetail_History" />
+    </AssociationSet>
+    <EntitySet Name="ProductCatergories" EntityType="LuminousModel.ProductCatergory" />
+    <EntitySet Name="PermotionTypes" EntityType="LuminousModel.PermotionType" />
+    <EntitySet Name="ProductImages" EntityType="LuminousModel.ProductImage" />
+    <EntitySet Name="ProductLevelOnes" EntityType="LuminousModel.ProductLevelOne" />
+    <EntitySet Name="ProductLevelThrees" EntityType="LuminousModel.ProductLevelThree" />
+    <EntitySet Name="ProductLevelTwoes" EntityType="LuminousModel.ProductLevelTwo" />
+    <EntitySet Name="ProductPermotions" EntityType="LuminousModel.ProductPermotion" />
+    <AssociationSet Name="FK__ProductPe__PType__38996AB5" Association="LuminousModel.FK__ProductPe__PType__38996AB5">
+      <End Role="PermotionType" EntitySet="PermotionTypes" />
+      <End Role="ProductPermotion" EntitySet="ProductPermotions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLev__pcId__20C1E124" Association="LuminousModel.FK__ProductLev__pcId__20C1E124">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductPe__Produ__398D8EEE" Association="LuminousModel.FK__ProductPe__Produ__398D8EEE">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductPermotion" EntitySet="ProductPermotions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductIm__pc_Lv__2F10007B" Association="LuminousModel.FK__ProductIm__pc_Lv__2F10007B">
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+      <End Role="ProductImage" EntitySet="ProductImages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__25869641" Association="LuminousModel.FK__ProductLe__pc_Lv__25869641">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductPe__Produ__3A81B327" Association="LuminousModel.FK__ProductPe__Produ__3A81B327">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+      <End Role="ProductPermotion" EntitySet="ProductPermotions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__2A4B4B5E" Association="LuminousModel.FK__ProductLe__pc_Lv__2A4B4B5E">
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+    </AssociationSet>
+    <EntitySet Name="ProductFUllDetails" EntityType="LuminousModel.ProductFUllDetail" />
+  </EntityContainer>
+  <EntityType Name="AllProfile">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="profileName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createdTime" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UpdatedTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Users" Relationship="LuminousModel.FK__Users__ProfileTy__0DAF0CB0" FromRole="AllProfile" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="username" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Upassword" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UStatus" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="createdBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreatedTime" Precision="3" />
+    <Property Type="String" Name="UpdatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="UpdatedTime" Precision="3" />
+    <Property Type="Int32" Name="ProfileType" />
+    <NavigationProperty Name="AllProfile" Relationship="LuminousModel.FK__Users__ProfileTy__0DAF0CB0" FromRole="User" ToRole="AllProfile" />
+    <Property Type="String" Name="Mobileno" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UAddress" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UImage" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__Users__ProfileTy__0DAF0CB0">
+    <End Type="LuminousModel.AllProfile" Role="AllProfile" Multiplicity="0..1" />
+    <End Type="LuminousModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AllProfile">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="ProfileType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Header_Details" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sub_Header_Details" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Banner_Details" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BannerFileName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BannerSize" />
+    <Property Type="String" Name="BannerImage" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="stardate" Precision="3" />
+    <Property Type="DateTime" Name="ExpriyDate" Precision="3" />
+    <Property Type="Int32" Name="BStatus" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Modified_Date" Precision="3" />
+    <Property Type="String" Name="Modified_By" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BannerHistories" Relationship="LuminousModel.FK__BannerHis__Banne__1367E606" FromRole="Banner" ToRole="BannerHistory" />
+  </EntityType>
+  <EntityType Name="BannerHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="BannerId" />
+    <Property Type="String" Name="Header_Details" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sub_Header_Details" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Banner_Details" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BannerFileName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BannerSize" />
+    <Property Type="String" Name="BannerImage" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="stardate" Precision="3" />
+    <Property Type="DateTime" Name="ExpriyDate" Precision="3" />
+    <Property Type="Int32" Name="BStatus" />
+    <Property Type="DateTime" Name="Modified_Date" Precision="3" />
+    <Property Type="String" Name="Modified_By" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Banner" Relationship="LuminousModel.FK__BannerHis__Banne__1367E606" FromRole="BannerHistory" ToRole="Banner" />
+  </EntityType>
+  <Association Name="FK__BannerHis__Banne__1367E606">
+    <End Type="LuminousModel.Banner" Role="Banner" Multiplicity="0..1" />
+    <End Type="LuminousModel.BannerHistory" Role="BannerHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banner">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BannerHistory">
+        <PropertyRef Name="BannerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="contactUsDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Contact_Us_Type" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAddress" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PhoneNumber" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Cstatus" />
+    <Property Type="DateTime" Name="Created_date" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="0" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="contactUsDetail_History" Relationship="LuminousModel.FK__contactUs__ContI__1DE57479" FromRole="contactUsDetail" ToRole="contactUsDetail_History" />
+  </EntityType>
+  <EntityType Name="contactUsDetail_History">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ContId" />
+    <Property Type="String" Name="Contact_Us_Type" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAddress" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PhoneNumber" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Cstatus" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="0" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="contactUsDetail" Relationship="LuminousModel.FK__contactUs__ContI__1DE57479" FromRole="contactUsDetail_History" ToRole="contactUsDetail" />
+  </EntityType>
+  <Association Name="FK__contactUs__ContI__1DE57479">
+    <End Type="LuminousModel.contactUsDetail" Role="contactUsDetail" Multiplicity="0..1" />
+    <End Type="LuminousModel.contactUsDetail_History" Role="contactUsDetail_History" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contactUsDetail">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="contactUsDetail_History">
+        <PropertyRef Name="ContId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ProductCatergory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PCode" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Pstatus" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductLevelOnes" Relationship="LuminousModel.FK__ProductLev__pcId__20C1E124" FromRole="ProductCatergory" ToRole="ProductLevelOne" />
+    <NavigationProperty Name="ProductPermotions" Relationship="LuminousModel.FK__ProductPe__Produ__398D8EEE" FromRole="ProductCatergory" ToRole="ProductPermotion" />
+  </EntityType>
+  <EntityType Name="PermotionType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PType" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PlTwStatus" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductPermotions" Relationship="LuminousModel.FK__ProductPe__PType__38996AB5" FromRole="PermotionType" ToRole="ProductPermotion" />
+  </EntityType>
+  <EntityType Name="ProductImage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="pc_Lv3_oneId" />
+    <Property Type="String" Name="PrImage" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PlTwStatus" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="startDate" Precision="3" />
+    <Property Type="DateTime" Name="enddate" Precision="3" />
+    <NavigationProperty Name="ProductLevelThree" Relationship="LuminousModel.FK__ProductIm__pc_Lv__2F10007B" FromRole="ProductImage" ToRole="ProductLevelThree" />
+  </EntityType>
+  <EntityType Name="ProductLevelOne">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="pcId" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PlStatus" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="startDate" Precision="3" />
+    <Property Type="DateTime" Name="enddate" Precision="3" />
+    <NavigationProperty Name="ProductCatergory" Relationship="LuminousModel.FK__ProductLev__pcId__20C1E124" FromRole="ProductLevelOne" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelTwoes" Relationship="LuminousModel.FK__ProductLe__pc_Lv__25869641" FromRole="ProductLevelOne" ToRole="ProductLevelTwo" />
+    <NavigationProperty Name="ProductPermotions" Relationship="LuminousModel.FK__ProductPe__Produ__3A81B327" FromRole="ProductLevelOne" ToRole="ProductPermotion" />
+  </EntityType>
+  <EntityType Name="ProductLevelThree">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="pc_Lv2_oneId" />
+    <Property Type="String" Name="PrCode" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrDiscription" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PlTwStatus" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="startDate" Precision="3" />
+    <Property Type="DateTime" Name="enddate" Precision="3" />
+    <NavigationProperty Name="ProductImages" Relationship="LuminousModel.FK__ProductIm__pc_Lv__2F10007B" FromRole="ProductLevelThree" ToRole="ProductImage" />
+    <NavigationProperty Name="ProductLevelTwo" Relationship="LuminousModel.FK__ProductLe__pc_Lv__2A4B4B5E" FromRole="ProductLevelThree" ToRole="ProductLevelTwo" />
+  </EntityType>
+  <EntityType Name="ProductLevelTwo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="pc_Lvl_oneId" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PlTwStatus" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="startDate" Precision="3" />
+    <Property Type="DateTime" Name="enddate" Precision="3" />
+    <NavigationProperty Name="ProductLevelOne" Relationship="LuminousModel.FK__ProductLe__pc_Lv__25869641" FromRole="ProductLevelTwo" ToRole="ProductLevelOne" />
+    <NavigationProperty Name="ProductLevelThrees" Relationship="LuminousModel.FK__ProductLe__pc_Lv__2A4B4B5E" FromRole="ProductLevelTwo" ToRole="ProductLevelThree" />
+  </EntityType>
+  <EntityType Name="ProductPermotion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PTypeId" />
+    <Property Type="Int32" Name="ProductId" />
+    <Property Type="Int32" Name="ProductLvlOne" />
+    <Property Type="String" Name="Discription" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PerImage" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PrStatus" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="startdate" Precision="3" />
+    <Property Type="DateTime" Name="enddate" Precision="3" />
+    <NavigationProperty Name="PermotionType" Relationship="LuminousModel.FK__ProductPe__PType__38996AB5" FromRole="ProductPermotion" ToRole="PermotionType" />
+    <NavigationProperty Name="ProductCatergory" Relationship="LuminousModel.FK__ProductPe__Produ__398D8EEE" FromRole="ProductPermotion" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelOne" Relationship="LuminousModel.FK__ProductPe__Produ__3A81B327" FromRole="ProductPermotion" ToRole="ProductLevelOne" />
+  </EntityType>
+  <Association Name="FK__ProductPe__PType__38996AB5">
+    <End Type="LuminousModel.PermotionType" Role="PermotionType" Multiplicity="0..1" />
+    <End Type="LuminousModel.ProductPermotion" Role="ProductPermotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermotionType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductPermotion">
+        <PropertyRef Name="PTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLev__pcId__20C1E124">
+    <End Type="LuminousModel.ProductCatergory" Role="ProductCatergory" Multiplicity="0..1" />
+    <End Type="LuminousModel.ProductLevelOne" Role="ProductLevelOne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelOne">
+        <PropertyRef Name="pcId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductPe__Produ__398D8EEE">
+    <End Type="LuminousModel.ProductCatergory" Role="ProductCatergory" Multiplicity="0..1" />
+    <End Type="LuminousModel.ProductPermotion" Role="ProductPermotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductPermotion">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductIm__pc_Lv__2F10007B">
+    <End Type="LuminousModel.ProductLevelThree" Role="ProductLevelThree" Multiplicity="0..1" />
+    <End Type="LuminousModel.ProductImage" Role="ProductImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelThree">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductImage">
+        <PropertyRef Name="pc_Lv3_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__25869641">
+    <End Type="LuminousModel.ProductLevelOne" Role="ProductLevelOne" Multiplicity="0..1" />
+    <End Type="LuminousModel.ProductLevelTwo" Role="ProductLevelTwo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelTwo">
+        <PropertyRef Name="pc_Lvl_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductPe__Produ__3A81B327">
+    <End Type="LuminousModel.ProductLevelOne" Role="ProductLevelOne" Multiplicity="0..1" />
+    <End Type="LuminousModel.ProductPermotion" Role="ProductPermotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductPermotion">
+        <PropertyRef Name="ProductLvlOne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__2A4B4B5E">
+    <End Type="LuminousModel.ProductLevelTwo" Role="ProductLevelTwo" Multiplicity="0..1" />
+    <End Type="LuminousModel.ProductLevelThree" Role="ProductLevelThree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelTwo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThree">
+        <PropertyRef Name="pc_Lv2_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ProductFUllDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="pc_Lv2_oneId" />
+    <Property Type="String" Name="PrCode" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrDiscription" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PlTwStatus" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="String" Name="CreatedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="startDate" Precision="3" />
+    <Property Type="DateTime" Name="enddate" Precision="3" />
+    <Property Type="String" Name="ProductLevelTwo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductLevelOne" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductCategory" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

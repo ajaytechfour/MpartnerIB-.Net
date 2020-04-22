@@ -1,0 +1,55 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000968221</td><td>1912100543</td><td>2019-05-30</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>10.000</td><td>86950.00</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000968221</td><td>1912100543</td><td>2019-05-30</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>10.000</td><td>87150.00</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000968221</td><td>1912100543</td><td>2019-05-30</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>25.000</td><td>196000.00</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000968221</td><td>1912100543</td><td>2019-05-30</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>20.000</td><td>145500.00</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000968221</td><td>1912100543</td><td>2019-05-30</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>10.000</td><td>128900.00</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000968225</td><td>1912100544</td><td>2019-05-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>35.000</td><td>102375.19</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000968225</td><td>1912100544</td><td>2019-05-30</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>20.000</td><td>39900.07</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000968225</td><td>1912100544</td><td>2019-05-30</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>25.000</td><td>63500.12</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000968225</td><td>1912100544</td><td>2019-05-30</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>20.000</td><td>63100.12</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000968232</td><td>1912100545</td><td>2019-05-30</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>10.000</td><td>50397.38</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000011</td><td>0000968232</td><td>1912100545</td><td>2019-05-30</td><td>F19202003751</td><td>SOLAR RETROFIT 24V20AMP SHINE2420 Rev.01</td><td>5.000</td><td>8474.98</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000012</td><td>0060052457</td><td>1912600064</td><td>2019-05-03</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5963.94</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0060052462</td><td>1912600065</td><td>2019-05-03</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5346.96</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0060052463</td><td>1912600066</td><td>2019-05-03</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5334.70</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0060052466</td><td>1912600067</td><td>2019-05-03</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>6024.86</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0060052468</td><td>1912600068</td><td>2019-05-03</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>1.000</td><td>4908.59</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0060052470</td><td>1912600069</td><td>2019-05-03</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5334.70</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0060052471</td><td>1912600070</td><td>2019-05-03</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5334.70</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0060052465</td><td>1912600083</td><td>2019-05-10</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7053.00</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0060052469</td><td>1912600084</td><td>2019-05-10</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7053.00</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0060052475</td><td>1912600085</td><td>2019-05-10</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7053.00</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0060055253</td><td>1912600250</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4828.80</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0060055254</td><td>1912600251</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4828.80</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0060052460</td><td>1961600020</td><td>2019-05-28</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5335.20</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1122</td><td>Indore Warehouse-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0060052472</td><td>1961600021</td><td>2019-05-28</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5335.20</td><td>0001100477</td><td>GWALIOR BATTERY HOUSE</td><td>12</td><td>Madhya Pradesh</td><td>1122</td><td>Indore Warehouse-2</td><td>Battery</td>
+	</tr>
+</table>

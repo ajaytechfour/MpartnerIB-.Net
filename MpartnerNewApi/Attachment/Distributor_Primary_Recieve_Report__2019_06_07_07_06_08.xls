@@ -1,0 +1,39 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000964628</td><td>1902101261</td><td>2019-05-29</td><td>T30000000781</td><td>P-X2250/24V6N-B150HTT12N-P325W-PL1N</td><td>1.000</td><td>411960.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000002</td><td>0000964628</td><td>1902101261</td><td>2019-05-29</td><td>T30000001230</td><td>Solar PVMod 325W/24V 72C RFID 30x1</td><td>1.000</td><td>0.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000003</td><td>0000964628</td><td>1902101261</td><td>2019-05-29</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>12.000</td><td>0.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000964628</td><td>1902101261</td><td>2019-05-29</td><td>F19222513351</td><td>LUMINOUS POWER-X 2250/24V+SRS SHINE3650</td><td>6.000</td><td>0.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000968588</td><td>1902101357</td><td>2019-05-30</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>70.000</td><td>188650.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1021</td><td>Gurgaon NDC</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000968582</td><td>1902101358</td><td>2019-05-30</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>25.000</td><td>200000.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000968582</td><td>1902101358</td><td>2019-05-30</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000966612</td><td>1952101471</td><td>2019-05-29</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>60.000</td><td>175500.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000966612</td><td>1952101471</td><td>2019-05-29</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>40.000</td><td>101600.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000966614</td><td>1952101472</td><td>2019-05-29</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>20.000</td><td>125000.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000967326</td><td>1952101489</td><td>2019-05-30</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>20.000</td><td>62417.76</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000012</td><td>0000968512</td><td>1952101546</td><td>2019-05-30</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>10.000</td><td>81600.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000968512</td><td>1952101546</td><td>2019-05-30</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>20.000</td><td>125000.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000968512</td><td>1952101546</td><td>2019-05-30</td><td>F1141BWN0150</td><td> INVERGEL 12V150AH IGSTJ 18000 FNSD BTY</td><td>3.000</td><td>30075.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000968512</td><td>1952101546</td><td>2019-05-30</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>10.000</td><td>59550.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000968512</td><td>1952101546</td><td>2019-05-30</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>5.000</td><td>45375.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000968512</td><td>1952101546</td><td>2019-05-30</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>5.000</td><td>43475.00</td><td>0001100096</td><td>ANJANAYA SALES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr>
+</table>

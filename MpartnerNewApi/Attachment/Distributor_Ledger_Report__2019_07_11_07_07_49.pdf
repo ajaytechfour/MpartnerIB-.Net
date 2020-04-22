@@ -1,0 +1,15 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>DOC_DATE</td><td>DOC_NO</td><td>DO</td><td>DI</td><td>DI1</td><td>REF_ORG_UN</td><td>ALLOC_NMBR</td><td>REF_DATE</td><td>DEBIT_AMOUNT</td><td>CREDIT_AMOUNT</td><td>CHANNEL_TXT</td><td>DIVISION_TXT</td><td>DOC_TYP_TXT</td><td>TOTAL_CREDIT</td><td>EXTENDED_CREDIT_LIMI</td><td>CONT</td><td>CONTROL_AREA_DESC</td><td>DEALER</td><td>DEALER_NAME</td><td>CDRC</td>
+	</tr><tr>
+		<td>0000-00-00</td><td>OPEN BAL.</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0000-00-00</td><td>34904919.3800</td><td>2681058.5600</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>32223860.82</td><td>0.00</td><td>&nbsp;</td><td>&nbsp;</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-07-05</td><td>1008039074</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>MAU</td><td>104835</td><td>2019-07-05</td><td>0.0000</td><td>1500000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>30723860.82</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-07-06</td><td>1008039299</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>MAU</td><td>109223</td><td>2019-07-06</td><td>0.0000</td><td>500000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>30223860.82</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-07-08</td><td>1008039893</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>MAU</td><td>109224</td><td>2019-07-08</td><td>0.0000</td><td>1000000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>29223860.82</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-07-09</td><td>1800103873</td><td>RV</td><td>16</td><td>10</td><td>101924018240</td><td>&nbsp;</td><td>2019-07-09</td><td>225971.0000</td><td>0.0000</td><td>E-Rickshaw Channel</td><td>Battery</td><td>Sales Invoice</td><td>29449831.82</td><td>0.00</td><td>ZERB</td><td>E-Rickshaw batt credit cntrl LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr>
+</table>

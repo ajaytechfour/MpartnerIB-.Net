@@ -1,0 +1,285 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000980505</td><td>1906103682</td><td>2019-06-19</td><td>F04610022701</td><td>S/W UPS 10000 LUM CRUZE W/I METAL FRONT</td><td>1.000</td><td>47034.95</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000002</td><td>0000980505</td><td>1906103682</td><td>2019-06-19</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>78599.92</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000003</td><td>0000980505</td><td>1906103682</td><td>2019-06-19</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>15.000</td><td>163799.83</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000004</td><td>0000973483</td><td>1913100763</td><td>2019-06-08</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>100.000</td><td>379500.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000005</td><td>0000973484</td><td>1913100764</td><td>2019-06-08</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>30.000</td><td>289500.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000973484</td><td>1913100764</td><td>2019-06-08</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>15.000</td><td>120600.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000973484</td><td>1913100764</td><td>2019-06-08</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>20.000</td><td>97200.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000973484</td><td>1913100764</td><td>2019-06-08</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>70.000</td><td>416850.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000977816</td><td>1913100874</td><td>2019-06-18</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>70.000</td><td>416850.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000977816</td><td>1913100874</td><td>2019-06-18</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>5.000</td><td>45275.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000977816</td><td>1913100874</td><td>2019-06-18</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>5.000</td><td>34925.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000977816</td><td>1913100874</td><td>2019-06-18</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>186000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000977819</td><td>1913100875</td><td>2019-06-18</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>20.000</td><td>58800.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000977819</td><td>1913100875</td><td>2019-06-18</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>40.000</td><td>151800.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000977823</td><td>1913100876</td><td>2019-06-18</td><td>F04455015001</td><td>S/W UPS 5.5KVA/96V LUM CRUZE WTH P.F</td><td>2.000</td><td>53339.80</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000016</td><td>0000980784</td><td>1913100922</td><td>2019-06-19</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>25.000</td><td>241250.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000980784</td><td>1913100922</td><td>2019-06-19</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>60.000</td><td>357300.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000980784</td><td>1913100922</td><td>2019-06-19</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>40.000</td><td>250000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000980786</td><td>1913100923</td><td>2019-06-19</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>20.000</td><td>75900.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000020</td><td>0000980789</td><td>1913100924</td><td>2019-06-19</td><td>T1102G3307D2</td><td>LUMINOUS 7.2 AH 12V SMF BATTERY T C20</td><td>400.000</td><td>190000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000973495</td><td>1914101861</td><td>2019-06-06</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>10.000</td><td>29400.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000022</td><td>0000973495</td><td>1914101861</td><td>2019-06-06</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>50.000</td><td>234750.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000023</td><td>0000973495</td><td>1914101861</td><td>2019-06-06</td><td>F04165002051</td><td>S/W WAVE HUPS 12V LUM ECO VOLT+ 650</td><td>10.000</td><td>22700.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000024</td><td>0000973495</td><td>1914101861</td><td>2019-06-06</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>100.000</td><td>315500.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000025</td><td>0000973495</td><td>1914101861</td><td>2019-06-06</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>50.000</td><td>189750.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000026</td><td>0000973495</td><td>1914101861</td><td>2019-06-06</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>10.000</td><td>19950.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000027</td><td>0000973496</td><td>1914101862</td><td>2019-06-06</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>50.000</td><td>393000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000028</td><td>0000973497</td><td>1914101863</td><td>2019-06-06</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>40.000</td><td>250000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0000973497</td><td>1914101863</td><td>2019-06-06</td><td>F1103BYQ0060</td><td>LUM 12V60AH ILST8036 TUB FNSD BTY V16</td><td>5.000</td><td>19700.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000030</td><td>0000973497</td><td>1914101863</td><td>2019-06-06</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>25.000</td><td>204000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000973497</td><td>1914101863</td><td>2019-06-06</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>4.000</td><td>29100.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000973497</td><td>1914101863</td><td>2019-06-06</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>5.000</td><td>40200.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000973497</td><td>1914101863</td><td>2019-06-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>10.000</td><td>90550.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000034</td><td>0000973500</td><td>1914101864</td><td>2019-06-06</td><td>F1113C262200</td><td>LUM 12V200AH LPTT12200L FNSD BTY V18 SLR</td><td>20.000</td><td>247500.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000973501</td><td>1914101865</td><td>2019-06-06</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>10.000</td><td>81980.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000036</td><td>0000974087</td><td>1914101917</td><td>2019-06-08</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>5.000</td><td>40990.50</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000037</td><td>0000974642</td><td>1914101938</td><td>2019-06-10</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>10.000</td><td>43100.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000038</td><td>0000976038</td><td>1914102027</td><td>2019-06-12</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>50.000</td><td>312500.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000039</td><td>0000976038</td><td>1914102027</td><td>2019-06-12</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>30.000</td><td>244800.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000040</td><td>0000976038</td><td>1914102027</td><td>2019-06-12</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>50.000</td><td>400000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000041</td><td>0000976038</td><td>1914102027</td><td>2019-06-12</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>5.000</td><td>54275.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000042</td><td>0000976431</td><td>1914102041</td><td>2019-06-13</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>20.000</td><td>163200.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0000978084</td><td>1914102116</td><td>2019-06-15</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>20.000</td><td>257800.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000044</td><td>0000978084</td><td>1914102116</td><td>2019-06-15</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>45.000</td><td>309825.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000045</td><td>0000978643</td><td>1914102148</td><td>2019-06-17</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>50.000</td><td>392000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000046</td><td>0000980277</td><td>1914102254</td><td>2019-06-18</td><td>T30000001605</td><td>NXG1800-B150HTT2N-P325W2N</td><td>10.000</td><td>431250.50</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000047</td><td>0000980277</td><td>1914102254</td><td>2019-06-18</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>20.000</td><td>0.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000048</td><td>0000980277</td><td>1914102254</td><td>2019-06-18</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>20.000</td><td>0.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000049</td><td>0000980277</td><td>1914102254</td><td>2019-06-18</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>10.000</td><td>0.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000050</td><td>0000980281</td><td>1914102255</td><td>2019-06-18</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>5.000</td><td>16140.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000051</td><td>0000979806</td><td>1914102256</td><td>2019-06-18</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>15.000</td><td>129900.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000052</td><td>0000980306</td><td>1914102260</td><td>2019-06-18</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>5.000</td><td>27294.90</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000053</td><td>0000980309</td><td>1914102261</td><td>2019-06-18</td><td>F1102C436150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V19</td><td>20.000</td><td>186000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000054</td><td>0000980309</td><td>1914102261</td><td>2019-06-18</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>50.000</td><td>312500.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000055</td><td>0000980309</td><td>1914102261</td><td>2019-06-18</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>30.000</td><td>241200.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000056</td><td>0000980309</td><td>1914102261</td><td>2019-06-18</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>50.000</td><td>400000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000057</td><td>0000980310</td><td>1914102262</td><td>2019-06-18</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>20.000</td><td>93900.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000058</td><td>0000980310</td><td>1914102262</td><td>2019-06-18</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>20.000</td><td>58800.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000059</td><td>0000980310</td><td>1914102262</td><td>2019-06-18</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000060</td><td>0000980572</td><td>1914102312</td><td>2019-06-19</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>1.000</td><td>0.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000061</td><td>0000980572</td><td>1914102312</td><td>2019-06-19</td><td>T30000000698</td><td>NXG1100-B150HTT1N-P105W2N</td><td>1.000</td><td>21175.24</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000062</td><td>0000980572</td><td>1914102312</td><td>2019-06-19</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>2.000</td><td>0.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000063</td><td>0000980572</td><td>1914102312</td><td>2019-06-19</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>0.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000064</td><td>0000980574</td><td>1914102313</td><td>2019-06-19</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>1.000</td><td>0.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000065</td><td>0000980574</td><td>1914102313</td><td>2019-06-19</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>0.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000066</td><td>0000980574</td><td>1914102313</td><td>2019-06-19</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>1.000</td><td>0.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000067</td><td>0000980574</td><td>1914102313</td><td>2019-06-19</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>1.000</td><td>19604.74</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000068</td><td>0000980613</td><td>1914102314</td><td>2019-06-19</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>45.000</td><td>327375.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000069</td><td>0000980615</td><td>1914102315</td><td>2019-06-19</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>5.000</td><td>19466.94</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000070</td><td>0000980612</td><td>1914102372</td><td>2019-06-19</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>14.000</td><td>60339.80</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000071</td><td>0000980610</td><td>1914102381</td><td>2019-06-20</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>78600.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000072</td><td>0000982624</td><td>1914102457</td><td>2019-06-20</td><td>F19330013451</td><td>LUMINOUS SOLAR PCU NXT 3KW 48V W/O iOT</td><td>1.000</td><td>33005.10</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000073</td><td>0000983074</td><td>1914102500</td><td>2019-06-20</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>40.000</td><td>320000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000074</td><td>0000983067</td><td>1914102574</td><td>2019-06-22</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>7.000</td><td>62125.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000075</td><td>0000983069</td><td>1914102592</td><td>2019-06-24</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>78600.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000076</td><td>0000985084</td><td>1914102632</td><td>2019-06-25</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>186000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000077</td><td>0000985084</td><td>1914102632</td><td>2019-06-25</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>20.000</td><td>125000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000078</td><td>0000985084</td><td>1914102632</td><td>2019-06-25</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>20.000</td><td>160000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000079</td><td>0000985084</td><td>1914102632</td><td>2019-06-25</td><td>F1141BWN0150</td><td> INVERGEL 12V150AH IGSTJ 18000 FNSD BTY</td><td>6.000</td><td>60150.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000080</td><td>0000985092</td><td>1914102633</td><td>2019-06-25</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>22.000</td><td>129139.86</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000081</td><td>0000985092</td><td>1914102633</td><td>2019-06-25</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>10.000</td><td>51099.94</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000082</td><td>0000986113</td><td>1914102701</td><td>2019-06-25</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>75.000</td><td>597375.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000083</td><td>0000985092</td><td>1914102703</td><td>2019-06-25</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>8.000</td><td>62879.60</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000084</td><td>0000988722</td><td>1914102836</td><td>2019-06-28</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>25.000</td><td>199125.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000085</td><td>0000989288</td><td>1914102869</td><td>2019-06-28</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>10.000</td><td>79650.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000086</td><td>0000991552</td><td>1914103032</td><td>2019-06-29</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000087</td><td>0000991537</td><td>1914103040</td><td>2019-06-29</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>0.000</td><td>0.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000088</td><td>0000991537</td><td>1914103040</td><td>2019-06-29</td><td>F1135C444150</td><td>12V150AH PC 18042 FNSD BTY V19 R1</td><td>30.000</td><td>244800.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000089</td><td>0000991537</td><td>1914103040</td><td>2019-06-29</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>42.000</td><td>336000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000090</td><td>0000991537</td><td>1914103040</td><td>2019-06-29</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>8.000</td><td>64000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000091</td><td>0000991540</td><td>1914103041</td><td>2019-06-29</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>4.000</td><td>28979.60</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000092</td><td>0000993745</td><td>1914103116</td><td>2019-07-06</td><td>F03116518151</td><td>S/Q UPS ECO WATT XL1650 RAPID 12V</td><td>30.000</td><td>129300.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000093</td><td>0000993748</td><td>1914103117</td><td>2019-07-06</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>20.000</td><td>97026.32</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000094</td><td>0060055686</td><td>1914600525</td><td>2019-06-01</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.84</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000095</td><td>0060057483</td><td>1914600611</td><td>2019-06-12</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>4998.79</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000096</td><td>0060057484</td><td>1914600612</td><td>2019-06-12</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>4998.79</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000097</td><td>0060057497</td><td>1914600613</td><td>2019-06-12</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>4998.79</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000098</td><td>0060057498</td><td>1914600614</td><td>2019-06-12</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>4998.79</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000099</td><td>0060057500</td><td>1914600615</td><td>2019-06-12</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>4998.79</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000100</td><td>0060057501</td><td>1914600616</td><td>2019-06-12</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>1.000</td><td>5089.34</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000101</td><td>0060057487</td><td>1914600617</td><td>2019-06-12</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>4545.08</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000102</td><td>0060057494</td><td>1914600620</td><td>2019-06-15</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5054.64</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000103</td><td>0060057495</td><td>1914600621</td><td>2019-06-15</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5054.64</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000104</td><td>0060057486</td><td>1914600638</td><td>2019-06-17</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6274.73</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000105</td><td>0060057488</td><td>1914600639</td><td>2019-06-17</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7521.28</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000106</td><td>0060057492</td><td>1914600640</td><td>2019-06-17</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6274.73</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000107</td><td>0060056383</td><td>1914600663</td><td>2019-06-17</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6274.73</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000108</td><td>0060056384</td><td>1914600664</td><td>2019-06-17</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6274.73</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000109</td><td>0060056388</td><td>1914600665</td><td>2019-06-17</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6274.73</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000110</td><td>0060058265</td><td>1914600674</td><td>2019-06-19</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>1.000</td><td>4898.02</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000111</td><td>0060058266</td><td>1914600675</td><td>2019-06-19</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>1.000</td><td>4898.02</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000112</td><td>0060058349</td><td>1914600684</td><td>2019-06-20</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7147.18</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000113</td><td>0060058486</td><td>1914600686</td><td>2019-06-24</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5189.11</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000114</td><td>0060058487</td><td>1914600687</td><td>2019-06-24</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5189.11</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000115</td><td>0060058488</td><td>1914600688</td><td>2019-06-24</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5189.11</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000116</td><td>0060058489</td><td>1914600689</td><td>2019-06-24</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5189.11</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000117</td><td>0060058490</td><td>1914600690</td><td>2019-06-24</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5189.11</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000118</td><td>0060058491</td><td>1914600691</td><td>2019-06-24</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5189.11</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000119</td><td>0060058512</td><td>1914600692</td><td>2019-06-24</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6274.73</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000120</td><td>0060058513</td><td>1914600693</td><td>2019-06-24</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5600.20</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000121</td><td>0060058514</td><td>1914600694</td><td>2019-06-24</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7147.18</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000122</td><td>0060057490</td><td>1914600705</td><td>2019-06-24</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5656.93</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000123</td><td>0060057499</td><td>1914600706</td><td>2019-06-24</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5656.93</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000124</td><td>0060058963</td><td>1914600712</td><td>2019-06-27</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>5022.93</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000125</td><td>0060058964</td><td>1914600713</td><td>2019-06-27</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>5022.93</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000126</td><td>0060058880</td><td>1914600715</td><td>2019-06-27</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4833.56</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000127</td><td>0060058881</td><td>1914600716</td><td>2019-06-27</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4833.56</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000128</td><td>0060058882</td><td>1914600717</td><td>2019-06-27</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4833.56</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000129</td><td>0060058883</td><td>1914600718</td><td>2019-06-27</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4833.56</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000130</td><td>0060058884</td><td>1914600719</td><td>2019-06-27</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4833.56</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000131</td><td>0060058886</td><td>1914600720</td><td>2019-06-27</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4833.56</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000132</td><td>0060058887</td><td>1914600721</td><td>2019-06-27</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4833.56</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000133</td><td>0060058888</td><td>1914600722</td><td>2019-06-27</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4833.56</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000134</td><td>0060059188</td><td>1914600729</td><td>2019-06-29</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>4908.04</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000135</td><td>0060059190</td><td>1914600730</td><td>2019-06-29</td><td>F1102C441160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V19</td><td>1.000</td><td>5051.31</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000136</td><td>0060058962</td><td>1914600733</td><td>2019-06-29</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6274.73</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000137</td><td>0060059189</td><td>1914600734</td><td>2019-06-29</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6274.73</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000138</td><td>0060058879</td><td>1914600760</td><td>2019-07-01</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7444.64</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000139</td><td>0060059720</td><td>1914600775</td><td>2019-07-06</td><td>F1139B437150</td><td>LUM 12V150AH EC 18036 FNSD BTY V19</td><td>1.000</td><td>5270.91</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000140</td><td>0000974650</td><td>1933100406</td><td>2019-06-14</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>200.000</td><td>631000.00</td><td>0001109090</td><td>SAHAJANAND TRADING CO.</td><td>10</td><td>Karnataka</td><td>1330</td><td>Vijayawada Branch</td><td>LB UPS</td>
+	</tr>
+</table>

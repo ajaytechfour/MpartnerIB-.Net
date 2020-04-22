@@ -1,0 +1,31 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000959570</td><td>1905101531</td><td>2019-05-21</td><td>T1103C384150</td><td>LUM 12V150AH ILTT18036N FNSD BTY</td><td>50.000</td><td>452750.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000959571</td><td>1905101532</td><td>2019-05-21</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>100.000</td><td>907500.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000948422</td><td>1906101676</td><td>2019-05-08</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>7.000</td><td>56000.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000954836</td><td>1906101804</td><td>2019-05-14</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000005</td><td>0000954839</td><td>1906101805</td><td>2019-05-14</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>50.000</td><td>148250.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000954841</td><td>1906101806</td><td>2019-05-14</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>10.000</td><td>0.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000007</td><td>0000954841</td><td>1906101806</td><td>2019-05-14</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>20.000</td><td>0.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000954841</td><td>1906101806</td><td>2019-05-14</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>20.000</td><td>0.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000009</td><td>0000954841</td><td>1906101806</td><td>2019-05-14</td><td>T30000000690</td><td>NXG1800B150H2NP165W2N</td><td>10.000</td><td>371900.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000957363</td><td>1906102135</td><td>2019-05-20</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>25.000</td><td>226375.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000957363</td><td>1906102135</td><td>2019-05-20</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>5.000</td><td>36375.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000957363</td><td>1906102135</td><td>2019-05-20</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>50.000</td><td>453750.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000957364</td><td>1906102136</td><td>2019-05-20</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>25.000</td><td>226375.00</td><td>0001109222</td><td>SINGH ELECTRIC WORKS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr>
+</table>

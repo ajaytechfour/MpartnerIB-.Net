@@ -1,0 +1,137 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000972637</td><td>1975101554</td><td>2019-06-03</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>20.000</td><td>77868.28</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000002</td><td>0000972637</td><td>1975101554</td><td>2019-06-03</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>7.000</td><td>38213.14</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000003</td><td>0000973787</td><td>1975101580</td><td>2019-06-07</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>25.000</td><td>127750.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000004</td><td>0000973788</td><td>1975101581</td><td>2019-06-07</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>20.000</td><td>86200.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000005</td><td>0000973788</td><td>1975101581</td><td>2019-06-07</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>20.000</td><td>74000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000973811</td><td>1975101586</td><td>2019-06-07</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>20.000</td><td>177500.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000973811</td><td>1975101587</td><td>2019-06-07</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>10.000</td><td>93000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000974600</td><td>1975101629</td><td>2019-06-10</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>150.000</td><td>438750.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000974600</td><td>1975101630</td><td>2019-06-10</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000974818</td><td>1975101638</td><td>2019-06-10</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>5.000</td><td>54275.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000975051</td><td>1975101644</td><td>2019-06-10</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>200.000</td><td>399000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000975051</td><td>1975101645</td><td>2019-06-10</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>200.000</td><td>399000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000013</td><td>0000975051</td><td>1975101646</td><td>2019-06-10</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>100.000</td><td>199500.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000975857</td><td>1975101669</td><td>2019-06-12</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>40.000</td><td>204400.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000015</td><td>0000975907</td><td>1975101675</td><td>2019-06-12</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>50.000</td><td>215500.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000975935</td><td>1975101680</td><td>2019-06-12</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>50.000</td><td>189750.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0000975936</td><td>1975101681</td><td>2019-06-12</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>20.000</td><td>125000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000976158</td><td>1975101698</td><td>2019-06-12</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>54600.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000019</td><td>0000976360</td><td>1975101708</td><td>2019-06-13</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>30.000</td><td>111000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000020</td><td>0000976486</td><td>1975101711</td><td>2019-06-13</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>10.000</td><td>109199.87</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000021</td><td>0000976486</td><td>1975101711</td><td>2019-06-13</td><td>F04455015001</td><td>S/W UPS 5.5KVA/96V LUM CRUZE WTH P.F</td><td>2.000</td><td>53339.93</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000022</td><td>0000977212</td><td>1975101740</td><td>2019-06-14</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>102800.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000023</td><td>0000977286</td><td>1975101747</td><td>2019-06-14</td><td>F04610022701</td><td>S/W UPS 10000 LUM CRUZE W/I METAL FRONT</td><td>1.000</td><td>47034.70</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000024</td><td>0000978309</td><td>1975101774</td><td>2019-06-15</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>100.000</td><td>199500.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000025</td><td>0000978309</td><td>1975101775</td><td>2019-06-15</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000026</td><td>0000978311</td><td>1975101776</td><td>2019-06-15</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>10.000</td><td>93000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000978311</td><td>1975101777</td><td>2019-06-15</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>10.000</td><td>93000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0000978494</td><td>1975101784</td><td>2019-06-15</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>30.000</td><td>129300.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000029</td><td>0000979713</td><td>1975101822</td><td>2019-06-18</td><td>F19101004001</td><td>SOLAR CHARGE CONTROLLER 1210N</td><td>20.000</td><td>10300.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000030</td><td>0000979713</td><td>1975101822</td><td>2019-06-18</td><td>F19102004001</td><td>SOLAR CHARGE CONTROLLER SCC1220NM</td><td>20.000</td><td>18000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000031</td><td>0000979714</td><td>1975101823</td><td>2019-06-18</td><td>F19202003751</td><td>SOLAR RETROFIT 24V20AMP SHINE2420 Rev.01</td><td>20.000</td><td>33900.19</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000032</td><td>0000979714</td><td>1975101823</td><td>2019-06-18</td><td>F19405003751</td><td>SOLAR RETROFIT 96V50AMP SHINE9650 Rev.01</td><td>1.000</td><td>7835.05</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000033</td><td>0000979712</td><td>1975101824</td><td>2019-06-18</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>0.000</td><td>0.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000034</td><td>0000979712</td><td>1975101824</td><td>2019-06-18</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>13.000</td><td>115375.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000979712</td><td>1975101824</td><td>2019-06-18</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>8875.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000036</td><td>0000980737</td><td>1975101866</td><td>2019-06-19</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>30.000</td><td>111000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000037</td><td>0000981766</td><td>1975101894</td><td>2019-06-20</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>0.000</td><td>0.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000038</td><td>0000981766</td><td>1975101894</td><td>2019-06-20</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>9650.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000039</td><td>0000981766</td><td>1975101894</td><td>2019-06-20</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>19.000</td><td>183350.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000040</td><td>0000981838</td><td>1975101895</td><td>2019-06-20</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>12889.80</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000041</td><td>0000981843</td><td>1975101896</td><td>2019-06-20</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>1.000</td><td>4310.20</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000042</td><td>0000981904</td><td>1975101897</td><td>2019-06-20</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>200.000</td><td>399000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000043</td><td>0000981904</td><td>1975101898</td><td>2019-06-20</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>150.000</td><td>381000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000044</td><td>0000981904</td><td>1975101899</td><td>2019-06-20</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>150.000</td><td>438750.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000045</td><td>0000982074</td><td>1975101903</td><td>2019-06-20</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>10.000</td><td>38934.09</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000046</td><td>0000982074</td><td>1975101903</td><td>2019-06-20</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>10.000</td><td>48513.12</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000047</td><td>0000982074</td><td>1975101903</td><td>2019-06-20</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>10.000</td><td>54590.13</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000048</td><td>0000982078</td><td>1975101904</td><td>2019-06-20</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>5.000</td><td>16140.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000049</td><td>0000982086</td><td>1975101905</td><td>2019-06-20</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>20.000</td><td>160000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000050</td><td>0000982976</td><td>1975101924</td><td>2019-06-20</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>100.000</td><td>511000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000051</td><td>0000983187</td><td>1975101925</td><td>2019-06-21</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>70.000</td><td>357700.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000052</td><td>0000983187</td><td>1975101926</td><td>2019-06-21</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>30.000</td><td>153300.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000053</td><td>0000983973</td><td>1975101954</td><td>2019-06-22</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>60.000</td><td>222000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000054</td><td>0000983973</td><td>1975101954</td><td>2019-06-22</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>50.000</td><td>189750.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000055</td><td>0000983975</td><td>1975101955</td><td>2019-06-22</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>12.000</td><td>58667.60</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000056</td><td>0000984429</td><td>1975101974</td><td>2019-06-24</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>10.000</td><td>58700.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000057</td><td>0000984430</td><td>1975101975</td><td>2019-06-24</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>100.000</td><td>199500.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000058</td><td>0000985259</td><td>1975101993</td><td>2019-06-25</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000059</td><td>0000985259</td><td>1975101994</td><td>2019-06-25</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000060</td><td>0000985260</td><td>1975101995</td><td>2019-06-25</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>25.000</td><td>146750.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000061</td><td>0000987962</td><td>1975102055</td><td>2019-06-27</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>20.000</td><td>257800.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000062</td><td>0000989934</td><td>1975102118</td><td>2019-06-29</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>186000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000063</td><td>0000989938</td><td>1975102119</td><td>2019-06-29</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>25.000</td><td>94875.50</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000064</td><td>0000989938</td><td>1975102120</td><td>2019-06-29</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>25.000</td><td>94875.50</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000065</td><td>0000989934</td><td>1975102121</td><td>2019-06-29</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>20.000</td><td>160000.00</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000066</td><td>0000992398</td><td>1975102174</td><td>2019-07-01</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>12.000</td><td>96083.80</td><td>0001105292</td><td>RAJ POWER CONTROL</td><td>25</td><td>West Bengal</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr>
+</table>

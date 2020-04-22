@@ -1,0 +1,41 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000980690</td><td>1913100920</td><td>2019-06-19</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>30.000</td><td>209550.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000980690</td><td>1913100920</td><td>2019-06-19</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>30.000</td><td>178650.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000980690</td><td>1913100920</td><td>2019-06-19</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>50.000</td><td>400000.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000988108</td><td>1913101121</td><td>2019-06-28</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>5.000</td><td>98024.75</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000988108</td><td>1913101121</td><td>2019-06-28</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>5.000</td><td>0.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000006</td><td>0000988108</td><td>1913101121</td><td>2019-06-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>5.000</td><td>0.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000988108</td><td>1913101121</td><td>2019-06-28</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>5.000</td><td>0.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000008</td><td>0000988017</td><td>1917101885</td><td>2019-06-27</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>20.000</td><td>39900.04</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000988017</td><td>1917101885</td><td>2019-06-27</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>68.000</td><td>183260.16</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000988021</td><td>1917101886</td><td>2019-06-27</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>10.000</td><td>31209.38</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000011</td><td>0000988017</td><td>1917101909</td><td>2019-06-27</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>12.000</td><td>32339.80</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000988001</td><td>1917101962</td><td>2019-06-28</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>40.000</td><td>355000.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000988001</td><td>1917101962</td><td>2019-06-28</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>30.000</td><td>289500.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000988001</td><td>1917101962</td><td>2019-06-28</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>10.000</td><td>87150.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000987400</td><td>1933100488</td><td>2019-06-27</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>10.000</td><td>86950.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000987403</td><td>1933100489</td><td>2019-06-27</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0060060443</td><td>1933600270</td><td>2019-07-06</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5499.20</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000972796</td><td>1941100779</td><td>2019-06-04</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>45.000</td><td>264150.00</td><td>0001103012</td><td>Sri Venkatapadma Agencies</td><td>01</td><td>Andhra Pradesh</td><td>1351</td><td>Gagret Warehouse 2</td><td>HKVA</td>
+	</tr>
+</table>

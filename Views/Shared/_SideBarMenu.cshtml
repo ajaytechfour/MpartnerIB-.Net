@@ -1,0 +1,30 @@
+﻿
+@{
+    var servicesMenu = Session["sidebarmenu"] as IEnumerable<LuminousMpartnerIB.EF.AllPage>;
+}
+
+@if (servicesMenu != null)
+{
+    foreach (var item in servicesMenu.Where(t => (t.RootNode == 0 && t.IsTopMenu == true)))
+    {
+
+        var MenuLevel1 = servicesMenu.Where(t => t.RootNode == item.Id);
+
+        if (MenuLevel1.Count() > 0)
+        {
+            <li class="subctegory">
+                <a class="menuactive" href="#"><img src=@item.Image title=""> @item.PageName</a>
+                <ul class="nav nav-second-level">
+                    @foreach (var itemlevel1 in MenuLevel1)
+                    {
+                        <li class="linkeffect"><a href=@itemlevel1.ModuleName> @itemlevel1.PageName</a></li>
+                    }
+                </ul>
+            </li>
+        }
+        else
+        {
+            <li c3ass="linkeffect"><a href=@item.ModuleName><img src=@item.Image title=""> @item.PageName</a></li>
+        }
+    }
+}

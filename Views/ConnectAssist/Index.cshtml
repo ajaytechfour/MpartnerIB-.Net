@@ -1,0 +1,440 @@
+﻿@{
+    ViewBag.Title = "Index.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>*@
+
+
+
+
+<script type="text/javascript">
+    //Grid Swapping//
+
+    $(function () {
+
+        $.post("@Url.Content("~/ConnectAssist/getTicketList")", { status: 'open' }, function (data) { SetGrid(data); }, "Json");
+        @*$.post("@Url.Content("~/ProductCategory/GetParentCategory")", null, function (data) { SetParentCategory(data); }, "Json");
+            $.post("@Url.Content("~/Banner/GetRedirectPage")", null, function (data) { SetRedirectPage(data); }, "Json");*@
+    });
+
+
+
+    function SetGrid(data) {
+
+
+
+        $("#div_gridview").hide();
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+
+            var body = "";
+            $("#Grid tbody").empty();
+            var get_obj_length = data.length;
+            var count = 1;
+            for (i = 0; i < get_obj_length; i++) {
+
+
+                var rowDateString = '"' + data[i].CreatedOn + '"';
+
+                var mySubString = rowDateString.substring(
+rowDateString.lastIndexOf("(") + 1,
+rowDateString.lastIndexOf(")")
+);
+                console.log(mySubString);
+                var safeDate = new Date(parseInt(mySubString));
+                var mm = safeDate.getMonth() + 1;
+                var y = safeDate.getFullYear();
+                var dd = safeDate.getDate();
+
+
+
+                var purchasedate = dd + "-" + mm + "-" + y;
+
+                body += "<tr><td>" + data[i].Id + "</td>" +
+             "<td>" + data[i].Srno + "</td>" +
+              "<td>" + data[i].Flag + "</td>" +
+               //"<td>" + purchasedate + "</td>" +
+               //"<td>" + data[i].CreatedBy + "</td>" +
+            "<td style='text-align:right;'><a style='cursor:pointer' onclick=Edit('" + data[i].Id + "');><i class='far fa-eye' style='font-size:13px; color: #737373; margin-right: 10px;'></i></a></td></tr>";
+
+            };
+            $("#Grid tbody").append(body);
+            // SetPages(data.TotalRecord);
+
+
+
+        }
+
+    }
+
+
+    function Edit(id) {
+
+        location.href = "@Url.Content("~/ConnectAssist/Edit/")" + id;
+    }
+
+
+
+    @*function View(serialno) {
+
+        $.post("@Url.Content("~/CallingSample/Viewdata")", { serialno: serialno }, function (data) { SetviewGrid(data); }, "Json");
+    }
+    function SetviewGrid(data) {
+        $("#sbt").hide();
+        $("tbody#updatedResponse").html("");
+        $("#resTbl").hide("");
+        $("#div_gridview").show();
+        $("#GridViewData").show()
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+
+            var body = "";
+            $("#GridViewData tbody").empty();
+            var get_obj_length = data.length;
+
+            for (i = 0; i < get_obj_length; i++) {
+
+                var rowDateString = '"' + data[i].Product_Purchase_Date + '"';
+
+                var mySubString = rowDateString.substring(
+rowDateString.lastIndexOf("(") + 1,
+rowDateString.lastIndexOf(")")
+);
+                console.log(mySubString);
+                var safeDate = new Date(parseInt(mySubString));
+                var mm = safeDate.getMonth() + 1;
+                var y = safeDate.getFullYear();
+                var dd = safeDate.getDate();
+
+                var purchasedate = dd + "-" + mm + "-" + y;
+                var today = y + "-" + (mm) + "-" + (dd);
+
+                var day = ("0" + dd).slice(-2);
+                var month = ("0" + (mm)).slice(-2);
+                var today = y + "-" + (month) + "-" + (day);
+
+
+
+                body += "<tr><td id='oldsn' width='20px'>" + data[i].Product_Serial_Number + "</td>" +
+             "<td id='oldprd' width='80px'>" + data[i].Product_Type + "</td>" +
+             "<td id='oldcutn'>" + data[i].Customer_Name + "</td>" +
+             "<td id='oldpn'>" + data[i].Customer_Phone + "</td>" +
+              "<td id='oldaddr'>" + data[i].Customer_Address + "</td>" +
+              "<td id='oldcldNew'>" + purchasedate + "</td>" +
+            "<td><a style='cursor:pointer;display:inline' id='editthisTable' onclick=Edit('" + data[i].Product_Serial_Number + "');>Edit</a>" +
+            "&nbsp;&nbsp <a style='cursor:pointer;display:none' id='updatethisTable' onclick=UpdateF('" + data[i].Product_Serial_Number + "');>Update</a>" +
+            "&nbsp;&nbsp <a style='cursor:pointer;display:none' id='cancelthisTable' onclick=CancelF('" + data[i].Product_Serial_Number + "');>Cancel</a>" +
+            "</td></tr><tr id='inputElement'><td><input type='text' disabled name='serialNumber' id='serialNumber' value='" + data[i].Product_Serial_Number + "'/></td><td>" +
+            "<input type='text' name='product' id='product' value='" + data[i].Product_Type + "'/></td><td>" +
+            "<input type='text' name='customerName' id='customerName' value='" + data[i].Customer_Name + "'/></td>" +
+            "<td><input type='text' name='phoneNumber' id='phoneNumber' value='" + data[i].Customer_Phone + "' /></td>" +
+            "<td><textarea name='address' id='address'>" + data[i].Customer_Address + "</textarea></td>" +
+            "<td><input type='date' name='callingDate' id='callingDate' value='" + today + "' /></td><td></td></tr>";
+
+            };
+            $("#GridViewData tbody").append(body);
+
+            // SetPages(data.TotalRecord);
+
+        }
+    }
+
+    function Edit(serialno) {
+
+        $("a#updatethisTable").show();
+        $("a#cancelthisTable").show();
+        $("a#editthisTable").hide();
+        $("#inputElement").show();
+    }
+
+    function UpdateF() {
+
+
+
+        var sn = ($("#serialNumber").val()).trim();
+        var prd = ($("#product").val()).trim();
+        var cutn = ($("#customerName").val()).trim();
+        var pn = ($("#phoneNumber").val()).trim();
+        var addr = ($("#address").val()).trim();
+        var date = new Date($('#callingDate').val());
+        day = date.getDate();
+        month = date.getMonth() + 1;
+        year = date.getFullYear();
+        var cldNew = day + "-" + month + "-" + year;
+        bodyStr = '';
+
+
+        newData = {
+            'sn': sn,
+            'prd': prd,
+            'cutn': cutn,
+            'pn': pn,
+            'addr': addr,
+            'cldNew': cldNew
+        }
+
+        bodyStr += "<tr><td id='chngsn'>" + sn + "</td>" +
+                    "<td id='chngprd'>" + prd + "</td>" +
+                    "<td id='chngcutn'>" + cutn + "</td>" +
+                    "<td id='chngpn'>" + pn + "</td>" +
+                     "<td  id='chngaddr'>" + addr + "</td>" +
+                     "<td id='chngcldNew'>" + cldNew + "</td>" +
+                   "</tr>";
+
+        $("tbody#updatedResponse").html("");
+        $("tbody#updatedResponse").append(bodyStr);
+
+        $("a#updatethisTable").hide();
+        $("a#cancelthisTable").hide();
+        $("a#editthisTable").show();
+
+        $.post("@Url.Content("~/CallingSample/Update")", { serialno: sn, prdtype: prd, custname: cutn, custphone: pn, custaddress: addr, saledate: cldNew }, function (data) { saveupdate(data); }, "Json");
+
+        updateWithColor(newData);
+
+        // It will fire after getting success reponse from ajax
+
+    }
+
+    function saveupdate(data) {
+        alert(data);
+        if (data == "Record Updated Successfully") {
+            $("#resTbl").show();
+        }
+
+    }
+
+    function CancelF(serialno) {
+
+        $("#serialNumber").val($("#oldsn").text());
+        $("#product").val($("#oldprd").text());
+        $("#customerName").val($("#oldcutn").text());
+        $("#phoneNumber").val($("#oldpn").text());
+        $("#address").val($("#oldaddr").text());
+        //$("#callingDate").val();
+
+        $("a#updatethisTable").hide();
+        $("a#cancelthisTable").hide();
+        $("a#editthisTable").show();
+        $("#inputElement").hide();
+    }
+
+
+    function updateWithColor(data) {
+
+        for (var i in data) {
+            var oldData = ($("#old" + i).text()).trim();
+            var newData = data[i]; //alerts key's value
+
+            if (oldData != newData) {
+                $("#chng" + i).attr("style", "background:green");
+            }
+
+        }
+
+        $("#sbt").show();
+
+
+    }
+
+
+    $("body").on("click", "#sbt", function () {
+
+        $("#div_gridview").hide();
+        $("#resTbl").hide();
+
+        $("#sbt").hide();
+        $.post("@Url.Content("~/CallingSample/getSerialNum")", null, function (data) { SetGrid(data); }, "Json");
+
+    });
+
+    $(document).ready(function () {
+        $("#search").on("keyup", function () {
+            var value = $(this).val();
+
+            $("body").find("#Grid tr").each(function (index) {
+                if (index !== 0) {
+
+                    $row = $(this);
+
+                    var id = $row.find("td").eq(1).text();
+
+                    if (id.indexOf(value) !== 0) {
+
+
+                        $row.hide();
+                    }
+                    else {
+                        $row.show();
+                    }
+                }
+            });
+        });
+    });*@
+
+    $(document).ready(function () {
+        $("#search").on("keyup", function () {
+            var value = $(this).val();
+
+            $("body").find("#Grid tr").each(function (index) {
+                if (index !== 0) {
+
+                    $row = $(this);
+
+                    var id = $row.find("td").eq(1).text();
+
+                    if (id.indexOf(value) !== 0) {
+
+
+                        $row.hide();
+                    }
+                    else {
+                        $row.show();
+                    }
+                }
+            });
+        });
+
+        $("li.connect_assist").on("click", function () {
+
+            var getID = ($(this).attr("id")).trim();
+
+            $.post("@Url.Content("~/ConnectAssist/getTicketList")", { status: getID }, function (data) { SetGrid(data); }, "Json");
+
+
+            $("div#" + getID + "_c").attr("style", "visibility:visible");
+            $("div#" + getID + "_c").siblings("div").attr("style", "visibility:hidden");
+
+            $(this).addClass("active");
+            $(this).siblings("li").removeClass("active");
+        });
+    });
+
+</script>
+
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span></span> Connect Assist</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+            <div class="addgift" style="padding-bottom: 10px;">
+                <div class="row" id="GridView">
+                    <div class="col-md-12">
+
+                        <div id="content_wrap">
+                            <ul class="nav nav-tabs">
+                                <li class="connect_assist active" id="open"><a>Open</a></li>
+                                <li class="connect_assist" id="InProcess"><a>In Process</a></li>
+                                <li class="connect_assist" id="Resolved"><a>Resolved</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="open_c" class="tab-pane active tabelGridRow">
+                                    <input type="text" id="search" placeholder="Search" style="width:300px;margin-top: 10px; float: right; margin-bottom: 10px;" class="form-control" />
+                                    <div style="overflow-y:scroll; height:550px; width:100%;">
+                                        <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:10%;">
+                                                        ID
+                                                    </th>
+                                                    <th style="width:70%;">
+                                                        Serial No.
+                                                    </th>
+                                                    <th style="width:10%;">
+                                                        Status
+                                                    </th>
+                                                    <th style="text-align:right; width:10%;">
+                                                        Action
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div id="in_process_c" class="tab-pane tabelGridRow">
+                                    <input type="text" id="search" placeholder="Search" style="width:300px;margin-top: 10px; float: right; margin-bottom: 10px;" class="form-control" />
+                                    <div style="overflow-y:scroll; height:550px; width:100%;">
+                                        <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:10%;">
+                                                        ID
+                                                    </th>
+                                                    <th style="width:70%;">
+                                                        Serial No.
+                                                    </th>
+                                                    <th style="width:10%;">
+                                                        Status
+                                                    </th>
+                                                    <th style="text-align:right; width:10%;">
+                                                        Action
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+
+                                <div id="resolved_c" class="tab-pane tabelGridRow">
+                                    <input type="text" id="search" placeholder="Search" style="width:300px;margin-top: 10px; float: right; margin-bottom: 10px;" class="form-control" />
+                                    <div style="overflow-y:scroll; height:550px; width:100%;">
+                                        <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:10%;">
+                                                        ID
+                                                    </th>
+                                                    <th style="width:70%;">
+                                                        Serial No.
+                                                    </th>
+                                                    <th style="width:10%;">
+                                                        Status
+                                                    </th>
+                                                    <th style="text-align:right; width:10%;">
+                                                        Action
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                        </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+            </div>
+        </div>
+    </div>
+
+</div>

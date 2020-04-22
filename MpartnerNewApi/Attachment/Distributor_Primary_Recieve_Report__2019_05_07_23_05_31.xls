@@ -1,0 +1,95 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000938032</td><td>1922100475</td><td>2019-04-24</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>45.000</td><td>580050.00</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000938032</td><td>1922100476</td><td>2019-04-24</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48600.00</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000938032</td><td>1922100476</td><td>2019-04-24</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>5.000</td><td>64450.00</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000938032</td><td>1922100476</td><td>2019-04-24</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>12.000</td><td>115800.00</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000938041</td><td>1922100477</td><td>2019-04-24</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>40.000</td><td>79800.00</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000940226</td><td>1922100618</td><td>2019-04-26</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>33.000</td><td>425370.40</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000946563</td><td>1922100868</td><td>2019-04-30</td><td>T1102C417200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V19</td><td>10.000</td><td>122950.00</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0060048850</td><td>1922600062</td><td>2019-04-06</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8837.98</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0060048839</td><td>1922600063</td><td>2019-04-06</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8837.98</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0060048787</td><td>1922600064</td><td>2019-04-06</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8837.98</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0060048743</td><td>1922600065</td><td>2019-04-06</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8837.98</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0060048786</td><td>1922600095</td><td>2019-04-08</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7503.75</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0060048820</td><td>1922600096</td><td>2019-04-08</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7503.75</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0060048828</td><td>1922600097</td><td>2019-04-08</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7503.75</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0060048882</td><td>1922600162</td><td>2019-04-09</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7503.75</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0060049186</td><td>1922600163</td><td>2019-04-09</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8837.33</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0060049204</td><td>1922600164</td><td>2019-04-09</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7503.75</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0060048343</td><td>1922600177</td><td>2019-04-11</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4689.22</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0060048344</td><td>1922600178</td><td>2019-04-11</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4689.22</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0060048345</td><td>1922600179</td><td>2019-04-11</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4689.22</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0060048346</td><td>1922600180</td><td>2019-04-11</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>1.000</td><td>4689.22</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0060049295</td><td>1922600181</td><td>2019-04-11</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7076.62</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0060049766</td><td>1922600269</td><td>2019-04-16</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8837.12</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0060049787</td><td>1922600270</td><td>2019-04-16</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8837.12</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0060049943</td><td>1922600271</td><td>2019-04-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7463.93</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0060049993</td><td>1922600272</td><td>2019-04-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7463.93</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0060049994</td><td>1922600273</td><td>2019-04-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7463.93</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0060049995</td><td>1922600274</td><td>2019-04-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7463.93</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0060049996</td><td>1922600275</td><td>2019-04-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7463.93</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000030</td><td>0060049997</td><td>1922600276</td><td>2019-04-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7463.93</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0060049998</td><td>1922600277</td><td>2019-04-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7463.93</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0060049999</td><td>1922600278</td><td>2019-04-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7463.93</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0060050000</td><td>1922600279</td><td>2019-04-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7463.93</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000034</td><td>0060050001</td><td>1922600280</td><td>2019-04-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7463.93</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0060050003</td><td>1922600281</td><td>2019-04-16</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1460.90</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000036</td><td>0060050899</td><td>1922600420</td><td>2019-04-23</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8837.12</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000037</td><td>0060051898</td><td>1922600477</td><td>2019-05-01</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000038</td><td>0060051900</td><td>1922600478</td><td>2019-05-01</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000039</td><td>0060051901</td><td>1922600479</td><td>2019-05-01</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000040</td><td>0060047922</td><td>1922600481</td><td>2019-05-01</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000041</td><td>0060051897</td><td>1922600483</td><td>2019-05-01</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>1.000</td><td>2482.38</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000042</td><td>0060051903</td><td>1922600485</td><td>2019-05-01</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0060051896</td><td>1922600494</td><td>2019-05-01</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000044</td><td>0060051564</td><td>1922600501</td><td>2019-05-02</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000045</td><td>0060051895</td><td>1922600503</td><td>2019-05-02</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>1.000</td><td>2482.38</td><td>0001104347</td><td>SAMRIDHI TELECOM</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr>
+</table>

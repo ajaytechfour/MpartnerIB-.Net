@@ -1,0 +1,478 @@
+﻿@{
+   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html>
+<head>
+<title>
+City
+</title>
+
+<link rel="stylesheet" href=@Url.Content("~/css/maincp.css")" />
+<link rel="stylesheet" href="@Url.Content("~/css/resetcp.css")" />
+<script src="@Url.Content("~/Scripts/jquery-1.7.1.js")" type="text/javascript"></script>  
+<script src="@Url.Content("~/Scripts/city.js")" type="text/javascript"></script>
+   
+
+
+
+
+ <style type="text/css">
+table {
+border: 0;
+border-spacing: 0;
+font-size: 0.857em;
+margin: 10px 0;
+width: 100%;
+}
+table table {
+font-size: 1em;
+}
+#footer-wrapper table {
+font-size: 1em;
+}
+table tr th {
+background: #757575;
+background: rgba(0, 0, 0, 0.51);
+border-bottom-style: none;
+}
+table tr th,
+table tr th a,
+table tr th a:hover {
+color: #FFF;
+font-weight: bold;
+}
+table tbody tr th {
+vertical-align: top;
+}
+tr td,
+tr th {
+padding: 4px 9px;
+border: 1px solid #fff;
+text-align: left; /* LTR */
+}
+#footer-wrapper tr td,
+#footer-wrapper tr th {
+border-color: #555;
+border-color: rgba(255, 255, 255, 0.18);
+}
+tr.odd {
+background: #e4e4e4;
+background: rgba(0, 0, 0, 0.105);
+}
+tr,
+tr.even {
+background: #efefef;
+background: rgba(0, 0, 0, 0.063);
+}
+table ul.links {
+margin: 0;
+padding: 0;
+font-size: 1em;
+}
+table ul.links li {
+padding: 0 1em 0 0;
+}
+</style> 
+
+
+
+
+
+<script  type="text/javascript">
+    function savenew() {
+        var EmpId = $('#Countries').val();
+        var EmpName = $('#Text1').val();
+
+        $.post("@Url.Content("~/city/Savecity")", { empId: EmpId, empName: EmpName },
+            function (data) { chkSave(data); });
+    }
+    function chkSave(abc) {
+      
+        alert(abc);
+        if (abc == "session expire") {
+            location.href = '@Url.Action("login", "login")';
+        }
+        else {
+           
+            var EmpId = $('#Countries').val();
+            show(EmpId);
+
+            $('#Text1').val('');
+            $('#Countries').val(0);
+        }
+        
+
+    }
+
+</script>
+
+<script type="text/javascript">
+    function demo() {
+        $(document).ready(function () {
+
+            //Dropdownlist Selectedchange event
+
+
+
+
+            $("#Select1").empty();
+
+            $.ajax({
+
+                type: 'POST',
+
+                url: '@Url.Action("GetStates", "city")',
+
+
+
+                dataType: 'json',
+
+
+
+                data: { id: $("#Countries").val() },
+
+
+
+
+
+                success: function (states) {
+
+
+
+                    $.each(states, function (i, state) {
+
+                        $("#Select1").append('<option value="' + state.Value + '">' +
+
+                         state.Text + '</option>');
+
+
+                        var ds = $("#Countries").val();
+                        if (state.Value == ds) {
+                            $("#Select1").val(ds);
+                        }
+                        // here we are adding option for States
+
+
+
+                    });
+
+
+
+
+                },
+
+                error: function (ex) {
+
+                    alert('Failed to retrieve states.' + ex);
+
+                }
+
+            });
+
+            return false;
+
+
+
+        });
+
+        
+    }
+
+</script>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        showuserinfo();
+    });
+
+</script>
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+
+
+
+        $("#Countries").change(function () {
+            var id = $("#Countries").val()
+            show(id);
+
+            
+
+        })
+
+    });
+
+</script>
+  <script type="text/javascript">
+      function getvalues() {
+          $('input, textarea').attr('disabled', 'disabled');
+
+      }
+            
+    </script>
+<script  type="text/javascript" >
+
+
+    var create = "";
+    var edit = "";
+    var delete1 = "";
+    var view = "";
+
+    function showuserinfo() {
+        $.get("@Url.Content("~/city/showuserinfo")", null, function (data) { chkuserinfo(data); })
+            .error(function (data) { chkuserinfo(data); });
+    }
+
+    function chkuserinfo(abc) {
+
+        var str = abc;
+        var temp = new Array();
+        temp = str.split(",");
+
+
+        var counter = 0;
+        for (a in temp) {
+
+            if (counter == 0) {
+                create = temp[a];
+                if (create == 1) {
+                   
+                }
+                else {
+                    getvalues();
+
+                }
+
+            }
+            if (counter == 1) {
+                edit = temp[a];
+
+            }
+            if (counter == 2) {
+
+                delete1 = temp[a];
+
+            }
+            if (counter == 3) {
+
+                view = temp[a];
+
+            }
+            counter = counter + 1;
+        }
+    }
+      
+
+
+
+
+    var GData = "";
+    function show(id) {
+        $.get("@Url.Content("~/city/Showcity")", { id: id }, function (data) { chk(data); })
+            .error(function (data) { chk(data); });
+    }
+    function chk(abc) {
+        if (abc == "You do not have view permission") {
+
+            alert("You do not have view permission");
+            return false;
+        }
+        else {
+            if (abc == "session expire") {
+                location.href = '@Url.Action("login", "login")';
+            }
+            else {
+                GData = abc;
+                BuildTable(GData, 0);
+            }
+        }
+    }
+
+    function BuildTable(data, eid) {
+
+        var table = '<table id=gridview11 width=100%><thead><tr><th width:40%; >State Name</th><th width:40%; >City Name</th><th width:20%; >Action</th></thead><tbody>';
+        for (var cd in data) {
+
+            var row = '<tr>';
+            if (eid != data[cd].id) {
+                row += '<td style=background-color:Silver;width:40%; >' + data[cd].statename + '</td>';
+                row += '<td style=background-color:Silver;width:40%; >' + data[cd].cityname + '</td>';
+
+                row += '<td style=background-color:Silver;width:20%; >'
+                + "<img src='@Url.Content("~/images/edit.png")' onclick=editRecord(" + data[cd].id + ") id='btnEdit'  value='Edit' /> </td>";
+            }
+            else {
+                
+                var dsss = data[cd].statename;
+                var dsss1 = data[cd].cityname;
+
+
+                row += '<td style=background-color:Silver;width:40%; ><select id="Select1"  class=input-form><option></option></select><font color=red >*</font></td>';
+                row += '<td style=background-color:Silver;width:40%; ><input id=txtEmpName1 value="' + dsss1 + '"  class=input-form  type=text  /><font color=red >*</font></td>';
+
+                var deleteimage;
+                if (delete1 == 1) {
+                    deleteimage = " <img src='@Url.Content("~/images/delete1.png")' onclick=updatedelete(" + data[cd].id + ")  id='btndelete' type='button' value='Delete'";
+
+                }
+                else {
+                    deleteimage = "";
+                }
+
+                var editimage;
+                if (edit == 1) {
+                    editimage = " <img src='@Url.Content("~/images/editsan.png")'  id='btnUpdate' value='" + data[cd].id + "'   />";
+
+                }
+                else {
+                    editimage = "";
+                }
+
+
+                row += '<td style=background-color:Silver;width:20%; >'
+                + "" + editimage + ""
+                + " <img src='@Url.Content("~/images/deletesan.png")' onclick=cancelRecord() id='btnCancel' type='button' value='Cancel' /> "
+                + "" + deleteimage + " </td>";
+            }
+
+
+            row += '</tr>';
+            table += row;
+        }
+
+        table += '</tbody></table>';
+        $('#d1').html(table);
+    }
+   
+       
+       
+   
+  
+    function editRecord(eid) {
+
+        BuildTable(GData, eid);
+        demo() ;
+        editcall();
+    }
+    function cancelRecord() {
+        BuildTable(GData, 0);
+    }
+
+    function updatedelete(eid) {
+        if (confirm("Do you want to Delete...")) {
+
+            $.post("@Url.Content("~/city/Deletestate")",
+            { empId: eid },
+            function (data) { chkupdateRecorddette(data); });
+        }
+    }
+    function chkupdateRecorddette(abc) {
+        alert(abc);
+        
+        if (abc == "session expire") {
+            location.href = '@Url.Action("login", "login")';
+        }
+        else {
+            var EmpName = $("#Countries").val();
+            show(EmpName);
+        }
+       
+    }
+
+
+
+    function updateRecord(eid) {
+        var EmpName = $("#txtEmpName1").val();
+        var serviceid = $("#Select1").val();
+
+        $.post("@Url.Content("~/city/UpdateEmployee")",
+            { empId: eid, empName: EmpName, serviceid: serviceid },
+            function (data) { chkupdateRecord(data); });
+    }
+    function chkupdateRecord(abc) {
+
+        alert(abc);
+        if (abc == "session expire") {
+            location.href = '@Url.Action("login", "login")';
+        }
+        else {
+            
+            var EmpName = $("#Countries").val();
+            show(EmpName);
+        }
+        
+    }
+
+
+   
+</script>
+</head>
+<body>
+
+  <div id="content_wrap">
+ 
+      <div class="msgbar msg_Info heading">Create City</div>
+      <div class="content_main" >
+        <div class="boxes1">
+ 
+
+
+           <table>
+
+              <tr>
+       <td>
+           State Name<font color=red >*</font>
+        </td>
+        <td>
+     
+        <div >
+              @Html.DropDownList("Countries", ViewData["country"] as List<SelectListItem>, new { @class = "input-form" })
+           
+        </div>
+ 
+        </td>
+    </tr>
+    <tr>
+        <td>
+            City Name <font color=red >*</font>
+        </td>
+        <td>
+        <input id="Text1" type="text" class="input-form" />
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+        
+            
+        </td>
+          <td>
+        <input id="Button1city" type="button" value="Save"   class="save-but-m" /></td>
+          
+         
+    </tr>
+    
+  
+  
+    
+</table>
+
+          
+       
+      
+        
+       <div id="d1"  style="float:left; width:100%"></div>
+      
+       </div>
+   </div>
+   </div>
+   
+
+</body>
+</html>

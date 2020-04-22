@@ -1,0 +1,29 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000991921</td><td>1966101986</td><td>2019-06-30</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>10.000</td><td>128900.00</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000991940</td><td>1966101994</td><td>2019-06-30</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>60.000</td><td>667800.00</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000991940</td><td>1966101994</td><td>2019-06-30</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>20.000</td><td>217100.00</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000991940</td><td>1966101994</td><td>2019-06-30</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>34.000</td><td>301750.00</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000991947</td><td>1966101995</td><td>2019-06-30</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>10.000</td><td>51100.00</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000006</td><td>0000991955</td><td>1966101996</td><td>2019-06-30</td><td>T30000000444</td><td>SCC1206-B40H1N-P80W1N</td><td>20.000</td><td>128900.00</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000007</td><td>0000991955</td><td>1966101996</td><td>2019-06-30</td><td>T30000000343</td><td>Solar PV Module 80W/12V Poly Crys.</td><td>20.000</td><td>0.00</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000008</td><td>0000991955</td><td>1966101996</td><td>2019-06-30</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>20.000</td><td>0.00</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000991955</td><td>1966101996</td><td>2019-06-30</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>20.000</td><td>0.00</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000991940</td><td>1966101997</td><td>2019-06-30</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>2.000</td><td>17750.00</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000991943</td><td>1966102001</td><td>2019-06-30</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>49.000</td><td>124460.20</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000991943</td><td>1966102001</td><td>2019-06-30</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>29.000</td><td>57855.10</td><td>0001108590</td><td>G.B ENTERPRISES</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr>
+</table>

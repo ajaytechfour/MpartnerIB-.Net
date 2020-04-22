@@ -1,0 +1,129 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000977523</td><td>1922102401</td><td>2019-06-14</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000977523</td><td>1922102401</td><td>2019-06-14</td><td>F1102C436150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V19</td><td>15.000</td><td>139500.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000977523</td><td>1922102401</td><td>2019-06-14</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>20.000</td><td>257800.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000977523</td><td>1922102402</td><td>2019-06-14</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>5.000</td><td>64450.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000977527</td><td>1922102403</td><td>2019-06-14</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>25.000</td><td>82625.26</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000977527</td><td>1922102403</td><td>2019-06-14</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>20.000</td><td>75900.24</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000979107</td><td>1922102568</td><td>2019-06-17</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>30.000</td><td>266250.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000979107</td><td>1922102568</td><td>2019-06-17</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>10.000</td><td>90750.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000979106</td><td>1922102569</td><td>2019-06-17</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>40.000</td><td>117000.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000979106</td><td>1922102569</td><td>2019-06-17</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>40.000</td><td>132200.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000981147</td><td>1922102637</td><td>2019-06-19</td><td>F03135001951</td><td>S/Q WAVE HUPS 12V LUM BIS ECO WATT +350</td><td>50.000</td><td>79000.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000982476</td><td>1922102759</td><td>2019-06-20</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>40.000</td><td>515600.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000982621</td><td>1922102767</td><td>2019-06-20</td><td>F1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>30.000</td><td>333900.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000982625</td><td>1922102768</td><td>2019-06-20</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>30.000</td><td>87750.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000982625</td><td>1922102768</td><td>2019-06-20</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>30.000</td><td>80850.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000983402</td><td>1922102846</td><td>2019-06-21</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>20.000</td><td>139700.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000983402</td><td>1922102846</td><td>2019-06-21</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>30.000</td><td>266250.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000983402</td><td>1922102847</td><td>2019-06-21</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>10.000</td><td>69850.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000983404</td><td>1922102848</td><td>2019-06-21</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>20.000</td><td>53900.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000020</td><td>0000983404</td><td>1922102848</td><td>2019-06-21</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>30.000</td><td>99150.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000021</td><td>0000983510</td><td>1922102879</td><td>2019-06-21</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>20.000</td><td>139700.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000983510</td><td>1922102879</td><td>2019-06-21</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>30.000</td><td>266250.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000983510</td><td>1922102880</td><td>2019-06-21</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>10.000</td><td>69850.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000983548</td><td>1922102881</td><td>2019-06-21</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>30.000</td><td>99150.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000025</td><td>0000983548</td><td>1922102881</td><td>2019-06-21</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>20.000</td><td>53900.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000026</td><td>0000985038</td><td>1922103000</td><td>2019-06-24</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>15.000</td><td>144750.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000985038</td><td>1922103000</td><td>2019-06-24</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>30.000</td><td>266250.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0000985038</td><td>1922103001</td><td>2019-06-24</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>15.000</td><td>104775.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0000985953</td><td>1922103046</td><td>2019-06-25</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>45.000</td><td>580050.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000030</td><td>0000985953</td><td>1922103047</td><td>2019-06-25</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>5.000</td><td>64450.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000985953</td><td>1922103047</td><td>2019-06-25</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>10.000</td><td>80000.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000985953</td><td>1922103047</td><td>2019-06-25</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>20.000</td><td>193000.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000985975</td><td>1922103065</td><td>2019-06-25</td><td>T1105C15A220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY V18</td><td>25.000</td><td>322250.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000034</td><td>0000986011</td><td>1922103072</td><td>2019-06-25</td><td>F03116518151</td><td>S/Q UPS ECO WATT XL1650 RAPID 12V</td><td>4.000</td><td>17240.11</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000035</td><td>0000986011</td><td>1922103072</td><td>2019-06-25</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>15.000</td><td>29925.19</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000036</td><td>0000987819</td><td>1922103173</td><td>2019-06-27</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>45.000</td><td>580050.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000037</td><td>0000987819</td><td>1922103174</td><td>2019-06-27</td><td>T1102C417200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V19</td><td>30.000</td><td>359850.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000038</td><td>0000987819</td><td>1922103174</td><td>2019-06-27</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>5.000</td><td>64450.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000039</td><td>0000987862</td><td>1922103210</td><td>2019-06-27</td><td>F03116518151</td><td>S/Q UPS ECO WATT XL1650 RAPID 12V</td><td>25.000</td><td>107750.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000040</td><td>0000989417</td><td>1922103266</td><td>2019-06-28</td><td>F1152B419150</td><td>SILVER CHARGE 12V150Ah SIL18057TT FNSD</td><td>20.000</td><td>182100.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000041</td><td>0060056823</td><td>1922601328</td><td>2019-06-10</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5348.48</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000042</td><td>0060057138</td><td>1922601334</td><td>2019-06-10</td><td>T1103CXUA180</td><td>LUM 12V180AH ILTT24060 FNSD BTY V18</td><td>1.000</td><td>7200.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0060053493</td><td>1922601338</td><td>2019-06-10</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>1.000</td><td>8088.66</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000044</td><td>0060056471</td><td>1922601344</td><td>2019-06-10</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7521.12</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000045</td><td>0060057157</td><td>1922601368</td><td>2019-06-10</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7521.12</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000046</td><td>0060057170</td><td>1922601370</td><td>2019-06-10</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7521.12</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000047</td><td>0060057171</td><td>1922601371</td><td>2019-06-10</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7521.12</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000048</td><td>0060057560</td><td>1922601394</td><td>2019-06-15</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8979.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000049</td><td>0060057568</td><td>1922601395</td><td>2019-06-15</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8979.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000050</td><td>0060057570</td><td>1922601425</td><td>2019-06-15</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8979.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000051</td><td>0060058655</td><td>1922601705</td><td>2019-06-25</td><td>T1103CXUA180</td><td>LUM 12V180AH ILTT24060 FNSD BTY V18</td><td>1.000</td><td>7200.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000052</td><td>0060058656</td><td>1922601706</td><td>2019-06-25</td><td>T1103CXUA180</td><td>LUM 12V180AH ILTT24060 FNSD BTY V18</td><td>1.000</td><td>7200.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000053</td><td>0060058691</td><td>1922601712</td><td>2019-06-25</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5283.09</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000054</td><td>0060058692</td><td>1922601713</td><td>2019-06-25</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5342.24</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000055</td><td>0060058905</td><td>1922601722</td><td>2019-06-30</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7533.10</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000056</td><td>0060058921</td><td>1922601725</td><td>2019-06-30</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7533.10</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000057</td><td>0060058922</td><td>1922601726</td><td>2019-06-30</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9046.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000058</td><td>0060058927</td><td>1922601727</td><td>2019-06-30</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7168.82</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000059</td><td>0060058933</td><td>1922601728</td><td>2019-06-30</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9046.00</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000060</td><td>0060059181</td><td>1922601732</td><td>2019-06-30</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6290.39</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000061</td><td>0060059183</td><td>1922601733</td><td>2019-06-30</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6290.39</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000062</td><td>0060059187</td><td>1922601734</td><td>2019-06-30</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6290.39</td><td>0001109156</td><td>SAHARSA DIESEL</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr>
+</table>

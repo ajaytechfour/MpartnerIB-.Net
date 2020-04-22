@@ -1,0 +1,70 @@
+﻿<html>
+<head>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" rel="stylesheet">   
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('tbody').addClass("DragMe");
+
+            $('.DragMe').sortable({
+                disabled: false,
+                axis: 'y',
+                items: "> tr:not(:first)",
+                forceHelperSize: true,
+                update: function (event, ui) {
+                    var Newpos = ui.item.index();
+                    var RefID = $('tr').find('td:first').html();
+
+
+                    //alert("Position " + Newpos + "..... RefID: " + RefID);
+                    $("#GridView1 tr:has(td)").each(function () {
+                        var RefID = $(this).find("td:eq(0)").html();
+                        var NewPosition = $("tr").index(this);
+                        alert(RefID + " " + NewPosition);
+
+                    });
+
+                }
+            }).disableSelection();
+        });
+    </script>
+
+    <table class="EU_DataTable" cellspacing="0" rules="all" border="1" id="GridView1" style="border-collapse:collapse;">
+        <tbody>
+            <tr>
+                <th scope="col">Ref ID</th>
+                <th scope="col">Issue relates to</th>
+            </tr>
+            <tr class="ui-sortable-handle">
+                <td>9392</td>
+                <td>CRM</td>
+            </tr>
+            <tr class="ui-sortable-handle">
+                <td>9394</td>
+                <td>CRM</td>
+            </tr>
+            <tr class="ui-sortable-handle">
+                <td>9308</td>
+                <td>eMail</td>
+            </tr>
+            <tr class="ui-sortable-handle">
+                <td>9342</td>
+                <td>Other</td>
+            </tr>
+            <tr class="ui-sortable-handle">
+                <td>9365</td>
+                <td>CRM</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

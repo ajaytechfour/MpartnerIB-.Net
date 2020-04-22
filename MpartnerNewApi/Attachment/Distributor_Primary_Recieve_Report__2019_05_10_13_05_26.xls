@@ -1,0 +1,35 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000941841</td><td>1905100973</td><td>2019-04-29</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>50.000</td><td>988000.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000002</td><td>0000941841</td><td>1905100973</td><td>2019-04-29</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>50.000</td><td>0.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000003</td><td>0000941841</td><td>1905100973</td><td>2019-04-29</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>50.000</td><td>0.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000941841</td><td>1905100973</td><td>2019-04-29</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>50.000</td><td>0.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000941847</td><td>1905100974</td><td>2019-04-29</td><td>T30000001603</td><td>NXG1400-B150HTT1N-P165W1N</td><td>50.000</td><td>1035750.50</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000006</td><td>0000941847</td><td>1905100974</td><td>2019-04-29</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>50.000</td><td>0.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000007</td><td>0000941847</td><td>1905100974</td><td>2019-04-29</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>50.000</td><td>0.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000941847</td><td>1905100974</td><td>2019-04-29</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>50.000</td><td>0.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000009</td><td>0000941008</td><td>1913100261</td><td>2019-04-29</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>300.000</td><td>946500.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000941008</td><td>1913100261</td><td>2019-04-29</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>100.000</td><td>294000.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000941010</td><td>1955100149</td><td>2019-04-27</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>54600.23</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000012</td><td>0000941010</td><td>1955100149</td><td>2019-04-27</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>2.000</td><td>41120.17</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000013</td><td>0000941832</td><td>1967100141</td><td>2019-04-29</td><td>F04175002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 750/12V(BIS)</td><td>350.000</td><td>901250.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1012</td><td>Mundka Warehouse-2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000941835</td><td>1967100142</td><td>2019-04-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1012</td><td>Mundka Warehouse-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000941835</td><td>1967100142</td><td>2019-04-29</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>50.000</td><td>400000.00</td><td>0001102786</td><td>Carbenz Automobiles</td><td>11</td><td>Kerala</td><td>1012</td><td>Mundka Warehouse-2</td><td>Battery</td>
+	</tr>
+</table>

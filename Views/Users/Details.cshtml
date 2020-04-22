@@ -1,0 +1,188 @@
+﻿@model LuminousMpartnerIB.EF.UsersList
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+<style type="text/css">
+    .required
+    {
+        color: Red;
+    }
+    table
+    {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+    table table
+    {
+        font-size: 1em;
+    }
+    #footer-wrapper table
+    {
+        font-size: 1em;
+    }
+    table tr th
+    {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+    table tr th, table tr th a, table tr th a:hover
+    {
+        color: #FFF;
+        font-weight: bold;
+    }
+    table tbody tr th
+    {
+        vertical-align: top;
+    }
+    tr td, tr th
+    {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+    #footer-wrapper tr td, #footer-wrapper tr th
+    {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+    tr.odd
+    {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+    tr, tr.even
+    {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+    table ul.links
+    {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+    table ul.links li
+    {
+        padding: 0 1em 0 0;
+    }
+</style>
+<div id="content_wrap">
+    <div class="msgbar msg_Info heading">
+        Users Details</div>
+    <table>
+        <tr>
+            <td>
+                Profile Image
+            </td>
+            <td colspan="3">
+                <img src="@Url.Content("~/ProfileImages/")@Model.ProfileImage")" height="100px" width="100px" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>@Html.DisplayFor(a => a.Dis_Name)
+            </td>
+            <td>
+                Eamil
+            </td>
+            <td>@Html.DisplayFor(a => a.Dis_Email)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                State
+            </td>
+            <td>@Html.DisplayFor(a => a.Dis_State)
+            </td>
+            <td>
+                City
+            </td>
+            <td>@Html.DisplayFor(a => a.Dis_City)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                District
+            </td>
+            <td>@Html.DisplayFor(a => a.Dis_District)
+            </td>
+            <td>
+                Contact No
+            </td>
+            <td>@Html.DisplayFor(a => a.Dis_ContactNo)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Address 1
+            </td>
+            <td>@Html.DisplayFor(a => a.Dis_Address1)
+            </td>
+            <td>
+                Address 2
+            </td>
+            <td>@Html.DisplayFor(a => a.Dis_Address2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Customer Type
+            </td>
+            <td>
+                @{
+                    if (Model.CustomerType == "DISTY")
+                    {
+                    <text>Distributor</text>
+                    }
+                    else
+                    {
+                    <text>Dealer</text>
+                    }
+                }
+            </td>
+            <td>
+                Select Role
+            </td>
+            <td>
+                @{
+                    if (Model.CustomerType == "DISTY")
+                    {
+                    @Html.DisplayFor(a => a.Destributor.name)
+                    }
+                    else
+                    {
+                    @Html.DisplayFor(a => a.Dealer.name)
+                    }
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>
+                IsActive
+            </td>
+            <td colspan="3">
+                @{
+                    if (Model.isActive == 1)
+                    {
+                    <input type="checkbox" readonly checked />
+                    }
+                    else
+                    {
+                    <input type="checkbox" readonly />
+                    }    
+        
+                }
+            </td>
+        </tr>
+    </table>
+    <a href="@Url.Content("~/Users/Index")">Back</a>
+</div>

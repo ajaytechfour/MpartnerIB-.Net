@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>LuminousMpartnerIB : Admin Login</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleLogin.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+  <body>
+    <div class="loginBx" data-aos="fade-up" data-aos-duration="2500">
+        <div class="logorow">
+          <img src="images/LuminousMpartnerIBLogo.jpg" alt="LuminousMpartnerIB" title="LuminousMpartnerIB">
+        </div>
+        <h1>Welcome! <span>Login to your Account</span></h1>
+        <form action="dashboard.html" method="get">
+            <div id="loginSection">
+                <div class="loginInput">
+                    <input type="text" name="" id="txtUserName" placeholder="username">
+                </div>
+                <div class="loginPassword">
+                    <input type="Password" name="" id="txtPassword" placeholder="********">
+                </div>
+                <div class="loginBtn">
+                    <input type="submit" value="Sign In" id="Button1" class="submitBtn">
+                </div>
+                         
+            </div>           
+        </form>
+    </div>
+    <div class="copyright">
+      © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#txtPassword").keypress(function (e) {
+
+            if (e.keyCode == 13) {
+                $("#Button1").trigger("click");
+            }
+        });
+        $("#Button1").on("click", function (e) {
+            var email = $("#txtUserName").val().trim();
+            if (email == "") {
+                e.preventDefault();
+                alert("Please Enter User Name");
+                ctrlValidate('#txtUserName');
+                $("#txtUserName").focus();
+                return false;
+            }
+            else {
+                ctrlValidate('#txtUserName');
+                var email1 = $("#txtPassword").val().trim();
+                if (email1 == "") {
+
+                    e.preventDefault();
+                    alert("Please Enter Password.");
+                    $("#txtPassword").focus();
+                    return false;
+                }
+                else {
+                    var userid = $("#txtUserName").val().trim();
+                    var password = $("#txtPassword").val().trim();
+
+
+                    $.post('Login/validatelogin', { userid: userid, password: password }, function (data) { check(data) })
+
+
+                    function check(abc) {
+
+                        if (abc == "Invalid userid and password") {
+                            alert('Invalid Userid And Password');
+                            return false;
+                        }
+                        else {
+                            if (abc == 'LuminousMpartnerIBHome/LuminousMpartnerIB') {
+                                location.href = '@Url.Action("LuminousMpartnerIB", "LuminousMpartnerIBHome")';
+                            }
+                            if (abc == 'CallingSample/Index') {
+                                location.href = '@Url.Action("Index", "CallingSample")';
+                            }
+
+                        }
+
+                    }
+                }
+
+
+            }
+        });
+
+        AOS.init();
+    });
+
+
+    function ctrlValidate(Id) {
+
+        if ($(Id).val() == "") {
+            $(Id).css("border-color", "red");
+            return false;
+        }
+        else {
+            $(Id).css("border-color", "");
+        }
+    }
+      </script>
+    
+</body>
+</html>

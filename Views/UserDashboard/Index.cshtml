@@ -1,0 +1,293 @@
+﻿ @*Implemenetd User Dashboard View by Ravi on 19-07-2018 Task Id - 4009*@
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+@*<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+    $(function () {
+        $(".date").datepicker(
+     { dateFormat: "dd-mm-yy" }
+        );
+    });
+
+    @*$("#gridbox").hide();
+    $(document).ready(function () {
+        $("#sbtbtn").click(function () {
+           // $("#gridbox").show();
+            var stdate=$("#stdate").val();
+            var etdate = $("#etdate").val();
+            var ostype = $("#ostype").val();
+            if (stdate == '' || etdate == '' || ostype == '') {
+                alert("Please select all fields");
+            }
+            else {
+                $.post("@Url.Content("~/UserDashboard/getUserDashboard")", { startdate: stdate, enddate: etdate, ostype: ostype }, function (data) { SetGrid(data); }, "Json");
+            }
+
+        });
+    });
+
+
+    function SetGrid(data) {
+
+
+
+
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+
+            var stdate = $("#stdate").val();
+            var etdate = $("#etdate").val();
+
+
+            var body = "";
+            $("#Grid tbody").empty();
+            var get_obj_length = data.length;
+
+
+
+            var userdashboard = data.split(',');
+
+
+            body += "<tr><td style='font-weight: bold'>From-To(Date)</td><td>" + stdate + " - " + etdate + "</td></tr>" +
+
+             "<tr><td style='font-weight: bold'>Total Login</td><td>" + userdashboard[0] + "</td></tr>" +
+                "<tr><td style='font-weight: bold'>Active User(Last 90 Days)</td><td>" + userdashboard[1] + "</td></tr>";
+
+            $("#Grid tbody").append(body);
+            // SetPages(data.TotalRecord);
+
+
+
+        }
+
+    }*@
+
+
+    @*Commented new function for getting active user report by Ravi on 21-07-2018 Task Id - 4009*@
+    @*function SetGrid(data) {
+
+
+
+
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+
+            var stdate = $("#stdate").val();
+            var etdate = $("#etdate").val();
+
+
+            var body = "";
+            $("#Grid tbody").empty();
+            var get_obj_length = data.length;
+
+
+
+            var userdashboard = data.split(',');
+
+
+            body += "<tr><td style='font-weight: bold'>From-To(Date)</td><td>" + stdate + " - " + etdate + "</td></tr>" +
+
+             "<tr><td style='font-weight: bold'>Total Login</td><td>" + userdashboard[0] + "</td></tr>" +
+                "<tr><td style='font-weight: bold'>Active User(Last 90 Days)</td><td>" + userdashboard[1] + "</td></tr>";
+
+            $("#Grid tbody").append(body);
+            // SetPages(data.TotalRecord);
+
+
+
+        }
+
+    }*@
+</script>
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th,
+        table tr th a,
+        table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td,
+    tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td,
+    #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr,
+    tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+
+    .DragMe:Hover {
+        cursor: move;
+    }
+</style>
+   
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>User Report - </span>User Dashboard</h1>
+        </div>
+    </div>
+@using (@Html.BeginForm("getUserDashboard", "UserDashboard", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+    <div class="row">
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+            <div class="addgift" style="padding-bottom: 10px;">
+                @*<div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>OSType<span style="color: red;">*</span></label>
+                            <select name="ostype" class="form-control" id="ostype">
+                                <option value="0">Select</option>
+                                <option value="Android">Android</option>
+                                <option value="IOS">IOS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>*@
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label> From Date<span style="color: red;">*</span></label>
+                            <input id="stdate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="StartDate" />
+                            <span id="sdate" class="required"></span>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>To Date <span style="color: red;">*</span></label>
+                            <input id="etdate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="EndDate" />
+                            <span id="edate" class="required"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <button id="sbtbtn" class="submitBtn">Submit</button>
+                        </div>
+                    </div>
+                   
+
+                    @if (TempData["Emptyerror"] != null)
+                    {
+                        <span style="font:bold;color:red">
+                            @TempData["Emptyerror"]
+                        </span>
+                    }
+
+                    @if (TempData["Nodataexist"] != null)
+                    {
+                        <span style="font:bold;color:red">
+                            @TempData["Nodataexist"]
+                        </span>
+                    }
+                    @if (TempData["Exception"] != null)
+                    {
+                        <span style="font:bold;color:red">
+                            @TempData["Exception"]
+                        </span>
+                    }
+                </div>
+            </div>
+        </div>
+
+
+        <div id="gridbox" style="display:none;">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="">
+                        <div id="list" class="tabelGridRow">
+                            <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+}
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</div> 

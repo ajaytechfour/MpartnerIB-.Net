@@ -1,0 +1,120 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<Luminous.EF.allprofile>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Security.cshtml";
+}
+<link href="../../assets/css/Formstyle.css" rel="stylesheet" type="text/css" />
+<script src="../../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#profilename").val("");
+    });    
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+            $.post("../profile/Delete", { id: id }, function (data) {
+                if (data == "Record Deleted") {
+                    alert(data);
+                    location.Href = "../profile/Index"
+                }
+
+
+            }, "Json");
+        }
+    }
+    function Edit(x, Id) {
+        var index = $(x).parent().parent().index() + 1;
+
+        
+        var oldText = $("tr:eq(" + index + ")", "#Grid").find(".organisationname").html();
+
+        var newText = oldText.trim();
+        var htmlContent = "<input type='text' name='profileName' value='" + newText + "'/> <span class='required'>*</span>";
+        var htmlUpdateDelete = "<input type='button' onclick=Update(this," + Id + ") value='Update'/> " +
+                               "<input type='button' onclick=Cancel(this," + Id + "," + "'" + newText + "'" + ") value='Cancel'/> "
+                                
+        $("tr:eq(" + index + ")", "#Grid").find(".organisationname").html(htmlContent);
+        $("tr:eq(" + index + ")", "#Grid").find(".actions").html(htmlUpdateDelete);
+    }
+
+    function Update(x, ID) {
+        var index = $(x).parent().parent().index() + 1;
+        var oldText = $("tr:eq(" + index + ")", "#Grid").find(".organisationname").find("input[type=text]").val();
+        $.post("../profile/Update", { Id: ID, ProfileName: oldText }, function (data) {
+            if (data == "Record Updated") {
+                alert(data);
+                Cancel(x, ID, oldText);
+            }
+            else {
+                alert(data);
+                
+            }
+
+        }, "Json");
+    
+    }
+    function Cancel(x, Id,oldtxt) {
+        var index = $(x).parent().parent().index() + 1;
+        var htmlContent = "<a onclick=Edit(this," + Id + ")>Edit</a> <a href='/Profile' onclick=Delete(" + Id + ")>Delete</a>" 
+        
+        $("tr:eq(" + index + ")", "#Grid").find(".organisationname").html(oldtxt);
+        $("tr:eq(" + index + ")", "#Grid").find(".actions").html(htmlContent);
+    }
+</script>
+@section Header
+{
+Profile
+}
+
+
+@using (@Ajax.BeginForm("Insert",new AjaxOptions{ HttpMethod="post", InsertionMode=InsertionMode.Replace, UpdateTargetId="list"}))
+{ 
+    
+<ul class="form-style-1">
+<h3>Add New Profile</h3>
+<li><label><span style="font-family: sans-serif;"> Profile Name</span> <span class="required">*</span>
+
+@Html.TextBoxFor(a => a.FirstOrDefault().profilename, new { id = "profilename"})
+
+@Html.ValidationMessageFor(a => a.FirstOrDefault().profilename, "", new { @class = "Validation" })
+</label>
+</li>
+<li>
+<input type="submit" value="Submit" />
+</li>
+</ul>
+}
+<div id="list">
+<table id="Grid"  class="layout display responsive-table">
+<thead>
+<tr>
+<th>
+Profile Name
+</th>
+<th>
+Action
+</th>
+</tr>
+</thead>
+@foreach (var profile in Model)
+{ 
+<tr>
+<td class="organisationname">
+@Html.DisplayFor(model => profile.profilename)
+</td>
+<td class="actions">
+<a  onclick="Edit(this,@profile.id);">Edit</a>
+@Html.ActionLink("Delete", "Index", new { }, new { onclick = "Delete(" + profile.id + ");" })
+</td>
+</tr>
+}
+</table>
+</div>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })
+
+
+
+

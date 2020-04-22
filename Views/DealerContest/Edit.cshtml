@@ -1,0 +1,347 @@
+﻿@model LuminousMpartnerIB.EF.InsertContext
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#Rating").focus();
+        //isNumberKey = function (evt) {
+        //    var charCode = (evt.which) ? evt.which : event.keyCode
+        //    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        //        return false;
+
+        //    return true;
+        //};
+
+        if(window.location.href.indexOf("PEdit") != -1)
+        {
+            $("#btnnext").hide();
+        }
+        else
+        {
+            $("#save").hide();
+        }
+        $("#btnnext").click(function () {
+            
+            var rating = $("#Rating").val();
+
+            if (rating == "") {
+                alert("Point Allocation is a mendatory field.")
+                $("#Rating").focus();
+                return false;
+            }
+            if (rating == 0 || rating == 2 || rating == 4 || rating == 6) {
+
+
+            }
+            else {
+                alert("Choose only (0,2,4,6)");
+                $("#Rating").val('');
+                $("#Rating").focus();
+                return false;
+            }
+          
+           
+           
+            
+
+            var Contestid = $("#Id").val();
+            var Id = $("#Id").val();
+            var Rating = $("#Rating").val();
+            var DealerName = $("#DealerName").val();
+            var DealerCity = $("#DealerCity").val();
+            var DealerPhone = $("#DealerPhone").val();
+            var DealerEmail = $("#DealerEmail").val();
+            var DistributorCode = $("#DistributorCode").val();
+            var EmpCode = $("#EmpCode").val();
+            var DealerId = $("#DealerId").val();
+            var CreatedBy = $("#CreatedBy").val();
+            var CreatedOn = $("#CreatedOn").val();
+      
+            $.ajax({
+                type: "Post",
+                url: "/DealerContest/GetNextImage",
+                data: { 'Contestid': Contestid,'Rating': Rating, 'DealerName': DealerName, 'DealerCity': DealerCity, 'DealerPhone': DealerPhone, 'DealerEmail': DealerEmail, 'DistributorCode': DistributorCode, 'EmpCode': EmpCode, 'DealerId': DealerId, 'CreatedBy': CreatedBy, 'CreatedOn': CreatedOn },
+                dataType: "",
+                success: function (d) {
+                    if (d == "No Data") {
+                        alert("No Data Available");
+                        window.location.href = "/DealerContest/Index";
+                        $("#btnnext").hide();
+                    }
+                    else {
+                        if (d != '') {
+                            var dfg = d;
+
+                            window.location.href = d;
+
+                        }
+                    }
+                    //if(d!='')
+                    //{
+                    //    $.ajax({
+                    //        type: "Get",
+                    //        url: "/DealerContest/Edit/"+d,
+                    //        data: {}
+                    //    });
+                   
+
+                    //}
+                },
+
+                error: function (ex) {
+                    
+                   
+                    alert('Failed to retrieve states.' + ex);
+                    //  window.location.reload();
+
+                }
+            });
+        });
+        
+        $("#save").click(function () {
+            var rating=$("#Rating").val();
+            if (rating == "") {
+                alert("Point Allocation is a mendatory field.")
+                $("#Rating").focus();
+                return false;
+            }
+            if (rating == 0 || rating == 2 || rating == 4 || rating == 6) {
+                
+               
+            }
+            else {
+                alert("Choose only (0,2,4,6)");
+                $("#Rating").val('');
+                $("#Rating").focus();
+                return false;
+            }
+         
+                if(rating!="")
+                {
+                    var url = "/DealerContest/Update";
+                    var Id = $("#Id").val();
+                    var Rating = $("#Rating").val();
+                    var DealerName = $("#DealerName").val();
+                    var DealerCity = $("#DealerCity").val();
+                    var DealerPhone = $("#DealerPhone").val();
+                    var DealerEmail = $("#DealerEmail").val();
+                    var DistributorCode = $("#DistributorCode").val();
+                    var EmpCode = $("#EmpCode").val();
+                    var DealerId = $("#DealerId").val();
+                    var CreatedBy = $("#CreatedBy").val();
+                    var CreatedOn = $("#CreatedOn").val();
+
+                    $.ajax({
+                        type: "Post",
+                        url: url,
+                        data: { 'Id': Id, 'Rating': Rating, 'DealerName': DealerName, 'DealerCity': DealerCity, 'DealerPhone': DealerPhone, 'DealerEmail': DealerEmail, 'DistributorCode': DistributorCode, 'EmpCode': EmpCode, 'DealerId': DealerId, 'CreatedBy': CreatedBy, 'CreatedOn': CreatedOn },
+                        dataType: "",
+                        success: function (d) {
+
+                       
+                            if (d == "Point Allocation Update Successfully") {
+                            
+                                alert("Point Allocation Update Successfully");
+                                window.location.href = "/DealerContest/Index";
+                            }
+                            else if (d == "Point Allocation Not Updated") {
+
+                                alert("Point Allocation Not Updated");
+                            }
+                      
+                        },
+
+                        error: function (ex) {
+                            alert(ex);
+                            // alert('Failed to retrieve states.' + ex);
+                            //  window.location.reload();
+
+                        }
+                    });
+                    return false
+                }
+            
+            });
+        })
+   
+</script>
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+
+
+<div id="form" style="margin-bottom: 11px">
+
+    @*@using (Html.BeginForm("Update", "DealerContest", FormMethod.Post, new { enctype = "multipart/form-data" }))*@
+    
+        <div id="content_wrap">
+            <div class="msgbar msg_Info heading">
+              Point Allocation DashBoard
+            </div>
+            <button style="float:right;margin-top:4px" id="btnnext">Next Image</button>
+           
+            <div class="content_main">
+    <div class="boxes1">
+
+        <table width="100%">
+            <tr>
+                <td style="border:none" colspan="1" width="50%"><img src="@("/ProfileImages/" +Model.ImageEncode)" alt="" width="50%" height="300px" /></td>
+              
+                <td style="border:none" >Point Allocation<span class="required">*</span>  
+                @*@Html.TextBoxFor(a => a.Rating,new { onkeypress = "return isNumberKey(event)"})*@
+                    <input type="number" id="Rating">
+    </td>
+
+                        </tr>
+                    </table>
+    <table id="GridView">
+        <tr>
+            @*@Html.HiddenFor(a=>a.ImageEncode)*@
+            @Html.HiddenFor(a => a.Id)
+            <td style="width: 138px;">
+                Dealer Name
+            </td>
+            <td>
+                @Html.TextBoxFor(a => a.DealerName, new { @readonly = "readonly" })
+            </td>
+            <td>
+                Dealer City
+            </td>
+            <td>
+                @Html.TextBoxFor(a => a.DealerCity, new { @readonly = "readonly" })
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                Dealer Phone
+            </td>
+            <td>
+                @Html.TextBoxFor(a => a.DealerPhone, new { @readonly = "readonly" })
+            </td>
+            <td>
+                Dealer Email
+            </td>
+            <td>
+                @Html.TextBoxFor(a => a.DealerEmail, new { @readonly = "readonly" })
+
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                Distributor Code
+            </td>
+            <td>
+                @Html.TextBoxFor(a => a.DistributorCode, new { @readonly = "readonly" })
+            </td>
+            <td>
+                Emp Code
+            </td>
+            <td>
+                @Html.TextBoxFor(a => a.EmpCode, new { @readonly = "readonly" })
+            </td>
+        </tr>
+        <tr>
+
+
+            <td>
+                Dealer Id
+            </td>
+            <td>
+                @Html.TextBoxFor(a => a.DealerId, new { @readonly = "readonly" })
+            </td>
+            <td>
+                Created By
+            </td>
+            <td>
+                @Html.TextBoxFor(a => a.CreatedBy, new { @readonly = "readonly" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Created On
+            </td>
+            <td>
+                @Html.TextBoxFor(a => a.CreatedOn, new { @readonly = "readonly" })
+            </td>
+        </tr>
+
+
+    </table>
+    <input type="submit" id="save" value="Submit" />
+        </div>
+            </div>
+        </div>
+
+
+</div>

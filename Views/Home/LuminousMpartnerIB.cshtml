@@ -1,0 +1,147 @@
+﻿@{
+    ViewBag.Title = "LuminousMpartnerIB";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="page-wrapper" style="background:#f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            @if ((string)Session["Id"].ToString() == "5")
+            {
+                <h1 class="pageHeading">Dashbaord</h1>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="space30" style="height:15px;"></div>
+        @if ((string)Session["Id"].ToString() == "5")
+        {
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/magicalBox.jpg" alt="" title="">
+                    <h3>Magical 7</h3>
+                    <a href="/LSD_Gift/Index" title=""> More Details </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/priceListBox.jpg" alt="" title="">
+                    <h3>Price List</h3>
+                    <a href="/CreatePermotionPrice_New/Index" title=""> More Details </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/schemeBox.jpg" alt="" title="">
+                    <h3>Scheme</h3>
+                    <a href="/CreatePermotionScheme_New/Index" title=""> More Details </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/HomeCard1.jpg" alt="" title="" style="height:70px; margin-bottom:5px;">
+                    <h3>Home Card</h3>
+                    <a href="/HomeCard/Index" title=""> More Details </a>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/connectPlus.jpg" alt="" title="">
+                    <h3>Connect+</h3>
+                    <a href="/ConnectPlus/Index" title=""> More Details </a>
+                </div>
+            </div>
+            @*<div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="BoxService">
+                        <img src="/images/catalogBox.jpg" alt="" title="">
+                        <h3>Catalog</h3>
+                        <a href="/ProductCategory/index" title=""> More Details </a>
+                    </div>
+                </div>*@
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/connectAssistBox.jpg" alt="" title="">
+                    <h3>Connect Assist</h3>
+                    <a href="/ConnectAssist/index" title=""> More Details </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/galleryBox.jpg" alt="" title="">
+                    <h3>Gallery</h3>
+                    <a href="/Gallery/Index" title=""> More Details </a>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/notificationBox.jpg" alt="" title="">
+                    <h3>Notification</h3>
+                    <a href="/Notifications/Notification" title=""> More Details </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/escalation.jpg" alt="" title="">
+                    <h3 style="font-size:23px;">Escalation Matrix</h3>
+                    <a href="/EscalationMatrix/Index" title=""> More Details </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/surveyBox.jpg" alt="" title="">
+                    <h3> Survey </h3>
+                    <a href="/NotificationSurvey/Index" title=""> More Details </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/alertPop.jpg" alt="" title="">
+                    <h3>Alert Pop Up</h3>
+                    <a href="/AlertNotification/AlertNotification" title=""> More Details </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/contest.jpg" alt="" title="">
+                    <h3>Dealer Contest</h3>
+                    <a href="/ContestRating/Index" title=""> More Details </a>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/report.jpg" alt="" title="">
+                    <h3>User Report</h3>
+                    <a href="/UserDashboard/Index" title=""> More Details </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/faq.jpg" alt="" title="">
+                    <h3>FAQs</h3>
+                    <a href="/FAQ/index" title=""> More Details </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-duration="2500">
+                <div class="BoxService">
+                    <img src="/images/contact.jpg" alt="" title="">
+                    <h3>Contact Us</h3>
+                    <a href="/Suggestion/Suggestionlist" title=""> More Details </a>
+                </div>
+            </div>
+
+
+            <div class="">
+                <div class="col-md-12">
+                    <div class="footerRow">
+                        © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

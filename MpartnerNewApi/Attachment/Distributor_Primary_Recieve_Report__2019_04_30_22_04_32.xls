@@ -1,0 +1,39 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000939624</td><td>1991100188</td><td>2019-04-26</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>40.000</td><td>268685.92</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG01</td><td>Gagret Unit - 1</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000928908</td><td>1992100085</td><td>2019-04-10</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>184139.80</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000931299</td><td>1992100151</td><td>2019-04-15</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>50.000</td><td>396000.00</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000936009</td><td>1992100241</td><td>2019-04-22</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>20.000</td><td>158400.00</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000936195</td><td>1992100259</td><td>2019-04-23</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>30.000</td><td>237600.00</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000939624</td><td>1992100292</td><td>2019-04-26</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>20.000</td><td>158399.90</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000939624</td><td>1992100292</td><td>2019-04-26</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>10.000</td><td>95584.44</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000939624</td><td>1992100295</td><td>2019-04-26</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>20.000</td><td>161567.80</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000939624</td><td>1992100295</td><td>2019-04-26</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>5.000</td><td>44921.20</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000939624</td><td>1992100304</td><td>2019-04-27</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>5.000</td><td>44921.35</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000939624</td><td>1992100304</td><td>2019-04-27</td><td>F1148C282150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY</td><td>20.000</td><td>157212.33</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000940938</td><td>1992100348</td><td>2019-04-29</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>15.000</td><td>118800.00</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000940938</td><td>1992100348</td><td>2019-04-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>10.000</td><td>87862.50</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000940938</td><td>1992100349</td><td>2019-04-29</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>25.000</td><td>198000.00</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000936198</td><td>1993100333</td><td>2019-04-25</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>289575.50</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000944133</td><td>1993100409</td><td>2019-04-29</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>50.000</td><td>125730.16</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0000944133</td><td>1993100409</td><td>2019-04-29</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>144787.68</td><td>0001104805</td><td>RAJU ENTERPRISES AMB</td><td>08</td><td>Himachal Pradesh</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr>
+</table>

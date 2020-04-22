@@ -1,0 +1,443 @@
+﻿@{
+   
+    Layout = "~/Views/Shared/security.cshtml";
+}
+<html>
+<head>
+    <title>Page Access</title>
+    <style type="text/css">
+        table
+        {
+            border: 0;
+            border-spacing: 0;
+            font-size: 0.857em;
+            margin: 10px 0;
+            width: 100%;
+        }
+        table table
+        {
+            font-size: 1em;
+        }
+        #footer-wrapper table
+        {
+            font-size: 1em;
+        }
+        table tr th
+        {
+            background: #757575;
+            background: rgba(0, 0, 0, 0.51);
+            border-bottom-style: none;
+        }
+        table tr th, table tr th a, table tr th a:hover
+        {
+            color: #FFF;
+            font-weight: bold;
+        }
+        table tbody tr th
+        {
+            vertical-align: top;
+        }
+        tr td, tr th
+        {
+            padding: 4px 9px;
+            border: 1px solid #fff;
+            text-align: left; /* LTR */
+        }
+        #footer-wrapper tr td, #footer-wrapper tr th
+        {
+            border-color: #555;
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+        tr.odd
+        {
+            background: #e4e4e4;
+            background: rgba(0, 0, 0, 0.105);
+        }
+        tr, tr.even
+        {
+            background: #efefef;
+            background: rgba(0, 0, 0, 0.063);
+        }
+        table ul.links
+        {
+            margin: 0;
+            padding: 0;
+            font-size: 1em;
+        }
+        table ul.links li
+        {
+            padding: 0 1em 0 0;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(
+        function () {
+            show();
+        }); 
+    </script>
+    <script type="text/javascript">
+
+        var GData = "";
+        function show() {
+
+            $.get("@Url.Content("~/pageaccess/Showstate")", null, function (data) { chk(data); })
+            .error(function (data) { chk(data); });
+        }
+        function chk(abc) {
+            GData = abc;
+            BuildTable(GData, 0);
+        }
+
+        function BuildTable(data, eid) {
+
+            var table = '<table id=gridview11 width=100%><thead><tr><th style=width:20%;display:none; >ID</th><th width:20%; ><input onclick =chkAllalll(this) id=chkAllalll type=checkbox  />Page Name</th><th width:15%; ><input onclick =chkAllRows() id=chkAll type=checkbox />Create</th><th width:15%; ><input  id=chkAll1 onclick =chkAllRows1()    type=checkbox  />Edit</th><th width:15%; ><input  id=chkAll2  onclick =chkAllRows2() type=checkbox />Delete</th><th width:15%; ><input  id=chkAll3  onclick =chkAllRows3() type=checkbox />View</th></thead><tbody>';
+            for (var cd in data) {
+
+                var row = '<tr>';
+                if (eid != data[cd].id) {
+                    row += '<td class=eid style=background-color:Silver;width:20%;display:none; >' + data[cd].id + '</td>';
+                    row += '<td style=background-color:Silver;width:20%; >' + data[cd].pagename + '</td>';
+
+                    row += '<td style=background-color:Silver;width:15%; >' + '<input class=row id=chkRowcreate type=checkbox   /></td>';
+                    row += '<td style=background-color:Silver;width:15%; >' + '<input class=row1 id=chkRowedit type=checkbox   /></td>';
+                    row += '<td style=background-color:Silver;width:15%; >' + '<input class=row2 id=chkRowdelete type=checkbox  /></td>';
+                    row += '<td style=background-color:Silver;width:15%; >' + '<input class=row3 id=chkRowview type=checkbox  /></td>';
+                }
+
+
+
+                row += '</tr>';
+                table += row;
+            }
+
+            table += '</tbody></table>';
+            $('#d1').html(table);
+        }
+        function chkAllRows() {
+
+            $('tr').each(function () {
+                if ($('#chkAll').attr("checked")) {
+                    $('.row').attr("checked", true);
+                }
+                else {
+                    $('.row').attr("checked", false);
+                }
+            });
+        }
+
+
+        function chkAllRows1() {
+            $('tr').each(function () {
+                if ($('#chkAll1').attr("checked")) {
+                    $('.row1').attr("checked", true);
+                }
+                else {
+                    $('.row1').attr("checked", false);
+                }
+            });
+        }
+
+
+
+        function chkAllRows2() {
+            $('tr').each(function () {
+                if ($('#chkAll2').attr("checked")) {
+                    $('.row2').attr("checked", true);
+                }
+                else {
+                    $('.row2').attr("checked", false);
+                }
+            });
+        }
+
+        function chkAllRows3() {
+            $('tr').each(function () {
+                if ($('#chkAll3').attr("checked")) {
+                    $('.row3').attr("checked", true);
+                }
+                else {
+                    $('.row3').attr("checked", false);
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+
+        function chkAllalll(objRef) {
+
+            // var GridView = objRef.parentNode.parentNode.parentNode;
+
+            var inputList = gridview11.getElementsByTagName("input");
+
+            for (var i = 0; i < inputList.length; i++) {
+
+                //Get the Cell To find out ColumnIndex
+
+                var row = inputList[i].parentNode.parentNode;
+
+                if (inputList[i].type == "checkbox" && objRef != inputList[i]) {
+
+                    if (objRef.checked) {
+
+                        //If the header checkbox is checked
+
+                        //check all checkboxes
+
+                        //and highlight all rows
+
+                        //  row.style.backgroundColor = "aqua";
+
+                        inputList[i].checked = true;
+
+                    }
+
+                    else {
+
+                        //If the header checkbox is checked
+
+                        //uncheck all checkboxes
+
+                        //and change rowcolor back to original
+
+                        if (row.rowIndex % 2 == 0) {
+
+                            //Alternating Row Color
+
+                            // row.style.backgroundColor = "#C2D69B";
+
+                        }
+
+                        else {
+
+                            //row.style.backgroundColor = "white";
+
+                        }
+
+                        inputList[i].checked = false;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#Button1").on("click", function (e) {
+
+                var serviceid;
+                var create;
+                var edit;
+                var deletep;
+                var uview;
+                $('tr').each(function () {
+
+                    if ($(this).find(".eid").html() == null) {
+                        //alert('kjdkf');
+                    }
+                    else {
+
+
+                        serviceid += $(this).find(".eid").html() + ',';
+                        //alert(serviceid);
+                        if ($(this).find('#chkRowcreate').is(":checked")) {
+
+                            var tt = 1;
+                            create += tt + ',';
+                            //  alert(create);
+                        }
+                        else {
+                            var tt = 0;
+                            create += tt + ',';
+                            //alert(create);
+                        }
+
+                        if ($(this).find('#chkRowedit').is(":checked")) {
+
+                            var tt = 1;
+                            edit += tt + ',';
+                            //alert(edit);
+
+                        }
+                        else {
+                            var tt = 0;
+                            edit += tt + ',';
+                            //  alert(edit);
+                        }
+
+                        if ($(this).find('#chkRowdelete').is(":checked")) {
+
+                            var tt = 1;
+                            deletep += tt + ',';
+                            //alert(deletep);
+
+                        }
+                        else {
+                            var tt = 0;
+                            deletep += tt + ',';
+                            // alert(deletep);
+                        }
+
+
+                        if ($(this).find('#chkRowview').is(":checked")) {
+
+                            var tt = 1;
+                            uview += tt + ',';
+                            //alert(deletep);
+
+                        }
+                        else {
+                            var tt = 0;
+                            uview += tt + ',';
+                            // alert(deletep);
+                        }
+                    }
+
+
+                });
+
+
+                var pofileid = $("#Countries").val();
+                if (pofileid == 0) {
+                    alert('Please Select Profile');
+                    return false;
+                }
+                else {
+
+                    $.post("@Url.Content("~/pageaccess/savedata")", { pofileid: pofileid, pageid: serviceid, createpage: create, editpage: edit, deletepage: deletep, userview: uview }, function (data) { checkdata(data); })
+                }
+
+                function checkdata(abc) {
+                    alert(abc);
+                }
+
+
+            });
+        });
+
+   
+  
+    </script>
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+
+
+
+            $("#Countries").change(function () {
+                var id = $("#Countries").val()
+                showprofile(id);
+
+
+
+            })
+
+        });
+
+    </script>
+    <script type="text/javascript">
+
+
+        function showprofile(id) {
+            var pid = id;
+
+            $.get("@Url.Content("~/pageaccess/Showstatenew")", { profileid: pid }, function (data) { chk(data); })
+            .error(function (data) { chk(data); });
+        }
+        function chk(abc) {
+
+            BuildTable1(abc, 0);
+        }
+
+        function BuildTable1(data, eid) {
+
+
+            var table = '<table id=gridview11 width=100%><thead><tr><th style=width:20%;display:none; >ID</th><th width:20%; ><input onclick =chkAllalll(this) id=chkAllalll type=checkbox  />Page Name</th><th width:15%; ><input onclick =chkAllRows() id=chkAll type=checkbox />Create</th><th width:15%; ><input  id=chkAll1 onclick =chkAllRows1()    type=checkbox  />Edit</th><th width:15%; ><input  id=chkAll2  onclick =chkAllRows2() type=checkbox />Delete</th><th width:15%; ><input  id=chkAll3  onclick =chkAllRows3() type=checkbox />View</th></thead><tbody>';
+            for (var cd in data) {
+
+                var row = '<tr>';
+                if (eid != data[cd].id) {
+                    row += '<td class=eid style=background-color:Silver;width:20%;display:none; >' + data[cd].id + '</td>';
+                    row += '<td style=background-color:Silver;width:20%; >' + data[cd].pagename + '</td>';
+
+                    if (data[cd].createrole == 1) {
+
+                        row += '<td style=background-color:Silver;width:15%; >' + '<input class=row id=chkRowcreate type=checkbox  Checked=true /></td>';
+
+                    }
+                    else {
+                        row += '<td style=background-color:Silver;width:15%; >' + '<input class=row id=chkRowcreate type=checkbox  /></td>';
+                    }
+
+
+                    if (data[cd].editrole == 1) {
+                        row += '<td style=background-color:Silver;width:15%; >' + '<input class=row1 id=chkRowedit type=checkbox   Checked=true /></td>';
+                    }
+                    else {
+                        row += '<td style=background-color:Silver;width:15%; >' + '<input class=row1 id=chkRowedit type=checkbox   /></td>';
+                    }
+
+                    if (data[cd].deleterole == 1) {
+                        row += '<td style=background-color:Silver;width:15%; >' + '<input class=row2 id=chkRowdelete type=checkbox  Checked=true /></td>';
+                    }
+                    else {
+                        row += '<td style=background-color:Silver;width:15%; >' + '<input class=row2 id=chkRowdelete type=checkbox  /></td>';
+                    }
+
+                    if (data[cd].userview == 1) {
+                        row += '<td style=background-color:Silver;width:15%; >' + '<input class=row3 id=chkRowview type=checkbox  Checked=true /></td>';
+                    }
+                    else {
+                        row += '<td style=background-color:Silver;width:15%; >' + '<input class=row3 id=chkRowview type=checkbox  /></td>';
+                    }
+
+                }
+
+
+
+                row += '</tr>';
+                table += row;
+            }
+
+            table += '</tbody></table>';
+            $('#d1').html(table);
+        }
+    </script>
+</head>
+<body>
+    <div id="content_wrap">
+        <div class="msgbar msg_Info heading">
+            Page Access</div>
+        <div class="content_main">
+            <div class="boxes1">
+                <table>
+                    <tr>
+                        <td>
+                            Profile Name<font color="red">*</font>
+                        </td>
+                        <td>
+                            <div>
+                                @Html.DropDownList("Countries", ViewData["country"] as List<SelectListItem>, new { @class = "input-form" })
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div id="d1">
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <input id="Button1" type="button" value="Save" class="save-but-m" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

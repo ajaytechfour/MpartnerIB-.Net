@@ -1,0 +1,29 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0060045127</td><td>1825600191</td><td>2019-03-02</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8915.62</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1250</td><td>Guwahati Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000920426</td><td>1866100244</td><td>2019-03-25</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>55.000</td><td>440000.00</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000920426</td><td>1866100244</td><td>2019-03-25</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>30.000</td><td>409200.00</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000922041</td><td>1866100301</td><td>2019-03-26</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>30.000</td><td>386700.00</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000922054</td><td>1866100303</td><td>2019-03-26</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>50.000</td><td>127000.00</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000922054</td><td>1866100303</td><td>2019-03-26</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>70.000</td><td>204750.00</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000941040</td><td>1966100353</td><td>2019-04-27</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>18.000</td><td>167400.00</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000941040</td><td>1966100353</td><td>2019-04-27</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>40.000</td><td>320000.00</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000941040</td><td>1966100353</td><td>2019-04-27</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000941040</td><td>1966100353</td><td>2019-04-27</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>25.000</td><td>241250.00</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000941041</td><td>1966100356</td><td>2019-04-27</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>60.000</td><td>152400.00</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0060045125</td><td>1966600001</td><td>2019-04-03</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5153.35</td><td>0001103745</td><td>Bhupati Stores</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr>
+</table>

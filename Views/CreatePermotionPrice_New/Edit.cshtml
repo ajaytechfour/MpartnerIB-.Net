@@ -1,0 +1,721 @@
+﻿@model LuminousMpartnerIB.EF.Card_dynamicPage
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $.post("@Url.Content("~/ProductCategory/GetParentCategory")", null, function (data) { SetParentCategory(data); }, "Json");
+        @*$.post("@Url.Content("~/CreatePermotionPrice_New/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");*@
+        $.post("@Url.Content("~/CreatePermotionPrice_New/GetCardProvider")", null, function (data) { SetCardGrid(data); }, "Json");
+        $.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },
+        "Json");
+        $.post("@Url.Content("~/Dealers/GetAllDestributors")", null, function (data) { SetProdcutCategory(data, 'DestributorList'); }, "Json");
+        $.post("@Url.Content("~/Dealers/GetAllDealer")", null, function (data) { SetProdcutCategory(data, 'DealerList'); }, "Json");
+        $(".date").datepicker(
+     { dateFormat: "dd-mm-yy" }
+        );
+        ValidationMessage();
+    });
+
+</script>
+<script type="text/javascript">
+    function ValidationMessage() {
+        if ('@ViewBag.StartDate' != "") {
+            $("#sdate").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#edate").text('@ViewBag.EndDate');
+        }
+
+        if ('@ViewBag.File' != "") {
+            $("#file").text('@ViewBag.File');
+        }
+
+
+        if ('@ViewBag.Providerid' != "") {
+            $("#Ctype").text('@ViewBag.Providerid');
+        }
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            location.href = "@Url.Content("~/CreatePermotionPrice_New/Index")";
+        }
+        $("#sdate").val('@ViewBag.preStartDate');
+        $("#edate").val('@ViewBag.PreEndDate');
+
+    }
+</script>
+<script type="text/javascript">
+
+
+    @*function SetGrid(data) {
+        var body = "";
+        $("#Grid tbody").empty();
+        $.each(data, function (key, value) {
+            var Description = value.Descriptions.toString();;
+            var shorDescriptions = Description.substring(0, 10);
+            body += "<tr><td> PLI" + value.id + "</td>" +
+                 "<td>" + value.ParntCat + "</td>" +
+                "<td>" + value.ProCatTwo + "</td>" +
+                "<td>" + value.PCat + "</td>" +
+            "<td>" + value.proCatOne + "</td>" +
+
+
+            "<td><div style='Position:absolute;cursor:pointer'> <span class='Des' onmouseout='hideFullDescription(this);' onmouseover='showFullDescription(this);'>" + shorDescriptions + "</span><div style='position:relative;' class='FullDes'>" + Description + "</div></div></td>" +
+             "<td>" + value.StartDate + "</td>" +
+             "<td>" + value.EndDate + "</td>" +
+             "<td>" + value.status + "</td>" +
+
+            "<td> <a style='cursor:pointer' onclick=Detail(" + value.id + ");>Detail</a> <a style='cursor:pointer' onclick=Edit(" + value.id + ");>Edit</a> <a style='cursor:pointer' onclick=Delete(" + value.id + ");>Delete</a></td></tr>";
+            debugger;
+        });
+        $("#Grid tbody").append(body);
+        SetPages('@TempData["paging"]')
+
+    }*@
+    function Edit(id) {
+        location.href = "@Url.Content("~/CreatePermotionPrice_New/Edit/")" + id;
+    }
+    function showFullDescription(currentTag) {
+        $(currentTag).parent().find(".FullDes").show();
+    }
+    function hideFullDescription(currentTag) {
+        $(currentTag).parent().find(".FullDes").hide();
+    }
+    function SetProdcutCategory(data, id) {
+        option = "";
+        var procat = $("#" + id);
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+        });
+        procat.append(option);
+
+
+
+    }
+    function SetParentCategory(data) {
+        option = "";
+        var procat = $("#ParentCategory");
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+
+        });
+        procat.append(option);
+        //ViewBag.Prntid = cud.ParentCatid;
+        procat.val('@ViewBag.Prntid');
+
+
+    }
+
+    //Set Card Grid//
+    function SetCardGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#Ctype");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+            procat.val('@ViewBag.Providerid');
+        }
+    }
+
+</script>
+<script type="text/javascript">
+    function Alls() {
+        if ($("#All").is(":checked")) {
+            $("#region").attr("disabled", true);
+            $("#destributor").attr("disabled", true);
+            $("#Dealer").attr("disabled", true);
+            $("#RegionList_chosen").hide();
+            $("#DestributorList_chosen").hide();
+            $("#DealerList_chosen").hide();
+        }
+        else {
+            $("#region").attr("disabled", false);
+            $("#destributor").attr("disabled", false);
+            $("#Dealer").attr("disabled", false);
+            $("#RegionList_chosen").show();
+            $("#DestributorList_chosen").show();
+            $("#DealerList_chosen").show();
+        }
+
+    }
+
+
+    function GetRegions() {
+        if ($("#region").is(":checked")) {
+
+            $.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },
+                 "Json");
+            $("#RegionList_chosen").show();
+
+        }
+        else {
+            $("#RegionList_chosen").hide();
+        }
+
+    }
+    function GetDestributor() {
+        if ($("#destributor").is(":checked")) {
+            if ($("#region").is(":checked")) {
+                SetDestributor();
+
+            }
+            else {
+                $.post("@Url.Content("~/Dealers/GetAllDestributors")", null, function (data) { SetProdcutCategory(data, 'DestributorList'); }, "Json");
+            }
+            $("#DestributorList_chosen").show();
+        }
+        else {
+
+            $("#DestributorList_chosen").hide();
+        }
+    }
+    function GetDealer() {
+        if ($("#Dealer").is(":checked")) {
+            if ($("#destributor").is(":checked")) {
+                SetDealer();
+            }
+            else {
+
+                $.post("@Url.Content("~/Dealers/GetAllDealer")", null, function (data) { SetProdcutCategory(data, 'DealerList'); }, "Json");
+            }
+            $("#DealerList_chosen").show();
+        }
+        else {
+
+            $("#DealerList_chosen").hide();
+        }
+    }
+    function SetProdcutCategory(data, id) {
+        option = "";
+        var procat = $("#" + id);
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+        });
+        procat.append(option);
+        procat.chosen({ width: "100px" });
+        procat.trigger("chosen:updated");
+        if ($("#region").is(":checked")) {
+            $("#RegionList_chosen").show();
+        }
+        else {
+            $("#RegionList_chosen").hide();
+        }
+
+        if ($("#destributor").is(":checked")) {
+            $("#DealerList_chosen").show();
+        }
+        else {
+            $("#DestributorList_chosen").hide();
+        }
+
+        if ($("#Dealer").is(":checked")) {
+            $("#DealerList_chosen").show();
+        }
+        else {
+            $("#DealerList_chosen").hide();
+        }
+    }
+
+    function SetRegion() {
+        $("#RgList").val($("#RegionList").val());
+        var regionlist = $("#RgList").val();
+
+        $.post("@Url.Content("~/Dealers/GetDestributorsByMultiPleids")", { RegionId: regionlist }, function (data) { SetProdcutCategory(data, 'DestributorList'); }, "Json");
+    }
+    function SetDestributor() {
+        $("#disList").val($("#DestributorList").val());
+
+        var regionlist = $("#disList").val();
+
+        $.post("@Url.Content("~/Dealers/GetAllDealerByMultiPleIds")", { RegionId: regionlist }, function (data) { SetProdcutCategory(data, 'DealerList'); }, "Json");
+    }
+    function SetDealer() {
+        $("#Dealist").val($("#DealerList").val());
+    }
+
+
+    $(function () {
+
+        var _URL = window.URL || window.webkitURL;
+        var imgwidth = "";
+        var imgheight = "";
+
+        $("#file_headerimage").change(function () {
+
+            var file_size = (this.files[0].size);
+
+            if ($("#file_headerimage").val() != '' && $("#file_headerimage").length != 0) {
+                if ($("#file_headerimage").length != 0 && file_size >= 4000) {
+                    $(".h_file_error").html("File size should not be greater than 4 KB");
+                    $("#file_headerimage").val('');
+                    return false;
+                }
+                else {
+                    if ((file = this.files[0])) {
+                        img = new Image();
+                        img.onload = function () {
+
+                            imgwidth = this.width;
+                            imgheight = this.height;
+
+                            if (imgwidth == 700 && imgheight == 151) {
+                                $(".h_file_error").html("");
+                                return true;
+                            }
+                            else {
+                                $(".h_file_error").html("Dimension should be 700*151");
+                                $("#file_headerimage").val('');
+                                return false;
+                            }
+
+                        };
+                        img.src = _URL.createObjectURL(file);
+                    }
+                }
+            }
+
+        });
+
+
+        $("#file_mainimage").change(function () {
+
+            var file_size = (this.files[0].size);
+
+            if ($("#file_mainimage").val() != '' && $("#file_mainimage").length != 0) {
+                if ($("#file_mainimage").length != 0 && file_size >= 50000) {
+                    $(".m_file_error").html("File size should not be greater than 50 KB");
+                    $("#file_mainimage").val('');
+                    return false;
+                }
+                else {
+                    if ((file = this.files[0])) {
+                        img = new Image();
+                        img.onload = function () {
+
+                            imgwidth = this.width;
+                            imgheight = this.height;
+
+                            if (imgwidth == 500 && imgheight == 500) {
+                                $(".m_file_error").html("");
+                                return true;
+                            }
+                            else {
+                                $(".m_file_error").html("Dimension should be 500*500");
+                                $("#file_mainimage").val('');
+                                return false;
+                            }
+
+                        };
+                        img.src = _URL.createObjectURL(file);
+                    }
+                }
+            }
+
+        });
+
+
+    });
+</script>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        $("#title_colour").click(function () {
+
+            window.open('https://htmlcolorcodes.com/color-picker/');
+
+        })
+
+        $("#subtitle_colour").click(function () {
+
+            window.open('https://htmlcolorcodes.com/color-picker/');
+
+        })
+
+
+    });
+
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#hex1Titlecolor, #hex2subtitlecolor").change(function () {
+
+
+            var regExp = new RegExp("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$");
+
+            var text1 = $("#hex1Titlecolor").val();
+            var text2 = $("#hex2subtitlecolor").val();
+
+            if ($("#hex1Titlecolor").val() != '') {
+                if (regExp.test(text1)) {
+                    $("#lblmessagehex1price").hide();
+                }
+                else {
+                    $("#lblmessagehex1price").show();
+                    $("#lblmessagehex1price").text("Please Enter a Valid Hex Code");
+                    $("#hex1Titlecolor").val('');
+                }
+
+            }
+
+            if ($("#hex2subtitlecolor").val() != '') {
+                if (regExp.test(text2)) {
+                    $("#lblmessagehex2price").hide();
+                }
+                else {
+                    $("#lblmessagehex2price").show();
+                    $("#lblmessagehex2price").text("Please Enter a Valid Hex Code");
+                    $("#hex2subtitlecolor").val('');
+                }
+
+            }
+
+
+        });
+
+
+    });
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#btnsubmit").click(function () {
+
+            if ($('#ParentCategory').val() == 0 || $('#ParentCategory option:selected').val() == 0) {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+
+            if ($('#Ctype').val() == 0 || $('#Ctype option:selected').val() == 0) {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+
+            if ($("#txttitle").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($("#hex1Titlecolor").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($("#txtsubtitle").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($("#hex2subtitlecolor").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($('#file_headerimage').length == 0 || $('#file_headerimage').val() == '') {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($('#file_mainimage').length == 0 || $('#file_mainimage').val() == '') {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($("#sdate").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($("#edate").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            //if ($("#pdf").val() == "") {
+            //    $("#lblmessagesubmit").text("Please fill all the fields");
+            //    return false;
+            //}
+
+
+        });
+
+    });
+</script>
+
+@*<script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#btnsubmit").click(function () {
+
+                if ($('#ParentCategory').val() == 0 || $('#ParentCategory option:selected').val() == 0) {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+                }
+
+                if ($('#Ctype').val() == 0 || $('#Ctype option:selected').val() == 0) {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+                }
+
+                if ($("#txttitle").val() == "") {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+                }
+                if ($("#hex1Titlecolor").val() == "") {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+                }
+                if ($("#txtsubtitle").val() == "") {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+                }
+                if ($("#hex2subtitlecolor").val() == "") {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+                }
+                if ($('#file_headerimage').length == 0 || $('#file_headerimage').val() == '') {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+                }
+                if ($('#file_mainimage').length == 0 || $('#file_mainimage').val() == '') {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+                }
+                if ($("#sdate").val() == "") {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+                }
+                if ($("#edate").val() == "") {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+                }
+
+
+            });
+
+        });
+
+
+    </script>*@
+
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Price List - </span> Edit Price List</h1>
+        </div>
+    </div>
+    <div id="form" style="margin-bottom: 11px">
+        @using (Html.BeginForm("Update", "CreatePermotionPrice_New", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+            <div class="row" id="GridView">
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="">
+                                    <label>Parent Category <span class="required">*</span></label>
+                                    <select name="ParentCatid" style="color: black" id="ParentCategory" class="form-control">
+                                        <option>Select</option>
+                                    </select>
+                                    <br />
+                                    @Html.HiddenFor(a => a.Id)
+                                    @Html.ValidationMessageFor(model => model.Subcatid, "", new { @class = "required" })
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="">
+                                    <label>Card Type<span class="required">*</span></label>
+                                    <select name="Ctype" style="color: black" id="Ctype" class="form-control">
+                                        <option>Select</option>
+                                    </select>
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.CardProviderId, "", new { @class = "required" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <h2>Header</h2>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="">
+                                    <label> Title<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Title, new { @class = "form-control", id = "txttitle", @placeholder = "Enter Title" })
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Title, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="">
+                                    <label>Title Colour<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.TitleColour, new { @class = "form-control", id = "hex1Titlecolor", @placeholder = "Hex Code" })
+                                    <i style="font-size:11px; font-style:normal;"><a id="title_colour">Reference for Hex Code</a></i>
+                                    <label id="lblmessagehex1price" style=" font-size: 11px; color: red; position: absolute; top: 62px; left: 137px;"></label>
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.TitleColour, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="">
+                                    <label>Sub Title<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Sub_Title, new { @class = "form-control", id = "txtsubtitle", @placeholder = "Sub Title" })
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Sub_Title, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="">
+                                    <label>Sub Title Colour<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Sub_TitleColour, new { @class = "form-control", id = "hex2subtitlecolor", @placeholder = "Hex Code" })
+                                    <i style="font-size:11px; font-style:normal;"><a id="subtitle_colour">Reference for Hex Code</a></i>
+                                    <label id="lblmessagehex2price" style=" font-size: 11px; color: red; position: absolute; top: 62px; left: 137px;"></label>
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Sub_TitleColour, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="">
+                                    <label>Upload Header Images<span class="required">*</span></label>
+                                    <input type="file" multiple="multiple" name="header_image" id="file_headerimage" style="border:none; height:inherit; margin-top:5px;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-700*151  Size- 4kb)</i>
+                                    <span class="h_file_error" style="color:red;font-size:11px;"></span>
+                                    <span id="Hfile" class="required"></span>
+                                    <br />
+                                    @*@Html.ValidationMessageFor(a => a.ImageSystemName, "", new { @class = "required" })*@
+                                    <label style="display: block; width: 100%; display: block; width: 100%; position: absolute; left: 269px; top: 5px;">Previous Image</label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.HeaderImageName" style="height: 73px; width: 22%; position: absolute; left: 455px; top: 3px; " />
+                                </div>
+
+
+                                @*<div class="form-group">
+                                            <label style="display:block; width:100%;">Previous Image</label>
+                                            <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.HeaderImageName" style="height:100px;width:30%;" />
+
+                                    </div>*@
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <h2>Main</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label> Upload Main Images<span class="required">*</span></label>
+                                    <input type="file" multiple="multiple" name="main_image" id="file_mainimage" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-500*500  Size- 50kb)</i>
+                                    <span class="m_file_error" style=" color:red;font-size:11px;"></span>
+                                    <span id="Mfile" class="required"></span>
+                                    <br />
+                                    @*@Html.ValidationMessageFor(a => a.ImageSystemName, "", new { @class = "required" })*@
+                                    <label style="display:block; width:100%;">Previous Image</label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.MainImageName" style="height: 100px; width: 70%;" />
+                                </div>
+
+                                @*<div class="form-group">
+                                        <label style="display:block; width:100%;">Previous Image</label>
+                                        <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.MainImageName" style="height:100px;width:100%;" />
+                                    </div>*@
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Start Date<span class="required">*</span></label>
+                                    <input id="sdate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="StartDate" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>End Date<span class="required">*</span></label>
+                                    <input id="edate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="EndDate" />
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Enddate, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label> Upload PDF</label>
+                                    <input type="file" name="Pdf_file" style="border:none; height:inherit;" />
+                                    <br />
+                                    @*@Html.ValidationMessageFor(a => a.PdfSystemName, "", new { @class = "required" })*@
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Permission For</label>
+                                    @{
+            int id = Convert.ToInt32(Model.Id);
+            <a style="display: block; text-decoration: underline;" href="/EditPromotion_Price_Permission/Index/@id">Edit Permission</a>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Status</label>
+                                    <input type="checkbox" checked="checked" name="statusC" style="height: inherit; margin-left: 5px; vertical-align: -2px;" />
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <input type="submit" id="btnsubmit" value="Submit" class="submitBtn" />
+                    <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
+                </div>
+            </div>
+        }
+    </div>
+
+
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LuminousModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="LuminousModelStoreContainer">
+    <EntitySet Name="AllProfile" EntityType="LuminousModel.Store.AllProfile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Banner" EntityType="LuminousModel.Store.Banner" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BannerHistory" EntityType="LuminousModel.Store.BannerHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="contactUsDetail" EntityType="LuminousModel.Store.contactUsDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="contactUsDetail_History" EntityType="LuminousModel.Store.contactUsDetail_History" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PermotionType" EntityType="LuminousModel.Store.PermotionType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductCatergory" EntityType="LuminousModel.Store.ProductCatergory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductImages" EntityType="LuminousModel.Store.ProductImages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductLevelOne" EntityType="LuminousModel.Store.ProductLevelOne" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductLevelThree" EntityType="LuminousModel.Store.ProductLevelThree" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductLevelTwo" EntityType="LuminousModel.Store.ProductLevelTwo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductPermotion" EntityType="LuminousModel.Store.ProductPermotion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="LuminousModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductFUllDetail" EntityType="LuminousModel.Store.ProductFUllDetail" store:Type="Views" store:Schema="dbo" store:Name="ProductFUllDetail">
+      <DefiningQuery>SELECT 
+      [ProductFUllDetail].[id] AS [id], 
+      [ProductFUllDetail].[pc_Lv2_oneId] AS [pc_Lv2_oneId], 
+      [ProductFUllDetail].[PrCode] AS [PrCode], 
+      [ProductFUllDetail].[PrDiscription] AS [PrDiscription], 
+      [ProductFUllDetail].[Name] AS [Name], 
+      [ProductFUllDetail].[PlTwStatus] AS [PlTwStatus], 
+      [ProductFUllDetail].[CreatedDate] AS [CreatedDate], 
+      [ProductFUllDetail].[CreatedBy] AS [CreatedBy], 
+      [ProductFUllDetail].[ModifiedDate] AS [ModifiedDate], 
+      [ProductFUllDetail].[ModifiedBy] AS [ModifiedBy], 
+      [ProductFUllDetail].[startDate] AS [startDate], 
+      [ProductFUllDetail].[enddate] AS [enddate], 
+      [ProductFUllDetail].[ProductLevelTwo] AS [ProductLevelTwo], 
+      [ProductFUllDetail].[ProductLevelOne] AS [ProductLevelOne], 
+      [ProductFUllDetail].[ProductCategory] AS [ProductCategory]
+      FROM [dbo].[ProductFUllDetail] AS [ProductFUllDetail]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__BannerHis__Banne__173876EA" Association="LuminousModel.Store.FK__BannerHis__Banne__173876EA">
+      <End Role="Banner" EntitySet="Banner" />
+      <End Role="BannerHistory" EntitySet="BannerHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__contactUs__ContI__164452B1" Association="LuminousModel.Store.FK__contactUs__ContI__164452B1">
+      <End Role="contactUsDetail" EntitySet="contactUsDetail" />
+      <End Role="contactUsDetail_History" EntitySet="contactUsDetail_History" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductIm__pc_Lv__2F10007B" Association="LuminousModel.Store.FK__ProductIm__pc_Lv__2F10007B">
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThree" />
+      <End Role="ProductImages" EntitySet="ProductImages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__25869641" Association="LuminousModel.Store.FK__ProductLe__pc_Lv__25869641">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOne" />
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__2A4B4B5E" Association="LuminousModel.Store.FK__ProductLe__pc_Lv__2A4B4B5E">
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwo" />
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThree" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLev__pcId__20C1E124" Association="LuminousModel.Store.FK__ProductLev__pcId__20C1E124">
+      <End Role="ProductCatergory" EntitySet="ProductCatergory" />
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOne" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductPe__Produ__398D8EEE" Association="LuminousModel.Store.FK__ProductPe__Produ__398D8EEE">
+      <End Role="ProductCatergory" EntitySet="ProductCatergory" />
+      <End Role="ProductPermotion" EntitySet="ProductPermotion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductPe__Produ__3A81B327" Association="LuminousModel.Store.FK__ProductPe__Produ__3A81B327">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOne" />
+      <End Role="ProductPermotion" EntitySet="ProductPermotion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductPe__PType__38996AB5" Association="LuminousModel.Store.FK__ProductPe__PType__38996AB5">
+      <End Role="PermotionType" EntitySet="PermotionType" />
+      <End Role="ProductPermotion" EntitySet="ProductPermotion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__ProfileTy__15502E78" Association="LuminousModel.Store.FK__Users__ProfileTy__15502E78">
+      <End Role="AllProfile" EntitySet="AllProfile" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AllProfile">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="profileName" Type="varchar" MaxLength="50" />
+    <Property Name="createdTime" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdatedTime" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Header_Details" Type="varchar" MaxLength="50" />
+    <Property Name="Sub_Header_Details" Type="varchar" MaxLength="100" />
+    <Property Name="Banner_Details" Type="varchar" MaxLength="500" />
+    <Property Name="BannerFileName" Type="varchar" MaxLength="100" />
+    <Property Name="BannerSize" Type="int" />
+    <Property Name="BannerImage" Type="varchar" MaxLength="100" />
+    <Property Name="stardate" Type="datetime" />
+    <Property Name="ExpriyDate" Type="datetime" />
+    <Property Name="BStatus" Type="int" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="Modified_Date" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="BannerHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BannerId" Type="int" />
+    <Property Name="Header_Details" Type="varchar" MaxLength="50" />
+    <Property Name="Sub_Header_Details" Type="varchar" MaxLength="100" />
+    <Property Name="Banner_Details" Type="varchar" MaxLength="500" />
+    <Property Name="BannerFileName" Type="varchar" MaxLength="100" />
+    <Property Name="BannerSize" Type="int" />
+    <Property Name="BannerImage" Type="varchar" MaxLength="100" />
+    <Property Name="stardate" Type="datetime" />
+    <Property Name="ExpriyDate" Type="datetime" />
+    <Property Name="BStatus" Type="int" />
+    <Property Name="Modified_Date" Type="datetime" />
+    <Property Name="Modified_By" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="contactUsDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Contact_Us_Type" Type="varchar" MaxLength="100" />
+    <Property Name="CAddress" Type="varchar" MaxLength="500" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Fax" Type="varchar" MaxLength="100" />
+    <Property Name="Cstatus" Type="int" />
+    <Property Name="Created_date" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="date" />
+    <Property Name="ModifiedBy" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="contactUsDetail_History">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContId" Type="int" />
+    <Property Name="Contact_Us_Type" Type="varchar" MaxLength="100" />
+    <Property Name="CAddress" Type="varchar" MaxLength="500" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Fax" Type="varchar" MaxLength="100" />
+    <Property Name="Cstatus" Type="int" />
+    <Property Name="ModifiedDate" Type="date" />
+    <Property Name="ModifiedBy" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="PermotionType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PType" Type="varchar" MaxLength="500" />
+    <Property Name="PlTwStatus" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ProductCatergory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PCode" Type="varchar" MaxLength="30" />
+    <Property Name="PName" Type="varchar" MaxLength="100" />
+    <Property Name="Pstatus" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ProductImages">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="pc_Lv3_oneId" Type="int" />
+    <Property Name="PrImage" Type="varchar" MaxLength="100" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="PlTwStatus" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="enddate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProductLevelOne">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="pcId" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="PlStatus" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="enddate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProductLevelThree">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="pc_Lv2_oneId" Type="int" />
+    <Property Name="PrCode" Type="varchar" MaxLength="100" />
+    <Property Name="PrDiscription" Type="varchar(max)" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="PlTwStatus" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="enddate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProductLevelTwo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="pc_Lvl_oneId" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="PlTwStatus" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="enddate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProductPermotion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PTypeId" Type="int" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="ProductLvlOne" Type="int" />
+    <Property Name="Discription" Type="varchar(max)" />
+    <Property Name="PerImage" Type="varchar" MaxLength="100" />
+    <Property Name="PrStatus" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="startdate" Type="datetime" />
+    <Property Name="enddate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="varchar" MaxLength="100" />
+    <Property Name="Upassword" Type="varchar" MaxLength="50" />
+    <Property Name="UStatus" Type="varchar" MaxLength="50" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="100" />
+    <Property Name="createdBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedTime" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="UpdatedTime" Type="datetime" />
+    <Property Name="ProfileType" Type="int" />
+    <Property Name="Mobileno" Type="varchar" MaxLength="30" />
+    <Property Name="UAddress" Type="varchar" MaxLength="500" />
+    <Property Name="UImage" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Luminous.dbo.ProductFUllDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ProductFUllDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="pc_Lv2_oneId" Type="int" />
+    <Property Name="PrCode" Type="varchar" MaxLength="100" />
+    <Property Name="PrDiscription" Type="varchar(max)" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="PlTwStatus" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="enddate" Type="datetime" />
+    <Property Name="ProductLevelTwo" Type="varchar" MaxLength="100" />
+    <Property Name="ProductLevelOne" Type="varchar" MaxLength="100" />
+    <Property Name="ProductCategory" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__BannerHis__Banne__173876EA">
+    <End Role="Banner" Type="LuminousModel.Store.Banner" Multiplicity="0..1" />
+    <End Role="BannerHistory" Type="LuminousModel.Store.BannerHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banner">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BannerHistory">
+        <PropertyRef Name="BannerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__contactUs__ContI__164452B1">
+    <End Role="contactUsDetail" Type="LuminousModel.Store.contactUsDetail" Multiplicity="0..1" />
+    <End Role="contactUsDetail_History" Type="LuminousModel.Store.contactUsDetail_History" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contactUsDetail">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="contactUsDetail_History">
+        <PropertyRef Name="ContId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductIm__pc_Lv__2F10007B">
+    <End Role="ProductLevelThree" Type="LuminousModel.Store.ProductLevelThree" Multiplicity="0..1" />
+    <End Role="ProductImages" Type="LuminousModel.Store.ProductImages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelThree">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductImages">
+        <PropertyRef Name="pc_Lv3_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__25869641">
+    <End Role="ProductLevelOne" Type="LuminousModel.Store.ProductLevelOne" Multiplicity="0..1" />
+    <End Role="ProductLevelTwo" Type="LuminousModel.Store.ProductLevelTwo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelTwo">
+        <PropertyRef Name="pc_Lvl_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__2A4B4B5E">
+    <End Role="ProductLevelTwo" Type="LuminousModel.Store.ProductLevelTwo" Multiplicity="0..1" />
+    <End Role="ProductLevelThree" Type="LuminousModel.Store.ProductLevelThree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelTwo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThree">
+        <PropertyRef Name="pc_Lv2_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLev__pcId__20C1E124">
+    <End Role="ProductCatergory" Type="LuminousModel.Store.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductLevelOne" Type="LuminousModel.Store.ProductLevelOne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelOne">
+        <PropertyRef Name="pcId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductPe__Produ__398D8EEE">
+    <End Role="ProductCatergory" Type="LuminousModel.Store.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductPermotion" Type="LuminousModel.Store.ProductPermotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductPermotion">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductPe__Produ__3A81B327">
+    <End Role="ProductLevelOne" Type="LuminousModel.Store.ProductLevelOne" Multiplicity="0..1" />
+    <End Role="ProductPermotion" Type="LuminousModel.Store.ProductPermotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductPermotion">
+        <PropertyRef Name="ProductLvlOne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductPe__PType__38996AB5">
+    <End Role="PermotionType" Type="LuminousModel.Store.PermotionType" Multiplicity="0..1" />
+    <End Role="ProductPermotion" Type="LuminousModel.Store.ProductPermotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermotionType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductPermotion">
+        <PropertyRef Name="PTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__ProfileTy__15502E78">
+    <End Role="AllProfile" Type="LuminousModel.Store.AllProfile" Multiplicity="0..1" />
+    <End Role="Users" Type="LuminousModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AllProfile">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="ProfileType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

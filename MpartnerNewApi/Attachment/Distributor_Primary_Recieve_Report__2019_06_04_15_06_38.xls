@@ -1,0 +1,139 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000969755</td><td>1901101724</td><td>2019-05-31</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>15.000</td><td>76650.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1010</td><td>HO - New Delhi</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000002</td><td>0000968901</td><td>1902101372</td><td>2019-05-30</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000968901</td><td>1902101372</td><td>2019-05-30</td><td>F19675013451</td><td>LUMINOUS SOLAR PCU NXT 7.5KW120V W/O iOT</td><td>1.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000004</td><td>0000968901</td><td>1902101372</td><td>2019-05-30</td><td>T30000000342</td><td>Solar PVMod-325W/24V 72C RFID 27x1</td><td>1.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000968901</td><td>1902101372</td><td>2019-05-30</td><td>T30000000884</td><td>PCU7.5kW-B150H10N-M325W-PL1N</td><td>1.000</td><td>393175.25</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000006</td><td>0000968902</td><td>1902101373</td><td>2019-05-30</td><td>T30000000883</td><td>PCU6k-B150H8N-P325W-PL1N</td><td>1.000</td><td>355355.25</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000007</td><td>0000968902</td><td>1902101373</td><td>2019-05-30</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>8.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000968902</td><td>1902101373</td><td>2019-05-30</td><td>T30000000342</td><td>Solar PVMod-325W/24V 72C RFID 27x1</td><td>1.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000009</td><td>0000968902</td><td>1902101373</td><td>2019-05-30</td><td>F19460013451</td><td>LUMINOUS SOLAR PCU NXT 6KW 96V W/O iOT</td><td>1.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000961036</td><td>1902101436</td><td>2019-05-31</td><td>T30000000747</td><td>CRZ3.5k4N-B150HTT16N-P325W-PL1N</td><td>1.000</td><td>440284.75</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000011</td><td>0000961036</td><td>1902101436</td><td>2019-05-31</td><td>T30000000342</td><td>Solar PVMod-325W/24V 72C RFID 27x1</td><td>1.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000012</td><td>0000961036</td><td>1902101436</td><td>2019-05-31</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>16.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000961036</td><td>1902101436</td><td>2019-05-31</td><td>F19335015001</td><td>LUM  UPS CRUZE 3.5KVA/48V+SRS SHINE4850</td><td>4.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000014</td><td>0000968859</td><td>1905102055</td><td>2019-05-30</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>12.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000015</td><td>0000968859</td><td>1905102055</td><td>2019-05-30</td><td>T1113C431150</td><td>LUM 12V150AH LPTT12150L FNSD BTY SLR</td><td>12.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000968859</td><td>1905102055</td><td>2019-05-30</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>12.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000017</td><td>0000968859</td><td>1905102055</td><td>2019-05-30</td><td>T30000000646</td><td>NXG1100-B150L1N-P160W1N</td><td>12.000</td><td>224820.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000018</td><td>0000964326</td><td>1906102461</td><td>2019-05-28</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>60.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000019</td><td>0000964326</td><td>1906102461</td><td>2019-05-28</td><td>F1113B426040</td><td>LUM 12V40AH LPT1240L FNSD BTY V19 SLR</td><td>120.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000964326</td><td>1906102461</td><td>2019-05-28</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>60.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000021</td><td>0000964326</td><td>1906102461</td><td>2019-05-28</td><td>T30000000463</td><td>SCC1206-B40L2N-P105W1N</td><td>60.000</td><td>607200.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000022</td><td>0000964870</td><td>1906102508</td><td>2019-05-28</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>20.000</td><td>163200.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000964870</td><td>1906102508</td><td>2019-05-28</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>25.000</td><td>202000.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000964870</td><td>1906102508</td><td>2019-05-28</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>25.000</td><td>245125.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0000964870</td><td>1906102509</td><td>2019-05-28</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>25.000</td><td>217375.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0000964870</td><td>1906102509</td><td>2019-05-28</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000964879</td><td>1906102510</td><td>2019-05-28</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>100.000</td><td>269500.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000028</td><td>0000964879</td><td>1906102511</td><td>2019-05-28</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000029</td><td>0000964879</td><td>1906102511</td><td>2019-05-28</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>15.000</td><td>58650.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000030</td><td>0000964879</td><td>1906102511</td><td>2019-05-28</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>30.000</td><td>111000.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000031</td><td>0000964882</td><td>1906102512</td><td>2019-05-28</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>25.000</td><td>74125.50</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000032</td><td>0000964885</td><td>1906102513</td><td>2019-05-28</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>20.000</td><td>217100.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000965013</td><td>1906102515</td><td>2019-05-28</td><td>F04340012851</td><td>S/W UPS 4KVA/48V LUMINOUS CRUZE+</td><td>2.000</td><td>24979.60</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000034</td><td>0000965664</td><td>1906102622</td><td>2019-05-29</td><td>F1146A412100</td><td>LUM 12V100AH RPF1400 FNSD BTY</td><td>100.000</td><td>460750.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000965641</td><td>1906102644</td><td>2019-05-29</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>20.000</td><td>102200.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000036</td><td>0000965665</td><td>1906102645</td><td>2019-05-29</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>24.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000037</td><td>0000965665</td><td>1906102645</td><td>2019-05-29</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>24.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000038</td><td>0000965665</td><td>1906102645</td><td>2019-05-29</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>24.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000039</td><td>0000965665</td><td>1906102645</td><td>2019-05-29</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>24.000</td><td>474240.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000040</td><td>0000966947</td><td>1906102801</td><td>2019-05-30</td><td>F03186502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 865</td><td>50.000</td><td>129250.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000041</td><td>0000967234</td><td>1906102888</td><td>2019-05-30</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>21.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000042</td><td>0000967234</td><td>1906102888</td><td>2019-05-30</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>21.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0000967234</td><td>1906102888</td><td>2019-05-30</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>21.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000044</td><td>0000967234</td><td>1906102888</td><td>2019-05-30</td><td>T30000001603</td><td>NXG1400-B150HTT1N-P165W1N</td><td>21.000</td><td>435015.24</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000045</td><td>0000967231</td><td>1906102889</td><td>2019-05-30</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>24.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000046</td><td>0000967231</td><td>1906102889</td><td>2019-05-30</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>24.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000047</td><td>0000967231</td><td>1906102889</td><td>2019-05-30</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>24.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000048</td><td>0000967231</td><td>1906102889</td><td>2019-05-30</td><td>T30000000683</td><td>NXG750-B120H1N-P165W1N</td><td>24.000</td><td>387000.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000049</td><td>0000967232</td><td>1906102928</td><td>2019-05-30</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>30.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000050</td><td>0000967232</td><td>1906102928</td><td>2019-05-30</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>30.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000051</td><td>0000967232</td><td>1906102928</td><td>2019-05-30</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>30.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000052</td><td>0000967232</td><td>1906102928</td><td>2019-05-30</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>30.000</td><td>592800.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000053</td><td>0000967233</td><td>1906103035</td><td>2019-05-31</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>51.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000054</td><td>0000967233</td><td>1906103035</td><td>2019-05-31</td><td>F1113B426040</td><td>LUM 12V40AH LPT1240L FNSD BTY V19 SLR</td><td>102.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000055</td><td>0000967233</td><td>1906103035</td><td>2019-05-31</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>51.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000056</td><td>0000967233</td><td>1906103035</td><td>2019-05-31</td><td>T30000000463</td><td>SCC1206-B40L2N-P105W1N</td><td>51.000</td><td>516120.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000057</td><td>0000969749</td><td>1906103098</td><td>2019-05-31</td><td>T30000000458</td><td>SCC1220-B80H1N-P105W1N</td><td>30.000</td><td>300600.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000058</td><td>0000969749</td><td>1906103098</td><td>2019-05-31</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>30.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000059</td><td>0000969749</td><td>1906103098</td><td>2019-05-31</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>30.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000060</td><td>0000969749</td><td>1906103098</td><td>2019-05-31</td><td>F19102004001</td><td>SOLAR CHARGE CONTROLLER SCC1220NM</td><td>30.000</td><td>0.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000061</td><td>0060053444</td><td>1906601499</td><td>2019-05-24</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1438.16</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000062</td><td>0060053445</td><td>1906601500</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.86</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000063</td><td>0060053448</td><td>1906601501</td><td>2019-05-24</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1438.16</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000064</td><td>0060053451</td><td>1906601502</td><td>2019-05-24</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7418.41</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000065</td><td>0000969772</td><td>1960100793</td><td>2019-05-31</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>35.000</td><td>316925.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000066</td><td>0000969778</td><td>1960100794</td><td>2019-05-31</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000067</td><td>0000969778</td><td>1960100794</td><td>2019-05-31</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>30.000</td><td>99150.00</td><td>0001107234</td><td>PATEL ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr>
+</table>

@@ -1,0 +1,29 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000955875</td><td>1922101269</td><td>2019-05-14</td><td>F1148B280120</td><td>LUM 12V120AH ECO CHRG 15000 FNSD BTY</td><td>10.000</td><td>68600.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000955875</td><td>1922101269</td><td>2019-05-14</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>30.000</td><td>187500.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000955875</td><td>1922101269</td><td>2019-05-14</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>5.000</td><td>50525.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000955875</td><td>1922101270</td><td>2019-05-14</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>10.000</td><td>86150.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000955875</td><td>1922101270</td><td>2019-05-14</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>30.000</td><td>289650.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000955825</td><td>1922101271</td><td>2019-05-14</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>30.000</td><td>271650.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000955825</td><td>1922101271</td><td>2019-05-14</td><td>F1105CZS0150</td><td>ELE 12V150AH LE19000TT FNSD BTY V16</td><td>5.000</td><td>40000.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000955825</td><td>1922101271</td><td>2019-05-14</td><td>F1105C150160</td><td>ELE 12V160AH LETT 20548 FNSD BTY</td><td>10.000</td><td>90750.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000955825</td><td>1922101272</td><td>2019-05-14</td><td>F1105CZS0150</td><td>ELE 12V150AH LE19000TT FNSD BTY V16</td><td>30.000</td><td>240000.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000955705</td><td>1922101331</td><td>2019-05-14</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000955705</td><td>1922101331</td><td>2019-05-14</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>50.000</td><td>165250.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000955704</td><td>1922101332</td><td>2019-05-14</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>30.000</td><td>279000.00</td><td>0001106162</td><td>AAKASH DARSHAN ELECTRONIC</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr>
+</table>

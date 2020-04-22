@@ -1,0 +1,905 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000900111</td><td>1805108192</td><td>2019-02-06</td><td>T1102G3307D2</td><td>LUMINOUS 7.2 AH 12V SMF BATTERY T C20</td><td>800.000</td><td>372000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000906603</td><td>1805108571</td><td>2019-02-26</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>9.000</td><td>26684.97</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000906603</td><td>1805108571</td><td>2019-02-26</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>25.000</td><td>83124.90</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000004</td><td>0000906603</td><td>1805108571</td><td>2019-02-26</td><td>F03166502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 665</td><td>25.000</td><td>50749.94</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000005</td><td>0000906603</td><td>1805108571</td><td>2019-02-26</td><td>F03186502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 865</td><td>25.000</td><td>64624.93</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000906603</td><td>1805108571</td><td>2019-02-26</td><td>F03216652351</td><td>S/Q  UPS 24V LUM BIS ELECTRA + 1665</td><td>10.000</td><td>39499.96</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000906611</td><td>1805108572</td><td>2019-02-26</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>20.000</td><td>135700.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000906623</td><td>1805108573</td><td>2019-02-26</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>35.000</td><td>102375.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000906623</td><td>1805108573</td><td>2019-02-26</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>25.000</td><td>56625.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000906633</td><td>1805108574</td><td>2019-02-26</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>6.000</td><td>47160.20</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000011</td><td>0000906665</td><td>1805108575</td><td>2019-02-26</td><td>T30000000447</td><td>SCC1206-B80H1N-P105W1N</td><td>12.000</td><td>113400.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000012</td><td>0000906665</td><td>1805108575</td><td>2019-02-26</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000013</td><td>0000906665</td><td>1805108575</td><td>2019-02-26</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000906665</td><td>1805108575</td><td>2019-02-26</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000015</td><td>0000906667</td><td>1805108576</td><td>2019-02-26</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>12.000</td><td>243120.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000016</td><td>0000906667</td><td>1805108576</td><td>2019-02-26</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000017</td><td>0000906667</td><td>1805108576</td><td>2019-02-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000906667</td><td>1805108576</td><td>2019-02-26</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000019</td><td>0000908758</td><td>1805108730</td><td>2019-02-27</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>15.000</td><td>135825.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000908763</td><td>1805108731</td><td>2019-02-27</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>10.000</td><td>67850.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000908763</td><td>1805108731</td><td>2019-02-27</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>10.000</td><td>90550.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000908763</td><td>1805108731</td><td>2019-02-27</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>15.000</td><td>133125.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000918076</td><td>1805109221</td><td>2019-03-22</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>60.000</td><td>161700.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000024</td><td>0000918076</td><td>1805109221</td><td>2019-03-22</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>60.000</td><td>152400.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000025</td><td>0000918076</td><td>1805109221</td><td>2019-03-22</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>40.000</td><td>79800.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000026</td><td>0000918078</td><td>1805109222</td><td>2019-03-22</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>100.000</td><td>861500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000918078</td><td>1805109223</td><td>2019-03-22</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>30.000</td><td>258450.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0000918078</td><td>1805109223</td><td>2019-03-22</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>30.000</td><td>203550.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0000918104</td><td>1805109226</td><td>2019-03-22</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>24.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000030</td><td>0000918104</td><td>1805109226</td><td>2019-03-22</td><td>T30000000443</td><td>SCC1206-B40H1N-P105W1N</td><td>24.000</td><td>173160.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000031</td><td>0000918104</td><td>1805109226</td><td>2019-03-22</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>24.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000032</td><td>0000918104</td><td>1805109226</td><td>2019-03-22</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>24.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000918105</td><td>1805109227</td><td>2019-03-22</td><td>T30000000410</td><td>SCC1206-B20L1N-P40W1N</td><td>24.000</td><td>97080.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000034</td><td>0000918105</td><td>1805109227</td><td>2019-03-22</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>24.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000035</td><td>0000918105</td><td>1805109227</td><td>2019-03-22</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>24.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000036</td><td>0000918105</td><td>1805109227</td><td>2019-03-22</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>24.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000037</td><td>0000918107</td><td>1805109228</td><td>2019-03-22</td><td>T30000000446</td><td>SCC1206-B60H1N-P105W1N</td><td>2.000</td><td>16560.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000038</td><td>0000918107</td><td>1805109228</td><td>2019-03-22</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>2.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000039</td><td>0000918107</td><td>1805109228</td><td>2019-03-22</td><td>F1113B274060</td><td>LUM 12V60AH LPT1260H FNSD BTY V18 SLR</td><td>2.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000040</td><td>0000918107</td><td>1805109228</td><td>2019-03-22</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>2.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000041</td><td>0000919307</td><td>1805109315</td><td>2019-03-24</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>10.000</td><td>43100.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000042</td><td>0000919307</td><td>1805109315</td><td>2019-03-24</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>30.000</td><td>87750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000043</td><td>0000919307</td><td>1805109315</td><td>2019-03-24</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>30.000</td><td>80850.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000044</td><td>0000919312</td><td>1805109316</td><td>2019-03-24</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>100.000</td><td>887500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000045</td><td>0000919312</td><td>1805109317</td><td>2019-03-24</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>100.000</td><td>861500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000046</td><td>0000919312</td><td>1805109318</td><td>2019-03-24</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>50.000</td><td>353750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000047</td><td>0000919312</td><td>1805109318</td><td>2019-03-24</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>25.000</td><td>169625.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000048</td><td>0000919312</td><td>1805109319</td><td>2019-03-24</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>50.000</td><td>404000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000049</td><td>0000919313</td><td>1805109320</td><td>2019-03-24</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>50.000</td><td>339250.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000050</td><td>0000919307</td><td>1805109322</td><td>2019-03-24</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>10.000</td><td>37000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000051</td><td>0000919307</td><td>1805109322</td><td>2019-03-24</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>80.000</td><td>159600.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000052</td><td>0000919307</td><td>1805109322</td><td>2019-03-24</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>50.000</td><td>127000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000053</td><td>0000919157</td><td>1805109426</td><td>2019-03-26</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>70.000</td><td>527800.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000054</td><td>0000927110</td><td>1805109775</td><td>2019-03-30</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>20.000</td><td>172300.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000055</td><td>0000927110</td><td>1805109775</td><td>2019-03-30</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>20.000</td><td>135700.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000056</td><td>0060035608</td><td>1805600736</td><td>2019-01-07</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>1.000</td><td>5065.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000057</td><td>0060035612</td><td>1805600737</td><td>2019-01-07</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>1.000</td><td>5065.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000058</td><td>0060036856</td><td>1805600738</td><td>2019-01-07</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>1.000</td><td>5065.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000059</td><td>0060037968</td><td>1805600739</td><td>2019-01-07</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1502.26</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000060</td><td>0060037974</td><td>1805600740</td><td>2019-01-07</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000061</td><td>0060037978</td><td>1805600741</td><td>2019-01-07</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5232.17</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000062</td><td>0060037979</td><td>1805600742</td><td>2019-01-07</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000063</td><td>0060037984</td><td>1805600743</td><td>2019-01-07</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>1.000</td><td>5065.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000064</td><td>0060038294</td><td>1805600744</td><td>2019-01-07</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000065</td><td>0060038295</td><td>1805600745</td><td>2019-01-07</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000066</td><td>0060038296</td><td>1805600746</td><td>2019-01-07</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5232.17</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000067</td><td>0060038297</td><td>1805600747</td><td>2019-01-07</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000068</td><td>0060038298</td><td>1805600748</td><td>2019-01-07</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5232.17</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000069</td><td>0060038299</td><td>1805600749</td><td>2019-01-07</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000070</td><td>0060038302</td><td>1805600750</td><td>2019-01-07</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>1.000</td><td>2604.84</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000071</td><td>0060038303</td><td>1805600751</td><td>2019-01-07</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5429.16</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000072</td><td>0060038304</td><td>1805600752</td><td>2019-01-07</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000073</td><td>0060038305</td><td>1805600753</td><td>2019-01-07</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>1.000</td><td>5065.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000074</td><td>0060039061</td><td>1805600776</td><td>2019-01-11</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5893.91</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000075</td><td>0060039059</td><td>1805600777</td><td>2019-01-11</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5230.68</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000076</td><td>0060039062</td><td>1805600778</td><td>2019-01-11</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5230.68</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000077</td><td>0060039063</td><td>1805600779</td><td>2019-01-11</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5230.68</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000078</td><td>0060039064</td><td>1805600780</td><td>2019-01-11</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5893.91</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000079</td><td>0060039067</td><td>1805600781</td><td>2019-01-11</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5938.18</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000080</td><td>0060039070</td><td>1805600782</td><td>2019-01-11</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5230.68</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000081</td><td>0060039074</td><td>1805600783</td><td>2019-01-11</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5893.91</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000082</td><td>0060039075</td><td>1805600784</td><td>2019-01-11</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5938.18</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000083</td><td>0060039076</td><td>1805600785</td><td>2019-01-11</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5938.18</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000084</td><td>0060039077</td><td>1805600786</td><td>2019-01-11</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>1.000</td><td>5042.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000085</td><td>0060039081</td><td>1805600788</td><td>2019-01-11</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>1.000</td><td>2604.84</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000086</td><td>0060039084</td><td>1805600791</td><td>2019-01-11</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>1.000</td><td>5042.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000087</td><td>0060039089</td><td>1805600801</td><td>2019-01-11</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5893.91</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000088</td><td>0060039091</td><td>1805600802</td><td>2019-01-11</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5938.18</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000089</td><td>0060039092</td><td>1805600803</td><td>2019-01-11</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5075.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000090</td><td>0060039096</td><td>1805600804</td><td>2019-01-11</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5938.18</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000091</td><td>0060039102</td><td>1805600805</td><td>2019-01-11</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5893.91</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000092</td><td>0060039103</td><td>1805600806</td><td>2019-01-11</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>1.000</td><td>5240.75</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000093</td><td>0060036075</td><td>1805600917</td><td>2019-01-14</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4389.94</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000094</td><td>0060037554</td><td>1805600918</td><td>2019-01-14</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5387.40</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000095</td><td>0060038300</td><td>1805600920</td><td>2019-01-14</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4389.94</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000096</td><td>0060039337</td><td>1805600921</td><td>2019-01-14</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000097</td><td>0060039349</td><td>1805600922</td><td>2019-01-14</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000098</td><td>0060039352</td><td>1805600924</td><td>2019-01-14</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000099</td><td>0060039359</td><td>1805600925</td><td>2019-01-14</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000100</td><td>0060039363</td><td>1805600926</td><td>2019-01-14</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000101</td><td>0060039367</td><td>1805600930</td><td>2019-01-14</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000102</td><td>0060039060</td><td>1805601020</td><td>2019-01-18</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5075.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000103</td><td>0060039065</td><td>1805601021</td><td>2019-01-18</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5075.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000104</td><td>0060039073</td><td>1805601022</td><td>2019-01-18</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5075.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000105</td><td>0060039097</td><td>1805601023</td><td>2019-01-18</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5075.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000106</td><td>0060039361</td><td>1805601024</td><td>2019-01-18</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4389.94</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000107</td><td>0060039915</td><td>1805601025</td><td>2019-01-18</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000108</td><td>0060039929</td><td>1805601026</td><td>2019-01-18</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>1.000</td><td>2604.84</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000109</td><td>0060039930</td><td>1805601027</td><td>2019-01-18</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000110</td><td>0060039974</td><td>1805601028</td><td>2019-01-18</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000111</td><td>0060039976</td><td>1805601029</td><td>2019-01-18</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000112</td><td>0060039979</td><td>1805601030</td><td>2019-01-18</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000113</td><td>0060039980</td><td>1805601031</td><td>2019-01-18</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000114</td><td>0060039995</td><td>1805601032</td><td>2019-01-18</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5382.65</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000115</td><td>0060039999</td><td>1805601033</td><td>2019-01-18</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000116</td><td>0060040001</td><td>1805601034</td><td>2019-01-18</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5363.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000117</td><td>0060036081</td><td>1805601132</td><td>2019-01-28</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>1.000</td><td>5042.23</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000118</td><td>0060039095</td><td>1805601133</td><td>2019-01-28</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5341.16</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000119</td><td>0060039987</td><td>1805601138</td><td>2019-01-28</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5075.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000120</td><td>0060040482</td><td>1805601139</td><td>2019-01-28</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000121</td><td>0060040483</td><td>1805601140</td><td>2019-01-28</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000122</td><td>0060040484</td><td>1805601141</td><td>2019-01-28</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000123</td><td>0060040489</td><td>1805601142</td><td>2019-01-28</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5075.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000124</td><td>0060040491</td><td>1805601143</td><td>2019-01-28</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000125</td><td>0060040492</td><td>1805601144</td><td>2019-01-28</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5324.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000126</td><td>0060040493</td><td>1805601145</td><td>2019-01-28</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5571.73</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000127</td><td>0060040494</td><td>1805601146</td><td>2019-01-28</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5341.16</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000128</td><td>0060035602</td><td>1805601237</td><td>2019-02-04</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5074.42</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000129</td><td>0060041171</td><td>1805601238</td><td>2019-02-04</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5403.47</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000130</td><td>0060041397</td><td>1805601239</td><td>2019-02-04</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5893.91</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000131</td><td>0060041398</td><td>1805601240</td><td>2019-02-04</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5909.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000132</td><td>0060041399</td><td>1805601241</td><td>2019-02-04</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5325.15</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000133</td><td>0060041406</td><td>1805601242</td><td>2019-02-04</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5403.47</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000134</td><td>0060041416</td><td>1805601243</td><td>2019-02-04</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5074.42</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000135</td><td>0060041417</td><td>1805601244</td><td>2019-02-04</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5893.91</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000136</td><td>0060041425</td><td>1805601245</td><td>2019-02-04</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5893.91</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000137</td><td>0060041429</td><td>1805601246</td><td>2019-02-04</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5325.15</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000138</td><td>0060042051</td><td>1805601390</td><td>2019-02-16</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>1.000</td><td>2602.84</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000139</td><td>0060042653</td><td>1805601393</td><td>2019-02-16</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5117.35</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000140</td><td>0060042655</td><td>1805601396</td><td>2019-02-16</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5158.95</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000141</td><td>0060042656</td><td>1805601398</td><td>2019-02-16</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5272.87</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000142</td><td>0060042658</td><td>1805601399</td><td>2019-02-16</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5272.86</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000143</td><td>0060042661</td><td>1805601402</td><td>2019-02-16</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5272.87</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000144</td><td>0060042662</td><td>1805601404</td><td>2019-02-16</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5158.95</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000145</td><td>0060042663</td><td>1805601407</td><td>2019-02-16</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5158.95</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000146</td><td>0060042664</td><td>1805601409</td><td>2019-02-16</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5272.86</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000147</td><td>0060042667</td><td>1805601410</td><td>2019-02-16</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5158.95</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000148</td><td>0060042669</td><td>1805601411</td><td>2019-02-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7429.39</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000149</td><td>0060042039</td><td>1805601412</td><td>2019-02-16</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5095.48</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000150</td><td>0060042083</td><td>1805601413</td><td>2019-02-16</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5299.82</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000151</td><td>0060042085</td><td>1805601414</td><td>2019-02-16</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5231.12</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000152</td><td>0060042089</td><td>1805601415</td><td>2019-02-16</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5231.12</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000153</td><td>0060042106</td><td>1805601416</td><td>2019-02-16</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5231.12</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000154</td><td>0060042112</td><td>1805601417</td><td>2019-02-16</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5231.12</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000155</td><td>0060042652</td><td>1805601418</td><td>2019-02-16</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5231.12</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000156</td><td>0060042654</td><td>1805601419</td><td>2019-02-16</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1470.96</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000157</td><td>0060042660</td><td>1805601420</td><td>2019-02-16</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5231.12</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000158</td><td>0060037985</td><td>1805601447</td><td>2019-02-16</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>1.000</td><td>8159.16</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000159</td><td>0060037547</td><td>1805601448</td><td>2019-02-16</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>1.000</td><td>8159.15</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000160</td><td>0060042668</td><td>1805601632</td><td>2019-02-26</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4227.80</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000161</td><td>0060043725</td><td>1805601633</td><td>2019-02-26</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5231.12</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000162</td><td>0060043726</td><td>1805601634</td><td>2019-02-26</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5231.12</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000163</td><td>0060043729</td><td>1805601635</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5158.95</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000164</td><td>0060043730</td><td>1805601636</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5158.95</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000165</td><td>0060043731</td><td>1805601637</td><td>2019-02-26</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5231.12</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000166</td><td>0060043732</td><td>1805601638</td><td>2019-02-26</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5314.88</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000167</td><td>0060043733</td><td>1805601639</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5158.95</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000168</td><td>0060043735</td><td>1805601640</td><td>2019-02-26</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>1.000</td><td>4803.16</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000169</td><td>0060043736</td><td>1805601641</td><td>2019-02-26</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4227.80</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000170</td><td>0060043737</td><td>1805601642</td><td>2019-02-26</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>1.000</td><td>4803.17</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000171</td><td>0060043738</td><td>1805601643</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5379.64</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000172</td><td>0060043739</td><td>1805601644</td><td>2019-02-26</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5067.96</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000173</td><td>0060043740</td><td>1805601645</td><td>2019-02-26</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5314.88</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000174</td><td>0060043741</td><td>1805601646</td><td>2019-02-26</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5314.88</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000175</td><td>0060043742</td><td>1805601647</td><td>2019-02-26</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5314.88</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000176</td><td>0060043743</td><td>1805601648</td><td>2019-02-26</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5314.88</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000177</td><td>0060043745</td><td>1805601649</td><td>2019-02-26</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5314.88</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000178</td><td>0060043746</td><td>1805601650</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5379.64</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000179</td><td>0060043831</td><td>1805601651</td><td>2019-02-26</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5245.76</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000180</td><td>0060043851</td><td>1805601652</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5379.64</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000181</td><td>0060043861</td><td>1805601653</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5379.64</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000182</td><td>0060043863</td><td>1805601654</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5379.64</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000183</td><td>0060043869</td><td>1805601655</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5379.64</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000184</td><td>0060044697</td><td>1805601656</td><td>2019-02-26</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5314.88</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000185</td><td>0060044698</td><td>1805601657</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5379.64</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000186</td><td>0060044699</td><td>1805601658</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5379.64</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000187</td><td>0060044760</td><td>1805601659</td><td>2019-02-26</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5245.76</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000188</td><td>0060044762</td><td>1805601660</td><td>2019-02-26</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1445.90</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000189</td><td>0060044764</td><td>1805601661</td><td>2019-02-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5379.64</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000190</td><td>0060045098</td><td>1805601871</td><td>2019-03-12</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4227.80</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000191</td><td>0060045101</td><td>1805601872</td><td>2019-03-12</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4227.80</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000192</td><td>0060045102</td><td>1805601873</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000193</td><td>0060045103</td><td>1805601874</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000194</td><td>0060045104</td><td>1805601875</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000195</td><td>0060045106</td><td>1805601876</td><td>2019-03-12</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5341.16</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000196</td><td>0060045488</td><td>1805601877</td><td>2019-03-12</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5780.88</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000197</td><td>0060045774</td><td>1805601878</td><td>2019-03-12</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5019.03</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000198</td><td>0060046223</td><td>1805601879</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000199</td><td>0060046225</td><td>1805601880</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000200</td><td>0060046227</td><td>1805601881</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000201</td><td>0060046228</td><td>1805601882</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000202</td><td>0060046233</td><td>1805601883</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000203</td><td>0060046235</td><td>1805601884</td><td>2019-03-12</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5066.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000204</td><td>0060046244</td><td>1805601885</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000205</td><td>0060046246</td><td>1805601886</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000206</td><td>0060046251</td><td>1805601887</td><td>2019-03-12</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5852.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000207</td><td>0060046347</td><td>1805602074</td><td>2019-03-23</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4215.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000208</td><td>0060046501</td><td>1805602075</td><td>2019-03-23</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5019.03</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000209</td><td>0060046610</td><td>1805602076</td><td>2019-03-23</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4215.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000210</td><td>0060046611</td><td>1805602077</td><td>2019-03-23</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4215.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000211</td><td>0060046612</td><td>1805602078</td><td>2019-03-23</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4215.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000212</td><td>0060047143</td><td>1805602079</td><td>2019-03-23</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>5019.03</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000213</td><td>0060047150</td><td>1805602080</td><td>2019-03-23</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4215.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000214</td><td>0060047157</td><td>1805602081</td><td>2019-03-23</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5156.30</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000215</td><td>0060047568</td><td>1805602114</td><td>2019-03-25</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5185.10</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000216</td><td>0060047575</td><td>1805602115</td><td>2019-03-25</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5156.30</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000217</td><td>0060047569</td><td>1805602116</td><td>2019-03-25</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5185.10</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000218</td><td>0060047578</td><td>1805602117</td><td>2019-03-25</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5185.10</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000219</td><td>0000906572</td><td>1806113023</td><td>2019-02-26</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>5.000</td><td>64449.96</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000220</td><td>0000906572</td><td>1806113023</td><td>2019-02-26</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>30.000</td><td>266249.86</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000221</td><td>0000906572</td><td>1806113023</td><td>2019-02-26</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>3.000</td><td>27164.98</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000222</td><td>0000906572</td><td>1806113024</td><td>2019-02-26</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>5.000</td><td>45275.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000223</td><td>0000906606</td><td>1860100217</td><td>2019-02-26</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>26.000</td><td>77089.80</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000224</td><td>0000906615</td><td>1860100218</td><td>2019-02-26</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>35.000</td><td>282800.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000225</td><td>0000906625</td><td>1860100219</td><td>2019-02-26</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>10.000</td><td>39100.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000226</td><td>0000906639</td><td>1860100220</td><td>2019-02-26</td><td>F03176502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 765</td><td>25.000</td><td>57750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000227</td><td>0000906644</td><td>1860100221</td><td>2019-02-26</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>25.000</td><td>82625.50</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000228</td><td>0000906648</td><td>1860100222</td><td>2019-02-26</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>25.000</td><td>63500.28</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000229</td><td>0000906648</td><td>1860100222</td><td>2019-02-26</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>25.000</td><td>49875.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000230</td><td>0000907056</td><td>1860100223</td><td>2019-02-26</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>15.000</td><td>113100.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000231</td><td>0000908765</td><td>1860100312</td><td>2019-02-27</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>10.000</td><td>75400.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000232</td><td>0000908765</td><td>1860100312</td><td>2019-02-27</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>10.000</td><td>80800.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000233</td><td>0000919305</td><td>1860100596</td><td>2019-03-24</td><td>F03216652351</td><td>S/Q  UPS 24V LUM BIS ELECTRA + 1665</td><td>26.000</td><td>102700.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000234</td><td>0000919309</td><td>1860100597</td><td>2019-03-24</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>100.000</td><td>816000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000235</td><td>0000920873</td><td>1860100658</td><td>2019-03-26</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>75.000</td><td>646125.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000236</td><td>0000920873</td><td>1860100659</td><td>2019-03-26</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>75.000</td><td>665625.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000237</td><td>0000967903</td><td>1902101346</td><td>2019-05-30</td><td>T30000001620</td><td>1800NXG10N-B150HTT20N-P325W-PL1N</td><td>1.000</td><td>495340.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000238</td><td>0000967903</td><td>1902101346</td><td>2019-05-30</td><td>T30000001230</td><td>Solar PVMod 325W/24V 72C RFID 30x1</td><td>1.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000239</td><td>0000967903</td><td>1902101346</td><td>2019-05-30</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>20.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000240</td><td>0000967903</td><td>1902101346</td><td>2019-05-30</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>10.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000241</td><td>0000930120</td><td>1905100176</td><td>2019-04-09</td><td>F03186502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 865</td><td>50.000</td><td>129250.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000242</td><td>0000930124</td><td>1905100177</td><td>2019-04-09</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>50.000</td><td>134750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000243</td><td>0000930124</td><td>1905100177</td><td>2019-04-09</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000244</td><td>0000930128</td><td>1905100178</td><td>2019-04-09</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>50.000</td><td>452750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000245</td><td>0000932982</td><td>1905100362</td><td>2019-04-15</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>60.000</td><td>452400.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000246</td><td>0000932982</td><td>1905100363</td><td>2019-04-15</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>60.000</td><td>452400.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000247</td><td>0000932991</td><td>1905100370</td><td>2019-04-15</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>50.000</td><td>134750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000248</td><td>0000932992</td><td>1905100371</td><td>2019-04-15</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>100.000</td><td>887500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000249</td><td>0000932993</td><td>1905100372</td><td>2019-04-15</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>21.000</td><td>105834.26</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000250</td><td>0000939106</td><td>1905100675</td><td>2019-04-25</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>2.000</td><td>17320.40</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000251</td><td>0000941861</td><td>1905100846</td><td>2019-04-27</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>75.000</td><td>169875.50</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000252</td><td>0000941870</td><td>1905100847</td><td>2019-04-27</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000253</td><td>0000941870</td><td>1905100847</td><td>2019-04-27</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>12.000</td><td>237120.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000254</td><td>0000941870</td><td>1905100847</td><td>2019-04-27</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000255</td><td>0000941870</td><td>1905100847</td><td>2019-04-27</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000256</td><td>0000941883</td><td>1905100848</td><td>2019-04-27</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000257</td><td>0000941883</td><td>1905100848</td><td>2019-04-27</td><td>T30000000447</td><td>SCC1206-B80H1N-P105W1N</td><td>12.000</td><td>113400.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000258</td><td>0000941883</td><td>1905100848</td><td>2019-04-27</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000259</td><td>0000941883</td><td>1905100848</td><td>2019-04-27</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>12.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000260</td><td>0000942429</td><td>1905100939</td><td>2019-04-29</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>15.000</td><td>171450.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000261</td><td>0000944080</td><td>1905101013</td><td>2019-04-29</td><td>F03186502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 865</td><td>125.000</td><td>323125.50</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000262</td><td>0000957137</td><td>1905101498</td><td>2019-05-20</td><td>F1146A412100</td><td>LUM 12V100AH RPF1400 FNSD BTY</td><td>50.000</td><td>230375.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000263</td><td>0000959864</td><td>1905101568</td><td>2019-05-21</td><td>F19305003751</td><td>SOLAR RETROFIT 48V50AMP SHINE4850 Rev.01</td><td>1.000</td><td>5395.24</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000264</td><td>0000960603</td><td>1905101593</td><td>2019-05-22</td><td>F03196502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 965</td><td>25.000</td><td>68249.98</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000265</td><td>0000960603</td><td>1905101593</td><td>2019-05-22</td><td>F03186502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 865</td><td>50.000</td><td>129249.95</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000266</td><td>0000960603</td><td>1905101593</td><td>2019-05-22</td><td>F03166502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 665</td><td>19.000</td><td>38569.99</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000267</td><td>0000960603</td><td>1905101593</td><td>2019-05-22</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>25.000</td><td>74124.98</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000268</td><td>0000960607</td><td>1905101594</td><td>2019-05-22</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>25.000</td><td>67375.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000269</td><td>0000960607</td><td>1905101594</td><td>2019-05-22</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>25.000</td><td>63500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000270</td><td>0000960607</td><td>1905101594</td><td>2019-05-22</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>25.000</td><td>73125.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000271</td><td>0000960610</td><td>1905101595</td><td>2019-05-22</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>5.000</td><td>25550.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000272</td><td>0000962039</td><td>1905101654</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>75.000</td><td>588000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000273</td><td>0000962721</td><td>1905101682</td><td>2019-05-27</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>75.000</td><td>190500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000274</td><td>0000962728</td><td>1905101683</td><td>2019-05-27</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>30.000</td><td>99150.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000275</td><td>0000962729</td><td>1905101684</td><td>2019-05-27</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000276</td><td>0000963539</td><td>1905101712</td><td>2019-05-27</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>30.000</td><td>242400.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000277</td><td>0000962719</td><td>1905101754</td><td>2019-05-27</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>50.000</td><td>99750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000278</td><td>0000962724</td><td>1905101755</td><td>2019-05-27</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>75.000</td><td>202125.50</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000279</td><td>0000963537</td><td>1905101837</td><td>2019-05-28</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>100.000</td><td>871500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000280</td><td>0000966426</td><td>1905101900</td><td>2019-05-29</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>75.000</td><td>679125.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000281</td><td>0000966438</td><td>1905101901</td><td>2019-05-29</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>20.000</td><td>69900.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000282</td><td>0000968132</td><td>1905101995</td><td>2019-05-30</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>75.000</td><td>169875.50</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000283</td><td>0000968001</td><td>1905102197</td><td>2019-05-31</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>29.000</td><td>233160.20</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000284</td><td>0000973467</td><td>1905102224</td><td>2019-06-06</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>10.000</td><td>111300.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000285</td><td>0000973469</td><td>1905102225</td><td>2019-06-06</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>50.000</td><td>127000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000286</td><td>0000973471</td><td>1905102226</td><td>2019-06-06</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>25.000</td><td>73125.50</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000287</td><td>0000973476</td><td>1905102227</td><td>2019-06-06</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>21.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000288</td><td>0000973476</td><td>1905102227</td><td>2019-06-06</td><td>T30000000443</td><td>SCC1206-B40H1N-P105W1N</td><td>21.000</td><td>151515.24</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000289</td><td>0000973476</td><td>1905102227</td><td>2019-06-06</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>21.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000290</td><td>0000973476</td><td>1905102227</td><td>2019-06-06</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>21.000</td><td>0.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000291</td><td>0000973477</td><td>1905102228</td><td>2019-06-06</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>21.000</td><td>105834.26</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000292</td><td>0060043728</td><td>1905600126</td><td>2019-04-06</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4736.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000293</td><td>0060043856</td><td>1905600127</td><td>2019-04-06</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4736.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000294</td><td>0060044695</td><td>1905600128</td><td>2019-04-06</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4736.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000295</td><td>0060046224</td><td>1905600129</td><td>2019-04-06</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>4990.56</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000296</td><td>0060046254</td><td>1905600130</td><td>2019-04-06</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>4990.56</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000297</td><td>0060046346</td><td>1905600131</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000298</td><td>0060046613</td><td>1905600132</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000299</td><td>0060046653</td><td>1905600133</td><td>2019-04-06</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4736.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000300</td><td>0060046654</td><td>1905600134</td><td>2019-04-06</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4817.48</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000301</td><td>0060046657</td><td>1905600135</td><td>2019-04-06</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4736.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000302</td><td>0060046660</td><td>1905600136</td><td>2019-04-06</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>4990.56</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000303</td><td>0060046663</td><td>1905600137</td><td>2019-04-06</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4817.48</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000304</td><td>0060047135</td><td>1905600138</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000305</td><td>0060047139</td><td>1905600139</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000306</td><td>0060047146</td><td>1905600140</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000307</td><td>0060047155</td><td>1905600141</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000308</td><td>0060047570</td><td>1905600142</td><td>2019-04-06</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4736.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000309</td><td>0060047571</td><td>1905600143</td><td>2019-04-06</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4736.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000310</td><td>0060047577</td><td>1905600144</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000311</td><td>0060047832</td><td>1905600145</td><td>2019-04-06</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7327.53</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000312</td><td>0060047868</td><td>1905600146</td><td>2019-04-06</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5181.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000313</td><td>0060047871</td><td>1905600147</td><td>2019-04-06</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5181.21</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000314</td><td>0060047876</td><td>1905600148</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000315</td><td>0060048257</td><td>1905600149</td><td>2019-04-06</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>1.000</td><td>5108.31</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000316</td><td>0060048634</td><td>1905600150</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000317</td><td>0060048636</td><td>1905600151</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000318</td><td>0060048637</td><td>1905600152</td><td>2019-04-06</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>4990.56</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000319</td><td>0060048638</td><td>1905600153</td><td>2019-04-06</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5210.04</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000320</td><td>0060048639</td><td>1905600154</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000321</td><td>0060048640</td><td>1905600155</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000322</td><td>0060048641</td><td>1905600156</td><td>2019-04-06</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5167.27</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000323</td><td>0060041433</td><td>1905600233</td><td>2019-04-16</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4219.82</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000324</td><td>0060043858</td><td>1905600234</td><td>2019-04-16</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5279.60</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000325</td><td>0060046248</td><td>1905600235</td><td>2019-04-16</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5279.60</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000326</td><td>0060046609</td><td>1905600236</td><td>2019-04-16</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4219.82</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000327</td><td>0060047579</td><td>1905600237</td><td>2019-04-16</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5323.14</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000328</td><td>0060047840</td><td>1905600238</td><td>2019-04-16</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5323.14</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000329</td><td>0060047879</td><td>1905600239</td><td>2019-04-16</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5279.60</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000330</td><td>0060048259</td><td>1905600240</td><td>2019-04-16</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5279.60</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000331</td><td>0060049298</td><td>1905600241</td><td>2019-04-16</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4219.82</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000332</td><td>0060049300</td><td>1905600242</td><td>2019-04-16</td><td>F1103AYM0150</td><td>LUM 12V150AH IL18039FP FNSD BTY V16</td><td>1.000</td><td>5009.30</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000333</td><td>0060049303</td><td>1905600243</td><td>2019-04-16</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4796.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000334</td><td>0060049304</td><td>1905600244</td><td>2019-04-16</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4796.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000335</td><td>0060049305</td><td>1905600245</td><td>2019-04-16</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4796.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000336</td><td>0060049301</td><td>1905600405</td><td>2019-04-27</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5279.60</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000337</td><td>0060049308</td><td>1905600406</td><td>2019-04-27</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5279.60</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000338</td><td>0060050198</td><td>1905600407</td><td>2019-04-27</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1445.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000339</td><td>0060050203</td><td>1905600408</td><td>2019-04-27</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1445.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000340</td><td>0060050204</td><td>1905600409</td><td>2019-04-27</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000341</td><td>0060050211</td><td>1905600410</td><td>2019-04-27</td><td>F1105C150160</td><td>ELE 12V160AH LETT 20548 FNSD BTY</td><td>1.000</td><td>5282.46</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000342</td><td>0060050212</td><td>1905600411</td><td>2019-04-27</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000343</td><td>0060050213</td><td>1905600412</td><td>2019-04-27</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>4951.28</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000344</td><td>0060050215</td><td>1905600413</td><td>2019-04-27</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5323.14</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000345</td><td>0060050216</td><td>1905600414</td><td>2019-04-27</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>5073.99</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000346</td><td>0060050218</td><td>1905600415</td><td>2019-04-27</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000347</td><td>0060051522</td><td>1905600416</td><td>2019-04-27</td><td>F1105C305160</td><td>ELE 12V160AH LETT 20548 FNSD BTY V18</td><td>1.000</td><td>5145.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000348</td><td>0060051527</td><td>1905600417</td><td>2019-04-27</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5323.14</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000349</td><td>0060051528</td><td>1905600418</td><td>2019-04-27</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1445.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000350</td><td>0060050200</td><td>1905600487</td><td>2019-04-30</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5242.03</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000351</td><td>0060050208</td><td>1905600488</td><td>2019-04-30</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7360.45</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000352</td><td>0060051520</td><td>1905600489</td><td>2019-04-30</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5242.04</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000353</td><td>0060051521</td><td>1905600490</td><td>2019-04-30</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5756.33</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000354</td><td>0060051526</td><td>1905600491</td><td>2019-04-30</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5242.03</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000355</td><td>0060051530</td><td>1905600492</td><td>2019-04-30</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5242.04</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000356</td><td>0060051724</td><td>1905600493</td><td>2019-04-30</td><td>F1105C305160</td><td>ELE 12V160AH LETT 20548 FNSD BTY V18</td><td>1.000</td><td>5145.71</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000357</td><td>0060051727</td><td>1905600494</td><td>2019-04-30</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000358</td><td>0060051736</td><td>1905600495</td><td>2019-04-30</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5756.33</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000359</td><td>0060050202</td><td>1905600579</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000360</td><td>0060050206</td><td>1905600580</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000361</td><td>0060050207</td><td>1905600581</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000362</td><td>0060051516</td><td>1905600582</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000363</td><td>0060051517</td><td>1905600583</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000364</td><td>0060051518</td><td>1905600584</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000365</td><td>0060051519</td><td>1905600585</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000366</td><td>0060051531</td><td>1905600586</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000367</td><td>0060051718</td><td>1905600587</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000368</td><td>0060051734</td><td>1905600588</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000369</td><td>0060051737</td><td>1905600589</td><td>2019-05-06</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>1.000</td><td>5897.43</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000370</td><td>0060043843</td><td>1905600646</td><td>2019-05-10</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5756.34</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000371</td><td>0060050209</td><td>1905600647</td><td>2019-05-10</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5756.33</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000372</td><td>0060053076</td><td>1905600648</td><td>2019-05-10</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5260.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000373</td><td>0060053077</td><td>1905600649</td><td>2019-05-10</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>4965.18</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000374</td><td>0060053078</td><td>1905600650</td><td>2019-05-10</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5260.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000375</td><td>0060053079</td><td>1905600651</td><td>2019-05-10</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5260.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000376</td><td>0060053080</td><td>1905600652</td><td>2019-05-10</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>4965.18</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000377</td><td>0060053081</td><td>1905600653</td><td>2019-05-10</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1445.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000378</td><td>0060053091</td><td>1905600654</td><td>2019-05-10</td><td>F1105C305160</td><td>ELE 12V160AH LETT 20548 FNSD BTY V18</td><td>1.000</td><td>5145.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000379</td><td>0060053092</td><td>1905600655</td><td>2019-05-10</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>1.000</td><td>5108.31</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000380</td><td>0060053095</td><td>1905600656</td><td>2019-05-10</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>1.000</td><td>4919.59</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000381</td><td>0060053098</td><td>1905600657</td><td>2019-05-10</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5090.99</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000382</td><td>0060053099</td><td>1905600658</td><td>2019-05-10</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5090.99</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000383</td><td>0060053100</td><td>1905600659</td><td>2019-05-10</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>4965.18</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000384</td><td>0060053103</td><td>1905600660</td><td>2019-05-10</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>4965.18</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000385</td><td>0060053111</td><td>1905600661</td><td>2019-05-10</td><td>F1105C305160</td><td>ELE 12V160AH LETT 20548 FNSD BTY V18</td><td>1.000</td><td>5145.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000386</td><td>0060053118</td><td>1905600662</td><td>2019-05-10</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1445.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000387</td><td>0060053119</td><td>1905600663</td><td>2019-05-10</td><td>F1105C305160</td><td>ELE 12V160AH LETT 20548 FNSD BTY V18</td><td>1.000</td><td>5145.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000388</td><td>0060053120</td><td>1905600664</td><td>2019-05-10</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>1.000</td><td>1445.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000389</td><td>0060053121</td><td>1905600665</td><td>2019-05-10</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5260.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000390</td><td>0060053124</td><td>1905600666</td><td>2019-05-10</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>1.000</td><td>8031.41</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000391</td><td>0060053125</td><td>1905600667</td><td>2019-05-10</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5260.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000392</td><td>0060053126</td><td>1905600668</td><td>2019-05-10</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5090.99</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000393</td><td>0060053548</td><td>1905600805</td><td>2019-05-15</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5260.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000394</td><td>0060053691</td><td>1905600806</td><td>2019-05-15</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>1.000</td><td>2470.14</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000395</td><td>0060053692</td><td>1905600807</td><td>2019-05-15</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5260.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000396</td><td>0060053693</td><td>1905600808</td><td>2019-05-15</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5260.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000397</td><td>0060053694</td><td>1905600809</td><td>2019-05-15</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5260.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000398</td><td>0060053696</td><td>1905600810</td><td>2019-05-15</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5260.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000399</td><td>0060054208</td><td>1905600936</td><td>2019-05-21</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5263.23</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000400</td><td>0060054239</td><td>1905600937</td><td>2019-05-21</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>1.000</td><td>5108.32</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000401</td><td>0060054240</td><td>1905600938</td><td>2019-05-21</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5263.23</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000402</td><td>0060054241</td><td>1905600939</td><td>2019-05-21</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5263.23</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000403</td><td>0060054246</td><td>1905600940</td><td>2019-05-21</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5263.23</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000404</td><td>0060054250</td><td>1905600941</td><td>2019-05-21</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5270.83</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000405</td><td>0060054446</td><td>1905600942</td><td>2019-05-21</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7045.02</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000406</td><td>0060053105</td><td>1905601097</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.79</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000407</td><td>0060053107</td><td>1905601098</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.79</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000408</td><td>0060053108</td><td>1905601099</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.79</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000409</td><td>0060053109</td><td>1905601100</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.79</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000410</td><td>0060053110</td><td>1905601101</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.79</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000411</td><td>0060053549</td><td>1905601102</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.79</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000412</td><td>0060054211</td><td>1905601103</td><td>2019-05-24</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5093.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000413</td><td>0060054248</td><td>1905601104</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.79</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000414</td><td>0060055000</td><td>1905601105</td><td>2019-05-24</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5244.55</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000415</td><td>0060055001</td><td>1905601106</td><td>2019-05-24</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5125.88</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000416</td><td>0060055002</td><td>1905601107</td><td>2019-05-24</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5093.22</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000417</td><td>0060055174</td><td>1905601108</td><td>2019-05-24</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5244.55</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000418</td><td>0060055176</td><td>1905601109</td><td>2019-05-24</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5263.11</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000419</td><td>0060055853</td><td>1905601234</td><td>2019-05-28</td><td>F1105C305160</td><td>ELE 12V160AH LETT 20548 FNSD BTY V18</td><td>1.000</td><td>5145.72</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000420</td><td>0060055857</td><td>1905601235</td><td>2019-05-28</td><td>F1105C305160</td><td>ELE 12V160AH LETT 20548 FNSD BTY V18</td><td>1.000</td><td>5145.71</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000421</td><td>0060055969</td><td>1905601236</td><td>2019-05-28</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>4951.28</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000422</td><td>0060039068</td><td>1929600004</td><td>2019-04-06</td><td>F1102CZK0200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V16</td><td>1.000</td><td>6817.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1052</td><td>Ghaziabad Plant2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000423</td><td>0060039366</td><td>1929600005</td><td>2019-04-06</td><td>F1102CZK0200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V16</td><td>1.000</td><td>6817.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1052</td><td>Ghaziabad Plant2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000424</td><td>0060040485</td><td>1929600006</td><td>2019-04-06</td><td>F1102CZK0200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V16</td><td>1.000</td><td>6817.74</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1052</td><td>Ghaziabad Plant2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000425</td><td>0060047574</td><td>1929600007</td><td>2019-04-06</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5219.44</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1052</td><td>Ghaziabad Plant2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000426</td><td>0000930118</td><td>1960100011</td><td>2019-04-09</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>50.000</td><td>127000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000427</td><td>0000930129</td><td>1960100013</td><td>2019-04-09</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>50.000</td><td>452750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000428</td><td>0000932990</td><td>1960100069</td><td>2019-04-15</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000429</td><td>0000932990</td><td>1960100069</td><td>2019-04-15</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>50.000</td><td>99750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000430</td><td>0000932990</td><td>1960100069</td><td>2019-04-15</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>50.000</td><td>113250.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000431</td><td>0000932990</td><td>1960100069</td><td>2019-04-15</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000432</td><td>0000936807</td><td>1960100188</td><td>2019-04-24</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>100.000</td><td>887500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000433</td><td>0000936807</td><td>1960100189</td><td>2019-04-24</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>100.000</td><td>887500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000434</td><td>0000936807</td><td>1960100190</td><td>2019-04-24</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>40.000</td><td>323200.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000435</td><td>0000941874</td><td>1960100288</td><td>2019-04-27</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>3.000</td><td>25979.90</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000436</td><td>0000941874</td><td>1960100288</td><td>2019-04-27</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>78599.70</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000437</td><td>0000941856</td><td>1960100293</td><td>2019-04-27</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>75.000</td><td>679125.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000438</td><td>0000941858</td><td>1960100294</td><td>2019-04-27</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>75.000</td><td>679125.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000439</td><td>0000954564</td><td>1960100529</td><td>2019-05-13</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>47.000</td><td>183770.40</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000440</td><td>0000963542</td><td>1960100633</td><td>2019-05-27</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>100.000</td><td>887500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000441</td><td>0000966420</td><td>1960100687</td><td>2019-05-29</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>50.000</td><td>408000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000442</td><td>0000966429</td><td>1960100688</td><td>2019-05-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>100.000</td><td>887500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000443</td><td>0000966429</td><td>1960100689</td><td>2019-05-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000444</td><td>0000966433</td><td>1960100739</td><td>2019-05-30</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>100.000</td><td>199500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000445</td><td>0000972349</td><td>1960100837</td><td>2019-05-31</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>3.000</td><td>23580.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000446</td><td>0000972349</td><td>1960100837</td><td>2019-05-31</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>2.000</td><td>10220.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000447</td><td>0000973466</td><td>1960100858</td><td>2019-06-06</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>100.000</td><td>887500.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000448</td><td>0000973466</td><td>1960100859</td><td>2019-06-06</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000449</td><td>0000973470</td><td>1960100860</td><td>2019-06-06</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>50.000</td><td>134750.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000450</td><td>0060051071</td><td>1960400004</td><td>2019-04-23</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>-100.000</td><td>816000.00</td><td>0001105925</td><td>SHREE BALAJI TRADERS</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr>
+</table>

@@ -1,0 +1,187 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000910174</td><td>1813102437</td><td>2019-02-28</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>100.000</td><td>800000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000910174</td><td>1813102437</td><td>2019-02-28</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>15.000</td><td>144750.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000910174</td><td>1813102437</td><td>2019-02-28</td><td>F1148C282150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY</td><td>35.000</td><td>277900.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000927094</td><td>1813102779</td><td>2019-03-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>10.000</td><td>88750.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000927094</td><td>1813102779</td><td>2019-03-29</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>25.000</td><td>174625.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000927094</td><td>1813102779</td><td>2019-03-29</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>100.000</td><td>800000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000927094</td><td>1813102779</td><td>2019-03-29</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>10.000</td><td>93000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000927095</td><td>1813102780</td><td>2019-03-29</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>10.000</td><td>57299.75</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000927095</td><td>1813102780</td><td>2019-03-29</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>16.000</td><td>35279.85</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000897823</td><td>1814107575</td><td>2019-01-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000897823</td><td>1814107575</td><td>2019-01-30</td><td>F04115512051</td><td>S/W UPS 12V LUM BIS ECOVOLT+1550/12V(BIS</td><td>15.000</td><td>67050.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000897823</td><td>1814107575</td><td>2019-01-30</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>20.000</td><td>93900.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000013</td><td>0000897824</td><td>1814107576</td><td>2019-01-30</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>3.000</td><td>22619.99</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000897824</td><td>1814107576</td><td>2019-01-30</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>27.000</td><td>188594.92</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000897824</td><td>1814107576</td><td>2019-01-30</td><td>F1148C282150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY</td><td>30.000</td><td>238199.89</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000900719</td><td>1814107687</td><td>2019-02-09</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>102800.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000017</td><td>0000900979</td><td>1814107703</td><td>2019-02-12</td><td>F04340012851</td><td>S/W UPS 4KVA/48V LUMINOUS CRUZE+</td><td>2.000</td><td>24980.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000018</td><td>0000900979</td><td>1814107703</td><td>2019-02-12</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>2.000</td><td>41120.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000019</td><td>0000902096</td><td>1814107755</td><td>2019-02-14</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>50.000</td><td>400000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000902097</td><td>1814107756</td><td>2019-02-14</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>10.000</td><td>53050.20</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000021</td><td>0000902097</td><td>1814107756</td><td>2019-02-14</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>5.000</td><td>44000.17</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000022</td><td>0000902097</td><td>1814107756</td><td>2019-02-14</td><td>T18010000077</td><td>Solar PV Module 100W/12V Poly Crys.</td><td>10.000</td><td>35700.13</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000023</td><td>0000902098</td><td>1814107757</td><td>2019-02-14</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>2.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000024</td><td>0000902098</td><td>1814107757</td><td>2019-02-14</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>2.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0000902098</td><td>1814107757</td><td>2019-02-14</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>2.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000026</td><td>0000902098</td><td>1814107757</td><td>2019-02-14</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>2.000</td><td>40420.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000027</td><td>0000902178</td><td>1814107779</td><td>2019-02-15</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>10.000</td><td>50400.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000028</td><td>0000902518</td><td>1814107791</td><td>2019-02-16</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>15.000</td><td>61650.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000029</td><td>0000905276</td><td>1814107947</td><td>2019-02-25</td><td>F04575010126</td><td>S/W UPS 7500VA 120V LUM CRUZE P. FRONT</td><td>1.000</td><td>35284.70</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000030</td><td>0000905935</td><td>1814107973</td><td>2019-02-25</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>100.000</td><td>800000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000905935</td><td>1814107973</td><td>2019-02-25</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>30.000</td><td>178650.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000905935</td><td>1814107973</td><td>2019-02-25</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>20.000</td><td>125000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000905936</td><td>1814107974</td><td>2019-02-25</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>10.000</td><td>25400.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000034</td><td>0000905936</td><td>1814107974</td><td>2019-02-25</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>20.000</td><td>70700.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000035</td><td>0000908685</td><td>1814108136</td><td>2019-02-27</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>40.000</td><td>156400.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000036</td><td>0000914852</td><td>1814108418</td><td>2019-03-15</td><td>T30000001608</td><td>NXG1100-B150HTT1N-P165W1N</td><td>5.000</td><td>98800.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000037</td><td>0000914852</td><td>1814108418</td><td>2019-03-15</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>5.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000038</td><td>0000914852</td><td>1814108418</td><td>2019-03-15</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>5.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000039</td><td>0000914852</td><td>1814108418</td><td>2019-03-15</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>5.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000040</td><td>0000916272</td><td>1814108506</td><td>2019-03-18</td><td>T30000001605</td><td>NXG1800-B150HTT2N-P325W2N</td><td>5.000</td><td>219150.50</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000041</td><td>0000916272</td><td>1814108506</td><td>2019-03-18</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>10.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000042</td><td>0000916272</td><td>1814108506</td><td>2019-03-18</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0000916272</td><td>1814108506</td><td>2019-03-18</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>5.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000044</td><td>0000916273</td><td>1814108507</td><td>2019-03-18</td><td>T30000001606</td><td>NXG1800-B200L2N-P325W2N</td><td>1.000</td><td>46930.50</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000045</td><td>0000916273</td><td>1814108507</td><td>2019-03-18</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>2.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000046</td><td>0000916273</td><td>1814108507</td><td>2019-03-18</td><td>F1113C262200</td><td>LUM 12V200AH LPTT12200L FNSD BTY V18 SLR</td><td>2.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000047</td><td>0000916273</td><td>1814108507</td><td>2019-03-18</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>1.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000048</td><td>0000918390</td><td>1814108646</td><td>2019-03-22</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>20.000</td><td>135700.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000049</td><td>0000918390</td><td>1814108646</td><td>2019-03-22</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>30.000</td><td>212250.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000050</td><td>0000918392</td><td>1814108647</td><td>2019-03-22</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000051</td><td>0000918393</td><td>1814108648</td><td>2019-03-22</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>20.000</td><td>157200.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000052</td><td>0000923405</td><td>1814108906</td><td>2019-03-27</td><td>T30000001608</td><td>NXG1100-B150HTT1N-P165W1N</td><td>6.000</td><td>118560.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000053</td><td>0000923405</td><td>1814108906</td><td>2019-03-27</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>6.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000054</td><td>0000923405</td><td>1814108906</td><td>2019-03-27</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>6.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000055</td><td>0000923405</td><td>1814108906</td><td>2019-03-27</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>6.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000056</td><td>0000923538</td><td>1814108914</td><td>2019-03-27</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>3.000</td><td>59280.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000057</td><td>0000923538</td><td>1814108914</td><td>2019-03-27</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>3.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000058</td><td>0000923538</td><td>1814108914</td><td>2019-03-27</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>3.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000059</td><td>0000923538</td><td>1814108914</td><td>2019-03-27</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>3.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000060</td><td>0000925801</td><td>1814109084</td><td>2019-03-29</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>20.000</td><td>125000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000061</td><td>0000925801</td><td>1814109084</td><td>2019-03-29</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>20.000</td><td>193000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000062</td><td>0000925813</td><td>1814109085</td><td>2019-03-29</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>102799.90</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000063</td><td>0000925813</td><td>1814109085</td><td>2019-03-29</td><td>F04340012851</td><td>S/W UPS 4KVA/48V LUMINOUS CRUZE+</td><td>2.000</td><td>24979.98</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000064</td><td>0000925813</td><td>1814109085</td><td>2019-03-29</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>8.000</td><td>87359.92</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000065</td><td>0000925804</td><td>1814109154</td><td>2019-03-29</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>100.000</td><td>800000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000066</td><td>0000927263</td><td>1814109207</td><td>2019-03-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>150.000</td><td>438750.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000067</td><td>0000925804</td><td>1814109214</td><td>2019-03-30</td><td>F1148C282150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY</td><td>30.000</td><td>238200.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000068</td><td>0000925804</td><td>1814109214</td><td>2019-03-30</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>30.000</td><td>244800.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000069</td><td>0000925813</td><td>1814109215</td><td>2019-03-30</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>10.000</td><td>51100.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000070</td><td>0000900733</td><td>1852108624</td><td>2019-02-09</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>42500.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000071</td><td>0000922229</td><td>1852109772</td><td>2019-03-27</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>7.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000072</td><td>0000922229</td><td>1852109772</td><td>2019-03-27</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>14.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000073</td><td>0000922229</td><td>1852109772</td><td>2019-03-27</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>14.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000074</td><td>0000922229</td><td>1852109772</td><td>2019-03-27</td><td>T30000001605</td><td>NXG1800-B150HTT2N-P325W2N</td><td>7.000</td><td>306810.50</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000075</td><td>0000906518</td><td>1893104921</td><td>2019-02-28</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>8.000</td><td>69279.60</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>PG03</td><td>Gagret Unit - 3</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000076</td><td>0000942281</td><td>1914100548</td><td>2019-04-29</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>30.000</td><td>117300.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000077</td><td>0000944343</td><td>1914100581</td><td>2019-04-29</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48600.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000078</td><td>0000944348</td><td>1914100582</td><td>2019-04-29</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>10.000</td><td>35350.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000079</td><td>0000944348</td><td>1914100582</td><td>2019-04-29</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>10.000</td><td>19950.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000080</td><td>0000944350</td><td>1914100583</td><td>2019-04-29</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>10.000</td><td>51100.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000081</td><td>0000944350</td><td>1914100583</td><td>2019-04-29</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>10.000</td><td>58700.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000082</td><td>0000944354</td><td>1914100584</td><td>2019-04-29</td><td>F03135001951</td><td>S/Q WAVE HUPS 12V LUM BIS ECO WATT +350</td><td>50.000</td><td>79000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000083</td><td>0000944358</td><td>1914100585</td><td>2019-04-29</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>10.000</td><td>48512.66</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000084</td><td>0000944360</td><td>1914100586</td><td>2019-04-29</td><td>T30000000439</td><td>SCC1206-B40H1N-P40W1N</td><td>20.000</td><td>106700.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000085</td><td>0000944360</td><td>1914100586</td><td>2019-04-29</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>20.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000086</td><td>0000944360</td><td>1914100586</td><td>2019-04-29</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>20.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000087</td><td>0000944360</td><td>1914100586</td><td>2019-04-29</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>20.000</td><td>0.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000088</td><td>0000946545</td><td>1914100709</td><td>2019-04-30</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>10.000</td><td>80000.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000089</td><td>0000946546</td><td>1914100710</td><td>2019-04-30</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>10.000</td><td>83600.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000090</td><td>0000946547</td><td>1914100711</td><td>2019-04-30</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>20.000</td><td>69900.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000091</td><td>0000944657</td><td>1933100124</td><td>2019-04-30</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>10.000</td><td>109200.00</td><td>0001109058</td><td>CHAMUNDI ELECTRICALS</td><td>10</td><td>Karnataka</td><td>1330</td><td>Vijayawada Branch</td><td>HKVA</td>
+	</tr>
+</table>

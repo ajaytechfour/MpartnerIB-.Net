@@ -1,0 +1,97 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000929879</td><td>1924100006</td><td>2019-04-08</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>25.000</td><td>92500.14</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000929879</td><td>1924100006</td><td>2019-04-08</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>12.000</td><td>37860.06</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000932489</td><td>1924100019</td><td>2019-04-13</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>1.000</td><td>20560.20</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000004</td><td>0000933106</td><td>1924100021</td><td>2019-04-15</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>50.000</td><td>189750.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000005</td><td>0000937207</td><td>1924100039</td><td>2019-04-24</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>40.000</td><td>434200.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000938985</td><td>1924100045</td><td>2019-04-25</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>30.000</td><td>271650.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000944989</td><td>1924100066</td><td>2019-04-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>70.000</td><td>204750.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000944989</td><td>1924100066</td><td>2019-04-30</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>50.000</td><td>165250.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000944989</td><td>1924100066</td><td>2019-04-30</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>40.000</td><td>151800.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000944989</td><td>1924100066</td><td>2019-04-30</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>150.000</td><td>646500.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000944989</td><td>1924100066</td><td>2019-04-30</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>30.000</td><td>59850.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000944989</td><td>1924100066</td><td>2019-04-30</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>50.000</td><td>127000.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000013</td><td>0000944989</td><td>1924100066</td><td>2019-04-30</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>50.000</td><td>185000.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000945000</td><td>1924100067</td><td>2019-04-30</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>20.000</td><td>173900.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000945663</td><td>1924100073</td><td>2019-04-30</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>99.000</td><td>878625.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000945000</td><td>1924100075</td><td>2019-04-30</td><td>F1148C282150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY</td><td>80.000</td><td>635200.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000945000</td><td>1924100090</td><td>2019-04-30</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>40.000</td><td>326400.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000946421</td><td>1924100092</td><td>2019-04-30</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>50.000</td><td>215500.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000019</td><td>0000963756</td><td>1924100149</td><td>2019-05-27</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>25.000</td><td>78875.50</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000020</td><td>0000971434</td><td>1924100162</td><td>2019-05-31</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>40.000</td><td>116999.93</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000021</td><td>0000971434</td><td>1924100162</td><td>2019-05-31</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>56.000</td><td>185079.89</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000022</td><td>0000971434</td><td>1924100162</td><td>2019-05-31</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>25.000</td><td>92499.94</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000023</td><td>0000971434</td><td>1924100162</td><td>2019-05-31</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>50.000</td><td>189749.88</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000024</td><td>0000971434</td><td>1924100162</td><td>2019-05-31</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>20.000</td><td>63099.96</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000025</td><td>0000971429</td><td>1924100163</td><td>2019-05-31</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>67.000</td><td>536000.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0000971429</td><td>1924100163</td><td>2019-05-31</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>30.000</td><td>325650.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000971429</td><td>1924100163</td><td>2019-05-31</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>10.000</td><td>90550.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0000971429</td><td>1924100163</td><td>2019-05-31</td><td>F1141BWN0150</td><td> INVERGEL 12V150AH IGSTJ 18000 FNSD BTY</td><td>5.000</td><td>50125.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0000971429</td><td>1924100163</td><td>2019-05-31</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>100.000</td><td>804000.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000030</td><td>0000971429</td><td>1924100164</td><td>2019-05-31</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>0.000</td><td>0.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000971429</td><td>1924100164</td><td>2019-05-31</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>199.000</td><td>1920350.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000971429</td><td>1924100164</td><td>2019-05-31</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>9650.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000971441</td><td>1924100165</td><td>2019-05-31</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>33.000</td><td>97844.90</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000034</td><td>0000971450</td><td>1924100166</td><td>2019-05-31</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>1.000</td><td>10920.03</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000035</td><td>0000971450</td><td>1924100166</td><td>2019-05-31</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>10.000</td><td>58700.14</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000036</td><td>0000971450</td><td>1924100166</td><td>2019-05-31</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>78600.17</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000037</td><td>0000971450</td><td>1924100166</td><td>2019-05-31</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>5.000</td><td>25550.06</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000038</td><td>0000971807</td><td>1924100167</td><td>2019-05-31</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>30.000</td><td>113850.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000039</td><td>0000971905</td><td>1924100168</td><td>2019-05-31</td><td>T30000001603</td><td>NXG1400-B150HTT1N-P165W1N</td><td>2.000</td><td>41430.50</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000040</td><td>0000971905</td><td>1924100168</td><td>2019-05-31</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>2.000</td><td>0.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000041</td><td>0000971905</td><td>1924100168</td><td>2019-05-31</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>2.000</td><td>0.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000042</td><td>0000971905</td><td>1924100168</td><td>2019-05-31</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>2.000</td><td>0.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000043</td><td>0000972791</td><td>1924100172</td><td>2019-06-03</td><td>F1141BWN0150</td><td> INVERGEL 12V150AH IGSTJ 18000 FNSD BTY</td><td>5.000</td><td>50125.00</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000044</td><td>0000972792</td><td>1924100173</td><td>2019-06-03</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>2.000</td><td>9390.21</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000045</td><td>0000972792</td><td>1924100173</td><td>2019-06-03</td><td>F04111013251</td><td>S/W UPS LUMINOUS ZELIO WI FI 1100/12V</td><td>3.000</td><td>12735.29</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000046</td><td>0000972793</td><td>1924100174</td><td>2019-06-03</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>3.000</td><td>11680.56</td><td>0001104592</td><td>S.P.INCORPORATION</td><td>33</td><td>Chhattisgarh</td><td>1240</td><td>Raipur Branch</td><td>&nbsp;</td>
+	</tr>
+</table>

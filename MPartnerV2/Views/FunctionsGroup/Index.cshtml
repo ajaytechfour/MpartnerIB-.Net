@@ -1,0 +1,204 @@
+﻿@model Luminous.EF.FUNCTION
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/assets/js/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/assets/js/FunctionsJs.js")" type="text/javascript"></script>
+<style type="text/css">
+    .required
+    {
+        color: Red;
+    }
+    table
+    {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+    table table
+    {
+        font-size: 1em;
+    }
+    #footer-wrapper table
+    {
+        font-size: 1em;
+    }
+    table tr th
+    {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+    table tr th, table tr th a, table tr th a:hover
+    {
+        color: #FFF;
+        font-weight: bold;
+    }
+    table tbody tr th
+    {
+        vertical-align: top;
+    }
+    tr td, tr th
+    {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+    #footer-wrapper tr td, #footer-wrapper tr th
+    {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+    tr.odd
+    {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+    tr, tr.even
+    {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+    table ul.links
+    {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+    table ul.links li
+    {
+        padding: 0 1em 0 0;
+    }
+</style>
+<script type="text/javascript">
+    //Fill Grid With functions Details Value
+    function SetFunctionsGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            debugger;
+            var body = "";
+            $("#Grid tbody").empty();
+            $.each(data.result, function (key, value) {
+                body += "<tr><td>" + value.Id + "</td>" +
+                "<td>" + value.Fname + "</td>" +
+            "<td>" + value.Femail + "</td>" +
+             "<td>" + value.DepartmentName + "</td>" +
+             "<td>" + value.DepartmentPersoneName + "</td>" +
+            "<td>" + value.status + "</td>" +
+            "<td><a style='cursor:pointer' onclick=Edit(" + value.Id + ");>Edit</a> <a style='cursor:pointer' onclick=Delete(" + value.Id + ");>Delete</a></td></tr>";
+            });
+            $("#Grid tbody").append(body);
+            SetPages(data.TotalRecord);
+        }
+    }
+
+
+
+</script>
+@using (Html.BeginForm("Save", "FunctionsGroup"))
+{ 
+  <div id="content_wrap">
+            <div class="msgbar msg_Info heading">
+                Functions</div>
+            <div class="content_main">
+                <div class="boxes1">
+        <table id="GridView">
+            <tr>
+                <td style="width: 137px;">
+                    Function Name <span class="required">*</span>
+                </td>
+                <td style="width: 194PX;">@Html.EditorFor(a => a.fNAME)
+                    <br />
+                    @Html.ValidationMessageFor(a => a.fNAME, "", new { @class = "required" })
+                </td>
+                <td style="width: 137px;">
+                    Email <span class="required">*</span>
+                </td>
+                <td>@Html.EditorFor(a => a.fEMAIL)
+                    <br />
+                    @Html.ValidationMessageFor(a => a.fEMAIL, "", new { @class = "required" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Department Name <span class="required">*</span>
+                </td>
+                <td>
+                    @*@Html.EditorFor(a=>a.FirstOrDefault().Banner_Details)*@
+                    @Html.TextBoxFor(a => a.fDepartmentName)
+                    <br />
+                    @Html.ValidationMessageFor(a => a.fDepartmentName, "", new { @class = "required" })
+                </td>
+                <td>
+                    Department Person Name <span class="required">*</span>
+                </td>
+                <td colspan="3">
+                    @*@Html.EditorFor(a=>a.FirstOrDefault().Banner_Details)*@
+                    @Html.TextBoxFor(a => a.DepartmentPersoneName)
+                    <br />
+                    @Html.ValidationMessageFor(a => a.DepartmentPersoneName, "", new { @class = "required" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Status <span class="required">*</span>
+                </td>
+                <td colspan="3">
+                    <input id="status" type="checkbox" checked="checked" name="Statust" />
+                
+                    <span class="Status"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <input type="submit" class="SubmitButton" value="Submit" />
+    </div>
+    </div>
+    
+}
+<div id="list" style="width: 997px; float: right; margin-right: 15px;">
+    <table id="Grid" width="100%">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Function Name
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Department Name
+                </th>
+                <th>
+                    Department Person Name
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+<div id="Paging">
+</div>
+</div>

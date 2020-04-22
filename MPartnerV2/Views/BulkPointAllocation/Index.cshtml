@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+  
+    Layout = "~/Views/Shared/Error.cshtml";
+}
+
+
+<div id="content_wrap">
+    <div class="msgbar msg_Info heading">
+        Bulk Point Allocation
+    </div>
+    @if(TempData["extension"]!=null)
+    {
+          <p class="warning" style="color:red">@TempData["extension"]</p>
+    }
+    @if (TempData["Successfully"] != null)
+    {
+        <p class="warning" style="color:red">@TempData["Successfully"]</p>
+    }
+    @if (TempData["Blankfile"] != null)
+    {
+        <p class="warning" style="color:red">@TempData["Blankfile"]</p>
+    }
+    @if (TempData["Exception"] != null)
+    {
+        <p class="warning" style="color:red">@TempData["Exception"]</p>
+    }
+    
+    <div style="height:20px"></div>
+    @using (Html.BeginForm("PointBulkUpload", "BulkPointAllocation", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <table>
+            <tr><td>Excel file</td><td><input type="file" id="FileUpload" name="FileUpload" /></td><td><a href="~/Format/PointBulkFormat.xlsx">Download Format</a></td></tr>
+            <tr style="height:5px"></tr>
+            <tr><td></td><td><input type="submit" id="Submit" name="Submit" value="Submit" /></td></tr>
+        </table>
+    }
+</div>

@@ -1,0 +1,246 @@
+﻿@model LuminousMpartnerIB.EF.UserVerification
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var arr = [];
+        var i = 0;
+        $("#btnSearch").click(function () {
+            debugger;
+            var id = $("#Id").val();
+            if (id == "") {
+                alert("SAP Code cannot be blank")
+                return true;
+            }
+            $.post("@Url.Content("~/UserVerificationPermission/getUserid")", { Id: id, data: arr }, function (data) { SetGrid(data); }, "Json");
+        });
+        $("#btnclearlog").click(function () {
+            var id = $("#Id").val();
+            if (id == "") {
+                alert("SAP Code cannot be blank")
+                return true;
+            }
+            $.post("@Url.Content("~/UserVerificationPermission/getblockdevice")", { Id: id }, function (data) { SetGridDeviceLog(data); }, "Json");
+        });
+    });
+
+    function SetGrid(data) {
+        console.log(data);
+        var body = "";
+
+        var get_obj_length = data.length;
+        debugger;
+
+        for (i = 0; i < get_obj_length; i++) {
+
+            body += "<tr><td>" + data[i].Id + "</td>";
+            body += "<td>" + data[i].DeviceId + "</td>";
+            body += "<td style='text-align:right'><input type=checkbox name=myCheckbox checked id='ch" + i + "'  onclick=Edit(" + data[i].Id + ",this) /></td></tr>";
+        }
+        $("#Grid tbody").html(body);
+    }    
+
+    function SetGridDeviceLog(data) {
+        console.log(data);
+        var body = "";
+        var get_obj_length = data.length;
+
+        for (i = 0; i < get_obj_length; i++) {
+            debugger;
+            body += "<tr><td>" + data[i].U_verid + "</td>";
+            body += "<td>" + data[i].DeviceId + "</td></tr>";
+            // body += "<td><input type=checkbox name=myCheckbox checked  id='ch"+i+"' onclick=EditDeviceLog('" + data[i].DeviceId + "') /></td></tr>";
+        }
+        $("#Grid tbody").html(body);
+    }
+
+    function EditDeviceLog(deviceId) {
+        debugger;
+        var Id = $("#Id").val();
+
+        // location.href = "@Url.Content("~/UserVerificationPermission/BlockUserPermission/")" + { Id: id, Deviceid: deviceId }
+        $.post("@Url.Content("~/UserVerificationPermission/BlockUserPermission/")", { Id: Id, deviceid: deviceId }, function (data) { }, "");
+        alert('User Updated Successfully');
+        location.href = '../../UserVerificationPermission/Index';
+    }
+
+</script>
+<script type="text/javascript">
+    $(function () {
+
+        var i = 0;
+        $('#sub').hide();
+    });
+
+    var arr = [];
+    var arr1 = [];
+
+    function Edit(Id, check) {
+        debugger;
+        if (Id > 0 && check.checked == false) {
+            arr.push(Id);
+            $("#sub").show();
+            i++;
+
+        }
+        else {
+            if (arr.length != 0) {
+                arr.splice($.inArray(Id, arr), 1);
+                $("#sub").show();
+                if (arr.length == 0) {
+                    $("#sub").hide();
+                }
+            }
+
+            else {
+                $("#sub").hide();
+            }
+        }
+        //location.href = "@Url.Content("~/UserVerificationPermission/UserPermission/")" + Id;
+    }
+
+    $(function () {
+        $('#sub').click(function () {
+            debugger;
+            // alert("aaaaaaaaaaaaaaa");
+            arr1.push(arr);
+
+            $.post('/UserVerificationPermission/UserPermission/', $.param({ data: arr }, true), function (data) { });
+            //$('#Grid').html('');
+            var id = $("#Id").val();
+            debugger;
+
+            $.get("@Url.Content("~/UserVerificationPermission/getUserid")", { Id: id }, function (data) { SetGrid(data); }, "Json");
+            //location.href = "@Url.Content("~/UserVerificationPermission/UserPermission/")" + I;
+        });
+    });
+</script>
+
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span></span>User Verification Permission</h1>
+        </div>
+    </div>
+
+    <div class="row" id="form">
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500" id="content_wrap">
+            <div class="addgift" style="padding-bottom: 10px;" id="GridView">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label> Enter SAP Code <span class="required">*</span></label>
+                            @Html.TextBox("Id", null, new { @class = "form-control", placeholder = "SAP Code" })
+                            @Html.ValidationMessageFor(model => model.UserId)
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="button" id="btnSearch" value="Active Log" class="submitBtn" /> <input type="button" id="btnclearlog" value="Block Logs" class="submitBtn" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+            <div class="addgift" style="padding-bottom:30px; ">                
+                    <div id="list" class="tabelGridRow">
+                        <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Device ID
+                                    </th>
+                                    <th style="text-align:right;">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>                       
+                    </div>
+                <input type="button" name="sub" id="sub" value="Submit" class="submitBtn" style="background:#ffaf38;" />
+            </div>
+        </div>
+
+    </div>
+</div>
+              

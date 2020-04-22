@@ -1,0 +1,61 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000893514</td><td>1852108203</td><td>2019-01-19</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>5.000</td><td>20344.98</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000893516</td><td>1852108204</td><td>2019-01-19</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>5.000</td><td>18711.08</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000003</td><td>0000893516</td><td>1852108204</td><td>2019-01-19</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>4.000</td><td>20988.10</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000004</td><td>0000893517</td><td>1852108205</td><td>2019-01-19</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>2.000</td><td>19106.93</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000893517</td><td>1852108205</td><td>2019-01-19</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>3.000</td><td>26358.65</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000896021</td><td>1852108330</td><td>2019-01-28</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>5.000</td><td>14998.26</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000007</td><td>0000896028</td><td>1852108331</td><td>2019-01-28</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>10.000</td><td>46480.69</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000896028</td><td>1852108331</td><td>2019-01-28</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>10.000</td><td>31234.62</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000896028</td><td>1852108331</td><td>2019-01-28</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>10.000</td><td>28957.61</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000896118</td><td>1852108333</td><td>2019-01-28</td><td>F1148B280120</td><td>LUM 12V120AH ECO CHRG 15000 FNSD BTY</td><td>4.000</td><td>27165.53</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000896118</td><td>1852108333</td><td>2019-01-28</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>3.000</td><td>23759.94</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000896118</td><td>1852108333</td><td>2019-01-28</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>3.000</td><td>28660.43</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000898476</td><td>1852108528</td><td>2019-01-31</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>5.000</td><td>29056.82</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000014</td><td>0000905025</td><td>1852108994</td><td>2019-02-27</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>50.000</td><td>294772.70</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000913418</td><td>1852109417</td><td>2019-03-14</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>28.000</td><td>130145.82</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000916271</td><td>1852109494</td><td>2019-03-19</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>40.000</td><td>235817.96</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000928890</td><td>1952100012</td><td>2019-04-05</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>5.000</td><td>27021.84</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000018</td><td>0000928890</td><td>1952100012</td><td>2019-04-05</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>5.000</td><td>19272.18</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000019</td><td>0000928891</td><td>1952100013</td><td>2019-04-05</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>5.000</td><td>39600.00</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000928892</td><td>1952100014</td><td>2019-04-05</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>1.000</td><td>20354.20</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000021</td><td>0000932114</td><td>1952100177</td><td>2019-04-12</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>3.000</td><td>26358.54</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000934339</td><td>1952100291</td><td>2019-04-17</td><td>F04340012851</td><td>S/W UPS 4KVA/48V LUMINOUS CRUZE+</td><td>3.000</td><td>37095.20</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000023</td><td>0000934339</td><td>1952100291</td><td>2019-04-17</td><td>F04455015001</td><td>S/W UPS 5.5KVA/96V LUM CRUZE WTH P.F</td><td>2.000</td><td>52806.46</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000024</td><td>0000932112</td><td>1952100327</td><td>2019-04-17</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>13.000</td><td>40605.12</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000025</td><td>0000935321</td><td>1952100511</td><td>2019-04-24</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>5.000</td><td>29056.82</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000026</td><td>0000938825</td><td>1952100518</td><td>2019-04-24</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>5.000</td><td>35021.04</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000938835</td><td>1952100521</td><td>2019-04-24</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>10.000</td><td>58112.66</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000028</td><td>0000941221</td><td>1993100408</td><td>2019-04-29</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>85733.88</td><td>0001109020</td><td>GANGA AGENCIES</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>HKVA</td>
+	</tr>
+</table>

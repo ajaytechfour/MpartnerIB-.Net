@@ -1,0 +1,202 @@
+﻿@model IEnumerable<Luminous.EF.ConAssist>
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>*@
+
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th,
+        table tr th a,
+        table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td,
+    tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td,
+    #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr,
+    tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+<script>
+    $(document).ready(function () {
+
+        $("#btnsbmt").click(function (e) {
+
+            var textcomment = $("#txt1").val();
+            if (textcomment == '') {
+                alert("Comment box should not be blank");
+                e.preventDefault();
+            }
+
+        });
+
+    })
+
+</script>
+
+
+<div id="page-wrapper" style="background: #f2f4f8; min-height:800px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Connect Assist - </span> Ticket Dashboard </h1>
+        </div>
+    </div>
+
+
+
+    @using (@Html.BeginForm("Update", "ConnectAssist", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        var count = 1;
+
+        <div class="row">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row" id="GridView">
+                        <div class="col-md-12">
+                            <div class="content_main">
+                                <div style="height:5px"></div>
+                                <div class="boxes1" style="border:1px solid #ccc;height:450px;overflow: scroll;float:none !important;">
+                                    @foreach (var item in Model)
+                                    {
+                                        <div id="ticketsys" style="padding:0px 10px 10px 10px;background:#ffffff;margin-bottom:30px">
+
+                                            @if (count == 1)
+                                            {
+                                                <div class="ttl" style="100%;text-align:center">
+                                                    <span id="title">
+                                                        <p style="font-weight:bolder;font-size:14px;">Serial No : @item.Serialno</p>
+                                                    </span>
+                                                </div>
+                                            }
+
+                                            <div>
+                                                <table style="width:100%;">
+                                                    <tr>
+                                                        <td style="font-weight:bold">Reply Date : @item.Createdon</td>
+
+                                                        @if (item.CreatedBy.ToString() == Session["Id"].ToString())
+                                                        {
+                                                            <td style="font-weight:bold">Reply By : @Session["Userid"] <span>(@Session["Id"])</span></td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td style="font-weight:bold">Reply By : @item.Username <span>(@item.CreatedBy)</span></td>
+                                                        }
+                                                        @if (item.Attachment == "")
+                                                        {
+                                                            <td></td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td style="font-weight:bold"><a target="_blank" href="~/ConnectAssist/@item.Attachment">Attachment</a></td>
+                                                        }
+
+                                                    </tr>
+
+                                                </table>
+                                            </div><br>
+                                            <textarea name="remarksText" cols="136" rows="5" class="form-control">@item.Text</textarea>
+                                        </div>
+                                         count = 0;
+                                    }
+
+                                </div>
+
+                                <div style="height:30px"></div>
+                                <div class="boxes">                                   
+                                    <textarea name="comments" id="txt1" class="text1 form-control" cols="136" rows="5"></textarea>
+                                </div>
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td>Status</td>
+                                        <td>
+                                            <select name="ticketstatus" style="color: black">
+                                                <option selected value="InProcess">In Process</option>
+                                                <option value="Resolved">Resolved</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            Attach Files
+                                        </td>
+                                        <td>
+                                            <input type="file" name="postedFile" />
+                                        </td>
+                                        <td>
+                                            <input type="submit" id="btnsbmt" class="SubmitButton" value="Submit" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>

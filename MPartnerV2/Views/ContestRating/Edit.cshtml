@@ -1,0 +1,371 @@
+﻿@model IEnumerable<Luminous.EF.DealerContest>
+@*Luminous.EF.DealerContest*@
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+
+<script>
+    $(document).ready(function () {
+        $("#Rating").focus();
+        //isNumberKey = function (evt) {
+        //    var charCode = (evt.which) ? evt.which : event.keyCode
+        //    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        //        return false;
+
+        //    return true;
+        //};
+        if ('@ViewBag.questionname' == 'Questionhide')
+        {
+            $("#qpoll").hide();
+        }
+        
+        if (window.location.href.indexOf("PEdit") != -1) {
+            $("#btnnext").hide();
+        }
+        else {
+            $("#save").hide();
+        }
+        $("#btnnext").click(function () {
+
+            var rating = $("#Rating").val();
+
+            if (rating == "") {
+                alert("Point Allocation is a mendatory field.")
+                $("#Rating").focus();
+                return false;
+            }
+            if (rating == 0 || rating == 1 || rating == 2 || rating == 3 || rating == 4 || rating == 5 || rating == 6 || rating == 7 || rating == 8 || rating == 9) {
+
+
+
+            }
+            else {
+                alert("Choose only (0,1,2,3,4,5,6,7,8,9)");
+                $("#Rating").val('');
+                $("#Rating").focus();
+                return false;
+            }
+
+
+
+
+
+            var Contestid = $("#id").val();
+            var marid = $("#eventid").val();
+            var Id = $("#id").val();
+            var Rating = $("#Rating").val();
+            var DealerName = $("#DealerName").val();
+            var DealerCode = $("#DealerCode").val();
+
+            var DistributorCode = $("#Dis_Code").val();
+
+            var CreatedBy = $("#CreatedBy").val();
+            var CreatedOn = $("#CreatedOn").val();
+
+            $.ajax({
+                type: "Post",
+                url: "/ContestRating/GetNextImage",
+                data: { 'Id': Id, 'Rating': Rating, 'DealerName': DealerName, 'DealerCode': DealerCode, 'DistributorCode': DistributorCode, 'CreatedBy': CreatedBy, 'CreatedOn': CreatedOn, 'Marqueeid': marid },
+                dataType: "",
+                success: function (d) {
+                    if (d == "No Data") {
+                        alert("No Data Available For Rating");
+                        window.location.href = "/ContestRating/Index";
+                        $("#btnnext").hide();
+                    }
+                    else {
+                        if (d != '') {
+                            var dfg = d;
+
+                            window.location.href = d;
+
+                        }
+                    }
+                    //if(d!='')
+                    //{
+                    //    $.ajax({
+                    //        type: "Get",
+                    //        url: "/DealerContest/Edit/"+d,
+                    //        data: {}
+                    //    });
+
+
+                    //}
+                },
+
+                error: function (ex) {
+
+
+                    alert('Failed to retrieve states.' + ex);
+                    //  window.location.reload();
+
+                }
+            });
+        });
+
+        $("#save").click(function () {
+            var rating = $("#Rating").val();
+            if (rating == "") {
+                alert("Point Allocation is a mendatory field.")
+                $("#Rating").focus();
+                return false;
+            }
+            if (rating == 0 || rating == 1 || rating == 2 || rating == 3 || rating == 4 || rating == 5 || rating == 6 || rating == 7 || rating == 8 || rating == 9) {
+
+
+
+            }
+            else {
+                alert("Choose only (0,1,2,3,4,5,6,7,8,9)");
+                $("#Rating").val('');
+                $("#Rating").focus();
+                return false;
+            }
+
+            if (rating != "") {
+                alert("sdfssf");
+                var url = "/ContestRating/Update";
+                var Id = $("#id").val();
+                var Rating = $("#Rating").val();
+                var DealerName = $("#DealerName").val();
+                var DealerCode = $("#DealerCode").val();
+
+                var marid = $("#eventid").val();
+
+                var DistributorCode = $("#Dis_Code").val();
+
+
+                var CreatedBy = $("#CreatedBy").val();
+                var CreatedOn = $("#CreatedOn").val();
+
+
+
+
+
+                $.ajax({
+                    type: "Post",
+                    url: url,
+                    data: { 'Id': Id, 'Rating': Rating, 'DealerName': DealerName, 'DealerCode': DealerCode, 'DistributorCode': DistributorCode, 'CreatedBy': CreatedBy, 'CreatedOn': CreatedOn,'Marqueeid': marid  },
+                    dataType: "",
+                    success: function (d) {
+
+
+                        if (d == "Point Allocation Update Successfully") {
+
+                            alert("Point Allocation Update Successfully");
+                            window.location.href = "/ContestRating/Index";
+                        }
+                        else if (d == "Point Allocation Not Updated") {
+
+                            alert("Point Allocation Not Updated");
+                        }
+
+                    },
+
+                    error: function (ex) {
+                        alert(ex);
+                        // alert('Failed to retrieve states.' + ex);
+                        //  window.location.reload();
+
+                    }
+                });
+                return false
+            }
+
+        });
+    })
+
+</script>
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+
+
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Contest Rating - </span> Point Allocation DashBoard</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+            <div class="addgift" style="padding-bottom: 10px;">
+                <div class="">
+                    <button style="float:right;border:none; background: #ffaf38; padding: 7px 18px; border-radius: 5px; color:#fff;" id="btnnext">Next Image</button>
+                    <div class="content_main">
+                        <div class="boxes1">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <img src="@("/ContestImage/" +Model.FirstOrDefault().image)" alt="" style=" height:200px; border-radius: 15px;" />
+                                        <img src="@("/ContestImage/" + TempData["image2"])" alt="" style=" height:200px; border-radius: 15px;" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Point Allocation<span class="required">*</span></label>
+                                        <input type="number" id="Rating" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 style="margin-top: 30px; font-size: 18px; border-bottom: 2px solid #eee;" id="qpoll">Question Poll</h2>
+                            <div class="" style="overflow-y:scroll;height: 400px; overflow-x: hidden;">
+                                @foreach (var item in Model)
+                                {
+                                    if (item.QuestionName != null)
+                                    {
+
+                                        <div class="row" id="grdpollquestion">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Question</label>
+                                                    @Html.TextAreaFor(a => a.FirstOrDefault().QuestionName, new { @readonly = "readonly", @class = "form-control" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Answer</label>
+                                                    @Html.TextBoxFor(a => a.FirstOrDefault().CorrectAns, new { @readonly = "readonly", @class = "form-control" })
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                }
+                            </div>
+                                            <div style="font-weight:bolder"></div>
+                            <h2 style="margin-top: 30px; font-size: 18px; border-bottom: 2px solid #eee;">Basic Details</h2>
+                            <div class="row" id="GridView">
+                                @Html.HiddenFor(a => a.FirstOrDefault().id)
+                                @Html.HiddenFor(a => a.FirstOrDefault().eventid)
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Dealer Code</label>
+                                        @Html.TextBoxFor(a => a.FirstOrDefault().DealerCode, new { @readonly = "readonly", @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Dealer Name</label>
+                                        @Html.TextBoxFor(a => a.FirstOrDefault().DealerName, new { @readonly = "readonly", @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Distributor Code</label>
+                                        @Html.TextBoxFor(a => a.FirstOrDefault().Dis_Code, new { @readonly = "readonly", @class = "form-control" })
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Event Name</label>
+                                        @Html.TextBoxFor(a => a.FirstOrDefault().eventname, new { @readonly = "readonly", @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Created On</label>
+                                        @Html.TextBoxFor(a => a.FirstOrDefault().CreatedOn, new { @readonly = "readonly", @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Created By</label>
+                                        @Html.TextBoxFor(a => a.FirstOrDefault().CreatedBy, new { @readonly = "readonly", @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="submit" id="save" value="Submit" class="submitBtn" style="margin:15px 0 0 15px 0;" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 Luminous | All Rights Reserved
+            </div>
+        </div>
+    </div>
+
+</div>

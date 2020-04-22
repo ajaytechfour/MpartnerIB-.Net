@@ -1,0 +1,81 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000954909</td><td>1905101317</td><td>2019-05-13</td><td>F19101004001</td><td>SOLAR CHARGE CONTROLLER 1210N</td><td>12.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000002</td><td>0000954909</td><td>1905101317</td><td>2019-05-13</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>12.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000954909</td><td>1905101317</td><td>2019-05-13</td><td>T30000000459</td><td>SCC1210-B100HTT1N-P105W1N</td><td>12.000</td><td>133823.80</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000004</td><td>0000954909</td><td>1905101317</td><td>2019-05-13</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>12.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000971962</td><td>1905102145</td><td>2019-05-31</td><td>F19101004001</td><td>SOLAR CHARGE CONTROLLER 1210N</td><td>25.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000006</td><td>0000971962</td><td>1905102145</td><td>2019-05-31</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>25.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000971962</td><td>1905102145</td><td>2019-05-31</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>25.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000008</td><td>0000971962</td><td>1905102145</td><td>2019-05-31</td><td>T30000000450</td><td>SCC1210-B100HTT1N-P165W1N</td><td>25.000</td><td>320000.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000009</td><td>0000971965</td><td>1905102146</td><td>2019-05-31</td><td>F19101004001</td><td>SOLAR CHARGE CONTROLLER 1210N</td><td>25.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000971965</td><td>1905102146</td><td>2019-05-31</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>25.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000971965</td><td>1905102146</td><td>2019-05-31</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>25.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000012</td><td>0000971965</td><td>1905102146</td><td>2019-05-31</td><td>T30000000459</td><td>SCC1210-B100HTT1N-P105W1N</td><td>25.000</td><td>278800.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000013</td><td>0000954206</td><td>1906101750</td><td>2019-05-11</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>10.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000014</td><td>0000954206</td><td>1906101750</td><td>2019-05-11</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000954206</td><td>1906101750</td><td>2019-05-11</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>10.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000016</td><td>0000954206</td><td>1906101750</td><td>2019-05-11</td><td>T30000000401</td><td>SCC1206-B20L1N-P40W1N</td><td>10.000</td><td>40450.50</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000017</td><td>0000954208</td><td>1906101751</td><td>2019-05-11</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>25.000</td><td>63500.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000018</td><td>0000954203</td><td>1906101784</td><td>2019-05-13</td><td>T30000000443</td><td>SCC1206-B40H1N-P105W1N</td><td>20.000</td><td>144300.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000019</td><td>0000954203</td><td>1906101784</td><td>2019-05-13</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>20.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000020</td><td>0000954203</td><td>1906101784</td><td>2019-05-13</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>20.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000954203</td><td>1906101784</td><td>2019-05-13</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>20.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000022</td><td>0000954204</td><td>1906101785</td><td>2019-05-13</td><td>T30000000447</td><td>SCC1206-B80H1N-P105W1N</td><td>10.000</td><td>94500.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000023</td><td>0000954204</td><td>1906101785</td><td>2019-05-13</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>10.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000024</td><td>0000954204</td><td>1906101785</td><td>2019-05-13</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>10.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0000954204</td><td>1906101785</td><td>2019-05-13</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>10.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000026</td><td>0000954205</td><td>1906101786</td><td>2019-05-13</td><td>F19101004001</td><td>SOLAR CHARGE CONTROLLER 1210N</td><td>10.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000027</td><td>0000954205</td><td>1906101786</td><td>2019-05-13</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>10.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0000954205</td><td>1906101786</td><td>2019-05-13</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>10.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000029</td><td>0000954205</td><td>1906101786</td><td>2019-05-13</td><td>T30000000449</td><td>SCC1210-B80H1N-P165W1N</td><td>10.000</td><td>112850.50</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000030</td><td>0000954207</td><td>1906101787</td><td>2019-05-13</td><td>F03166502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 665</td><td>25.000</td><td>50750.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000031</td><td>0000960424</td><td>1906102377</td><td>2019-05-28</td><td>F1146A412100</td><td>LUM 12V100AH RPF1400 FNSD BTY</td><td>40.000</td><td>184300.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000971762</td><td>1906103188</td><td>2019-05-31</td><td>T30000000458</td><td>SCC1220-B80H1N-P105W1N</td><td>60.000</td><td>601200.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000033</td><td>0000971762</td><td>1906103188</td><td>2019-05-31</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>60.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000034</td><td>0000971762</td><td>1906103188</td><td>2019-05-31</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>60.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000971762</td><td>1906103188</td><td>2019-05-31</td><td>F19102004001</td><td>SOLAR CHARGE CONTROLLER SCC1220NM</td><td>60.000</td><td>0.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000036</td><td>0000971782</td><td>1906103189</td><td>2019-05-31</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>10.000</td><td>58700.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000037</td><td>0000971785</td><td>1906103190</td><td>2019-05-31</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>10.000</td><td>33250.00</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000038</td><td>0060044704</td><td>1906601076</td><td>2019-05-08</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>1.000</td><td>5042.96</td><td>0001103233</td><td>TIRUPATI SOLAR SHOAP</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr>
+</table>

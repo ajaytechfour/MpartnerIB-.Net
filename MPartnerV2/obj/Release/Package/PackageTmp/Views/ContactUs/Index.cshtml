@@ -1,0 +1,153 @@
+﻿@model Luminous.EF.contactUsDetail
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Security.cshtml";
+}
+<link href="../../assets/css/Formstyle.css" rel="stylesheet" type="text/css" />
+<script src="../../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="../../assets/js/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+@section Header
+{
+Contact Us
+}
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+    $(function () {
+        $.post("../ContactUs/GetContactDetail", null, function (data) { SetGrid(data); }, "Json");
+
+
+    });
+    function SetGrid(data) {
+        var body = "";
+        $("#Grid tbody").empty();
+        $.each(data, function (key, value) {
+            body += "<tr><td>" + value.id + "</td>" +
+                "<td>" + value.ctype + "</td>" +
+            "<td>" + value.addrs + "</td>" +
+             "<td>" + value.email + "</td>" +
+             "<td>" + value.phno + "</td>" +
+                 "<td>" + value.fax + "</td>"+
+            "<td>" + value.status + "</td>"+
+            "<td><a style='cursor:pointer' onclick=Edit("+value.id+");>Edit</a> <a style='cursor:pointer' onclick=Delete("+value.id+");>Delete</a></td></tr>";
+            debugger;
+        });
+        $("#Grid tbody").append(body);
+        SetPages('@TempData["paging"]')
+
+    }
+
+    function Delete(id) {
+        $.post("../ContactUs/DeleteContact", { id: id }, function (data) {
+            $.post("../ContactUs/GetContactDetail", null, function (data) { SetGrid(data); }, "Json");
+            alert(data);
+        }, "Json");
+    }
+
+    function Edit(id) {
+        location.href = "../ContactUs/Edit/" + id;
+    }
+    function SetPages(paging) {
+        var pages = "";
+        $("#Paging").empty();
+        $("#Paging").empty();
+
+        for (var i = 1; i <= parseInt(paging) ; i++) {
+            
+            pages += "<a style='cursor:pointer' onclick=GetPagesValues(" + i + ");> " + i + "  </a>";
+
+
+        }
+        $("#Paging").append(pages);
+    }
+
+    function GetPagesValues(id)
+        {
+            $.post("../ContactUs/GetContactDetail", {page:id}, function (data) { SetGrid(data); }, "Json");
+        }
+</script>
+<div id="form" style="margin-bottom: 11px">
+    @using (Ajax.BeginForm("SaveContact", new AjaxOptions { HttpMethod = "get", UpdateTargetId = "d", InsertionMode = InsertionMode.Replace }))
+    { 
+        <div  id="div">
+            <h3 style="margin-bottom: 15px;">Add New Banner</h3>
+            <table id="GridView">
+                <tr>
+                    <td style="width: 137px;">Contact Us Type  <span class="required">*</span>
+                    </td>
+                    <td style="width:221px">@Html.TextBoxFor(a => a.Contact_Us_Type)
+                        
+                        @Html.ValidationMessageFor(a => a.Contact_Us_Type,"", new {@class="required" })
+                    </td>
+                    <td style="width: 124px;">Phone Number  <span class="required">*</span>
+                    </td>
+                    <td>@Html.TextBoxFor(a => a.PhoneNumber)
+                   
+                        @Html.ValidationMessageFor(a => a.PhoneNumber,"", new {@class="required" })
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address  <span class="required">*</span>
+                    </td>
+                    <td colspan="3">@Html.TextAreaFor(a => a.CAddress, 5,50, new { })
+                   
+                        @Html.ValidationMessageFor(a => a.CAddress,"", new {@class="required" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email  <span class="required">*</span>
+                    </td>
+                    <td>@Html.TextBoxFor(a => a.Email)
+                  @Html.ValidationMessageFor(a => a.Email,"", new {@class="required" })</td>
+                    <td>Fax <span class="required">*</span>
+                    </td>
+                    <td>@Html.TextBoxFor(a => a.Fax)
+                   @Html.ValidationMessageFor(a => a.Fax,"", new {@class="required" })</td>
+                </tr>
+
+
+                <tr>
+                    <td>Status
+                    </td>
+                    <td>
+                        <input type="checkbox" name="statusC" />
+                    </td>
+
+                </tr>
+            </table>
+            <input type="submit" value="Submit" />
+        </div>
+       
+    }
+</div>
+
+<div id="list">
+    <table id="Grid" class="layout display responsive-table">
+        <thead>
+            <tr>
+                <th>ID
+                </th>
+                <th>Contact Us Type
+                </th>
+                <th>Address
+                </th>
+                <th>Email
+                </th>
+                <th>Phone Number
+                </th>
+                <th>Fax
+                </th>
+                <th>Status
+                </th>
+                <th>Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div id="Paging">sdf</div>
+

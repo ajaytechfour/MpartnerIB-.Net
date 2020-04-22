@@ -1,0 +1,17 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>DOC_DATE</td><td>DOC_NO</td><td>REF_ORG_UN</td><td>DEBIT_AMOUNT</td><td>CREDIT_AMOUNT</td><td>CHANNEL_TXT</td><td>DIVISION_TXT</td><td>TOTAL_CREDIT</td><td>CDRC</td>
+	</tr><tr>
+		<td>0000-00-00</td><td>OPEN BAL.</td><td>&nbsp;</td><td>0.0000</td><td>171172.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>-171172.00</td><td>CR</td>
+	</tr><tr>
+		<td>2019-11-19</td><td>1006028742</td><td>ZVBC</td><td>0.0000</td><td>32703.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>-203875.00</td><td>CR</td>
+	</tr><tr>
+		<td>2019-11-19</td><td>1006028805</td><td>ZVBC</td><td>0.0000</td><td>8630.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>-212505.00</td><td>CR</td>
+	</tr><tr>
+		<td>2019-11-27</td><td>1006029838</td><td>LPSL</td><td>0.0000</td><td>200.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>-212705.00</td><td>CR</td>
+	</tr><tr>
+		<td>2019-11-29</td><td>1008099744</td><td>ZVBC</td><td>0.0000</td><td>1000000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>-1212705.00</td><td>CR</td>
+	</tr><tr>
+		<td>2019-11-29</td><td>1800224494</td><td>ZVBC</td><td>1203112.0000</td><td>0.0000</td><td>Value Brand Channel</td><td>Battery</td><td>-9593.00</td><td>CR</td>
+	</tr>
+</table>

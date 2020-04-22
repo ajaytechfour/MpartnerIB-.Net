@@ -1,0 +1,407 @@
+﻿@{
+   
+    Layout = "~/Views/Shared/security.cshtml";
+}
+<html>
+<head>
+    <title>User Profile</title>
+    
+    <script language="javascript" type="text/javascript">
+
+        $(document).ready(function () {
+            $("#Button1").on("click", function (e) {
+                var email = $("#txtstate").val();
+                if (email == "") {
+                    e.preventDefault();
+                    alert("Please Enter Your Profile Name.");
+                    return false;
+                }
+                else {
+                    save();
+                }
+            });
+        });
+
+</script>
+
+
+
+  <script language="javascript" type="text/javascript">
+      function editcall() {
+          $(document).ready(function () {
+              $("#btnUpdate").on("click", function (e) {
+                  var id = $(this).attr("value")
+
+
+                  var email = $("#txtEmpName").val();
+                  if (email == "") {
+                      e.preventDefault();
+                      alert("Please Enter Your Profile Name.");
+                      return false;
+                  }
+                  else {
+
+                      updateRecord(id)
+                  }
+
+
+
+
+
+              });
+          });
+      }
+</script>
+
+
+
+    
+<style type="text/css">
+table {
+border: 0;
+border-spacing: 0;
+font-size: 0.857em;
+margin: 10px 0;
+width: 100%;
+}
+table table {
+font-size: 1em;
+}
+#footer-wrapper table {
+font-size: 1em;
+}
+table tr th {
+background: #757575;
+background: rgba(0, 0, 0, 0.51);
+border-bottom-style: none;
+}
+table tr th,
+table tr th a,
+table tr th a:hover {
+color: #FFF;
+font-weight: bold;
+}
+table tbody tr th {
+vertical-align: top;
+}
+tr td,
+tr th {
+padding: 4px 9px;
+border: 1px solid #fff;
+text-align: left; /* LTR */
+}
+#footer-wrapper tr td,
+#footer-wrapper tr th {
+border-color: #555;
+border-color: rgba(255, 255, 255, 0.18);
+}
+tr.odd {
+background: #e4e4e4;
+background: rgba(0, 0, 0, 0.105);
+}
+tr,
+tr.even {
+background: #efefef;
+background: rgba(0, 0, 0, 0.063);
+}
+table ul.links {
+margin: 0;
+padding: 0;
+font-size: 1em;
+}
+table ul.links li {
+padding: 0 1em 0 0;
+}
+</style> 
+
+  
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(
+        function () {
+            show();
+        }); 
+</script> 
+
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        showuserinfo();
+    });
+
+</script>
+ <script type="text/javascript">
+     function getvalues() {
+         $('input, textarea, select').attr('disabled', 'disabled');
+
+     }
+            
+    </script>
+<script language="javascript" type="text/javascript" >
+
+
+    var create = "";
+    var edit = "";
+    var delete1 = "";
+    var view = "";
+
+    function showuserinfo() {
+        $.get("@Url.Content("~/userprofile/showuserinfo")", null, function (data) { chkuserinfo(data); })
+            .error(function (data) { chkuserinfo(data); });
+    }
+
+    function chkuserinfo(abc) {
+
+        var str = abc;
+        var temp = new Array();
+        temp = str.split(",");
+
+
+        var counter = 0;
+        for (a in temp) {
+
+            if (counter == 0) {
+                create = temp[a];
+                if (create == 1) {
+
+                }
+                else {
+                    getvalues();
+
+                }
+
+            }
+            if (counter == 1) {
+                edit = temp[a];
+
+            }
+            if (counter == 2) {
+
+                delete1 = temp[a];
+
+            }
+
+            if (counter == 3) {
+
+                view = temp[a];
+                if (view == 1) {
+
+                }
+                else {
+
+
+                }
+
+            }
+
+            counter = counter + 1;
+        }
+    }
+    var GData = "";
+    function show() {
+
+        $.get("@Url.Content("~/userprofile/Showstate")", null, function (data) { chk(data); })
+            .error(function (data) { chk(data); });
+    }
+    function chk(abc) {
+        if (abc == "You do not have view permission") {
+            alert('You Do Not Have View Permission');
+        }
+        else {
+            if (abc == "session expire") {
+                location.href = '@Url.Action("login", "login")';
+            }
+            else {
+                GData = abc;
+                BuildTable(GData, 0);
+            }
+        }
+    }
+
+    function BuildTable(data, eid) {
+
+        var table = '<table id=gridview11 width=100%><thead><tr><th width:80%; >Profile Name</th><th width:20%; >Action</th></thead><tbody>';
+        for (var cd in data) {
+
+            var row = '<tr>';
+            if (eid != data[cd].id) {
+                row += '<td style=background-color:Silver;width:80%; >' + data[cd].profilename + '</td>';
+
+                row += '<td style=background-color:Silver;width:20%; >'
+                + "<img src='@Url.Content("~/images/edit.png")' onclick=editRecord(" + data[cd].id + ") id='btnEdit'  value='Edit' /> </td>";
+            }
+            else {
+                var dsss = data[cd].profilename;
+                var da = data[cd].id;
+                row += '<td style=background-color:Silver;width:80%; ><input id=txtEmpName value="' + dsss + '"  class=input-form  type=text  /><font color=red >*</font></td>';
+
+
+                var deleteimage;
+                if (delete1 == 1) {
+                    deleteimage = " <img src='@Url.Content("~/images/delete1.png")' onclick=updatedelete(" + data[cd].id + ")  id='btndelete' type='button' value='Delete'";
+
+                }
+                else {
+                    deleteimage = "";
+                }
+
+                var editimage;
+                if (edit == 1) {
+                    editimage = " <img src='@Url.Content("~/images/editsan.png")'  id='btnUpdate' value='" + da + "'   />";
+
+                }
+                else {
+                    editimage = "";
+                }
+
+
+                row += '<td style=background-color:Silver;width:20%; >'
+                + "" + editimage + ""
+                + " <img src='@Url.Content("~/images/deletesan.png")' onclick=cancelRecord() id='btnCancel' type='button' value='Cancel' /> "
+                + "" + deleteimage + " </td>";
+
+
+            }
+
+
+            row += '</tr>';
+            table += row;
+        }
+
+        table += '</tbody></table>';
+        $('#d1').html(table);
+    }
+
+
+
+    function editRecord(eid) {
+
+        BuildTable(GData, eid);
+        editcall();
+
+
+    }
+    function cancelRecord() {
+        BuildTable(GData, 0);
+    }
+
+
+    function updateRecord(eid) {
+
+
+        var EmpName = $('#txtEmpName').val().trim();
+
+
+        $.post("@Url.Content("~/userprofile/UpdateEmployee")",
+            { empId: eid, empName: EmpName },
+            function (data) { chkupdateRecord(data); });
+
+
+    }
+    function chkupdateRecord(abc) {
+        alert(abc);
+        
+        if (abc == "session expire") {
+            location.href = '@Url.Action("login", "login")';
+        }
+        else {
+            show();
+        }
+    }
+
+    function updatedelete(eid) {
+
+        if (confirm("Do you want to Delete...")) {
+            $.post("@Url.Content("~/userprofile/Deletestate")",
+            { empId: eid },
+            function (data) { chkupdateRecorddette(data); });
+        }
+    }
+    function chkupdateRecorddette(abc) {
+        alert(abc);
+        if (abc == "session expire") {
+            location.href = '@Url.Action("login", "login")';
+        }
+        else {
+            show();
+        }
+    }
+
+
+
+    function save() {
+        var stateN = $('#txtstate').val();
+
+
+        $.post("@Url.Content("~/userprofile/Savestate")", { staten: stateN },
+            function (data) { chkSave(data); });
+
+    }
+    function chkSave(abc) {
+        alert(abc);
+        if (abc == "session expire") {
+            location.href = '@Url.Action("login", "login")';
+        }
+        else {
+            show();
+            $('#txtstate').val('');
+        }
+    }
+    
+</script>
+
+
+ 
+
+    
+</head>
+<body>
+<div id="content_wrap">
+      <div class="msgbar msg_Info heading">Profile Name</div>
+      <div class="content_main" >
+        <div class="boxes1">
+
+
+         
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    Profile Name<font color=red >*</font>
+                </td>
+                <td>
+                   <input id="txtstate" type="text" class="input-form" /> 
+                </td>
+                </tr>
+                <tr>
+                <td>
+                
+                </td>
+                 <td>
+                   <input id="Button1" type="button" value="Save"  class="save-but-m" />
+                </td>
+                
+            </tr>
+          
+        </table>
+
+   
+    <div id="d1" ></div>
+
+   
+   
+    </div>
+   </div></div>
+
+
+
+
+</body>
+</html>

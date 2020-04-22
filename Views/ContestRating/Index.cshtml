@@ -1,0 +1,185 @@
+﻿@model IEnumerable<LuminousMpartnerIB.EF.DealerContest>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+
+
+
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span></span>Contest Rating</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+            <div class="addgift" style="padding-bottom: 10px;">
+                <div class="row">
+                    @if (ViewBag.ERR != null)
+                    {
+                        <span style="color:red">@ViewBag.ERR</span>
+                    }
+                    @using (Html.BeginForm("ExportToExcel", "ContestRating"))
+                    {
+                        <input type="submit" value="Download Sheet" style="float:right;border:none; background: #ffaf38; padding: 7px 18px; border-radius: 5px; color:#fff; margin-left:10px; margin-bottom:10px;" />
+                    }
+                    @using (Html.BeginForm("GetDealerData", "ContestRating"))
+                    {
+                        <input type="submit" value="Points" style="float:right;border:none; background: #ffaf38; padding: 7px 18px; border-radius: 5px; color:#fff;" />
+                    }
+
+                    <div id="list" class="tabelGridRow" style="overflow-y:scroll;max-height:880px">
+                        <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                            <tr>
+                                <th style="width:10%;">
+                                    @Html.DisplayName("Dealer Code")
+                                </th>
+                                <th style="width:15%;">
+                                    @Html.DisplayName("Dealer Name")
+                                </th>
+
+                                <th style="width:10%;">
+                                    @Html.DisplayName("Dist Code")
+                                </th>
+                                <th style="width:10%;">
+                                    @Html.DisplayName("Contest")
+                                </th>
+                                <th style="width:10%;">
+                                    @Html.DisplayName("Event")
+                                </th>
+                                <th style="width:10%;">
+                                    @Html.DisplayName("Rating")
+                                </th>
+                                <th style="width:15%;">
+                                    @Html.DisplayName("Created On")
+                                </th>
+                                <th style="width:10%; text-align:right;">Action</th>
+                            </tr>
+
+                            @foreach (var item in Model)
+                            {
+                                @Html.HiddenFor(modelItem => item.eventid)
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DealerCode)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DealerName)
+                                    </td>
+
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Dis_Code)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Contest)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.eventname)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Rating)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CreatedOn)
+                                    </td>
+                                    <td style="text-align:right;">
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.id, Type = "PEdit", Marquid = item.eventid }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                        <div style="float:right">
+                            @if (Session["Search"] != null)
+                            {
+                                @Html.ActionLink("Back", "Index")
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+            </div>
+        </div>
+    </div>
+
+</div>

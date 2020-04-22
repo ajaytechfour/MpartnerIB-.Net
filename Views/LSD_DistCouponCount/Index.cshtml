@@ -1,0 +1,486 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model  IPagedList<LuminousMpartnerIB.EF.Lsd_DistCouponCount>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<script type="text/javascript">
+
+    var distcount;
+
+    $(function () {
+
+        $.post("@Url.Content("~/LSD_DistCouponCount/GetLSD_DistCouponCount")", null, function (data) { SetGrid(data); }, "Json");
+
+        $("#DistCode").blur(function () {
+            var distcode = $("#DistCode").val();
+            $.ajax({
+
+                type: 'POST',
+
+                url: '@Url.Action("checkexist_DistCode", "LSD_DistCouponCount")',
+
+                // dataType: 'json',
+
+                data: { DistCode: distcode },
+
+                success: function (data) {
+                    distcount = data;
+                    if (distcount > 0)
+                    {
+                      
+                        document.getElementById("span2").innerHTML = "Distributor Code Already Exist.";
+                        return false;
+                    }
+                    else {
+                        document.getElementById("span2").innerHTML = "";
+                        return true;
+
+                    }
+
+
+
+
+                },
+
+                error: function (xhr, status, error) {
+
+                    var err = eval("(" + xhr.responseText + ")");
+
+                }
+
+            });
+
+        })
+        $("#btn1").click(function () {
+
+            if (distcount>0) {
+
+                document.getElementById("span2").innerHTML = "Distributor Code Already Exist.";
+
+                return false;
+            }
+            else {
+
+               
+                document.getElementById("span2").innerHTML = " ";
+
+                return true;
+            }
+        });
+      
+
+    });
+
+ 
+    
+    function SetGrid(data) {
+        
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            $("#Grid tbody").empty();
+
+            $.each(data.result, function (key, value) {
+
+
+                body += "<tr><td>" + value.id + "</td>" +
+
+              "<td style='text-align:left;'>" + value.DistCode + "</td>" +
+              "<td style='text-align:center;'>" + value.Coupon + "</td>" +
+              "<td style='text-align:center;'>" + value.Activated + "</td>" +
+              "<td style='text-align:center;'>" + value.Balance + "</td>" +
+             "<td style='text-align:center;'>" + value.status + "</td>" +
+            "<td style='text-align:right;'><a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> </td></tr>";
+
+            });
+
+            $("#Grid tbody").append(body);
+
+            paging();
+              //SetPages(data.TotalRecord);
+
+        }
+
+    }
+
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+
+            $.post("@Url.Content("~/LSD_DistCouponCount/Delete")", { id: id }, function (data) {
+                $.post("@Url.Content("~/LSD_DistCouponCount/GetLSD_DistCouponCount")", null, function (data) { SetGrid(data); }, "Json");
+
+                alert(data);
+
+            }, "Json");
+        }
+    }
+
+    function Edit(id) {
+        location.href = "@Url.Content("~/LSD_DistCouponCount/Edit/")" + id;
+    }
+    //function SetPages(paging) {
+    //    var pages = "";
+    //    $("#Paging").empty();
+    //    for (var i = 1; i <= parseInt(paging) ; i++) {
+    //        pages += "<a style='cursor:pointer' onclick=GetPagesValues(" + i + ");> " + i + "  </a>";
+
+    //    }
+    //    $("#Paging").append("<u> Pages:-</u>" + pages);
+    //}
+    @*function GetPagesValues(id) {
+        $.post("@Url.Content("~/LSD_DistCouponCount/GetLSD_DistCouponCount")", { page: id }, function (data) { SetGrid(data); }, "Json");
+    }*@
+
+
+    function validate(evt) {
+        var theEvent = evt || window.event;
+
+        // Handle paste
+        if (theEvent.type === 'paste') {
+            key = event.clipboardData.getData('text/plain');
+        } else {
+            // Handle key press
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+        }
+        var regex = /[0-9]|\./;
+        if (!regex.test(key)) {
+            theEvent.returnValue = false;
+            if (theEvent.preventDefault) theEvent.preventDefault();
+        }
+    }
+
+
+    $(function () {
+
+        ValidationMessage();
+    });
+    function ValidationMessage() {
+        @*if ('@ViewBag.StartDate' != "") {
+            $("#sdate").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#edate").text('@ViewBag.EndDate');
+        }*@
+
+
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            location.href = "@Url.Content("~/LSD_DistCouponCount/Index")";
+        }
+        @*$("#stdate").val('@ViewBag.preStartDate');
+        $("#etdate").val('@ViewBag.PreEndDate');*@
+
+    }
+
+
+
+    $(function () {
+
+        $("#txtsearch").on("keyup", function (event) {
+
+            if (event.which == 8) {
+
+                if ($("#txtsearch").val() == null || $("#txtsearch").val() == 0) {
+                    $('#Paging').empty();
+                    $.post("@Url.Content("~/LSD_DistCouponCount/GetLSD_DistCouponCount")", null, function (data) { SetGrid(data); }, "Json");
+                }
+
+            }
+
+            else {
+                if ($("#txtsearch").val() != null || $("#txtsearch").val() > 0) {
+                    var value = this.value.toLowerCase().trim();
+
+                    $('#Grid tr').each(function (index) {
+
+                        if (!index) return;
+
+                        $(this).find("td").each(function () {
+
+                            var id = $(this).text().toLowerCase().trim();
+                            var not_found = (id.indexOf(value) == -1);
+                            $(this).closest('tr').toggle(!not_found);
+                            return not_found;
+                        });
+
+                    });
+
+                }
+
+            }
+        });
+    });
+
+
+    function paging() {
+        $('#Paging').empty();
+
+        $(document).ready(function () {
+
+            var totalRows = $('#Grid').find('tbody tr:has(td)').length;
+
+            var recordPerPage = 15;
+            var numberOfPages = Math.ceil(totalRows / recordPerPage);
+
+            for (var i = 0; i < numberOfPages; i++) {
+                var pageNum = i + 1;
+                $('#Paging').append('<a href="#" rel="' + i + '">' + pageNum + '</a> ');
+            }
+
+            $('#Grid tbody tr').hide();
+            $('#Grid tbody tr').slice(0, recordPerPage).show();
+            $('#Paging a:first').addClass('active');
+            $('#Paging a').bind('click', function () {
+
+                var currentPage = $(this).attr('rel');
+                var startitem = currentPage * recordPerPage;
+                var enditem = startitem + recordPerPage;
+
+                //$('#Grid tbody tr').hide().slice(startitem, enditem).css('display', 'table-row').animate({ opacity: 1 }, 300);
+                $('#Grid tbody tr').hide().slice(startitem, enditem).show();
+            });
+
+        });
+    }
+
+
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Magical 7 - </span> Assign Distributor Coupon</h1>
+        </div>
+    </div>
+    <div id="content_wrap" style="position:relative;">
+
+        @if (TempData["extension"] != null)
+    {
+            @Html.Raw(TempData["extension"])
+
+    }
+        @if (TempData["Successfully"] != null)
+    {
+            @Html.Raw(TempData["Successfully"])
+
+    }
+        @if (TempData["Blankfile"] != null)
+    {
+            @Html.Raw(TempData["Blankfile"])
+
+    }
+        @if (TempData["Exception"] != null)
+    {
+            @Html.Raw(TempData["Exception"])
+
+    }
+        @using (Html.BeginForm("ExportToExcel", "LSD_DistCouponCount"))
+    {
+            <input type="submit" value="Download Format" style="position: absolute; right: 25px; top: 42px;z-index: 99; background: none;border: 1px solid #0047b9; border-radius: 4px; font-size: 12px; padding: 5px 10px; color: #0047b9;" />
+    }
+        <div style="height:10px"></div>
+        <div style="font-weight: bold;"></div>
+        @using (Html.BeginForm("CouponMappingBulkImport", "LSD_DistCouponCount", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+
+            <div class="row">
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift">
+                        <h2>Map the eligible coupon in Bulk</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Excel file</label>
+                                    <input type="file" id="FileUpload" name="FileUpload" style="border: none; outline: none;" />
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="">
+                                    <input type="submit" id="Submit" name="Submit" value="Submit" class="submitBtn" />
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+             }
+
+                        @using (@Html.BeginForm("Save", "LSD_DistCouponCount", FormMethod.Post))
+                        {
+
+                            <div class="row">
+                                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                                    <div class="addgift">
+                                        <h2>Add the eligible coupon</h2>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="">
+                                                    <label>Distributor Code <span style="color:red;">*</span></label>
+                                                    @Html.TextBoxFor(a => a.FirstOrDefault().DistCode, new { @class = "form-control", @placeholder = "Enter dist code" })
+                                                    <span id="span2" style="color: #b94a48;font-size:0.85em" />
+                                                    @Html.ValidationMessageFor(a => a.FirstOrDefault().DistCode, "", new { @class = "required" })
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="">
+                                                    <label>Coupon Value <span style="color: red;">*</span></label>
+                                                    @Html.TextBoxFor(a => a.FirstOrDefault().EligibleCoupon, "", new { @onkeypress = "validate(event);", @class = "form-control", @placeholder = "Enter code" })
+                                                    @Html.ValidationMessageFor(a => a.FirstOrDefault().EligibleCoupon, "", new { @class = "required" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="">
+                                                    @*<label>Status <span style="color: red;">*</span></label>
+                                                    <input id="status" type="checkbox" checked="checked" name="Status" /><br />
+                                                    <span class="Status"></span>*@
+
+                                                    <label>Status<span style="color: red;">*</span></label>
+                                                    <input id="status" type="checkbox" checked="checked" name="Status" style="border: none;outline: none;height: inherit;vertical-align:-1px; margin-bottom: 23px;" />
+                                                    <span class="Status"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="">
+                                                    <input type="submit" id="btn1" name="Submit" value="Submit" class="submitBtn" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    }
+                    </div>
+
+
+    <div class="giftList" style="margin:20px 0 0 0 ;">
+        <div>
+         @using (Html.BeginForm("Index", "LSD_DistCouponCount", FormMethod.Post,
+                                      new { enctype = "multipart/form-data" }))
+         {
+                <table class="headingHd">
+                    <tr>
+                        <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Distributor Eligible</th>
+                        <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                            @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search Distributor Code", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+                        @*<input type="submit" id="btnsearch" value="Search" style="border:none; background: #ffaf38; padding: 7px 20px; border-radius: 5px;" />*@
+                    </th>
+                </tr>
+            </table>
+
+         }
+        </div>
+        <div id="list" class="tabelGridRow">
+            <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:10px;">
+                <thead>
+                    <tr>
+                        <th style='text-align:left;'>
+                            ID
+                        </th>
+                        <th style='text-align:left;'>
+                            Distributor Code
+                        </th>
+                        <th style='text-align:center;'>
+                            Coupon Value
+                        </th>
+                        <th style='text-align:center;'>
+                            Activated Coupon
+                        </th>
+                        <th style='text-align:center;'>
+                            Balance Coupon
+                        </th>
+                        <th style='text-align:center;'>
+                            Status
+                        </th>
+
+                        <th style='text-align:right;'>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div>
+                Pages :<span id="Paging"></span>
+            </div>
+        </div>
+
+    </div>
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+            </div>
+        </div>
+    </div>
+                    @*<div style="float:right;margin-right:12px">
+                        @using (Html.BeginForm("Index", "LSD_DistCouponCount", FormMethod.Post,
+                                      new { enctype = "multipart/form-data" }))
+    {
+                            <table>
+                                <tr>
+                                    <td>
+                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = " Distributor Code " })
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <input type="submit" id="btnsearch" value="Search" />
+                                    </td>
+                                </tr>
+                            </table>
+
+    }
+                    </div>*@
+
+                    @*<div id="list" style="width: 80%; float: right; margin-right: 15px;">
+
+                        <div style="overflow-y:scroll;max-height:800px">
+                            <table id="Grid">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ID
+                                        </th>
+                                        <th>
+                                            Distributor Code
+                                        </th>
+                                        <th>
+                                            Coupon Value
+                                        </th>
+                                        <th>
+                                            Activated Coupon
+                                        </th>
+                                        <th>
+                                            Balance Coupon
+                                        </th>
+                                        <th>
+                                            Status
+                                        </th>
+
+                                        <th>
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div id="Paging">
+                        </div>
+                    </div>*@
+
+                </div>

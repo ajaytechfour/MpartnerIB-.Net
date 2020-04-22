@@ -1,0 +1,314 @@
+﻿@model LuminousMpartnerIB.EF.ProductLevelThreef
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        if ('@ViewBag.status' == 1) {
+            $("#statusC").prop("checked", "checked");
+        }
+        if ('@ViewBag.Result' != "") {
+            debugger;
+            alert('@ViewBag.Result');
+            location.href = "@Url.Content("~/ProductLevelThree/index")";
+        }
+    });
+    function Cancel() {
+        location.href = "@Url.Content("~/ProductCategory/index")";
+    }
+</script>
+<style type="text/css">
+    .required
+    {
+        color: Red;
+    }
+    table
+    {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+    table table
+    {
+        font-size: 1em;
+    }
+    #footer-wrapper table
+    {
+        font-size: 1em;
+    }
+    table tr th
+    {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+    table tr th, table tr th a, table tr th a:hover
+    {
+        color: #FFF;
+        font-weight: bold;
+    }
+    table tbody tr th
+    {
+        vertical-align: top;
+    }
+    tr td, tr th
+    {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+    #footer-wrapper tr td, #footer-wrapper tr th
+    {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+    tr.odd
+    {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+    tr, tr.even
+    {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+    table ul.links
+    {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+    table ul.links li
+    {
+        padding: 0 1em 0 0;
+    }
+</style>
+@* Calender End *@ @*Setting Of ValidationMessage Begin*@
+<script type="text/javascript">
+    function ValidationMessage() {
+
+        if ('@ViewBag.File' != "") {
+            $("#file").text('@ViewBag.File');
+        }
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            location.href = "@Url.Content("~/Banner/Index")";
+        }
+
+
+    }
+</script>
+@*Common Funtionality*@
+<script type="text/javascript">
+    $(function () {
+        $.post("@Url.Content("~/ProductLevelOne/GetProductCategory")", null, function (data) { SetProdcutCategory(data, 'ProductCategory'); },
+        "Json");
+    });
+
+    function SetProdcutCategory(data, id) {
+        option = "";
+        var procat = $("#" + id);
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+        });
+        procat.append(option);
+        if ('@ViewBag.ProductCat' != "") {
+
+            $("#ProductCategory").val('@ViewBag.ProductCat');
+            alert('@ViewBag.ProductCat');
+        }
+        if ('@ViewBag.ProductCat1' != "") {
+            $("#pclvlOne").val('@ViewBag.ProductCat1');
+            alert('@ViewBag.ProductCat1');
+        }
+        if ('@ViewBag.ProductCat2' != "") {
+            $("#pclvlTwo").val('@ViewBag.ProductCat2');
+            alert('@ViewBag.ProductCat2');
+        }
+
+    }
+    // SetProduct Category end
+
+
+
+    function SetProdcutlevelOne() {
+        var procat = $("#ProductCategory :selected").val();
+        var procatLvlOne = $("#pclvlOne");
+        $.post("@Url.Content("~/ProductLevelTwo/GetProductLevelOneCategory")", { procatid: procat }, function (data) { SetProdcutCategory(data, 'pclvlOne'); }, "Json");
+    }
+
+    function SetProdcutlevelTwo() {
+        var procat = $("#ProductCategory :selected").val();
+        var procat2 = $("#pclvlOne :selected").val();
+
+
+
+        $.post("@Url.Content("~/ProductLevel3/GetProductLevelTwoCategory")", { procatid: procat, procatone: procat2 }, function (data) { SetProdcutCategory(data, 'pclvlTwo'); }, "Json");
+    }
+
+</script>
+<script type="text/javascript">
+
+    $(function () {
+        $.post("@Url.Content("~/ProductLevelOne/GetProductCategory")", null, function (data) { SetProdcutCategoryLoad(data, 'ProductCategory'); },
+        "Json");
+
+     //   $.post("@Url.Content("~/ProductLevel3/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+
+        //Set DropDown By Previous Values Begin
+        if ('@ViewBag.ProductCat1' != '') {
+            $.post("@Url.Content("~/ProductLevelTwo/GetProductLevelOneCategory")", { procatid: '@ViewBag.ProductCat' }, function (data) { SetProdcutCategoryLoad(data, 'pclvlOne'); }, "Json");
+        }
+        if ('@ViewBag.ProductCat2' != '') {
+            $.post("@Url.Content("~/ProductLevel3/GetProductLevelTwoCategory")", { procatid: '@ViewBag.ProductCat', procatone: '@ViewBag.ProductCat1' }, function (data) { SetProdcutCategoryLoad(data, 'pclvlTwo'); }, "Json");
+        }
+        //Set DropDown By Previous Values end
+    });
+
+
+    // SetProductCategory begin
+    function SetProdcutCategory(data, id) {
+        option = "";
+        var procat = $("#" + id);
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+        });
+        procat.append(option);
+       
+
+
+    }
+    // SetProduct Category end
+
+    // load settting
+    function SetProdcutCategoryLoad(data, id) {
+        option = "";
+        var procat = $("#" + id);
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+        });
+        procat.append(option);
+       
+        if ('@ViewBag.ProductCat' != "") {
+
+            $("#ProductCategory").val('@ViewBag.ProductCat');
+            
+        }
+        if ('@ViewBag.ProductCat1' != "") {
+            $("#pclvlOne").val('@ViewBag.ProductCat1');
+            
+        }
+        if ('@ViewBag.ProductCat2' != "") {
+            $("#pclvlTwo").val('@ViewBag.ProductCat2');
+            
+        }
+
+    }
+
+
+
+    //load Setting 
+
+
+
+    //Get Product Level One Begin
+    function SetProdcutlevelOne() {
+        var procat = $("#ProductCategory :selected").val();
+        var procatLvlOne = $("#pclvlOne");
+        $.post("@Url.Content("~/ProductLevelTwo/GetProductLevelOneCategory")", { procatid: procat }, function (data) { SetProdcutCategoryLoad(data, 'pclvlOne'); }, "Json");
+    }
+    //Get Product Level One End
+
+    //Get Product Level Two Begin 
+    function SetProdcutlevelTwo() {
+        var procat = $("#ProductCategory :selected").val();
+        var procat2 = $("#pclvlOne :selected").val();
+        $.post("@Url.Content("~/ProductLevel3/GetProductLevelTwoCategory")", { procatid: procat, procatone: procat2 }, function (data) { SetProdcutCategory(data, 'pclvlTwo'); }, "Json");
+    }
+    //Get Product Level Two End
+  
+</script>
+<div id="form" style="margin-bottom: 11px">
+    @using (Html.BeginForm("Update", "ProductLevelThree"))
+    { 
+        <div id="content_wrap">
+            <div class="msgbar msg_Info heading">
+              Edit Product Level Three</div>
+            <div class="content_main">
+                <div class="boxes1">
+            <table id="GridView">
+                <tr>
+                    <td style="width: 137px;">
+                        Product Category <span class="required">*</span>
+                        @Html.HiddenFor(a => a.id)
+                    </td>
+                    <td style="width: 221px">
+                        <select name="pcId" onchange="SetProdcutlevelOne();" style="color: black" id="ProductCategory">
+                            <option>Select</option>
+                        </select>
+                        <br />
+                        @Html.ValidationMessageFor(model => model.PrductID, "", new { @class = "required" })
+                        <span id="pcIdValidation"></span>
+                    </td>
+                    <td style="width: 124px;">
+                        Product Level One<span class="required">*</span>
+                    </td>
+                    <td style="width: 221px">
+                        <select name="ProductCat1" onchange="SetProdcutlevelTwo();" style="color: black"
+                            id="pclvlOne">
+                            <option>Select</option>
+                        </select>
+                        <br />
+                        @Html.ValidationMessageFor(model => model.pc_Lvl_Id, "", new { @class = "required" })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 124px;">
+                        Product Level Two<span class="required">*</span>
+                    </td>
+                    <td style="width: 221px">
+                        <select name="ProductCat2" style="color: black" id="pclvlTwo">
+                            <option>Select</option>
+                        </select>
+                        <br />
+                        @Html.ValidationMessageFor(model => model.pc_Lv2_Id, "", new { @class = "required" })
+                    </td>
+                    <td>
+                        Product Level Three <span class="required">*</span>
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(model => model.Name)
+                        <br />
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "required" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Status <span class="required">*</span>
+                    </td>
+                    <td colspan="3">
+                        <input type="checkbox" name="statusC" id="statusC" />
+                        @Html.ValidationMessageFor(model => model.PlTwStatus, "", new { @class = "required" })
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit" />
+        </div>
+       </div>
+       </div>
+    }
+</div>

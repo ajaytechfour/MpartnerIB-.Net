@@ -1,0 +1,156 @@
+﻿@*Added New view ConnectAssistReport for getting Assist data in excel report by Ravi  on 20-08-2018 Task Id - 4411.*@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Error.cshtml";
+}
+
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+<script type="text/javascript">
+
+    $(function () {
+        $(".date").datepicker(
+     { dateFormat: "dd-mm-yy" }
+        );
+        ValidationMessage();
+    });
+</script>
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th,
+        table tr th a,
+        table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td,
+    tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td,
+    #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr,
+    tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+
+    .DragMe:Hover {
+        cursor: move;
+    }
+</style>
+@using (@Html.BeginForm("getAssistReport", "ConnectAssistReport", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div id="content_wrap">
+        <div class="msgbar msg_Info heading">Assist Report</div>
+        <div class="content_main">
+            <div class="boxes1">
+                <table style="width: 100%;">
+                   
+                    <tr>
+                        <td>
+                            From Date<span style="color: red;">*</span>
+                        </td>
+                        <td>
+                            <input id="stdate" type="text" class="date" name="StartDate" /><br />
+                            <span id="sdate" class="required"></span>
+                        </td>
+                        <td>
+                            To Date <span style="color: red;">*</span>
+                        </td>
+                        <td>
+                            <input id="etdate" type="text" class="date" name="EndDate" />
+                            <br />
+                            <span id="edate" class="required"></span>
+                        </td>
+                    </tr>
+                    <tr style="height:5px">
+                        <td colspan="4" style="text-align:center"></td>
+                    </tr>
+                    <tr>
+
+                        <td colspan="4" style="text-align:center">
+                            <input type="submit" class="save-but-m" value="Download" />
+                        </td>
+
+                    </tr>
+                </table>
+                @if (TempData["Emptyerror"] != null)
+                {
+                    <span style="font:bold;color:red">
+                        @TempData["Emptyerror"]
+                    </span>
+                }
+
+                @if (TempData["Nodataexist"] != null)
+                {
+                    <span style="font:bold;color:red">
+                        @TempData["Nodataexist"]
+                    </span>
+                }
+                @if (TempData["Exception"] != null)
+                {
+                    <span style="font:bold;color:red">
+                        @TempData["Exception"]
+                    </span>
+                }
+              
+
+            </div>
+        </div>
+    </div>
+}

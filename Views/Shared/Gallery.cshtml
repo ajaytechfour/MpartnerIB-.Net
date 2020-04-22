@@ -1,0 +1,122 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/css/maincp.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/resetcp.css")" />
+
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="~/Editor/ckeditor.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(
+            function () {
+
+                showpermission();
+            });
+
+
+
+
+
+    </script>
+    <script type="text/javascript">
+
+    function showpermission() {
+
+        $.post("@Url.Content("~/login/menudata")", null, function (data) { checkdata(data); })
+
+    }
+
+    function checkdata(abc) {
+
+        var countermaster = 0;
+        var countersetup = 0;
+        var countersecurity = 0;
+        var table = "";
+
+
+
+
+        var tablemain = "";
+
+        @*tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/state/state/")">Master</a></li>'
+
+
+
+            //if (countersetup > 0) {
+
+            tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/Banner/Index/")">Transaction</a></li>'
+            tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/ParentCategory/Index/")">Catalog</a></li>'
+
+            tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/CreatePermotionScheme_New/Index/")">Scheme</a></li>'
+            tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/CreatePermotionPrice_New/Index/")">Price List</a></li>'
+
+            tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/HomeCard/Index/")">Home Card</a></li>'
+            tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/ConnectPlus/Index/")">Connect +</a></li>'
+            tablemain += '<li class="nav_dashboard active"><a href="@Url.Content("~/Media/Index/")">Gallery</a></li>'*@
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/LSD_Gift/Index/")">Lucky 7</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/CreatePermotionPrice_New/Index/")">Price List</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/CreatePermotionScheme_New/Index/")">Scheme</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/HomeCard/Index/")">Home Card</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/ProductCategory/Index/")">Catalog</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/Gallery/Index/")">Gallery</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/Notifications/Notification/")">Notification</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/NotificationSurvey/Index/")">Survey</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/FAQ/Index/")">FAQs</a></li>'
+        @*tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/ContactUs/Index/")">Contact Us</a></li>'
+
+            //}
+
+
+            tablemain += '<li class="nav_dashboard">@Html.ActionLink("Security ", "pagename", "pagename")</li>'*@
+
+
+
+        $('#mainmenu').html(tablemain);
+        $('#dmenu').html(table);
+
+    }
+</script>
+</head>
+
+<body>
+    </header>
+    <!--Dreamworks Container-->
+    <div id="dreamworks_container">
+        <!--Primary Navigation-->
+        <nav id="primary_nav">
+            <ul>
+                <div id="mainmenu"></div>
+                @*  <li class="nav_dashboard"><a href="@Url.Content("~/state/state/")">Master</a></li>
+                    <li class="nav_dashboard active">@Html.ActionLink("Process", "misexcel", "misexcel")</li>
+                     <li class="nav_dashboard">@Html.ActionLink("Security ", "pagename", "pagename")</li>*@
+            </ul>
+        </nav>
+
+        <!--Main Content-->
+        <section id="main_content">
+            <!--Secondary Navigation-->
+            <nav id="secondary_nav">
+
+                <!--UserInfo-->
+                <dl class="user_info">
+                    <dt><a href="#"><img src="@Url.Content("~/images/loginuser.jpg")" alt="" width="85px" /></a></dt>
+                    <div><br /> <span> <font color=red>Welcome</font>    @Session["userid"]</span><div style="float:right;margin-top:35px;margin-right:18px; "> @Html.ActionLink("Logout", "Logout", "Logout")</div></div>
+                </dl>
+                <!--Responsive Nav-->
+                <a class="res_icon" href="#"></a>
+                <div id="dmenu" style="height:1000px"></div>
+
+            </nav>
+            <!--Content Wrap-->
+            @RenderBody()
+
+            @*Working LuminousMpartnerIB*@
+        </section>
+    </div>
+
+</body>
+</html>

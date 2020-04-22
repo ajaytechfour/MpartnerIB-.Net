@@ -1,0 +1,185 @@
+﻿@model Luminous.EF.InsertContext
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/Error.cshtml";
+}
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+<div id="content_wrap">
+    <div class="msgbar msg_Info heading">
+        Delete
+    </div>
+    <div class="content_main">
+        <div class="boxes1">
+            <table id="GridView">
+                <tr>
+                    <td>
+                        Image Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.ImageEncode)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dealer Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.DealerName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dealer Phone
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.DealerPhone)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dealer City
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.DealerCity)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dealer Email
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.DealerEmail)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Distributor Code
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.DistributorCode)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Emp Code
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.EmpCode)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dealer Id
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.DealerId)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Rating
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Rating)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Created On
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.CreatedOn)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Created By
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.CreatedBy)
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+<div style="text-align:center">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+
+</div>

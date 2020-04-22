@@ -1,0 +1,169 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000957201</td><td>1916101592</td><td>2019-05-17</td><td>F03186502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 865</td><td>30.000</td><td>77550.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000957907</td><td>1916101639</td><td>2019-05-17</td><td>T1105C15A220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY V18</td><td>16.000</td><td>206239.89</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000957907</td><td>1916101639</td><td>2019-05-17</td><td>F1105CZS0150</td><td>ELE 12V150AH LE19000TT FNSD BTY V16</td><td>20.000</td><td>159999.91</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000957908</td><td>1916101640</td><td>2019-05-17</td><td>T1105C15A220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY V18</td><td>4.000</td><td>51560.20</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000957909</td><td>1916101641</td><td>2019-05-17</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>30.000</td><td>260850.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000957909</td><td>1916101641</td><td>2019-05-17</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>10.000</td><td>111300.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000957909</td><td>1916101641</td><td>2019-05-17</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>10.000</td><td>59550.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000957909</td><td>1916101641</td><td>2019-05-17</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>15.000</td><td>141825.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000958522</td><td>1916101709</td><td>2019-05-18</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>5.000</td><td>29350.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000010</td><td>0000958520</td><td>1916101723</td><td>2019-05-18</td><td>F04111013251</td><td>S/W UPS LUMINOUS ZELIO WI FI 1100/12V</td><td>20.000</td><td>84900.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000958520</td><td>1916101723</td><td>2019-05-18</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>20.000</td><td>74000.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000958520</td><td>1916101723</td><td>2019-05-18</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>20.000</td><td>50800.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000013</td><td>0000958521</td><td>1916101724</td><td>2019-05-18</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>25.000</td><td>74125.50</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000959192</td><td>1916101772</td><td>2019-05-20</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>10.000</td><td>43100.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000959215</td><td>1916101795</td><td>2019-05-21</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>20.000</td><td>257800.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000959210</td><td>1916101796</td><td>2019-05-21</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>40.000</td><td>118600.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0000959822</td><td>1916101863</td><td>2019-05-21</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>20.000</td><td>217100.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000960000</td><td>1916101889</td><td>2019-05-21</td><td>T1105C418200</td><td>ELE 12V200AH LETT 25560 FNSD BTY V19</td><td>10.000</td><td>119950.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000960350</td><td>1916101913</td><td>2019-05-22</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>10.000</td><td>132400.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000960783</td><td>1916101923</td><td>2019-05-22</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>10.000</td><td>88750.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000960783</td><td>1916101923</td><td>2019-05-22</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>20.000</td><td>181100.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000960783</td><td>1916101923</td><td>2019-05-22</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>186000.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000960783</td><td>1916101924</td><td>2019-05-22</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>20.000</td><td>139700.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000960351</td><td>1916101925</td><td>2019-05-22</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>5.000</td><td>25550.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000025</td><td>0000961062</td><td>1916101975</td><td>2019-05-23</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>50.000</td><td>134750.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000026</td><td>0000961064</td><td>1916101976</td><td>2019-05-23</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>20.000</td><td>163200.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000961068</td><td>1916101977</td><td>2019-05-23</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>10.000</td><td>128900.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0000961319</td><td>1916101995</td><td>2019-05-23</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>10.000</td><td>128900.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0000961295</td><td>1916101996</td><td>2019-05-23</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>40.000</td><td>118600.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000030</td><td>0000962026</td><td>1916102034</td><td>2019-05-24</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>15.000</td><td>133125.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000962029</td><td>1916102035</td><td>2019-05-24</td><td>F1105C149150</td><td>ELE 12V150AH LETT 19048 FNSD BTY</td><td>20.000</td><td>173900.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000962273</td><td>1916102073</td><td>2019-05-24</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>30.000</td><td>386700.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000962272</td><td>1916102074</td><td>2019-05-24</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>30.000</td><td>113850.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000034</td><td>0000962272</td><td>1916102074</td><td>2019-05-24</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>30.000</td><td>87750.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000035</td><td>0000962275</td><td>1916102075</td><td>2019-05-24</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>10.000</td><td>48512.74</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000036</td><td>0000962275</td><td>1916102075</td><td>2019-05-24</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>10.000</td><td>38933.80</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000037</td><td>0000962999</td><td>1916102164</td><td>2019-05-25</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>10.000</td><td>0.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000038</td><td>0000962999</td><td>1916102164</td><td>2019-05-25</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000039</td><td>0000962999</td><td>1916102164</td><td>2019-05-25</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>10.000</td><td>0.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000040</td><td>0000962999</td><td>1916102164</td><td>2019-05-25</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>10.000</td><td>197600.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000041</td><td>0000963021</td><td>1916102165</td><td>2019-05-25</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>5.000</td><td>0.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000042</td><td>0000963021</td><td>1916102165</td><td>2019-05-25</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>5.000</td><td>0.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0000963021</td><td>1916102165</td><td>2019-05-25</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>5.000</td><td>0.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000044</td><td>0000963021</td><td>1916102165</td><td>2019-05-25</td><td>T30000001603</td><td>NXG1400-B150HTT1N-P165W1N</td><td>5.000</td><td>103575.24</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000045</td><td>0000963051</td><td>1916102166</td><td>2019-05-25</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>20.000</td><td>100795.24</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000046</td><td>0000963072</td><td>1916102192</td><td>2019-05-27</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>30.000</td><td>272250.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000047</td><td>0000964040</td><td>1916102252</td><td>2019-05-27</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>5.000</td><td>29775.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000048</td><td>0000964040</td><td>1916102252</td><td>2019-05-27</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>5.000</td><td>44375.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000049</td><td>0000964042</td><td>1916102253</td><td>2019-05-27</td><td>F1105C149150</td><td>ELE 12V150AH LETT 19048 FNSD BTY</td><td>10.000</td><td>86950.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000050</td><td>0000964114</td><td>1916102254</td><td>2019-05-27</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>5.000</td><td>66200.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000051</td><td>0000964048</td><td>1916102255</td><td>2019-05-27</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>10.000</td><td>29250.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000052</td><td>0000964048</td><td>1916102255</td><td>2019-05-27</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>10.000</td><td>37950.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000053</td><td>0000965186</td><td>1916102324</td><td>2019-05-28</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>25.000</td><td>226875.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000054</td><td>0000965188</td><td>1916102325</td><td>2019-05-28</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>15.000</td><td>198600.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000055</td><td>0000965209</td><td>1916102326</td><td>2019-05-28</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>20.000</td><td>193000.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000056</td><td>0000965209</td><td>1916102326</td><td>2019-05-28</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>15.000</td><td>198600.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000057</td><td>0000965215</td><td>1916102327</td><td>2019-05-28</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>15.000</td><td>136125.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000058</td><td>0000965190</td><td>1916102328</td><td>2019-05-28</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>40.000</td><td>117000.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000059</td><td>0000965214</td><td>1916102329</td><td>2019-05-28</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>20.000</td><td>58500.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000060</td><td>0000966491</td><td>1916102384</td><td>2019-05-29</td><td>F1105C149150</td><td>ELE 12V150AH LETT 19048 FNSD BTY</td><td>10.000</td><td>86950.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000061</td><td>0000966492</td><td>1916102385</td><td>2019-05-29</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>5.000</td><td>29775.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000062</td><td>0000966492</td><td>1916102385</td><td>2019-05-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>5.000</td><td>44375.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000063</td><td>0000966492</td><td>1916102385</td><td>2019-05-29</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>5.000</td><td>66200.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000064</td><td>0000966487</td><td>1916102386</td><td>2019-05-29</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>15.000</td><td>44475.50</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000065</td><td>0000966489</td><td>1916102387</td><td>2019-05-29</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>10.000</td><td>37950.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000066</td><td>0000967387</td><td>1916102449</td><td>2019-05-30</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>18.000</td><td>200339.80</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000067</td><td>0000967573</td><td>1916102450</td><td>2019-05-30</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>18.000</td><td>238320.40</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000068</td><td>0000971148</td><td>1916102520</td><td>2019-05-31</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>8.000</td><td>105920.40</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000069</td><td>0000971133</td><td>1916102521</td><td>2019-05-31</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>20.000</td><td>66100.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000070</td><td>0000971133</td><td>1916102521</td><td>2019-05-31</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>20.000</td><td>86200.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000071</td><td>0000971133</td><td>1916102521</td><td>2019-05-31</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>30.000</td><td>94650.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000072</td><td>0000971134</td><td>1916102522</td><td>2019-05-31</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>10.000</td><td>111300.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000073</td><td>0000971134</td><td>1916102522</td><td>2019-05-31</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000074</td><td>0060054401</td><td>1916600285</td><td>2019-05-20</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7053.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000075</td><td>0060054403</td><td>1916600287</td><td>2019-05-20</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7053.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000076</td><td>0060054404</td><td>1916600288</td><td>2019-05-20</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7053.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000077</td><td>0060054405</td><td>1916600289</td><td>2019-05-20</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8831.04</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000078</td><td>0060054411</td><td>1916600295</td><td>2019-05-20</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5665.61</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000079</td><td>0060054419</td><td>1916600314</td><td>2019-05-20</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5660.33</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000080</td><td>0060054420</td><td>1916600317</td><td>2019-05-20</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8831.04</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000081</td><td>0060054426</td><td>1916600327</td><td>2019-05-20</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7053.00</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000082</td><td>0060055590</td><td>1916600466</td><td>2019-05-27</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5230.03</td><td>0001100654</td><td>POWER HOUSE</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr>
+</table>

@@ -1,0 +1,124 @@
+﻿@model LuminousMpartnerIB.EF.InsertContext
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>InsertContext</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ImageEncode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ImageEncode)
+            @Html.ValidationMessageFor(model => model.ImageEncode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DealerName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DealerName)
+            @Html.ValidationMessageFor(model => model.DealerName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DealerCity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DealerCity)
+            @Html.ValidationMessageFor(model => model.DealerCity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DealerPhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DealerPhone)
+            @Html.ValidationMessageFor(model => model.DealerPhone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DealerEmail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DealerEmail)
+            @Html.ValidationMessageFor(model => model.DealerEmail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DistributorCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DistributorCode)
+            @Html.ValidationMessageFor(model => model.DistributorCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmpCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmpCode)
+            @Html.ValidationMessageFor(model => model.EmpCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DealerId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DealerId)
+            @Html.ValidationMessageFor(model => model.DealerId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreatedBy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CreatedBy)
+            @Html.ValidationMessageFor(model => model.CreatedBy)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreatedOn)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CreatedOn)
+            @Html.ValidationMessageFor(model => model.CreatedOn)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ModifyBy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ModifyBy)
+            @Html.ValidationMessageFor(model => model.ModifyBy)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ModifyOn)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ModifyOn)
+            @Html.ValidationMessageFor(model => model.ModifyOn)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,31 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000947742</td><td>1919101324</td><td>2019-05-04</td><td>T30000000326</td><td>Solar Grid Tie Inv  6KW/3P Nxi360 V2</td><td>1.000</td><td>60082.84</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000002</td><td>0000949746</td><td>1919101382</td><td>2019-05-09</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>2.000</td><td>41120.00</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000003</td><td>0000949746</td><td>1919101382</td><td>2019-05-09</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>3.000</td><td>25980.00</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000004</td><td>0000958307</td><td>1919101572</td><td>2019-05-18</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>30.000</td><td>94650.00</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000005</td><td>0060047561</td><td>1919600214</td><td>2019-05-02</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5650.81</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0060051852</td><td>1919600240</td><td>2019-05-03</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4812.98</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0060047793</td><td>1919600242</td><td>2019-05-03</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5080.18</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0060052526</td><td>1919600256</td><td>2019-05-03</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4812.98</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0060052528</td><td>1919600257</td><td>2019-05-03</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7358.76</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0060052530</td><td>1919600258</td><td>2019-05-03</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5293.70</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0060055250</td><td>1919600541</td><td>2019-05-24</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7416.33</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0060055249</td><td>1919600542</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4828.14</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0060055248</td><td>1919600543</td><td>2019-05-24</td><td>F1105C307150</td><td>ELE 12V150AH LE19000TT FNSD BTY V18</td><td>1.000</td><td>4830.75</td><td>0001100168</td><td>PERFECT POWER SOLUTIONS</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr>
+</table>

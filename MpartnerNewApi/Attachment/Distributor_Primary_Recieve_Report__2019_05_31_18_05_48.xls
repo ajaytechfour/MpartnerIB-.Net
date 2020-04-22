@@ -1,0 +1,329 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000925281</td><td>1814109071</td><td>2019-03-29</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>25.000</td><td>62864.81</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000925281</td><td>1814109071</td><td>2019-03-29</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>25.000</td><td>72764.79</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000882295</td><td>1817106812</td><td>2018-12-19</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>150.000</td><td>434362.42</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000004</td><td>0000882295</td><td>1817106812</td><td>2018-12-19</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>30.000</td><td>59251.49</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000005</td><td>0000882295</td><td>1817106812</td><td>2018-12-19</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>75.000</td><td>188594.97</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000882295</td><td>1817106812</td><td>2018-12-19</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>30.000</td><td>106771.48</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000882295</td><td>1817106812</td><td>2018-12-19</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>150.000</td><td>468517.40</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000882295</td><td>1817106812</td><td>2018-12-19</td><td>F04111013251</td><td>S/W UPS LUMINOUS ZELIO WI FI 1100/12V</td><td>5.000</td><td>20022.75</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000882295</td><td>1817106812</td><td>2018-12-19</td><td>F04175002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 750/12V(BIS)</td><td>30.000</td><td>76477.49</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000882295</td><td>1817106812</td><td>2018-12-19</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>100.000</td><td>291059.95</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000882295</td><td>1817106812</td><td>2018-12-19</td><td>F04217013051</td><td>S/W UPS 1500VA LUMINOUS ZELIO+ 1700/24V</td><td>5.000</td><td>24527.25</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000882295</td><td>1817106812</td><td>2018-12-19</td><td>F04217013251</td><td>S/W UPS LUMINOUS ZELIO WI FI 1700/24V</td><td>5.000</td><td>26482.50</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000013</td><td>0000882299</td><td>1817106813</td><td>2018-12-19</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>10.000</td><td>108108.16</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000014</td><td>0000882299</td><td>1817106813</td><td>2018-12-19</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>10.000</td><td>58113.08</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000015</td><td>0000882299</td><td>1817106813</td><td>2018-12-19</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>72864.11</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000016</td><td>0000882299</td><td>1817106813</td><td>2018-12-19</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>10.000</td><td>49896.07</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000017</td><td>0000882308</td><td>1817106814</td><td>2018-12-19</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>30.000</td><td>268933.58</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000882308</td><td>1817106814</td><td>2018-12-19</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>439312.62</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000882308</td><td>1817106814</td><td>2018-12-19</td><td>F1148C282150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY</td><td>30.000</td><td>235818.07</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000882308</td><td>1817106814</td><td>2018-12-19</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>10.000</td><td>99544.53</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000882308</td><td>1817106814</td><td>2018-12-19</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>10.000</td><td>103009.53</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000882308</td><td>1817106814</td><td>2018-12-19</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>30.000</td><td>242352.07</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000882308</td><td>1817106815</td><td>2018-12-19</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>75.000</td><td>594000.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000882311</td><td>1817106816</td><td>2018-12-19</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>15.000</td><td>191416.47</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0000882311</td><td>1817106816</td><td>2018-12-19</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>15.000</td><td>169735.48</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0000882311</td><td>1817106816</td><td>2018-12-19</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>100.000</td><td>860804.88</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000882311</td><td>1817106816</td><td>2018-12-19</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>5.000</td><td>35021.25</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0000882413</td><td>1817106817</td><td>2018-12-19</td><td>T30000000633</td><td>NXG1100-B150H1N-P160W1N</td><td>10.000</td><td>200079.04</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000029</td><td>0000882413</td><td>1817106817</td><td>2018-12-19</td><td>T30000000315</td><td>Solar PV Panel 160 Wp Poly Crystalline</td><td>10.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000030</td><td>0000882413</td><td>1817106817</td><td>2018-12-19</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000882413</td><td>1817106817</td><td>2018-12-19</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>10.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000032</td><td>0000882414</td><td>1817106818</td><td>2018-12-19</td><td>T30000000645</td><td>NXG750-B100HTT1N-P100W2N</td><td>6.000</td><td>103444.74</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000033</td><td>0000882414</td><td>1817106818</td><td>2018-12-19</td><td>T18010000077</td><td>Solar PV Module 100W/12V Poly Crys.</td><td>12.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000034</td><td>0000882414</td><td>1817106818</td><td>2018-12-19</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>6.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000882414</td><td>1817106818</td><td>2018-12-19</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>6.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000036</td><td>0000882416</td><td>1817106819</td><td>2018-12-19</td><td>F19114016101</td><td>LUMINOUS SOLAR UPS 1400/12V</td><td>2.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000037</td><td>0000882416</td><td>1817106819</td><td>2018-12-19</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>2.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000038</td><td>0000882416</td><td>1817106819</td><td>2018-12-19</td><td>T30000000315</td><td>Solar PV Panel 160 Wp Poly Crystalline</td><td>2.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000039</td><td>0000882416</td><td>1817106819</td><td>2018-12-19</td><td>T30000000655</td><td>NXG1400-B150H1N-P160W1N</td><td>2.000</td><td>41857.14</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000040</td><td>0000882992</td><td>1817106880</td><td>2018-12-20</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>30.000</td><td>269527.55</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000041</td><td>0000882992</td><td>1817106880</td><td>2018-12-20</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>150.000</td><td>1381050.29</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000042</td><td>0000882992</td><td>1817106880</td><td>2018-12-20</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>50.000</td><td>309375.06</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0000882992</td><td>1817106880</td><td>2018-12-20</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>95535.02</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000044</td><td>0000882992</td><td>1817106880</td><td>2018-12-20</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>10.000</td><td>112414.52</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000045</td><td>0000883425</td><td>1817106881</td><td>2018-12-20</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>50.000</td><td>430402.30</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000046</td><td>0000885411</td><td>1817106964</td><td>2018-12-24</td><td>F04175002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 750/12V(BIS)</td><td>30.000</td><td>76477.55</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000047</td><td>0000885411</td><td>1817106964</td><td>2018-12-24</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>30.000</td><td>93703.56</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000048</td><td>0000885411</td><td>1817106964</td><td>2018-12-24</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>30.000</td><td>59251.54</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000049</td><td>0000885411</td><td>1817106964</td><td>2018-12-24</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>40.000</td><td>115830.07</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000050</td><td>0000885415</td><td>1817106965</td><td>2018-12-24</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>50.000</td><td>460349.93</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000051</td><td>0000885415</td><td>1817106965</td><td>2018-12-24</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>50.000</td><td>430402.44</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000052</td><td>0000885415</td><td>1817106965</td><td>2018-12-24</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>439312.43</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000053</td><td>0000888909</td><td>1817107126</td><td>2018-12-27</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>6.000</td><td>34867.80</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000054</td><td>0000893460</td><td>1817107368</td><td>2019-01-18</td><td>F03135001951</td><td>S/Q WAVE HUPS 12V LUM BIS ECO WATT +350</td><td>30.000</td><td>46926.32</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000055</td><td>0000894535</td><td>1817107444</td><td>2019-01-23</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>20.000</td><td>44846.54</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000056</td><td>0000894538</td><td>1817107445</td><td>2019-01-23</td><td>T1102G3307D2</td><td>LUMINOUS 7.2 AH 12V SMF BATTERY T C20</td><td>40.000</td><td>18414.08</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000057</td><td>0000894962</td><td>1817107481</td><td>2019-01-25</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>15.000</td><td>88432.10</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000058</td><td>0000896822</td><td>1817107545</td><td>2019-01-29</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>4.000</td><td>34847.60</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000059</td><td>0000896836</td><td>1817107546</td><td>2019-01-29</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>47.000</td><td>325011.62</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000060</td><td>0000898740</td><td>1817107656</td><td>2019-01-31</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>50.000</td><td>294772.70</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000061</td><td>0000898978</td><td>1817107665</td><td>2019-01-31</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>25.000</td><td>172878.94</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000062</td><td>0000905939</td><td>1817107998</td><td>2019-02-25</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>15.000</td><td>88431.71</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000063</td><td>0000905939</td><td>1817107998</td><td>2019-02-25</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48113.98</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000064</td><td>0000905939</td><td>1817107998</td><td>2019-02-25</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>20.000</td><td>140084.92</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000065</td><td>0000905939</td><td>1817107998</td><td>2019-02-25</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>20.000</td><td>138302.93</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000066</td><td>0000905940</td><td>1817107999</td><td>2019-02-25</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>20.000</td><td>39500.82</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000067</td><td>0000905942</td><td>1817108000</td><td>2019-02-25</td><td>F03135001951</td><td>S/Q WAVE HUPS 12V LUM BIS ECO WATT +350</td><td>15.000</td><td>23462.66</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000068</td><td>0000905944</td><td>1817108001</td><td>2019-02-25</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>2.000</td><td>10808.98</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000069</td><td>0000905944</td><td>1817108001</td><td>2019-02-25</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>4.000</td><td>19211.44</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000070</td><td>0000909493</td><td>1817108133</td><td>2019-02-28</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>30.000</td><td>59251.72</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000071</td><td>0000915157</td><td>1817108417</td><td>2019-03-16</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>5.000</td><td>21334.43</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000072</td><td>0000915157</td><td>1817108417</td><td>2019-03-16</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>10.000</td><td>22423.43</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000073</td><td>0000915157</td><td>1817108417</td><td>2019-03-16</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>35.000</td><td>88010.70</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000074</td><td>0000915164</td><td>1817108418</td><td>2019-03-16</td><td>F19135003151</td><td>S/Q WAVE UPS 12V LUMINOUS SOLAR NXG 350</td><td>2.000</td><td>4037.99</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000075</td><td>0000915164</td><td>1817108418</td><td>2019-03-16</td><td>F19202003751</td><td>SOLAR RETROFIT 24V20AMP SHINE2420 Rev.01</td><td>3.000</td><td>5034.13</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000076</td><td>0000915164</td><td>1817108418</td><td>2019-03-16</td><td>F19218016101</td><td>LUM  SOLAR UPS 1800/24V</td><td>2.000</td><td>10808.76</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000077</td><td>0000915161</td><td>1817108419</td><td>2019-03-16</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>15.000</td><td>88431.84</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000078</td><td>0000915161</td><td>1817108419</td><td>2019-03-16</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>30.000</td><td>237600.26</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000079</td><td>0000915168</td><td>1817108420</td><td>2019-03-16</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>2.000</td><td>16552.36</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000080</td><td>0000925457</td><td>1817108842</td><td>2019-03-30</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>12.000</td><td>34927.42</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000081</td><td>0000925457</td><td>1817108842</td><td>2019-03-30</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>8.000</td><td>20116.93</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000082</td><td>0000925457</td><td>1817108842</td><td>2019-03-30</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>3.000</td><td>7543.85</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000083</td><td>0000925457</td><td>1817108842</td><td>2019-03-30</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>0.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000084</td><td>0060041067</td><td>1817600101</td><td>2019-01-30</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5160.08</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000085</td><td>0060048307</td><td>1817600204</td><td>2019-03-31</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>4577.11</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000086</td><td>0000919171</td><td>1865100040</td><td>2019-03-24</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>25.000</td><td>172878.94</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000087</td><td>0000923113</td><td>1865100129</td><td>2019-03-27</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>10.000</td><td>79199.97</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000088</td><td>0000923113</td><td>1865100129</td><td>2019-03-27</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>25.000</td><td>147386.19</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000089</td><td>0000923113</td><td>1865100129</td><td>2019-03-27</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>30.000</td><td>207454.41</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000090</td><td>0000923113</td><td>1865100129</td><td>2019-03-27</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>10.000</td><td>86080.47</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000091</td><td>0000923117</td><td>1865100130</td><td>2019-03-27</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>25.000</td><td>49376.28</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000092</td><td>0000906218</td><td>1893104876</td><td>2019-02-26</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>42866.94</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>PG03</td><td>Gagret Unit - 3</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000093</td><td>0000921508</td><td>1893105349</td><td>2019-03-27</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>42866.94</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>PG03</td><td>Gagret Unit - 3</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000094</td><td>0000959303</td><td>1913100545</td><td>2019-05-23</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>15.000</td><td>134763.80</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000095</td><td>0000959303</td><td>1913100545</td><td>2019-05-23</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>10.000</td><td>61875.02</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000096</td><td>0000959303</td><td>1913100545</td><td>2019-05-23</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>6.000</td><td>47520.02</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000097</td><td>0000959303</td><td>1913100545</td><td>2019-05-23</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>55.000</td><td>380333.40</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000098</td><td>0000959304</td><td>1913100546</td><td>2019-05-23</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>35.000</td><td>101870.87</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000099</td><td>0000959304</td><td>1913100546</td><td>2019-05-23</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>35.000</td><td>109320.61</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000100</td><td>0000959303</td><td>1913100548</td><td>2019-05-23</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>4.000</td><td>31679.60</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000101</td><td>0000936981</td><td>1917100214</td><td>2019-04-23</td><td>T1102G3307D2</td><td>LUMINOUS 7.2 AH 12V SMF BATTERY T C20</td><td>48.000</td><td>22571.84</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000102</td><td>0000941961</td><td>1917100355</td><td>2019-04-27</td><td>T1102G3307D2</td><td>LUMINOUS 7.2 AH 12V SMF BATTERY T C20</td><td>88.000</td><td>41382.04</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000103</td><td>0000943746</td><td>1917100381</td><td>2019-04-29</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>10.000</td><td>61875.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000104</td><td>0000943752</td><td>1917100382</td><td>2019-04-29</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>40.000</td><td>124937.98</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000105</td><td>0000943752</td><td>1917100382</td><td>2019-04-29</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>20.000</td><td>39501.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000106</td><td>0000943758</td><td>1917100383</td><td>2019-04-29</td><td>F04217013051</td><td>S/W UPS 1500VA LUMINOUS ZELIO+ 1700/24V</td><td>5.000</td><td>25517.15</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000107</td><td>0000943758</td><td>1917100383</td><td>2019-04-29</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>40.000</td><td>100583.63</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000108</td><td>0000945417</td><td>1917100484</td><td>2019-04-30</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>5.000</td><td>30937.50</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000109</td><td>0000945417</td><td>1917100484</td><td>2019-04-30</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>5.000</td><td>39600.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000110</td><td>0000946380</td><td>1917100529</td><td>2019-04-30</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>10.000</td><td>79200.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000111</td><td>0000946380</td><td>1917100529</td><td>2019-04-30</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>10.000</td><td>61875.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000112</td><td>0000947592</td><td>1917100550</td><td>2019-05-04</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>20.000</td><td>159984.11</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000113</td><td>0000947592</td><td>1917100550</td><td>2019-05-04</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>184140.12</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000114</td><td>0000947592</td><td>1917100550</td><td>2019-05-04</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>10.000</td><td>79200.05</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000115</td><td>0000949051</td><td>1917100618</td><td>2019-05-09</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>10.000</td><td>25145.72</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000116</td><td>0000949062</td><td>1917100619</td><td>2019-05-09</td><td>F03135001951</td><td>S/Q WAVE HUPS 12V LUM BIS ECO WATT +350</td><td>20.000</td><td>31283.88</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000117</td><td>0000949064</td><td>1917100620</td><td>2019-05-09</td><td>F19202003751</td><td>SOLAR RETROFIT 24V20AMP SHINE2420 Rev.01</td><td>5.000</td><td>8390.48</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000118</td><td>0000949066</td><td>1917100621</td><td>2019-05-09</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>2.000</td><td>16552.68</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000119</td><td>0000949066</td><td>1917100621</td><td>2019-05-09</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>6.000</td><td>29935.88</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000120</td><td>0000954982</td><td>1917100734</td><td>2019-05-14</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>7.000</td><td>79210.22</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000121</td><td>0000954984</td><td>1917100735</td><td>2019-05-14</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>5.000</td><td>29056.82</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000122</td><td>0000954985</td><td>1917100736</td><td>2019-05-14</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>5.000</td><td>17498.32</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000123</td><td>0000954987</td><td>1917100737</td><td>2019-05-14</td><td>F19101004001</td><td>SOLAR CHARGE CONTROLLER 1210N</td><td>10.000</td><td>5098.08</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000124</td><td>0000955832</td><td>1917100739</td><td>2019-05-14</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>5.000</td><td>30937.63</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000125</td><td>0000955832</td><td>1917100739</td><td>2019-05-14</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>10.000</td><td>80784.35</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000126</td><td>0000955835</td><td>1917100740</td><td>2019-05-14</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>2.000</td><td>15771.20</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000127</td><td>0000955837</td><td>1917100741</td><td>2019-05-14</td><td>F19135003151</td><td>S/Q WAVE UPS 12V LUMINOUS SOLAR NXG 350</td><td>3.000</td><td>6056.74</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000128</td><td>0000958019</td><td>1917100867</td><td>2019-05-18</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>5.000</td><td>55093.53</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000129</td><td>0000958019</td><td>1917100867</td><td>2019-05-18</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>184140.09</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000130</td><td>0000959024</td><td>1917100898</td><td>2019-05-20</td><td>T04110512051</td><td>LUM  ECO VOLT+1050/12V SINE WAVE UPS</td><td>20.000</td><td>62468.58</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000131</td><td>0000959028</td><td>1917100899</td><td>2019-05-20</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>5.000</td><td>44921.04</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000132</td><td>0000962856</td><td>1917100995</td><td>2019-05-26</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>1.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000133</td><td>0000962856</td><td>1917100995</td><td>2019-05-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>2.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000134</td><td>0000962856</td><td>1917100995</td><td>2019-05-26</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>2.000</td><td>0.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000135</td><td>0000962856</td><td>1917100995</td><td>2019-05-26</td><td>T30000001605</td><td>NXG1800-B150HTT2N-P325W2N</td><td>1.000</td><td>43069.50</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000136</td><td>0000963992</td><td>1917101022</td><td>2019-05-27</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>30.000</td><td>176863.22</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000137</td><td>0000963994</td><td>1917101023</td><td>2019-05-27</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>144787.24</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000138</td><td>0000970999</td><td>1917101195</td><td>2019-05-31</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>20.000</td><td>50292.44</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000139</td><td>0000971004</td><td>1917101215</td><td>2019-05-31</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>184139.80</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000140</td><td>0060051383</td><td>1917600043</td><td>2019-04-30</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5833.28</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000141</td><td>0060054931</td><td>1917600276</td><td>2019-05-26</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>5027.22</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000142</td><td>0000936914</td><td>1965100073</td><td>2019-04-23</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>30.000</td><td>237600.04</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000143</td><td>0000936914</td><td>1965100073</td><td>2019-04-23</td><td>F1103BYQ0060</td><td>LUM 12V60AH ILST8036 TUB FNSD BTY V16</td><td>10.000</td><td>39006.01</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000144</td><td>0000936914</td><td>1965100073</td><td>2019-04-23</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>50.000</td><td>430402.57</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000145</td><td>0000945411</td><td>1965100195</td><td>2019-04-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>25.000</td><td>72394.12</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000146</td><td>0000945414</td><td>1965100196</td><td>2019-04-30</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>10.000</td><td>92070.40</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000147</td><td>0000947594</td><td>1965100220</td><td>2019-05-04</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>5.000</td><td>44921.23</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000148</td><td>0000947594</td><td>1965100220</td><td>2019-05-04</td><td>F1148B280120</td><td>LUM 12V120AH ECO CHRG 15000 FNSD BTY</td><td>10.000</td><td>67913.96</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000149</td><td>0000947594</td><td>1965100220</td><td>2019-05-04</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>20.000</td><td>172160.90</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000150</td><td>0000947594</td><td>1965100220</td><td>2019-05-04</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>5.000</td><td>24056.99</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000151</td><td>0000949053</td><td>1965100231</td><td>2019-05-09</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>20.000</td><td>172160.92</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000152</td><td>0000954986</td><td>1965100256</td><td>2019-05-14</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>3.000</td><td>21518.06</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000153</td><td>0000955359</td><td>1965100257</td><td>2019-05-14</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>30.000</td><td>59251.72</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000154</td><td>0000955362</td><td>1965100258</td><td>2019-05-14</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>10.000</td><td>80784.35</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000155</td><td>0000955362</td><td>1965100258</td><td>2019-05-14</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>5.000</td><td>30937.63</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000156</td><td>0000955829</td><td>1965100259</td><td>2019-05-14</td><td>F1148B280120</td><td>LUM 12V120AH ECO CHRG 15000 FNSD BTY</td><td>5.000</td><td>33956.99</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000157</td><td>0000955829</td><td>1965100259</td><td>2019-05-14</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>30.000</td><td>258241.43</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000158</td><td>0000957376</td><td>1965100290</td><td>2019-05-17</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48114.08</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000159</td><td>0000957377</td><td>1965100291</td><td>2019-05-17</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>20.000</td><td>62468.58</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000160</td><td>0000958022</td><td>1965100302</td><td>2019-05-18</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>20.000</td><td>172160.92</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000161</td><td>0000958022</td><td>1965100304</td><td>2019-05-18</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>3.000</td><td>20745.28</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000162</td><td>0000959012</td><td>1965100324</td><td>2019-05-20</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>10.000</td><td>79200.00</td><td>0001109371</td><td>STAR POWER SYSTEM</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr>
+</table>

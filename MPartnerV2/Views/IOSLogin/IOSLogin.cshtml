@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Luminous</title>
+    <link href="~/css/stylesheettopvu.css" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <link href="@Url.Content("~/Login/StyleSheet.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <style type="text/css">
+        .style1 {
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+
+            $("#txtPassword").hide();
+            $("#Button2").hide();
+
+            @*if ("@Session["Ioslogin"]" != null)
+            {
+                $("#txtPassword").show();
+                $("#Button2").show();
+                $("#txtUserName").hide();
+                $("#Button1").hide();
+            }*@
+            //$("#txtPassword").keypress(function (e) {
+            //    debugger;
+            //    if (e.keyCode == 13) {
+            //        $("#Button1").trigger("click");
+            //    }
+            //});
+            $("#Button2").on("click", function (e) {
+
+                var email = $("#txtPassword").val().trim();
+
+                if (email == "") {
+                    e.preventDefault();
+                    alert("Please Enter OTP.");
+                    ctrlValidate('#txtPassword');
+                    $("#txtPassword").focus();
+                    return false;
+                }
+                else {
+                    ctrlValidate('#txtPassword');
+
+                    var email = $("#txtPassword").val().trim();
+                    if (email == "abc") {
+                        alert("No Data");
+                        //e.preventDefault();
+                        //alert("Please Enter Password.");
+                        //$("#txtPassword").focus();
+                        //return false;
+                    }
+                    else {
+
+                        var password = $("#txtPassword").val().trim();
+                        //var password = $("#txtPassword").val().trim();
+
+
+                        $.post("@Url.Content("~/IOSLogin/VerifyOTP")", { password: password }, function (data) { checkdata(data); }, "Json");
+                        //$.post('~/IOSLogin/validatelogin', { userid: userid }, function (data) { check(data) })
+
+
+                        function checkdata(abc) {
+
+
+                            if (abc == "Varified Successfully") {
+                                alert("Varified Successfully")
+
+                                //$("#txtPassword").show();
+                                //$("#Button2").show();
+                                //$("#txtUserName").hide();
+                                //$("#Button1").hide();
+                                //}
+                                //$("#txtPassword").show();
+                                //$("#Button2").show();
+                                //$("#txtUserName").hide();
+                                //$("#Button1").hide();
+                                location.href = "@Url.Content("~/Createcontest/Index")";
+                            }
+                            else {
+                                alert("OTP Not Verify")
+                                // location.href = "@Url.Content("~/IOSLogin/IOSLogin")";
+                            }
+                            @*alert(abc)
+                            if (abc == "Invalid userid and password") {
+                                alert('Invalid Userid And Password');
+                                return false;
+                            }
+                            else {
+                                if (abc == 'LuminousHome/Luminous') {
+                                    location.href = '@Url.Action("Luminous", "LuminousHome")';
+                                }
+
+                            }*@
+
+                        }
+                    }
+
+
+                }
+            });
+
+
+            $("#Button1").on("click", function (e) {
+
+                var email = $("#txtUserName").val().trim();
+
+                if (email == "") {
+                    e.preventDefault();
+                    alert("Please Enter SAP Code");
+                    ctrlValidate('#txtUserName');
+                    $("#txtUserName").focus();
+                    return false;
+                }
+                else {
+                    ctrlValidate('#txtUserName');
+
+                    var email1 = $("#txtPassword").val().trim();
+                    if (email1 == "abc") {
+                        alert("No Data");
+                        //e.preventDefault();
+                        //alert("Please Enter Password.");
+                        //$("#txtPassword").focus();
+                        //return false;
+                    }
+                    else {
+
+                        var userid = $("#txtUserName").val().trim();
+                        //var password = $("#txtPassword").val().trim();
+
+
+                        $.post("@Url.Content("~/IOSLogin/validatelogin")", { userid: userid }, function (data) { check(data); }, "Json");
+                        //$.post('~/IOSLogin/validatelogin', { userid: userid }, function (data) { check(data) })
+
+
+                        function check(abc) {
+
+
+                            if (abc == "OTP Created Successfully") {
+                                alert("OTP Created Successfully")
+
+                                $("#txtPassword").show();
+                                $("#Button2").show();
+                                $("#txtUserName").hide();
+                                $("#Button1").hide();
+                                //}
+                                //$("#txtPassword").show();
+                                //$("#Button2").show();
+                                //$("#txtUserName").hide();
+                                //$("#Button1").hide();
+                                //location.href = "@Url.Content("~/IOSLogin/IOSLogin")";
+                            }
+                            else {
+                                alert("OTP Not Created")
+                            }
+                            @*alert(abc)
+                            if (abc == "Invalid userid and password") {
+                                alert('Invalid Userid And Password');
+                                return false;
+                            }
+                            else {
+                                if (abc == 'LuminousHome/Luminous') {
+                                    location.href = '@Url.Action("Luminous", "LuminousHome")';
+                                }
+
+                            }*@
+
+                        }
+                    }
+
+
+                }
+            });
+        });
+
+
+        function ctrlValidate(Id) {
+
+            if ($(Id).val() == "") {
+                $(Id).css("border-color", "red");
+                return false;
+            }
+            else {
+                $(Id).css("border-color", "");
+            }
+        }
+    </script>
+    <script type="text/javascript">
+
+
+
+    </script>
+</head>
+<body style="background: url(@Url.Content("~/images/header-rptrtopvu.jpg")) repeat-x; margin: 0px auto;
+      font-family arial, helvetica, sans-serif; font-size 12px;">
+    <div class="wrapper">
+        <div class="wrapper-in">
+            <div class="header">
+                @* <div  class="logo">*@
+                <div style="width: 240px;height: 118px;float: left;  margin-top: 3px;">
+                    @*  <img src="images/Untitled.jpg" hspace="5" width="250px" />*@
+                </div>
+            </div>
+            <div class="welcome">
+                <center>
+                    <span>
+                        <a href="@Url.Action("Index", "Login")" class="elements">
+                            <span>Admin Login</span>
+                        </a> | <a href="@Url.Action("Index", "IOSLogin")" class="elements">
+                            <span>Dealer Contest</span>
+                        </a>
+                    </span>
+                    @*<span style="font-size:20px; vertical-align:top;"> WELCOME TO OUR</span><br />
+                        <span>TVS PAYMENT PROCESSING SYSTEM</span>*@
+
+                </center>
+            </div>
+            <div class="main-login">
+                <div class="main-login-in">
+                    <div class="login-shadow">
+                        <div class="login">
+                            <div class="hook">
+                                <img src="~/images/hooktopvu.png" align="left" style="margin-left: 70px;" />
+                                <img src="~/images/hooktopvu.png" align="right" style="margin-right: 70px;" />
+                            </div>
+                            <div class="login-head">
+                                <span style="float: left; font-size: 30px; font-family: 'Times New Roman', Times, serif;
+                                    color: #5a5e70;">Login Panel</span> <a style="float:right; font-size:15px;font:bold" href="@Url.Action("Index", "NewDealerLogin")">
+                                    <span>New Dealer</span>
+                                </a>
+                            </div>
+                            <div class="login-forms">
+                                <input name="username" id="txtUserName" type="text" class="login-style" placeholder="SAP Code" />
+                                @*<div class="user-icon"></div>*@
+                                <input name="password" id="txtPassword" type="password" class="login-style" placeholder="OTP" />
+                                @*<div class="pass-icon"></div>  *@
+                            </div>
+                            <div class="login-button">
+                                <div class="login-but">
+                                    <input type="button" id="Button1" name="button" value="Generate OTP" class="submit-but" />
+                                    <input type="button" id="Button2" name="button2" value="Sign In" class="submit-but" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                @*  <div class="main-login-img"> <img  src="images/project-infotopvu1.jpg"  /> </div>*@
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-in">
+            © <a href="http://techfoursolutions.com/">www.techfoursolutions.com </a>
+        </div>
+    </div>
+    @*
+        <table class="style1" style="background-color:white">
+            <tr>
+                <td>
+                     <div style="float:right">
+                <img  style="margin-left:18px" alt="" src="@Url.Content("~/images/Untitled.jpg")"  width="250px" /><br />
+
+               <h3>TVS Payment Processing System</h3>
+            </div>
+            <div>
+
+            </div>
+
+            </td>
+                <td style="padding-top:60px">
+                      <div id="wrapper">
+
+            <form name="login-form" class="login-form">
+
+
+
+
+
+                <div class="content">
+
+
+
+                <input name="username" id="txtUserName" type="text" class="input username" placeholder="Username" />
+                <div class="user-icon"></div>
+                <input name="password" id="txtPassword" type="password" class="input password" placeholder="Password" />
+                <div class="pass-icon"></div>
+                </div>
+
+                <div class="footer">
+                <input type="button" id="Button1" name="button"  value="Login" class="button" />
+
+                </div>
+
+            </form>
+
+        </div>
+        <div class="gradient">
+
+        </div></td>
+            </tr>
+            <tr>
+                <td>
+                    </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>*@
+</body>
+</html>

@@ -1,0 +1,103 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000972314</td><td>1902101431</td><td>2019-05-31</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>20.000</td><td>0.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000002</td><td>0000972314</td><td>1902101431</td><td>2019-05-31</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>40.000</td><td>0.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000972314</td><td>1902101431</td><td>2019-05-31</td><td>T30000001230</td><td>Solar PVMod 325W/24V 72C RFID 30x1</td><td>2.000</td><td>0.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000004</td><td>0000972314</td><td>1902101431</td><td>2019-05-31</td><td>T30000001620</td><td>1800NXG10N-B150HTT20N-P325W-PL1N</td><td>2.000</td><td>990680.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000950242</td><td>1919101400</td><td>2019-05-10</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>35.000</td><td>400050.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000950242</td><td>1919101401</td><td>2019-05-10</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>5.000</td><td>57150.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000950246</td><td>1919101402</td><td>2019-05-10</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>15.000</td><td>64650.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000950246</td><td>1919101403</td><td>2019-05-10</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>15.000</td><td>64650.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000950251</td><td>1919101404</td><td>2019-05-10</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>43300.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000010</td><td>0000950251</td><td>1919101404</td><td>2019-05-10</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>54600.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000011</td><td>0000950255</td><td>1919101405</td><td>2019-05-10</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>43300.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000012</td><td>0000950255</td><td>1919101405</td><td>2019-05-10</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>54600.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000013</td><td>0000956422</td><td>1919101480</td><td>2019-05-15</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000956424</td><td>1919101481</td><td>2019-05-15</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>2.000</td><td>16720.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000015</td><td>0000959949</td><td>1919101634</td><td>2019-05-21</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>10.000</td><td>37000.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000959948</td><td>1919101635</td><td>2019-05-21</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>10.000</td><td>62500.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000967086</td><td>1919102059</td><td>2019-05-29</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>20.000</td><td>222600.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000967086</td><td>1919102059</td><td>2019-05-29</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>60.000</td><td>543300.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000967087</td><td>1919102060</td><td>2019-05-29</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>25.000</td><td>172125.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000967087</td><td>1919102060</td><td>2019-05-29</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>30.000</td><td>241200.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000967089</td><td>1919102061</td><td>2019-05-29</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>15.000</td><td>139500.11</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000967089</td><td>1919102061</td><td>2019-05-29</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>2.000</td><td>19300.02</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000967089</td><td>1919102061</td><td>2019-05-29</td><td>F1102C408160</td><td>LUM 12V160AH PC 20042TT FNSD BTY</td><td>11.000</td><td>90860.07</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000967090</td><td>1919102062</td><td>2019-05-29</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>17.000</td><td>153935.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0000967090</td><td>1919102062</td><td>2019-05-29</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>3.000</td><td>27165.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0000967090</td><td>1919102062</td><td>2019-05-29</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>0.000</td><td>0.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000967091</td><td>1919102063</td><td>2019-05-29</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>30.000</td><td>117300.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000028</td><td>0000967091</td><td>1919102063</td><td>2019-05-29</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>30.000</td><td>76200.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000029</td><td>0000967092</td><td>1919102064</td><td>2019-05-29</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>16.000</td><td>56560.05</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000030</td><td>0000967092</td><td>1919102064</td><td>2019-05-29</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>30.000</td><td>87750.08</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000031</td><td>0000967092</td><td>1919102064</td><td>2019-05-29</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>20.000</td><td>74000.07</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000032</td><td>0000967092</td><td>1919102072</td><td>2019-05-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>20.000</td><td>58500.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000033</td><td>0000967093</td><td>1919102073</td><td>2019-05-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000034</td><td>0000968249</td><td>1919102104</td><td>2019-05-30</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>33.000</td><td>287595.40</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000971805</td><td>1919102225</td><td>2019-05-31</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>25.000</td><td>221875.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000036</td><td>0000971810</td><td>1919102227</td><td>2019-05-31</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>25.000</td><td>221875.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000037</td><td>0000971943</td><td>1919102250</td><td>2019-05-31</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>15.000</td><td>76650.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000038</td><td>0000971943</td><td>1919102250</td><td>2019-05-31</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>78600.00</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000039</td><td>0060051820</td><td>1919600279</td><td>2019-05-07</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5975.18</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000040</td><td>0060051821</td><td>1919600280</td><td>2019-05-07</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5127.79</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000041</td><td>0060051822</td><td>1919600281</td><td>2019-05-07</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6270.40</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000042</td><td>0060053790</td><td>1919600343</td><td>2019-05-15</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5124.27</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0060053792</td><td>1919600344</td><td>2019-05-15</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4803.77</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000044</td><td>0060055181</td><td>1919600514</td><td>2019-05-24</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5263.55</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000045</td><td>0060055182</td><td>1919600515</td><td>2019-05-24</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5263.55</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000046</td><td>0060055987</td><td>1919600550</td><td>2019-05-28</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5975.18</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000047</td><td>0060055988</td><td>1919600551</td><td>2019-05-28</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5724.74</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000048</td><td>0060055989</td><td>1919600552</td><td>2019-05-28</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4828.14</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000049</td><td>0060055991</td><td>1919600554</td><td>2019-05-28</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4828.15</td><td>0001100180</td><td>PITALIYA ENGINEERING COMPANY</td><td>20</td><td>Rajasthan</td><td>1190</td><td>Jaipur Branch</td><td>Battery</td>
+	</tr>
+</table>

@@ -1,0 +1,75 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000945428</td><td>1913100336</td><td>2019-04-30</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>75.000</td><td>645603.56</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000945428</td><td>1913100336</td><td>2019-04-30</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>50.000</td><td>294772.41</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000945428</td><td>1913100336</td><td>2019-04-30</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>25.000</td><td>230174.93</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000945428</td><td>1913100336</td><td>2019-04-30</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>25.000</td><td>172878.70</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000945442</td><td>1917100465</td><td>2019-04-30</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>10.000</td><td>87862.75</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000945442</td><td>1917100465</td><td>2019-04-30</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>10.000</td><td>80784.23</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000945443</td><td>1917100466</td><td>2019-04-30</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>30.000</td><td>67270.48</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000945443</td><td>1917100466</td><td>2019-04-30</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>30.000</td><td>75437.98</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000945446</td><td>1917100467</td><td>2019-04-30</td><td>F19135003151</td><td>S/Q WAVE UPS 12V LUMINOUS SOLAR NXG 350</td><td>10.000</td><td>20189.78</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000958168</td><td>1917100858</td><td>2019-05-18</td><td>F04175002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 750/12V(BIS)</td><td>1.000</td><td>2549.23</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000958168</td><td>1917100858</td><td>2019-05-18</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>10.000</td><td>37570.21</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000958179</td><td>1917100859</td><td>2019-05-18</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>10.000</td><td>79992.04</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000958179</td><td>1917100859</td><td>2019-05-18</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>25.000</td><td>154687.58</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000958179</td><td>1917100859</td><td>2019-05-18</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>25.000</td><td>230175.12</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000958185</td><td>1917100860</td><td>2019-05-18</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>3.000</td><td>11563.09</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000016</td><td>0000958185</td><td>1917100860</td><td>2019-05-18</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>2.000</td><td>6179.21</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000017</td><td>0000958188</td><td>1917100861</td><td>2019-05-18</td><td>F19202003751</td><td>SOLAR RETROFIT 24V20AMP SHINE2420 Rev.01</td><td>4.000</td><td>6712.38</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000018</td><td>0000958196</td><td>1917100862</td><td>2019-05-18</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>3.000</td><td>14968.06</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000019</td><td>0000958196</td><td>1917100862</td><td>2019-05-18</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>8.000</td><td>64928.14</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000020</td><td>0000966701</td><td>1917101092</td><td>2019-05-29</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>289575.27</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000021</td><td>0000966701</td><td>1917101092</td><td>2019-05-29</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>30.000</td><td>93703.59</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000022</td><td>0000967002</td><td>1917101107</td><td>2019-05-29</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>5.000</td><td>39426.50</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000967004</td><td>1917101108</td><td>2019-05-29</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>5.000</td><td>16787.60</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000024</td><td>0000967005</td><td>1917101109</td><td>2019-05-29</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>5.000</td><td>40580.00</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000025</td><td>0000945435</td><td>1965100186</td><td>2019-04-30</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>10.000</td><td>107464.94</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0000945444</td><td>1965100187</td><td>2019-04-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>30.000</td><td>86872.47</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000027</td><td>0000945444</td><td>1965100187</td><td>2019-04-30</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>30.000</td><td>59251.48</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000028</td><td>0000945444</td><td>1965100187</td><td>2019-04-30</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>50.000</td><td>156172.44</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000029</td><td>0000945444</td><td>1965100187</td><td>2019-04-30</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>30.000</td><td>87317.97</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000030</td><td>0000946604</td><td>1965100219</td><td>2019-04-30</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>50.000</td><td>430402.30</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000958181</td><td>1965100298</td><td>2019-05-18</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48114.08</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000958201</td><td>1965100299</td><td>2019-05-18</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>5.000</td><td>35862.93</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000958201</td><td>1965100299</td><td>2019-05-18</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>5.000</td><td>53584.03</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000034</td><td>0000966703</td><td>1965100401</td><td>2019-05-29</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>30.000</td><td>87317.76</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000035</td><td>0000967000</td><td>1965100408</td><td>2019-05-29</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>5.000</td><td>53583.54</td><td>0001109691</td><td>POWERTECH SOLUTION</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr>
+</table>

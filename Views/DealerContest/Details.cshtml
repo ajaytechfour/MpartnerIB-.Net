@@ -1,0 +1,99 @@
+﻿@model LuminousMpartnerIB.EF.InsertContext
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>InsertContext</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ImageEncode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ImageEncode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DealerName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DealerName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DealerCity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DealerCity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DealerPhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DealerPhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DealerEmail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DealerEmail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DistributorCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DistributorCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmpCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmpCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DealerId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DealerId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreatedBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreatedBy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreatedOn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreatedOn)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ModifyBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifyBy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ModifyOn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifyOn)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

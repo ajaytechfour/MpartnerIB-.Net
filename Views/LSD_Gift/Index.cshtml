@@ -1,0 +1,308 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model  IPagedList<LuminousMpartnerIB.EF.Lsd_GiftMaster>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#downloaddump").click(function () {
+
+            $.ajax({
+
+                type: 'POST',
+
+                url: '@Url.Action("ExportToExcel", "LSD_Gift")',
+
+                //dataType: 'json',
+
+                data: {},
+
+                success: function (d) {
+
+
+                },
+
+                error: function (ex) {
+
+                    // alert('Failed to retrieve states.' + ex);
+                    // window.location.reload();
+
+                }
+
+            });
+
+
+        })
+
+
+
+    })
+
+    $(function () {
+
+        $.post("@Url.Content("~/LSD_Gift/GetLSDGift")", null, function (data) { SetGrid(data); }, "Json");
+
+
+
+    });
+    function SetGrid(data) {
+
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            $("#Grid tbody").empty();
+            $.each(data.result, function (key, value) {
+
+
+                body += "<tr><td>" + value.id + "</td>" +
+
+                    "<td>" + value.GiftName + "</td>" +
+
+
+
+            @*"<td><img src=" + "@Url.Content("~/Gallery/")" + value.GalleryImage + " style='height: 52px;width: 53px;' /> </td>" +*@
+              "<td>" + value.Gitdescription + "</td>" +
+             "<td>" + value.status + "</td>" +
+            "<td style='text-align:right;'><a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a><a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+
+            });
+            $("#Grid tbody").append(body);
+
+
+            paging();
+
+        }
+
+    }
+
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+
+            $.post("@Url.Content("~/LSD_Gift/Delete")", { id: id }, function (data) {
+                $.post("@Url.Content("~/LSD_Gift/GetLSDGift")", null, function (data) { SetGrid(data); }, "Json");
+
+                alert(data);
+
+            }, "Json");
+        }
+    }
+
+    function Edit(id) {
+        location.href = "@Url.Content("~/LSD_Gift/Edit/")" + id;
+    }
+    //function SetPages(paging) {
+    //    var pages = "";
+    //    $("#Paging").empty();
+    //    for (var i = 1; i <= parseInt(paging) ; i++) {
+    //        pages += "<a style='cursor:pointer' onclick=GetPagesValues(" + i + ");> " + i + "  </a>";
+
+    //    }
+    //    $("#Paging").append("<u> Pages:-</u>" + pages);
+    //}
+
+    $(function () {
+
+        ValidationMessage();
+    });
+    function ValidationMessage() {
+        @*if ('@ViewBag.StartDate' != "") {
+            $("#sdate").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#edate").text('@ViewBag.EndDate');
+        }*@
+
+        if ('@ViewBag.File' != "") {
+            $("#file").text('@ViewBag.File');
+        }
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            location.href = "@Url.Content("~/LSD_Gift/Index")";
+        }
+        @*$("#stdate").val('@ViewBag.preStartDate');
+        $("#etdate").val('@ViewBag.PreEndDate');*@
+
+    }
+
+
+    $(function () {
+
+        $("#txtsearch").on("keyup", function (event) {
+
+            if (event.which == 8) {
+
+                if ($("#txtsearch").val() == null || $("#txtsearch").val() == 0) {
+                    $('#Paging').empty();
+                    $.post("@Url.Content("~/LSD_Gift/GetLSDGift")", null, function (data) { SetGrid(data); }, "Json");
+                }
+
+            }
+
+            else {
+                if ($("#txtsearch").val() != null || $("#txtsearch").val() > 0) {
+                    var value = this.value.toLowerCase().trim();
+
+                    $('#Grid tr').each(function (index) {
+
+                        if (!index) return;
+
+                        $(this).find("td").each(function () {
+
+                            var id = $(this).text().toLowerCase().trim();
+                            var not_found = (id.indexOf(value) == -1);
+                            $(this).closest('tr').toggle(!not_found);
+                            return not_found;
+                        });
+
+                    });
+
+                }
+
+            }
+        });
+    });
+
+
+    function paging() {
+        $('#Paging').empty();
+
+        $(document).ready(function () {
+
+            var totalRows = $('#Grid').find('tbody tr:has(td)').length;
+
+            var recordPerPage = 15;
+            var numberOfPages = Math.ceil(totalRows / recordPerPage);
+
+            for (var i = 0; i < numberOfPages; i++) {
+                var pageNum = i + 1;
+                $('#Paging').append('<a href="#" rel="' + i + '">' + pageNum + '</a> ');
+            }
+
+            $('#Grid tbody tr').hide();
+            $('#Grid tbody tr').slice(0, recordPerPage).show();
+            $('#Paging a:first').addClass('active');
+            $('#Paging a').bind('click', function () {
+
+                var currentPage = $(this).attr('rel');
+                var startitem = currentPage * recordPerPage;
+                var enditem = startitem + recordPerPage;
+
+                //$('#Grid tbody tr').hide().slice(startitem, enditem).css('display', 'table-row').animate({ opacity: 1 }, 300);
+                $('#Grid tbody tr').hide().slice(startitem, enditem).show();
+            });
+
+        });
+    }
+
+
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Magical 7 - </span> Magical 7 Gift</h1>
+        </div>
+    </div>
+    @using (@Html.BeginForm("Save", "LSD_Gift", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="row">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Gift Name<span class="starMrk">*</span></label>
+                                @Html.TextBoxFor(a => a.FirstOrDefault().GiftName, new { @class = "form-control", @placeholder = "Enter gift name" })
+                                @Html.ValidationMessageFor(a => a.FirstOrDefault().GiftName, "", new { @class = "required" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Gift Description<span>*</span></label>
+                                @Html.TextAreaFor(a => a.FirstOrDefault().GiftDesc, new { @class = "form-control", @placeholder = "Enter gift description" })
+                                @Html.ValidationMessageFor(a => a.FirstOrDefault().GiftDesc, "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Upload Image<span>*</span></label>
+                                <input type="file" name="postedFile" style="border: none; outline: none;" />
+                                <span id="file" class="required"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Status<span>*</span></label>
+                                <input id="status" type="checkbox" checked="checked" name="Status" style="border: none; outline: none; height: inherit;" />
+                                <span class="Status"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="submit" class="save-but-m submitBtn" value="Submit" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="giftList" style="margin:20px 0 0 0 ;">
+        <div>
+            @*@using (Html.BeginForm("Index", "LSD_Gift", FormMethod.Post,
+                new { enctype = "multipart/form-data" }))
+                {*@
+            <table class="headingHd">
+                <tr>
+                    <th colspan="4" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Gift List</th>
+                    <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search with gift name", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+                    @*<input type="submit" id="btnsearch" value="Search" style="border:none; background: #ffaf38; padding: 7px 20px; border-radius: 5px;" />*@
+                </th>
+            </tr>
+        </table>
+        @*}*@
+    </div>
+    <div id="list" class="tabelGridRow">
+        <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:10px;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Gift Name</th>
+                    <th>Gift Description</th>
+                    <th>Status</th>
+                    <th style="text-align:right;"> Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div>
+            Pages :<span id="Paging"></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="space30"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="footerRow">
+            © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+        </div>
+    </div>
+</div>
+</div>

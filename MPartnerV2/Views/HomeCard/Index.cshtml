@@ -1,0 +1,1947 @@
+﻿@model Luminous.EF.Card_dynamicPage
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+    <link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />*@
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+<style>
+    .FullDes {
+        position: relative;
+        background-color: #1D1D1D;
+        width: 245px;
+        color: white;
+        border: 1px solid black;
+        display: none;
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+
+        $.post("@Url.Content("~/HomeCard/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+        $.post("@Url.Content("~/HomeCard/GetCardProvider")", null, function (data) { SetCardGrid(data); }, "Json");
+        $.post("@Url.Content("~/HomeCard/GetRedirectPage")", null, function (data) { SetRedirectPage(data); }, "Json");
+        @*$.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },
+        "Json");*@
+        $(".date").datepicker(
+     { dateFormat: "dd-mm-yy" }
+        );
+        $("#DestributorList").chosen({ width: "100px" });
+        $("#DealerList").chosen({ width: "100px" });
+
+        $(".oneimagecard").hide();
+        $(".scheme_Priceheader").hide();
+        $(".gridcard").hide();
+        $(".submit").hide();
+        $(".grid_childimage").hide();
+        $(".more_cardprovider").hide();
+        $(".banner_cardprovider").hide();
+        $(".carddata").hide();
+        $(".datetime").hide();
+        $(".status").hide();
+
+        $("#Ctype").change(function () {
+            if ($("#Ctype").val() == '1') {
+                $(".oneimagecard").show();
+                $(".submit").show();
+                $("#dynaTableContent").hide();
+                $(".carddata").show();
+                $(".datetime").show();
+                $(".status").show();
+                $(".scheme_Priceheader").hide();
+                $(".gridcard").hide();
+                $(".grid_childimage").hide();
+                $(".more_cardprovider").hide();
+                $(".banner_cardprovider").hide();
+
+            }
+            if ($("#Ctype").val() == '2') {
+                $(".oneimagecard").hide();
+                $("#dynaTableContent").hide();
+                $(".submit").show();
+                $(".carddata").show();
+                $(".datetime").show();
+                $(".status").show();
+                $(".scheme_Priceheader").show();
+                $(".gridcard").hide();
+                $(".grid_childimage").hide();
+                $(".more_cardprovider").hide();
+                $(".banner_cardprovider").hide();
+
+            }
+            if ($("#Ctype").val() == '6') {
+                $(".oneimagecard").hide();
+                $("#dynaTableContent").hide();
+                $(".submit").show();
+                $(".carddata").show();
+                $(".datetime").show();
+                $(".scheme_Priceheader").hide();
+                $(".gridcard").show();
+                $(".status").show();
+                $(".grid_childimage").show();
+                $(".more_cardprovider").hide();
+                $(".banner_cardprovider").hide();
+
+            }
+            if ($("#Ctype").val() == '7') {
+                $(".oneimagecard").hide();
+                $("#dynaTableContent").hide();
+                $(".submit").show();
+                $(".carddata").show();
+                $(".datetime").show();
+                $(".status").show();
+                $(".scheme_Priceheader").hide();
+                $(".gridcard").hide();
+                $(".grid_childimage").hide();
+                $(".more_cardprovider").show();
+                $(".banner_cardprovider").hide();
+
+            }
+            if ($("#Ctype").val() == '8') {
+                $(".oneimagecard").hide();
+                $("#dynaTableContent").show();
+                $(".submit").show();
+                $(".carddata").show();
+                $(".datetime").show();
+                $(".status").show();
+                $(".scheme_Priceheader").hide();
+                $(".gridcard").hide();
+                $(".grid_childimage").hide();
+                $(".more_cardprovider").hide();
+                $(".banner_cardprovider").show();
+
+            }
+            if ($("#Ctype").val() == '11') {
+                $(".oneimagecard").hide();
+                $("#dynaTableContent").hide();
+                $(".submit").show();
+                $(".carddata").show();
+                $(".datetime").show();
+                $(".scheme_Priceheader").show();
+                $(".gridcard").hide();
+                $(".status").show();
+                $(".grid_childimage").hide();
+                $(".more_cardprovider").hide();
+                $(".banner_cardprovider").hide();
+
+            }
+        })
+        ValidationMessage();
+
+    });
+
+</script>
+<script type="text/javascript">
+    function ValidationMessage() {
+        if ('@ViewBag.StartDate' != "") {
+            $("#sdate").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#edate").text('@ViewBag.EndDate');
+        }
+
+        if ('@ViewBag.File' != "") {
+            $("#file").text('@ViewBag.File');
+        }
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            location.href = "@Url.Content("~/HomeCard/Index")";
+        }
+        $("#sdate").val('@ViewBag.preStartDate');
+        $("#edate").val('@ViewBag.PreEndDate');
+        debugger;
+    }
+</script>
+<script type="text/javascript">
+
+
+    function SetGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            $("#Grid tbody").empty();
+            $.each(data.result, function (key, value) {
+
+                body += "<tr class=ui-sortable-handle><td> " + value.id + "</td>" +
+
+
+                "<td>" + value.CardProvider + "</td>" +
+                  "<td>" + value.Title + "</td>" +
+                    "<td>" + value.Subtitle + "</td>" +
+                                        //"<td>" + value.sequence + "</td>" +
+
+             "<td>" + value.StartDate + "</td>" +
+             "<td>" + value.EndDate + "</td>" +
+             "<td>" + value.status + "</td>" +
+            "<td style='text-align:right;'><a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a><a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+
+
+
+            });
+            $("#Grid tbody").append(body);
+            // SetPages(data.TotalRecord)
+            paging();
+        }
+    }
+    @*function SetPages(paging) {
+        var pages = "";
+        $("#Paging").empty();
+        for (var i = 1; i <= parseInt(paging); i++) {
+            pages += "<a style='cursor:pointer' onclick=GetPagesValues(" + i + ");> " + i + "  </a>";
+
+        }
+        $("#Paging").append("<u> Pages:-</u>" + pages);
+    }
+    function GetPagesValues(id) {
+        $.post("@Url.Content("~/HomeCard/GetContactDetail")", { page: id }, function (data) { SetGrid(data); }, "Json");
+    }*@
+    function Edit(id) {
+        location.href = "@Url.Content("~/HomeCard/Edit/")" + id;
+    }
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+
+            $.post("@Url.Content("~/HomeCard/Delete")", { id: id }, function (data) {
+                $.post("@Url.Content("~/HomeCard/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+
+                alert(data);
+
+            }, "Json");
+        }
+    }
+
+
+    //Set Card Grid//
+    function SetCardGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#Ctype");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+        }
+    }
+
+    //Set Card Grid//
+    function SetRedirectPage(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $(".redirectpage");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+        }
+    }
+
+</script>
+<script type="text/javascript">
+    function Allch() {
+        if ($("#All").is(":checked")) {
+            $("#region").attr("disabled", true);
+            $("#destributor").attr("disabled", true);
+            $("#Dealer").attr("disabled", true);
+            $("#userupload_file").attr("disabled", true);
+            $("#RegionList_chosen").hide();
+            $("#DestributorList_chosen").hide();
+            $("#DealerList_chosen").hide();
+            $("#checkDistri").hide();
+            $("#checkDeal").hide();
+        }
+        else {
+            $("#region").attr("disabled", false);
+            $("#destributor").attr("disabled", false);
+            $("#Dealer").attr("disabled", false);
+            $("#userupload_file").attr("disabled", false);
+            $("#RegionList_chosen").show();
+            $("#DestributorList_chosen").show();
+            $("#DealerList_chosen").show();
+            $("#checkDistri").show();
+            $("#checkDeal").show();
+        }
+
+    }
+
+    $("body").on("click", "#addRow", function (e) {
+
+        debugger;
+        e.preventDefault();
+
+        // var str = '<tr><td><input type="text" name="redirectpage_1" value="" /></td><td></td><td>3</td><td>4</td><td>5</td></tr>';
+
+        $("div#dynaTableContent").append("<div class='sameRow'>" + $(".rowReapte").html() + "</div>");
+        document.getElementById('addRow').disabled = true;
+       // $('.rowReapte #addRow').disabled = true;
+
+    });
+
+    var flag = true;
+    var flage = true;
+    var flagee = false;
+    var f1 = false;
+    var f2 = false;
+    var f3 = false;
+    var f4 = false;
+    
+
+    $(function () {
+
+        var _URL = window.URL || window.webkitURL;
+        var imgwidth = "";
+        var imgheight = "";
+
+        $("input:file").change(function () {
+            debugger;
+            var file_size = (this.files[0].size);
+
+            if ($("#Ctype").val() == "1") {
+                if ($("#mainimage_oneImage").val() != '' && $("#mainimage_oneImage").length != 0 && file_size >= 25000) {
+                    $("#file_error_oneimage").html("File size should not be greater than 25 KB");
+                    $("#mainimage_oneImage").val('');
+                    return false;
+
+                }
+                else {
+
+                    if ((file = this.files[0])) {
+                        img = new Image();
+                        img.onload = function () {
+
+                            imgwidth = this.width;
+                            imgheight = this.height;
+
+                            if (imgwidth == 500 && imgheight == 400) {
+                                $("#file_error_oneimage").html("");
+                                //flag = false;
+                                return true;
+                            }
+                            else {
+                                $("#file_error_oneimage").html("Dimension should be 500*400");
+                                $("#mainimage_oneImage").val('');
+                                return false;
+
+                            }
+
+                        }
+                        img.src = _URL.createObjectURL(file);
+                    }
+
+                }
+
+            }
+
+            if (($("#Ctype").val() == "2")) {
+
+                if (flag) {
+                    if ($("#headerimage_scheme").val() != '' && $("#headerimage_scheme").length != 0) {
+                        if ($("#headerimage_scheme").length != 0 && file_size >= 4000) {
+                            $("#file_error_headerimage").html("File size should not be greater than 4 KB");
+                            $("#headerimage_scheme").val('');
+                            return false;
+                        }
+                        else {
+                            if ((file = this.files[0])) {
+                                img = new Image();
+                                img.onload = function () {
+                                    imgwidth = this.width;
+                                    imgheight = this.height;
+
+                                    if (imgwidth == 700 && imgheight == 151) {
+                                        $("#file_error_headerimage").html("");
+                                        flag = false;
+                                        return true;
+                                    }
+                                    else {
+                                        $("#file_error_headerimage").html("Dimension should be 700*151");
+                                        $("#headerimage_scheme").val('');
+                                        return false;
+                                    }
+
+                                }
+                                img.src = _URL.createObjectURL(file);
+                            }
+                        }
+                    }
+                }
+
+                if ($("#mainimage_scheme").val() != '' && $("#mainimage_scheme").length != 0) {
+
+                    if ($("#mainimage_scheme").length != 0 && file_size > 220000 && $("#mainimage_scheme") != '') {
+
+                        $("#file_error_mainimage").html("File size should not be greater than 220 KB");
+                        $("#mainimage_scheme").val('');
+                        return false;
+                    }
+                    else {
+
+                        if ((file = this.files[0])) {
+                            img = new Image();
+                            img.onload = function () {
+
+                                imgwidth = this.width;
+                                imgheight = this.height;
+
+                                if (imgwidth == 724 && imgheight == 290) {
+                                    $("#file_error_mainimage").html("");
+                                    return true;
+                                }
+                                else {
+                                    $("#file_error_mainimage").html("Dimension should be 724*290");
+                                    $("#mainimage_scheme").val('');
+                                    return false;
+                                }
+                            }
+                            img.src = _URL.createObjectURL(file);
+                        }
+                    }
+
+                }
+
+            }
+
+            if ($("#Ctype").val() == "6") {
+
+                if (flage) {
+                    if ($("#mainimage_homegrid").val() != '' && $("#mainimage_homegrid").length != 0) {
+                        if ($("#mainimage_homegrid").length != 0 && file_size >= 94000) {
+                            $("#file_error_main_homegrid").html("File size should not be greater than 94 KB");
+                            $("#mainimage_homegrid").val('');
+                            return false;
+                        }
+                        else {
+                            if ((file = this.files[0])) {
+                                img = new Image();
+                                img.onload = function () {
+
+                                    imgwidth = this.width;
+                                    imgheight = this.height;
+
+                                    if (imgwidth == 500 && imgheight == 655) {
+                                        $("#file_error_main_homegrid").html("");
+                                        flage = false;
+                                        flagee = true;
+                                        return true;
+                                    }
+                                    else {
+                                        $("#file_error_main_homegrid").html("Dimension should be 500*655");
+                                        $("#mainimage_homegrid").val('');
+                                        return false;
+                                    }
+                                }
+                                img.src = _URL.createObjectURL(file);
+                            }
+
+                        }
+
+                    }
+                }
+
+                if (flage == false && flagee == true) {
+
+                    if ($("#gridbackimage_homegrid").val() != '' && $("#gridbackimage_homegrid").length != 0) {
+                        if ($("#gridbackimage_homegrid").length != 0 && file_size > 10000 && $("#gridbackimage_homegrid") != '') {
+                            $("#file_error_grigback").html("File size should not be greater than 4 KB");
+                            $("#gridbackimage_homegrid").val('');
+                            return false;
+                        }
+                        else {
+                            if ((file = this.files[0])) {
+                                img = new Image();
+                                img.onload = function () {
+                                    imgwidth = this.width;
+                                    imgheight = this.height;
+
+                                    if (imgwidth == 439 && imgheight == 439) {
+                                        $("#file_error_grigback").html("");
+                                        flage = false;
+                                        flagee = false;
+                                        f1 = true;
+                                        return true;
+                                    }
+                                    else {
+                                        $("#file_error_grigback").html("Dimension should be 439*439");
+                                        $("#gridbackimage_homegrid").val('');
+                                        return false;
+                                    }
+                                }
+                                img.src = _URL.createObjectURL(file);
+                            }
+                        }
+
+                    }
+                }
+
+                if (f1) {
+
+                    if ($("#first_gridchildimage").val() != '' && $("#first_gridchildimage").length != 0) {
+                        if ($("#first_gridchildimage").length != 0 && file_size > 12000 && $("#first_gridchildimage") != '') {
+                            $("#file_error_childimage1").html("File size should not be greater than 12 KB");
+                            $("#first_gridchildimage").val('');
+                            return false;
+                        }
+                        else {
+                            if ((file = this.files[0])) {
+                                img = new Image();
+                                img.onload = function () {
+                                    imgwidth = this.width;
+                                    imgheight = this.height;
+                                    if (imgwidth == 150 && imgheight == 204) {
+                                        $("#file_error_childimage1").html("");
+                                        f1 = false;
+                                        f2 = true;
+                                        return true;
+                                    }
+                                    else {
+                                        $("#file_error_childimage1").html("Dimension should be 150*204");
+                                        $("#first_gridchildimage").val('');
+                                        return false;
+                                    }
+                                }
+                                img.src = _URL.createObjectURL(file);
+                            }
+                        }
+
+                    }
+                }
+
+                if (f2) {
+
+                    if ($("#second_gridchildimage").val() != '' && $("#second_gridchildimage").length != 0) {
+                        if ($("#second_gridchildimage").length != 0 && file_size > 12000 && $("#second_gridchildimage") != '') {
+                            $("#file_error_childimage2").html("File size should not be greater than 12 KB");
+                            $("#second_gridchildimage").val('');
+                            return false;
+                        }
+                        else {
+                            if ((file = this.files[0])) {
+                                img = new Image();
+                                img.onload = function () {
+                                    imgwidth = this.width;
+                                    imgheight = this.height;
+                                    if (imgwidth == 150 && imgheight == 204) {
+                                        $("#file_error_childimage2").html("");
+                                        f2 = false;
+                                        f3 = true;
+                                        return true;
+                                    }
+                                    else {
+                                        $("#file_error_childimage2").html("Dimension should be 150*204");
+                                        $("#second_gridchildimage").val('');
+                                        return false;
+                                    }
+                                }
+                                img.src = _URL.createObjectURL(file);
+                            }
+                        }
+
+                    }
+                }
+                if (f3) {
+
+
+                    if ($("#third_gridchildimage").val() != '' && $("#third_gridchildimage").length != 0) {
+                        if ($("#third_gridchildimage").length != 0 && file_size > 12000 && $("#third_gridchildimage") != '') {
+                            $("#file_error_childimage3").html("File size should not be greater than 12 KB");
+                            $("#third_gridchildimage").val('');
+                            return false;
+                        }
+                        else {
+                            if ((file = this.files[0])) {
+                                img = new Image();
+                                img.onload = function () {
+                                    imgwidth = this.width;
+                                    imgheight = this.height;
+                                    if (imgwidth == 150 && imgheight == 204) {
+                                        $("#file_error_childimage3").html("");
+                                        f3 = false;
+                                        f4 = true;
+                                        return true;
+                                    }
+                                    else {
+                                        $("#file_error_childimage3").html("Dimension should be 150*204");
+                                        $("#third_gridchildimage").val('');
+                                        return false;
+                                    }
+                                }
+                                img.src = _URL.createObjectURL(file);
+                            }
+                        }
+
+                    }
+                }
+                if (f4) {
+
+                    if ($("#fourth_gridchildimage").val() != '' && $("#fourth_gridchildimage").length != 0) {
+                        if ($("#fourth_gridchildimage").length != 0 && file_size > 12000 && $("#fourth_gridchildimage") != '') {
+                            $("#file_error_childimage4").html("File size should not be greater than 12 KB");
+                            $("#fourth_gridchildimage").val('');
+                            return false;
+                        }
+                        else {
+                            if ((file = this.files[0])) {
+                                img = new Image();
+                                img.onload = function () {
+                                    imgwidth = this.width;
+                                    imgheight = this.height;
+                                    if (imgwidth ==150 && imgheight == 204) {
+                                        $("#file_error_childimage4").html("");
+                                        f3 = false;
+                                        f4 = false;
+                                        return true;
+                                    }
+                                    else {
+                                        $("#file_error_childimage4").html("Dimension should be 150*204");
+                                        $("#fourth_gridchildimage").val('');
+                                        return false;
+                                    }
+                                }
+                                img.src = _URL.createObjectURL(file);
+                            }
+                        }
+
+                    }
+
+                }
+            }
+
+            if ($("#Ctype").val() == "7") {
+
+                if ($("#mainimage_knowmore").val() != '' && $("#mainimage_knowmore").length != 0 && file_size >= 80000) {
+                    $("#file_error_knowmore").html("File size should not be greater than 80 KB");
+                    $("#mainimage_knowmore").val('');
+                    return false;
+                }
+                else {
+
+                    if ((file = this.files[0])) {
+                        img = new Image();
+                        img.onload = function () {
+
+                            imgwidth = this.width;
+                            imgheight = this.height;
+
+                            if (imgwidth == 500 && imgheight == 200) {
+                                $("#file_error_knowmore").html("");
+
+                                //flag = false;
+                                return true;
+                            }
+                            else {
+                                $("#file_error_knowmore").html("Dimension should be 500*255");
+                                $("#mainimage_knowmore").val('');
+                                return false;
+
+                            }
+
+                        }
+                        img.src = _URL.createObjectURL(file);
+                    }
+
+                }
+
+            }
+
+            if ($("#Ctype").val() == "8") {
+
+               
+                debugger;
+                if ($("#mainimage_homebanner").val() != '' && $("#mainimage_homebanner").length != 0) {
+                    if ($("#mainimage_homebanner").length != 0 && file_size > 35000 && $("#mainimage_homebanner") != '') {
+                        $("#file_error_banner").html("File size should not be greater than 25 KB");
+                        $("#mainimage_homebanner").val('');
+                        document.getElementById('addRow').disabled = true;
+                       
+                        return false;
+
+                    }
+                    else {
+
+                        if ((file = this.files[0])) {
+                            img = new Image();
+                            img.onload = function () {
+                                imgwidth = this.width;
+                                imgheight = this.height;
+                                if (imgwidth == 500 && imgheight == 200) {
+                                    $("#file_error_banner").html("");
+                                    document.getElementById('addRow').disabled = false;
+                                    
+
+                                    return true;
+                                }
+                                else {
+                                    $("#file_error_banner").html("Dimension should be 500*400");
+                                    $("#mainimage_homebanner").val('');
+                                    document.getElementById('addRow').disabled = true;
+                                    return false;
+                                }
+                                
+                            }
+                            
+                            img.src = _URL.createObjectURL(file);
+                        }
+
+                        
+                        
+                    }
+
+                }
+
+            }
+
+        });
+
+    });
+
+    ///$("input:file").change(function () {
+
+    //$("#mainimage_oneImage").change(function () {
+
+    //    debugger;
+
+    //    $(".file_error_banner").html("");
+    //    var file = this.files[0];
+    //    var file_size = (this.files[0].size)
+    //    checkdimension(file, file_size);
+
+
+    //    //$(".file_error_oneimage").html("");
+    //    //var file_size = (this.files[0].size)
+
+    //    //if (file_size > 50000) {
+    //    //    $(this).next(".file_error_oneimage").html("File size is greater than 50 KB");
+    //    //    return false;
+    //    //}
+    //    //else {
+    //    //    if ((file = this.files[0])) {
+    //    //        img = new Image();
+    //    //        img.onload = function () {
+    //    //            //alert(this.width + " " + this.height);
+    //    //            imgwidth = this.width;
+    //    //            imgheight = this.height;
+    //    //            if (imgwidth == 700 && imgheight == 151) {
+
+    //    //                $(".file_error_oneimage").html("");
+
+    //    //                return true;
+    //    //            }
+    //    //            else {
+
+    //    //                $(".file_error_oneimage").html("Dimension should be 700*151");
+
+    //    //                return false;
+    //    //            }
+    //    //        };
+    //    //        img.src = _URL.createObjectURL(file);
+
+    //    //    }
+    //    //}
+
+    //});
+
+    //$("#mainimage_knowmore ").change(function () {
+
+    //    debugger;
+
+    //    $(".file_error_banner").html("");
+    //    var file = this.files[0];
+    //    var file_size = (this.files[0].size)
+    //    checkdimension(file, file_size);
+
+
+    //    //$(".file_error_knowmore").html("");
+    //    //var file_size = (this.files[0].size)
+
+    //    //if (file_size > 50000) {
+    //    //    $(this).next(".file_error_knowmore").html("File size is greater than 50 KB");
+    //    //    return false;
+    //    //}
+    //    //else {
+    //    //    if ((file = this.files[0])) {
+    //    //        img = new Image();
+    //    //        img.onload = function () {
+    //    //            //alert(this.width + " " + this.height);
+    //    //            imgwidth = this.width;
+    //    //            imgheight = this.height;
+    //    //            if (imgwidth == 700 && imgheight == 151) {
+
+    //    //                $(".file_error_knowmore").html("");
+
+    //    //                return true;
+    //    //            }
+    //    //            else {
+
+    //    //                $(".file_error_knowmore").html("Dimension should be 700*151");
+
+    //    //                return false;
+    //    //            }
+    //    //        };
+    //    //        img.src = _URL.createObjectURL(file);
+
+    //    //    }
+    //    //}
+
+    //});
+
+
+    //$("#headerimage_scheme").change(function () {
+
+    //    debugger;
+
+    //    $(".file_error").html("");
+    //    var file_size = (this.files[0].size)
+
+    //    if (file_size > 50000) {
+    //        $(this).next(".file_error").html("File size is greater than 50 KB");
+    //        return false;
+    //    }
+    //    else {
+    //        if ((file = this.files[0])) {
+    //            img = new Image();
+    //            img.onload = function () {
+    //                //alert(this.width + " " + this.height);
+    //                imgwidth = this.width;
+    //                imgheight = this.height;
+    //                if (imgwidth == 700 && imgheight == 151) {
+
+    //                    $(".file_error").html("");
+
+    //                    return true;
+    //                }
+    //                else {
+
+    //                    $(".file_error").html("Dimension should be 700*151");
+
+    //                    return false;
+    //                }
+    //            };
+    //            img.src = _URL.createObjectURL(file);
+
+    //        }
+    //    }
+
+    //});
+
+    //$("#mainimage_scheme").change(function () {
+    //    debugger;
+    //        $(".file_error1").html("");
+    //        var file_size = (this.files[0].size)
+
+    //        if (file_size > 50000) {
+    //            $(this).next(".file_error1").html("File size is greater than 50 KB");
+    //            return false;
+    //        }
+    //        else {
+    //            if ((file = this.files[0])) {
+    //                img = new Image();
+    //                img.onload = function () {
+    //                    //alert(this.width + " " + this.height);
+    //                    imgwidth = this.width;
+    //                    imgheight = this.height;
+    //                    if (imgwidth == 700 && imgheight == 151) {
+
+    //                        $(".file_error1").html("");
+
+    //                        return true;
+    //                    }
+    //                    else {
+
+    //                        $(".file_error1").html("Dimension should be 700*151");
+
+    //                        return false;
+    //                    }
+    //                };
+    //                img.src = _URL.createObjectURL(file);
+
+    //            }
+    //        }
+    //});
+
+    //$("#mainimage_homebanner").change(function () {
+
+    //    debugger;
+
+    //    var file = this.files[0];
+    //    var file_size = (this.files[0].size)
+    //    checkdimension(file, file_size);
+
+    //    //$(".file_error_banner").html("");
+    //    //var file_size = (this.files[0].size)
+
+    //    //if (file_size > 50000) {
+    //    //    $(this).next(".file_error_banner").html("File size is greater than 50 KB");
+    //    //    return false;
+    //    //}
+    //    //else {
+    //    //    if ((file = this.files[0])) {
+    //    //        img = new Image();
+    //    //        img.onload = function () {
+    //    //            //alert(this.width + " " + this.height);
+    //    //            imgwidth = this.width;
+    //    //            imgheight = this.height;
+    //    //            if (imgwidth == 700 && imgheight == 151) {
+
+    //    //                $(".file_error_banner").html("");
+
+    //    //                return true;
+    //    //            }
+    //    //            else {
+
+    //    //                $(".file_error_banner").html("Dimension should be 700*151");
+
+    //    //                return false;
+    //    //            }
+    //    //        };
+    //    //        img.src = _URL.createObjectURL(file);
+
+    //    //    }
+    //    //}
+
+    //});
+
+
+
+
+
+    //Grid Swapping//
+    $(document).ready(function () {
+        var coords = new Array();
+        $('#Grid tbody').addClass("DragMe");
+
+        $('.DragMe').sortable({
+            disabled: false,
+            axis: 'y',
+            //items: "> tr:not(:first)",
+            forceHelperSize: true,
+            update: function (event, ui) {
+                var Newpos = ui.item.index();
+
+                var RefID = $('tr').find('td:first').html();
+                //var RefID=   $(this).closest('tr').attr('id');
+
+                //alert("Position " + Newpos + "..... RefID: " + RefID);
+                $("#Grid tr:has(td)").each(function () {
+
+                    var RefID = $(this).find("td:eq(0)").html();
+                    var NewPosition = $(".ui-sortable-handle").index(this) + 1;
+                    //alert(RefID + " " + NewPosition);
+                    coords.push({ x: RefID, y: NewPosition });
+                });
+
+                for (var i = 0; i < coords.length; i++) {
+                    var xcoord = coords[i].x + "," + coords[i].y;
+
+                    var arr = { ids: xcoord };
+                    $.ajax({
+                        url: '@Url.Action("UpdateSequence", "HomeCard")',
+                        type: 'POST',
+                        data: JSON.stringify(arr),
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function (msg) {
+                            alert(msg);
+                        }
+                    });
+                }
+
+                coords.length = 0;
+
+
+            }
+        }).disableSelection();
+    });
+    //Grid Swapping End//
+
+
+
+    $(function () {
+
+        $("#txtsearch").on("keyup", function (event) {
+
+            if (event.which == 8) {
+
+                if ($("#txtsearch").val() == null || $("#txtsearch").val() == 0) {
+                    $('#Paging').empty();
+                    $.post("@Url.Content("~/Homecard/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+                }
+
+            }
+
+            else {
+                if ($("#txtsearch").val() != null || $("#txtsearch").val() > 0) {
+                    var value = this.value.toLowerCase().trim();
+
+                    $('#Grid tr').each(function (index) {
+
+                        if (!index) return;
+
+                        $(this).find("td").each(function () {
+
+                            var id = $(this).text().toLowerCase().trim();
+                            var not_found = (id.indexOf(value) == -1);
+                            $(this).closest('tr').toggle(!not_found);
+                            return not_found;
+                        });
+
+                    });
+
+                }
+
+            }
+        });
+
+        $("#title_colour").click(function () {
+
+            window.open('https://htmlcolorcodes.com/color-picker/');
+        })
+
+        $("#title_colour1").click(function () {
+
+            window.open('https://htmlcolorcodes.com/color-picker/');
+        })
+
+        $("#subtitle_colour").click(function () {
+            window.open('https://htmlcolorcodes.com/color-picker/');
+
+        })
+
+
+    });
+
+
+    function paging() {
+        $('#Paging').empty();
+
+        $(document).ready(function () {
+
+            var totalRows = $('#Grid').find('tbody tr:has(td)').length;
+
+            var recordPerPage = 15;
+            var numberOfPages = Math.ceil(totalRows / recordPerPage);
+
+            for (var i = 0; i < numberOfPages; i++) {
+                var pageNum = i + 1;
+                $('#Paging').append('<a href="#" rel="' + i + '">' + pageNum + '</a> ');
+            }
+
+            $('#Grid tbody tr').hide();
+            $('#Grid tbody tr').slice(0, recordPerPage).show();
+            $('#Paging a:first').addClass('active');
+            $('#Paging a').bind('click', function () {
+
+                var currentPage = $(this).attr('rel');
+                var startitem = currentPage * recordPerPage;
+                var enditem = startitem + recordPerPage;
+
+                //$('#Grid tbody tr').hide().slice(startitem, enditem).css('display', 'table-row').animate({ opacity: 1 }, 300);
+                $('#Grid tbody tr').hide().slice(startitem, enditem).show();
+            });
+
+        });
+    }
+
+
+</script>
+
+
+<script>
+
+    $(document).ready(function () {
+        debugger;
+        $("#headertxtcolor, #headersubtitlecolor, #regex").change(function () {
+            debugger;
+
+            var regExp = new RegExp("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$");
+
+            var text1 = $("#headertxtcolor").val();
+            var text2 = $("#headersubtitlecolor").val();
+            var text3 = $("#regex").val();
+
+            if ($("#headertxtcolor").val() != '') {
+                if (regExp.test(text1)) {
+                    $("#lblmessagehex1scheme").hide();
+                }
+
+                else {
+                    $("#lblmessagehex1scheme").show();
+                    $("#lblmessagehex1scheme").text("Please Enter a Valid Hex Code");
+                    $("#headertxtcolor").val('');
+                }
+
+            }
+
+            if ($("#headersubtitlecolor").val() != '') {
+                if (regExp.test(text2)) {
+                    $("#lblmessagehex2scheme").hide();
+                }
+
+                else {
+                    $("#lblmessagehex2scheme").show();
+                    $("#lblmessagehex2scheme").text("Please Enter a Valid Hex Code");
+                    $("#headersubtitlecolor").val('');
+                }
+
+            }
+
+            if ($("#regex").val() != '') {
+                if (regExp.test(text3)) {
+                    $("#lblmessage").hide();
+                }
+
+                else {
+                    $("#lblmessage").show();
+                    $("#lblmessage").text("Please Enter a Valid Hex Code");
+                    $("#regex").val('');
+                }
+
+            }
+
+        });
+    });
+
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#btnsubmit").click(function () {
+            debugger;
+           
+
+            if ($("#Ctype").val() == "1") {
+                if ($('#redirectpage1_oneImage').val() == 0 || $('#redirectpage1_oneImage option:selected').val() == 0) {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($('#mainimage_oneImage').length == 0 || $('#mainimage_oneImage').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($("#sdate").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    // alert("Please fill all the fields");
+                    return false;
+                }
+                if ($("#edate").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    //alert("Please fill all the fields");
+                    return false;
+                }
+
+
+            }
+
+            if ($("#Ctype").val() == "2") {
+
+                if ($("#headertitle").val() == "") {
+                    //alert("Please fill all the fields");
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    $("#lblmessagesubmit").show();
+                    return false;
+                }
+
+                if ($("#headertxtcolor").val() == "") {
+                    //alert("Please fill all the fields");
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    $("#lblmessagesubmit").show();
+                    return false;
+                }
+
+                if ($("#headersubtitle").val() == "") {
+                    //alert("Please fill all the fields");
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    $("#lblmessagesubmit").show();
+                    return false;
+                }
+
+                if ($("#headersubtitlecolor").val() == "") {
+                    //alert("Please fill all the fields");
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    $("#lblmessagesubmit").show();
+                    return false;
+                }
+
+                if ($('#headerimage_scheme').length == 0 || $('#headerimage_scheme').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+
+                    return false;
+                }
+
+                if ($('#mainimage_scheme').length == 0 || $('#mainimage_scheme').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($('#redirectpage1').val() == 0 || $('#redirectpage1 option:selected').val() == 0) {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($("#sdate").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    // alert("Please fill all the fields");
+                    return false;
+                }
+                if ($("#edate").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    //alert("Please fill all the fields");
+                    return false;
+                }
+            }
+
+            if ($("#Ctype").val() == "6") {
+                if ($('#mainimage_homegrid').length == 0 || $('#mainimage_homegrid').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($('#gridbackimage_homegrid').length == 0 || $('#gridbackimage_homegrid').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($("#firsttitle").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+
+                    return false;
+                }
+
+                if ($('#first_gridchildimage').length == 0 || $('#first_gridchildimage').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($('#redirectpage1_gridchild1').val() == 0 || $('#redirectpage1_gridchild1 option:selected').val() == 0) {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+
+                if ($("#secondtitle").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+
+                    return false;
+                }
+
+                if ($('#second_gridchildimage').length == 0 || $('#second_gridchildimage').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($('#redirectpage1_gridchild2').val() == 0 || $('#redirectpage1_gridchild2 option:selected').val() == 0) {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+
+                if ($("#thirdtitle").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+
+                    return false;
+                }
+
+                if ($('#third_gridchildimage').length == 0 || $('#third_gridchildimage').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($('#redirectpage1_gridchild3').val() == 0 || $('#redirectpage1_gridchild3 option:selected').val() == 0) {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($("#fourthtitle").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+
+                    return false;
+                }
+
+                if ($('#fourth_gridchildimage').length == 0 || $('#fourth_gridchildimage').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($('#redirectpage1_gridchild4').val() == 0 || $('#redirectpage1_gridchild4 option:selected').val() == 0) {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($("#sdate").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    // alert("Please fill all the fields");
+                    return false;
+                }
+                if ($("#edate").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    //alert("Please fill all the fields");
+                    return false;
+                }
+
+            }
+
+
+            if ($("#Ctype").val() == "7") {
+                if ($('#redirectpage2').val() == 0 || $('#redirectpage2 option:selected').val() == 0) {
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($('#mainimage_knowmore').length == 0 || $('#mainimage_knowmore').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($("#regex").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    //$("#lblmessagesubmit").show();
+                    return false;
+                }
+
+                if ($("#txtknowmore").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+
+                    return false;
+                }
+
+                if ($("#sdate").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    // alert("Please fill all the fields");
+                    return false;
+                }
+                if ($("#edate").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    //alert("Please fill all the fields");
+                    return false;
+                }
+
+            }
+
+            if ($("#Ctype").val() == "8") {
+                
+
+                if ($('#redirectpage1_homebanner').val() == 0 || $('#redirectpage1_homebanner option:selected').val() == 0) {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($('#mainimage_homebanner').length == 0 || $('#mainimage_homebanner').val() == '') {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+                    return false;
+
+                }
+
+                if ($("#sdate").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+
+                    return false;
+                }
+                if ($("#edate").val() == "") {
+
+                    $("#lblmessagesubmit").text("Please fill all the fields");
+
+                    return false;
+                }
+            }
+
+        });
+
+    });
+
+</script>
+<script type="text/javascript">
+
+    $(function () {
+
+        $("#Ctype").change(function () {
+            if ($("#Ctype").val() == "8") {
+                document.getElementById('addRow').disabled = true;
+            }
+        });
+    });
+
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8; min-height:800px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span></span> Home Card</h1>
+        </div>
+    </div>
+    <div id="form" style="">
+        @using (Html.BeginForm("SaveContact", "HomeCard", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Card Type<span class="required">*</span></label>
+                                    <select name="Ctype" class="form-control" id="Ctype">
+                                        <option>Select</option>
+                                    </select>
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.CardProviderId, "", new { @class = "required" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Box One -->
+                <div class="aos-init aos-animate oneimagecard" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <h2>One Image Card</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1" id="redirectpage1_oneImage" class="redirectpage form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="mainimage" id="mainimage_oneImage" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension- 500*400 Size- 25KB)</i>
+                                    <span class="file_error" id="file_error_oneimage" style="color: red; font-size: 12px;"></span>
+                                    @*@Html.ValidationMessageFor(a => a.ImageSystemName, "", new { @class="required"})*@
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Box Two -->
+                <div class="aos-init aos-animate scheme_Priceheader" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <h2>Home Scheme Card</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Header Title<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Title, new { @class = "form-control", id = "headertitle", @placeholder = "Header Title" })
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Title, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Header Title Colour<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.TitleColour, new { @class = "form-control", id = "headertxtcolor", @placeholder = "Hex Code" })
+                                    <i style="font-size:11px; font-style:normal;"><a id="title_colour">Reference for Hex Code</a></i><br />
+                                    <label id="lblmessagehex1scheme" style="font-size: 13px; color:red;"></label>
+                                    @Html.ValidationMessageFor(a => a.TitleColour, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Header Sub Title<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Sub_Title, new { @class = "form-control", id = "headersubtitle", @placeholder = "Header Sub Title" })
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Sub_Title, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Header  SubTitle Colour<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Sub_TitleColour, new { @class = "form-control", id = "headersubtitlecolor", @placeholder = "Hex Code" })
+                                    <i style="font-size:11px; font-style:normal;"><a id="subtitle_colour">Reference for Hex Code</a></i><br />
+                                    <label id="lblmessagehex2scheme" style="font-size: 13px; color:red;"></label>
+                                    @Html.ValidationMessageFor(a => a.Sub_TitleColour, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Header Image<span class="required">*</span></label>
+                                    <input type="file" name="headerimage" id="headerimage_scheme" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-700*151 Size- 4KB)</i>
+                                    <span class="file_error" id="file_error_headerimage" style="color: red; font-size: 12px;"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1" id="redirectpage1" class="redirectpage form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Upload Main Image<span class="required">*</span></label>
+                                    <input type="file" name="mainimage" id="mainimage_scheme" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-724*290 Size- 220KB)</i>
+                                    <span class="file_error" id="file_error_mainimage" style="color: red; font-size: 12px;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Box Three -->
+                <div class="aos-init aos-animate gridcard">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <h2>Home Grid Card</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Main Image<span class="required">*</span></label>
+                                    <input type="file" name="mainimage" id="mainimage_homegrid" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-500*655 Size- 94KB)</i>
+                                    <span class="file_error" id="file_error_main_homegrid" style="color: red; font-size: 12px"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Grid Background Image<span class="required">*</span></label>
+                                    <input type="file" name="gridbackimage" id="gridbackimage_homegrid" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-439*439 Size- 4KB)</i>
+                                    <span class="file_error" id="file_error_grigback" style="color: red; font-size: 12px;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate grid_childimage">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>First Title<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Title, new { @Name = "gridtitle", id = "firsttitle", @class = "form-control", @placeholder = "First Title" })
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Title, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload image<span class="required">*</span></label>
+                                    <input type="file" name="upload_gridchildmainimage" id="first_gridchildimage" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-150*204 Size- 12KB)</i>
+                                    <span class="file_error" id="file_error_childimage1" style="color: red; font-size: 12px;"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1" id="redirectpage1_gridchild1" class="redirectpage form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="" style="border-bottom: 1px solid #eee;height: 1px;width: 100%; display: block;float: left; margin: -15px 0;"></div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Second Title<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Title, new { @Name = "gridtitle", id = "secondtitle", @class = "form-control", @placeholder = "Second Title" })
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Title, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="upload_gridchildmainimage" id="second_gridchildimage" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-150*204 Size- 12KB)</i>
+                                    <span class="file_error" id="file_error_childimage2" style="color: red; font-size: 12px;"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1" id="redirectpage1_gridchild2" class="redirectpage form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="" style="border-bottom: 1px solid #eee;height: 1px;width: 100%; display: block;float: left; margin: -15px 0;"></div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Third Title<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Title, new { @Name = "gridtitle", id = "thirdtitle", @class = "form-control", @placeholder = "Third Title" })
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Title, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="upload_gridchildmainimage" id="third_gridchildimage" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-150*204 Size- 12KB)</i>
+                                    <span class="file_error" id="file_error_childimage3" style="color: red; font-size: 12px;"></span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1" id="redirectpage1_gridchild3" class="redirectpage form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="" style="border-bottom: 1px solid #eee;height: 1px;width: 100%; display: block;float: left; margin: -15px 0;"></div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label> Fourth Title<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Title, new { @Name = "gridtitle", id = "fourthtitle", @class = "form-control", @placeholder = "Fourth Title" })
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Title, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="upload_gridchildmainimage" id="fourth_gridchildimage" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-150*204 Size- 12KB)</i>
+                                    <span class="file_error" id="file_error_childimage4" style="color: red; font-size: 12px;"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1" id="redirectpage1_gridchild4" class="redirectpage form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--Box Four -->
+                <div class="aos-init aos-animate more_cardprovider">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <h2>Home Know More Card</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1" id="redirectpage2" class="redirectpage form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="mainimage" id="mainimage_knowmore" class="form-control" style="border:none; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(Dimension-500*255  Size- 80KB)</i>
+                                    <span class="file_error" id="file_error_knowmore" style="color: red; font-size: 12px;"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+
+                                    <label>Button Know More Colour<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Action1_Colour, new { @class = "form-control", id = "regex", @placeholder = "Hex Code" })
+                                    <i style="font-size:11px; font-style:normal;"><a id="title_colour1">Reference for Hex Code</a></i>
+                                    <br />
+                                    <label id="lblmessage" style="font-size: 13px; color:red;"></label>
+                                    @Html.ValidationMessageFor(a => a.Action1_Colour, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Button Know More Text<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Action1_Text, new { @class = "form-control", id = "txtknowmore", @placeholder = "Button Know More Text" })
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Action1_Text, "", new { @class = "required" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Box Five -->
+                <div class="aos-init aos-animate banner_cardprovider">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <h2>Home Banner Card</h2>
+                        <div class="row">
+                            <div class="rowReapte">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Redirect Page<span class="required">*</span></label>
+                                        <select name="redirectpage1" id="redirectpage1_homebanner" class="redirectpage form-control">
+                                            <option>Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Upload Image<span class="required">*</span></label>
+                                        <input type="file" name="bannermainimage" id="mainimage_homebanner" class="form-control" style="border:none; height:inherit;" />
+                                        <i style="font-size:11px; font-style:normal;">(Dimension-500*400 Size- 25KB)</i>
+                                        <span class="file_error" id="file_error_banner" style="color: red; font-size: 12px;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+
+                                        <input type="button" id="addRow" value="Add Row" disabled="disabled" />
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="dynaTableContent"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Common Box -->
+                <div class="aos-init aos-animate datetime">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4 datetime">
+                                <div class="">
+                                    <label>Start Date<span class="required">*</span></label>
+                                    <input id="sdate" type="text" autocomplete="off" placeholder="dd-mm-yyyy" class="date form-control" name="StartDate" />
+                                </div>
+                            </div>
+                            <div class="col-md-4 datetime">
+                                <div class="">
+                                    <label>End Date<span class="required">*</span></label>
+                                    <input id="edate" type="text" autocomplete="off" class="date form-control" placeholder="dd-mm-yyyy" name="EndDate" />
+                                    <br />
+                                    @Html.ValidationMessageFor(a => a.Enddate, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="status">
+                                    <label>Status</label>
+                                    <input type="checkbox" checked="checked" name="statusC" style="border:none; height:inherit;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="margin:10px 0 25px 0;">
+                        <input type="submit" id="btnsubmit" value="Submit" class="submitBtn" />
+                        <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="aos-init aos-animate row">
+            <div class="addgift" style="padding-bottom: 10px;">
+                <div class="">
+                    <div style="float:right;margin-right:12px; margin-top: -15px">
+                        @using (Html.BeginForm("Index", "HomeCard", FormMethod.Post,
+                                      new { enctype = "multipart/form-data" }))
+                        {
+                            <table class="headingHd" style="width:100%;">
+                                <tr>
+                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 71%;"> Banner List</th>
+                                    <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:19px; opacity: 0.7;">
+                                        @*<input type="submit" id="btnsearch" value="Search" style="border:none; background: #ffaf38; padding: 7px 18px; border-radius: 5px;" />*@
+                                    </th>
+                                </tr>
+                            </table>
+                        }
+                    </div>
+                    <div id="list" class="tabelGridRow">
+                        <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Card Type</th>
+                                    <th>Title</th>
+                                    <th>Sub Title</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Status</th>
+                                    <th style="text-align:right;">Action</th>
+                                </tr>
+
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="8">
+                                        <div id="Paging">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div style="float:right">
+                            @if (Session["Search"] != null)
+                            {
+                                @Html.ActionLink("Back", "Index")
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space30"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footerRow">
+                    © Copyright 2019 Luminous | All Rights Reserved
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

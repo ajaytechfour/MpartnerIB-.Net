@@ -1,0 +1,105 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000983697</td><td>1906103969</td><td>2019-06-21</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>25.000</td><td>273000.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000002</td><td>0000984067</td><td>1906104065</td><td>2019-06-24</td><td>F19330013451</td><td>LUMINOUS SOLAR PCU NXT 3KW 48V W/O iOT</td><td>1.000</td><td>0.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000003</td><td>0000984067</td><td>1906104065</td><td>2019-06-24</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>4.000</td><td>0.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000984067</td><td>1906104065</td><td>2019-06-24</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>8.000</td><td>0.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000984067</td><td>1906104065</td><td>2019-06-24</td><td>T30000000867</td><td>PCU3k-B150HTT4N-P325W8N</td><td>1.000</td><td>140360.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000006</td><td>0000984073</td><td>1906104066</td><td>2019-06-24</td><td>T30000000740</td><td>CRZ3.5k-B150HTT4N-P325W6N</td><td>1.000</td><td>107655.25</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000007</td><td>0000984073</td><td>1906104066</td><td>2019-06-24</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>6.000</td><td>0.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000008</td><td>0000984073</td><td>1906104066</td><td>2019-06-24</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>4.000</td><td>0.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000984073</td><td>1906104066</td><td>2019-06-24</td><td>F19335015001</td><td>LUM  UPS CRUZE 3.5KVA/48V+SRS SHINE4850</td><td>1.000</td><td>0.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000984391</td><td>1913101016</td><td>2019-06-24</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>10.000</td><td>93549.99</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000984391</td><td>1913101016</td><td>2019-06-24</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>70.000</td><td>608649.89</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000984391</td><td>1913101016</td><td>2019-06-24</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>35.000</td><td>285599.96</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000984391</td><td>1913101016</td><td>2019-06-24</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>20.000</td><td>163199.98</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000984391</td><td>1913101016</td><td>2019-06-24</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>10.000</td><td>132399.98</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000984391</td><td>1913101016</td><td>2019-06-24</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>3.000</td><td>17865.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000984391</td><td>1913101016</td><td>2019-06-24</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>2.000</td><td>18150.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000983691</td><td>1914102534</td><td>2019-06-22</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>2.000</td><td>41120.05</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000018</td><td>0000983691</td><td>1914102534</td><td>2019-06-22</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>15.000</td><td>129900.16</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000019</td><td>0000983691</td><td>1914102534</td><td>2019-06-22</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>25.000</td><td>146750.19</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000020</td><td>0000983693</td><td>1914102535</td><td>2019-06-22</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>10.000</td><td>25400.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000021</td><td>0000983693</td><td>1914102535</td><td>2019-06-22</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>40.000</td><td>117000.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000022</td><td>0000983695</td><td>1914102536</td><td>2019-06-22</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>20.000</td><td>160000.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000983695</td><td>1914102536</td><td>2019-06-22</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>20.000</td><td>217100.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000983695</td><td>1914102536</td><td>2019-06-22</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>25.000</td><td>204000.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0000983695</td><td>1914102536</td><td>2019-06-22</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>10.000</td><td>87150.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0000983696</td><td>1914102537</td><td>2019-06-22</td><td>F1113C262200</td><td>LUM 12V200AH LPTT12200L FNSD BTY V18 SLR</td><td>10.000</td><td>123750.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000983696</td><td>1914102537</td><td>2019-06-22</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>108250.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0000984653</td><td>1914102598</td><td>2019-06-24</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>120.000</td><td>378600.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000029</td><td>0000984657</td><td>1914102599</td><td>2019-06-24</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>40.000</td><td>314400.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000030</td><td>0000983695</td><td>1914102626</td><td>2019-06-24</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>3.000</td><td>26085.20</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000986849</td><td>1914102744</td><td>2019-06-26</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>40.000</td><td>355000.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000986849</td><td>1914102744</td><td>2019-06-26</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48600.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000986849</td><td>1914102744</td><td>2019-06-26</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>10.000</td><td>80000.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000034</td><td>0000988114</td><td>1914102809</td><td>2019-06-27</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>10.000</td><td>81600.14</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000988114</td><td>1914102809</td><td>2019-06-27</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>9.000</td><td>81495.13</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000036</td><td>0000988114</td><td>1914102809</td><td>2019-06-27</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>10.000</td><td>80400.13</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000037</td><td>0000988364</td><td>1914102821</td><td>2019-06-27</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>8.000</td><td>57960.20</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000038</td><td>0000990127</td><td>1914102928</td><td>2019-06-29</td><td>T30000000410</td><td>SCC1206-B20L1N-P40W1N</td><td>5.000</td><td>20224.74</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000039</td><td>0000990127</td><td>1914102928</td><td>2019-06-29</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>5.000</td><td>0.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000040</td><td>0000990127</td><td>1914102928</td><td>2019-06-29</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>5.000</td><td>0.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000041</td><td>0000990127</td><td>1914102928</td><td>2019-06-29</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>5.000</td><td>0.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000042</td><td>0000990128</td><td>1914102929</td><td>2019-06-29</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>10.000</td><td>54589.80</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000043</td><td>0000990131</td><td>1914102930</td><td>2019-06-29</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>10.000</td><td>34950.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000044</td><td>0000990364</td><td>1914102942</td><td>2019-06-29</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>30.000</td><td>94650.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000045</td><td>0000990365</td><td>1914102961</td><td>2019-06-29</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48600.00</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000046</td><td>0000993738</td><td>1914103141</td><td>2019-07-06</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>5.000</td><td>24256.82</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000047</td><td>0000993735</td><td>1914103165</td><td>2019-07-08</td><td>F03116518151</td><td>S/Q UPS ECO WATT XL1650 RAPID 12V</td><td>2.000</td><td>8620.40</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000048</td><td>0060058493</td><td>1914600701</td><td>2019-06-24</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5189.11</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000049</td><td>0060058494</td><td>1914600702</td><td>2019-06-24</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5600.20</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000050</td><td>0060057436</td><td>1914600707</td><td>2019-06-24</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5656.93</td><td>0001109057</td><td>SRI SAI INDUSTRIES</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr>
+</table>

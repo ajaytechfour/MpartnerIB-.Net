@@ -1,0 +1,69 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000967327</td><td>1902101330</td><td>2019-05-30</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>40.000</td><td>0.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000002</td><td>0000967327</td><td>1902101330</td><td>2019-05-30</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>80.000</td><td>0.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000967327</td><td>1902101330</td><td>2019-05-30</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>40.000</td><td>0.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000004</td><td>0000967327</td><td>1902101330</td><td>2019-05-30</td><td>T30000000679</td><td>NXG1800-B120H2N-P325W1N</td><td>40.000</td><td>1183400.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0060052198</td><td>1902600275</td><td>2019-05-08</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5120.18</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0060052246</td><td>1902600276</td><td>2019-05-08</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5120.18</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0060052247</td><td>1902600277</td><td>2019-05-08</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5120.18</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0060052249</td><td>1902600278</td><td>2019-05-08</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4823.99</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0060052250</td><td>1902600279</td><td>2019-05-08</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4823.99</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0060050684</td><td>1902600340</td><td>2019-05-08</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7346.47</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0060050685</td><td>1902600341</td><td>2019-05-08</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7346.47</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0060050686</td><td>1902600342</td><td>2019-05-08</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7346.47</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0060050688</td><td>1902600343</td><td>2019-05-08</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7346.47</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0060053491</td><td>1902600370</td><td>2019-05-11</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5120.18</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0060053492</td><td>1902600371</td><td>2019-05-11</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>1.000</td><td>5120.18</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0060046462</td><td>1902600496</td><td>2019-05-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7346.47</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0060050690</td><td>1902600497</td><td>2019-05-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7346.47</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0060054331</td><td>1902600553</td><td>2019-05-20</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>4964.83</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0060053490</td><td>1902600554</td><td>2019-05-20</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.79</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000967477</td><td>1958100395</td><td>2019-05-30</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>60.000</td><td>482400.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000967482</td><td>1958100396</td><td>2019-05-30</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>60.000</td><td>306600.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000022</td><td>0000968670</td><td>1958100407</td><td>2019-05-30</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>7.000</td><td>17779.96</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000023</td><td>0000968670</td><td>1958100407</td><td>2019-05-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>30.000</td><td>87749.81</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000024</td><td>0000968670</td><td>1958100407</td><td>2019-05-30</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>20.000</td><td>75899.83</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000025</td><td>0000968672</td><td>1958100408</td><td>2019-05-30</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>27.000</td><td>196425.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0000971513</td><td>1958100420</td><td>2019-05-31</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>100.000</td><td>816000.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000971513</td><td>1958100421</td><td>2019-05-31</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>100.000</td><td>804000.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0060050977</td><td>1958400021</td><td>2019-05-10</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>-2.000</td><td>15279.60</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0060057044</td><td>1958400030</td><td>2019-06-06</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>-100.000</td><td>816000.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000030</td><td>0060057045</td><td>1958400031</td><td>2019-06-06</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>-100.000</td><td>804000.00</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000955140</td><td>1967100330</td><td>2019-05-15</td><td>F1146A412100</td><td>LUM 12V100AH RPF1400 FNSD BTY</td><td>105.000</td><td>483787.50</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1012</td><td>Mundka Warehouse-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0060056102</td><td>1967400009</td><td>2019-05-29</td><td>F1146A412100</td><td>LUM 12V100AH RPF1400 FNSD BTY</td><td>-2.000</td><td>9214.80</td><td>0001108940</td><td>AGGARWAL POWER SOLUTION</td><td>07</td><td>Haryana</td><td>1012</td><td>Mundka Warehouse-2</td><td>Battery</td>
+	</tr>
+</table>

@@ -1,0 +1,39 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000948568</td><td>1917100576</td><td>2019-05-08</td><td>F04340012851</td><td>S/W UPS 4KVA/48V LUMINOUS CRUZE+</td><td>2.000</td><td>24979.60</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000002</td><td>0000948572</td><td>1917100577</td><td>2019-05-08</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>25.000</td><td>117375.50</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000948855</td><td>1917100608</td><td>2019-05-09</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>25.000</td><td>200000.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000953977</td><td>1917100682</td><td>2019-05-11</td><td>F19202003751</td><td>SOLAR RETROFIT 24V20AMP SHINE2420 Rev.01</td><td>20.000</td><td>33900.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000955373</td><td>1917100717</td><td>2019-05-14</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>25.000</td><td>221875.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000955375</td><td>1917100718</td><td>2019-05-14</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>50.000</td><td>157750.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000955378</td><td>1917100719</td><td>2019-05-14</td><td>F04175002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 750/12V(BIS)</td><td>25.000</td><td>64375.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000955378</td><td>1917100719</td><td>2019-05-14</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>25.000</td><td>117375.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000958964</td><td>1917100887</td><td>2019-05-20</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>5.000</td><td>64450.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1170</td><td>Chennai Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000953967</td><td>1965100242</td><td>2019-05-11</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>25.000</td><td>94875.50</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000953971</td><td>1965100243</td><td>2019-05-11</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>10.000</td><td>72450.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000955369</td><td>1965100252</td><td>2019-05-14</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>50.000</td><td>400000.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000955369</td><td>1965100252</td><td>2019-05-14</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>25.000</td><td>156250.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000958314</td><td>1965100297</td><td>2019-05-18</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>25.000</td><td>78875.50</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000958316</td><td>1965100305</td><td>2019-05-18</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>25.000</td><td>156250.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000958962</td><td>1965100317</td><td>2019-05-20</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>25.000</td><td>156250.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000958962</td><td>1965100317</td><td>2019-05-20</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>186000.00</td><td>0001104673</td><td>JSS POWER SYSTEMS</td><td>22</td><td>Tamil Nadu</td><td>1172</td><td>Chennai Warehouse -3</td><td>Battery</td>
+	</tr>
+</table>

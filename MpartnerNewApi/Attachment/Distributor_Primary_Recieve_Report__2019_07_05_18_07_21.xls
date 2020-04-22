@@ -1,0 +1,63 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000981164</td><td>1922102653</td><td>2019-06-19</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>25.000</td><td>73125.00</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000981164</td><td>1922102653</td><td>2019-06-19</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>10.000</td><td>43100.00</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000981164</td><td>1922102653</td><td>2019-06-19</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>5.000</td><td>18975.00</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000004</td><td>0000983534</td><td>1922102874</td><td>2019-06-21</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>10.000</td><td>128900.00</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000983534</td><td>1922102874</td><td>2019-06-21</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>5.000</td><td>29775.00</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000983576</td><td>1922102893</td><td>2019-06-21</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>186000.00</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000986749</td><td>1922103090</td><td>2019-06-26</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>1.000</td><td>5459.38</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000008</td><td>0000986750</td><td>1922103091</td><td>2019-06-26</td><td>F03186502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 865</td><td>20.000</td><td>51700.00</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000986752</td><td>1922103092</td><td>2019-06-26</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>20.000</td><td>58500.00</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000987794</td><td>1922103165</td><td>2019-06-27</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>8.000</td><td>103120.25</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000987794</td><td>1922103165</td><td>2019-06-27</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>10.000</td><td>59550.15</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000987842</td><td>1922103202</td><td>2019-06-27</td><td>F03116518151</td><td>S/Q UPS ECO WATT XL1650 RAPID 12V</td><td>15.000</td><td>64650.09</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000013</td><td>0000987842</td><td>1922103202</td><td>2019-06-27</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>25.000</td><td>73125.10</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000987842</td><td>1922103202</td><td>2019-06-27</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>3.000</td><td>5985.01</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000987874</td><td>1922103214</td><td>2019-06-27</td><td>F03166502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 665</td><td>17.000</td><td>34510.20</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000987892</td><td>1922103215</td><td>2019-06-27</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>2.000</td><td>10917.76</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000017</td><td>0000990806</td><td>1922103330</td><td>2019-06-29</td><td>F1103BYQ0060</td><td>LUM 12V60AH ILST8036 TUB FNSD BTY V16</td><td>15.000</td><td>59100.00</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000990859</td><td>1922103370</td><td>2019-06-29</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>20.000</td><td>66100.00</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000019</td><td>0000991963</td><td>1922103430</td><td>2019-06-30</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>3.000</td><td>9362.72</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000020</td><td>0000992073</td><td>1922103453</td><td>2019-06-30</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>3.000</td><td>33389.95</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000992073</td><td>1922103453</td><td>2019-06-30</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>5.000</td><td>34924.95</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000992073</td><td>1922103453</td><td>2019-06-30</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>5.000</td><td>31249.96</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000992073</td><td>1922103453</td><td>2019-06-30</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48599.94</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000992073</td><td>1922103454</td><td>2019-06-30</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>3.000</td><td>20954.60</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0000992095</td><td>1922103472</td><td>2019-06-30</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>10.000</td><td>33050.15</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000026</td><td>0000992095</td><td>1922103472</td><td>2019-06-30</td><td>F03116518151</td><td>S/Q UPS ECO WATT XL1650 RAPID 12V</td><td>5.000</td><td>21550.10</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000027</td><td>0000992095</td><td>1922103472</td><td>2019-06-30</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>15.000</td><td>53025.25</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000028</td><td>0060058199</td><td>1922601609</td><td>2019-06-19</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7147.26</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0060058201</td><td>1922601611</td><td>2019-06-19</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>1.000</td><td>5220.44</td><td>0001106929</td><td>PRADEEP ENTERPRISES</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr>
+</table>

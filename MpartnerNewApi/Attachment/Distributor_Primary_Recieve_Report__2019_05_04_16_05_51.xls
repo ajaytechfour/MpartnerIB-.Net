@@ -1,0 +1,23 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000930850</td><td>1912100038</td><td>2019-04-11</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>10.000</td><td>25145.72</td><td>0001100485</td><td>NEEMA T.V.CENTER</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000938723</td><td>1912100181</td><td>2019-04-24</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>10.000</td><td>25145.72</td><td>0001100485</td><td>NEEMA T.V.CENTER</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000938725</td><td>1912100182</td><td>2019-04-24</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>5.000</td><td>34575.79</td><td>0001100485</td><td>NEEMA T.V.CENTER</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000938725</td><td>1912100182</td><td>2019-04-24</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>5.000</td><td>24057.03</td><td>0001100485</td><td>NEEMA T.V.CENTER</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000945739</td><td>1912100347</td><td>2019-04-30</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>1.000</td><td>5059.40</td><td>0001100485</td><td>NEEMA T.V.CENTER</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000006</td><td>0060049245</td><td>1912600008</td><td>2019-04-09</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>4516.47</td><td>0001100485</td><td>NEEMA T.V.CENTER</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000932783</td><td>1961100087</td><td>2019-04-16</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>22.000</td><td>193297.70</td><td>0001100485</td><td>NEEMA T.V.CENTER</td><td>12</td><td>Madhya Pradesh</td><td>1122</td><td>Indore Warehouse-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000938720</td><td>1961100181</td><td>2019-04-24</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>10.000</td><td>87862.50</td><td>0001100485</td><td>NEEMA T.V.CENTER</td><td>12</td><td>Madhya Pradesh</td><td>1122</td><td>Indore Warehouse-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000945731</td><td>1961100268</td><td>2019-04-30</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>4.000</td><td>35145.40</td><td>0001100485</td><td>NEEMA T.V.CENTER</td><td>12</td><td>Madhya Pradesh</td><td>1122</td><td>Indore Warehouse-2</td><td>Battery</td>
+	</tr>
+</table>

@@ -1,0 +1,83 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000950395</td><td>1954100602</td><td>2019-05-09</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>15.000</td><td>72900.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000950398</td><td>1954100603</td><td>2019-05-09</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>30.000</td><td>129300.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000955903</td><td>1954100647</td><td>2019-05-14</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48600.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000955903</td><td>1954100647</td><td>2019-05-14</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>20.000</td><td>152800.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000955903</td><td>1954100647</td><td>2019-05-14</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>50.000</td><td>400000.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000955903</td><td>1954100647</td><td>2019-05-14</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>30.000</td><td>212250.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000955903</td><td>1954100647</td><td>2019-05-14</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>15.000</td><td>193350.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000955905</td><td>1954100648</td><td>2019-05-14</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>100.000</td><td>199500.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000955905</td><td>1954100648</td><td>2019-05-14</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>5.000</td><td>18975.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000955905</td><td>1954100648</td><td>2019-05-14</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>50.000</td><td>157750.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000955905</td><td>1954100648</td><td>2019-05-14</td><td>F04217013051</td><td>S/W UPS 1500VA LUMINOUS ZELIO+ 1700/24V</td><td>5.000</td><td>25775.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000955908</td><td>1954100649</td><td>2019-05-14</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>3.000</td><td>61679.60</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000013</td><td>0000955910</td><td>1954100650</td><td>2019-05-14</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>10.000</td><td>79650.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000957594</td><td>1954100705</td><td>2019-05-18</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>29.000</td><td>210975.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000957594</td><td>1954100705</td><td>2019-05-18</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>30.000</td><td>235200.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000957597</td><td>1954100706</td><td>2019-05-18</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>60.000</td><td>175500.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0000960732</td><td>1954100771</td><td>2019-05-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>17.000</td><td>133279.60</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000961234</td><td>1954100772</td><td>2019-05-24</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>10.000</td><td>108550.05</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000961234</td><td>1954100772</td><td>2019-05-24</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.20</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000961234</td><td>1954100772</td><td>2019-05-24</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>42.000</td><td>342720.15</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000961238</td><td>1954100773</td><td>2019-05-24</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>25.000</td><td>117375.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000022</td><td>0000961238</td><td>1954100773</td><td>2019-05-24</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>30.000</td><td>88200.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000023</td><td>0000961238</td><td>1954100773</td><td>2019-05-24</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>50.000</td><td>157750.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000024</td><td>0000961238</td><td>1954100773</td><td>2019-05-24</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000025</td><td>0000961238</td><td>1954100773</td><td>2019-05-24</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>100.000</td><td>226500.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000026</td><td>0000961238</td><td>1954100773</td><td>2019-05-24</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>15.000</td><td>53025.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000027</td><td>0000962971</td><td>1954100801</td><td>2019-05-25</td><td>F1141BWN0150</td><td> INVERGEL 12V150AH IGSTJ 18000 FNSD BTY</td><td>4.000</td><td>40100.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0000962971</td><td>1954100801</td><td>2019-05-25</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>50.000</td><td>482500.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0000962974</td><td>1954100802</td><td>2019-05-25</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>60.000</td><td>135900.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000030</td><td>0000962974</td><td>1954100802</td><td>2019-05-25</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>60.000</td><td>189300.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000031</td><td>0000965409</td><td>1954100860</td><td>2019-05-30</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>35.000</td><td>218750.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000965409</td><td>1954100860</td><td>2019-05-30</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>30.000</td><td>244800.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000965409</td><td>1954100860</td><td>2019-05-30</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>20.000</td><td>177500.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000034</td><td>0000965414</td><td>1954100861</td><td>2019-05-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000035</td><td>0000965414</td><td>1954100861</td><td>2019-05-30</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>50.000</td><td>113250.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000036</td><td>0000965414</td><td>1954100861</td><td>2019-05-30</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>50.000</td><td>157750.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000037</td><td>0000965452</td><td>1954100862</td><td>2019-05-30</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>20.000</td><td>102200.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000038</td><td>0000965452</td><td>1954100862</td><td>2019-05-30</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>20.000</td><td>157200.00</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000039</td><td>0060055861</td><td>1954600218</td><td>2019-05-27</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5985.24</td><td>0001102429</td><td>Viral Power Pvt Ltd</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr>
+</table>

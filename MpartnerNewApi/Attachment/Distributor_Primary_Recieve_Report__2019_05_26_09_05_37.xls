@@ -1,0 +1,29 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000960509</td><td>1905101610</td><td>2019-05-23</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>75.000</td><td>993000.00</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000959058</td><td>1922101503</td><td>2019-05-20</td><td>T1103CXUA180</td><td>LUM 12V180AH ILTT24060 FNSD BTY V18</td><td>15.000</td><td>166950.00</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000961860</td><td>1922101662</td><td>2019-05-24</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>20.000</td><td>50800.00</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000004</td><td>0000961863</td><td>1922101663</td><td>2019-05-24</td><td>F1141BWN0150</td><td> INVERGEL 12V150AH IGSTJ 18000 FNSD BTY</td><td>5.000</td><td>50125.00</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000961863</td><td>1922101663</td><td>2019-05-24</td><td>T1103CXUA180</td><td>LUM 12V180AH ILTT24060 FNSD BTY V18</td><td>20.000</td><td>222600.00</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0060050817</td><td>1922600471</td><td>2019-05-01</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5321.01</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0060053965</td><td>1922600626</td><td>2019-05-16</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>1.000</td><td>4910.61</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0060053967</td><td>1922600627</td><td>2019-05-16</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>1.000</td><td>8058.99</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0060053968</td><td>1922600628</td><td>2019-05-16</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7050.84</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0060053972</td><td>1922600631</td><td>2019-05-16</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>1.000</td><td>4910.61</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0060053971</td><td>1922600789</td><td>2019-05-20</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5356.38</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0060053966</td><td>1922600793</td><td>2019-05-20</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7464.68</td><td>0001102577</td><td>Tata Commercial</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr>
+</table>

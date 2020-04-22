@@ -1,0 +1,45 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000989536</td><td>1916103498</td><td>2019-06-28</td><td>F03116518151</td><td>S/Q UPS ECO WATT XL1650 RAPID 12V</td><td>20.000</td><td>86200.00</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000990246</td><td>1916103553</td><td>2019-06-29</td><td>F1135C446160</td><td> 12V160AH PC 20042TT FNSD BTY V19 R1</td><td>25.000</td><td>206500.00</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000990513</td><td>1916103554</td><td>2019-06-29</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>75.000</td><td>966750.00</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000990543</td><td>1916103555</td><td>2019-06-29</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>12.000</td><td>97920.12</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000990543</td><td>1916103555</td><td>2019-06-29</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>20.000</td><td>222600.28</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000990543</td><td>1916103556</td><td>2019-06-29</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>3.000</td><td>24479.60</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000990357</td><td>1916103557</td><td>2019-06-29</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>5.000</td><td>29350.00</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000008</td><td>0000990545</td><td>1916103558</td><td>2019-06-29</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>30.000</td><td>106050.00</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000990545</td><td>1916103558</td><td>2019-06-29</td><td>F04217013051</td><td>S/W UPS 1500VA LUMINOUS ZELIO+ 1700/24V</td><td>10.000</td><td>51550.00</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000991421</td><td>1916103623</td><td>2019-06-29</td><td>F1152N422150</td><td>SILVER CHARGE 12V150Ah SIL18045 FNSD BTY</td><td>10.000</td><td>78900.00</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000991421</td><td>1916103623</td><td>2019-06-29</td><td>F1152L420150</td><td>SILVER CHARGE 12V150Ah SIL18057 FNSD BTY</td><td>10.000</td><td>89250.00</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000991376</td><td>1916103624</td><td>2019-06-29</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>5.000</td><td>29350.00</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000013</td><td>0000991388</td><td>1916103625</td><td>2019-06-29</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>8.000</td><td>62879.60</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000014</td><td>0000991366</td><td>1916103626</td><td>2019-06-29</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000991423</td><td>1916103627</td><td>2019-06-29</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>10.000</td><td>39100.22</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000991423</td><td>1916103627</td><td>2019-06-29</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>25.000</td><td>49875.28</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0000991377</td><td>1916103628</td><td>2019-06-29</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>8.000</td><td>64056.20</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000018</td><td>0060058844</td><td>1916600707</td><td>2019-06-29</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5663.68</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0060058851</td><td>1916600714</td><td>2019-06-29</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5663.68</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1160</td><td>Bhubaneswar Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000990556</td><td>1975102133</td><td>2019-06-29</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>25.000</td><td>136475.50</td><td>0001108110</td><td>NEHA POWER SOLUTION</td><td>18</td><td>Odisha</td><td>1720</td><td>Kolkatta HED</td><td>&nbsp;</td>
+	</tr>
+</table>

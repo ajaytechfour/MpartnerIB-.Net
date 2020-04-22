@@ -1,0 +1,117 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000930059</td><td>1954100054</td><td>2019-04-08</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>10.000</td><td>46950.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000930059</td><td>1954100054</td><td>2019-04-08</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>25.000</td><td>63500.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000930059</td><td>1954100054</td><td>2019-04-08</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>10.000</td><td>26950.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000004</td><td>0000930064</td><td>1954100055</td><td>2019-04-08</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>6.000</td><td>50160.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000930250</td><td>1954100061</td><td>2019-04-09</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>25.000</td><td>56625.50</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000930471</td><td>1954100075</td><td>2019-04-09</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>3.000</td><td>61679.60</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000007</td><td>0000935339</td><td>1954100234</td><td>2019-04-19</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>5.000</td><td>11325.50</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000935341</td><td>1954100235</td><td>2019-04-19</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>6.000</td><td>43470.40</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000935367</td><td>1954100240</td><td>2019-04-19</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>25.000</td><td>73125.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000935367</td><td>1954100240</td><td>2019-04-19</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>25.000</td><td>107750.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000935367</td><td>1954100240</td><td>2019-04-19</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>25.000</td><td>56625.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000935367</td><td>1954100240</td><td>2019-04-19</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>25.000</td><td>63500.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000013</td><td>0000935367</td><td>1954100240</td><td>2019-04-19</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>30.000</td><td>94650.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000935367</td><td>1954100240</td><td>2019-04-19</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>20.000</td><td>93900.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000935369</td><td>1954100241</td><td>2019-04-19</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>20.000</td><td>117400.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000016</td><td>0000935371</td><td>1954100242</td><td>2019-04-19</td><td>F1103BYQ0060</td><td>LUM 12V60AH ILST8036 TUB FNSD BTY V16</td><td>20.000</td><td>78800.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000935371</td><td>1954100242</td><td>2019-04-19</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000935374</td><td>1954100243</td><td>2019-04-19</td><td>T1102G3307D2</td><td>LUMINOUS 7.2 AH 12V SMF BATTERY T C20</td><td>200.000</td><td>95000.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000935903</td><td>1954100266</td><td>2019-04-19</td><td>F1141BWN0150</td><td> INVERGEL 12V150AH IGSTJ 18000 FNSD BTY</td><td>5.000</td><td>52625.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000936650</td><td>1954100300</td><td>2019-04-22</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>10.000</td><td>59550.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000936650</td><td>1954100300</td><td>2019-04-22</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>30.000</td><td>240000.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000936650</td><td>1954100300</td><td>2019-04-22</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>30.000</td><td>289500.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000936650</td><td>1954100300</td><td>2019-04-22</td><td>F1148C281135</td><td>LUM 12V135AH ECO CHRG 16000 FNSD BTY</td><td>10.000</td><td>73750.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000936652</td><td>1954100301</td><td>2019-04-22</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>5.000</td><td>15604.18</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000025</td><td>0000936653</td><td>1954100302</td><td>2019-04-22</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>54600.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000026</td><td>0000936654</td><td>1954100303</td><td>2019-04-22</td><td>T30000000410</td><td>SCC1206-B20L1N-P40W1N</td><td>8.000</td><td>32360.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000027</td><td>0000936654</td><td>1954100303</td><td>2019-04-22</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>8.000</td><td>0.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000028</td><td>0000936654</td><td>1954100303</td><td>2019-04-22</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>8.000</td><td>0.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0000936654</td><td>1954100303</td><td>2019-04-22</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>8.000</td><td>0.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000030</td><td>0000940337</td><td>1954100380</td><td>2019-04-26</td><td>T1102G3307D2</td><td>LUMINOUS 7.2 AH 12V SMF BATTERY T C20</td><td>96.000</td><td>45600.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000940339</td><td>1954100381</td><td>2019-04-26</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>10.000</td><td>48512.82</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000032</td><td>0000940339</td><td>1954100381</td><td>2019-04-26</td><td>F19135003151</td><td>S/Q WAVE UPS 12V LUMINOUS SOLAR NXG 350</td><td>10.000</td><td>20393.92</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000033</td><td>0000940333</td><td>1954100464</td><td>2019-04-29</td><td>F04175002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 750/12V(BIS)</td><td>35.000</td><td>90125.50</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000034</td><td>0000940334</td><td>1954100465</td><td>2019-04-29</td><td>F03166502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 665</td><td>25.000</td><td>50750.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000035</td><td>0000944426</td><td>1954100485</td><td>2019-04-29</td><td>F1148C281135</td><td>LUM 12V135AH ECO CHRG 16000 FNSD BTY</td><td>15.000</td><td>110625.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000036</td><td>0000944429</td><td>1954100487</td><td>2019-04-29</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>15.000</td><td>44100.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000037</td><td>0000944429</td><td>1954100487</td><td>2019-04-29</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>25.000</td><td>78875.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000038</td><td>0000944429</td><td>1954100487</td><td>2019-04-29</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>25.000</td><td>67375.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000039</td><td>0000944431</td><td>1954100488</td><td>2019-04-29</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>5.000</td><td>25550.15</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000040</td><td>0000944431</td><td>1954100488</td><td>2019-04-29</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>3.000</td><td>23580.13</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000041</td><td>0000944431</td><td>1954100488</td><td>2019-04-29</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>2.000</td><td>21840.12</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000042</td><td>0000945420</td><td>1954100507</td><td>2019-04-30</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>5.000</td><td>25550.08</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000043</td><td>0000945420</td><td>1954100507</td><td>2019-04-30</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>2.000</td><td>15720.05</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000044</td><td>0000945420</td><td>1954100507</td><td>2019-04-30</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>2.000</td><td>21840.07</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000045</td><td>0000944429</td><td>1954100515</td><td>2019-04-30</td><td>F04175002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 750/12V(BIS)</td><td>15.000</td><td>38625.50</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000046</td><td>0000956597</td><td>1954100673</td><td>2019-05-15</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>15.000</td><td>43875.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000047</td><td>0000956597</td><td>1954100673</td><td>2019-05-15</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>5.000</td><td>21550.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000048</td><td>0000956597</td><td>1954100673</td><td>2019-05-15</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>15.000</td><td>58650.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000049</td><td>0000956597</td><td>1954100673</td><td>2019-05-15</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>15.000</td><td>44100.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000050</td><td>0000956597</td><td>1954100673</td><td>2019-05-15</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>15.000</td><td>70425.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000051</td><td>0000956598</td><td>1954100674</td><td>2019-05-15</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>20.000</td><td>141500.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000052</td><td>0000956598</td><td>1954100674</td><td>2019-05-15</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>11.000</td><td>88000.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000053</td><td>0000956598</td><td>1954100674</td><td>2019-05-15</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>10.000</td><td>76400.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000054</td><td>0000956598</td><td>1954100674</td><td>2019-05-15</td><td>F1103BYQ0060</td><td>LUM 12V60AH ILST8036 TUB FNSD BTY V16</td><td>10.000</td><td>39400.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000055</td><td>0000956598</td><td>1954100674</td><td>2019-05-15</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>15.000</td><td>93750.00</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000056</td><td>0060050356</td><td>1954600012</td><td>2019-04-18</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5133.41</td><td>0001106181</td><td>FINELINE POWER STYSTEMS</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr>
+</table>

@@ -1,0 +1,51 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000938514</td><td>1914100387</td><td>2019-04-24</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>100.000</td><td>315500.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000938514</td><td>1914100387</td><td>2019-04-24</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>30.000</td><td>113850.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000938514</td><td>1914100387</td><td>2019-04-24</td><td>F04217013051</td><td>S/W UPS 1500VA LUMINOUS ZELIO+ 1700/24V</td><td>10.000</td><td>51550.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000004</td><td>0000938517</td><td>1914100388</td><td>2019-04-24</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>20.000</td><td>193000.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000940721</td><td>1914100474</td><td>2019-04-27</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>10.000</td><td>19950.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000940721</td><td>1914100474</td><td>2019-04-27</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>30.000</td><td>113850.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000940722</td><td>1914100475</td><td>2019-04-27</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>25.000</td><td>169624.90</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000940722</td><td>1914100475</td><td>2019-04-27</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>26.000</td><td>212159.87</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000940722</td><td>1914100475</td><td>2019-04-27</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>4.000</td><td>43419.97</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000940722</td><td>1914100475</td><td>2019-04-27</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>28.000</td><td>223999.86</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000940725</td><td>1914100476</td><td>2019-04-27</td><td>F04340012851</td><td>S/W UPS 4KVA/48V LUMINOUS CRUZE+</td><td>3.000</td><td>37470.11</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000012</td><td>0000940725</td><td>1914100476</td><td>2019-04-27</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>102800.29</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000013</td><td>0000940728</td><td>1914100477</td><td>2019-04-27</td><td>F03135001951</td><td>S/Q WAVE HUPS 12V LUM BIS ECO WATT +350</td><td>5.000</td><td>7900.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000944407</td><td>1914100591</td><td>2019-04-29</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>20.000</td><td>63100.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000944488</td><td>1914100592</td><td>2019-04-29</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>20.000</td><td>63100.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000946171</td><td>1914100671</td><td>2019-04-30</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>20.000</td><td>63100.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0000946176</td><td>1914100672</td><td>2019-04-30</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>5.000</td><td>25550.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000018</td><td>0000946176</td><td>1914100672</td><td>2019-04-30</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>39300.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000019</td><td>0060050917</td><td>1914600103</td><td>2019-04-24</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>5046.47</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1140</td><td>Bangalore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000944662</td><td>1933100120</td><td>2019-04-30</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>54600.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>1330</td><td>Vijayawada Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000021</td><td>0000939836</td><td>1995100142</td><td>2019-04-27</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>5.000</td><td>31250.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>PH01</td><td>Hosur Battery Unit</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000939836</td><td>1995100142</td><td>2019-04-27</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>30.000</td><td>178650.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>PH01</td><td>Hosur Battery Unit</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000939836</td><td>1995100142</td><td>2019-04-27</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>186000.00</td><td>0001108906</td><td>LINEAR POWERTECH</td><td>10</td><td>Karnataka</td><td>PH01</td><td>Hosur Battery Unit</td><td>Battery</td>
+	</tr>
+</table>

@@ -1,0 +1,705 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000921871</td><td>0090022168</td><td>2019-03-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>0.000</td><td>786825.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000942130</td><td>0090023230</td><td>2019-04-29</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>0.000</td><td>644500.06</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000942130</td><td>0090023230</td><td>2019-04-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>0.000</td><td>35500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000942130</td><td>0090023230</td><td>2019-04-29</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>0.000</td><td>816000.08</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000942130</td><td>0090023230</td><td>2019-04-29</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>0.000</td><td>697235.06</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000942130</td><td>0090023231</td><td>2019-04-29</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>0.000</td><td>208264.80</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000954852</td><td>0090023802</td><td>2019-05-15</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>0.000</td><td>800000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000954852</td><td>0090023802</td><td>2019-05-15</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>0.000</td><td>571500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000954852</td><td>0090023802</td><td>2019-05-15</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>0.000</td><td>322250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000954852</td><td>0090023802</td><td>2019-05-15</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>0.000</td><td>408000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000954852</td><td>0090023803</td><td>2019-05-15</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>0.000</td><td>965000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000954852</td><td>0090023803</td><td>2019-05-15</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>0.000</td><td>571500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000954852</td><td>0090023803</td><td>2019-05-15</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>0.000</td><td>322250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000954852</td><td>0090023803</td><td>2019-05-15</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>0.000</td><td>499125.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000925716</td><td>1802111308</td><td>2019-03-30</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>35.000</td><td>691600.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000016</td><td>0000925716</td><td>1802111308</td><td>2019-03-30</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>35.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000017</td><td>0000925716</td><td>1802111308</td><td>2019-03-30</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>35.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000925716</td><td>1802111308</td><td>2019-03-30</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>35.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000019</td><td>0000925720</td><td>1802111309</td><td>2019-03-30</td><td>T30000001605</td><td>NXG1800-B150HTT2N-P325W2N</td><td>3.000</td><td>131490.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000020</td><td>0000925720</td><td>1802111309</td><td>2019-03-30</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>6.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000021</td><td>0000925720</td><td>1802111309</td><td>2019-03-30</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>6.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000925720</td><td>1802111309</td><td>2019-03-30</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>3.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000023</td><td>0000925725</td><td>1802111310</td><td>2019-03-30</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000925725</td><td>1802111310</td><td>2019-03-30</td><td>T30000000699</td><td>NXG1100-B120H1N-P165W1N</td><td>10.000</td><td>169000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000025</td><td>0000925725</td><td>1802111310</td><td>2019-03-30</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000026</td><td>0000925725</td><td>1802111310</td><td>2019-03-30</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000027</td><td>0000908589</td><td>1811106030</td><td>2019-02-27</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>50.000</td><td>465000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0000908589</td><td>1811106030</td><td>2019-02-27</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>30.000</td><td>340650.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0000908589</td><td>1811106031</td><td>2019-02-27</td><td>F1141BWN0150</td><td> INVERGEL 12V150AH IGSTJ 18000 FNSD BTY</td><td>10.000</td><td>115250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000030</td><td>0000908589</td><td>1811106031</td><td>2019-02-27</td><td>F1148C282150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY</td><td>60.000</td><td>476400.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000908459</td><td>1811106079</td><td>2019-02-28</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>75.000</td><td>857250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000908459</td><td>1811106080</td><td>2019-02-28</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>75.000</td><td>857250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000923407</td><td>1811106950</td><td>2019-03-30</td><td>F19675013451</td><td>LUMINOUS SOLAR PCU NXT 7.5KW120V W/O iOT</td><td>1.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000034</td><td>0000923407</td><td>1811106950</td><td>2019-03-30</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000923407</td><td>1811106950</td><td>2019-03-30</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>24.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000036</td><td>0000923407</td><td>1811106950</td><td>2019-03-30</td><td>T30000000873</td><td>PCU7.5kW-B150HTT10N-P325W24N</td><td>1.000</td><td>391990.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000037</td><td>0000923422</td><td>1811106951</td><td>2019-03-30</td><td>T30000000313</td><td>Solar PV Panel 335 Wp Mono Crystalline</td><td>2.000</td><td>17869.52</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000038</td><td>0000925329</td><td>1811106960</td><td>2019-03-30</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>100.000</td><td>965000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000039</td><td>0000927787</td><td>1811106969</td><td>2019-03-30</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>50.000</td><td>453750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000040</td><td>0000927788</td><td>1811106970</td><td>2019-03-30</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>26.000</td><td>235429.60</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000041</td><td>0000927788</td><td>1811106971</td><td>2019-03-30</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>9.000</td><td>81495.40</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000042</td><td>0000927856</td><td>1811106976</td><td>2019-03-31</td><td>F1105CZS0150</td><td>ELE 12V150AH LE19000TT FNSD BTY V16</td><td>80.000</td><td>640000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0000893767</td><td>1826101994</td><td>2019-01-23</td><td>F04575010126</td><td>S/W UPS 7500VA 120V LUM CRUZE P. FRONT</td><td>1.000</td><td>35284.70</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000044</td><td>0000894683</td><td>1826102002</td><td>2019-01-25</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>250.000</td><td>731250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000045</td><td>0000894683</td><td>1826102002</td><td>2019-01-25</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>50.000</td><td>127000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000046</td><td>0000894682</td><td>1826102003</td><td>2019-01-25</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>68.000</td><td>201620.40</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000047</td><td>0000895924</td><td>1826102034</td><td>2019-01-30</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>50.000</td><td>482500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000048</td><td>0000895924</td><td>1826102035</td><td>2019-01-30</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>50.000</td><td>482500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000049</td><td>0000897461</td><td>1826102042</td><td>2019-01-30</td><td>F19102007601</td><td>LUMINOUS SOLAR RETROFIT SOLUTION SRS1220</td><td>1.000</td><td>1255.24</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000050</td><td>0000900186</td><td>1826102080</td><td>2019-02-09</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>5.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000051</td><td>0000900186</td><td>1826102080</td><td>2019-02-09</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000052</td><td>0000900186</td><td>1826102080</td><td>2019-02-09</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000053</td><td>0000900186</td><td>1826102080</td><td>2019-02-09</td><td>T30000000680</td><td>NXG1800-B150H2N-P325W2N</td><td>5.000</td><td>225750.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000054</td><td>0000908538</td><td>1826102163</td><td>2019-02-28</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>100.000</td><td>296500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000055</td><td>0000908540</td><td>1826102164</td><td>2019-02-28</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>50.000</td><td>127000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000056</td><td>0000908540</td><td>1826102164</td><td>2019-02-28</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>50.000</td><td>176750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000057</td><td>0000908540</td><td>1826102164</td><td>2019-02-28</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000058</td><td>0000908546</td><td>1826102165</td><td>2019-02-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>50.000</td><td>644500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000059</td><td>0000908546</td><td>1826102165</td><td>2019-02-28</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>30.000</td><td>240000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000060</td><td>0000908603</td><td>1826102166</td><td>2019-02-28</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000061</td><td>0000908603</td><td>1826102166</td><td>2019-02-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000062</td><td>0000908603</td><td>1826102166</td><td>2019-02-28</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000063</td><td>0000908603</td><td>1826102166</td><td>2019-02-28</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>10.000</td><td>202600.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000064</td><td>0000908610</td><td>1826102167</td><td>2019-02-28</td><td>T30000000680</td><td>NXG1800-B150H2N-P325W2N</td><td>5.000</td><td>224150.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000065</td><td>0000908610</td><td>1826102167</td><td>2019-02-28</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000066</td><td>0000908610</td><td>1826102167</td><td>2019-02-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000067</td><td>0000908610</td><td>1826102167</td><td>2019-02-28</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>5.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000068</td><td>0000908612</td><td>1826102168</td><td>2019-02-28</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>5.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000069</td><td>0000908612</td><td>1826102168</td><td>2019-02-28</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>5.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000070</td><td>0000908612</td><td>1826102168</td><td>2019-02-28</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000071</td><td>0000908612</td><td>1826102168</td><td>2019-02-28</td><td>T30000000697</td><td>NXG1100-B120H1N-P105W2N</td><td>5.000</td><td>94700.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000072</td><td>0000908617</td><td>1826102169</td><td>2019-02-28</td><td>F1113C259100</td><td>LUM 12V100AH LPTT12100H FNSD BTY V18 SLR</td><td>2.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000073</td><td>0000908617</td><td>1826102169</td><td>2019-02-28</td><td>T18010000077</td><td>Solar PV Module 100W/12V Poly Crys.</td><td>4.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000074</td><td>0000908617</td><td>1826102169</td><td>2019-02-28</td><td>T30000000645</td><td>NXG750-B100HTT1N-P100W2N</td><td>2.000</td><td>34300.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000075</td><td>0000908617</td><td>1826102169</td><td>2019-02-28</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>2.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000076</td><td>0000908540</td><td>1826102181</td><td>2019-02-28</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>50.000</td><td>113250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000077</td><td>0000914147</td><td>1826102221</td><td>2019-03-15</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>29.000</td><td>218660.20</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000078</td><td>0000913788</td><td>1826102222</td><td>2019-03-15</td><td>F19675013451</td><td>LUMINOUS SOLAR PCU NXT 7.5KW120V W/O iOT</td><td>1.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000079</td><td>0000913788</td><td>1826102222</td><td>2019-03-15</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000080</td><td>0000913788</td><td>1826102222</td><td>2019-03-15</td><td>T30000000313</td><td>Solar PV Panel 335 Wp Mono Crystalline</td><td>20.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000081</td><td>0000913788</td><td>1826102222</td><td>2019-03-15</td><td>T30000000833</td><td>PCU7.5kW-B150H10N-M335W20N</td><td>1.000</td><td>370044.74</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000082</td><td>0000921868</td><td>1826102340</td><td>2019-03-30</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>50.000</td><td>482500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000083</td><td>0000921868</td><td>1826102340</td><td>2019-03-30</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000084</td><td>0000921868</td><td>1826102340</td><td>2019-03-30</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>50.000</td><td>408000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000085</td><td>0000921868</td><td>1826102340</td><td>2019-03-30</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>50.000</td><td>644500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000086</td><td>0000921868</td><td>1826102341</td><td>2019-03-30</td><td>F1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>38.000</td><td>434339.80</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000087</td><td>0000921868</td><td>1826102341</td><td>2019-03-30</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>1.000</td><td>7075.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000088</td><td>0000922001</td><td>1826102343</td><td>2019-03-30</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>15.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000089</td><td>0000922001</td><td>1826102343</td><td>2019-03-30</td><td>T30000000439</td><td>SCC1206-B40H1N-P40W1N</td><td>15.000</td><td>80024.74</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000090</td><td>0000922001</td><td>1826102343</td><td>2019-03-30</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>15.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000091</td><td>0000922001</td><td>1826102343</td><td>2019-03-30</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>15.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000092</td><td>0000922710</td><td>1826102344</td><td>2019-03-30</td><td>T30000000837</td><td>PCU10kW-B150H10N-M335W20N</td><td>1.000</td><td>384195.24</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000093</td><td>0000922710</td><td>1826102344</td><td>2019-03-30</td><td>T30000000313</td><td>Solar PV Panel 335 Wp Mono Crystalline</td><td>20.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000094</td><td>0000922710</td><td>1826102344</td><td>2019-03-30</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000095</td><td>0000922710</td><td>1826102344</td><td>2019-03-30</td><td>F19610023451</td><td>LUMINOUS SOLAR PCU NXT 10KW 120V W/O iOT</td><td>1.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000096</td><td>0000925340</td><td>1826102345</td><td>2019-03-30</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000097</td><td>0000925340</td><td>1826102345</td><td>2019-03-30</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>20.000</td><td>163200.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000098</td><td>0000921871</td><td>1826102346</td><td>2019-03-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>269.000</td><td>786825.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000099</td><td>0000921871</td><td>1826102347</td><td>2019-03-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>17.000</td><td>49725.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000100</td><td>0000927771</td><td>1826102349</td><td>2019-03-30</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>25.000</td><td>226875.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000101</td><td>0060036029</td><td>1826600187</td><td>2019-01-17</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5263.31</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000102</td><td>0060038691</td><td>1826600188</td><td>2019-01-17</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>6070.55</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000103</td><td>0060038692</td><td>1826600189</td><td>2019-01-17</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>4989.08</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000104</td><td>0060038694</td><td>1826600190</td><td>2019-01-17</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>6070.55</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000105</td><td>0060039152</td><td>1826600191</td><td>2019-01-17</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>4989.08</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000106</td><td>0060039159</td><td>1826600192</td><td>2019-01-17</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>6070.55</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000107</td><td>0060039853</td><td>1826600193</td><td>2019-01-17</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>6089.01</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000108</td><td>0060033972</td><td>1826600239</td><td>2019-01-24</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>9323.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000109</td><td>0060040382</td><td>1826600240</td><td>2019-01-24</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5416.78</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000110</td><td>0060040387</td><td>1826600241</td><td>2019-01-24</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>6070.55</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000111</td><td>0060040383</td><td>1826600242</td><td>2019-01-24</td><td>F1105C150160</td><td>ELE 12V160AH LETT 20548 FNSD BTY</td><td>1.000</td><td>5383.31</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000112</td><td>0060040376</td><td>1826600243</td><td>2019-01-24</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>9323.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000113</td><td>0060040373</td><td>1826600244</td><td>2019-01-24</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5416.78</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000114</td><td>0060040374</td><td>1826600245</td><td>2019-01-24</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5416.69</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000115</td><td>0060040412</td><td>1826600249</td><td>2019-01-24</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5263.31</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000116</td><td>0060040371</td><td>1826600259</td><td>2019-01-25</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7477.56</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000117</td><td>0060035778</td><td>1826600287</td><td>2019-01-30</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4892.76</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000118</td><td>0060035780</td><td>1826600288</td><td>2019-01-30</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5416.69</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000119</td><td>0060036530</td><td>1826600290</td><td>2019-01-30</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>1.000</td><td>6449.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000120</td><td>0060037613</td><td>1826600292</td><td>2019-01-30</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>6070.55</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000121</td><td>0060039158</td><td>1826600306</td><td>2019-01-31</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>1.000</td><td>6449.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000122</td><td>0060039163</td><td>1826600307</td><td>2019-01-31</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5263.31</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000123</td><td>0060040378</td><td>1826600308</td><td>2019-01-31</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5137.28</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000124</td><td>0060040380</td><td>1826600309</td><td>2019-01-31</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5137.28</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000125</td><td>0060040386</td><td>1826600310</td><td>2019-01-31</td><td>T1105CZT0200</td><td>ELE 12V200AH LETT25560 FNSD BTY V16</td><td>1.000</td><td>8780.08</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000126</td><td>0060041431</td><td>1826600328</td><td>2019-02-09</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>6033.02</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000127</td><td>0060042511</td><td>1826600346</td><td>2019-02-28</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5137.28</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000128</td><td>0060042524</td><td>1826600347</td><td>2019-02-28</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5263.30</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000129</td><td>0060042525</td><td>1826600348</td><td>2019-02-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8910.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000130</td><td>0060042527</td><td>1826600349</td><td>2019-02-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8910.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000131</td><td>0060042528</td><td>1826600350</td><td>2019-02-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8910.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000132</td><td>0060042529</td><td>1826600351</td><td>2019-02-28</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5976.73</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000133</td><td>0060042533</td><td>1826600352</td><td>2019-02-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8910.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000134</td><td>0060042535</td><td>1826600353</td><td>2019-02-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8910.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000135</td><td>0060042542</td><td>1826600354</td><td>2019-02-28</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>1.000</td><td>5203.38</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000136</td><td>0060044709</td><td>1826600355</td><td>2019-02-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000137</td><td>0060042519</td><td>1826600387</td><td>2019-03-08</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5904.84</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000138</td><td>0060042522</td><td>1826600388</td><td>2019-03-08</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8910.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000139</td><td>0060045148</td><td>1826600389</td><td>2019-03-08</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>4907.04</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000140</td><td>0060045149</td><td>1826600390</td><td>2019-03-08</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5137.28</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000141</td><td>0060045150</td><td>1826600391</td><td>2019-03-08</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>1.000</td><td>5068.47</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000142</td><td>0060045151</td><td>1826600392</td><td>2019-03-08</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5976.73</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000143</td><td>0060046010</td><td>1826600421</td><td>2019-03-12</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5976.73</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000144</td><td>0060046429</td><td>1826600510</td><td>2019-03-13</td><td>F1102CZK0200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V16</td><td>1.000</td><td>6738.62</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000145</td><td>0060046431</td><td>1826600511</td><td>2019-03-13</td><td>F1102CZK0200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V16</td><td>1.000</td><td>6738.62</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000146</td><td>0060046432</td><td>1826600512</td><td>2019-03-13</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>4907.04</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000147</td><td>0060046865</td><td>1826600542</td><td>2019-03-18</td><td>F1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>5988.86</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000148</td><td>0060047348</td><td>1826600567</td><td>2019-03-26</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000149</td><td>0060047350</td><td>1826600568</td><td>2019-03-26</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5976.73</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000150</td><td>0060047463</td><td>1826600569</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000151</td><td>0060047465</td><td>1826600570</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000152</td><td>0060047466</td><td>1826600571</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000153</td><td>0060047468</td><td>1826600572</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000154</td><td>0060047470</td><td>1826600573</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000155</td><td>0060047473</td><td>1826600574</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000156</td><td>0060047475</td><td>1826600575</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000157</td><td>0060047481</td><td>1826600576</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000158</td><td>0060047483</td><td>1826600577</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000159</td><td>0060047484</td><td>1826600578</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000160</td><td>0060047487</td><td>1826600579</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000161</td><td>0060047488</td><td>1826600580</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000162</td><td>0060047490</td><td>1826600581</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000163</td><td>0060047492</td><td>1826600582</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000164</td><td>0060047494</td><td>1826600583</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000165</td><td>0060047495</td><td>1826600584</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000166</td><td>0060047499</td><td>1826600585</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000167</td><td>0060047501</td><td>1826600586</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000168</td><td>0060047692</td><td>1826600591</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000169</td><td>0060047694</td><td>1826600592</td><td>2019-03-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7453.36</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000170</td><td>0000925450</td><td>1858100992</td><td>2019-03-30</td><td>F1105CZS0150</td><td>ELE 12V150AH LE19000TT FNSD BTY V16</td><td>50.000</td><td>400000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000171</td><td>0000925452</td><td>1858100993</td><td>2019-03-30</td><td>F03176502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 765</td><td>50.000</td><td>115500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1029</td><td>Mewat Warehouse -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000172</td><td>0000925452</td><td>1858100993</td><td>2019-03-30</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>450.000</td><td>1334250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1029</td><td>Mewat Warehouse -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000173</td><td>0000963463</td><td>1910100631</td><td>2019-05-29</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>12.000</td><td>94079.60</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1100</td><td>Ludhiana Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000174</td><td>0000963465</td><td>1910100632</td><td>2019-05-29</td><td>F1105C307150</td><td>ELE 12V150AH LE19000TT FNSD BTY V18</td><td>50.000</td><td>400000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1100</td><td>Ludhiana Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000175</td><td>0000963465</td><td>1910100632</td><td>2019-05-29</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>50.000</td><td>452750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1100</td><td>Ludhiana Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000176</td><td>0000963466</td><td>1910100633</td><td>2019-05-29</td><td>F03216652351</td><td>S/Q  UPS 24V LUM BIS ELECTRA + 1665</td><td>50.000</td><td>197500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1100</td><td>Ludhiana Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000177</td><td>0000963467</td><td>1910100634</td><td>2019-05-29</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>50.000</td><td>157750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1100</td><td>Ludhiana Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000178</td><td>0000963467</td><td>1910100634</td><td>2019-05-29</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>50.000</td><td>189750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1100</td><td>Ludhiana Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000179</td><td>0000932130</td><td>1911100218</td><td>2019-04-16</td><td>T30000000313</td><td>Solar PV Panel 335 Wp Mono Crystalline</td><td>6.000</td><td>53608.57</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1110</td><td>Kapurthala Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000180</td><td>0000934046</td><td>1926100071</td><td>2019-04-18</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>400.000</td><td>1170000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000181</td><td>0000934046</td><td>1926100071</td><td>2019-04-18</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>50.000</td><td>215500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000182</td><td>0000934048</td><td>1926100072</td><td>2019-04-18</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>100.000</td><td>905499.71</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000183</td><td>0000934048</td><td>1926100072</td><td>2019-04-18</td><td>F1102CZK0200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V16</td><td>29.000</td><td>356554.89</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000184</td><td>0000934047</td><td>1926100074</td><td>2019-04-18</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>100.000</td><td>1143000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000185</td><td>0000939057</td><td>1926100103</td><td>2019-04-25</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000186</td><td>0000939057</td><td>1926100103</td><td>2019-04-25</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000187</td><td>0000939057</td><td>1926100103</td><td>2019-04-25</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000188</td><td>0000939057</td><td>1926100103</td><td>2019-04-25</td><td>T30000000439</td><td>SCC1206-B40H1N-P40W1N</td><td>10.000</td><td>53350.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000189</td><td>0000939058</td><td>1926100104</td><td>2019-04-25</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000190</td><td>0000939058</td><td>1926100104</td><td>2019-04-25</td><td>T30000001605</td><td>NXG1800-B150HTT2N-P325W2N</td><td>5.000</td><td>219150.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000191</td><td>0000939058</td><td>1926100104</td><td>2019-04-25</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000192</td><td>0000939058</td><td>1926100104</td><td>2019-04-25</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>5.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000193</td><td>0000939059</td><td>1926100105</td><td>2019-04-25</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>50.000</td><td>644500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000194</td><td>0000939059</td><td>1926100105</td><td>2019-04-25</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>100.000</td><td>965000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000195</td><td>0000939060</td><td>1926100106</td><td>2019-04-25</td><td>F19102004001</td><td>SOLAR CHARGE CONTROLLER SCC1220NM</td><td>10.000</td><td>9000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000196</td><td>0000939312</td><td>1926100117</td><td>2019-04-25</td><td>T30000000694</td><td>NXG750-B120H1N-P165W1N</td><td>12.000</td><td>193500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000197</td><td>0000939312</td><td>1926100117</td><td>2019-04-25</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>12.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000198</td><td>0000939312</td><td>1926100117</td><td>2019-04-25</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>12.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000199</td><td>0000939312</td><td>1926100117</td><td>2019-04-25</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>12.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000200</td><td>0000939056</td><td>1926100125</td><td>2019-04-26</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>13.000</td><td>256880.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000201</td><td>0000939056</td><td>1926100125</td><td>2019-04-26</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>13.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000202</td><td>0000939056</td><td>1926100125</td><td>2019-04-26</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>13.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000203</td><td>0000939056</td><td>1926100125</td><td>2019-04-26</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>13.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000204</td><td>0000939056</td><td>1926100136</td><td>2019-04-28</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>7.000</td><td>138320.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000205</td><td>0000939056</td><td>1926100136</td><td>2019-04-28</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>7.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000206</td><td>0000939056</td><td>1926100136</td><td>2019-04-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>7.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000207</td><td>0000939056</td><td>1926100136</td><td>2019-04-28</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>7.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000208</td><td>0000942128</td><td>1926100137</td><td>2019-04-28</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000209</td><td>0000942128</td><td>1926100137</td><td>2019-04-28</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000210</td><td>0000942128</td><td>1926100137</td><td>2019-04-28</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>50.000</td><td>113250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000211</td><td>0000942129</td><td>1926100138</td><td>2019-04-28</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>50.000</td><td>166250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000212</td><td>0000942226</td><td>1926100142</td><td>2019-04-28</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>50.000</td><td>400000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000213</td><td>0000942229</td><td>1926100143</td><td>2019-04-28</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000214</td><td>0000942130</td><td>1926100144</td><td>2019-04-29</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>100.000</td><td>816000.08</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000215</td><td>0000942130</td><td>1926100144</td><td>2019-04-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>4.000</td><td>35500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000216</td><td>0000942130</td><td>1926100144</td><td>2019-04-29</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>50.000</td><td>644500.06</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000217</td><td>0000942130</td><td>1926100144</td><td>2019-04-29</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>77.000</td><td>697235.06</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000218</td><td>0000942130</td><td>1926100145</td><td>2019-04-29</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>23.000</td><td>208264.80</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000219</td><td>0000943231</td><td>1926100150</td><td>2019-04-29</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>150.000</td><td>1714500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000220</td><td>0000943693</td><td>1926100157</td><td>2019-04-29</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>100.000</td><td>907500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000221</td><td>0000944155</td><td>1926100173</td><td>2019-04-29</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>78600.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000222</td><td>0000954852</td><td>1926100253</td><td>2019-05-15</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>50.000</td><td>408000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000223</td><td>0000954852</td><td>1926100253</td><td>2019-05-15</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>25.000</td><td>322250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000224</td><td>0000954852</td><td>1926100253</td><td>2019-05-15</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>50.000</td><td>571500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000225</td><td>0000954852</td><td>1926100253</td><td>2019-05-15</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>100.000</td><td>800000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000226</td><td>0000954852</td><td>1926100254</td><td>2019-05-15</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>55.000</td><td>499125.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000227</td><td>0000954852</td><td>1926100254</td><td>2019-05-15</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>25.000</td><td>322250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000228</td><td>0000954852</td><td>1926100254</td><td>2019-05-15</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>50.000</td><td>571500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000229</td><td>0000954852</td><td>1926100254</td><td>2019-05-15</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>100.000</td><td>965000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000230</td><td>0000958679</td><td>1926100278</td><td>2019-05-20</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>100.000</td><td>800000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000231</td><td>0000958679</td><td>1926100278</td><td>2019-05-20</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>150.000</td><td>1669500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000232</td><td>0000958679</td><td>1926100279</td><td>2019-05-20</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>0.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000233</td><td>0000958679</td><td>1926100279</td><td>2019-05-20</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>106.000</td><td>1022900.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000234</td><td>0000958679</td><td>1926100279</td><td>2019-05-20</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>44.000</td><td>424600.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000235</td><td>0000958679</td><td>1926100279</td><td>2019-05-20</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>50.000</td><td>644500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000236</td><td>0000958679</td><td>1926100280</td><td>2019-05-20</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>47.000</td><td>426525.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000237</td><td>0000958679</td><td>1926100280</td><td>2019-05-20</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>50.000</td><td>408000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000238</td><td>0000958679</td><td>1926100281</td><td>2019-05-21</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>38.000</td><td>344850.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000239</td><td>0000958679</td><td>1926100282</td><td>2019-05-21</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>10.000</td><td>90750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000240</td><td>0000958679</td><td>1926100282</td><td>2019-05-21</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>5.000</td><td>45375.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000241</td><td>0000959292</td><td>1926100284</td><td>2019-05-21</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>20.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000242</td><td>0000959292</td><td>1926100284</td><td>2019-05-21</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>20.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000243</td><td>0000959292</td><td>1926100284</td><td>2019-05-21</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>20.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000244</td><td>0000959292</td><td>1926100284</td><td>2019-05-21</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>20.000</td><td>395200.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000245</td><td>0000959294</td><td>1926100286</td><td>2019-05-21</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>30.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000246</td><td>0000959294</td><td>1926100286</td><td>2019-05-21</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>30.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000247</td><td>0000959294</td><td>1926100286</td><td>2019-05-21</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>60.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000248</td><td>0000959294</td><td>1926100286</td><td>2019-05-21</td><td>T30000000698</td><td>NXG1100-B150HTT1N-P105W2N</td><td>30.000</td><td>645000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000249</td><td>0000961397</td><td>1926100297</td><td>2019-05-24</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>50.000</td><td>465000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000250</td><td>0000965488</td><td>1926100327</td><td>2019-05-28</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>50.000</td><td>482500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000251</td><td>0000965488</td><td>1926100327</td><td>2019-05-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>25.000</td><td>322250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000252</td><td>0000965489</td><td>1926100328</td><td>2019-05-28</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>25.000</td><td>322250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000253</td><td>0000971213</td><td>1926100350</td><td>2019-05-31</td><td>F1102C408160</td><td>LUM 12V160AH PC 20042TT FNSD BTY</td><td>40.000</td><td>330400.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000254</td><td>0000977257</td><td>1926100443</td><td>2019-06-14</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>40.000</td><td>355000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000255</td><td>0000978101</td><td>1926100448</td><td>2019-06-15</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>200.000</td><td>1930000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000256</td><td>0000978101</td><td>1926100449</td><td>2019-06-15</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>200.000</td><td>2226000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000257</td><td>0000978101</td><td>1926100450</td><td>2019-06-15</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>25.000</td><td>201000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000258</td><td>0000978101</td><td>1926100451</td><td>2019-06-15</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>25.000</td><td>201000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000259</td><td>0000980839</td><td>1926100469</td><td>2019-06-19</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>5.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000260</td><td>0000980839</td><td>1926100469</td><td>2019-06-19</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000261</td><td>0000980839</td><td>1926100469</td><td>2019-06-19</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>5.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000262</td><td>0000980839</td><td>1926100469</td><td>2019-06-19</td><td>T30000001604</td><td>NXG1800-B120H2N-P325W1N</td><td>5.000</td><td>146975.24</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000263</td><td>0000981000</td><td>1926100479</td><td>2019-06-19</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>50.000</td><td>408000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000264</td><td>0000981000</td><td>1926100479</td><td>2019-06-19</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>100.000</td><td>907500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000265</td><td>0000981000</td><td>1926100479</td><td>2019-06-19</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>50.000</td><td>644500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000266</td><td>0000981000</td><td>1926100480</td><td>2019-06-19</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>40.000</td><td>363000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000267</td><td>0000983077</td><td>1926100497</td><td>2019-06-20</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>250.000</td><td>731250.24</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000268</td><td>0000983077</td><td>1926100497</td><td>2019-06-20</td><td>F04217013051</td><td>S/W UPS 1500VA LUMINOUS ZELIO+ 1700/24V</td><td>20.000</td><td>103100.03</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000269</td><td>0000983077</td><td>1926100497</td><td>2019-06-20</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>50.000</td><td>189750.06</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000270</td><td>0000983077</td><td>1926100497</td><td>2019-06-20</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>88.000</td><td>223520.07</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000271</td><td>0000983077</td><td>1926100498</td><td>2019-06-20</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>251.000</td><td>734175.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000272</td><td>0000983077</td><td>1926100499</td><td>2019-06-20</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>91.000</td><td>266175.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000273</td><td>0000983204</td><td>1926100501</td><td>2019-06-21</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>4.000</td><td>43679.60</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000274</td><td>0000985818</td><td>1926100523</td><td>2019-06-25</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>23.000</td><td>221950.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000275</td><td>0000985818</td><td>1926100523</td><td>2019-06-25</td><td>F1152L420150</td><td>SILVER CHARGE 12V150Ah SIL18057 FNSD BTY</td><td>30.000</td><td>267750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000276</td><td>0000985824</td><td>1926100524</td><td>2019-06-25</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>20.000</td><td>77867.76</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000277</td><td>0000985823</td><td>1926100525</td><td>2019-06-25</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>30.000</td><td>76200.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000278</td><td>0000985823</td><td>1926100525</td><td>2019-06-25</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>50.000</td><td>134750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000279</td><td>0000985818</td><td>1926100527</td><td>2019-06-25</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>27.000</td><td>260550.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000280</td><td>0000990717</td><td>1926100593</td><td>2019-06-29</td><td>F1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>6.000</td><td>66779.60</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000281</td><td>0000991787</td><td>1926100604</td><td>2019-06-30</td><td>F1105CZS0150</td><td>ELE 12V150AH LE19000TT FNSD BTY V16</td><td>10.000</td><td>80000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000282</td><td>0000991788</td><td>1926100605</td><td>2019-06-30</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>5.000</td><td>40200.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000283</td><td>0000994272</td><td>1926100629</td><td>2019-07-09</td><td>T30000001603</td><td>NXG1400-B150HTT1N-P165W1N</td><td>1.000</td><td>20564.74</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000284</td><td>0000994272</td><td>1926100629</td><td>2019-07-09</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>1.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000285</td><td>0000994272</td><td>1926100629</td><td>2019-07-09</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000286</td><td>0000994272</td><td>1926100629</td><td>2019-07-09</td><td>F19114016101</td><td>LUMINOUS SOLAR UPS 1400/12V</td><td>1.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000287</td><td>0060058994</td><td>1926400004</td><td>2019-06-28</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>-6.000</td><td>77339.80</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000288</td><td>0060039307</td><td>1926600007</td><td>2019-04-11</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>1.000</td><td>5046.80</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000289</td><td>0060039308</td><td>1926600008</td><td>2019-04-11</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>1.000</td><td>5046.80</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000290</td><td>0060040372</td><td>1926600009</td><td>2019-04-11</td><td>F1113C262200</td><td>LUM 12V200AH LPTT12200L FNSD BTY V18 SLR</td><td>1.000</td><td>8328.77</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000291</td><td>0060040375</td><td>1926600010</td><td>2019-04-11</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000292</td><td>0060040377</td><td>1926600011</td><td>2019-04-11</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000293</td><td>0060042543</td><td>1926600012</td><td>2019-04-11</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000294</td><td>0060042544</td><td>1926600013</td><td>2019-04-11</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000295</td><td>0060042545</td><td>1926600014</td><td>2019-04-11</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000296</td><td>0060042547</td><td>1926600015</td><td>2019-04-11</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000297</td><td>0060045152</td><td>1926600016</td><td>2019-04-11</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000298</td><td>0060047351</td><td>1926600017</td><td>2019-04-11</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5137.28</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000299</td><td>0060046012</td><td>1926600027</td><td>2019-04-12</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5968.70</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000300</td><td>0060046167</td><td>1926600028</td><td>2019-04-12</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>1.000</td><td>6449.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000301</td><td>0060045154</td><td>1926600029</td><td>2019-04-12</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000302</td><td>0060045155</td><td>1926600030</td><td>2019-04-12</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000303</td><td>0060045156</td><td>1926600031</td><td>2019-04-12</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>1.000</td><td>6449.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000304</td><td>0060045157</td><td>1926600032</td><td>2019-04-12</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>1.000</td><td>6449.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000305</td><td>0060045191</td><td>1926600033</td><td>2019-04-12</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000306</td><td>0060046428</td><td>1926600034</td><td>2019-04-12</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000307</td><td>0060046430</td><td>1926600035</td><td>2019-04-12</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000308</td><td>0060045147</td><td>1926600036</td><td>2019-04-12</td><td>F1105C305160</td><td>ELE 12V160AH LETT 20548 FNSD BTY V18</td><td>1.000</td><td>5102.40</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000309</td><td>0060045153</td><td>1926600040</td><td>2019-04-13</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000310</td><td>0060049230</td><td>1926600077</td><td>2019-04-13</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8811.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000311</td><td>0060039155</td><td>1926600080</td><td>2019-04-15</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8829.70</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000312</td><td>0060047701</td><td>1926600081</td><td>2019-04-15</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7377.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000313</td><td>0060049221</td><td>1926600082</td><td>2019-04-15</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7377.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000314</td><td>0060049225</td><td>1926600083</td><td>2019-04-15</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7377.50</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000315</td><td>0060050028</td><td>1926600084</td><td>2019-04-15</td><td>F1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>5988.86</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000316</td><td>0060039244</td><td>1926600105</td><td>2019-04-18</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8829.70</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000317</td><td>0060042298</td><td>1926600114</td><td>2019-04-22</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>0.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000318</td><td>0060054342</td><td>1926600162</td><td>2019-05-20</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7045.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000319</td><td>0060054343</td><td>1926600163</td><td>2019-05-20</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>1.000</td><td>5006.53</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000320</td><td>0060054344</td><td>1926600164</td><td>2019-05-20</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>1.000</td><td>5006.53</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000321</td><td>0060054345</td><td>1926600165</td><td>2019-05-20</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7045.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000322</td><td>0060054347</td><td>1926600166</td><td>2019-05-20</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7045.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000323</td><td>0060054349</td><td>1926600167</td><td>2019-05-20</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>1.000</td><td>5006.53</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000324</td><td>0060054576</td><td>1926600184</td><td>2019-05-21</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5977.96</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000325</td><td>0060054613</td><td>1926600186</td><td>2019-05-21</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5216.21</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000326</td><td>0060056937</td><td>1926600241</td><td>2019-06-14</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8837.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000327</td><td>0060058615</td><td>1926600267</td><td>2019-06-24</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7521.28</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000328</td><td>0060058616</td><td>1926600268</td><td>2019-06-24</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5263.33</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000329</td><td>0060058617</td><td>1926600269</td><td>2019-06-24</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8837.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000330</td><td>0060058618</td><td>1926600271</td><td>2019-06-25</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>6067.16</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1260</td><td>Jammu Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000331</td><td>0000963579</td><td>1941100672</td><td>2019-05-29</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>50.000</td><td>392000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1351</td><td>Gagret Warehouse 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000332</td><td>0000963579</td><td>1941100672</td><td>2019-05-29</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>25.000</td><td>156250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1351</td><td>Gagret Warehouse 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000333</td><td>0000963579</td><td>1941100672</td><td>2019-05-29</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>35.000</td><td>337750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1351</td><td>Gagret Warehouse 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000334</td><td>0000963579</td><td>1941100672</td><td>2019-05-29</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>50.000</td><td>363750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1351</td><td>Gagret Warehouse 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000335</td><td>0000936789</td><td>1958100109</td><td>2019-04-23</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>25.000</td><td>191000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000336</td><td>0000936789</td><td>1958100109</td><td>2019-04-23</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>100.000</td><td>930000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000337</td><td>0000936789</td><td>1958100109</td><td>2019-04-23</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>9.000</td><td>63675.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000338</td><td>0000965483</td><td>1958100371</td><td>2019-05-29</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>50.000</td><td>166250.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1029</td><td>Mewat Warehouse -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000339</td><td>0000965475</td><td>1958100372</td><td>2019-05-29</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>30.000</td><td>106050.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1029</td><td>Mewat Warehouse -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000340</td><td>0000965475</td><td>1958100372</td><td>2019-05-29</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>200.000</td><td>508000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1029</td><td>Mewat Warehouse -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000341</td><td>0000965475</td><td>1958100394</td><td>2019-05-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>300.000</td><td>877500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1029</td><td>Mewat Warehouse -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000342</td><td>0000945594</td><td>1967100189</td><td>2019-04-30</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1012</td><td>Mundka Warehouse-2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000343</td><td>0000945594</td><td>1967100189</td><td>2019-04-30</td><td>F04111013251</td><td>S/W UPS LUMINOUS ZELIO WI FI 1100/12V</td><td>10.000</td><td>42450.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1012</td><td>Mundka Warehouse-2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000344</td><td>0000945594</td><td>1967100189</td><td>2019-04-30</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>50.000</td><td>195500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1012</td><td>Mundka Warehouse-2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000345</td><td>0000945594</td><td>1967100189</td><td>2019-04-30</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>120.000</td><td>396600.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1012</td><td>Mundka Warehouse-2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000346</td><td>0000945594</td><td>1967100189</td><td>2019-04-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>230.000</td><td>672750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>1012</td><td>Mundka Warehouse-2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000347</td><td>0000987928</td><td>1992101182</td><td>2019-06-29</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>70.000</td><td>675500.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000348</td><td>0000987928</td><td>1992101182</td><td>2019-06-29</td><td>F1135C446160</td><td> 12V160AH PC 20042TT FNSD BTY V19 R1</td><td>50.000</td><td>413000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000349</td><td>0000967619</td><td>1993100931</td><td>2019-05-31</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>400.000</td><td>1186000.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000350</td><td>0000987928</td><td>1997101336</td><td>2019-06-29</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>50.000</td><td>435750.00</td><td>0001101574</td><td>VISHWAKARMA ELECTRICALS</td><td>09</td><td>Jammu and Kashmir</td><td>PG04</td><td>Gagret Unit - 4</td><td>Battery</td>
+	</tr>
+</table>

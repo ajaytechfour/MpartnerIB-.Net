@@ -1,0 +1,90 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000991754</td><td>1911102174</td><td>2019-06-30</td><td>F1152L420150</td><td>SILVER CHARGE 12V150Ah SIL18057 FNSD BTY</td><td>100.000</td><td>892500.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1110</td><td>Kapurthala Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000991756</td><td>1911102175</td><td>2019-06-30</td><td>F04165002051</td><td>S/W WAVE HUPS 12V LUM ECO VOLT+ 650</td><td>50.000</td><td>113500.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1110</td><td>Kapurthala Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000991756</td><td>1911102175</td><td>2019-06-30</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>200.000</td><td>631000.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1110</td><td>Kapurthala Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000004</td><td>0000974824</td><td>1913100772</td><td>2019-06-11</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>100.000</td><td>887500.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000974829</td><td>1913100773</td><td>2019-06-11</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>100.000</td><td>294000.27</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000974829</td><td>1913100773</td><td>2019-06-11</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>30.000</td><td>59850.05</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000974829</td><td>1913100773</td><td>2019-06-11</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>25.000</td><td>117375.11</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000974829</td><td>1913100773</td><td>2019-06-11</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>30.000</td><td>76200.07</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000977799</td><td>1913100843</td><td>2019-06-14</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>5.000</td><td>23475.19</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000977799</td><td>1913100843</td><td>2019-06-14</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>20.000</td><td>39900.31</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000977961</td><td>1913100845</td><td>2019-06-15</td><td>F19315012951</td><td>LUMINOUS REGALIA SOLAR UPS 1500VA/48V</td><td>1.000</td><td>48781.42</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000012</td><td>0000977962</td><td>1913100847</td><td>2019-06-15</td><td>F19315013951</td><td>REGALIA SOLAR UPS 1500VA/48V 2.4KWh</td><td>1.000</td><td>69403.36</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000013</td><td>0000977963</td><td>1913100848</td><td>2019-06-15</td><td>F19315013951</td><td>REGALIA SOLAR UPS 1500VA/48V 2.4KWh</td><td>1.000</td><td>69403.36</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000980344</td><td>1913100909</td><td>2019-06-18</td><td>F04455015001</td><td>S/W UPS 5.5KVA/96V LUM CRUZE WTH P.F</td><td>2.000</td><td>53339.93</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000015</td><td>0000980344</td><td>1913100909</td><td>2019-06-18</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>5.000</td><td>102799.87</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000016</td><td>0000980347</td><td>1913100910</td><td>2019-06-18</td><td>F19315012951</td><td>LUMINOUS REGALIA SOLAR UPS 1500VA/48V</td><td>1.000</td><td>48781.42</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000017</td><td>0000980339</td><td>1913100911</td><td>2019-06-18</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>100.000</td><td>625000.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000980339</td><td>1913100911</td><td>2019-06-18</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>10.000</td><td>90550.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000980339</td><td>1913100911</td><td>2019-06-18</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>50.000</td><td>434750.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000980339</td><td>1913100911</td><td>2019-06-18</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>186000.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000980339</td><td>1913100912</td><td>2019-06-18</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>50.000</td><td>400000.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000985098</td><td>1913101031</td><td>2019-06-24</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>42.000</td><td>246539.80</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000023</td><td>0000991608</td><td>1913101175</td><td>2019-06-30</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>25.000</td><td>146750.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000024</td><td>0060057409</td><td>1913600171</td><td>2019-06-11</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>4529.32</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0060057411</td><td>1913600172</td><td>2019-06-11</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5102.14</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0060057412</td><td>1913600173</td><td>2019-06-11</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>3787.79</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0060058455</td><td>1913600207</td><td>2019-06-24</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>3787.79</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0060058460</td><td>1913600209</td><td>2019-06-24</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>4529.32</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0000991610</td><td>1919103060</td><td>2019-06-30</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>60.000</td><td>655200.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1190</td><td>Jaipur Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000030</td><td>0000985707</td><td>1928100187</td><td>2019-06-25</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>30.000</td><td>235800.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1023</td><td>Gurgaon RDC-2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000031</td><td>0000991607</td><td>1952102789</td><td>2019-06-30</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>14.000</td><td>110039.80</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000032</td><td>0000989858</td><td>1955100836</td><td>2019-06-29</td><td>F19305003751</td><td>SOLAR RETROFIT 48V50AMP SHINE4850 Rev.01</td><td>2.000</td><td>10790.50</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1701</td><td>Cochin HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000033</td><td>0000989856</td><td>1955100868</td><td>2019-06-29</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>200.000</td><td>631000.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1701</td><td>Cochin HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000034</td><td>0000985786</td><td>1960101212</td><td>2019-06-28</td><td>F04852012851</td><td>S/W UPS 5.2KVA/72V LUMINOUS CRUZE+ REV02</td><td>7.000</td><td>143920.40</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000035</td><td>0000985752</td><td>1993101359</td><td>2019-06-25</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>8.000</td><td>69279.60</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>PG03</td><td>Gagret Unit - 3</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000036</td><td>0000981799</td><td>1995100326</td><td>2019-06-20</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>200.000</td><td>1377000.00</td><td>0001103340</td><td>Essar Power Centre</td><td>36</td><td>Telangana</td><td>PH01</td><td>Hosur Battery Unit</td><td>Battery</td>
+	</tr>
+</table>
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000975884</td><td>1933100396</td><td>2019-06-12</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001107530</td><td>IMAX POWAR SOLUTION</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0060056158</td><td>1933600136</td><td>2019-06-04</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>1.000</td><td>4830.16</td><td>0001107530</td><td>IMAX POWAR SOLUTION</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0060058142</td><td>1933600213</td><td>2019-06-19</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>1.000</td><td>4886.83</td><td>0001107530</td><td>IMAX POWAR SOLUTION</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0060056329</td><td>1933600228</td><td>2019-06-22</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6406.84</td><td>0001107530</td><td>IMAX POWAR SOLUTION</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr>
+</table>

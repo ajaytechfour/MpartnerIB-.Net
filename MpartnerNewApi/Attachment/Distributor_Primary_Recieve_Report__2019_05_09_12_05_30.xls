@@ -1,0 +1,45 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000941015</td><td>1913100218</td><td>2019-04-27</td><td>T1102G3307D2</td><td>LUMINOUS 7.2 AH 12V SMF BATTERY T C20</td><td>296.000</td><td>140600.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000941393</td><td>1913100223</td><td>2019-04-27</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>200.000</td><td>631000.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000941393</td><td>1913100223</td><td>2019-04-27</td><td>T04185002051</td><td>LUM  ECO VOLT+ 850/12V SINE WAVE UPS</td><td>50.000</td><td>147000.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000004</td><td>0000941396</td><td>1913100224</td><td>2019-04-27</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>39300.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1130</td><td>Hyderabad Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000005</td><td>0000941403</td><td>1913100225</td><td>2019-04-27</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000939951</td><td>1955100135</td><td>2019-04-26</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>39300.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000007</td><td>0000941383</td><td>1955100150</td><td>2019-04-27</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>5.000</td><td>24300.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000941383</td><td>1955100150</td><td>2019-04-27</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>15.000</td><td>120000.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000941383</td><td>1955100150</td><td>2019-04-27</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>20.000</td><td>139700.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000941383</td><td>1955100150</td><td>2019-04-27</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>30.000</td><td>266250.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000941385</td><td>1955100152</td><td>2019-04-27</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>50.000</td><td>189750.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000945035</td><td>1955100210</td><td>2019-04-30</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>5.000</td><td>29775.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000945035</td><td>1955100210</td><td>2019-04-30</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>5.000</td><td>24300.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000945035</td><td>1955100210</td><td>2019-04-30</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>15.000</td><td>130425.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000945035</td><td>1955100210</td><td>2019-04-30</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>5.000</td><td>45275.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000945035</td><td>1955100210</td><td>2019-04-30</td><td>F1144C179135</td><td>LUM 12V135AH SC 16054 FNSD BTY</td><td>5.000</td><td>40400.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000945043</td><td>1955100211</td><td>2019-04-30</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>2.000</td><td>6241.96</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000018</td><td>0000945043</td><td>1955100211</td><td>2019-04-30</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>2.000</td><td>10918.28</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000019</td><td>0000943797</td><td>1955100228</td><td>2019-04-30</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>50.000</td><td>157750.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000020</td><td>0000945852</td><td>1955100232</td><td>2019-04-30</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>50.000</td><td>157750.00</td><td>0001109234</td><td>INFOSOFT COMPUTERS PRIVATE LIMITED</td><td>11</td><td>Kerala</td><td>1701</td><td>Cochin HED</td><td>LB UPS</td>
+	</tr>
+</table>

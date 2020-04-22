@@ -1,0 +1,39 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000947732</td><td>1922100931</td><td>2019-05-04</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>15.000</td><td>93750.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000947733</td><td>1922100932</td><td>2019-05-04</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>20.000</td><td>257800.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000949320</td><td>1922101040</td><td>2019-05-08</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>15.000</td><td>133125.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000949320</td><td>1922101040</td><td>2019-05-08</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>10.000</td><td>90750.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000949320</td><td>1922101040</td><td>2019-05-08</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000949321</td><td>1922101041</td><td>2019-05-08</td><td>F03176502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 765</td><td>15.000</td><td>34650.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000949323</td><td>1922101042</td><td>2019-05-08</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>30.000</td><td>87750.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000949324</td><td>1922101043</td><td>2019-05-08</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>15.000</td><td>76650.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000009</td><td>0000955125</td><td>1922101195</td><td>2019-05-13</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>15.000</td><td>133125.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000955125</td><td>1922101195</td><td>2019-05-13</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000955127</td><td>1922101196</td><td>2019-05-13</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>60.000</td><td>175500.00</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0060052126</td><td>1922600504</td><td>2019-05-02</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0060052127</td><td>1922600505</td><td>2019-05-02</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0060052128</td><td>1922600506</td><td>2019-05-02</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0060052130</td><td>1922600507</td><td>2019-05-02</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0060052131</td><td>1922600508</td><td>2019-05-02</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0060052132</td><td>1922600509</td><td>2019-05-02</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8839.67</td><td>0001109207</td><td>S.K.R. ELECTRONICS</td><td>04</td><td>Bihar</td><td>1220</td><td>Patna Branch</td><td>Battery</td>
+	</tr>
+</table>

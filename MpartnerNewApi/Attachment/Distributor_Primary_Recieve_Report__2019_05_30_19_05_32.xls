@@ -1,0 +1,253 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000933765</td><td>1905100501</td><td>2019-04-19</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>100.000</td><td>1289000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000933765</td><td>1905100502</td><td>2019-04-19</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>100.000</td><td>1289000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000933765</td><td>1905100503</td><td>2019-04-19</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>50.000</td><td>644500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000956260</td><td>1923100489</td><td>2019-05-15</td><td>F19575010126</td><td>Solar UPS Cruze 7.5KVA+SRS SHINE12050</td><td>1.000</td><td>46165.30</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000948185</td><td>1962100886</td><td>2019-05-08</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>150.000</td><td>1933500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1101</td><td>Patiala Warehouse</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000948185</td><td>1962101090</td><td>2019-05-13</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>70.000</td><td>560000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1101</td><td>Patiala Warehouse</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000931020</td><td>1966100113</td><td>2019-04-13</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48600.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000931020</td><td>1966100113</td><td>2019-04-13</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>30.000</td><td>289500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000931020</td><td>1966100113</td><td>2019-04-13</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>30.000</td><td>240000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000931020</td><td>1966100113</td><td>2019-04-13</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>10.000</td><td>113550.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000931020</td><td>1966100113</td><td>2019-04-13</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>10.000</td><td>93000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000931020</td><td>1966100113</td><td>2019-04-13</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>10.000</td><td>67850.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000931020</td><td>1966100113</td><td>2019-04-13</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>50.000</td><td>644500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000931020</td><td>1966100113</td><td>2019-04-13</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>10.000</td><td>114300.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000931022</td><td>1966100114</td><td>2019-04-13</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>150.000</td><td>438750.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000931026</td><td>1966100115</td><td>2019-04-13</td><td>F03135001951</td><td>S/Q WAVE HUPS 12V LUM BIS ECO WATT +350</td><td>3.000</td><td>4739.80</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0000931028</td><td>1966100116</td><td>2019-04-13</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>78600.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000018</td><td>0000932373</td><td>1966100118</td><td>2019-04-13</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>100.000</td><td>965000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000932373</td><td>1966100118</td><td>2019-04-13</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>100.000</td><td>800000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000932373</td><td>1966100118</td><td>2019-04-13</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>10.000</td><td>113550.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000932373</td><td>1966100118</td><td>2019-04-13</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>20.000</td><td>181100.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000932373</td><td>1966100118</td><td>2019-04-13</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>20.000</td><td>228600.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000932375</td><td>1966100133</td><td>2019-04-16</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>300.000</td><td>762000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000024</td><td>0000932375</td><td>1966100133</td><td>2019-04-16</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>30.000</td><td>59850.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000025</td><td>0000932375</td><td>1966100133</td><td>2019-04-16</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>300.000</td><td>877500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000026</td><td>0000932375</td><td>1966100133</td><td>2019-04-16</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>20.000</td><td>66100.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000027</td><td>0000933984</td><td>1966100156</td><td>2019-04-17</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>300.000</td><td>877500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000028</td><td>0000933984</td><td>1966100156</td><td>2019-04-17</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>200.000</td><td>508000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000029</td><td>0000933988</td><td>1966100157</td><td>2019-04-17</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>100.000</td><td>965000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000030</td><td>0000933988</td><td>1966100157</td><td>2019-04-17</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>100.000</td><td>800000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000933988</td><td>1966100157</td><td>2019-04-17</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>50.000</td><td>465000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000933710</td><td>1966100191</td><td>2019-04-18</td><td>T30000000410</td><td>SCC1206-B20L1N-P40W1N</td><td>13.000</td><td>52584.74</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000033</td><td>0000933710</td><td>1966100191</td><td>2019-04-18</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>13.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000034</td><td>0000933710</td><td>1966100191</td><td>2019-04-18</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>13.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000933710</td><td>1966100191</td><td>2019-04-18</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>13.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000036</td><td>0000933985</td><td>1966100192</td><td>2019-04-18</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>10.000</td><td>78600.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000037</td><td>0000934911</td><td>1966100193</td><td>2019-04-18</td><td>T30000000430</td><td>SCC1206-B80H1N-P100W1N</td><td>20.000</td><td>189000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000038</td><td>0000934911</td><td>1966100193</td><td>2019-04-18</td><td>T30000000310</td><td>Solar PV Module 100W/12V RFID Poly Crys</td><td>20.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000039</td><td>0000934911</td><td>1966100193</td><td>2019-04-18</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>20.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000040</td><td>0000934911</td><td>1966100193</td><td>2019-04-18</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>20.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000041</td><td>0000933710</td><td>1966100237</td><td>2019-04-23</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>27.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000042</td><td>0000933710</td><td>1966100237</td><td>2019-04-23</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>27.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0000933710</td><td>1966100237</td><td>2019-04-23</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>27.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000044</td><td>0000933710</td><td>1966100237</td><td>2019-04-23</td><td>T30000000410</td><td>SCC1206-B20L1N-P40W1N</td><td>27.000</td><td>109215.24</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000045</td><td>0000935723</td><td>1966100238</td><td>2019-04-23</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>2.000</td><td>10917.76</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000046</td><td>0000936817</td><td>1966100244</td><td>2019-04-23</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>5.000</td><td>11025.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000047</td><td>0000936817</td><td>1966100244</td><td>2019-04-23</td><td>F1113B274060</td><td>LUM 12V60AH LPT1260H FNSD BTY V18 SLR</td><td>5.000</td><td>22800.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000048</td><td>0000945764</td><td>1966100548</td><td>2019-04-30</td><td>F19135003151</td><td>S/Q WAVE UPS 12V LUMINOUS SOLAR NXG 350</td><td>20.000</td><td>40788.16</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000049</td><td>0000946086</td><td>1966100549</td><td>2019-04-30</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>30.000</td><td>106050.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000050</td><td>0000945774</td><td>1966100564</td><td>2019-04-30</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>5.000</td><td>27294.90</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000051</td><td>0000945782</td><td>1966100565</td><td>2019-04-30</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>30.000</td><td>342900.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000052</td><td>0000945798</td><td>1966100566</td><td>2019-04-30</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>20.000</td><td>102200.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000053</td><td>0000945804</td><td>1966100567</td><td>2019-04-30</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>30.000</td><td>113850.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000054</td><td>0000945934</td><td>1966100568</td><td>2019-04-30</td><td>F1113B274060</td><td>LUM 12V60AH LPT1260H FNSD BTY V18 SLR</td><td>20.000</td><td>91200.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000055</td><td>0000948009</td><td>1966100603</td><td>2019-05-06</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>30.000</td><td>244800.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000056</td><td>0000948010</td><td>1966100604</td><td>2019-05-06</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>20.000</td><td>228600.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000057</td><td>0000948011</td><td>1966100605</td><td>2019-05-06</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>10.000</td><td>37950.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000058</td><td>0000948011</td><td>1966100605</td><td>2019-05-06</td><td>F04217013051</td><td>S/W UPS 1500VA LUMINOUS ZELIO+ 1700/24V</td><td>5.000</td><td>25775.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000059</td><td>0000948011</td><td>1966100605</td><td>2019-05-06</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>5.000</td><td>17675.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000060</td><td>0000948011</td><td>1966100605</td><td>2019-05-06</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>100.000</td><td>330500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000061</td><td>0000956526</td><td>1966100712</td><td>2019-05-15</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>40.000</td><td>434200.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000062</td><td>0000956526</td><td>1966100712</td><td>2019-05-15</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>40.000</td><td>372000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000063</td><td>0000957296</td><td>1966100753</td><td>2019-05-17</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000064</td><td>0000957297</td><td>1966100754</td><td>2019-05-17</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>60.000</td><td>152400.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000065</td><td>0000957531</td><td>1966100775</td><td>2019-05-17</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>30.000</td><td>386700.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000066</td><td>0000957556</td><td>1966100787</td><td>2019-05-17</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>50.000</td><td>127000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000067</td><td>0000957582</td><td>1966100799</td><td>2019-05-17</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>10.000</td><td>58700.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000068</td><td>0000957615</td><td>1966100811</td><td>2019-05-17</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>20.000</td><td>217100.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000069</td><td>0000957640</td><td>1966100823</td><td>2019-05-17</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>20.000</td><td>97200.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000070</td><td>0000958777</td><td>1966100871</td><td>2019-05-20</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>133.000</td><td>337820.18</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000071</td><td>0000958777</td><td>1966100871</td><td>2019-05-20</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>200.000</td><td>399000.22</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000072</td><td>0000958777</td><td>1966100872</td><td>2019-05-20</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>67.000</td><td>170179.60</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000073</td><td>0000958778</td><td>1966100873</td><td>2019-05-20</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>10.000</td><td>58700.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000074</td><td>0000958775</td><td>1966100887</td><td>2019-05-21</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>50.000</td><td>408000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000075</td><td>0000958775</td><td>1966100887</td><td>2019-05-21</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>100.000</td><td>930000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000076</td><td>0000958775</td><td>1966100887</td><td>2019-05-21</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>20.000</td><td>97200.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000077</td><td>0000958775</td><td>1966100906</td><td>2019-05-21</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>50.000</td><td>400000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000078</td><td>0000958775</td><td>1966100915</td><td>2019-05-22</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>30.000</td><td>289500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000079</td><td>0000960287</td><td>1966100943</td><td>2019-05-22</td><td>F04217013051</td><td>S/W UPS 1500VA LUMINOUS ZELIO+ 1700/24V</td><td>2.000</td><td>10310.01</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000080</td><td>0000960287</td><td>1966100943</td><td>2019-05-22</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>100.000</td><td>199500.19</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000081</td><td>0000960289</td><td>1966100944</td><td>2019-05-22</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>55.000</td><td>499125.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000082</td><td>0000960289</td><td>1966100944</td><td>2019-05-22</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>20.000</td><td>160000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000083</td><td>0000960289</td><td>1966100944</td><td>2019-05-22</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>20.000</td><td>193000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000084</td><td>0000960289</td><td>1966100944</td><td>2019-05-22</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>20.000</td><td>222600.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000085</td><td>0000960803</td><td>1966100984</td><td>2019-05-23</td><td>F04111013251</td><td>S/W UPS LUMINOUS ZELIO WI FI 1100/12V</td><td>80.000</td><td>339600.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000086</td><td>0000960804</td><td>1966100985</td><td>2019-05-23</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>19.000</td><td>176700.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000087</td><td>0000961006</td><td>1966100995</td><td>2019-05-23</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>30.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000088</td><td>0000961006</td><td>1966100995</td><td>2019-05-23</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>30.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000089</td><td>0000961006</td><td>1966100995</td><td>2019-05-23</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>30.000</td><td>0.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000090</td><td>0000961006</td><td>1966100995</td><td>2019-05-23</td><td>T30000000410</td><td>SCC1206-B20L1N-P40W1N</td><td>30.000</td><td>121350.50</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000091</td><td>0000961008</td><td>1966101000</td><td>2019-05-23</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>15.000</td><td>75596.18</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000092</td><td>0000961010</td><td>1966101001</td><td>2019-05-23</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>10.000</td><td>31209.38</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000093</td><td>0000961242</td><td>1966101013</td><td>2019-05-23</td><td>T1103CXUA180</td><td>LUM 12V180AH ILTT24060 FNSD BTY V18</td><td>20.000</td><td>222600.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000094</td><td>0000961415</td><td>1966101021</td><td>2019-05-23</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000095</td><td>0000961448</td><td>1966101027</td><td>2019-05-24</td><td>F1113B426040</td><td>LUM 12V40AH LPT1240L FNSD BTY V19 SLR</td><td>20.000</td><td>64000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000096</td><td>0000962083</td><td>1966101054</td><td>2019-05-24</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>119.000</td><td>1148350.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000097</td><td>0000962394</td><td>1966101113</td><td>2019-05-25</td><td>T1105C418200</td><td>ELE 12V200AH LETT 25560 FNSD BTY V19</td><td>10.000</td><td>119950.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000098</td><td>0000962395</td><td>1966101114</td><td>2019-05-25</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000099</td><td>0000962395</td><td>1966101114</td><td>2019-05-25</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>50.000</td><td>452750.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000100</td><td>0000962396</td><td>1966101115</td><td>2019-05-25</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>20.000</td><td>74000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000101</td><td>0000962397</td><td>1966101119</td><td>2019-05-25</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>55.000</td><td>163075.50</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000102</td><td>0000962398</td><td>1966101120</td><td>2019-05-25</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>4.000</td><td>31439.80</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000103</td><td>0000963948</td><td>1966101168</td><td>2019-05-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>3.000</td><td>32475.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000104</td><td>0000964050</td><td>1966101169</td><td>2019-05-28</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000105</td><td>0000964052</td><td>1966101170</td><td>2019-05-28</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>200.000</td><td>1600000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000106</td><td>0000964052</td><td>1966101171</td><td>2019-05-28</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>100.000</td><td>965000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000107</td><td>0060049423</td><td>1966600042</td><td>2019-04-11</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6198.08</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000108</td><td>0060049424</td><td>1966600043</td><td>2019-04-11</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5912.03</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000109</td><td>0060049425</td><td>1966600044</td><td>2019-04-11</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5912.03</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000110</td><td>0060049428</td><td>1966600047</td><td>2019-04-11</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>1.000</td><td>2443.56</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000111</td><td>0060049430</td><td>1966600048</td><td>2019-04-11</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7547.66</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000112</td><td>0060049431</td><td>1966600049</td><td>2019-04-11</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7547.67</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000113</td><td>0060049432</td><td>1966600050</td><td>2019-04-11</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5153.35</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000114</td><td>0060055871</td><td>1966600115</td><td>2019-05-27</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>1.000</td><td>2744.70</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000115</td><td>0060055865</td><td>1966600119</td><td>2019-05-29</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5885.76</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000116</td><td>0060055863</td><td>1966600121</td><td>2019-05-29</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8978.37</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000117</td><td>0060055879</td><td>1966600123</td><td>2019-05-29</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8978.37</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000118</td><td>0000948754</td><td>1967100288</td><td>2019-05-11</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>500.000</td><td>1462500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1012</td><td>Mundka Warehouse-2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000119</td><td>0000948754</td><td>1967100288</td><td>2019-05-11</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>500.000</td><td>1270000.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1012</td><td>Mundka Warehouse-2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000120</td><td>0000960502</td><td>1967100433</td><td>2019-05-27</td><td>F1146A412100</td><td>LUM 12V100AH RPF1400 FNSD BTY</td><td>150.000</td><td>691125.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>1012</td><td>Mundka Warehouse-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000121</td><td>0060050129</td><td>1992400004</td><td>2019-04-17</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>0.000</td><td>12703.88</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000122</td><td>0000936300</td><td>1994100343</td><td>2019-04-24</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>500.000</td><td>1462500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>PB01</td><td>Baddi Plant</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000123</td><td>0000936300</td><td>1994100344</td><td>2019-04-24</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>500.000</td><td>1462500.00</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>PB01</td><td>Baddi Plant</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000124</td><td>0060050128</td><td>1994700001</td><td>2019-04-17</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>0.000</td><td>8814.48</td><td>0001106227</td><td>NEW RUMANA</td><td>03</td><td>Assam</td><td>PB01</td><td>Baddi Plant</td><td>LB UPS</td>
+	</tr>
+</table>

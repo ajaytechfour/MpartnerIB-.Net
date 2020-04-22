@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Luminous.EF.User>
+
+@{
+    ViewBag.Title = "User Registration";
+    Layout = "~/Views/Shared/Security.cshtml";
+}
+
+
+<link href="../../assets/css/Formstyle.css" rel="stylesheet" type="text/css" />
+<script src="../../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+@section Header
+{
+User Registration
+}
+<script type="text/javascript">
+    $(function () {
+        $.post("../UserRegisteration/ProfileType", null, function (data) { SetProfile(data); }, "Json");
+    });
+    function SetProfile(data) {
+        var options;
+        $.each(data, function (key, value) {
+            options += "<option value=" + value.id + ">" + value.profileName + "</option>"
+
+        });
+        var ptype = $("#PType");
+        ptype.empty();
+        ptype.html("<option value=0>Select Profile Type</option>");
+        ptype.append(options);
+        
+    }
+</script>
+<ul class="form-style-1">
+<h3>Add New Profile</h3>
+<li><label><span style="font-family: sans-serif;">Email</span> <span class="required">*</span>
+</label>
+@Html.TextBoxFor(a=> a.FirstOrDefault().UserEmail)
+@Html.ValidationMessageFor(a => a.FirstOrDefault().UserEmail)
+</li>
+<li><label><span style="font-family: sans-serif;">User Name</span> <span class="required">*</span>
+</label>
+
+@Html.TextBoxFor(a=> a.FirstOrDefault().username)
+@Html.ValidationMessageFor(a => a.FirstOrDefault().username)
+</li>
+<li><label><span style="font-family: sans-serif;">Password</span> <span class="required">*</span>
+</label>
+@Html.TextBoxFor(a=> a.FirstOrDefault().Upassword)
+@Html.ValidationMessageFor(a => a.FirstOrDefault().Upassword)
+</li>
+
+<li><label><span style="font-family: sans-serif;">Status</span> <span class="required">*</span>
+</label>
+@Html.TextBoxFor(a=> a.FirstOrDefault().UStatus)
+@Html.ValidationMessageFor(a => a.FirstOrDefault().UStatus)
+</li>
+
+<li><label><span style="font-family: sans-serif;">Profile Type</span> <span class="required">*</span>
+</label>
+<select id="PType" name="ProfileType">
+<option >Select Profile Type</option>
+</select>
+@Html.ValidationMessageFor(a => a.FirstOrDefault().ProfileType)
+</li>
+<li>
+<input type="submit" value="Submit" />
+</li>
+</ul>

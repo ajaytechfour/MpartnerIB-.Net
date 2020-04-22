@@ -1,0 +1,482 @@
+﻿@model IEnumerable<LuminousMpartnerIB.EF.LSD_Master>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+@*<script src="//code.jquery.com/jquery-1.10.2.js"></script>*@
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style type="text/css">
+    .radioBtns {
+    position: absolute;
+    top: 95px;
+    z-index: 99;
+    left: 25px;
+}
+    .radioBtns label { font-weight: normal; margin-right:20px;}
+    .radioBtns label input {vertical-align: 0px;}
+
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //var t = new Date();
+        //var d = t.getDate();
+        //var h = t.getHours();
+
+        //if (h >= 22) {
+        //    //alert(h + "night logic 1")
+        //    // alert("Night Logic 1");
+
+        //} else {
+
+        //    if (h <= 8) {
+        //        // alert(h + "night logic 2")
+        //        // alert("Night Logic 2");
+        //    } else {
+        //        alert("Page blocked between Morning 8 AM to night 10");
+        //        window.location.href = '/LSD_Gift/Index/';
+        //    }
+
+        //}
+
+        $("#Grid").hide();
+        $(".giftList").hide();
+        $("#giftfilter").attr("disabled", true);
+      
+        $(".gift").change(function () {
+            $("#giftfilter").attr("disabled", false);
+            var giftValue = $("input[name='gift']:checked").val();
+            $("#giftfilter").val('');
+            $.ajax({
+
+                type: 'POST',
+
+                url: '@Url.Action("getFilterRadio", "GiftMapping")',
+
+                // dataType: 'json',
+
+                data: { Typevalue: giftValue },
+
+                success: function (d) {
+
+                },
+
+                error: function (xhr, status, error) {
+
+                    var err = eval("(" + xhr.responseText + ")");
+
+                }
+
+            });
+        });
+
+
+        $("#giftfilter").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/GiftMapping/getGiftfilter",
+                    type: "POST",
+                    dataType: "json",
+                    data: { FilterType: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+
+                            return { label: item.name, value: item.name };
+                        }))
+
+                    }
+                })
+            },
+            select: function (event, ui) {
+                var label = ui.item.label;
+                var value = ui.item.value;
+
+                //store in session
+                var giftfiltervalue = document.valueSelectedForAutocomplete = value;
+
+
+
+                $.ajax({
+
+                    type: 'POST',
+
+                    url: '@Url.Action("getGiftMapData", "GiftMapping")',
+
+                    // dataType: 'json',
+
+                    data: { Filtervalue: giftfiltervalue },
+
+                    success: function (data) {
+
+                        if (data == "Barcode already redeemed") {
+                            alert("Barcode already redeemed")
+                            $("#Grid").show();
+                            $(".giftList").show();
+                            var body = "";
+                            $("#Grid tbody").empty();
+                        }
+                        else if (data == "Coupon not activated") {
+                            alert("Coupon not activated")
+                            $("#Grid").show();
+                            $(".giftList").show();
+                            var body = "";
+                            $("#Grid tbody").empty();
+                        }
+                        else {
+
+
+                            $("#Grid").show();
+                            $(".giftList").show();
+                            var body = "";
+                            $("#Grid tbody").empty();
+                            // alert(result);
+
+                            $.each(data, function (key, value) {
+
+
+
+                                body += "<tr><td>" + value.Id + "</td>" +
+
+
+                            "<td>" + value.qrcode + "</td>" +
+                             "<td>" + value.barcode + "</td>" +
+                            "<td>" + value.secretcode + "</td>" +
+                            "<td>" + value.bundlecode + "</td>" +
+                            "<td><input type=text onkeypress='validate(event)' class='txtgiftid' value=" + value.giftid + " /></td>" +
+    "<td><a style='cursor:pointer' class='saveData' href='#' data-value='" + value.Id + "'>Save</a> </td></tr>";
+
+                            });
+
+                            $("#Grid tbody").append(body);
+                            SetPages(data.TotalRecord);
+
+                        }
+
+
+
+                    },
+
+                    error: function (xhr, status, error) {
+
+                        var err = eval("(" + xhr.responseText + ")");
+
+                    }
+
+                });
+
+            },
+            messages: {
+                noResults: "", results: ""
+            }
+        });
+
+
+
+    });
+
+    $("body").on("click", ".saveData", function (e) {
+        e.preventDefault();
+
+        var getValue = $(this).attr("data-value");
+        var getGift = $(this).parent("td").prev("td").children(".txtgiftid").val();
+
+
+        $.ajax({
+
+            type: 'POST',
+
+            url: '@Url.Action("editGiftMapping", "GiftMapping")',
+
+            // dataType: 'json',
+
+            data: { id: getValue, giftid: getGift },
+
+            success: function (data) {
+
+                alert(data);
+
+
+
+            },
+
+            error: function (xhr, status, error) {
+
+                var err = eval("(" + xhr.responseText + ")");
+
+            }
+
+        });
+
+
+
+    });
+
+    function validate(evt) {
+        var theEvent = evt || window.event;
+
+        // Handle paste
+        if (theEvent.type === 'paste') {
+            key = event.clipboardData.getData('text/plain');
+        } else {
+            // Handle key press
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+        }
+        var regex = /[0-9]|\./;
+        if (!regex.test(key)) {
+            theEvent.returnValue = false;
+            if (theEvent.preventDefault) theEvent.preventDefault();
+        }
+    }
+
+
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Magical 7 - </span> Gift Mapping</h1>
+        </div>
+    </div>
+    <div id="content_wrap" style="position:relative;">
+        @if (TempData["extension"] != null)
+        {
+            @Html.Raw(TempData["extension"])
+
+        }
+        @if (TempData["Successfully"] != null)
+        {
+            @Html.Raw(TempData["Successfully"])
+
+        }
+        @if (TempData["Blankfile"] != null)
+        {
+            @Html.Raw(TempData["Blankfile"])
+
+        }
+        @if (TempData["Exception"] != null)
+        {
+            @Html.Raw(TempData["Exception"])
+
+        }
+        @if (TempData["NoData"] != null)
+        {
+            @Html.Raw(TempData["NoData"])
+
+        }
+
+
+        @using (Html.BeginForm("ExportToExcel", "GiftMapping"))
+        {
+                           
+            <input type="submit" value="Download Format" style="position: absolute; right: 25px; top: 42px;z-index: 99; background: none;border: 1px solid #0047b9; border-radius: 4px; font-size: 12px; padding: 5px 10px; color: #0047b9;" />
+            <div class="radioBtns">
+                <label>@Html.RadioButton("ABC", 0, new { Name = "activation", @checked = "true" }) Activated but not redeemed </label>
+                <label>@Html.RadioButton("ABC", 1, new { Name = "activation" }) Not activated</label>
+            </div>
+        }
+        <div style="height:10px"></div>
+        <div style="font-weight: bold;"></div>
+        @using (Html.BeginForm("GiftMappingBulkImport", "GiftMapping", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="position:relative;">
+                        <h2>Map the Gift in Bulk</h2>
+                        
+                        <div class="row">
+                            <div class="col-md-6" style=" margin-top: 30px;">
+                                <div class="form-group">
+                                    <label>Excel file<span>*</span></label>
+                                    <input type="file" id="FileUpload" name="FileUpload" style="border: none; outline: none;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="submit" class="save-but-m submitBtn" value="Submit" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*<table>
+                    <tr><td>Excel file</td><td><input type="file" id="FileUpload" name="FileUpload" />
+                    <tr><td></td><td><input type="submit" id="Submit" name="Submit" value="Submit" /></td></tr>
+                </table>*@
+        }
+        </div>
+        <div style="font-weight: bold;"></div>
+
+        @*<div class="row">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift">
+                    <h2>Map the Gift According to field</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label style="display:block;">Field<span>*</span></label>
+                                QrCode @Html.RadioButton("gift", "QrCode", new { @class = "gift" })
+                                BarCode  @Html.RadioButton("gift", "BarCode", new { @class = "gift" })
+                                Alphanumeric Code  @Html.RadioButton("gift", "Alpha Numeric Code", new { @class = "gift" })
+                                Bundle  @Html.RadioButton("gift", "Bundle", new { @class = "gift" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label style="display:block;">Filter Gift <span style="color: red;">*</span></label>
+                                @Html.Editor("giftfilter", new { @class = "form-control", @placeholder = "Enter Text" })<br />
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>*@
+
+
+        @*<table style="width: 100%;">
+                <tr>
+                    <td style="width: 137px;">
+                        Field <span style="color: red;">*</span>
+                    </td>
+                    <td>
+                        QrCode @Html.RadioButton("gift", "QrCode", new { @class = "gift" })
+                        BarCode  @Html.RadioButton("gift", "BarCode", new { @class = "gift" })
+                        Alphanumeric Code  @Html.RadioButton("gift", "Alpha Numeric Code", new { @class = "gift" })
+                        Bundle  @Html.RadioButton("gift", "Bundle", new { @class = "gift" })
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="width: 137px;">
+                        Filter Gift <span style="color: red;">*</span>
+                    </td>
+                    <td>
+                        @Html.Editor("giftfilter", new { htmlAttributes = new { @class = "form-control" } })
+
+                    </td>
+
+                </tr>
+            </table>*@
+
+        <div class="giftList" style="margin:20px 0 0 0;">
+            <div id="list" class="tabelGridRow">
+                <table id="Grid" class="tabelGridRow2">
+                    <thead>
+                        <tr>
+                            <th>
+                                ID
+                            </th>
+                            <th>
+                                QR Code
+                            </th>
+                            <th>
+                                BarCode
+                            </th>
+                            <th>
+                                Alphanumeric Code
+                            </th>
+                            <th>
+                                Bundle Code
+                            </th>
+                            <th>
+                                Gift Id
+                            </th>
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="Paging">
+            </div>
+        </div>
+
+        <div class="space30"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footerRow">
+                    © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </div>

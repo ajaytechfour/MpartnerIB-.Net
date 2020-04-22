@@ -1,0 +1,43 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000968278</td><td>1901101740</td><td>2019-05-31</td><td>F1146A412100</td><td>LUM 12V100AH RPF1400 FNSD BTY</td><td>59.000</td><td>271842.10</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1010</td><td>HO - New Delhi</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000958572</td><td>1902101045</td><td>2019-05-22</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>50.000</td><td>344250.00</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000961095</td><td>1902101410</td><td>2019-05-31</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>100.000</td><td>269500.00</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000004</td><td>0000961095</td><td>1902101410</td><td>2019-05-31</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>40.000</td><td>156400.00</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000005</td><td>0000961114</td><td>1902101411</td><td>2019-05-31</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000967876</td><td>1902101412</td><td>2019-05-31</td><td>T30000000340</td><td>Solar Grid Tie Inverter 5KW/1P Nxi150 V3</td><td>1.000</td><td>39090.48</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000007</td><td>0000967876</td><td>1902101412</td><td>2019-05-31</td><td>T30000000317</td><td>Solar Grid Tie accessory 01</td><td>1.000</td><td>2000.02</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000008</td><td>0060054319</td><td>1902600535</td><td>2019-05-20</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4827.20</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0060053477</td><td>1902600572</td><td>2019-05-20</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4824.82</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0060055651</td><td>1902600592</td><td>2019-05-26</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>4964.83</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0060055532</td><td>1902600597</td><td>2019-05-26</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>1.000</td><td>4999.20</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000961114</td><td>1928100044</td><td>2019-05-31</td><td>F1148C282150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY</td><td>99.000</td><td>795960.20</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1023</td><td>Gurgaon RDC-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000972189</td><td>1928100046</td><td>2019-05-31</td><td>F1105A146150</td><td>ELE 12V150AH LE 1930FP FNSD BTY</td><td>34.000</td><td>234089.80</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1023</td><td>Gurgaon RDC-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000972398</td><td>1928100047</td><td>2019-05-31</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>50.000</td><td>402000.00</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1023</td><td>Gurgaon RDC-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000972398</td><td>1928100048</td><td>2019-05-31</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>39.000</td><td>313560.20</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1023</td><td>Gurgaon RDC-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000959858</td><td>1958100323</td><td>2019-05-21</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>50.000</td><td>392000.00</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000960750</td><td>1958100332</td><td>2019-05-23</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>100.000</td><td>800000.00</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000972192</td><td>1958100430</td><td>2019-05-31</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>100.000</td><td>784000.00</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0060056151</td><td>1958400026</td><td>2019-05-30</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>-1.000</td><td>8875.00</td><td>0001100077</td><td>LAKSH TRADERS</td><td>07</td><td>Haryana</td><td>1029</td><td>Mewat Warehouse -2</td><td>Battery</td>
+	</tr>
+</table>

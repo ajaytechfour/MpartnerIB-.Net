@@ -1,0 +1,51 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000958639</td><td>1913100539</td><td>2019-05-23</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>50.000</td><td>349250.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000958639</td><td>1913100539</td><td>2019-05-23</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000958639</td><td>1913100539</td><td>2019-05-23</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>43.000</td><td>344000.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000958639</td><td>1913100539</td><td>2019-05-23</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>10.000</td><td>90750.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000958644</td><td>1913100540</td><td>2019-05-23</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>20.000</td><td>75900.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000958644</td><td>1913100540</td><td>2019-05-23</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>100.000</td><td>315500.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000958644</td><td>1913100540</td><td>2019-05-23</td><td>T04185002051</td><td>LUM  ECO VOLT+ 850/12V SINE WAVE UPS</td><td>100.000</td><td>294000.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1130</td><td>Hyderabad Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000954226</td><td>1933100171</td><td>2019-05-11</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>100.000</td><td>595500.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000954226</td><td>1933100171</td><td>2019-05-11</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>50.000</td><td>312500.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000956837</td><td>1933100203</td><td>2019-05-16</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000962824</td><td>1933100268</td><td>2019-05-26</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>20.000</td><td>97200.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000962824</td><td>1933100268</td><td>2019-05-26</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>30.000</td><td>187500.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000962825</td><td>1933100269</td><td>2019-05-26</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>70.000</td><td>158550.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0060052968</td><td>1933600008</td><td>2019-05-08</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5082.79</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0060053666</td><td>1933600023</td><td>2019-05-16</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>1.000</td><td>6431.29</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0060054623</td><td>1933600064</td><td>2019-05-21</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>1.000</td><td>3982.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0060056162</td><td>1933600132</td><td>2019-05-29</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>4519.39</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>1330</td><td>Vijayawada Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000960077</td><td>1993100836</td><td>2019-05-24</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>200.000</td><td>585000.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000019</td><td>0000960077</td><td>1993100836</td><td>2019-05-24</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>100.000</td><td>254000.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000020</td><td>0000960077</td><td>1993100836</td><td>2019-05-24</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>50.000</td><td>134750.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000021</td><td>0000960077</td><td>1993100836</td><td>2019-05-24</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>50.000</td><td>99750.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000022</td><td>0000960077</td><td>1993100836</td><td>2019-05-24</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>150.000</td><td>339750.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000023</td><td>0000960077</td><td>1993100836</td><td>2019-05-24</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>20.000</td><td>86200.00</td><td>0001103097</td><td>LAKSHMI KUMARA ENTERPRISES</td><td>01</td><td>Andhra Pradesh</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr>
+</table>

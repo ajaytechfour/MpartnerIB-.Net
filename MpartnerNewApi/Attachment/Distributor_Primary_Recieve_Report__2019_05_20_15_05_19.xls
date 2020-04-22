@@ -1,0 +1,33 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000947708</td><td>1912100374</td><td>2019-05-04</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>14.000</td><td>106960.20</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0060053151</td><td>1912600087</td><td>2019-05-10</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>1.000</td><td>5334.70</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0060053154</td><td>1912600088</td><td>2019-05-10</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7458.55</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0060053155</td><td>1912600089</td><td>2019-05-10</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>1.000</td><td>5963.94</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0060053153</td><td>1912600095</td><td>2019-05-14</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5093.70</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0060053150</td><td>1912600096</td><td>2019-05-14</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>1.000</td><td>5093.70</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1120</td><td>Indore Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000956921</td><td>1952101124</td><td>2019-05-16</td><td>F19610023451</td><td>LUMINOUS SOLAR PCU NXT 10KW 120V W/O iOT</td><td>1.000</td><td>0.00</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000008</td><td>0000956921</td><td>1952101124</td><td>2019-05-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000956921</td><td>1952101124</td><td>2019-05-16</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>30.000</td><td>0.00</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000956921</td><td>1952101124</td><td>2019-05-16</td><td>T30000000845</td><td>PCU10kW-B150H10N-M325W30N</td><td>1.000</td><td>451440.00</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000011</td><td>0000956900</td><td>1952101125</td><td>2019-05-16</td><td>F19320013451</td><td>LUMINOUS SOLAR PCU NXT 2KW 48V W/O iOT</td><td>2.000</td><td>0.00</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000012</td><td>0000956900</td><td>1952101125</td><td>2019-05-16</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>8.000</td><td>0.00</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000956900</td><td>1952101125</td><td>2019-05-16</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>12.000</td><td>0.00</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000014</td><td>0000956900</td><td>1952101125</td><td>2019-05-16</td><td>T30000000865</td><td>PCU2k-B150HTT4N-P325W6N</td><td>2.000</td><td>240480.00</td><td>0001100521</td><td>SIM-TEL COMPUTERS</td><td>12</td><td>Madhya Pradesh</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr>
+</table>

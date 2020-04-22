@@ -1,0 +1,85 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000929907</td><td>1954100038</td><td>2019-04-08</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>10.000</td><td>31549.94</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000002</td><td>0000929907</td><td>1954100038</td><td>2019-04-08</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>10.000</td><td>43099.92</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000003</td><td>0000929907</td><td>1954100038</td><td>2019-04-08</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>10.000</td><td>46949.91</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000004</td><td>0000929907</td><td>1954100038</td><td>2019-04-08</td><td>F04185002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 850/12V(BIS)</td><td>22.000</td><td>64679.87</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000005</td><td>0000929907</td><td>1954100038</td><td>2019-04-08</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>10.000</td><td>22649.96</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000929909</td><td>1954100039</td><td>2019-04-08</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>3.000</td><td>18750.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000929909</td><td>1954100039</td><td>2019-04-08</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>20.000</td><td>193000.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000929913</td><td>1954100040</td><td>2019-04-08</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>39300.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000009</td><td>0000929915</td><td>1954100041</td><td>2019-04-08</td><td>F19114016101</td><td>LUMINOUS SOLAR UPS 1400/12V</td><td>1.000</td><td>4851.76</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000934450</td><td>1954100207</td><td>2019-04-17</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>29.000</td><td>84825.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000934450</td><td>1954100207</td><td>2019-04-17</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>30.000</td><td>76200.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000934450</td><td>1954100207</td><td>2019-04-17</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>5.000</td><td>18975.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000013</td><td>0000934450</td><td>1954100207</td><td>2019-04-17</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>30.000</td><td>94650.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000936238</td><td>1954100289</td><td>2019-04-20</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48600.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000936238</td><td>1954100289</td><td>2019-04-20</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>5.000</td><td>40000.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000936237</td><td>1954100292</td><td>2019-04-20</td><td>F04725012851</td><td>S/W UPS 2500/36V LUMINOUS CRUZE+ REV.02</td><td>2.000</td><td>17320.40</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000017</td><td>0000938533</td><td>1954100335</td><td>2019-04-24</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>15.000</td><td>114600.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000942826</td><td>1954100441</td><td>2019-04-29</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>10.000</td><td>29650.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000019</td><td>0000942829</td><td>1954100442</td><td>2019-04-29</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>10.000</td><td>46950.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000020</td><td>0000942829</td><td>1954100442</td><td>2019-04-29</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>20.000</td><td>63100.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000021</td><td>0000942829</td><td>1954100442</td><td>2019-04-29</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>10.000</td><td>43100.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000022</td><td>0000942835</td><td>1954100443</td><td>2019-04-29</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>4.000</td><td>20440.06</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000023</td><td>0000942835</td><td>1954100443</td><td>2019-04-29</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>4.000</td><td>23480.07</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000024</td><td>0000942835</td><td>1954100443</td><td>2019-04-29</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>2.000</td><td>21840.07</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000025</td><td>0000942838</td><td>1954100444</td><td>2019-04-29</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>10.000</td><td>80000.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0000942838</td><td>1954100444</td><td>2019-04-29</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0000943337</td><td>1954100451</td><td>2019-04-29</td><td>F04216512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1650/24V(BIS)</td><td>5.000</td><td>23475.50</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000028</td><td>0000943339</td><td>1954100452</td><td>2019-04-29</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>1.000</td><td>10920.40</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000029</td><td>0000943342</td><td>1954100483</td><td>2019-04-29</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>5.000</td><td>29775.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000030</td><td>0000943342</td><td>1954100483</td><td>2019-04-29</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>10.000</td><td>80000.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000943342</td><td>1954100483</td><td>2019-04-29</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>5.000</td><td>48250.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000944738</td><td>1954100499</td><td>2019-04-30</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>39300.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000033</td><td>0000944907</td><td>1954100500</td><td>2019-04-30</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>5.000</td><td>21550.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000034</td><td>0000944913</td><td>1954100501</td><td>2019-04-30</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>5.000</td><td>39825.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000944902</td><td>1954100513</td><td>2019-04-30</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>10.000</td><td>80000.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000036</td><td>0000944902</td><td>1954100513</td><td>2019-04-30</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000037</td><td>0000946424</td><td>1954100528</td><td>2019-04-30</td><td>F04175002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 750/12V(BIS)</td><td>15.000</td><td>38625.50</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000038</td><td>0000947858</td><td>1954100564</td><td>2019-05-06</td><td>F04175002051</td><td>S/W UPS LUMINOUS ECO VOLT+ 750/12V(BIS)</td><td>25.000</td><td>64375.50</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000039</td><td>0000950326</td><td>1954100600</td><td>2019-05-09</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>20.000</td><td>125000.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000040</td><td>0060050596</td><td>1954600022</td><td>2019-04-20</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>1.000</td><td>8000.00</td><td>0001108460</td><td>ADITYA ENTERPRISE</td><td>06</td><td>Gujarat</td><td>1691</td><td>Ahmedabad-2 HED</td><td>Battery</td>
+	</tr>
+</table>

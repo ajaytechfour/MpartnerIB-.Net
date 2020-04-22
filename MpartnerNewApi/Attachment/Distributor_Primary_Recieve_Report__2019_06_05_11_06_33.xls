@@ -1,0 +1,205 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000945666</td><td>1902100669</td><td>2019-04-30</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>100.000</td><td>1143000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1021</td><td>Gurgaon NDC</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000948710</td><td>1906101950</td><td>2019-05-15</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>200.000</td><td>441000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000935492</td><td>1966100204</td><td>2019-04-19</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>15.000</td><td>75596.18</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000004</td><td>0000935494</td><td>1966100205</td><td>2019-04-19</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>5.000</td><td>15604.33</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000005</td><td>0000935494</td><td>1966100205</td><td>2019-04-19</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>5.000</td><td>19466.79</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000006</td><td>0000935498</td><td>1966100206</td><td>2019-04-19</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>50.000</td><td>110250.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000935500</td><td>1966100207</td><td>2019-04-19</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>50.000</td><td>400000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000935500</td><td>1966100207</td><td>2019-04-19</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>50.000</td><td>465000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000935500</td><td>1966100207</td><td>2019-04-19</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>50.000</td><td>542750.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000935500</td><td>1966100207</td><td>2019-04-19</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>42.000</td><td>405300.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000935499</td><td>1966100208</td><td>2019-04-19</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>50.000</td><td>99749.90</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000935499</td><td>1966100208</td><td>2019-04-19</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>1.000</td><td>2540.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000013</td><td>0000935499</td><td>1966100208</td><td>2019-04-19</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>30.000</td><td>99149.90</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000942693</td><td>1966100427</td><td>2019-04-28</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>15.000</td><td>75596.24</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000015</td><td>0000942693</td><td>1966100427</td><td>2019-04-28</td><td>T30000000343</td><td>Solar PV Module 80W/12V Poly Crys.</td><td>10.000</td><td>26220.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000016</td><td>0000942693</td><td>1966100427</td><td>2019-04-28</td><td>T18010000077</td><td>Solar PV Module 100W/12V Poly Crys.</td><td>4.000</td><td>13566.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000017</td><td>0000942693</td><td>1966100427</td><td>2019-04-28</td><td>T18010000074</td><td>Solar PV Module 60W/12V Poly Crys.</td><td>10.000</td><td>22087.50</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000018</td><td>0000942693</td><td>1966100427</td><td>2019-04-28</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>30.000</td><td>45315.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000019</td><td>0000942694</td><td>1966100428</td><td>2019-04-28</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>10.000</td><td>38934.14</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000020</td><td>0000942694</td><td>1966100428</td><td>2019-04-28</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>10.000</td><td>31209.12</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000021</td><td>0000942697</td><td>1966100429</td><td>2019-04-28</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>60.000</td><td>209700.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000943532</td><td>1966100451</td><td>2019-04-29</td><td>T30000000433</td><td>SCC1206-B60H1N-P100W1N</td><td>10.000</td><td>82800.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000023</td><td>0000943532</td><td>1966100451</td><td>2019-04-29</td><td>T30000000310</td><td>Solar PV Module 100W/12V RFID Poly Crys</td><td>10.000</td><td>0.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000024</td><td>0000943532</td><td>1966100451</td><td>2019-04-29</td><td>F1113B274060</td><td>LUM 12V60AH LPT1260H FNSD BTY V18 SLR</td><td>10.000</td><td>0.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0000943532</td><td>1966100451</td><td>2019-04-29</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>10.000</td><td>0.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000026</td><td>0000944139</td><td>1966100470</td><td>2019-04-29</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>40.000</td><td>101600.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000027</td><td>0000944148</td><td>1966100471</td><td>2019-04-29</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>15.000</td><td>75596.18</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000028</td><td>0000944151</td><td>1966100472</td><td>2019-04-29</td><td>F19175003551</td><td>LUMINOUS SOLAR NXG UPS 750/12V(500VA)R1</td><td>5.000</td><td>15604.33</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000029</td><td>0000944151</td><td>1966100472</td><td>2019-04-29</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>5.000</td><td>19466.79</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000030</td><td>0000944165</td><td>1966100474</td><td>2019-04-29</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>2.000</td><td>21839.80</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000031</td><td>0000944168</td><td>1966100475</td><td>2019-04-29</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>4.000</td><td>8820.40</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000944171</td><td>1966100476</td><td>2019-04-29</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>20.000</td><td>193000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000944171</td><td>1966100476</td><td>2019-04-29</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>13.000</td><td>120900.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000034</td><td>0000944171</td><td>1966100476</td><td>2019-04-29</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>20.000</td><td>160000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000035</td><td>0000944177</td><td>1966100477</td><td>2019-04-29</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>20.000</td><td>70700.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000036</td><td>0000944177</td><td>1966100477</td><td>2019-04-29</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>20.000</td><td>66100.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000037</td><td>0000956180</td><td>1966100704</td><td>2019-05-15</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>20.000</td><td>186000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000038</td><td>0000956180</td><td>1966100704</td><td>2019-05-15</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>50.000</td><td>542750.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000039</td><td>0000956180</td><td>1966100704</td><td>2019-05-15</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>100.000</td><td>907500.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000040</td><td>0000956183</td><td>1966100705</td><td>2019-05-15</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>40.000</td><td>151799.93</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000041</td><td>0000956183</td><td>1966100705</td><td>2019-05-15</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>19.000</td><td>62794.97</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000042</td><td>0000957212</td><td>1966100747</td><td>2019-05-17</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>20.000</td><td>257800.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0000957536</td><td>1966100777</td><td>2019-05-17</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>50.000</td><td>644500.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000044</td><td>0000957562</td><td>1966100789</td><td>2019-05-17</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>20.000</td><td>50800.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000045</td><td>0000957591</td><td>1966100802</td><td>2019-05-17</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>2.000</td><td>11739.80</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000046</td><td>0000957622</td><td>1966100813</td><td>2019-05-17</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>10.000</td><td>108550.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000047</td><td>0000957648</td><td>1966100825</td><td>2019-05-17</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48600.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000048</td><td>0000957664</td><td>1966100833</td><td>2019-05-17</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>10.000</td><td>96500.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000049</td><td>0000958624</td><td>1966100855</td><td>2019-05-20</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>100.000</td><td>199500.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000050</td><td>0000958623</td><td>1966100859</td><td>2019-05-20</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>50.000</td><td>644500.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000051</td><td>0000958623</td><td>1966100859</td><td>2019-05-20</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>100.000</td><td>930000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000052</td><td>0000959072</td><td>1966100910</td><td>2019-05-21</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>50.000</td><td>400000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000053</td><td>0000960059</td><td>1966100917</td><td>2019-05-22</td><td>T18010000074</td><td>Solar PV Module 60W/12V Poly Crys.</td><td>10.000</td><td>22087.54</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000054</td><td>0000960059</td><td>1966100917</td><td>2019-05-22</td><td>T30000000343</td><td>Solar PV Module 80W/12V Poly Crys.</td><td>20.000</td><td>52440.09</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000055</td><td>0000960059</td><td>1966100917</td><td>2019-05-22</td><td>T30000000310</td><td>Solar PV Module 100W/12V RFID Poly Crys</td><td>20.000</td><td>67830.12</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000056</td><td>0000960059</td><td>1966100917</td><td>2019-05-22</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>30.000</td><td>151192.75</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000057</td><td>0000960060</td><td>1966100918</td><td>2019-05-22</td><td>F1113B426040</td><td>LUM 12V40AH LPT1240L FNSD BTY V19 SLR</td><td>20.000</td><td>64000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000058</td><td>0000960062</td><td>1966100919</td><td>2019-05-22</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>20.000</td><td>97026.32</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000059</td><td>0000959072</td><td>1966100948</td><td>2019-05-22</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>50.000</td><td>482500.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000060</td><td>0000960123</td><td>1966100949</td><td>2019-05-22</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>70.000</td><td>621250.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000061</td><td>0000960360</td><td>1966100950</td><td>2019-05-22</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>20.000</td><td>0.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000062</td><td>0000960360</td><td>1966100950</td><td>2019-05-22</td><td>F1113B274060</td><td>LUM 12V60AH LPT1260H FNSD BTY V18 SLR</td><td>20.000</td><td>0.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000063</td><td>0000960360</td><td>1966100950</td><td>2019-05-22</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>20.000</td><td>0.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000064</td><td>0000960360</td><td>1966100950</td><td>2019-05-22</td><td>T30000000446</td><td>SCC1206-B60H1N-P105W1N</td><td>20.000</td><td>165600.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000065</td><td>0000960658</td><td>1966100960</td><td>2019-05-22</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>30.000</td><td>266250.13</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000066</td><td>0000960658</td><td>1966100960</td><td>2019-05-22</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>12.000</td><td>133560.07</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000067</td><td>0000960821</td><td>1966100987</td><td>2019-05-23</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>50.000</td><td>189750.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000068</td><td>0000962013</td><td>1966101038</td><td>2019-05-24</td><td>T1102C417200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V19</td><td>25.000</td><td>299875.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000069</td><td>0000963173</td><td>1966101128</td><td>2019-05-27</td><td>T18010000074</td><td>Solar PV Module 60W/12V Poly Crys.</td><td>15.000</td><td>33131.27</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000070</td><td>0000963173</td><td>1966101128</td><td>2019-05-27</td><td>T30000000343</td><td>Solar PV Module 80W/12V Poly Crys.</td><td>15.000</td><td>39330.02</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000071</td><td>0000963173</td><td>1966101128</td><td>2019-05-27</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>15.000</td><td>50872.53</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000072</td><td>0000963173</td><td>1966101128</td><td>2019-05-27</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>25.000</td><td>125993.82</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000073</td><td>0000963174</td><td>1966101129</td><td>2019-05-27</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>20.000</td><td>69900.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000074</td><td>0000963174</td><td>1966101129</td><td>2019-05-27</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>50.000</td><td>110250.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000075</td><td>0000963291</td><td>1966101134</td><td>2019-05-27</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>60.000</td><td>222000.23</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000076</td><td>0000963291</td><td>1966101134</td><td>2019-05-27</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>75.000</td><td>265125.27</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000077</td><td>0000964259</td><td>1966101174</td><td>2019-05-28</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>100.000</td><td>315500.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000078</td><td>0000964478</td><td>1966101186</td><td>2019-05-28</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>50.000</td><td>75524.74</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000079</td><td>0000965308</td><td>1966101212</td><td>2019-05-28</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>21.000</td><td>190575.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000080</td><td>0000965308</td><td>1966101212</td><td>2019-05-28</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>25.000</td><td>232500.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000081</td><td>0000965308</td><td>1966101212</td><td>2019-05-28</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>25.000</td><td>278250.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000082</td><td>0000966015</td><td>1966101240</td><td>2019-05-29</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>10.000</td><td>51100.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000083</td><td>0000966010</td><td>1966101264</td><td>2019-05-29</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>10.000</td><td>108550.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000084</td><td>0000966010</td><td>1966101264</td><td>2019-05-29</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>20.000</td><td>97200.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000085</td><td>0000966093</td><td>1966101278</td><td>2019-05-29</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>12889.80</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000086</td><td>0000966961</td><td>1966101283</td><td>2019-05-29</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>30.000</td><td>279000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000087</td><td>0000966961</td><td>1966101283</td><td>2019-05-29</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>20.000</td><td>97200.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000088</td><td>0000966961</td><td>1966101283</td><td>2019-05-29</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>30.000</td><td>271650.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000089</td><td>0000967299</td><td>1966101298</td><td>2019-05-30</td><td>F19202002151</td><td>SOLAR RETROFIT SOLUTION SHINE-2420</td><td>1.000</td><td>1695.24</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000090</td><td>0000967757</td><td>1966101299</td><td>2019-05-30</td><td>T18010000074</td><td>Solar PV Module 60W/12V Poly Crys.</td><td>10.000</td><td>22087.46</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000091</td><td>0000967757</td><td>1966101299</td><td>2019-05-30</td><td>T30000000343</td><td>Solar PV Module 80W/12V Poly Crys.</td><td>10.000</td><td>26219.95</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000092</td><td>0000967757</td><td>1966101299</td><td>2019-05-30</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>12.000</td><td>60476.89</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000093</td><td>0000967757</td><td>1966101299</td><td>2019-05-30</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>20.000</td><td>30209.94</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000094</td><td>0000967757</td><td>1966101299</td><td>2019-05-30</td><td>T30000000310</td><td>Solar PV Module 100W/12V RFID Poly Crys</td><td>15.000</td><td>50872.40</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000095</td><td>0000967758</td><td>1966101300</td><td>2019-05-30</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>2.000</td><td>10917.76</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000096</td><td>0000972731</td><td>1966101335</td><td>2019-06-03</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>88.000</td><td>1134320.40</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1251</td><td>Guwahati Branch -2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000097</td><td>0000948753</td><td>1967100297</td><td>2019-05-13</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>150.000</td><td>1447500.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1012</td><td>Mundka Warehouse-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000098</td><td>0000948753</td><td>1967100335</td><td>2019-05-15</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>150.000</td><td>1200000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>1012</td><td>Mundka Warehouse-2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000099</td><td>0000940962</td><td>1994100416</td><td>2019-04-29</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>700.000</td><td>2047500.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>PB01</td><td>Baddi Plant</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000100</td><td>0000940962</td><td>1994100416</td><td>2019-04-29</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>300.000</td><td>762000.00</td><td>0001101965</td><td>Sachi Enterprise</td><td>03</td><td>Assam</td><td>PB01</td><td>Baddi Plant</td><td>LB UPS</td>
+	</tr>
+</table>

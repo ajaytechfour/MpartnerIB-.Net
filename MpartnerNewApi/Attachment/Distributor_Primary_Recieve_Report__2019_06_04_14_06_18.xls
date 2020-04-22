@@ -1,0 +1,35 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000964485</td><td>1906102485</td><td>2019-05-28</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>60.000</td><td>537867.15</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000964485</td><td>1906102485</td><td>2019-05-28</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>40.000</td><td>351450.09</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000964485</td><td>1906102486</td><td>2019-05-28</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>5.000</td><td>43040.31</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000964485</td><td>1906102486</td><td>2019-05-28</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>5.000</td><td>39600.06</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000964485</td><td>1906102486</td><td>2019-05-28</td><td>F1102C304160</td><td>LUM 12V160AH ILTT20048 FNSD BTY V18</td><td>10.000</td><td>89842.63</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000964485</td><td>1906102486</td><td>2019-05-28</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>5.000</td><td>40392.06</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000964486</td><td>1906102487</td><td>2019-05-28</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>40.000</td><td>79002.07</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000008</td><td>0000964486</td><td>1906102487</td><td>2019-05-28</td><td>F03195001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 950</td><td>10.000</td><td>26680.52</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000009</td><td>0000964486</td><td>1906102487</td><td>2019-05-28</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>20.000</td><td>65439.06</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000010</td><td>0000964486</td><td>1906102487</td><td>2019-05-28</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>10.000</td><td>38709.03</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000011</td><td>0000964486</td><td>1906102487</td><td>2019-05-28</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>60.000</td><td>150876.14</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000966355</td><td>1906102685</td><td>2019-05-29</td><td>F1146A412100</td><td>LUM 12V100AH RPF1400 FNSD BTY</td><td>40.000</td><td>184300.00</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000964489</td><td>1906102881</td><td>2019-05-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>20.000</td><td>57915.30</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000968925</td><td>1906102999</td><td>2019-05-30</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>20.000</td><td>65438.98</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000964488</td><td>1960100660</td><td>2019-05-28</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>20.000</td><td>44846.54</td><td>0001109764</td><td>SURYA SOUR URJA KENDRA</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>LB UPS</td>
+	</tr>
+</table>

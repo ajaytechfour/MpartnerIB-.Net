@@ -1,0 +1,53 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>DOC_DATE</td><td>DOC_NO</td><td>DO</td><td>DI</td><td>DI1</td><td>REF_ORG_UN</td><td>ALLOC_NMBR</td><td>REF_DATE</td><td>DEBIT_AMOUNT</td><td>CREDIT_AMOUNT</td><td>CHANNEL_TXT</td><td>DIVISION_TXT</td><td>DOC_TYP_TXT</td><td>TOTAL_CREDIT</td><td>EXTENDED_CREDIT_LIMI</td><td>CONT</td><td>CONTROL_AREA_DESC</td><td>DEALER</td><td>DEALER_NAME</td><td>CDRC</td>
+	</tr><tr>
+		<td>0000-00-00</td><td>OPEN BAL.</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0000-00-00</td><td>1708317.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>1708317.00</td><td>0.00</td><td>&nbsp;</td><td>&nbsp;</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-10</td><td>3500000561</td><td>DN</td><td>&nbsp;</td><td>&nbsp;</td><td>1008037915/2016</td><td>&nbsp;</td><td>2016-05-31</td><td>2500.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Cust DN-Bank Charges</td><td>1710817.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-10</td><td>1008037915</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEW DELHI</td><td>000072</td><td>2016-05-31</td><td>500000.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>2210817.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-10</td><td>1008038153</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEW DELHI</td><td>000072</td><td>2016-06-10</td><td>0.0000</td><td>500000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>1710817.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-13</td><td>1006005893</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>TOD- JAN 16</td><td>&nbsp;</td><td>2016-06-13</td><td>0.0000</td><td>49136.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>1661681.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-17</td><td>1008042302</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEW DELHI</td><td>000073</td><td>2016-06-17</td><td>0.0000</td><td>500000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>1161681.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-22</td><td>1006006780</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>BE DISC MAR'16</td><td>&nbsp;</td><td>2016-06-22</td><td>0.0000</td><td>31300.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>1130381.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-23</td><td>1006007975</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>WRS DIST MAR'16</td><td>&nbsp;</td><td>2016-06-23</td><td>0.0000</td><td>29930.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>1100451.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-23</td><td>1006007522</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>WRS DLR MAR'16</td><td>&nbsp;</td><td>2016-06-23</td><td>0.0000</td><td>176500.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>923951.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-25</td><td>1006008345</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>TOD INBT JAN'16</td><td>&nbsp;</td><td>2016-06-25</td><td>0.0000</td><td>49135.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>874816.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-30</td><td>1005000251</td><td>DA</td><td>&nbsp;</td><td>&nbsp;</td><td>BE- REVERSE</td><td>&nbsp;</td><td>2016-06-30</td><td>31300.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer document</td><td>906116.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-06-30</td><td>1005000198</td><td>DA</td><td>&nbsp;</td><td>&nbsp;</td><td>BE JAN/FEB/MAR</td><td>&nbsp;</td><td>2016-06-30</td><td>14800.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer document</td><td>920916.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-07-07</td><td>1006009267</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>BE JAN/FEB/MAR</td><td>&nbsp;</td><td>2016-07-07</td><td>0.0000</td><td>14800.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>906116.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-07-07</td><td>1006010218</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>WRS APR'16-DIST.</td><td>&nbsp;</td><td>2016-07-07</td><td>0.0000</td><td>15.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>906101.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-07-07</td><td>1006009762</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>WRS APR'16-DLR</td><td>&nbsp;</td><td>2016-07-07</td><td>0.0000</td><td>100.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>906001.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-07-12</td><td>1006011432</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>BE-BATT@50</td><td>&nbsp;</td><td>2016-07-12</td><td>0.0000</td><td>4500.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>901501.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-07-13</td><td>1006012066</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>ADD WRS FEB16</td><td>&nbsp;</td><td>2016-07-13</td><td>0.0000</td><td>65.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>901436.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-07-13</td><td>1006011976</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>ADD WRS FEB16</td><td>&nbsp;</td><td>2016-07-13</td><td>0.0000</td><td>100.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>901336.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-08-31</td><td>1006019563</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>AD WRS DL MAR16</td><td>&nbsp;</td><td>2016-08-31</td><td>0.0000</td><td>6200.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>895136.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-08-31</td><td>1006019429</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>AD WRS DI MAR16</td><td>&nbsp;</td><td>2016-08-31</td><td>0.0000</td><td>900.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>894236.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-09-12</td><td>1005001147</td><td>DA</td><td>&nbsp;</td><td>&nbsp;</td><td>DN M/O MAR-16</td><td>&nbsp;</td><td>2016-09-12</td><td>10360.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer document</td><td>904596.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-10-19</td><td>1900050081</td><td>SA</td><td>&nbsp;</td><td>&nbsp;</td><td>BE DISC MAR'16</td><td>&nbsp;</td><td>2016-10-19</td><td>31300.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Journal Voucher</td><td>935896.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-10-31</td><td>1005001407</td><td>DA</td><td>&nbsp;</td><td>&nbsp;</td><td>BE DISC MAR'16</td><td>&nbsp;</td><td>2016-10-31</td><td>31300.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer document</td><td>967196.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2016-10-31</td><td>1900054330</td><td>SA</td><td>&nbsp;</td><td>&nbsp;</td><td>BE DISC MAR'16</td><td>&nbsp;</td><td>2016-10-19</td><td>0.0000</td><td>31300.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Journal Voucher</td><td>935896.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr>
+</table>

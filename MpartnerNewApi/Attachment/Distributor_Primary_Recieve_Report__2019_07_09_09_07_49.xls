@@ -1,0 +1,143 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000976654</td><td>1906103384</td><td>2019-06-13</td><td>T1146B409110</td><td>LUM 12V110AH RPT1600ER FNSD BTY</td><td>64.000</td><td>294879.60</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000978094</td><td>1906103457</td><td>2019-06-15</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>30.000</td><td>266250.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000978094</td><td>1906103457</td><td>2019-06-15</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>30.000</td><td>279000.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000978094</td><td>1906103457</td><td>2019-06-15</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>30.000</td><td>261450.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000978095</td><td>1906103458</td><td>2019-06-15</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000006</td><td>0000978139</td><td>1906103462</td><td>2019-06-15</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>50.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000007</td><td>0000978139</td><td>1906103462</td><td>2019-06-15</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>100.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000978139</td><td>1906103462</td><td>2019-06-15</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>50.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000009</td><td>0000978139</td><td>1906103462</td><td>2019-06-15</td><td>T30000000534</td><td>SCC1206-B40H2N-P100W1N</td><td>50.000</td><td>535500.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000978140</td><td>1906103463</td><td>2019-06-15</td><td>F19202003751</td><td>SOLAR RETROFIT 24V20AMP SHINE2420 Rev.01</td><td>5.000</td><td>8475.24</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000011</td><td>0000978141</td><td>1906103464</td><td>2019-06-15</td><td>F19405003751</td><td>SOLAR RETROFIT 96V50AMP SHINE9650 Rev.01</td><td>1.000</td><td>7835.24</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000012</td><td>0000981356</td><td>1906103670</td><td>2019-06-19</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>30.000</td><td>266250.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000981358</td><td>1906103671</td><td>2019-06-19</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>50.000</td><td>165250.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000014</td><td>0000981358</td><td>1906103671</td><td>2019-06-19</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>50.000</td><td>127000.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000981830</td><td>1906103732</td><td>2019-06-20</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>20.000</td><td>160000.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000016</td><td>0000981830</td><td>1906103732</td><td>2019-06-20</td><td>F1102C441160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V19</td><td>50.000</td><td>453750.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000017</td><td>0000981831</td><td>1906103733</td><td>2019-06-20</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>100.000</td><td>292500.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000018</td><td>0000981830</td><td>1906103744</td><td>2019-06-20</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>10.000</td><td>108550.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000982726</td><td>1906103833</td><td>2019-06-20</td><td>T30000000698</td><td>NXG1100-B150HTT1N-P105W2N</td><td>21.000</td><td>444675.24</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000020</td><td>0000982726</td><td>1906103833</td><td>2019-06-20</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>42.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000021</td><td>0000982726</td><td>1906103833</td><td>2019-06-20</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>21.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000982726</td><td>1906103833</td><td>2019-06-20</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>21.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000023</td><td>0000982727</td><td>1906103834</td><td>2019-06-20</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>12.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000024</td><td>0000982727</td><td>1906103834</td><td>2019-06-20</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>12.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0000982727</td><td>1906103834</td><td>2019-06-20</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>12.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000026</td><td>0000982727</td><td>1906103834</td><td>2019-06-20</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>12.000</td><td>235260.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000027</td><td>0000982732</td><td>1906103835</td><td>2019-06-20</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>6.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000028</td><td>0000982732</td><td>1906103835</td><td>2019-06-20</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>12.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0000982732</td><td>1906103835</td><td>2019-06-20</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>12.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000030</td><td>0000982732</td><td>1906103835</td><td>2019-06-20</td><td>T30000000690</td><td>NXG1800B150H2NP165W2N</td><td>6.000</td><td>221310.50</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000031</td><td>0000982728</td><td>1906103882</td><td>2019-06-20</td><td>F19101004001</td><td>SOLAR CHARGE CONTROLLER 1210N</td><td>15.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000032</td><td>0000982728</td><td>1906103882</td><td>2019-06-20</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>15.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000982728</td><td>1906103882</td><td>2019-06-20</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>15.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000034</td><td>0000982728</td><td>1906103882</td><td>2019-06-20</td><td>T30000000434</td><td>SCC1210-B80H1N-P160W1N</td><td>15.000</td><td>169275.24</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000035</td><td>0000984979</td><td>1906104083</td><td>2019-06-24</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>50.000</td><td>556500.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000036</td><td>0000984981</td><td>1906104084</td><td>2019-06-24</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>20.000</td><td>78200.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000037</td><td>0000985482</td><td>1906104100</td><td>2019-06-25</td><td>F19135003151</td><td>S/Q WAVE UPS 12V LUMINOUS SOLAR NXG 350</td><td>15.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000038</td><td>0000985482</td><td>1906104100</td><td>2019-06-25</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>15.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000039</td><td>0000985482</td><td>1906104100</td><td>2019-06-25</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>15.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000040</td><td>0000985482</td><td>1906104100</td><td>2019-06-25</td><td>T30000000687</td><td>NXG350-B80H1N-P165W1N</td><td>15.000</td><td>189900.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000041</td><td>0000985480</td><td>1906104126</td><td>2019-06-25</td><td>F19135003151</td><td>S/Q WAVE UPS 12V LUMINOUS SOLAR NXG 350</td><td>15.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000042</td><td>0000985480</td><td>1906104126</td><td>2019-06-25</td><td>F1113B274060</td><td>LUM 12V60AH LPT1260H FNSD BTY V18 SLR</td><td>15.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000043</td><td>0000985480</td><td>1906104126</td><td>2019-06-25</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>15.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000044</td><td>0000985480</td><td>1906104126</td><td>2019-06-25</td><td>T30000001611</td><td>NXG3501N-B60H1N-P105W1N</td><td>15.000</td><td>147375.24</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000045</td><td>0000989762</td><td>1906104545</td><td>2019-06-28</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>25.000</td><td>204000.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000046</td><td>0000989762</td><td>1906104545</td><td>2019-06-28</td><td>F1152B419150</td><td>SILVER CHARGE 12V150Ah SIL18057TT FNSD</td><td>25.000</td><td>227625.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000047</td><td>0000990456</td><td>1906104558</td><td>2019-06-29</td><td>F1152B419150</td><td>SILVER CHARGE 12V150Ah SIL18057TT FNSD</td><td>35.000</td><td>318675.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000048</td><td>0000990343</td><td>1906104663</td><td>2019-06-29</td><td>F19305003751</td><td>SOLAR RETROFIT 48V50AMP SHINE4850 Rev.01</td><td>2.000</td><td>10790.50</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000049</td><td>0060056942</td><td>1906400144</td><td>2019-06-06</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>-30.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000050</td><td>0060056942</td><td>1906400144</td><td>2019-06-06</td><td>F1113B426040</td><td>LUM 12V40AH LPT1240L FNSD BTY V19 SLR</td><td>-60.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000051</td><td>0060056942</td><td>1906400144</td><td>2019-06-06</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>-30.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000052</td><td>0060056942</td><td>1906400144</td><td>2019-06-06</td><td>T30000000463</td><td>SCC1206-B40L2N-P105W1N</td><td>-30.000</td><td>303600.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000053</td><td>0060056943</td><td>1906400145</td><td>2019-06-06</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>-20.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000054</td><td>0060056943</td><td>1906400145</td><td>2019-06-06</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>-20.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000055</td><td>0060056943</td><td>1906400145</td><td>2019-06-06</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>-20.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000056</td><td>0060056943</td><td>1906400145</td><td>2019-06-06</td><td>T30000000699</td><td>NXG1100-B120H1N-P165W1N</td><td>-20.000</td><td>338000.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000057</td><td>0060056944</td><td>1906400146</td><td>2019-06-06</td><td>T30000001603</td><td>NXG1400-B150HTT1N-P165W1N</td><td>-12.000</td><td>248580.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000058</td><td>0060056944</td><td>1906400146</td><td>2019-06-06</td><td>F19114013551</td><td>LUMINOUS SOLAR NXG UPS1400/12V(1100VA)R1</td><td>-12.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000059</td><td>0060056944</td><td>1906400146</td><td>2019-06-06</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>-12.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000060</td><td>0060056944</td><td>1906400146</td><td>2019-06-06</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>-12.000</td><td>0.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000061</td><td>0060056945</td><td>1906400147</td><td>2019-06-06</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>-5.000</td><td>29350.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1060</td><td>Lucknow Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000062</td><td>0000987323</td><td>1960101159</td><td>2019-06-26</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>50.000</td><td>465000.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000063</td><td>0000989764</td><td>1960101221</td><td>2019-06-28</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>50.000</td><td>452750.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000064</td><td>0000990484</td><td>1960101244</td><td>2019-06-29</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>50.000</td><td>542750.11</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000065</td><td>0000990484</td><td>1960101244</td><td>2019-06-29</td><td>F1102C436150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V19</td><td>50.000</td><td>465000.09</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000066</td><td>0000990484</td><td>1960101244</td><td>2019-06-29</td><td>F1103AZX0150</td><td>LUM 12V150AH IL1830FP NEW FNSD BTY V16</td><td>1.000</td><td>6885.00</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000067</td><td>0000990484</td><td>1960101245</td><td>2019-06-29</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>8.000</td><td>105920.05</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000068</td><td>0000990484</td><td>1960101245</td><td>2019-06-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>50.000</td><td>443750.19</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000069</td><td>0000990484</td><td>1960101245</td><td>2019-06-29</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>40.000</td><td>363000.16</td><td>0001108133</td><td>SHREE PLAST ENTERPRISES</td><td>24</td><td>Uttar Pradesh</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr>
+</table>

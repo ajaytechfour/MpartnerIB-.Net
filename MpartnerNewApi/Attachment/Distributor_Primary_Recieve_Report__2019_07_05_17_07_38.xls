@@ -1,0 +1,79 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000976521</td><td>1905102400</td><td>2019-06-15</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>50.000</td><td>402000.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000976521</td><td>1929100198</td><td>2019-06-15</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>75.000</td><td>665625.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1052</td><td>Ghaziabad Plant2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000976752</td><td>1952101837</td><td>2019-06-13</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>29.000</td><td>263175.06</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000976752</td><td>1952101837</td><td>2019-06-13</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>50.000</td><td>434750.09</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000976752</td><td>1952101837</td><td>2019-06-13</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>19.000</td><td>244910.05</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000976752</td><td>1952101838</td><td>2019-06-13</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>9075.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000007</td><td>0000976956</td><td>1952101859</td><td>2019-06-14</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>15.000</td><td>296400.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000008</td><td>0000976956</td><td>1952101859</td><td>2019-06-14</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>15.000</td><td>0.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000009</td><td>0000976956</td><td>1952101859</td><td>2019-06-14</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>15.000</td><td>0.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000976956</td><td>1952101859</td><td>2019-06-14</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>15.000</td><td>0.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000011</td><td>0000976967</td><td>1952101862</td><td>2019-06-14</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>50.000</td><td>146250.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000012</td><td>0000976958</td><td>1952101876</td><td>2019-06-14</td><td>T30000000680</td><td>NXG1800-B150H2N-P325W2N</td><td>5.000</td><td>217524.74</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000013</td><td>0000976958</td><td>1952101876</td><td>2019-06-14</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>10.000</td><td>0.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000014</td><td>0000976958</td><td>1952101876</td><td>2019-06-14</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000015</td><td>0000976958</td><td>1952101876</td><td>2019-06-14</td><td>F19218013551</td><td>LUMINOUS SOLAR NXG UPS1800/24V(1500VA)R1</td><td>5.000</td><td>0.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000016</td><td>0000976968</td><td>1952101897</td><td>2019-06-14</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>25.000</td><td>74125.50</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0000977895</td><td>1952101927</td><td>2019-06-14</td><td>T1103C384150</td><td>LUM 12V150AH ILTT18036N FNSD BTY</td><td>50.000</td><td>452750.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000018</td><td>0000976752</td><td>1952101935</td><td>2019-06-15</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>10.000</td><td>111300.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000979091</td><td>1952102025</td><td>2019-06-17</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>60.000</td><td>152400.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000020</td><td>0000979166</td><td>1952102100</td><td>2019-06-18</td><td>T1103C384150</td><td>LUM 12V150AH ILTT18036N FNSD BTY</td><td>30.000</td><td>271650.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000980451</td><td>1952102156</td><td>2019-06-18</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>20.000</td><td>117400.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000022</td><td>0000980451</td><td>1952102156</td><td>2019-06-18</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>5.000</td><td>39300.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000023</td><td>0000980183</td><td>1952102170</td><td>2019-06-19</td><td>T1103C384150</td><td>LUM 12V150AH ILTT18036N FNSD BTY</td><td>5.000</td><td>45275.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000981765</td><td>1952102232</td><td>2019-06-20</td><td>F1102C436150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V19</td><td>20.000</td><td>186000.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0060056841</td><td>1952600753</td><td>2019-06-08</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8837.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000026</td><td>0060056842</td><td>1952600759</td><td>2019-06-08</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8837.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000027</td><td>0060058625</td><td>1952600808</td><td>2019-06-24</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7425.65</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000028</td><td>0060058941</td><td>1952600811</td><td>2019-06-26</td><td>F1135M203150</td><td>LUM 12V150AH PC18042TJ FNSD BTY</td><td>1.000</td><td>4902.79</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000029</td><td>0060058940</td><td>1952600814</td><td>2019-07-01</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5646.83</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000030</td><td>0000976521</td><td>1960100957</td><td>2019-06-15</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>100.000</td><td>816000.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000976521</td><td>1960100958</td><td>2019-06-15</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>100.000</td><td>800000.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000032</td><td>0000976521</td><td>1960100959</td><td>2019-06-15</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>50.000</td><td>482500.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000033</td><td>0000976524</td><td>1993101272</td><td>2019-06-20</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>600.000</td><td>1755000.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000034</td><td>0000976524</td><td>1993101272</td><td>2019-06-20</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>100.000</td><td>391000.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000035</td><td>0000976524</td><td>1993101272</td><td>2019-06-20</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>70.000</td><td>301700.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000036</td><td>0000976524</td><td>1993101283</td><td>2019-06-21</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>100.000</td><td>391000.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000037</td><td>0000976524</td><td>1993101283</td><td>2019-06-21</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>125.000</td><td>317500.00</td><td>0001107447</td><td>WASIM TRADING CO.</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr>
+</table>

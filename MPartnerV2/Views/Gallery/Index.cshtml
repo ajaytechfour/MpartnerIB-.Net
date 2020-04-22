@@ -1,0 +1,376 @@
+﻿@model Luminous.EF.MediaData
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>*@
+
+
+<script type="text/javascript">
+
+    $(function () {
+
+        ValidationMessage();
+    });
+    function ValidationMessage() {
+
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            location.href = "@Url.Content("~/Gallery/Index")";
+        }
+
+
+    }
+</script>
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th,
+        table tr th a,
+        table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td,
+    tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td,
+    #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr,
+    tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+
+<script type="text/javascript">
+    $(function () {
+        $.post("@Url.Content("~/Gallery/GetCategory")", null, function (data) { SetCategory(data); }, "Json");
+        $.post("@Url.Content("~/Gallery/GetMediaDetail")", null, function (data) { SetGrid(data); }, "Json");
+    });
+    function SetGrid(data) {
+
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            $("#Grid tbody").empty();
+            $.each(data.result, function (key, value) {
+
+                body += "<tr><td>" + value.Id + "</td>" +
+                     "<td>" + value.Category + "</td>" +
+                "<td>" + value.Description + "</td>" +
+            "<td>" + value.URL + "</td>" +
+
+                 "<td>" + value.status + "</td>" +
+
+            "<td style='text-aling:right;'><a style='cursor:pointer' onclick=Edit(" + value.Id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> <a style='cursor:pointer' onclick=Delete(" + value.Id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+
+            });
+            $("#Grid tbody").append(body);
+          //  SetPages(data.TotalRecord);
+            paging();
+        }
+
+    }
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+
+            $.post("@Url.Content("~/Gallery/Delete")", { id: id }, function (data) {
+                $.post("@Url.Content("~/Gallery/GetMediaDetail")", null, function (data) { SetGrid(data); }, "Json");
+
+                alert(data);
+
+            }, "Json");
+        }
+    }
+    function SetCategory(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#ParentCategory");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+        }
+    }
+    function Edit(id) {
+        location.href = "@Url.Content("~/Gallery/Edit/")" + id;
+    }
+    @*function SetPages(paging) {
+        var pages = "";
+        $("#Paging").empty();
+        for (var i = 1; i <= parseInt(paging) ; i++) {
+            pages += "<a style='cursor:pointer' onclick=GetPagesValues(" + i + ");> " + i + "  </a>";
+
+        }
+        $("#Paging").append("<u> Pages:-</u>" + pages);
+    }
+
+    function GetPagesValues(id) {
+        $.post("@Url.Content("~/Gallery/GetMediaDetail")", { page: id }, function (data) { SetGrid(data); }, "Json");
+    }*@
+
+
+    $(function () {
+
+        $("#txtsearch").on("keyup", function (event) {
+
+            if (event.which == 8) {
+
+                if ($("#txtsearch").val() == null || $("#txtsearch").val() == 0) {
+                    $('#Paging').empty();
+                    $.post("@Url.Content("~/Gallery/GetMediaDetail")", null, function (data) { SetGrid(data); }, "Json");
+                }
+
+            }
+
+            else {
+                if ($("#txtsearch").val() != null || $("#txtsearch").val() > 0) {
+                    var value = this.value.toLowerCase().trim();
+
+                    $('#Grid tr').each(function (index) {
+
+                        if (!index) return;
+
+                        $(this).find("td").each(function () {
+
+                            var id = $(this).text().toLowerCase().trim();
+                            var not_found = (id.indexOf(value) == -1);
+                            $(this).closest('tr').toggle(!not_found);
+                            return not_found;
+                        });
+
+                    });
+
+                }
+
+            }
+        });
+    });
+
+
+    function paging() {
+        $('#Paging').empty();
+
+        $(document).ready(function () {
+
+            var totalRows = $('#Grid').find('tbody tr:has(td)').length;
+
+            var recordPerPage = 15;
+            var numberOfPages = Math.ceil(totalRows / recordPerPage);
+
+            for (var i = 0; i < numberOfPages; i++) {
+                var pageNum = i + 1;
+                $('#Paging').append('<a href="#" rel="' + i + '">' + pageNum + '</a> ');
+            }
+
+            $('#Grid tbody tr').hide();
+            $('#Grid tbody tr').slice(0, recordPerPage).show();
+            $('#Paging a:first').addClass('active');
+            $('#Paging a').bind('click', function () {
+
+                var currentPage = $(this).attr('rel');
+                var startitem = currentPage * recordPerPage;
+                var enditem = startitem + recordPerPage;
+
+                //$('#Grid tbody tr').hide().slice(startitem, enditem).css('display', 'table-row').animate({ opacity: 1 }, 300);
+                $('#Grid tbody tr').hide().slice(startitem, enditem).show();
+            });
+
+        });
+    }
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span></span>Gallery</h1>
+        </div>
+    </div>
+
+    @using (@Html.BeginForm("Save", "Gallery", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="row">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Category <span class="required">*</span></label>
+                                <select name="ParentCatid" id="ParentCategory" class="form-control">
+                                    <option>Select</option>
+                                </select>
+                                <br />
+                                @Html.ValidationMessageFor(model => model.LabelId, "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label>Description <span style="color: red;">*</span></label>
+                                @Html.TextAreaFor(model => model.VideoName, new { @class = "form-control", @style = "Width:100%; Height:60px" })<br />
+                                @Html.ValidationMessageFor(model => model.VideoName, "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <label>URL <span style="color: red;">*</span></label>
+                                @Html.TextAreaFor(model => model.Url, new { @class = "form-control", @style = "Width:100%; Height:60px" })<br />
+                                @Html.ValidationMessageFor(model => model.Url, "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p">
+                                <label>Status <span style="color: red;">*</span></label>
+                                <input id="status" type="checkbox" checked="checked" name="Status" style="border:none; height:inherit;" />
+                                <br />
+                                <span class="Status"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="submit" class="submitBtn" value="Submit" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <table class="headingHd">
+                        <tr>
+                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Gallery List</th>
+                            <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                                 @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Gallery", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+                            </th>
+                        </tr>
+                    </table>
+                    <div class="">                        
+                        <div id="list" class="tabelGridRow">
+                            <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ID
+                                        </th>
+                                        <th>
+                                            Category
+                                        </th>
+                                        <th>
+                                            Description
+                                        </th>
+                                        <th>
+                                            URL
+                                        </th>
+                                        <th>
+                                            Status
+                                        </th>
+
+                                        <th>
+                                            Action
+                                        </th>
+                                    </tr>
+
+                                </thead>
+                                <tbody></tbody>
+                               
+                            </table>
+                            <div>
+                                Pages :<span id="Paging"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+            }
+
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 Luminous | All Rights Reserved
+            </div>
+        </div>
+    </div>
+
+        </div>
+
+

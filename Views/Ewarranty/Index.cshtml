@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "getEwarrantyData";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ewarranty</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+    @*<link href="~/css/Loader.css" rel="stylesheet" />*@
+    <style>
+        .mainBox {
+            margin: 0px;
+            padding: 25px 15px;
+            color: #333;
+            font-size: 17px;
+            font-family: 'Lato', sans-serif;
+            line-height: 25px;
+        }
+
+            .mainBox p {
+                margin-bottom: 15px;
+            }
+
+            .mainBox a {
+                background: #5b9bd5;
+                padding: 7px 15px;
+                border: 1px solid #41719c;
+                font-size: 16px;
+                color: #fff;
+                margin-bottom: 10px;
+                text-decoration: none;
+                display: inline-block;
+                font-family: 'Lato', sans-serif;
+                width: 270px;
+                text-align: center;
+            }
+    </style>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+       
+        $("#yes").click(function () { 
+            
+            $.post("@Url.Content("~/Ewarranty/SaveEwarranty")", { userinput: 'Y', serialno: '@ViewBag.encryptserialno' }, function (data) {
+              
+                var getdata = JSON.stringify(data);         
+               
+              if (getdata.includes("Invalid"))
+                {                    
+                    var d = $("#msg").css({ "font": "bold", "color": "Red" }).html(getdata);
+                   
+                    location.reload();
+                }
+                else {
+                   
+                    var d = $("#msg").css({ "font": "bold", "color": "Green" }).html(getdata);                    
+                   
+                }
+
+               
+
+
+            }, "Json");
+
+        });
+        $("#no").click(function () {
+            
+            
+
+            $.post("@Url.Content("~/Ewarranty/SaveEwarranty")", { userinput: 'N', serialno: '@ViewBag.encryptserialno' }, function (data) {
+              
+                var getdata = JSON.stringify(data);
+                debugger;
+                if (getdata.includes("Invalid")) {
+                   
+                    var d = $("#msg").css({ "font": "bold", "color": "Red" }).html(getdata);                    
+                    location.reload();
+
+                }
+                else {
+                    
+                    var d = $("#msg").css({ "font": "bold", "color": "Green" }).html(getdata);                    
+                   // location.reload();
+                }
+
+               
+
+
+            }, "Json");
+        });
+    })
+    </script>
+</head>
+<body>
+    <div class="loader" style="position: absolute; display: block; left: 50%; top: 40%; z-index: 101;"></div>
+    <div class="mainBox">
+
+        @if (ViewBag.isinput == "Y")
+        {
+            <p>Dear <b>@ViewBag.customer_name</b></p>
+            <p>Thank-You for choosing Luminous, Product <b>@ViewBag.product_model</b> with serial number <b>@ViewBag.serialno</b> Has been registered with you and warranty for this product starts from date <b>@ViewBag.mod_date</b></p>
+            <p>Kindly click yes for verifying the same or No if you have not purchased the product.</p>
+
+            <p id="msg"></p>
+
+            <p>
+                <a href="javascript:void(0);" title="" id="yes">Yes, I have purchased this product</a> <br />
+                <a href="javascript:void(0);" title="" id="no">No, I have not purchased this product</a>
+            </p>
+        }
+        else if (ViewBag.isinput == "N")
+        {
+            <p>Dear <b>@ViewBag.customer_name</b></p>
+            <p>Thank-You for choosing Luminous, Product <b>@ViewBag.product_model</b> with serial number <b>@ViewBag.serialno</b> Has been registered with you and warranty for this product starts from date <b>@ViewBag.mod_date</b></p>   
+
+        }
+        else
+        {
+            <p>Related serial no <b>@ViewBag.serialno_notfound</b> not found.</p>
+
+
+        }
+    </div>
+</body>
+</html>

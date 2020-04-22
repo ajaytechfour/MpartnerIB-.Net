@@ -1,0 +1,229 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>DOC_DATE</td><td>DOC_NO</td><td>DO</td><td>DI</td><td>DI1</td><td>REF_ORG_UN</td><td>ALLOC_NMBR</td><td>REF_DATE</td><td>DEBIT_AMOUNT</td><td>CREDIT_AMOUNT</td><td>CHANNEL_TXT</td><td>DIVISION_TXT</td><td>DOC_TYP_TXT</td><td>TOTAL_CREDIT</td><td>EXTENDED_CREDIT_LIMI</td><td>CONT</td><td>CONTROL_AREA_DESC</td><td>DEALER</td><td>DEALER_NAME</td><td>CDRC</td>
+	</tr><tr>
+		<td>0000-00-00</td><td>OPEN BAL.</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0000-00-00</td><td>139053.2400</td><td>154940.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>-15886.76</td><td>0.00</td><td>&nbsp;</td><td>&nbsp;</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-05</td><td>1008001020</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-04-05</td><td>0.0000</td><td>130000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-145886.76</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-05</td><td>1800002606</td><td>RV</td><td>05</td><td>10</td><td>101912000057</td><td>&nbsp;</td><td>2019-04-05</td><td>56232.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-89654.76</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-05</td><td>1800002604</td><td>RV</td><td>05</td><td>10</td><td>101912000056</td><td>&nbsp;</td><td>2019-04-05</td><td>88165.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-1489.76</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-10</td><td>1008002522</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-04-10</td><td>0.0000</td><td>175000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-176489.76</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-11</td><td>1800006922</td><td>RV</td><td>05</td><td>10</td><td>101912000143</td><td>&nbsp;</td><td>2019-04-11</td><td>56232.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-120257.76</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-11</td><td>1800006921</td><td>RV</td><td>05</td><td>10</td><td>101912000142</td><td>&nbsp;</td><td>2019-04-11</td><td>44257.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-76000.76</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-11</td><td>1800006920</td><td>RV</td><td>05</td><td>30</td><td>101912000141</td><td>&nbsp;</td><td>2019-04-11</td><td>14836.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-61164.76</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-15</td><td>1008004102</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-04-15</td><td>0.0000</td><td>120000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-181164.76</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-16</td><td>1800012084</td><td>RV</td><td>45</td><td>40</td><td>101912000304</td><td>&nbsp;</td><td>2019-04-16</td><td>12840.7600</td><td>0.0000</td><td>General Sales Channl</td><td>Others</td><td>Sales Invoice</td><td>-168324.00</td><td>0.00</td><td>LPOT</td><td>Others Credit control area LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-16</td><td>1800011983</td><td>RV</td><td>05</td><td>10</td><td>101912000293</td><td>&nbsp;</td><td>2019-04-16</td><td>129825.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-38499.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-16</td><td>1800011988</td><td>RV</td><td>05</td><td>30</td><td>101912000294</td><td>&nbsp;</td><td>2019-04-16</td><td>51074.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>12575.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-04-22</td><td>1008006764</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-04-22</td><td>0.0000</td><td>12575.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>0.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>&nbsp;</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-04-23</td><td>1008006879</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-04-23</td><td>0.0000</td><td>100000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-100000.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-25</td><td>1800022519</td><td>RV</td><td>05</td><td>10</td><td>101912000560</td><td>&nbsp;</td><td>2019-04-25</td><td>67478.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-32522.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-25</td><td>1800022511</td><td>RV</td><td>05</td><td>30</td><td>101912000558</td><td>&nbsp;</td><td>2019-04-25</td><td>10584.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-21938.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-25</td><td>1800022503</td><td>RV</td><td>10</td><td>30</td><td>101912000557</td><td>&nbsp;</td><td>2019-04-25</td><td>12757.0000</td><td>0.0000</td><td>Tez /Electra Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-9181.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-26</td><td>1008008347</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-04-26</td><td>0.0000</td><td>50000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-59181.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-26</td><td>1008008393</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-04-26</td><td>0.0000</td><td>95000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-154181.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-26</td><td>1800023984</td><td>RV</td><td>05</td><td>80</td><td>101912000608</td><td>&nbsp;</td><td>2019-04-26</td><td>18104.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Stablizer</td><td>Sales Invoice</td><td>-136077.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-26</td><td>1800023979</td><td>RV</td><td>05</td><td>10</td><td>101912000607</td><td>&nbsp;</td><td>2019-04-26</td><td>116297.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-19780.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-29</td><td>1006002064</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>221912000067</td><td>&nbsp;</td><td>2019-04-29</td><td>0.0000</td><td>12324.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>-32104.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-29</td><td>1008009293</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-04-29</td><td>0.0000</td><td>50000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-82104.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-29</td><td>1008009349</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-04-29</td><td>0.0000</td><td>85000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-167104.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-29</td><td>1006002302</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>221912000085</td><td>&nbsp;</td><td>2019-04-29</td><td>0.0000</td><td>11770.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>-178874.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-30</td><td>1005000053</td><td>DA</td><td>&nbsp;</td><td>&nbsp;</td><td>231912000002</td><td>&nbsp;</td><td>2019-04-30</td><td>559.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer document</td><td>-178315.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-30</td><td>1006003211</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>221912000119</td><td>&nbsp;</td><td>2019-04-30</td><td>0.0000</td><td>28000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>-206315.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-30</td><td>1008010218</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-04-30</td><td>0.0000</td><td>75000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-281315.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-30</td><td>1800030350</td><td>RV</td><td>05</td><td>10</td><td>101912000775</td><td>&nbsp;</td><td>2019-04-30</td><td>30413.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-250902.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-30</td><td>1800030354</td><td>RV</td><td>06</td><td>35</td><td>101912000776</td><td>&nbsp;</td><td>2019-04-30</td><td>59695.0000</td><td>0.0000</td><td>HKVA Channel</td><td>HKVA</td><td>Sales Invoice</td><td>-191207.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-30</td><td>1800030392</td><td>RV</td><td>05</td><td>10</td><td>101912000782</td><td>&nbsp;</td><td>2019-04-30</td><td>51702.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-139505.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-30</td><td>1800030515</td><td>RV</td><td>05</td><td>10</td><td>101912000786</td><td>&nbsp;</td><td>2019-04-30</td><td>81132.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-58373.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-30</td><td>1800030517</td><td>RV</td><td>05</td><td>80</td><td>101912000787</td><td>&nbsp;</td><td>2019-04-30</td><td>22874.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Stablizer</td><td>Sales Invoice</td><td>-35499.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-30</td><td>1800031277</td><td>RV</td><td>05</td><td>10</td><td>101912000841</td><td>&nbsp;</td><td>2019-04-30</td><td>20681.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-14818.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-04-30</td><td>1800031352</td><td>RV</td><td>06</td><td>35</td><td>101912000848</td><td>&nbsp;</td><td>2019-04-30</td><td>5970.0000</td><td>0.0000</td><td>HKVA Channel</td><td>HKVA</td><td>Sales Invoice</td><td>-8848.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-13</td><td>1800041270</td><td>RV</td><td>10</td><td>10</td><td>101912001043</td><td>&nbsp;</td><td>2019-05-13</td><td>14484.0000</td><td>0.0000</td><td>Tez /Electra Channel</td><td>Battery</td><td>Sales Invoice</td><td>5636.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-05-13</td><td>1800041263</td><td>RV</td><td>05</td><td>30</td><td>101912001042</td><td>&nbsp;</td><td>2019-05-13</td><td>14836.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>20472.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-05-13</td><td>1800041256</td><td>RV</td><td>10</td><td>30</td><td>101912001041</td><td>&nbsp;</td><td>2019-05-13</td><td>17319.0000</td><td>0.0000</td><td>Tez /Electra Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>37791.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-05-13</td><td>1800041252</td><td>RV</td><td>05</td><td>10</td><td>101912001040</td><td>&nbsp;</td><td>2019-05-13</td><td>48407.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>86198.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-05-13</td><td>1008013940</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-05-13</td><td>0.0000</td><td>100000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-13802.00</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-14</td><td>1800041803</td><td>RV</td><td>45</td><td>40</td><td>101912001057</td><td>&nbsp;</td><td>2019-05-14</td><td>12840.7600</td><td>0.0000</td><td>General Sales Channl</td><td>Others</td><td>Sales Invoice</td><td>-961.24</td><td>0.00</td><td>LPOT</td><td>Others Credit control area LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-15</td><td>1006004790</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>221912000182</td><td>&nbsp;</td><td>2019-05-15</td><td>0.0000</td><td>1800.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>-2761.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-17</td><td>1008017077</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-05-17</td><td>0.0000</td><td>100000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-102761.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-18</td><td>1800047679</td><td>RV</td><td>05</td><td>30</td><td>101912001154</td><td>&nbsp;</td><td>2019-05-18</td><td>30957.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-71804.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-21</td><td>1800049151</td><td>RV</td><td>75</td><td>75</td><td>101912001173</td><td>&nbsp;</td><td>2019-05-21</td><td>20541.0000</td><td>0.0000</td><td>Solar Retail Channel</td><td>Solar Homelight</td><td>Sales Invoice</td><td>-51263.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-27</td><td>1008021231</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-05-27</td><td>0.0000</td><td>140000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-191263.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-28</td><td>1008021665</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-05-28</td><td>0.0000</td><td>40000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-231263.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-28</td><td>1800057416</td><td>RV</td><td>05</td><td>10</td><td>101912001331</td><td>&nbsp;</td><td>2019-05-28</td><td>119643.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-111620.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-28</td><td>1800057417</td><td>RV</td><td>05</td><td>30</td><td>101912001332</td><td>&nbsp;</td><td>2019-05-28</td><td>31921.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-79699.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-28</td><td>1800057423</td><td>RV</td><td>06</td><td>35</td><td>101912001333</td><td>&nbsp;</td><td>2019-05-28</td><td>12757.0000</td><td>0.0000</td><td>HKVA Channel</td><td>HKVA</td><td>Sales Invoice</td><td>-66942.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-28</td><td>1800057429</td><td>RV</td><td>75</td><td>75</td><td>101912001334</td><td>&nbsp;</td><td>2019-05-28</td><td>19132.0000</td><td>0.0000</td><td>Solar Retail Channel</td><td>Solar Homelight</td><td>Sales Invoice</td><td>-47810.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-29</td><td>1006006062</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>221912000226</td><td>&nbsp;</td><td>2019-05-29</td><td>0.0000</td><td>1000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>-48810.24</td><td>0.00</td><td>LPSL</td><td>Service Channel ControlArea LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-29</td><td>1008022418</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-05-29</td><td>0.0000</td><td>100000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-148810.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-30</td><td>1800061239</td><td>RV</td><td>05</td><td>80</td><td>101912001400</td><td>&nbsp;</td><td>2019-05-30</td><td>14962.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Stablizer</td><td>Sales Invoice</td><td>-133848.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-30</td><td>1800061277</td><td>RV</td><td>05</td><td>30</td><td>101912001403</td><td>&nbsp;</td><td>2019-05-30</td><td>13300.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-120548.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-30</td><td>1800061268</td><td>RV</td><td>05</td><td>80</td><td>101912001401</td><td>&nbsp;</td><td>2019-05-30</td><td>15956.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Stablizer</td><td>Sales Invoice</td><td>-104592.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-30</td><td>1800061272</td><td>RV</td><td>05</td><td>10</td><td>101912001402</td><td>&nbsp;</td><td>2019-05-30</td><td>73346.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-31246.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-05-31</td><td>1006006814</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>221912000250</td><td>&nbsp;</td><td>2019-05-31</td><td>0.0000</td><td>16786.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>-48032.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-06</td><td>1800068194</td><td>RV</td><td>05</td><td>30</td><td>101912001558</td><td>&nbsp;</td><td>2019-06-06</td><td>31921.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-16111.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-10</td><td>1008026471</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-06-10</td><td>0.0000</td><td>40000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-56111.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-10</td><td>1800070582</td><td>RV</td><td>05</td><td>10</td><td>101912001597</td><td>&nbsp;</td><td>2019-06-10</td><td>49003.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-7108.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-11</td><td>1008027126</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-06-11</td><td>0.0000</td><td>100000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-107108.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-12</td><td>1800072904</td><td>RV</td><td>05</td><td>10</td><td>101912001657</td><td>&nbsp;</td><td>2019-06-12</td><td>62042.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-45066.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-12</td><td>1800072900</td><td>RV</td><td>05</td><td>30</td><td>101912001656</td><td>&nbsp;</td><td>2019-06-12</td><td>37587.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-7479.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-14</td><td>1008028656</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-06-14</td><td>0.0000</td><td>140000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-147479.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-15</td><td>1800076484</td><td>RV</td><td>05</td><td>30</td><td>101912001727</td><td>&nbsp;</td><td>2019-06-15</td><td>39719.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-107760.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-15</td><td>1800076490</td><td>RV</td><td>06</td><td>35</td><td>101912001728</td><td>&nbsp;</td><td>2019-06-15</td><td>12757.0000</td><td>0.0000</td><td>HKVA Channel</td><td>HKVA</td><td>Sales Invoice</td><td>-95003.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-15</td><td>1800076477</td><td>RV</td><td>05</td><td>10</td><td>101912001726</td><td>&nbsp;</td><td>2019-06-15</td><td>17703.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-77300.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-15</td><td>1800076521</td><td>RV</td><td>05</td><td>10</td><td>101912001736</td><td>&nbsp;</td><td>2019-06-15</td><td>165534.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>88233.76</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-06-15</td><td>1008028925</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-06-15</td><td>0.0000</td><td>150000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-61766.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-18</td><td>1006008288</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>221912000294</td><td>&nbsp;</td><td>2019-06-18</td><td>0.0000</td><td>600.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>-62366.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-18</td><td>1006008635</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>221912000312</td><td>&nbsp;</td><td>2019-06-18</td><td>0.0000</td><td>525.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>-62891.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-18</td><td>1008030325</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-06-18</td><td>0.0000</td><td>150000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-212891.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-18</td><td>1800079756</td><td>RV</td><td>05</td><td>30</td><td>101912001814</td><td>&nbsp;</td><td>2019-06-18</td><td>25175.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-187716.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-18</td><td>1800079753</td><td>RV</td><td>05</td><td>10</td><td>101912001813</td><td>&nbsp;</td><td>2019-06-18</td><td>56232.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-131484.24</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-20</td><td>1800082402</td><td>RV</td><td>45</td><td>40</td><td>101912001881</td><td>&nbsp;</td><td>2019-06-20</td><td>9923.8000</td><td>0.0000</td><td>General Sales Channl</td><td>Others</td><td>Sales Invoice</td><td>-121560.44</td><td>0.00</td><td>LPOT</td><td>Others Credit control area LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-21</td><td>1008032217</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-06-21</td><td>0.0000</td><td>150000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-271560.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-21</td><td>1800084551</td><td>RV</td><td>05</td><td>10</td><td>101912001919</td><td>&nbsp;</td><td>2019-06-21</td><td>49674.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-221886.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-21</td><td>1800085098</td><td>RV</td><td>05</td><td>30</td><td>101912001934</td><td>&nbsp;</td><td>2019-06-21</td><td>17085.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-204801.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-21</td><td>1800085096</td><td>RV</td><td>05</td><td>30</td><td>101912001932</td><td>&nbsp;</td><td>2019-06-21</td><td>19305.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-185496.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-21</td><td>1800085095</td><td>RV</td><td>05</td><td>10</td><td>101912001931</td><td>&nbsp;</td><td>2019-06-21</td><td>59609.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-125887.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-22</td><td>1800086271</td><td>RV</td><td>05</td><td>10</td><td>101912001950</td><td>&nbsp;</td><td>2019-06-22</td><td>111970.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-13917.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-25</td><td>1800089012</td><td>RV</td><td>05</td><td>30</td><td>101912002011</td><td>&nbsp;</td><td>2019-06-25</td><td>35583.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>21665.56</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-06-25</td><td>1800089138</td><td>RV</td><td>05</td><td>10</td><td>101912002017</td><td>&nbsp;</td><td>2019-06-25</td><td>30413.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>52078.56</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-06-25</td><td>1800089141</td><td>RV</td><td>05</td><td>30</td><td>101912002018</td><td>&nbsp;</td><td>2019-06-25</td><td>29672.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>81750.56</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2019-06-25</td><td>1008033837</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-06-25</td><td>0.0000</td><td>180000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-98249.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-26</td><td>1008034459</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-06-26</td><td>0.0000</td><td>75000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-173249.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-27</td><td>1800091175</td><td>RV</td><td>05</td><td>30</td><td>101912002097</td><td>&nbsp;</td><td>2019-06-27</td><td>27669.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-145580.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-27</td><td>1800091174</td><td>RV</td><td>05</td><td>10</td><td>101912002096</td><td>&nbsp;</td><td>2019-06-27</td><td>67935.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-77645.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-28</td><td>1800093287</td><td>RV</td><td>05</td><td>10</td><td>101912002151</td><td>&nbsp;</td><td>2019-06-28</td><td>40196.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-37449.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-28</td><td>1800093286</td><td>RV</td><td>05</td><td>30</td><td>101912002150</td><td>&nbsp;</td><td>2019-06-28</td><td>34170.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-3279.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-29</td><td>1008036306</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-06-29</td><td>0.0000</td><td>190000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-193279.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-06-30</td><td>1800097529</td><td>RV</td><td>05</td><td>10</td><td>101912002270</td><td>&nbsp;</td><td>2019-06-30</td><td>62688.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-130591.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-02</td><td>1800099165</td><td>RV</td><td>05</td><td>10</td><td>101912002338</td><td>&nbsp;</td><td>2019-07-02</td><td>30413.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-100178.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-02</td><td>1800099166</td><td>RV</td><td>05</td><td>10</td><td>101912002339</td><td>&nbsp;</td><td>2019-07-02</td><td>20681.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-79497.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-03</td><td>1008038373</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-07-03</td><td>0.0000</td><td>140000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-219497.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-04</td><td>1800099924</td><td>RV</td><td>05</td><td>30</td><td>101912002352</td><td>&nbsp;</td><td>2019-07-04</td><td>31483.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-188014.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-04</td><td>1800099923</td><td>RV</td><td>05</td><td>30</td><td>101912002351</td><td>&nbsp;</td><td>2019-07-04</td><td>29672.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-158342.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-05</td><td>1800100611</td><td>RV</td><td>05</td><td>30</td><td>101912002372</td><td>&nbsp;</td><td>2019-07-05</td><td>29672.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-128670.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-05</td><td>1800100614</td><td>RV</td><td>05</td><td>10</td><td>101912002373</td><td>&nbsp;</td><td>2019-07-05</td><td>80087.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-48583.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-05</td><td>1800100902</td><td>RV</td><td>10</td><td>10</td><td>101912002381</td><td>&nbsp;</td><td>2019-07-05</td><td>22949.0000</td><td>0.0000</td><td>Tez /Electra Channel</td><td>Battery</td><td>Sales Invoice</td><td>-25634.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-05</td><td>1800101039</td><td>RV</td><td>05</td><td>10</td><td>101912002387</td><td>&nbsp;</td><td>2019-07-05</td><td>22493.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-3141.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-08</td><td>1008040128</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-07-08</td><td>0.0000</td><td>45000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-48141.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-08</td><td>1008040283</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-07-08</td><td>45000.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-3141.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-08</td><td>1008040087</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-07-08</td><td>0.0000</td><td>100000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-103141.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-08</td><td>1008040270</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-07-08</td><td>100000.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-3141.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-08</td><td>1008040131</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-07-08</td><td>0.0000</td><td>100000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-103141.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-08</td><td>1008040220</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-07-08</td><td>0.0000</td><td>45000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-148141.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-09</td><td>1008040550</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEFT/RTGS</td><td>NEFT/RTGS</td><td>2019-07-09</td><td>0.0000</td><td>46000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>-194141.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-09</td><td>1800103771</td><td>RV</td><td>05</td><td>10</td><td>101912002444</td><td>&nbsp;</td><td>2019-07-09</td><td>49269.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>-144872.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-09</td><td>1800103773</td><td>RV</td><td>75</td><td>10</td><td>101912002445</td><td>&nbsp;</td><td>2019-07-09</td><td>27435.0000</td><td>0.0000</td><td>Solar Retail Channel</td><td>Battery</td><td>Sales Invoice</td><td>-117437.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr><tr>
+		<td>2019-07-09</td><td>1800103775</td><td>RV</td><td>05</td><td>30</td><td>101912002446</td><td>&nbsp;</td><td>2019-07-09</td><td>13703.0000</td><td>0.0000</td><td>Luminous Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>-103734.44</td><td>0.00</td><td>ZPSB</td><td>Crdt C area PSB channel sales LPTL</td><td>Cr</td><td>&nbsp;</td><td>CR</td>
+	</tr>
+</table>

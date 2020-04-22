@@ -1,0 +1,33 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>DOC_DATE</td><td>DOC_NO</td><td>DO</td><td>DI</td><td>DI1</td><td>REF_ORG_UN</td><td>ALLOC_NMBR</td><td>REF_DATE</td><td>DEBIT_AMOUNT</td><td>CREDIT_AMOUNT</td><td>CHANNEL_TXT</td><td>DIVISION_TXT</td><td>DOC_TYP_TXT</td><td>TOTAL_CREDIT</td><td>EXTENDED_CREDIT_LIMI</td><td>CONT</td><td>CONTROL_AREA_DESC</td><td>DEALER</td><td>DEALER_NAME</td><td>CDRC</td>
+	</tr><tr>
+		<td>0000-00-00</td><td>OPEN BAL.</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0000-00-00</td><td>14677857.0000</td><td>6207.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>14671650.00</td><td>0.00</td><td>&nbsp;</td><td>&nbsp;</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-10</td><td>1008138750</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>JANAKPURI</td><td>748082</td><td>2017-01-10</td><td>0.0000</td><td>1000000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>13671650.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-11</td><td>1006033149</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>ADD WRS DL OCT16</td><td>&nbsp;</td><td>2017-01-11</td><td>0.0000</td><td>34375.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>13637275.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-11</td><td>1006032678</td><td>DG</td><td>&nbsp;</td><td>&nbsp;</td><td>WRS DISTY OCT16</td><td>&nbsp;</td><td>2017-01-11</td><td>0.0000</td><td>8980.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Customer credit memo</td><td>13628295.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-12</td><td>1008139569</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>DELHI</td><td>RTGS</td><td>2017-01-12</td><td>0.0000</td><td>1000000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>12628295.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-16</td><td>1008140464</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEW DELHI</td><td>748083</td><td>2017-01-16</td><td>0.0000</td><td>1000000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>11628295.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-18</td><td>3500002589</td><td>DN</td><td>&nbsp;</td><td>&nbsp;</td><td>1008141166/2016</td><td>&nbsp;</td><td>2017-01-10</td><td>2500.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Cust DN-Bank Charges</td><td>11630795.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-18</td><td>1008141166</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>JANAKPURI</td><td>748082</td><td>2017-01-10</td><td>1000000.0000</td><td>0.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>12630795.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-24</td><td>1800413547</td><td>RV</td><td>05</td><td>10</td><td>1601103173</td><td>&nbsp;</td><td>2017-01-24</td><td>125584.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>12756379.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-24</td><td>1800413670</td><td>RV</td><td>06</td><td>35</td><td>1601103176</td><td>&nbsp;</td><td>2017-01-24</td><td>112900.0000</td><td>0.0000</td><td>HKVA Channel</td><td>HKVA</td><td>Sales Invoice</td><td>12869279.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-24</td><td>1800413548</td><td>RV</td><td>05</td><td>10</td><td>1601103174</td><td>&nbsp;</td><td>2017-01-24</td><td>86310.0000</td><td>0.0000</td><td>Luminous Channel</td><td>Battery</td><td>Sales Invoice</td><td>12955589.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-24</td><td>1800413558</td><td>RV</td><td>10</td><td>30</td><td>1601103175</td><td>&nbsp;</td><td>2017-01-24</td><td>134805.0000</td><td>0.0000</td><td>Tez /Electra Channel</td><td>LB UPS</td><td>Sales Invoice</td><td>13090394.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-25</td><td>1008143920</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>NEW DELHI</td><td>748084</td><td>2017-01-25</td><td>0.0000</td><td>1000000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>12090394.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr><tr>
+		<td>2017-01-27</td><td>1008144613</td><td>DZ</td><td>&nbsp;</td><td>&nbsp;</td><td>DELHI</td><td>748085</td><td>2017-01-27</td><td>0.0000</td><td>1000000.0000</td><td>&nbsp;</td><td>&nbsp;</td><td>Collection</td><td>11090394.00</td><td>0.00</td><td>INBT</td><td>Crdt ctrl area channel sales LPTL</td><td>Dr</td><td>&nbsp;</td><td>DR</td>
+	</tr>
+</table>

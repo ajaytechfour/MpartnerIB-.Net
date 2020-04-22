@@ -1,0 +1,216 @@
+﻿@model Luminous.EF.ProductLevelTwo
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style type="text/css">
+    .required
+    {
+        color: Red;
+    }
+    table
+    {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+    table table
+    {
+        font-size: 1em;
+    }
+    #footer-wrapper table
+    {
+        font-size: 1em;
+    }
+    table tr th
+    {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+    table tr th, table tr th a, table tr th a:hover
+    {
+        color: #FFF;
+        font-weight: bold;
+    }
+    table tbody tr th
+    {
+        vertical-align: top;
+    }
+    tr td, tr th
+    {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+    #footer-wrapper tr td, #footer-wrapper tr th
+    {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+    tr.odd
+    {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+    tr, tr.even
+    {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+    table ul.links
+    {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+    table ul.links li
+    {
+        padding: 0 1em 0 0;
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+
+        ValidationMessage();
+    });
+    function ValidationMessage() {
+
+
+        if ('@ViewBag.File' != "") {
+            $("#file").text('@ViewBag.File');
+        }
+
+
+    }
+    $(function () {
+        $.post("@Url.Content("~/ProductCategory/GetParentCategory")", null, function (data) { SetParentCategory(data); }, "Json");
+        $.post("@Url.Content("~/ProductLevelTwo/GetProductCategory")", { procatid: '@ViewBag.Prntid' }, function (data) { SetProdcutCategory(data, 'ProductCategory'); }, "Json");
+        if ('@ViewBag.status' == 1) {
+            $("#statusC").prop("checked", "checked");
+        }
+        if ('@ViewBag.Result' != "") {
+            debugger;
+            alert('@ViewBag.Result');
+            location.href = "@Url.Content("~/ProductLevelTwo/index")";
+        }
+    });
+
+    @*function SetProdcutlevelOne() {
+        var procat = $("#ProductCategory :selected").val();
+        var procatLvlOne = $("#pclvlOne");
+        $.post("@Url.Content("~/ProductLevelTwo/GetProductLevelOneCategory")", { procatid: procat }, function (data) { SetProdcutCategory(data, 'pclvlOne'); }, "Json");
+    }*@
+
+    function Cancel() {
+        location.href = "@Url.Content("~/ProductLevelTwo/index")";
+    }
+    function SetProdcutCategory(data, id) {
+        option = "";
+        var procat = $("#" + id);
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+
+        });
+        procat.append(option);
+        if (id == "ProductCategory") {
+            procat.val('@ViewBag.Pid');
+            //  SetProdcutlevelOne();
+        }
+        else {
+            procat.val('@ViewBag.P1id');
+        }
+
+
+    }
+    function SetParentCategory(data) {
+        option = "";
+        var procat = $("#ParentCategory");
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+
+        });
+        procat.append(option);
+        //ViewBag.Prntid = cud.ParentCatid;
+        procat.val('@ViewBag.Prntid');
+
+
+    }
+
+
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Product Level Two - </span> Edit</h1>
+        </div>
+    </div>
+
+    <div id="form" style="margin-bottom: 11px">
+        @using (Ajax.BeginForm("Update", new AjaxOptions { HttpMethod = "get", UpdateTargetId = "d", InsertionMode = InsertionMode.Replace }, new AjaxOptions() {/*some options*/}, new { enctype = "multipart/form-data" }))
+        {
+
+            <div class="row">
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500" id="content_wrap">
+                    <div class="addgift" style="padding-bottom: 10px;" id="content_wrap">
+                        <div class="row" id="GridView">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Parent Category<span class="required">*</span></label>
+                                    <select name="ParentCatid" class="form-control" id="ParentCategory">
+                                        <option>Select</option>
+                                    </select>
+                                    @Html.ValidationMessageFor(model => model.ParentCatid, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Product Category <span class="required">*</span></label>
+                                    <select name="pcId" class="form-control" id="ProductCategory">
+                                        <option>Select</option>
+                                    </select>
+                                    @Html.HiddenFor(model => model.id)
+                                    @Html.ValidationMessageFor(model => model.PrductID, "", new { @class = "required" })
+                                    <span id="pcIdValidation"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Product Level Two</label>
+                                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <input type="checkbox" checked="checked" name="statusC" />
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="submit" value="Submit" class="submitBtn" />
+                                    <input type="button" value="Cancel" onclick="Cancel();" class="submitBtn" style="background:rgba(0, 0, 0, 0.51)" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         }
+      </div>
+</div>

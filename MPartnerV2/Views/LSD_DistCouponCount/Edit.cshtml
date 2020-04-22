@@ -1,0 +1,150 @@
+﻿@model Luminous.EF.Lsd_DistCouponCount
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>*@
+
+<style type="text/css">
+    .required
+  {
+    	color:Red;
+ }
+table {
+border: 0;
+border-spacing: 0;
+font-size: 0.857em;
+margin: 10px 0;
+width: 100%;
+}
+table table {
+font-size: 1em;
+}
+#footer-wrapper table {
+font-size: 1em;
+}
+table tr th {
+background: #757575;
+background: rgba(0, 0, 0, 0.51);
+border-bottom-style: none;
+}
+table tr th,
+table tr th a,
+table tr th a:hover {
+color: #FFF;
+font-weight: bold;
+}
+table tbody tr th {
+vertical-align: top;
+}
+tr td,
+tr th {
+padding: 4px 9px;
+border: 1px solid #fff;
+text-align: left; /* LTR */
+}
+#footer-wrapper tr td,
+#footer-wrapper tr th {
+border-color: #555;
+border-color: rgba(255, 255, 255, 0.18);
+}
+tr.odd {
+background: #e4e4e4;
+background: rgba(0, 0, 0, 0.105);
+}
+tr,
+tr.even {
+background: #efefef;
+background: rgba(0, 0, 0, 0.063);
+}
+table ul.links {
+margin: 0;
+padding: 0;
+font-size: 1em;
+}
+table ul.links li {
+padding: 0 1em 0 0;
+}
+</style> 
+<script type="text/javascript">
+ 
+
+    $(function () {
+      
+        ValidationMessage();
+
+    });
+
+    function ValidationMessage() {
+      
+
+     
+        if ('@ViewBag.preStatus' == "1") {
+
+            $("#Status").prop("checked", "checked");
+
+        }
+        if ('@ViewBag.Update' == "Done") {
+            alert("Updation Done Successfully");
+            location.href = "@Url.Content("~/LSD_DistCouponCount/index")";
+        }
+
+         if ('@ViewBag.notupdate' == "notupdate") {
+             alert("Eligible coupon cannot be less than activated coupon");
+            location.href = "@Url.Content("~/LSD_DistCouponCount/index")";
+        }
+     
+
+    }
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8; height:800px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Magical 7 - </span> Edit Distributor Coupon</h1>
+        </div>
+    </div>
+
+    @using (@Html.BeginForm("Update", "LSD_DistCouponCount"))
+    {
+
+        <div class="row">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Distributor Code <span class="required">*</span></label>
+                                @Html.HiddenFor(a => a.Id)
+                                @Html.TextBoxFor(a => a.DistCode, new { @class = "form-control"})<br />
+                                @Html.ValidationMessageFor(a => a.DistCode, "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Coupon Value <span class="required">*</span></label>
+                                @Html.TextBoxFor(a => a.EligibleCoupon, new { @class = "form-control" })<br />
+                                @Html.ValidationMessageFor(a => a.EligibleCoupon, "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Status <span class="required">*</span></label>
+                                <input id="Status" type="checkbox" name="Status" style="border: none; outline: none;" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="">
+                                <input type="submit" value="Submit" class="submitBtn" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    }
+
+    </div>

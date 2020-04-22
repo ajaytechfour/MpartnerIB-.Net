@@ -1,0 +1,45 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000984434</td><td>1952102471</td><td>2019-06-25</td><td>F1148C425150</td><td>LUM 12V150AH ECO CHRG 18000 FNSD BTY V19</td><td>60.000</td><td>482400.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000984496</td><td>1952102472</td><td>2019-06-25</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>20.000</td><td>125000.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000984477</td><td>1952102684</td><td>2019-06-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>25.000</td><td>221875.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000988975</td><td>1952102686</td><td>2019-06-29</td><td>F04575010126</td><td>S/W UPS 7500VA 120V LUM CRUZE P. FRONT</td><td>1.000</td><td>35284.70</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000005</td><td>0000988965</td><td>1952102739</td><td>2019-06-29</td><td>F1148B280120</td><td>LUM 12V120AH ECO CHRG 15000 FNSD BTY</td><td>15.000</td><td>102900.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000006</td><td>0000988977</td><td>1952102741</td><td>2019-06-29</td><td>F03216511951</td><td>S/Q  UPS 24V LUM BIS ECO WATT +1650</td><td>25.000</td><td>97750.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000007</td><td>0000988983</td><td>1952102742</td><td>2019-06-29</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>15.000</td><td>166950.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000988983</td><td>1952102742</td><td>2019-06-29</td><td>F1103BYR0080</td><td>LUM 12V80AH ILST10036 TUB FNSD BTY V16</td><td>10.000</td><td>48600.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000009</td><td>0000989002</td><td>1952102770</td><td>2019-06-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>20.000</td><td>177500.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1591</td><td>Bhiwandi HED</td><td>Battery</td>
+	</tr><tr>
+		<td>00000010</td><td>0000984101</td><td>1960101123</td><td>2019-06-25</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>120.000</td><td>960000.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000011</td><td>0000984101</td><td>1960101123</td><td>2019-06-25</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>40.000</td><td>326400.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>1051</td><td>Ghaziabad Warehouse-3</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000984099</td><td>1992101136</td><td>2019-06-26</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>250.000</td><td>2412500.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000013</td><td>0000990367</td><td>1992101200</td><td>2019-06-30</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>145.000</td><td>1399250.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>PG02</td><td>Gagret Unit - 2</td><td>Battery</td>
+	</tr><tr>
+		<td>00000014</td><td>0000986914</td><td>1993101405</td><td>2019-06-27</td><td>F04110512051</td><td>S/W UPS LUMINOUS ECO VOLT+ 1050/12V(BIS)</td><td>100.000</td><td>315500.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000015</td><td>0000986914</td><td>1993101405</td><td>2019-06-27</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>300.000</td><td>679500.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000016</td><td>0000986914</td><td>1993101406</td><td>2019-06-27</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>75.000</td><td>323250.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000017</td><td>0000986921</td><td>1993101407</td><td>2019-06-27</td><td>F03176502351</td><td>S/Q  UPS 12V LUM BIS ELECTRA + 765</td><td>100.000</td><td>231000.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000018</td><td>0000986921</td><td>1993101407</td><td>2019-06-27</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>100.000</td><td>296500.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>PG03</td><td>Gagret Unit - 3</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000019</td><td>0000991419</td><td>1997101371</td><td>2019-06-30</td><td>F1138M204150</td><td>LUM 12V150AH RC18000ST FNSD BTY</td><td>300.000</td><td>2182500.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>PG04</td><td>Gagret Unit - 4</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000991419</td><td>1997101371</td><td>2019-06-30</td><td>F1103NXR0150</td><td>LUM 12V 150AH ILTJ18148 FNSD BTY</td><td>40.000</td><td>348600.00</td><td>0001108447</td><td>S2K(INDIA)DISTRIBUTION COMPANY</td><td>13</td><td>Maharashtra</td><td>PG04</td><td>Gagret Unit - 4</td><td>Battery</td>
+	</tr>
+</table>

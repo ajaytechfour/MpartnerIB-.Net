@@ -1,0 +1,741 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>SERIAL_N</td><td>SALES_ORDE</td><td>INV_NO</td><td>INVOICE_DA</td><td>ITEM_CODE</td><td>MATERIAL_DESC</td><td>INV_QTY</td><td>AMOUNT</td><td>DEALER</td><td>DEALER_NAME</td><td>REG</td><td>REGION_TEXT</td><td>PLAN</td><td>PLANT_NAME</td><td>DIVISION</td>
+	</tr><tr>
+		<td>00000001</td><td>0000874988</td><td>0090018741</td><td>2018-11-28</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>0.000</td><td>173900.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000002</td><td>0000874988</td><td>0090018741</td><td>2018-11-28</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>0.000</td><td>285750.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000003</td><td>0000874988</td><td>0090018741</td><td>2018-11-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>0.000</td><td>257800.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000004</td><td>0000874988</td><td>0090018741</td><td>2018-11-28</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>0.000</td><td>200000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000005</td><td>0000874994</td><td>0090018742</td><td>2018-11-27</td><td>T30000000313</td><td>Solar PV Panel 335 Wp Mono Crystalline</td><td>0.000</td><td>38787.60</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000006</td><td>0000875455</td><td>0090018743</td><td>2018-11-28</td><td>F19610023451</td><td>LUMINOUS SOLAR PCU NXT 10KW 120V W/O iOT</td><td>0.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000007</td><td>0000875455</td><td>0090018743</td><td>2018-11-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>0.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000008</td><td>0000875455</td><td>0090018743</td><td>2018-11-28</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>0.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000009</td><td>0000875455</td><td>0090018743</td><td>2018-11-28</td><td>T30000000845</td><td>PCU10kW-B150H10N-M325W30N</td><td>0.000</td><td>480720.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000010</td><td>0000875577</td><td>0090018744</td><td>2018-11-28</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>0.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000011</td><td>0000875577</td><td>0090018744</td><td>2018-11-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>0.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000012</td><td>0000875577</td><td>0090018744</td><td>2018-11-28</td><td>T30000000315</td><td>Solar PV Panel 160 Wp Poly Crystalline</td><td>0.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000013</td><td>0000875577</td><td>0090018744</td><td>2018-11-28</td><td>T30000000633</td><td>NXG1100-B150H1N-P160W1N</td><td>0.000</td><td>61124.74</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000014</td><td>0000875579</td><td>0090018745</td><td>2018-11-28</td><td>T18010000077</td><td>Solar PV Module 100W/12V Poly Crys.</td><td>0.000</td><td>33120.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000015</td><td>0000875579</td><td>0090018745</td><td>2018-11-28</td><td>T18010000075</td><td>Solar PV Module 75W/12V Poly Crys.</td><td>0.000</td><td>28450.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000016</td><td>0000875579</td><td>0090018745</td><td>2018-11-28</td><td>T18010000074</td><td>Solar PV Module 60W/12V Poly Crys.</td><td>0.000</td><td>23990.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000017</td><td>0000875579</td><td>0090018745</td><td>2018-11-28</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>0.000</td><td>16400.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000018</td><td>0000875964</td><td>0090018746</td><td>2018-11-28</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>0.000</td><td>91550.06</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000019</td><td>0000875964</td><td>0090018746</td><td>2018-11-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>0.000</td><td>386700.24</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000020</td><td>0000875964</td><td>0090018746</td><td>2018-11-28</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>0.000</td><td>52025.03</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000021</td><td>0000875964</td><td>0090018746</td><td>2018-11-28</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>0.000</td><td>34290.02</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000022</td><td>0000875964</td><td>0090018746</td><td>2018-11-28</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>0.000</td><td>24780.02</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000023</td><td>0000875964</td><td>0090018746</td><td>2018-11-28</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>0.000</td><td>50275.03</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000024</td><td>0000875978</td><td>0090018747</td><td>2018-11-28</td><td>F1105C150160</td><td>ELE 12V160AH LETT 20548 FNSD BTY</td><td>0.000</td><td>27225.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000025</td><td>0000875991</td><td>0090018748</td><td>2018-11-28</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>0.000</td><td>32600.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000026</td><td>0000875991</td><td>0090018748</td><td>2018-11-28</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>0.000</td><td>29050.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000027</td><td>0000875992</td><td>0090018749</td><td>2018-11-28</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>0.000</td><td>80500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000028</td><td>0000875998</td><td>0090018750</td><td>2018-11-28</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>0.000</td><td>14720.40</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000029</td><td>0000864932</td><td>1805106393</td><td>2018-10-31</td><td>F19460013451</td><td>LUMINOUS SOLAR PCU NXT 6KW 96V W/O iOT</td><td>1.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000030</td><td>0000864932</td><td>1805106393</td><td>2018-10-31</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>8.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1050</td><td>Gaziabad Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000031</td><td>0000864932</td><td>1805106393</td><td>2018-10-31</td><td>T30000000313</td><td>Solar PV Panel 335 Wp Mono Crystalline</td><td>12.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000032</td><td>0000864932</td><td>1805106393</td><td>2018-10-31</td><td>T30000000827</td><td>PCU6k-B150H8N-M335W12N</td><td>1.000</td><td>272295.25</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1050</td><td>Gaziabad Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000033</td><td>0000849595</td><td>1823102375</td><td>2018-09-28</td><td>T30000000315</td><td>Solar PV Panel 160 Wp Poly Crystalline</td><td>30.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000034</td><td>0000849595</td><td>1823102375</td><td>2018-09-28</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>30.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000035</td><td>0000849595</td><td>1823102375</td><td>2018-09-28</td><td>T30000000633</td><td>NXG1100-B150H1N-P160W1N</td><td>30.000</td><td>611250.50</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000036</td><td>0000849595</td><td>1823102375</td><td>2018-09-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>30.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000037</td><td>0000849599</td><td>1823102376</td><td>2018-09-28</td><td>T18010000071</td><td>Solar PV Module 20W/12V Poly Crys.</td><td>50.000</td><td>53749.94</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000038</td><td>0000849599</td><td>1823102376</td><td>2018-09-28</td><td>T30000000315</td><td>Solar PV Panel 160 Wp Poly Crystalline</td><td>27.000</td><td>147635.85</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000039</td><td>0000849599</td><td>1823102376</td><td>2018-09-28</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>50.000</td><td>81999.91</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000040</td><td>0000849609</td><td>1823102377</td><td>2018-09-28</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>15.000</td><td>4949.96</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000041</td><td>0000849609</td><td>1823102377</td><td>2018-09-28</td><td>F19202002151</td><td>SOLAR RETROFIT SOLUTION SHINE-2420</td><td>10.000</td><td>16949.85</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000042</td><td>0000849609</td><td>1823102377</td><td>2018-09-28</td><td>F19101004001</td><td>SOLAR CHARGE CONTROLLER 1210N</td><td>15.000</td><td>7724.93</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000043</td><td>0000849690</td><td>1823102384</td><td>2018-09-28</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>10.000</td><td>50400.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000044</td><td>0000851960</td><td>1823102456</td><td>2018-09-29</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>15.000</td><td>137325.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000045</td><td>0000851962</td><td>1823102457</td><td>2018-09-29</td><td>T1105CZT0200</td><td>ELE 12V200AH LETT25560 FNSD BTY V16</td><td>17.000</td><td>209014.80</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000046</td><td>0000851972</td><td>1823102458</td><td>2018-09-29</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>40.000</td><td>129600.19</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000047</td><td>0000851972</td><td>1823102458</td><td>2018-09-29</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>40.000</td><td>161000.23</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000048</td><td>0000851972</td><td>1823102458</td><td>2018-09-29</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>15.000</td><td>52275.08</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000049</td><td>0000851977</td><td>1823102459</td><td>2018-09-29</td><td>F03114652651</td><td>S/Q UPS 1100VA/12V RHINO CHARGE+ 1465</td><td>30.000</td><td>109200.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000050</td><td>0000851965</td><td>1823102480</td><td>2018-09-29</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>15.000</td><td>156075.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000051</td><td>0000851965</td><td>1823102480</td><td>2018-09-29</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>40.000</td><td>515600.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000052</td><td>0000851965</td><td>1823102480</td><td>2018-09-29</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>20.000</td><td>227100.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000053</td><td>0000851965</td><td>1823102480</td><td>2018-09-29</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>10.000</td><td>93000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000054</td><td>0000851965</td><td>1823102480</td><td>2018-09-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>15.000</td><td>133125.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000055</td><td>0000853025</td><td>1823102506</td><td>2018-09-30</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>5.000</td><td>18900.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000056</td><td>0000853364</td><td>1823102519</td><td>2018-09-30</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>2.000</td><td>21839.83</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000057</td><td>0000853364</td><td>1823102519</td><td>2018-09-30</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>6.000</td><td>30239.77</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000058</td><td>0000853467</td><td>1823102549</td><td>2018-09-30</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>24.000</td><td>68760.20</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000059</td><td>0000864613</td><td>1823102771</td><td>2018-10-30</td><td>T30000000313</td><td>Solar PV Panel 335 Wp Mono Crystalline</td><td>4.000</td><td>38787.60</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000060</td><td>0000865313</td><td>1823102772</td><td>2018-10-30</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>13.000</td><td>148589.97</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000061</td><td>0000865313</td><td>1823102772</td><td>2018-10-30</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>40.000</td><td>515599.89</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000062</td><td>0000865313</td><td>1823102772</td><td>2018-10-30</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>30.000</td><td>274649.94</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000063</td><td>0000865317</td><td>1823102773</td><td>2018-10-30</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>10.000</td><td>114300.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000064</td><td>0000865317</td><td>1823102773</td><td>2018-10-30</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>20.000</td><td>257800.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000065</td><td>0000865317</td><td>1823102773</td><td>2018-10-30</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>20.000</td><td>208100.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000066</td><td>0000865317</td><td>1823102773</td><td>2018-10-30</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>20.000</td><td>177500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000067</td><td>0000865322</td><td>1823102774</td><td>2018-10-30</td><td>F03114652651</td><td>S/Q UPS 1100VA/12V RHINO CHARGE+ 1465</td><td>40.000</td><td>145600.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000068</td><td>0000865322</td><td>1823102774</td><td>2018-10-30</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>20.000</td><td>58100.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000069</td><td>0000865322</td><td>1823102774</td><td>2018-10-30</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>50.000</td><td>163000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000070</td><td>0000865326</td><td>1823102775</td><td>2018-10-30</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>30.000</td><td>108750.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000071</td><td>0000865326</td><td>1823102775</td><td>2018-10-30</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>20.000</td><td>39100.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000072</td><td>0000865993</td><td>1823102784</td><td>2018-10-31</td><td>T30000000420</td><td>SCC1206-B40H1N-P100W1N</td><td>15.000</td><td>112575.24</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000073</td><td>0000865993</td><td>1823102784</td><td>2018-10-31</td><td>T18010000077</td><td>Solar PV Module 100W/12V Poly Crys.</td><td>15.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000074</td><td>0000865993</td><td>1823102784</td><td>2018-10-31</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>15.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000075</td><td>0000865993</td><td>1823102784</td><td>2018-10-31</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>15.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000076</td><td>0000865995</td><td>1823102785</td><td>2018-10-31</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>6.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000077</td><td>0000865995</td><td>1823102785</td><td>2018-10-31</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>6.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000078</td><td>0000865995</td><td>1823102785</td><td>2018-10-31</td><td>T30000000315</td><td>Solar PV Panel 160 Wp Poly Crystalline</td><td>6.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000079</td><td>0000865995</td><td>1823102785</td><td>2018-10-31</td><td>T30000000633</td><td>NXG1100-B150H1N-P160W1N</td><td>6.000</td><td>122250.50</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000080</td><td>0000865997</td><td>1823102786</td><td>2018-10-31</td><td>T30000000315</td><td>Solar PV Panel 160 Wp Poly Crystalline</td><td>30.000</td><td>164040.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000081</td><td>0000865997</td><td>1823102786</td><td>2018-10-31</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>40.000</td><td>65600.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000082</td><td>0000865997</td><td>1823102786</td><td>2018-10-31</td><td>T18010000071</td><td>Solar PV Module 20W/12V Poly Crys.</td><td>20.000</td><td>21500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000083</td><td>0000865998</td><td>1823102787</td><td>2018-10-31</td><td>F19202002151</td><td>SOLAR RETROFIT SOLUTION SHINE-2420</td><td>10.000</td><td>16950.14</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000084</td><td>0000865998</td><td>1823102787</td><td>2018-10-31</td><td>F19305007601</td><td>SOL RETROFIT SYS. 48V 50Amp. SHINE 4850</td><td>1.000</td><td>5395.05</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000085</td><td>0000865998</td><td>1823102787</td><td>2018-10-31</td><td>F19101004001</td><td>SOLAR CHARGE CONTROLLER 1210N</td><td>10.000</td><td>5150.05</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000086</td><td>0000869634</td><td>1823102858</td><td>2018-11-15</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>15.000</td><td>42975.50</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000087</td><td>0000871402</td><td>1823102924</td><td>2018-11-22</td><td>F19305007601</td><td>SOL RETROFIT SYS. 48V 50Amp. SHINE 4850</td><td>1.000</td><td>5395.24</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000088</td><td>0000871403</td><td>1823102925</td><td>2018-11-22</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>10.000</td><td>88750.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000089</td><td>0000871403</td><td>1823102925</td><td>2018-11-22</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>10.000</td><td>128900.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000090</td><td>0000871403</td><td>1823102925</td><td>2018-11-22</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>10.000</td><td>136400.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000091</td><td>0000871404</td><td>1823102926</td><td>2018-11-22</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>15.000</td><td>29325.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000092</td><td>0000871404</td><td>1823102926</td><td>2018-11-22</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>15.000</td><td>60375.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000093</td><td>0000872492</td><td>1823102962</td><td>2018-11-22</td><td>F19100609401</td><td>SOLAR CHARGE CONTROLLER SCC1206NM</td><td>30.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000094</td><td>0000872492</td><td>1823102962</td><td>2018-11-22</td><td>F1113B210020</td><td>LUM 12V20AH LPT1220L FNSD BTY V17 SLR</td><td>30.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000095</td><td>0000872492</td><td>1823102962</td><td>2018-11-22</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>30.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000096</td><td>0000872492</td><td>1823102962</td><td>2018-11-22</td><td>T30000000410</td><td>SCC1206-B20L1N-P40W1N</td><td>30.000</td><td>131250.50</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000097</td><td>0000872751</td><td>1823102973</td><td>2018-11-23</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>15.000</td><td>204600.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000098</td><td>0000874994</td><td>1823103004</td><td>2018-11-27</td><td>T30000000313</td><td>Solar PV Panel 335 Wp Mono Crystalline</td><td>4.000</td><td>38787.60</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000099</td><td>0000874988</td><td>1823103024</td><td>2018-11-28</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>20.000</td><td>173900.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000100</td><td>0000874988</td><td>1823103024</td><td>2018-11-28</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>25.000</td><td>285750.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000101</td><td>0000874988</td><td>1823103024</td><td>2018-11-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>20.000</td><td>257800.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000102</td><td>0000874988</td><td>1823103024</td><td>2018-11-28</td><td>F1138C294150</td><td>LUM 12V150AH RC 18000 FNSD BTY V18</td><td>25.000</td><td>200000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000103</td><td>0000875455</td><td>1823103025</td><td>2018-11-28</td><td>F19610023451</td><td>LUMINOUS SOLAR PCU NXT 10KW 120V W/O iOT</td><td>1.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000104</td><td>0000875455</td><td>1823103025</td><td>2018-11-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>10.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000105</td><td>0000875455</td><td>1823103025</td><td>2018-11-28</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>30.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000106</td><td>0000875455</td><td>1823103025</td><td>2018-11-28</td><td>T30000000845</td><td>PCU10kW-B150H10N-M325W30N</td><td>1.000</td><td>480720.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000107</td><td>0000875577</td><td>1823103030</td><td>2018-11-28</td><td>T30000000633</td><td>NXG1100-B150H1N-P160W1N</td><td>3.000</td><td>61124.74</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000108</td><td>0000875577</td><td>1823103030</td><td>2018-11-28</td><td>T30000000315</td><td>Solar PV Panel 160 Wp Poly Crystalline</td><td>3.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000109</td><td>0000875577</td><td>1823103030</td><td>2018-11-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>3.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000110</td><td>0000875577</td><td>1823103030</td><td>2018-11-28</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>3.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000111</td><td>0000875579</td><td>1823103031</td><td>2018-11-28</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>10.000</td><td>16400.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000112</td><td>0000875579</td><td>1823103031</td><td>2018-11-28</td><td>T18010000074</td><td>Solar PV Module 60W/12V Poly Crys.</td><td>10.000</td><td>23990.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000113</td><td>0000875579</td><td>1823103031</td><td>2018-11-28</td><td>T18010000075</td><td>Solar PV Module 75W/12V Poly Crys.</td><td>10.000</td><td>28450.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000114</td><td>0000875579</td><td>1823103031</td><td>2018-11-28</td><td>T18010000077</td><td>Solar PV Module 100W/12V Poly Crys.</td><td>9.000</td><td>33120.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000115</td><td>0000875964</td><td>1823103037</td><td>2018-11-28</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>3.000</td><td>24780.02</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000116</td><td>0000875964</td><td>1823103037</td><td>2018-11-28</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>3.000</td><td>34290.02</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000117</td><td>0000875964</td><td>1823103037</td><td>2018-11-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>30.000</td><td>386700.24</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000118</td><td>0000875964</td><td>1823103037</td><td>2018-11-28</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>10.000</td><td>91550.06</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000119</td><td>0000875964</td><td>1823103037</td><td>2018-11-28</td><td>F1149C289150</td><td>LUM 12V150AH XL18060 FNSD BTY</td><td>5.000</td><td>50275.03</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000120</td><td>0000875964</td><td>1823103037</td><td>2018-11-28</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>5.000</td><td>52025.03</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000121</td><td>0000875978</td><td>1823103038</td><td>2018-11-28</td><td>F1105C150160</td><td>ELE 12V160AH LETT 20548 FNSD BTY</td><td>3.000</td><td>27225.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000122</td><td>0000875991</td><td>1823103041</td><td>2018-11-28</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>10.000</td><td>29050.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000123</td><td>0000875991</td><td>1823103041</td><td>2018-11-28</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>10.000</td><td>32600.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000124</td><td>0000875992</td><td>1823103042</td><td>2018-11-28</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>20.000</td><td>80500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000125</td><td>0000875998</td><td>1823103043</td><td>2018-11-28</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>2.000</td><td>14720.40</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000126</td><td>0000880596</td><td>1823103141</td><td>2018-12-14</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>4.000</td><td>11700.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000127</td><td>0000880883</td><td>1823103142</td><td>2018-12-14</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>25.000</td><td>221875.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000128</td><td>0000880883</td><td>1823103142</td><td>2018-12-14</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>30.000</td><td>386700.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000129</td><td>0000880884</td><td>1823103143</td><td>2018-12-14</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>30.000</td><td>106050.17</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000130</td><td>0000880884</td><td>1823103143</td><td>2018-12-14</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>10.000</td><td>25400.04</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000131</td><td>0000880884</td><td>1823103143</td><td>2018-12-14</td><td>F04111013251</td><td>S/W UPS LUMINOUS ZELIO WI FI 1100/12V</td><td>5.000</td><td>20225.03</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000132</td><td>0000880884</td><td>1823103143</td><td>2018-12-14</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>40.000</td><td>164400.26</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000133</td><td>0000880885</td><td>1823103144</td><td>2018-12-14</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>20.000</td><td>66500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000134</td><td>0000880886</td><td>1823103145</td><td>2018-12-14</td><td>T30000000313</td><td>Solar PV Panel 335 Wp Mono Crystalline</td><td>8.000</td><td>75240.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000135</td><td>0000880886</td><td>1823103145</td><td>2018-12-14</td><td>T18010000073</td><td>Solar PV Module 40W/12V Poly Crys.</td><td>10.000</td><td>15900.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000136</td><td>0000881776</td><td>1823103159</td><td>2018-12-18</td><td>T30000000845</td><td>PCU10kW-B150H10N-M325W30N</td><td>3.000</td><td>1417500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000137</td><td>0000881776</td><td>1823103159</td><td>2018-12-18</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>90.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000138</td><td>0000881776</td><td>1823103159</td><td>2018-12-18</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>30.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000139</td><td>0000881776</td><td>1823103159</td><td>2018-12-18</td><td>F19610023451</td><td>LUMINOUS SOLAR PCU NXT 10KW 120V W/O iOT</td><td>3.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000140</td><td>0000883415</td><td>1823103224</td><td>2018-12-21</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>9.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000141</td><td>0000883415</td><td>1823103224</td><td>2018-12-21</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>9.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000142</td><td>0000883415</td><td>1823103224</td><td>2018-12-21</td><td>T30000000315</td><td>Solar PV Panel 160 Wp Poly Crystalline</td><td>9.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000143</td><td>0000883415</td><td>1823103224</td><td>2018-12-21</td><td>T30000000633</td><td>NXG1100-B150H1N-P160W1N</td><td>9.000</td><td>181890.50</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000144</td><td>0000883774</td><td>1823103260</td><td>2018-12-24</td><td>F19335015001</td><td>LUM  UPS CRUZE 3.5KVA/48V+SRS SHINE4850</td><td>1.000</td><td>16315.30</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000145</td><td>0000886777</td><td>1823103330</td><td>2018-12-26</td><td>F1149C290150</td><td>LUM 12V150AH XL18066 FNSD BTY</td><td>10.000</td><td>104050.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000146</td><td>0000886777</td><td>1823103330</td><td>2018-12-26</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>10.000</td><td>88750.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000147</td><td>0000886777</td><td>1823103330</td><td>2018-12-26</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>10.000</td><td>93000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000148</td><td>0000886777</td><td>1823103330</td><td>2018-12-26</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>30.000</td><td>271650.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000149</td><td>0000886777</td><td>1823103330</td><td>2018-12-26</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>10.000</td><td>81600.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000150</td><td>0000886780</td><td>1823103331</td><td>2018-12-26</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>10.000</td><td>90550.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000151</td><td>0000886781</td><td>1823103332</td><td>2018-12-26</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>30.000</td><td>88950.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000152</td><td>0000886783</td><td>1823103333</td><td>2018-12-26</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>15.000</td><td>43875.32</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000153</td><td>0000886783</td><td>1823103333</td><td>2018-12-26</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>10.000</td><td>25400.18</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000154</td><td>0000888331</td><td>1823103378</td><td>2018-12-27</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>5.000</td><td>44374.89</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000155</td><td>0000888331</td><td>1823103378</td><td>2018-12-27</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>5.000</td><td>46499.88</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000156</td><td>0000888331</td><td>1823103378</td><td>2018-12-27</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>5.000</td><td>45274.88</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000157</td><td>0000888331</td><td>1823103378</td><td>2018-12-27</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>3.000</td><td>20954.95</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000158</td><td>0000888358</td><td>1823103379</td><td>2018-12-27</td><td>F03175001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 750</td><td>5.000</td><td>11325.06</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000159</td><td>0000888358</td><td>1823103379</td><td>2018-12-27</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>20.000</td><td>82200.44</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000160</td><td>0000888362</td><td>1823103395</td><td>2018-12-27</td><td>F1105C150160</td><td>ELE 12V160AH LETT 20548 FNSD BTY</td><td>5.000</td><td>45375.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000161</td><td>0000888362</td><td>1823103395</td><td>2018-12-27</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>5.000</td><td>45275.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000162</td><td>0000898344</td><td>1823103575</td><td>2019-01-31</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>10.000</td><td>86950.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000163</td><td>0000898344</td><td>1823103575</td><td>2019-01-31</td><td>F1141BWN0150</td><td> INVERGEL 12V150AH IGSTJ 18000 FNSD BTY</td><td>2.000</td><td>23050.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000164</td><td>0000898344</td><td>1823103575</td><td>2019-01-31</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>5.000</td><td>57150.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000165</td><td>0000898344</td><td>1823103575</td><td>2019-01-31</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>10.000</td><td>93000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000166</td><td>0000898344</td><td>1823103575</td><td>2019-01-31</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>25.000</td><td>341000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000167</td><td>0000898347</td><td>1823103576</td><td>2019-01-31</td><td>F03114652651</td><td>S/Q UPS 1100VA/12V RHINO CHARGE+ 1465</td><td>20.000</td><td>74300.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000168</td><td>0000898348</td><td>1823103577</td><td>2019-01-31</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>10.000</td><td>37000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000169</td><td>0000898348</td><td>1823103577</td><td>2019-01-31</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>20.000</td><td>39900.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000170</td><td>0000898348</td><td>1823103577</td><td>2019-01-31</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>40.000</td><td>164400.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000171</td><td>0000907263</td><td>1823103783</td><td>2019-02-28</td><td>F03111512551</td><td>S/Q UPS 900VA/12V SHAKTI CHARGE+1150</td><td>30.000</td><td>99150.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000172</td><td>0000907263</td><td>1823103783</td><td>2019-02-28</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>20.000</td><td>86200.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000173</td><td>0000909447</td><td>1823103784</td><td>2019-02-28</td><td>T30000001608</td><td>NXG1100-B150HTT1N-P165W1N</td><td>24.000</td><td>486240.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000174</td><td>0000909447</td><td>1823103784</td><td>2019-02-28</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>24.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000175</td><td>0000909447</td><td>1823103784</td><td>2019-02-28</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>24.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000176</td><td>0000909447</td><td>1823103784</td><td>2019-02-28</td><td>F19111016101</td><td>LUM  SOLAR UPS 1100/12V(850VA)</td><td>24.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000177</td><td>0000909451</td><td>1823103785</td><td>2019-02-28</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>10.000</td><td>90550.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000178</td><td>0000909454</td><td>1823103786</td><td>2019-02-28</td><td>F1138CZJ0200</td><td>LUM 12V200AH RC 25000 FNSD BTY V16</td><td>5.000</td><td>48250.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000179</td><td>0000909454</td><td>1823103786</td><td>2019-02-28</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>8.000</td><td>71000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000180</td><td>0000909454</td><td>1823103786</td><td>2019-02-28</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>5.000</td><td>56775.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000181</td><td>0000909454</td><td>1823103786</td><td>2019-02-28</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>7.000</td><td>65100.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000182</td><td>0000909454</td><td>1823103786</td><td>2019-02-28</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>10.000</td><td>90550.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000183</td><td>0000909454</td><td>1823103786</td><td>2019-02-28</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>10.000</td><td>86950.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000184</td><td>0000909459</td><td>1823103788</td><td>2019-02-28</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>5.000</td><td>12700.03</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000185</td><td>0000909459</td><td>1823103788</td><td>2019-02-28</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>15.000</td><td>55500.13</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000186</td><td>0000909459</td><td>1823103788</td><td>2019-02-28</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>5.000</td><td>14625.03</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000187</td><td>0000909459</td><td>1823103788</td><td>2019-02-28</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>30.000</td><td>129300.31</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000188</td><td>0000909463</td><td>1823103789</td><td>2019-02-28</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>5.000</td><td>14825.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000189</td><td>0000909463</td><td>1823103789</td><td>2019-02-28</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>5.000</td><td>16625.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000190</td><td>0000909467</td><td>1823103790</td><td>2019-02-28</td><td>F04222513351</td><td>S/W UPS 2250VA/24V LUMINOUS POWER-X 2250</td><td>3.000</td><td>17610.08</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000191</td><td>0000909467</td><td>1823103790</td><td>2019-02-28</td><td>F03225111251</td><td>S/Q UPS LUM PRO UPS 2250 AL TX. 1 SOCKET</td><td>5.000</td><td>25550.12</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000192</td><td>0000909482</td><td>1823103791</td><td>2019-02-28</td><td>T30000000687</td><td>NXG350-B80H1N-P165W1N</td><td>24.000</td><td>307440.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000193</td><td>0000909482</td><td>1823103791</td><td>2019-02-28</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>24.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000194</td><td>0000909482</td><td>1823103791</td><td>2019-02-28</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>24.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000195</td><td>0000909482</td><td>1823103791</td><td>2019-02-28</td><td>F19135003151</td><td>S/Q WAVE UPS 12V LUMINOUS SOLAR NXG 350</td><td>24.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000196</td><td>0000909522</td><td>1823103792</td><td>2019-02-28</td><td>T30000000449</td><td>SCC1210-B80H1N-P165W1N</td><td>6.000</td><td>67710.50</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000197</td><td>0000909522</td><td>1823103792</td><td>2019-02-28</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>6.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000198</td><td>0000909522</td><td>1823103792</td><td>2019-02-28</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>6.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000199</td><td>0000909522</td><td>1823103792</td><td>2019-02-28</td><td>F19101004001</td><td>SOLAR CHARGE CONTROLLER 1210N</td><td>6.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000200</td><td>0000907257</td><td>1823103815</td><td>2019-02-28</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>30.000</td><td>271650.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000201</td><td>0000907257</td><td>1823103815</td><td>2019-02-28</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>20.000</td><td>177500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000202</td><td>0000907649</td><td>1823103816</td><td>2019-02-28</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>10.000</td><td>88749.91</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000203</td><td>0000907649</td><td>1823103816</td><td>2019-02-28</td><td>F1144L181110</td><td>LUM 12V110AH SC 12054 FNSD BTY</td><td>3.000</td><td>20954.98</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000204</td><td>0000907649</td><td>1823103816</td><td>2019-02-28</td><td>F1102CZK0200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V16</td><td>25.000</td><td>307374.71</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000205</td><td>0000910887</td><td>1823103867</td><td>2019-02-28</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>30.000</td><td>129300.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000206</td><td>0000910887</td><td>1823103867</td><td>2019-02-28</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>20.000</td><td>70700.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000207</td><td>0000910889</td><td>1823103868</td><td>2019-02-28</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>10.000</td><td>90550.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000208</td><td>0000910890</td><td>1823103869</td><td>2019-02-28</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>5.000</td><td>43475.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000209</td><td>0000910890</td><td>1823103869</td><td>2019-02-28</td><td>F1139BZA0150</td><td>LUM 12V150AH EC 18036 FNSD BTY V16</td><td>10.000</td><td>90550.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000210</td><td>0000910890</td><td>1823103869</td><td>2019-02-28</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>10.000</td><td>93000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000211</td><td>0000910890</td><td>1823103869</td><td>2019-02-28</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>5.000</td><td>44375.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000212</td><td>0000910892</td><td>1823103871</td><td>2019-02-28</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>10.000</td><td>33250.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000213</td><td>0000919538</td><td>1823103988</td><td>2019-03-24</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>122.000</td><td>1572579.60</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000214</td><td>0000923489</td><td>1823104093</td><td>2019-03-27</td><td>F1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>40.000</td><td>457200.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000215</td><td>0000923489</td><td>1823104093</td><td>2019-03-27</td><td>F1103BYN0100</td><td>LUM 12V100AH ILST12042 TUB FNSD BTY V16</td><td>10.000</td><td>59550.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000216</td><td>0000923489</td><td>1823104093</td><td>2019-03-27</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>5.000</td><td>31250.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000217</td><td>0000923489</td><td>1823104093</td><td>2019-03-27</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>15.000</td><td>133125.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000218</td><td>0000923490</td><td>1823104094</td><td>2019-03-27</td><td>T30000001600</td><td>NXG1100-B150HTT1N-P165W1N</td><td>6.000</td><td>118560.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000219</td><td>0000923490</td><td>1823104094</td><td>2019-03-27</td><td>T30000000345</td><td>Solar PV Module 165W/12V Poly Crys.</td><td>6.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000220</td><td>0000923490</td><td>1823104094</td><td>2019-03-27</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>6.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000221</td><td>0000923490</td><td>1823104094</td><td>2019-03-27</td><td>F19111013551</td><td>LUMINOUS SOLAR NXG UPS 1100/12V(850VA)R1</td><td>6.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000222</td><td>0000924143</td><td>1823104109</td><td>2019-03-28</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>10.000</td><td>88750.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000223</td><td>0000924143</td><td>1823104109</td><td>2019-03-28</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>5.000</td><td>31250.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000224</td><td>0000924146</td><td>1823104110</td><td>2019-03-28</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>20.000</td><td>74000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000225</td><td>0000924146</td><td>1823104110</td><td>2019-03-28</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>20.000</td><td>58500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000226</td><td>0000924146</td><td>1823104110</td><td>2019-03-28</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>10.000</td><td>35350.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000227</td><td>0000924046</td><td>1823104125</td><td>2019-03-28</td><td>F1113B273040</td><td>LUM 12V40AH LPT1240H FNSD BTY V18 SLR</td><td>15.000</td><td>52425.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000228</td><td>0000924977</td><td>1823104129</td><td>2019-03-28</td><td>F1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>21.000</td><td>240029.60</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000229</td><td>0000924978</td><td>1823104130</td><td>2019-03-28</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>20.000</td><td>177500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000230</td><td>0000925154</td><td>1823104136</td><td>2019-03-29</td><td>F1102CZK0200</td><td>LUM 12V200AH ILTT 25060 FNSD BTY V16</td><td>21.000</td><td>258195.40</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000231</td><td>0060033057</td><td>1823400052</td><td>2018-09-27</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>-10.000</td><td>130900.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000232</td><td>0060034048</td><td>1823400079</td><td>2018-10-29</td><td>F1113B211020</td><td>LUM 12V20AH LPT1220H FNSD BTY V17 SLR</td><td>-5.000</td><td>12625.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000233</td><td>0060034049</td><td>1823400080</td><td>2018-10-29</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>-2.000</td><td>25779.60</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000234</td><td>0060034050</td><td>1823400081</td><td>2018-10-29</td><td>T1103CXUA180</td><td>LUM 12V180AH ILTT24060 FNSD BTY V18</td><td>-1.000</td><td>11429.60</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000235</td><td>0060037428</td><td>1823400159</td><td>2018-12-26</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>-1.000</td><td>12889.80</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000236</td><td>0060037446</td><td>1823400160</td><td>2018-12-26</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>-1.000</td><td>13089.80</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000237</td><td>0060032522</td><td>1823600495</td><td>2018-09-07</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5425.56</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000238</td><td>0060031537</td><td>1823600521</td><td>2018-09-12</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5684.69</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000239</td><td>0060032869</td><td>1823600604</td><td>2018-09-19</td><td>T1103CXUA180</td><td>LUM 12V180AH ILTT24060 FNSD BTY V18</td><td>1.000</td><td>8221.47</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000240</td><td>0060033119</td><td>1823600725</td><td>2018-09-26</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9966.80</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000241</td><td>0060033123</td><td>1823600729</td><td>2018-09-26</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9966.80</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000242</td><td>0060033124</td><td>1823600730</td><td>2018-09-26</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7851.98</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000243</td><td>0060033125</td><td>1823600731</td><td>2018-09-26</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7851.98</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000244</td><td>0060033222</td><td>1823600771</td><td>2018-09-28</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7851.98</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000245</td><td>0060033682</td><td>1823600812</td><td>2018-10-15</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>9064.24</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000246</td><td>0060033687</td><td>1823600817</td><td>2018-10-15</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7601.65</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000247</td><td>0060033696</td><td>1823600826</td><td>2018-10-15</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>9064.24</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000248</td><td>0060033803</td><td>1823600865</td><td>2018-10-25</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7601.65</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000249</td><td>0060033804</td><td>1823600866</td><td>2018-10-25</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7601.65</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000250</td><td>0060033805</td><td>1823600867</td><td>2018-10-25</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7601.65</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000251</td><td>0060033806</td><td>1823600868</td><td>2018-10-25</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>10145.74</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000252</td><td>0060033807</td><td>1823600869</td><td>2018-10-25</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>9064.24</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000253</td><td>0060033808</td><td>1823600870</td><td>2018-10-25</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>10145.74</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000254</td><td>0060033809</td><td>1823600871</td><td>2018-10-25</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>8172.77</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000255</td><td>0060034019</td><td>1823600889</td><td>2018-10-26</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>9064.24</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000256</td><td>0060035831</td><td>1823601027</td><td>2018-12-05</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9862.41</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000257</td><td>0060035833</td><td>1823601029</td><td>2018-12-05</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9862.41</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000258</td><td>0060035834</td><td>1823601030</td><td>2018-12-05</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5423.71</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000259</td><td>0060035874</td><td>1823601049</td><td>2018-12-06</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7601.66</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000260</td><td>0060036060</td><td>1823601077</td><td>2018-12-06</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7601.65</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000261</td><td>0060036105</td><td>1823601092</td><td>2018-12-07</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5423.71</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000262</td><td>0060036132</td><td>1823601116</td><td>2018-12-10</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7463.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000263</td><td>0060036406</td><td>1823601128</td><td>2018-12-10</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9405.41</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000264</td><td>0060036410</td><td>1823601131</td><td>2018-12-10</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7463.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000265</td><td>0060036411</td><td>1823601132</td><td>2018-12-11</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7463.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000266</td><td>0060036412</td><td>1823601133</td><td>2018-12-11</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9405.41</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000267</td><td>0060036413</td><td>1823601134</td><td>2018-12-11</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7463.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000268</td><td>0060036976</td><td>1823601249</td><td>2018-12-19</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>4577.11</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000269</td><td>0060037087</td><td>1823601262</td><td>2018-12-19</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7463.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000270</td><td>0060037571</td><td>1823601281</td><td>2018-12-27</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5423.71</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000271</td><td>0060037572</td><td>1823601282</td><td>2018-12-27</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>4577.11</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000272</td><td>0060038366</td><td>1823601320</td><td>2019-01-07</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5671.95</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000273</td><td>0060038992</td><td>1823601340</td><td>2019-01-10</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9048.16</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000274</td><td>0060039010</td><td>1823601357</td><td>2019-01-10</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9048.16</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000275</td><td>0060039186</td><td>1823601416</td><td>2019-01-11</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9048.16</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000276</td><td>0060039194</td><td>1823601422</td><td>2019-01-11</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7692.40</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000277</td><td>0060039200</td><td>1823601425</td><td>2019-01-11</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5881.06</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000278</td><td>0060039524</td><td>1823601470</td><td>2019-01-14</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>9048.16</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000279</td><td>0060039530</td><td>1823601476</td><td>2019-01-14</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6435.17</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000280</td><td>0060039533</td><td>1823601479</td><td>2019-01-14</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7375.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000281</td><td>0060039694</td><td>1823601494</td><td>2019-01-15</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5413.47</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000282</td><td>0060040429</td><td>1823601544</td><td>2019-01-23</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>1.000</td><td>3882.81</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000283</td><td>0060040558</td><td>1823601555</td><td>2019-01-23</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7375.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000284</td><td>0060040559</td><td>1823601556</td><td>2019-01-23</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>1.000</td><td>8234.71</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000285</td><td>0060041631</td><td>1823601614</td><td>2019-02-04</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>7375.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000286</td><td>0060041678</td><td>1823601647</td><td>2019-02-12</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7538.12</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000287</td><td>0060041836</td><td>1823601682</td><td>2019-02-13</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7495.88</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000288</td><td>0060041837</td><td>1823601683</td><td>2019-02-13</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7495.88</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000289</td><td>0060041295</td><td>1823601722</td><td>2019-02-15</td><td>F1113C216120</td><td>LUM 12V120AH LPTT12120H FNSD BTY V17 SLR</td><td>1.000</td><td>5137.75</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000290</td><td>0060043065</td><td>1823601792</td><td>2019-02-20</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6435.17</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000291</td><td>0060043071</td><td>1823601795</td><td>2019-02-21</td><td>F1102CZL0160</td><td>LUM 12V160AH ILTT 20048 FNSD BTY V16</td><td>1.000</td><td>5413.47</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000292</td><td>0060043091</td><td>1823601811</td><td>2019-02-21</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7538.12</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000293</td><td>0060043477</td><td>1823601842</td><td>2019-02-22</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8941.25</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000294</td><td>0060044639</td><td>1823601900</td><td>2019-02-25</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5507.52</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000295</td><td>0060045418</td><td>1823601920</td><td>2019-03-05</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5760.54</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000296</td><td>0060045415</td><td>1823601969</td><td>2019-03-09</td><td>F1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>5988.86</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000297</td><td>0060045558</td><td>1823601993</td><td>2019-03-09</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5760.54</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000298</td><td>0060045753</td><td>1823602030</td><td>2019-03-11</td><td>F1103CXV0220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY</td><td>1.000</td><td>7367.87</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000299</td><td>0060046914</td><td>1823602089</td><td>2019-03-18</td><td>F1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>1.000</td><td>5988.86</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000300</td><td>0000944057</td><td>1923100311</td><td>2019-04-29</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>20.000</td><td>177500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000301</td><td>0000944057</td><td>1923100311</td><td>2019-04-29</td><td>F1302MIX0150</td><td>12V150AH POWER CHARGE PC18042 FNSD BTY</td><td>10.000</td><td>81600.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000302</td><td>0000944059</td><td>1923100332</td><td>2019-04-30</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>30.000</td><td>386700.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000303</td><td>0000945430</td><td>1923100361</td><td>2019-04-30</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>40.000</td><td>515600.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000304</td><td>0000954860</td><td>1923100452</td><td>2019-05-13</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>50.000</td><td>644500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000305</td><td>0000954865</td><td>1923100454</td><td>2019-05-13</td><td>F03185001951</td><td>S/Q  UPS 12V LUM BIS ECO WATT + 850</td><td>10.000</td><td>25400.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000306</td><td>0000954867</td><td>1923100455</td><td>2019-05-13</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>40.000</td><td>133000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000307</td><td>0000954862</td><td>1923100466</td><td>2019-05-13</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>10.000</td><td>62500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000308</td><td>0000954862</td><td>1923100466</td><td>2019-05-13</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>2.000</td><td>16000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000309</td><td>0000956120</td><td>1923100479</td><td>2019-05-15</td><td>F1103BYI0120</td><td>LUM 12V120AH RC15000 TUB FNSD BTY V16</td><td>15.000</td><td>93750.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000310</td><td>0000956120</td><td>1923100479</td><td>2019-05-15</td><td>F1135C296150</td><td>12V150AH PC18042 FNSD BTY V18</td><td>20.000</td><td>163200.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000311</td><td>0000956121</td><td>1923100480</td><td>2019-05-15</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>30.000</td><td>111000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000312</td><td>0000956121</td><td>1923100480</td><td>2019-05-15</td><td>F03112512751</td><td>S/Q UPS ECO WATT+ 1250 RAPID 12V</td><td>30.000</td><td>106050.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000313</td><td>0000957306</td><td>1923100511</td><td>2019-05-17</td><td>F03114652651</td><td>S/Q UPS 1100VA/12V RHINO CHARGE+ 1465</td><td>60.000</td><td>222900.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000314</td><td>0000958632</td><td>1923100564</td><td>2019-05-20</td><td>T30000000865</td><td>PCU2k-B150HTT4N-P325W6N</td><td>1.000</td><td>120240.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000315</td><td>0000958632</td><td>1923100564</td><td>2019-05-20</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>6.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000316</td><td>0000958632</td><td>1923100564</td><td>2019-05-20</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>4.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000317</td><td>0000958632</td><td>1923100564</td><td>2019-05-20</td><td>F19320013451</td><td>LUMINOUS SOLAR PCU NXT 2KW 48V W/O iOT</td><td>1.000</td><td>0.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000318</td><td>0000958633</td><td>1923100565</td><td>2019-05-20</td><td>T30000000335</td><td>Solar PVMod-325W/24V 72 Cell PyCrys RFID</td><td>15.000</td><td>122970.50</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000319</td><td>0000958634</td><td>1923100566</td><td>2019-05-20</td><td>F03165001951</td><td>S/Q UPS 12V LUM BIS ECO WATT + 650</td><td>40.000</td><td>79800.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000320</td><td>0000958876</td><td>1923100567</td><td>2019-05-20</td><td>F1113B426040</td><td>LUM 12V40AH LPT1240L FNSD BTY V19 SLR</td><td>20.000</td><td>64000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000321</td><td>0000958877</td><td>1923100568</td><td>2019-05-20</td><td>F04220012851</td><td>S/W UPS 2KVA/24V LUMINOUS CRUZE+ REV.02</td><td>2.000</td><td>15719.88</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000322</td><td>0000958877</td><td>1923100568</td><td>2019-05-20</td><td>F04335012851</td><td>S/W UPS 3500/48V LUMINOUS CRUZE+ REV02</td><td>1.000</td><td>10919.92</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>HKVA</td>
+	</tr><tr>
+		<td>00000323</td><td>0000959550</td><td>1923100588</td><td>2019-05-21</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>17.000</td><td>150874.92</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000324</td><td>0000959550</td><td>1923100588</td><td>2019-05-21</td><td>F1138CZI0150</td><td>LUM 12V150AH RC 18000 FNSD BTY V16</td><td>20.000</td><td>159999.91</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000325</td><td>0000959550</td><td>1923100588</td><td>2019-05-21</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>7.000</td><td>60864.97</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000326</td><td>0000961695</td><td>1923100663</td><td>2019-05-24</td><td>T1103CXUA180</td><td>LUM 12V180AH ILTT24060 FNSD BTY V18</td><td>40.000</td><td>445200.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000327</td><td>0000961695</td><td>1923100663</td><td>2019-05-24</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>100.000</td><td>1289000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000328</td><td>0000961696</td><td>1923100664</td><td>2019-05-24</td><td>T1105C418200</td><td>ELE 12V200AH LETT 25560 FNSD BTY V19</td><td>25.000</td><td>299875.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000329</td><td>0000961698</td><td>1923100665</td><td>2019-05-24</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>40.000</td><td>117000.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000330</td><td>0000965130</td><td>1923100765</td><td>2019-05-28</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>5.000</td><td>45275.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000331</td><td>0000965131</td><td>1923100766</td><td>2019-05-28</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>70.000</td><td>902300.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000332</td><td>0000965131</td><td>1923100766</td><td>2019-05-28</td><td>T1103CXU0180</td><td>LUM 12V 180AH ILTT24060 FNSD BTY</td><td>20.000</td><td>222600.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000333</td><td>0000965131</td><td>1923100767</td><td>2019-05-28</td><td>F1144L182150</td><td>LUM 12V150AH SC 18054 FNSD BTY</td><td>10.000</td><td>88750.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000334</td><td>0000965140</td><td>1923100769</td><td>2019-05-28</td><td>F03114652651</td><td>S/Q UPS 1100VA/12V RHINO CHARGE+ 1465</td><td>20.000</td><td>74300.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000335</td><td>0000965140</td><td>1923100769</td><td>2019-05-28</td><td>F03111652651</td><td>S/Q UPS 900VA/12V RHINO CHARGE+ 1165</td><td>20.000</td><td>66500.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000336</td><td>0000965140</td><td>1923100769</td><td>2019-05-28</td><td>F03110652351</td><td>S/Q UPS 12V LUM BIS ELECTRA + 1065</td><td>20.000</td><td>59300.00</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000337</td><td>0000965143</td><td>1923100770</td><td>2019-05-28</td><td>F03110511951</td><td>S/Q UPS 12V LUM BIS ECO WATT +1050</td><td>10.000</td><td>29250.09</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000338</td><td>0000965143</td><td>1923100770</td><td>2019-05-28</td><td>F03114512551</td><td>S/Q UPS 1100VA/12V SHAKTI CHARGE+1450</td><td>10.000</td><td>37000.11</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000339</td><td>0000965143</td><td>1923100770</td><td>2019-05-28</td><td>F04110013051</td><td>S/W UPS 900VA LUMINOUS ZELIO+ 1100/12V</td><td>5.000</td><td>18975.06</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000340</td><td>0000965143</td><td>1923100770</td><td>2019-05-28</td><td>F03116512751</td><td>S/Q UPS ECO WATT+ 1650 RAPID 12V</td><td>20.000</td><td>86200.24</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>LB UPS</td>
+	</tr><tr>
+		<td>00000341</td><td>0000965145</td><td>1923100771</td><td>2019-05-28</td><td>T30000000344</td><td>Solar PV Module 105W/12V Poly Crys.</td><td>5.000</td><td>16957.12</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>&nbsp;</td>
+	</tr><tr>
+		<td>00000342</td><td>0060048967</td><td>1923600031</td><td>2019-04-11</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6250.23</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000343</td><td>0060048970</td><td>1923600034</td><td>2019-04-11</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4177.28</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000344</td><td>0060048971</td><td>1923600035</td><td>2019-04-11</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4177.28</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000345</td><td>0060048972</td><td>1923600036</td><td>2019-04-11</td><td>F1113B275080</td><td>LUM 12V80AH LPT1280H FNSD BTY V18 SLR</td><td>1.000</td><td>4177.28</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000346</td><td>0060043470</td><td>1923600095</td><td>2019-04-15</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8836.89</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000347</td><td>0060045788</td><td>1923600109</td><td>2019-04-16</td><td>F1145C180150</td><td>LUM 12V150AH LM18075 FNSD BTY</td><td>1.000</td><td>6250.23</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000348</td><td>0060046928</td><td>1923600113</td><td>2019-04-16</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8836.89</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000349</td><td>0060050025</td><td>1923600202</td><td>2019-04-18</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8836.94</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000350</td><td>0060049118</td><td>1923600215</td><td>2019-04-23</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>1.000</td><td>8147.91</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000351</td><td>0060049119</td><td>1923600216</td><td>2019-04-23</td><td>F1149C291220</td><td>LUM 12V220AH XL26060 FNSD BTY</td><td>1.000</td><td>8147.91</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000352</td><td>0060051587</td><td>1923600221</td><td>2019-04-27</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8836.94</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000353</td><td>0060051616</td><td>1923600246</td><td>2019-04-27</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8836.94</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000354</td><td>0060051617</td><td>1923600247</td><td>2019-04-27</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8836.94</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000355</td><td>0060051647</td><td>1923600273</td><td>2019-04-27</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7104.88</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000356</td><td>0060051652</td><td>1923600276</td><td>2019-04-27</td><td>T1105C151180</td><td>ELE 12V 180AH LETT 24560 FNSD BTY</td><td>1.000</td><td>7104.88</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000357</td><td>0060051686</td><td>1923600336</td><td>2019-04-29</td><td>F1105CZN0150</td><td>ELE 12V150AH LE 19036TT FNSD BTY V16</td><td>1.000</td><td>5507.52</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000358</td><td>0060051710</td><td>1923600344</td><td>2019-04-29</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8837.58</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000359</td><td>0060051712</td><td>1923600345</td><td>2019-04-29</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8837.58</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000360</td><td>0060051716</td><td>1923600348</td><td>2019-04-29</td><td>F1102CZM0150</td><td>LUM 12V150AH ILTT 18048N FNSD BTY V16</td><td>1.000</td><td>5832.41</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000361</td><td>0060049094</td><td>1923600382</td><td>2019-05-01</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8837.58</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000362</td><td>0060049880</td><td>1923600385</td><td>2019-05-01</td><td>T1105C152220</td><td>ELE 12V 220AH LETT 26560 FNSD BTY</td><td>1.000</td><td>8837.58</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000363</td><td>0060054567</td><td>1923600577</td><td>2019-05-21</td><td>F1103CXS0150</td><td>LUM 12V 150AH ILTT18000N FNSD BTY</td><td>1.000</td><td>5558.49</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000364</td><td>0060054568</td><td>1923600578</td><td>2019-05-21</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8974.76</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000365</td><td>0060054569</td><td>1923600579</td><td>2019-05-21</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8974.76</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000366</td><td>0060054570</td><td>1923600580</td><td>2019-05-21</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7446.74</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000367</td><td>0060054571</td><td>1923600581</td><td>2019-05-21</td><td>T1103CXVA220</td><td>LUM 12V 220AH ILTT26060 FNSD BTY V18</td><td>1.000</td><td>8974.76</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr><tr>
+		<td>00000368</td><td>0060055048</td><td>1923600635</td><td>2019-05-23</td><td>T1113B191150</td><td>LUM 12V150AH LPTT12150H FNSD BTY V17 SLR</td><td>1.000</td><td>7456.06</td><td>0001105424</td><td>SWARNIM GROUPS</td><td>34</td><td>Jharkhand</td><td>1230</td><td>Ranchi Branch</td><td>Battery</td>
+	</tr>
+</table>

@@ -1,0 +1,2846 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Luminous2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="allpage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pagename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pageurl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createdtime" Type="DateTime" Precision="3" />
+    <Property Name="createdby" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="updatedtime" Type="DateTime" Precision="3" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="parentid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="allpagehistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pagename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pageurl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createdtime" Type="DateTime" Precision="3" />
+    <Property Name="createdby" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="updatedtime" Type="DateTime" Precision="3" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deletedtime" Type="DateTime" Precision="3" />
+    <Property Name="deletedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="allprofile">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="profilename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createdtime" Type="DateTime" Precision="3" />
+    <Property Name="createdby" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="updatedtime" Type="DateTime" Precision="3" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="allprofile_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="profilename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createdtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="updatedtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deletedtime" Type="DateTime" Precision="3" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deletedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="allstate">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="statename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createdtime" Type="DateTime" Precision="3" />
+    <Property Name="createdby" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="updatedtime" Type="DateTime" Precision="3" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="cities" Relationship="Self.FK_city_allstate" FromRole="allstate" ToRole="city" />
+  </EntityType>
+  <EntityType Name="allstate_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="statename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createdtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="updatedtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deletedtime" Type="DateTime" Precision="3" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deletedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header_Details" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sub_Header_Details" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Banner_Details" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BannerFileName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BannerSize" Type="Int32" />
+    <Property Name="BannerImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="stardate" Type="DateTime" Precision="3" />
+    <Property Name="ExpriyDate" Type="DateTime" Precision="3" />
+    <Property Name="BStatus" Type="Int32" />
+    <Property Name="Create_Date" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BannerHistories" Relationship="Self.FK__BannerHis__Banne__0D7A0286" FromRole="Banner" ToRole="BannerHistory" />
+  </EntityType>
+  <EntityType Name="BannerHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BannerId" Type="Int32" />
+    <Property Name="Header_Details" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sub_Header_Details" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Banner_Details" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BannerFileName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BannerSize" Type="Int32" />
+    <Property Name="BannerImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="stardate" Type="DateTime" Precision="3" />
+    <Property Name="ExpriyDate" Type="DateTime" Precision="3" />
+    <Property Name="BStatus" Type="Int32" />
+    <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+    <Property Name="Modified_By" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Banner" Relationship="Self.FK__BannerHis__Banne__0D7A0286" FromRole="BannerHistory" ToRole="Banner" />
+  </EntityType>
+  <EntityType Name="city">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stateid" Type="Int32" />
+    <Property Name="cityname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createdtime" Type="DateTime" Precision="3" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="updatedtime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="allstate" Relationship="Self.FK_city_allstate" FromRole="city" ToRole="allstate" />
+  </EntityType>
+  <EntityType Name="city_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stateid" Type="Int32" />
+    <Property Name="cityname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createdtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="updatedtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deletedtime" Type="DateTime" Precision="3" />
+    <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deletedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="contactUsDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Contact_Us_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Cstatus" Type="Int32" />
+    <Property Name="Created_date" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="contactUsDetail_History" Relationship="Self.FK__contactUs__ContI__0C85DE4D" FromRole="contactUsDetail" ToRole="contactUsDetail_History" />
+  </EntityType>
+  <EntityType Name="contactUsDetail_History">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContId" Type="Int32" />
+    <Property Name="Contact_Us_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Cstatus" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="contactUsDetail" Relationship="Self.FK__contactUs__ContI__0C85DE4D" FromRole="contactUsDetail_History" ToRole="contactUsDetail" />
+  </EntityType>
+  <EntityType Name="CustomerModule">
+    <Key>
+      <PropertyRef Name="ModId" />
+    </Key>
+    <Property Name="ModId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerPermissions" Relationship="Self.FK__CustomerP__Modul__2610A626" FromRole="CustomerModule" ToRole="CustomerPermissions" />
+  </EntityType>
+  <EntityType Name="CustomerPermission">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UType" Type="Int32" />
+    <Property Name="ModuleId" Type="Int32" />
+    <Property Name="Permission" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerModule" Relationship="Self.FK__CustomerP__Modul__2610A626" FromRole="CustomerPermissions" ToRole="CustomerModule" />
+    <NavigationProperty Name="CustomerType" Relationship="Self.FK__CustomerP__UType__251C81ED" FromRole="CustomerPermissions" ToRole="CustomerType" />
+  </EntityType>
+  <EntityType Name="CustomerType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerPermissions" Relationship="Self.FK__CustomerP__UType__251C81ED" FromRole="CustomerType" ToRole="CustomerPermissions" />
+  </EntityType>
+  <EntityType Name="Dealer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DestributorId" Type="Int32" />
+    <Property Name="RegionId" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="createtime" Type="DateTime" Precision="3" />
+    <Property Name="createdBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Updatetime" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <NavigationProperty Name="Destributor" Relationship="Self.FK__Dealers__Destrib__1332DBDC" FromRole="Dealers" ToRole="Destributors" />
+    <NavigationProperty Name="Region" Relationship="Self.FK__Dealers__RegionI__14270015" FromRole="Dealers" ToRole="Regions" />
+    <NavigationProperty Name="DealersHistories" Relationship="Self.FK__DealersHi__Deale__208CD6FA" FromRole="Dealers" ToRole="DealersHistory" />
+    <NavigationProperty Name="NotificationAccessTables" Relationship="Self.FK__Notificat__Deale__662B2B3B" FromRole="Dealers" ToRole="NotificationAccessTable" />
+    <NavigationProperty Name="NotificationAccessTables1" Relationship="Self.FK__Notificat__Deale__671F4F74" FromRole="Dealers" ToRole="NotificationAccessTable" />
+    <NavigationProperty Name="NotificationAccessTables2" Relationship="Self.FK__Notificat__Deale__681373AD" FromRole="Dealers" ToRole="NotificationAccessTable" />
+    <NavigationProperty Name="ProductAccessTables" Relationship="Self.FK__ProductAc__Deale__236943A5" FromRole="Dealers" ToRole="ProductAccessTable" />
+    <NavigationProperty Name="ProductAccessTables1" Relationship="Self.FK__ProductAc__Deale__245D67DE" FromRole="Dealers" ToRole="ProductAccessTable" />
+    <NavigationProperty Name="ProductAccessTables2" Relationship="Self.FK__ProductAc__Deale__25518C17" FromRole="Dealers" ToRole="ProductAccessTable" />
+    <NavigationProperty Name="ProductAccessTableForProducts" Relationship="Self.FK__ProductAc__Deale__3864608B" FromRole="Dealers" ToRole="ProductAccessTableForProduct" />
+    <NavigationProperty Name="UsersLists" Relationship="Self.FK__UsersList__Deale__1DB06A4F" FromRole="Dealers" ToRole="UsersList" />
+  </EntityType>
+  <EntityType Name="DealersHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Dealerid" Type="Int32" />
+    <Property Name="DestributorId" Type="Int32" />
+    <Property Name="RegionId" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="createtime" Type="DateTime" Precision="3" />
+    <Property Name="createdBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Updatetime" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <NavigationProperty Name="Dealer" Relationship="Self.FK__DealersHi__Deale__208CD6FA" FromRole="DealersHistory" ToRole="Dealers" />
+    <NavigationProperty Name="Destributor" Relationship="Self.FK__DealersHi__Destr__2180FB33" FromRole="DealersHistory" ToRole="Destributors" />
+    <NavigationProperty Name="Region" Relationship="Self.FK__DealersHi__Regio__22751F6C" FromRole="DealersHistory" ToRole="Regions" />
+  </EntityType>
+  <EntityType Name="Destributor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionId" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Createtime" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Updatetime" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <NavigationProperty Name="Dealers" Relationship="Self.FK__Dealers__Destrib__1332DBDC" FromRole="Destributors" ToRole="Dealers" />
+    <NavigationProperty Name="DealersHistories" Relationship="Self.FK__DealersHi__Destr__2180FB33" FromRole="Destributors" ToRole="DealersHistory" />
+    <NavigationProperty Name="DestributorsHistories" Relationship="Self.FK__Destribut__Destr__114A936A" FromRole="Destributors" ToRole="DestributorsHistory" />
+    <NavigationProperty Name="Region" Relationship="Self.FK__Destribut__Regio__0A9D95DB" FromRole="Destributors" ToRole="Regions" />
+    <NavigationProperty Name="NotificationAccessTables" Relationship="Self.FK__Notificat__Destr__690797E6" FromRole="Destributors" ToRole="NotificationAccessTable" />
+    <NavigationProperty Name="NotificationAccessTables1" Relationship="Self.FK__Notificat__Destr__69FBBC1F" FromRole="Destributors" ToRole="NotificationAccessTable" />
+    <NavigationProperty Name="NotificationAccessTables2" Relationship="Self.FK__Notificat__Destr__6AEFE058" FromRole="Destributors" ToRole="NotificationAccessTable" />
+    <NavigationProperty Name="ProductAccessTables" Relationship="Self.FK__ProductAc__Destr__2645B050" FromRole="Destributors" ToRole="ProductAccessTable" />
+    <NavigationProperty Name="ProductAccessTables1" Relationship="Self.FK__ProductAc__Destr__2739D489" FromRole="Destributors" ToRole="ProductAccessTable" />
+    <NavigationProperty Name="ProductAccessTables2" Relationship="Self.FK__ProductAc__Destr__282DF8C2" FromRole="Destributors" ToRole="ProductAccessTable" />
+    <NavigationProperty Name="ProductAccessTableForProducts" Relationship="Self.FK__ProductAc__Destr__395884C4" FromRole="Destributors" ToRole="ProductAccessTableForProduct" />
+    <NavigationProperty Name="UsersLists" Relationship="Self.FK__UsersList__Destr__1EA48E88" FromRole="Destributors" ToRole="UsersList" />
+  </EntityType>
+  <EntityType Name="DestributorsHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DestributorId" Type="Int32" />
+    <Property Name="RegionId" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Updatetime" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <NavigationProperty Name="Destributor" Relationship="Self.FK__Destribut__Destr__114A936A" FromRole="DestributorsHistory" ToRole="Destributors" />
+    <NavigationProperty Name="Region" Relationship="Self.FK__Destribut__Regio__123EB7A3" FromRole="DestributorsHistory" ToRole="Regions" />
+  </EntityType>
+  <EntityType Name="FooterCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FCategoryName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="CatType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="FooterCategoryHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FootercateId" Type="Int32" />
+    <Property Name="FCategoryName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="CatType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="functionalgroup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Femail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FdepartmentName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FDeparmentPersonName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="createdTime" Type="DateTime" Precision="3" />
+    <Property Name="createdBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModofiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FUNCTION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fEMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fDepartmentName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentPersoneName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CareatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FUNCTIONSHistories" Relationship="Self.FK__FUNCTIONS__funct__0B91BA14" FromRole="FUNCTIONS" ToRole="FUNCTIONSHistory" />
+    <NavigationProperty Name="Suggestions" Relationship="Self.FK__Suggestio__Funct__793DFFAF" FromRole="FUNCTIONS" ToRole="Suggestion" />
+  </EntityType>
+  <EntityType Name="FUNCTIONSHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="functionId" Type="Int32" />
+    <Property Name="fNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fEMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fDepartmentName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentPersoneName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FUNCTION" Relationship="Self.FK__FUNCTIONS__funct__0B91BA14" FromRole="FUNCTIONSHistory" ToRole="FUNCTIONS" />
+  </EntityType>
+  <EntityType Name="InsertContext">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImageEncode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DealerName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="DealerCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DealerPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DealerEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DistributorCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EmpCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DealerId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="Rating" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RatingBy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RatingOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="InsertContextHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InserContextId" Type="Int32" />
+    <Property Name="ImageEncode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DealerName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="DealerCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DealerPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DealerEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DistributorCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Empcode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DealerID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createdOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="Rating" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RatingBy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RatingOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="luminious_Update">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Textbody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImageFileName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Expirydate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="luminious_UpdateHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Lum_UpdateID" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Textbody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImageFileName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Expirydate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MediaData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VideoName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="VideoImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LabelId" Type="Int32" />
+    <NavigationProperty Name="MediaDataHistories" Relationship="Self.Fk_MediaData" FromRole="MediaData" ToRole="MediaDataHistory" />
+  </EntityType>
+  <EntityType Name="MediaDataHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MediaDataId" Type="Int32" />
+    <Property Name="VideoName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="VideoImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LabelId" Type="Int32" />
+    <NavigationProperty Name="MediaData" Relationship="Self.Fk_MediaData" FromRole="MediaDataHistory" ToRole="MediaData" />
+  </EntityType>
+  <EntityType Name="MPartnerServiceLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Req_Parameter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Res_parameter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Error" Type="Int32" />
+    <Property Name="ErrorDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeviceId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AppVersion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OSType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OSVersion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NotificationAccessTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegId" Type="Int32" />
+    <Property Name="DestributorID" Type="Int32" />
+    <Property Name="DealerId" Type="Int32" />
+    <Property Name="AllAcess" Type="Boolean" />
+    <Property Name="createdate" Type="DateTime" Precision="3" />
+    <Property Name="createby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="modifieddate" Type="DateTime" Precision="3" />
+    <Property Name="modifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="notificationid" Type="Int32" />
+    <Property Name="deleted" Type="Boolean" />
+    <Property Name="AllDestriAccess" Type="Boolean" />
+    <Property Name="AllDealerAccess" Type="Boolean" />
+    <NavigationProperty Name="Dealer" Relationship="Self.FK__Notificat__Deale__662B2B3B" FromRole="NotificationAccessTable" ToRole="Dealers" />
+    <NavigationProperty Name="Dealer1" Relationship="Self.FK__Notificat__Deale__671F4F74" FromRole="NotificationAccessTable" ToRole="Dealers" />
+    <NavigationProperty Name="Dealer2" Relationship="Self.FK__Notificat__Deale__681373AD" FromRole="NotificationAccessTable" ToRole="Dealers" />
+    <NavigationProperty Name="Destributor" Relationship="Self.FK__Notificat__Destr__690797E6" FromRole="NotificationAccessTable" ToRole="Destributors" />
+    <NavigationProperty Name="Destributor1" Relationship="Self.FK__Notificat__Destr__69FBBC1F" FromRole="NotificationAccessTable" ToRole="Destributors" />
+    <NavigationProperty Name="Destributor2" Relationship="Self.FK__Notificat__Destr__6AEFE058" FromRole="NotificationAccessTable" ToRole="Destributors" />
+    <NavigationProperty Name="Notification" Relationship="Self.FK__Notificat__notif__6BE40491" FromRole="NotificationAccessTable" ToRole="Notifications" />
+    <NavigationProperty Name="Region" Relationship="Self.FK__Notificat__RegId__6CD828CA" FromRole="NotificationAccessTable" ToRole="Regions" />
+    <NavigationProperty Name="Region1" Relationship="Self.FK__Notificat__RegId__6DCC4D03" FromRole="NotificationAccessTable" ToRole="Regions" />
+    <NavigationProperty Name="Region2" Relationship="Self.FK__Notificat__RegId__6EC0713C" FromRole="NotificationAccessTable" ToRole="Regions" />
+  </EntityType>
+  <EntityType Name="NotificationReadStatu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NotificationId" Type="Int32" />
+    <Property Name="IsRead" Type="Boolean" />
+    <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Notification" Relationship="Self.FK__Notificat__Notif__03BB8E22" FromRole="NotificationReadStatus" ToRole="Notifications" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="C_text" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="C_status" Type="Int32" />
+    <Property Name="createdBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="NotificationAccessTables" Relationship="Self.FK__Notificat__notif__6BE40491" FromRole="Notifications" ToRole="NotificationAccessTable" />
+    <NavigationProperty Name="NotificationReadStatus" Relationship="Self.FK__Notificat__Notif__03BB8E22" FromRole="Notifications" ToRole="NotificationReadStatus" />
+    <NavigationProperty Name="NotificationsHistories" Relationship="Self.FK__Notificat__Notif__73852659" FromRole="Notifications" ToRole="NotificationsHistory" />
+  </EntityType>
+  <EntityType Name="NotificationsHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NotificationId" Type="Int32" />
+    <Property Name="C_Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="C_text" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="C_status" Type="Int32" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Notification" Relationship="Self.FK__Notificat__Notif__73852659" FromRole="NotificationsHistory" ToRole="Notifications" />
+  </EntityType>
+  <EntityType Name="NotificationSurvey">
+    <Key>
+      <PropertyRef Name="SurveyID" />
+    </Key>
+    <Property Name="SurveyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Survey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CorrectAns" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SaveNotificationSurveys" Relationship="Self.FK_SaveSurveyid" FromRole="NotificationSurvey" ToRole="SaveNotificationSurvey" />
+    <NavigationProperty Name="NotificationSurveyHistories" Relationship="Self.FK_Surveyid" FromRole="NotificationSurvey" ToRole="NotificationSurveyHistory" />
+  </EntityType>
+  <EntityType Name="NotificationSurveyHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SurveyID" Type="Int32" />
+    <Property Name="Survey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CorrectAns" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="deviceIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="NotificationSurvey" Relationship="Self.FK_Surveyid" FromRole="NotificationSurveyHistory" ToRole="NotificationSurvey" />
+  </EntityType>
+  <EntityType Name="pageallow">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="profileid" Type="Int32" />
+    <Property Name="pageid" Type="Int32" />
+    <Property Name="createrole" Type="Int32" />
+    <Property Name="editrole" Type="Int32" />
+    <Property Name="deleterole" Type="Int32" />
+    <Property Name="uview" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PermotionsList">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermotionTypeId" Type="Int32" />
+    <Property Name="ProductCatId" Type="Int32" />
+    <Property Name="ProductLvlOneId" Type="Int32" />
+    <Property Name="Descriptions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="createdate" Type="DateTime" Precision="3" />
+    <Property Name="createby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="modifieddate" Type="DateTime" Precision="3" />
+    <Property Name="Modifiedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PDFName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PermotionType" Relationship="Self.FK__Permotion__Permo__0E6E26BF" FromRole="PermotionsList" ToRole="PermotionType" />
+    <NavigationProperty Name="ProductCatergory" Relationship="Self.FK__Permotion__Produ__0F624AF8" FromRole="PermotionsList" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelOne" Relationship="Self.FK__Permotion__Produ__10566F31" FromRole="PermotionsList" ToRole="ProductLevelOne" />
+    <NavigationProperty Name="PermotionsListHistories" Relationship="Self.FK__Permotion__promo__41EDCAC5" FromRole="PermotionsList" ToRole="PermotionsListHistory" />
+    <NavigationProperty Name="ProductAccessTables" Relationship="Self.FK__ProductAc__promo__29221CFB" FromRole="PermotionsList" ToRole="ProductAccessTable" />
+  </EntityType>
+  <EntityType Name="PermotionsListHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="promotionListId" Type="Int32" />
+    <Property Name="PermotionTypeId" Type="Int32" />
+    <Property Name="ProductCatId" Type="Int32" />
+    <Property Name="ProductLvlOneId" Type="Int32" />
+    <Property Name="Descriptions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="modifieddate" Type="DateTime" Precision="3" />
+    <Property Name="Modifiedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PDFName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PermotionsList" Relationship="Self.FK__Permotion__promo__41EDCAC5" FromRole="PermotionsListHistory" ToRole="PermotionsList" />
+  </EntityType>
+  <EntityType Name="PermotionType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PType" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PermotionsLists" Relationship="Self.FK__Permotion__Permo__0E6E26BF" FromRole="PermotionType" ToRole="PermotionsList" />
+    <NavigationProperty Name="PermotionTypeHistories" Relationship="Self.FK__Permotion__PerTy__09A971A2" FromRole="PermotionType" ToRole="PermotionTypeHistory" />
+    <NavigationProperty Name="ProductPermotions" Relationship="Self.FK__ProductPe__PType__19DFD96B" FromRole="PermotionType" ToRole="ProductPermotion" />
+  </EntityType>
+  <EntityType Name="PermotionTypeHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PerTypeId" Type="Int32" />
+    <Property Name="PType" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PermotionType" Relationship="Self.FK__Permotion__PerTy__09A971A2" FromRole="PermotionTypeHistory" ToRole="PermotionType" />
+  </EntityType>
+  <EntityType Name="ProductAccessTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegId" Type="Int32" />
+    <Property Name="DestributorID" Type="Int32" />
+    <Property Name="DealerId" Type="Int32" />
+    <Property Name="AllAcess" Type="Boolean" />
+    <Property Name="createdate" Type="DateTime" Precision="3" />
+    <Property Name="createby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="modifieddate" Type="DateTime" Precision="3" />
+    <Property Name="modifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="promotionid" Type="Int32" />
+    <Property Name="deleted" Type="Boolean" />
+    <Property Name="AllDestriAccess" Type="Boolean" />
+    <Property Name="AllDealerAccess" Type="Boolean" />
+    <NavigationProperty Name="Dealer" Relationship="Self.FK__ProductAc__Deale__236943A5" FromRole="ProductAccessTable" ToRole="Dealers" />
+    <NavigationProperty Name="Dealer1" Relationship="Self.FK__ProductAc__Deale__245D67DE" FromRole="ProductAccessTable" ToRole="Dealers" />
+    <NavigationProperty Name="Dealer2" Relationship="Self.FK__ProductAc__Deale__25518C17" FromRole="ProductAccessTable" ToRole="Dealers" />
+    <NavigationProperty Name="Destributor" Relationship="Self.FK__ProductAc__Destr__2645B050" FromRole="ProductAccessTable" ToRole="Destributors" />
+    <NavigationProperty Name="Destributor1" Relationship="Self.FK__ProductAc__Destr__2739D489" FromRole="ProductAccessTable" ToRole="Destributors" />
+    <NavigationProperty Name="Destributor2" Relationship="Self.FK__ProductAc__Destr__282DF8C2" FromRole="ProductAccessTable" ToRole="Destributors" />
+    <NavigationProperty Name="PermotionsList" Relationship="Self.FK__ProductAc__promo__29221CFB" FromRole="ProductAccessTable" ToRole="PermotionsList" />
+    <NavigationProperty Name="Region" Relationship="Self.FK__ProductAc__RegId__2A164134" FromRole="ProductAccessTable" ToRole="Regions" />
+    <NavigationProperty Name="Region1" Relationship="Self.FK__ProductAc__RegId__2B0A656D" FromRole="ProductAccessTable" ToRole="Regions" />
+    <NavigationProperty Name="Region2" Relationship="Self.FK__ProductAc__RegId__2BFE89A6" FromRole="ProductAccessTable" ToRole="Regions" />
+  </EntityType>
+  <EntityType Name="ProductAccessTableForProduct">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegId" Type="Int32" />
+    <Property Name="DestributorID" Type="Int32" />
+    <Property Name="DealerId" Type="Int32" />
+    <Property Name="AllAcess" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="createby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="modifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="deleted" Type="Boolean" />
+    <Property Name="AllDestriAccess" Type="Boolean" />
+    <Property Name="AllDealerAccess" Type="Boolean" />
+    <NavigationProperty Name="Dealer" Relationship="Self.FK__ProductAc__Deale__3864608B" FromRole="ProductAccessTableForProduct" ToRole="Dealers" />
+    <NavigationProperty Name="Destributor" Relationship="Self.FK__ProductAc__Destr__395884C4" FromRole="ProductAccessTableForProduct" ToRole="Destributors" />
+    <NavigationProperty Name="ProductLevelThree" Relationship="Self.FK__ProductAc__Produ__3A4CA8FD" FromRole="ProductAccessTableForProduct" ToRole="ProductLevelThree" />
+    <NavigationProperty Name="Region" Relationship="Self.FK__ProductAc__RegId__3B40CD36" FromRole="ProductAccessTableForProduct" ToRole="Regions" />
+  </EntityType>
+  <EntityType Name="ProductCatergory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Pstatus" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PermotionsLists" Relationship="Self.FK__Permotion__Produ__0F624AF8" FromRole="ProductCatergory" ToRole="PermotionsList" />
+    <NavigationProperty Name="ProductCatergoryHistories" Relationship="Self.FK__ProductCate__pid__07C12930" FromRole="ProductCatergory" ToRole="ProductCatergoryHistory" />
+    <NavigationProperty Name="ProductLevelTwoes" Relationship="Self.FK__ProductLe__Prduc__17036CC0" FromRole="ProductCatergory" ToRole="ProductLevelTwo" />
+    <NavigationProperty Name="ProductLevelThreefs" Relationship="Self.FK__ProductLe__Prduc__2EDAF651" FromRole="ProductCatergory" ToRole="ProductLevelThreef" />
+    <NavigationProperty Name="ProductLevelThreefHistories" Relationship="Self.FK__ProductLe__Prduc__3587F3E0" FromRole="ProductCatergory" ToRole="ProductLevelThreefHistory" />
+    <NavigationProperty Name="ProductLevelTwoHistories" Relationship="Self.FK__ProductLe__Produ__1BC821DD" FromRole="ProductCatergory" ToRole="ProductLevelTwoHistory" />
+    <NavigationProperty Name="ProductLevelThrees" Relationship="Self.FK__ProductLe__produ__30C33EC3" FromRole="ProductCatergory" ToRole="ProductLevelThree" />
+    <NavigationProperty Name="ProductLevelOnes" Relationship="Self.FK__ProductLev__pcId__08B54D69" FromRole="ProductCatergory" ToRole="ProductLevelOne" />
+    <NavigationProperty Name="ProductPermotions" Relationship="Self.FK__ProductPe__Produ__17F790F9" FromRole="ProductCatergory" ToRole="ProductPermotion" />
+  </EntityType>
+  <EntityType Name="ProductCatergoryHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pid" Type="Int32" />
+    <Property Name="PCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Pstatus" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductCatergory" Relationship="Self.FK__ProductCate__pid__07C12930" FromRole="ProductCatergoryHistory" ToRole="ProductCatergory" />
+  </EntityType>
+  <EntityType Name="ProductImage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pc_Lv3_oneId" Type="Int32" />
+    <Property Name="PrImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ProductLevelThree" Relationship="Self.FK__ProductIm__pc_Lv__3C34F16F" FromRole="ProductImages" ToRole="ProductLevelThree" />
+    <NavigationProperty Name="ProductImagesHistories" Relationship="Self.FK__ProductIm__Produ__3D2915A8" FromRole="ProductImages" ToRole="ProductImagesHistory" />
+  </EntityType>
+  <EntityType Name="ProductImagesHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductImageId" Type="Int32" />
+    <Property Name="pc_Lv3_oneId" Type="Int32" />
+    <Property Name="PrImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ProductImage" Relationship="Self.FK__ProductIm__Produ__3D2915A8" FromRole="ProductImagesHistory" ToRole="ProductImages" />
+  </EntityType>
+  <EntityType Name="ProductLevelOne">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pcId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlStatus" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="PermotionsLists" Relationship="Self.FK__Permotion__Produ__10566F31" FromRole="ProductLevelOne" ToRole="PermotionsList" />
+    <NavigationProperty Name="ProductCatergory" Relationship="Self.FK__ProductLev__pcId__08B54D69" FromRole="ProductLevelOne" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelTwoes" Relationship="Self.FK__ProductLe__pc_Lv__160F4887" FromRole="ProductLevelOne" ToRole="ProductLevelTwo" />
+    <NavigationProperty Name="ProductLevelTwoHistories" Relationship="Self.FK__ProductLe__pc_Lv__1AD3FDA4" FromRole="ProductLevelOne" ToRole="ProductLevelTwoHistory" />
+    <NavigationProperty Name="ProductLevelThreefs" Relationship="Self.FK__ProductLe__pc_Lv__2CF2ADDF" FromRole="ProductLevelOne" ToRole="ProductLevelThreef" />
+    <NavigationProperty Name="ProductLevelThreefHistories" Relationship="Self.FK__ProductLe__pc_Lv__339FAB6E" FromRole="ProductLevelOne" ToRole="ProductLevelThreefHistory" />
+    <NavigationProperty Name="ProductLevelOneHistories" Relationship="Self.FK__ProductLe__PlvlO__151B244E" FromRole="ProductLevelOne" ToRole="ProductLevelOneHistory" />
+    <NavigationProperty Name="ProductLevelThrees" Relationship="Self.FK__ProductLe__Produ__31B762FC" FromRole="ProductLevelOne" ToRole="ProductLevelThree" />
+    <NavigationProperty Name="ProductPermotions" Relationship="Self.FK__ProductPe__Produ__18EBB532" FromRole="ProductLevelOne" ToRole="ProductPermotion" />
+  </EntityType>
+  <EntityType Name="ProductLevelOneHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlvlOneId" Type="Int32" />
+    <Property Name="pcId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlStatus" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ProductLevelOne" Relationship="Self.FK__ProductLe__PlvlO__151B244E" FromRole="ProductLevelOneHistory" ToRole="ProductLevelOne" />
+  </EntityType>
+  <EntityType Name="ProductLevelThree">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pc_Lv2_oneId" Type="Int32" />
+    <Property Name="PrCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PrDiscription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <Property Name="productCategoryid" Type="Int32" />
+    <Property Name="ProductLevelOne" Type="Int32" />
+    <Property Name="productLevelThreefId" Type="Int32" />
+    <Property Name="MRP" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="Warrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KeyFeature" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="brochure" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Rating" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductAccessTableForProducts" Relationship="Self.FK__ProductAc__Produ__3A4CA8FD" FromRole="ProductLevelThree" ToRole="ProductAccessTableForProduct" />
+    <NavigationProperty Name="ProductCatergory" Relationship="Self.FK__ProductLe__produ__30C33EC3" FromRole="ProductLevelThree" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductImages" Relationship="Self.FK__ProductIm__pc_Lv__3C34F16F" FromRole="ProductLevelThree" ToRole="ProductImages" />
+    <NavigationProperty Name="ProductLevelOne1" Relationship="Self.FK__ProductLe__Produ__31B762FC" FromRole="ProductLevelThree" ToRole="ProductLevelOne" />
+    <NavigationProperty Name="ProductLevelTwo" Relationship="Self.FK__ProductLe__pc_Lv__2FCF1A8A" FromRole="ProductLevelThree" ToRole="ProductLevelTwo" />
+    <NavigationProperty Name="ProductLevelThreeHistories" Relationship="Self.FK__ProductLe__Pr_Lv__37703C52" FromRole="ProductLevelThree" ToRole="ProductLevelThreeHistory" />
+    <NavigationProperty Name="ProductLevelThreef" Relationship="Self.FK__ProductLe__produ__32AB8735" FromRole="ProductLevelThree" ToRole="ProductLevelThreef" />
+  </EntityType>
+  <EntityType Name="ProductLevelThreef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PrductID" Type="Int32" />
+    <Property Name="pc_Lvl_Id" Type="Int32" />
+    <Property Name="pc_Lv2_Id" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductCatergory" Relationship="Self.FK__ProductLe__Prduc__2EDAF651" FromRole="ProductLevelThreef" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelOne" Relationship="Self.FK__ProductLe__pc_Lv__2CF2ADDF" FromRole="ProductLevelThreef" ToRole="ProductLevelOne" />
+    <NavigationProperty Name="ProductLevelThrees" Relationship="Self.FK__ProductLe__produ__32AB8735" FromRole="ProductLevelThreef" ToRole="ProductLevelThree" />
+    <NavigationProperty Name="ProductLevelTwo" Relationship="Self.FK__ProductLe__pc_Lv__2DE6D218" FromRole="ProductLevelThreef" ToRole="ProductLevelTwo" />
+    <NavigationProperty Name="ProductLevelThreefHistories" Relationship="Self.FK__ProductLe__Produ__367C1819" FromRole="ProductLevelThreef" ToRole="ProductLevelThreefHistory" />
+  </EntityType>
+  <EntityType Name="ProductLevelThreefHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductLevelThreeId" Type="Int32" />
+    <Property Name="PrductID" Type="Int32" />
+    <Property Name="pc_Lvl_Id" Type="Int32" />
+    <Property Name="pc_Lv2_Id" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductCatergory" Relationship="Self.FK__ProductLe__Prduc__3587F3E0" FromRole="ProductLevelThreefHistory" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelOne" Relationship="Self.FK__ProductLe__pc_Lv__339FAB6E" FromRole="ProductLevelThreefHistory" ToRole="ProductLevelOne" />
+    <NavigationProperty Name="ProductLevelThreef" Relationship="Self.FK__ProductLe__Produ__367C1819" FromRole="ProductLevelThreefHistory" ToRole="ProductLevelThreef" />
+    <NavigationProperty Name="ProductLevelTwo" Relationship="Self.FK__ProductLe__pc_Lv__3493CFA7" FromRole="ProductLevelThreefHistory" ToRole="ProductLevelTwo" />
+  </EntityType>
+  <EntityType Name="ProductLevelThreeHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Pr_Lvl_3_ID" Type="Int32" />
+    <Property Name="pc_Lv2_oneId" Type="Int32" />
+    <Property Name="PrCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PrDiscription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <Property Name="productCategoryid" Type="Int32" />
+    <Property Name="ProductLevelOne" Type="Int32" />
+    <Property Name="MRP" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="Warrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KeyFeature" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="brochure" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Rating" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductLevelThree" Relationship="Self.FK__ProductLe__Pr_Lv__37703C52" FromRole="ProductLevelThreeHistory" ToRole="ProductLevelThree" />
+  </EntityType>
+  <EntityType Name="ProductLevelTwo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pc_Lvl_oneId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <Property Name="PrductID" Type="Int32" />
+    <Property Name="ImageName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="ImageFileName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductCatergory" Relationship="Self.FK__ProductLe__Prduc__17036CC0" FromRole="ProductLevelTwo" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelOne" Relationship="Self.FK__ProductLe__pc_Lv__160F4887" FromRole="ProductLevelTwo" ToRole="ProductLevelOne" />
+    <NavigationProperty Name="ProductLevelThrees" Relationship="Self.FK__ProductLe__pc_Lv__2FCF1A8A" FromRole="ProductLevelTwo" ToRole="ProductLevelThree" />
+    <NavigationProperty Name="ProductLevelThreefs" Relationship="Self.FK__ProductLe__pc_Lv__2DE6D218" FromRole="ProductLevelTwo" ToRole="ProductLevelThreef" />
+    <NavigationProperty Name="ProductLevelThreefHistories" Relationship="Self.FK__ProductLe__pc_Lv__3493CFA7" FromRole="ProductLevelTwo" ToRole="ProductLevelThreefHistory" />
+    <NavigationProperty Name="ProductLevelTwoHistories" Relationship="Self.FK__ProductLe__Produ__1CBC4616" FromRole="ProductLevelTwo" ToRole="ProductLevelTwoHistory" />
+  </EntityType>
+  <EntityType Name="ProductLevelTwoHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="pc_Lvl_oneId" Type="Int32" />
+    <Property Name="ProductlevlTwoId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <Property Name="ImageName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="ImageFileName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductCatergory" Relationship="Self.FK__ProductLe__Produ__1BC821DD" FromRole="ProductLevelTwoHistory" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelOne" Relationship="Self.FK__ProductLe__pc_Lv__1AD3FDA4" FromRole="ProductLevelTwoHistory" ToRole="ProductLevelOne" />
+    <NavigationProperty Name="ProductLevelTwo" Relationship="Self.FK__ProductLe__Produ__1CBC4616" FromRole="ProductLevelTwoHistory" ToRole="ProductLevelTwo" />
+  </EntityType>
+  <EntityType Name="ProductPermotion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PTypeId" Type="Int32" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="ProductLvlOne" Type="Int32" />
+    <Property Name="Discription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PerImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PrStatus" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startdate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="PermotionType" Relationship="Self.FK__ProductPe__PType__19DFD96B" FromRole="ProductPermotion" ToRole="PermotionType" />
+    <NavigationProperty Name="ProductCatergory" Relationship="Self.FK__ProductPe__Produ__17F790F9" FromRole="ProductPermotion" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelOne" Relationship="Self.FK__ProductPe__Produ__18EBB532" FromRole="ProductPermotion" ToRole="ProductLevelOne" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Createtime" Type="DateTime" Precision="3" />
+    <Property Name="createBy" Type="String" MaxLength="1010" FixedLength="false" Unicode="false" />
+    <Property Name="Updatetime" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="RegionCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Dealers" Relationship="Self.FK__Dealers__RegionI__14270015" FromRole="Regions" ToRole="Dealers" />
+    <NavigationProperty Name="DealersHistories" Relationship="Self.FK__DealersHi__Regio__22751F6C" FromRole="Regions" ToRole="DealersHistory" />
+    <NavigationProperty Name="Destributors" Relationship="Self.FK__Destribut__Regio__0A9D95DB" FromRole="Regions" ToRole="Destributors" />
+    <NavigationProperty Name="DestributorsHistories" Relationship="Self.FK__Destribut__Regio__123EB7A3" FromRole="Regions" ToRole="DestributorsHistory" />
+    <NavigationProperty Name="NotificationAccessTables" Relationship="Self.FK__Notificat__RegId__6CD828CA" FromRole="Regions" ToRole="NotificationAccessTable" />
+    <NavigationProperty Name="NotificationAccessTables1" Relationship="Self.FK__Notificat__RegId__6DCC4D03" FromRole="Regions" ToRole="NotificationAccessTable" />
+    <NavigationProperty Name="NotificationAccessTables2" Relationship="Self.FK__Notificat__RegId__6EC0713C" FromRole="Regions" ToRole="NotificationAccessTable" />
+    <NavigationProperty Name="ProductAccessTables" Relationship="Self.FK__ProductAc__RegId__2A164134" FromRole="Regions" ToRole="ProductAccessTable" />
+    <NavigationProperty Name="ProductAccessTables1" Relationship="Self.FK__ProductAc__RegId__2B0A656D" FromRole="Regions" ToRole="ProductAccessTable" />
+    <NavigationProperty Name="ProductAccessTables2" Relationship="Self.FK__ProductAc__RegId__2BFE89A6" FromRole="Regions" ToRole="ProductAccessTable" />
+    <NavigationProperty Name="ProductAccessTableForProducts" Relationship="Self.FK__ProductAc__RegId__3B40CD36" FromRole="Regions" ToRole="ProductAccessTableForProduct" />
+    <NavigationProperty Name="RegionsHistroys" Relationship="Self.FK__RegionsHi__Regio__06CD04F7" FromRole="Regions" ToRole="RegionsHistroy" />
+    <NavigationProperty Name="UsersLists" Relationship="Self.FK__UsersList__RegId__1F98B2C1" FromRole="Regions" ToRole="UsersList" />
+  </EntityType>
+  <EntityType Name="RegionsHistroy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionId" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Updatetime" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="RegionCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Region" Relationship="Self.FK__RegionsHi__Regio__06CD04F7" FromRole="RegionsHistroy" ToRole="Regions" />
+  </EntityType>
+  <EntityType Name="SaveNotificationSurvey">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DeviceId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SurveyID" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="Options" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OptionValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="NotificationSurvey" Relationship="Self.FK_SaveSurveyid" FromRole="SaveNotificationSurvey" ToRole="NotificationSurvey" />
+  </EntityType>
+  <EntityType Name="SchemeData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SchemeId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SchemeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SchemeDataHistories" Relationship="Self.fk_scid" FromRole="SchemeData" ToRole="SchemeDataHistory" />
+  </EntityType>
+  <EntityType Name="SchemeDataHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Schemedataid" Type="Int32" />
+    <Property Name="SchemeId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SchemeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SchemeData" Relationship="Self.fk_scid" FromRole="SchemeDataHistory" ToRole="SchemeData" />
+  </EntityType>
+  <EntityType Name="SchemeSlab">
+    <Key>
+      <PropertyRef Name="SlabId" />
+    </Key>
+    <Property Name="SlabId" Type="Int32" Nullable="false" />
+    <Property Name="StartRange" Type="Int32" />
+    <Property Name="EndRange" Type="Int32" />
+    <Property Name="Gift" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="SchemeId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SchemeSlabHistories" Relationship="Self.Fk_SlabId" FromRole="SchemeSlab" ToRole="SchemeSlabHistory" />
+  </EntityType>
+  <EntityType Name="SchemeSlabHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SlabId" Type="Int32" />
+    <Property Name="StartRange" Type="Int32" />
+    <Property Name="EndRange" Type="Int32" />
+    <Property Name="Gift" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="schemeid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SchemeSlab" Relationship="Self.Fk_SlabId" FromRole="SchemeSlabHistory" ToRole="SchemeSlab" />
+  </EntityType>
+  <EntityType Name="Suggestion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FunctionID" Type="Int32" />
+    <Property Name="Suggestion1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="createdBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SentMailStatus" Type="Boolean" />
+    <Property Name="SentMailDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="FUNCTION" Relationship="Self.FK__Suggestio__Funct__793DFFAF" FromRole="Suggestion" ToRole="FUNCTIONS" />
+  </EntityType>
+  <EntityType Name="useraccount">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="approvallevel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="assignedto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="profileid" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="createdby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="createtime" Type="DateTime" Precision="3" />
+    <Property Name="updatedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="updatedtime" Type="DateTime" Precision="3" />
+    <Property Name="deletedtime" Type="DateTime" Precision="3" />
+    <Property Name="deletedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="approvalcreatedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="approvalcreattime" Type="DateTime" Precision="3" />
+    <Property Name="autoid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="useraccounthistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="approvallevel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="assignedto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="profileid" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="createdby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="createtime" Type="DateTime" Precision="3" />
+    <Property Name="updatedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="updatedtime" Type="DateTime" Precision="3" />
+    <Property Name="deletedtime" Type="DateTime" Precision="3" />
+    <Property Name="deletedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="approvalcreatedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="approvalcreattime" Type="DateTime" Precision="3" />
+    <Property Name="approvaldeleteddby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="approvaldeletedtime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UsersList">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPassword" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RegId" Type="Int32" />
+    <Property Name="DestriId" Type="Int32" />
+    <Property Name="DealerId" Type="Int32" />
+    <Property Name="CustomerType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_Sap_Code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_Address1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_Address2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_City" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_District" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_State" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_ContactNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Region_code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="isActive" Type="Int32" />
+    <Property Name="ActivatedBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ActivatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedON" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedbY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BlockedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BlockedDATE" Type="DateTime" Precision="3" />
+    <Property Name="ProfileImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DeviceId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Dealer" Relationship="Self.FK__UsersList__Deale__1DB06A4F" FromRole="UsersList" ToRole="Dealers" />
+    <NavigationProperty Name="Destributor" Relationship="Self.FK__UsersList__Destr__1EA48E88" FromRole="UsersList" ToRole="Destributors" />
+    <NavigationProperty Name="Region" Relationship="Self.FK__UsersList__RegId__1F98B2C1" FromRole="UsersList" ToRole="Regions" />
+    <NavigationProperty Name="UsersListHistories" Relationship="Self.FK__UsersList__Userl__4F47C5E3" FromRole="UsersList" ToRole="UsersListHistory" />
+  </EntityType>
+  <EntityType Name="UsersListHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserlistId" Type="Int32" />
+    <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UPassword" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RegId" Type="Int32" />
+    <Property Name="DestriId" Type="Int32" />
+    <Property Name="DealerId" Type="Int32" />
+    <Property Name="CustomerType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_Sap_Code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_Address1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_Address2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_City" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_District" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_State" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_ContactNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Dis_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Region_code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="isActive" Type="Int32" />
+    <Property Name="ActivatedBY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ActivatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedbY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BlockedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BlockedDATE" Type="DateTime" Precision="3" />
+    <Property Name="ProfileImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UsersList" Relationship="Self.FK__UsersList__Userl__4F47C5E3" FromRole="UsersListHistory" ToRole="UsersList" />
+  </EntityType>
+  <EntityType Name="UserVerification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Otp" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DeviceId" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OSType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="OSVersion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AppVersion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BolckedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UnauthorizedUser" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AllGroup">
+    <Key>
+      <PropertyRef Name="regionID" />
+    </Key>
+    <Property Name="regionID" Type="Int32" Nullable="false" />
+    <Property Name="regionName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DestributorId" Type="Int32" />
+    <Property Name="DestributorName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DealersID" Type="Int32" />
+    <Property Name="DealerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AllProductDetail">
+    <Key>
+      <PropertyRef Name="ProductCategoryId" />
+      <PropertyRef Name="ProductLevelOneId" />
+      <PropertyRef Name="productLevelTwoId" />
+      <PropertyRef Name="productLevelThreefId" />
+      <PropertyRef Name="ProductLevelFourId" />
+    </Key>
+    <Property Name="ProductCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="ProductCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLevelOneId" Type="Int32" Nullable="false" />
+    <Property Name="prouductLevelOneName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="productLevelTwoId" Type="Int32" Nullable="false" />
+    <Property Name="productLevelTwoName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="productLevelThreefId" Type="Int32" Nullable="false" />
+    <Property Name="ProductLevelThreeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLevelFourId" Type="Int32" Nullable="false" />
+    <Property Name="ProductLevelFourName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AllProductDetailsVersion2">
+    <Key>
+      <PropertyRef Name="ProductCategoryId" />
+      <PropertyRef Name="ProductLevelOneId" />
+      <PropertyRef Name="productLevelTwoId" />
+      <PropertyRef Name="ProductLevelThreeId" />
+    </Key>
+    <Property Name="ProductCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="ProductCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLevelOneId" Type="Int32" Nullable="false" />
+    <Property Name="prouductLevelOneName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="productLevelTwoId" Type="Int32" Nullable="false" />
+    <Property Name="productLevelTwoName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLevelThreeId" Type="Int32" Nullable="false" />
+    <Property Name="ProductLevelThreeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_city_allstate">
+    <End Role="allstate" Type="Self.allstate" Multiplicity="0..1" />
+    <End Role="city" Type="Self.city" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="allstate">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="city">
+        <PropertyRef Name="stateid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BannerHis__Banne__0D7A0286">
+    <End Role="Banner" Type="Self.Banner" Multiplicity="0..1" />
+    <End Role="BannerHistory" Type="Self.BannerHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banner">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BannerHistory">
+        <PropertyRef Name="BannerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__contactUs__ContI__0C85DE4D">
+    <End Role="contactUsDetail" Type="Self.contactUsDetail" Multiplicity="0..1" />
+    <End Role="contactUsDetail_History" Type="Self.contactUsDetail_History" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="contactUsDetail">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="contactUsDetail_History">
+        <PropertyRef Name="ContId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerP__Modul__2610A626">
+    <End Role="CustomerModule" Type="Self.CustomerModule" Multiplicity="0..1" />
+    <End Role="CustomerPermissions" Type="Self.CustomerPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerModule">
+        <PropertyRef Name="ModId" />
+      </Principal>
+      <Dependent Role="CustomerPermissions">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerP__UType__251C81ED">
+    <End Role="CustomerType" Type="Self.CustomerType" Multiplicity="0..1" />
+    <End Role="CustomerPermissions" Type="Self.CustomerPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerPermissions">
+        <PropertyRef Name="UType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dealers__Destrib__1332DBDC">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Dealers">
+        <PropertyRef Name="DestributorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dealers__RegionI__14270015">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Dealers">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DealersHi__Deale__208CD6FA">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="0..1" />
+    <End Role="DealersHistory" Type="Self.DealersHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DealersHistory">
+        <PropertyRef Name="Dealerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__Deale__662B2B3B">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="0..1" />
+    <End Role="NotificationAccessTable" Type="Self.NotificationAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationAccessTable">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__Deale__671F4F74">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="0..1" />
+    <End Role="NotificationAccessTable" Type="Self.NotificationAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationAccessTable">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__Deale__681373AD">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="0..1" />
+    <End Role="NotificationAccessTable" Type="Self.NotificationAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationAccessTable">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__Deale__236943A5">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="0..1" />
+    <End Role="ProductAccessTable" Type="Self.ProductAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTable">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__Deale__245D67DE">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="0..1" />
+    <End Role="ProductAccessTable" Type="Self.ProductAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTable">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__Deale__25518C17">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="0..1" />
+    <End Role="ProductAccessTable" Type="Self.ProductAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTable">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__Deale__3864608B">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="0..1" />
+    <End Role="ProductAccessTableForProduct" Type="Self.ProductAccessTableForProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTableForProduct">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UsersList__Deale__1DB06A4F">
+    <End Role="Dealers" Type="Self.Dealer" Multiplicity="0..1" />
+    <End Role="UsersList" Type="Self.UsersList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dealers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsersList">
+        <PropertyRef Name="DealerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DealersHi__Destr__2180FB33">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="DealersHistory" Type="Self.DealersHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DealersHistory">
+        <PropertyRef Name="DestributorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DealersHi__Regio__22751F6C">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="DealersHistory" Type="Self.DealersHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DealersHistory">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Destribut__Destr__114A936A">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="DestributorsHistory" Type="Self.DestributorsHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DestributorsHistory">
+        <PropertyRef Name="DestributorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Destribut__Regio__0A9D95DB">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Destributors">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__Destr__690797E6">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="NotificationAccessTable" Type="Self.NotificationAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationAccessTable">
+        <PropertyRef Name="DestributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__Destr__69FBBC1F">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="NotificationAccessTable" Type="Self.NotificationAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationAccessTable">
+        <PropertyRef Name="DestributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__Destr__6AEFE058">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="NotificationAccessTable" Type="Self.NotificationAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationAccessTable">
+        <PropertyRef Name="DestributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__Destr__2645B050">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="ProductAccessTable" Type="Self.ProductAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTable">
+        <PropertyRef Name="DestributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__Destr__2739D489">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="ProductAccessTable" Type="Self.ProductAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTable">
+        <PropertyRef Name="DestributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__Destr__282DF8C2">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="ProductAccessTable" Type="Self.ProductAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTable">
+        <PropertyRef Name="DestributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__Destr__395884C4">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="ProductAccessTableForProduct" Type="Self.ProductAccessTableForProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTableForProduct">
+        <PropertyRef Name="DestributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UsersList__Destr__1EA48E88">
+    <End Role="Destributors" Type="Self.Destributor" Multiplicity="0..1" />
+    <End Role="UsersList" Type="Self.UsersList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destributors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsersList">
+        <PropertyRef Name="DestriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Destribut__Regio__123EB7A3">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="DestributorsHistory" Type="Self.DestributorsHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DestributorsHistory">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FUNCTIONS__funct__0B91BA14">
+    <End Role="FUNCTIONS" Type="Self.FUNCTION" Multiplicity="0..1" />
+    <End Role="FUNCTIONSHistory" Type="Self.FUNCTIONSHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FUNCTIONS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FUNCTIONSHistory">
+        <PropertyRef Name="functionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Suggestio__Funct__793DFFAF">
+    <End Role="FUNCTIONS" Type="Self.FUNCTION" Multiplicity="0..1" />
+    <End Role="Suggestion" Type="Self.Suggestion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FUNCTIONS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Suggestion">
+        <PropertyRef Name="FunctionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_MediaData">
+    <End Role="MediaData" Type="Self.MediaData" Multiplicity="0..1" />
+    <End Role="MediaDataHistory" Type="Self.MediaDataHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MediaData">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MediaDataHistory">
+        <PropertyRef Name="MediaDataId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__notif__6BE40491">
+    <End Role="Notifications" Type="Self.Notification" Multiplicity="0..1" />
+    <End Role="NotificationAccessTable" Type="Self.NotificationAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notifications">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationAccessTable">
+        <PropertyRef Name="notificationid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__RegId__6CD828CA">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="NotificationAccessTable" Type="Self.NotificationAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationAccessTable">
+        <PropertyRef Name="RegId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__RegId__6DCC4D03">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="NotificationAccessTable" Type="Self.NotificationAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationAccessTable">
+        <PropertyRef Name="RegId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__RegId__6EC0713C">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="NotificationAccessTable" Type="Self.NotificationAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationAccessTable">
+        <PropertyRef Name="RegId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__Notif__03BB8E22">
+    <End Role="Notifications" Type="Self.Notification" Multiplicity="0..1" />
+    <End Role="NotificationReadStatus" Type="Self.NotificationReadStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notifications">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationReadStatus">
+        <PropertyRef Name="NotificationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__Notif__73852659">
+    <End Role="Notifications" Type="Self.Notification" Multiplicity="0..1" />
+    <End Role="NotificationsHistory" Type="Self.NotificationsHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notifications">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NotificationsHistory">
+        <PropertyRef Name="NotificationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaveSurveyid">
+    <End Role="NotificationSurvey" Type="Self.NotificationSurvey" Multiplicity="0..1" />
+    <End Role="SaveNotificationSurvey" Type="Self.SaveNotificationSurvey" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotificationSurvey">
+        <PropertyRef Name="SurveyID" />
+      </Principal>
+      <Dependent Role="SaveNotificationSurvey">
+        <PropertyRef Name="SurveyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Surveyid">
+    <End Role="NotificationSurvey" Type="Self.NotificationSurvey" Multiplicity="0..1" />
+    <End Role="NotificationSurveyHistory" Type="Self.NotificationSurveyHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotificationSurvey">
+        <PropertyRef Name="SurveyID" />
+      </Principal>
+      <Dependent Role="NotificationSurveyHistory">
+        <PropertyRef Name="SurveyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permotion__Permo__0E6E26BF">
+    <End Role="PermotionType" Type="Self.PermotionType" Multiplicity="0..1" />
+    <End Role="PermotionsList" Type="Self.PermotionsList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermotionType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PermotionsList">
+        <PropertyRef Name="PermotionTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permotion__Produ__0F624AF8">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="PermotionsList" Type="Self.PermotionsList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PermotionsList">
+        <PropertyRef Name="ProductCatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permotion__Produ__10566F31">
+    <End Role="ProductLevelOne" Type="Self.ProductLevelOne" Multiplicity="0..1" />
+    <End Role="PermotionsList" Type="Self.PermotionsList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PermotionsList">
+        <PropertyRef Name="ProductLvlOneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permotion__promo__41EDCAC5">
+    <End Role="PermotionsList" Type="Self.PermotionsList" Multiplicity="0..1" />
+    <End Role="PermotionsListHistory" Type="Self.PermotionsListHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermotionsList">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PermotionsListHistory">
+        <PropertyRef Name="promotionListId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__promo__29221CFB">
+    <End Role="PermotionsList" Type="Self.PermotionsList" Multiplicity="0..1" />
+    <End Role="ProductAccessTable" Type="Self.ProductAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermotionsList">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTable">
+        <PropertyRef Name="promotionid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permotion__PerTy__09A971A2">
+    <End Role="PermotionType" Type="Self.PermotionType" Multiplicity="0..1" />
+    <End Role="PermotionTypeHistory" Type="Self.PermotionTypeHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermotionType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PermotionTypeHistory">
+        <PropertyRef Name="PerTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductPe__PType__19DFD96B">
+    <End Role="PermotionType" Type="Self.PermotionType" Multiplicity="0..1" />
+    <End Role="ProductPermotion" Type="Self.ProductPermotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermotionType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductPermotion">
+        <PropertyRef Name="PTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__RegId__2A164134">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="ProductAccessTable" Type="Self.ProductAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTable">
+        <PropertyRef Name="RegId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__RegId__2B0A656D">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="ProductAccessTable" Type="Self.ProductAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTable">
+        <PropertyRef Name="RegId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__RegId__2BFE89A6">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="ProductAccessTable" Type="Self.ProductAccessTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTable">
+        <PropertyRef Name="RegId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__Produ__3A4CA8FD">
+    <End Role="ProductLevelThree" Type="Self.ProductLevelThree" Multiplicity="0..1" />
+    <End Role="ProductAccessTableForProduct" Type="Self.ProductAccessTableForProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelThree">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTableForProduct">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductAc__RegId__3B40CD36">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="ProductAccessTableForProduct" Type="Self.ProductAccessTableForProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductAccessTableForProduct">
+        <PropertyRef Name="RegId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductCate__pid__07C12930">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductCatergoryHistory" Type="Self.ProductCatergoryHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductCatergoryHistory">
+        <PropertyRef Name="pid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__Prduc__17036CC0">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductLevelTwo" Type="Self.ProductLevelTwo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelTwo">
+        <PropertyRef Name="PrductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__Prduc__2EDAF651">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductLevelThreef" Type="Self.ProductLevelThreef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThreef">
+        <PropertyRef Name="PrductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__Prduc__3587F3E0">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductLevelThreefHistory" Type="Self.ProductLevelThreefHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThreefHistory">
+        <PropertyRef Name="PrductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__Produ__1BC821DD">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductLevelTwoHistory" Type="Self.ProductLevelTwoHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelTwoHistory">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__produ__30C33EC3">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductLevelThree" Type="Self.ProductLevelThree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThree">
+        <PropertyRef Name="productCategoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLev__pcId__08B54D69">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductLevelOne" Type="Self.ProductLevelOne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelOne">
+        <PropertyRef Name="pcId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductPe__Produ__17F790F9">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductPermotion" Type="Self.ProductPermotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductPermotion">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductIm__pc_Lv__3C34F16F">
+    <End Role="ProductLevelThree" Type="Self.ProductLevelThree" Multiplicity="0..1" />
+    <End Role="ProductImages" Type="Self.ProductImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelThree">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductImages">
+        <PropertyRef Name="pc_Lv3_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductIm__Produ__3D2915A8">
+    <End Role="ProductImages" Type="Self.ProductImage" Multiplicity="0..1" />
+    <End Role="ProductImagesHistory" Type="Self.ProductImagesHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductImages">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductImagesHistory">
+        <PropertyRef Name="ProductImageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__160F4887">
+    <End Role="ProductLevelOne" Type="Self.ProductLevelOne" Multiplicity="0..1" />
+    <End Role="ProductLevelTwo" Type="Self.ProductLevelTwo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelTwo">
+        <PropertyRef Name="pc_Lvl_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__1AD3FDA4">
+    <End Role="ProductLevelOne" Type="Self.ProductLevelOne" Multiplicity="0..1" />
+    <End Role="ProductLevelTwoHistory" Type="Self.ProductLevelTwoHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelTwoHistory">
+        <PropertyRef Name="pc_Lvl_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__2CF2ADDF">
+    <End Role="ProductLevelOne" Type="Self.ProductLevelOne" Multiplicity="0..1" />
+    <End Role="ProductLevelThreef" Type="Self.ProductLevelThreef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThreef">
+        <PropertyRef Name="pc_Lvl_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__339FAB6E">
+    <End Role="ProductLevelOne" Type="Self.ProductLevelOne" Multiplicity="0..1" />
+    <End Role="ProductLevelThreefHistory" Type="Self.ProductLevelThreefHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThreefHistory">
+        <PropertyRef Name="pc_Lvl_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__PlvlO__151B244E">
+    <End Role="ProductLevelOne" Type="Self.ProductLevelOne" Multiplicity="0..1" />
+    <End Role="ProductLevelOneHistory" Type="Self.ProductLevelOneHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelOneHistory">
+        <PropertyRef Name="PlvlOneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__Produ__31B762FC">
+    <End Role="ProductLevelOne" Type="Self.ProductLevelOne" Multiplicity="0..1" />
+    <End Role="ProductLevelThree" Type="Self.ProductLevelThree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThree">
+        <PropertyRef Name="ProductLevelOne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductPe__Produ__18EBB532">
+    <End Role="ProductLevelOne" Type="Self.ProductLevelOne" Multiplicity="0..1" />
+    <End Role="ProductPermotion" Type="Self.ProductPermotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelOne">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductPermotion">
+        <PropertyRef Name="ProductLvlOne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__2FCF1A8A">
+    <End Role="ProductLevelTwo" Type="Self.ProductLevelTwo" Multiplicity="0..1" />
+    <End Role="ProductLevelThree" Type="Self.ProductLevelThree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelTwo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThree">
+        <PropertyRef Name="pc_Lv2_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__Pr_Lv__37703C52">
+    <End Role="ProductLevelThree" Type="Self.ProductLevelThree" Multiplicity="0..1" />
+    <End Role="ProductLevelThreeHistory" Type="Self.ProductLevelThreeHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelThree">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThreeHistory">
+        <PropertyRef Name="Pr_Lvl_3_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__produ__32AB8735">
+    <End Role="ProductLevelThreef" Type="Self.ProductLevelThreef" Multiplicity="0..1" />
+    <End Role="ProductLevelThree" Type="Self.ProductLevelThree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelThreef">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThree">
+        <PropertyRef Name="productLevelThreefId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__2DE6D218">
+    <End Role="ProductLevelTwo" Type="Self.ProductLevelTwo" Multiplicity="0..1" />
+    <End Role="ProductLevelThreef" Type="Self.ProductLevelThreef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelTwo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThreef">
+        <PropertyRef Name="pc_Lv2_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__Produ__367C1819">
+    <End Role="ProductLevelThreef" Type="Self.ProductLevelThreef" Multiplicity="0..1" />
+    <End Role="ProductLevelThreefHistory" Type="Self.ProductLevelThreefHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelThreef">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThreefHistory">
+        <PropertyRef Name="ProductLevelThreeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__3493CFA7">
+    <End Role="ProductLevelTwo" Type="Self.ProductLevelTwo" Multiplicity="0..1" />
+    <End Role="ProductLevelThreefHistory" Type="Self.ProductLevelThreefHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelTwo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThreefHistory">
+        <PropertyRef Name="pc_Lv2_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__Produ__1CBC4616">
+    <End Role="ProductLevelTwo" Type="Self.ProductLevelTwo" Multiplicity="0..1" />
+    <End Role="ProductLevelTwoHistory" Type="Self.ProductLevelTwoHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelTwo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelTwoHistory">
+        <PropertyRef Name="ProductlevlTwoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RegionsHi__Regio__06CD04F7">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="RegionsHistroy" Type="Self.RegionsHistroy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="RegionsHistroy">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UsersList__RegId__1F98B2C1">
+    <End Role="Regions" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="UsersList" Type="Self.UsersList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsersList">
+        <PropertyRef Name="RegId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_scid">
+    <End Role="SchemeData" Type="Self.SchemeData" Multiplicity="0..1" />
+    <End Role="SchemeDataHistory" Type="Self.SchemeDataHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchemeData">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SchemeDataHistory">
+        <PropertyRef Name="Schemedataid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_SlabId">
+    <End Role="SchemeSlab" Type="Self.SchemeSlab" Multiplicity="0..1" />
+    <End Role="SchemeSlabHistory" Type="Self.SchemeSlabHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchemeSlab">
+        <PropertyRef Name="SlabId" />
+      </Principal>
+      <Dependent Role="SchemeSlabHistory">
+        <PropertyRef Name="SlabId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UsersList__Userl__4F47C5E3">
+    <End Role="UsersList" Type="Self.UsersList" Multiplicity="0..1" />
+    <End Role="UsersListHistory" Type="Self.UsersListHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UsersList">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsersListHistory">
+        <PropertyRef Name="UserlistId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Luminous2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="allpages" EntityType="Self.allpage" />
+    <EntitySet Name="allpagehistories" EntityType="Self.allpagehistory" />
+    <EntitySet Name="allprofiles" EntityType="Self.allprofile" />
+    <EntitySet Name="allprofile_history" EntityType="Self.allprofile_history" />
+    <EntitySet Name="allstates" EntityType="Self.allstate" />
+    <EntitySet Name="allstate_history" EntityType="Self.allstate_history" />
+    <EntitySet Name="Banners" EntityType="Self.Banner" />
+    <EntitySet Name="BannerHistories" EntityType="Self.BannerHistory" />
+    <EntitySet Name="cities" EntityType="Self.city" />
+    <EntitySet Name="city_history" EntityType="Self.city_history" />
+    <EntitySet Name="contactUsDetails" EntityType="Self.contactUsDetail" />
+    <EntitySet Name="contactUsDetail_History" EntityType="Self.contactUsDetail_History" />
+    <EntitySet Name="CustomerModules" EntityType="Self.CustomerModule" />
+    <EntitySet Name="CustomerPermissions" EntityType="Self.CustomerPermission" />
+    <EntitySet Name="CustomerTypes" EntityType="Self.CustomerType" />
+    <EntitySet Name="Dealers" EntityType="Self.Dealer" />
+    <EntitySet Name="DealersHistories" EntityType="Self.DealersHistory" />
+    <EntitySet Name="Destributors" EntityType="Self.Destributor" />
+    <EntitySet Name="DestributorsHistories" EntityType="Self.DestributorsHistory" />
+    <EntitySet Name="FooterCategories" EntityType="Self.FooterCategory" />
+    <EntitySet Name="FooterCategoryHistories" EntityType="Self.FooterCategoryHistory" />
+    <EntitySet Name="functionalgroups" EntityType="Self.functionalgroup" />
+    <EntitySet Name="FUNCTIONS" EntityType="Self.FUNCTION" />
+    <EntitySet Name="FUNCTIONSHistories" EntityType="Self.FUNCTIONSHistory" />
+    <EntitySet Name="InsertContexts" EntityType="Self.InsertContext" />
+    <EntitySet Name="InsertContextHistories" EntityType="Self.InsertContextHistory" />
+    <EntitySet Name="luminious_Update" EntityType="Self.luminious_Update" />
+    <EntitySet Name="luminious_UpdateHistory" EntityType="Self.luminious_UpdateHistory" />
+    <EntitySet Name="MediaDatas" EntityType="Self.MediaData" />
+    <EntitySet Name="MediaDataHistories" EntityType="Self.MediaDataHistory" />
+    <EntitySet Name="MPartnerServiceLogs" EntityType="Self.MPartnerServiceLog" />
+    <EntitySet Name="NotificationAccessTables" EntityType="Self.NotificationAccessTable" />
+    <EntitySet Name="NotificationReadStatus" EntityType="Self.NotificationReadStatu" />
+    <EntitySet Name="Notifications" EntityType="Self.Notification" />
+    <EntitySet Name="NotificationsHistories" EntityType="Self.NotificationsHistory" />
+    <EntitySet Name="NotificationSurveys" EntityType="Self.NotificationSurvey" />
+    <EntitySet Name="NotificationSurveyHistories" EntityType="Self.NotificationSurveyHistory" />
+    <EntitySet Name="pageallows" EntityType="Self.pageallow" />
+    <EntitySet Name="PermotionsLists" EntityType="Self.PermotionsList" />
+    <EntitySet Name="PermotionsListHistories" EntityType="Self.PermotionsListHistory" />
+    <EntitySet Name="PermotionTypes" EntityType="Self.PermotionType" />
+    <EntitySet Name="PermotionTypeHistories" EntityType="Self.PermotionTypeHistory" />
+    <EntitySet Name="ProductAccessTables" EntityType="Self.ProductAccessTable" />
+    <EntitySet Name="ProductAccessTableForProducts" EntityType="Self.ProductAccessTableForProduct" />
+    <EntitySet Name="ProductCatergories" EntityType="Self.ProductCatergory" />
+    <EntitySet Name="ProductCatergoryHistories" EntityType="Self.ProductCatergoryHistory" />
+    <EntitySet Name="ProductImages" EntityType="Self.ProductImage" />
+    <EntitySet Name="ProductImagesHistories" EntityType="Self.ProductImagesHistory" />
+    <EntitySet Name="ProductLevelOnes" EntityType="Self.ProductLevelOne" />
+    <EntitySet Name="ProductLevelOneHistories" EntityType="Self.ProductLevelOneHistory" />
+    <EntitySet Name="ProductLevelThrees" EntityType="Self.ProductLevelThree" />
+    <EntitySet Name="ProductLevelThreefs" EntityType="Self.ProductLevelThreef" />
+    <EntitySet Name="ProductLevelThreefHistories" EntityType="Self.ProductLevelThreefHistory" />
+    <EntitySet Name="ProductLevelThreeHistories" EntityType="Self.ProductLevelThreeHistory" />
+    <EntitySet Name="ProductLevelTwoes" EntityType="Self.ProductLevelTwo" />
+    <EntitySet Name="ProductLevelTwoHistories" EntityType="Self.ProductLevelTwoHistory" />
+    <EntitySet Name="ProductPermotions" EntityType="Self.ProductPermotion" />
+    <EntitySet Name="Regions" EntityType="Self.Region" />
+    <EntitySet Name="RegionsHistroys" EntityType="Self.RegionsHistroy" />
+    <EntitySet Name="SaveNotificationSurveys" EntityType="Self.SaveNotificationSurvey" />
+    <EntitySet Name="SchemeDatas" EntityType="Self.SchemeData" />
+    <EntitySet Name="SchemeDataHistories" EntityType="Self.SchemeDataHistory" />
+    <EntitySet Name="SchemeSlabs" EntityType="Self.SchemeSlab" />
+    <EntitySet Name="SchemeSlabHistories" EntityType="Self.SchemeSlabHistory" />
+    <EntitySet Name="Suggestions" EntityType="Self.Suggestion" />
+    <EntitySet Name="useraccounts" EntityType="Self.useraccount" />
+    <EntitySet Name="useraccounthistories" EntityType="Self.useraccounthistory" />
+    <EntitySet Name="UsersLists" EntityType="Self.UsersList" />
+    <EntitySet Name="UsersListHistories" EntityType="Self.UsersListHistory" />
+    <EntitySet Name="UserVerifications" EntityType="Self.UserVerification" />
+    <EntitySet Name="AllGroups" EntityType="Self.AllGroup" />
+    <EntitySet Name="AllProductDetails" EntityType="Self.AllProductDetail" />
+    <EntitySet Name="AllProductDetailsVersion2" EntityType="Self.AllProductDetailsVersion2" />
+    <AssociationSet Name="FK_city_allstate" Association="Self.FK_city_allstate">
+      <End Role="allstate" EntitySet="allstates" />
+      <End Role="city" EntitySet="cities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BannerHis__Banne__0D7A0286" Association="Self.FK__BannerHis__Banne__0D7A0286">
+      <End Role="Banner" EntitySet="Banners" />
+      <End Role="BannerHistory" EntitySet="BannerHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__contactUs__ContI__0C85DE4D" Association="Self.FK__contactUs__ContI__0C85DE4D">
+      <End Role="contactUsDetail" EntitySet="contactUsDetails" />
+      <End Role="contactUsDetail_History" EntitySet="contactUsDetail_History" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerP__Modul__2610A626" Association="Self.FK__CustomerP__Modul__2610A626">
+      <End Role="CustomerModule" EntitySet="CustomerModules" />
+      <End Role="CustomerPermissions" EntitySet="CustomerPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerP__UType__251C81ED" Association="Self.FK__CustomerP__UType__251C81ED">
+      <End Role="CustomerType" EntitySet="CustomerTypes" />
+      <End Role="CustomerPermissions" EntitySet="CustomerPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dealers__Destrib__1332DBDC" Association="Self.FK__Dealers__Destrib__1332DBDC">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="Dealers" EntitySet="Dealers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dealers__RegionI__14270015" Association="Self.FK__Dealers__RegionI__14270015">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Dealers" EntitySet="Dealers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DealersHi__Deale__208CD6FA" Association="Self.FK__DealersHi__Deale__208CD6FA">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="DealersHistory" EntitySet="DealersHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__Deale__662B2B3B" Association="Self.FK__Notificat__Deale__662B2B3B">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="NotificationAccessTable" EntitySet="NotificationAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__Deale__671F4F74" Association="Self.FK__Notificat__Deale__671F4F74">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="NotificationAccessTable" EntitySet="NotificationAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__Deale__681373AD" Association="Self.FK__Notificat__Deale__681373AD">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="NotificationAccessTable" EntitySet="NotificationAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__Deale__236943A5" Association="Self.FK__ProductAc__Deale__236943A5">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="ProductAccessTable" EntitySet="ProductAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__Deale__245D67DE" Association="Self.FK__ProductAc__Deale__245D67DE">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="ProductAccessTable" EntitySet="ProductAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__Deale__25518C17" Association="Self.FK__ProductAc__Deale__25518C17">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="ProductAccessTable" EntitySet="ProductAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__Deale__3864608B" Association="Self.FK__ProductAc__Deale__3864608B">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="ProductAccessTableForProduct" EntitySet="ProductAccessTableForProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UsersList__Deale__1DB06A4F" Association="Self.FK__UsersList__Deale__1DB06A4F">
+      <End Role="Dealers" EntitySet="Dealers" />
+      <End Role="UsersList" EntitySet="UsersLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DealersHi__Destr__2180FB33" Association="Self.FK__DealersHi__Destr__2180FB33">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="DealersHistory" EntitySet="DealersHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DealersHi__Regio__22751F6C" Association="Self.FK__DealersHi__Regio__22751F6C">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="DealersHistory" EntitySet="DealersHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Destribut__Destr__114A936A" Association="Self.FK__Destribut__Destr__114A936A">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="DestributorsHistory" EntitySet="DestributorsHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Destribut__Regio__0A9D95DB" Association="Self.FK__Destribut__Regio__0A9D95DB">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Destributors" EntitySet="Destributors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__Destr__690797E6" Association="Self.FK__Notificat__Destr__690797E6">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="NotificationAccessTable" EntitySet="NotificationAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__Destr__69FBBC1F" Association="Self.FK__Notificat__Destr__69FBBC1F">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="NotificationAccessTable" EntitySet="NotificationAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__Destr__6AEFE058" Association="Self.FK__Notificat__Destr__6AEFE058">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="NotificationAccessTable" EntitySet="NotificationAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__Destr__2645B050" Association="Self.FK__ProductAc__Destr__2645B050">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="ProductAccessTable" EntitySet="ProductAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__Destr__2739D489" Association="Self.FK__ProductAc__Destr__2739D489">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="ProductAccessTable" EntitySet="ProductAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__Destr__282DF8C2" Association="Self.FK__ProductAc__Destr__282DF8C2">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="ProductAccessTable" EntitySet="ProductAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__Destr__395884C4" Association="Self.FK__ProductAc__Destr__395884C4">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="ProductAccessTableForProduct" EntitySet="ProductAccessTableForProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UsersList__Destr__1EA48E88" Association="Self.FK__UsersList__Destr__1EA48E88">
+      <End Role="Destributors" EntitySet="Destributors" />
+      <End Role="UsersList" EntitySet="UsersLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Destribut__Regio__123EB7A3" Association="Self.FK__Destribut__Regio__123EB7A3">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="DestributorsHistory" EntitySet="DestributorsHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FUNCTIONS__funct__0B91BA14" Association="Self.FK__FUNCTIONS__funct__0B91BA14">
+      <End Role="FUNCTIONS" EntitySet="FUNCTIONS" />
+      <End Role="FUNCTIONSHistory" EntitySet="FUNCTIONSHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Suggestio__Funct__793DFFAF" Association="Self.FK__Suggestio__Funct__793DFFAF">
+      <End Role="FUNCTIONS" EntitySet="FUNCTIONS" />
+      <End Role="Suggestion" EntitySet="Suggestions" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_MediaData" Association="Self.Fk_MediaData">
+      <End Role="MediaData" EntitySet="MediaDatas" />
+      <End Role="MediaDataHistory" EntitySet="MediaDataHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__notif__6BE40491" Association="Self.FK__Notificat__notif__6BE40491">
+      <End Role="Notifications" EntitySet="Notifications" />
+      <End Role="NotificationAccessTable" EntitySet="NotificationAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__RegId__6CD828CA" Association="Self.FK__Notificat__RegId__6CD828CA">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="NotificationAccessTable" EntitySet="NotificationAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__RegId__6DCC4D03" Association="Self.FK__Notificat__RegId__6DCC4D03">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="NotificationAccessTable" EntitySet="NotificationAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__RegId__6EC0713C" Association="Self.FK__Notificat__RegId__6EC0713C">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="NotificationAccessTable" EntitySet="NotificationAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__Notif__03BB8E22" Association="Self.FK__Notificat__Notif__03BB8E22">
+      <End Role="Notifications" EntitySet="Notifications" />
+      <End Role="NotificationReadStatus" EntitySet="NotificationReadStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__Notif__73852659" Association="Self.FK__Notificat__Notif__73852659">
+      <End Role="Notifications" EntitySet="Notifications" />
+      <End Role="NotificationsHistory" EntitySet="NotificationsHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaveSurveyid" Association="Self.FK_SaveSurveyid">
+      <End Role="NotificationSurvey" EntitySet="NotificationSurveys" />
+      <End Role="SaveNotificationSurvey" EntitySet="SaveNotificationSurveys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Surveyid" Association="Self.FK_Surveyid">
+      <End Role="NotificationSurvey" EntitySet="NotificationSurveys" />
+      <End Role="NotificationSurveyHistory" EntitySet="NotificationSurveyHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permotion__Permo__0E6E26BF" Association="Self.FK__Permotion__Permo__0E6E26BF">
+      <End Role="PermotionType" EntitySet="PermotionTypes" />
+      <End Role="PermotionsList" EntitySet="PermotionsLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permotion__Produ__0F624AF8" Association="Self.FK__Permotion__Produ__0F624AF8">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="PermotionsList" EntitySet="PermotionsLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permotion__Produ__10566F31" Association="Self.FK__Permotion__Produ__10566F31">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+      <End Role="PermotionsList" EntitySet="PermotionsLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permotion__promo__41EDCAC5" Association="Self.FK__Permotion__promo__41EDCAC5">
+      <End Role="PermotionsList" EntitySet="PermotionsLists" />
+      <End Role="PermotionsListHistory" EntitySet="PermotionsListHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__promo__29221CFB" Association="Self.FK__ProductAc__promo__29221CFB">
+      <End Role="PermotionsList" EntitySet="PermotionsLists" />
+      <End Role="ProductAccessTable" EntitySet="ProductAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permotion__PerTy__09A971A2" Association="Self.FK__Permotion__PerTy__09A971A2">
+      <End Role="PermotionType" EntitySet="PermotionTypes" />
+      <End Role="PermotionTypeHistory" EntitySet="PermotionTypeHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductPe__PType__19DFD96B" Association="Self.FK__ProductPe__PType__19DFD96B">
+      <End Role="PermotionType" EntitySet="PermotionTypes" />
+      <End Role="ProductPermotion" EntitySet="ProductPermotions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__RegId__2A164134" Association="Self.FK__ProductAc__RegId__2A164134">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="ProductAccessTable" EntitySet="ProductAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__RegId__2B0A656D" Association="Self.FK__ProductAc__RegId__2B0A656D">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="ProductAccessTable" EntitySet="ProductAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__RegId__2BFE89A6" Association="Self.FK__ProductAc__RegId__2BFE89A6">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="ProductAccessTable" EntitySet="ProductAccessTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__Produ__3A4CA8FD" Association="Self.FK__ProductAc__Produ__3A4CA8FD">
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+      <End Role="ProductAccessTableForProduct" EntitySet="ProductAccessTableForProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductAc__RegId__3B40CD36" Association="Self.FK__ProductAc__RegId__3B40CD36">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="ProductAccessTableForProduct" EntitySet="ProductAccessTableForProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductCate__pid__07C12930" Association="Self.FK__ProductCate__pid__07C12930">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductCatergoryHistory" EntitySet="ProductCatergoryHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__Prduc__17036CC0" Association="Self.FK__ProductLe__Prduc__17036CC0">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__Prduc__2EDAF651" Association="Self.FK__ProductLe__Prduc__2EDAF651">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductLevelThreef" EntitySet="ProductLevelThreefs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__Prduc__3587F3E0" Association="Self.FK__ProductLe__Prduc__3587F3E0">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductLevelThreefHistory" EntitySet="ProductLevelThreefHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__Produ__1BC821DD" Association="Self.FK__ProductLe__Produ__1BC821DD">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductLevelTwoHistory" EntitySet="ProductLevelTwoHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__produ__30C33EC3" Association="Self.FK__ProductLe__produ__30C33EC3">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLev__pcId__08B54D69" Association="Self.FK__ProductLev__pcId__08B54D69">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductPe__Produ__17F790F9" Association="Self.FK__ProductPe__Produ__17F790F9">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductPermotion" EntitySet="ProductPermotions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductIm__pc_Lv__3C34F16F" Association="Self.FK__ProductIm__pc_Lv__3C34F16F">
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+      <End Role="ProductImages" EntitySet="ProductImages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductIm__Produ__3D2915A8" Association="Self.FK__ProductIm__Produ__3D2915A8">
+      <End Role="ProductImages" EntitySet="ProductImages" />
+      <End Role="ProductImagesHistory" EntitySet="ProductImagesHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__160F4887" Association="Self.FK__ProductLe__pc_Lv__160F4887">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__1AD3FDA4" Association="Self.FK__ProductLe__pc_Lv__1AD3FDA4">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+      <End Role="ProductLevelTwoHistory" EntitySet="ProductLevelTwoHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__2CF2ADDF" Association="Self.FK__ProductLe__pc_Lv__2CF2ADDF">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+      <End Role="ProductLevelThreef" EntitySet="ProductLevelThreefs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__339FAB6E" Association="Self.FK__ProductLe__pc_Lv__339FAB6E">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+      <End Role="ProductLevelThreefHistory" EntitySet="ProductLevelThreefHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__PlvlO__151B244E" Association="Self.FK__ProductLe__PlvlO__151B244E">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+      <End Role="ProductLevelOneHistory" EntitySet="ProductLevelOneHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__Produ__31B762FC" Association="Self.FK__ProductLe__Produ__31B762FC">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductPe__Produ__18EBB532" Association="Self.FK__ProductPe__Produ__18EBB532">
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+      <End Role="ProductPermotion" EntitySet="ProductPermotions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__2FCF1A8A" Association="Self.FK__ProductLe__pc_Lv__2FCF1A8A">
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__Pr_Lv__37703C52" Association="Self.FK__ProductLe__Pr_Lv__37703C52">
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+      <End Role="ProductLevelThreeHistory" EntitySet="ProductLevelThreeHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__produ__32AB8735" Association="Self.FK__ProductLe__produ__32AB8735">
+      <End Role="ProductLevelThreef" EntitySet="ProductLevelThreefs" />
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__2DE6D218" Association="Self.FK__ProductLe__pc_Lv__2DE6D218">
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
+      <End Role="ProductLevelThreef" EntitySet="ProductLevelThreefs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__Produ__367C1819" Association="Self.FK__ProductLe__Produ__367C1819">
+      <End Role="ProductLevelThreef" EntitySet="ProductLevelThreefs" />
+      <End Role="ProductLevelThreefHistory" EntitySet="ProductLevelThreefHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__3493CFA7" Association="Self.FK__ProductLe__pc_Lv__3493CFA7">
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
+      <End Role="ProductLevelThreefHistory" EntitySet="ProductLevelThreefHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__Produ__1CBC4616" Association="Self.FK__ProductLe__Produ__1CBC4616">
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
+      <End Role="ProductLevelTwoHistory" EntitySet="ProductLevelTwoHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RegionsHi__Regio__06CD04F7" Association="Self.FK__RegionsHi__Regio__06CD04F7">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="RegionsHistroy" EntitySet="RegionsHistroys" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UsersList__RegId__1F98B2C1" Association="Self.FK__UsersList__RegId__1F98B2C1">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="UsersList" EntitySet="UsersLists" />
+    </AssociationSet>
+    <AssociationSet Name="fk_scid" Association="Self.fk_scid">
+      <End Role="SchemeData" EntitySet="SchemeDatas" />
+      <End Role="SchemeDataHistory" EntitySet="SchemeDataHistories" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_SlabId" Association="Self.Fk_SlabId">
+      <End Role="SchemeSlab" EntitySet="SchemeSlabs" />
+      <End Role="SchemeSlabHistory" EntitySet="SchemeSlabHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UsersList__Userl__4F47C5E3" Association="Self.FK__UsersList__Userl__4F47C5E3">
+      <End Role="UsersList" EntitySet="UsersLists" />
+      <End Role="UsersListHistory" EntitySet="UsersListHistories" />
+    </AssociationSet>
+    <FunctionImport Name="getCustomerPermission" ReturnType="Collection(Luminous2Model.getCustomerPermission_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetNotification">
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetNotificationAccessTable" ReturnType="Collection(Luminous2Model.GetNotificationAccessTable_Result)">
+      <Parameter Name="Nid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetPermotionsByUserId" ReturnType="Collection(Luminous2Model.GetPermotionsByUserId_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetProduct" ReturnType="Collection(Luminous2Model.GetProduct_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetProductLevelFourAccessTable" ReturnType="Collection(Luminous2Model.GetProductLevelFourAccessTable_Result)">
+      <Parameter Name="Pid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProductlevelFourName" ReturnType="Collection(Luminous2Model.GetProductlevelFourName_Result)">
+      <Parameter Name="ProductlevelFourName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetProductVersion2" ReturnType="Collection(Luminous2Model.GetProductVersion2_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetPromotionAccessTable" ReturnType="Collection(Luminous2Model.GetPromotionAccessTable_Result)">
+      <Parameter Name="Pid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PermotonsListPaging" ReturnType="Collection(Luminous2Model.PermotonsListPaging_Result)">
+      <Parameter Name="PageId" Mode="In" Type="Int32" />
+      <Parameter Name="TotalPage" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ProductLevelThreePaging" ReturnType="Collection(Luminous2Model.ProductLevelThreePaging_Result)">
+      <Parameter Name="PageId" Mode="In" Type="Int32" />
+      <Parameter Name="TotalPage" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateInsertContextRating">
+      <Parameter Name="ContestId" Mode="In" Type="Int32" />
+      <Parameter Name="Rating" Mode="In" Type="String" />
+      <Parameter Name="ImageEncode" Mode="In" Type="String" />
+      <Parameter Name="DealerName" Mode="In" Type="String" />
+      <Parameter Name="DealerCity" Mode="In" Type="String" />
+      <Parameter Name="DealerPhone" Mode="In" Type="String" />
+      <Parameter Name="DealerEmail" Mode="In" Type="String" />
+      <Parameter Name="DistributorCode" Mode="In" Type="String" />
+      <Parameter Name="EmpCode" Mode="In" Type="String" />
+      <Parameter Name="DealerId" Mode="In" Type="String" />
+      <Parameter Name="CreatedBy" Mode="In" Type="String" />
+      <Parameter Name="RatingBy" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="userIdForPushNotification" ReturnType="Collection(Luminous2Model.userIdForPushNotification_Result)">
+      <Parameter Name="NotificationId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="userpermission" ReturnType="Collection(Luminous2Model.userpermission_Result)">
+      <Parameter Name="mode" Mode="In" Type="Int32" />
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="getCustomerPermission_Result">
+    <Property Type="String" Name="ModuleName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Usertype" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Permission" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetNotificationAccessTable_Result">
+    <Property Type="Boolean" Name="AllAcess" Nullable="true" />
+    <Property Type="String" Name="RegionName" Nullable="false" MaxLength="1" />
+    <Property Type="Boolean" Name="AllDestriAccess" Nullable="true" />
+    <Property Type="Boolean" Name="AllDealerAccess" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetPermotionsByUserId_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="status" Nullable="true" />
+    <Property Type="Int32" Name="createby" Nullable="true" />
+    <Property Type="DateTime" Name="createdate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="modifieddate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Modifiedby" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PermotionTypeId" Nullable="true" />
+    <Property Type="Int32" Name="ProductCatId" Nullable="true" />
+    <Property Type="Int32" Name="ProductLvlOneId" Nullable="true" />
+    <Property Type="String" Name="Descriptions" Nullable="true" />
+    <Property Type="String" Name="ImageName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Enddate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PDFName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetProduct_Result">
+    <Property Type="Int32" Name="ProductCategoryId" Nullable="false" />
+    <Property Type="String" Name="ProductCategoryName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ProductLevelOneId" Nullable="false" />
+    <Property Type="String" Name="prouductLevelOneName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="productLevelTwoId" Nullable="false" />
+    <Property Type="String" Name="productLevelTwoName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="productLevelThreefId" Nullable="false" />
+    <Property Type="String" Name="ProductLevelThreeName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ProductLevelFourId" Nullable="false" />
+    <Property Type="String" Name="ProductLevelFourName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetProductLevelFourAccessTable_Result">
+    <Property Type="Boolean" Name="AllAcess" Nullable="true" />
+    <Property Type="String" Name="RegionName" Nullable="false" MaxLength="1" />
+    <Property Type="Boolean" Name="AllDestriAccess" Nullable="true" />
+    <Property Type="Boolean" Name="AllDealerAccess" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetProductlevelFourName_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="pc_Lv2_oneId" Nullable="true" />
+    <Property Type="String" Name="PrCode" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PrDiscription" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PlTwStatus" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="startDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="enddate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="productCategoryid" Nullable="true" />
+    <Property Type="Int32" Name="ProductLevelOne" Nullable="true" />
+    <Property Type="Int32" Name="productLevelThreefId" Nullable="true" />
+    <Property Type="Decimal" Name="MRP" Nullable="true" Precision="12" Scale="2" />
+    <Property Type="String" Name="Warrenty" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="KeyFeature" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="brochure" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Rating" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="GetProductVersion2_Result">
+    <Property Type="Int32" Name="ProductCategoryId" Nullable="false" />
+    <Property Type="String" Name="ProductCategoryName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ProductLevelOneId" Nullable="false" />
+    <Property Type="String" Name="prouductLevelOneName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="productLevelTwoId" Nullable="false" />
+    <Property Type="String" Name="productLevelTwoName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ProductLevelThreeId" Nullable="false" />
+    <Property Type="String" Name="ProductLevelThreeName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetPromotionAccessTable_Result">
+    <Property Type="Boolean" Name="AllAcess" Nullable="true" />
+    <Property Type="String" Name="RegionName" Nullable="false" MaxLength="1" />
+    <Property Type="Boolean" Name="AllDestriAccess" Nullable="true" />
+    <Property Type="Boolean" Name="AllDealerAccess" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PermotonsListPaging_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Descriptions" Nullable="true" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="status" Nullable="true" />
+    <Property Type="String" Name="PType" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Pname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="ProductLevelThreePaging_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="prDiscription" Nullable="true" />
+    <Property Type="String" Name="Rating" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="prcode" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="pltwstatus" Nullable="true" />
+    <Property Type="String" Name="ProductwoName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProductCategory" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProductLeveloneName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProductLevelThreeName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="userIdForPushNotification_Result">
+    <Property Type="String" Name="userid" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DeviceId" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="userpermission_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="approvallevel" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="autoid" Nullable="true" />
+  </ComplexType>
+</Schema>

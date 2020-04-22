@@ -1,0 +1,9 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>CompanyCode</td><td>AccountingDocumentNumber</td><td>FiscalYear</td><td>PostingDate</td><td>DocumenDate</td><td>Documenttype</td><td>CustomerNumber</td><td>Name</td><td>Region</td><td>controllingarea</td><td>LedgerAccount</td><td>Text1</td><td>DebitCreditIndicator</td><td>localcurrency</td><td>documentcurrency</td><td>Assignmentnumber</td><td>NumberofLineItem</td><td>ProfitCenter</td><td>ItemText</td><td>ReferenceDocuNumber</td><td>Text2</td><td>Creditcontrol</td><td>DistributionDocuNum</td><td>Char255</td><td>Agreement</td><td>NameofUser</td><td>NamePerson</td><td>IdentificationCriticalAuthorization</td><td>FullNamePerson</td>
+	</tr><tr>
+		<td>LPTL</td><td>1006032678</td><td>2016</td><td>2017-01-11</td><td>2017-01-11</td><td>DG</td><td>0001100735</td><td>KAMAL ELECTRICAL TRADERS</td><td>30</td><td>Delhi</td><td>0046050010</td><td>Customer Discount - BE</td><td>S</td><td>8980.00</td><td>8980.00</td><td>Credit Note-INBT</td><td>002</td><td>LPDELCO90</td><td>WRS - Distributor PAYOUT FOR M/O Oct-16</td><td>WRS DISTY OCT16</td><td>&nbsp;</td><td>INBT</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>10902143</td><td>SAI BISHWAJEET</td><td>10901161</td><td>Satayander Kumar</td>
+	</tr><tr>
+		<td>LPTL</td><td>1006033149</td><td>2016</td><td>2017-01-11</td><td>2017-01-11</td><td>DG</td><td>0001100735</td><td>KAMAL ELECTRICAL TRADERS</td><td>30</td><td>Delhi</td><td>0046050010</td><td>Customer Discount - BE</td><td>S</td><td>34375.00</td><td>34375.00</td><td>Credit Note-INBT</td><td>002</td><td>LPDELCO90</td><td>WRS - Dealer PAYOUT FOR M/O Oct-16</td><td>ADD WRS DL OCT16</td><td>&nbsp;</td><td>INBT</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>10902143</td><td>SAI BISHWAJEET</td><td>10901161</td><td>Satayander Kumar</td>
+	</tr>
+</table>

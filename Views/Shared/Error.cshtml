@@ -1,0 +1,560 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/css/maincp.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/resetcp.css")" />
+
+
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(
+            function () {
+
+                showpermission();
+            });
+
+
+
+
+
+    </script>
+    <script type="text/javascript">
+
+    function showpermission() {
+
+        $.post("@Url.Content("~/login/menudata")", null, function (data) { checkdata(data); })
+
+    }
+
+    function checkdata(abc) {
+
+        var countermaster = 0;
+        var countersetup = 0;
+        var countersecurity = 0;
+        var table = "";
+        table += '<ul>'
+        for (var cd in abc) {
+
+            if (abc[cd].parentid == '1' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+                countermaster = countermaster + 1;
+            }
+            else {
+
+            }
+            if (abc[cd].parentid == '2' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersetup = countersetup + 1;
+            }
+            else {
+
+            }
+            if (abc[cd].parentid == '3' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersecurity = countersecurity + 1;
+            }
+            else {
+
+            }
+            if (abc[cd].parentid == '4' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersecurity = countersecurity + 1;
+            }
+            else {
+
+            }
+            if (abc[cd].parentid == '5' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersecurity = countersecurity + 1;
+            }
+            else {
+
+            }
+
+            if (abc[cd].parentid == '6' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersecurity = countersecurity + 1;
+            }
+            else {
+
+            }
+            if (abc[cd].parentid == '7' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersecurity = countersecurity + 1;
+            }
+            else {
+
+            }
+            if (abc[cd].parentid == '8' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersecurity = countersecurity + 1;
+            }
+            else {
+
+            }
+            if (abc[cd].parentid == '9' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersecurity = countersecurity + 1;
+            }
+            else {
+
+            }
+            if (abc[cd].parentid == '10' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersecurity = countersecurity + 1;
+            }
+            else {
+
+            }
+            @*Added new view by Ravi on 16-07-2018 Task id - 4009*@
+            if (abc[cd].parentid == '11' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersecurity = countersecurity + 1;
+            }
+            else {
+
+            }
+
+            @*Added new view by Ravi on 21-07-2018 Task id - 4009*@
+            if (abc[cd].parentid == '12' && parseFloat(abc[cd].createrole, abc[cd].editrole, abc[cd].deleterole, abc[cd].uview >= 1)) {
+
+                countersecurity = countersecurity + 1;
+            }
+            else {
+
+            }
+            if (abc[cd].pageurl == '/misexcel/misexcel') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += '  <li>@Html.ActionLink("MIS Upload", "misexcel", "misexcel")</li>'
+                }
+            }
+            else {
+
+            }
+
+            //Banner
+            if (abc[cd].pageurl == '/Banner/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Banner", "Index", "Banner")</li>'
+                }
+            }
+            else {
+
+            }
+            //Baner
+            //Suggestion
+            if (abc[cd].pageurl == '/Suggestion/SuggestionList') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Suggestion", "SuggestionList", "Suggestion")</li>'
+                }
+            }
+            else {
+
+            }
+
+
+
+            //Suggestion
+            //Notification
+
+            if (abc[cd].pageurl == '/Notifications/Notification') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Notification", "Notification", "Notifications")</li>'
+                }
+            }
+            else {
+
+            }
+            //Alert Notification//
+            if (abc[cd].pageurl == '/AlertNotification/AlertNotification') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Alert Notification", "AlertNotification", "AlertNotification")</li>'
+                }
+            }
+            else {
+
+            }
+            //End//
+            //Gallery//
+            if (abc[cd].pageurl == '/Gallery/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Gallery", "Index", "Gallery")</li>'
+                }
+            }
+            else {
+
+            }
+            //End//
+
+            if (abc[cd].pageurl == '/DealerContest/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Point Allocation", "Index", "DealerContest")</li>'
+                }
+            }
+            else {
+
+            }
+            if (abc[cd].pageurl == '/BulkPointAllocation/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Point Bulk Upload", "Index", "BulkPointAllocation")</li>'
+                }
+            }
+            else {
+
+            }
+
+            //Luminious Update//
+            if (abc[cd].pageurl == '/LuminiousUpdate/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Luminious Updates", "Index", "LuminiousUpdate")</li>'
+                }
+            }
+            else {
+
+            }
+
+            //Create Contest//
+            if (abc[cd].pageurl == '/Createcontest/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Create Contest", "Index", "Createcontest")</li>'
+                }
+            }
+            else {
+
+            }
+
+            //Added new view by Ravi on 21-07-2018 Task Id -4009//
+            //User Active //
+            if (abc[cd].pageurl == '/UserActive/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Page Visit Report", "Index", "UserActive")</li>'
+                }
+            }
+            else {
+
+            }
+
+            //User DashBoard //
+
+            if (abc[cd].pageurl == '/UserDashboard/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("User Dashboard Report", "Index", "UserDashboard")</li>'
+                }
+            }
+            else {
+
+            }
+
+            //User Download//
+            if (abc[cd].pageurl == '/UserDownload/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("User Login Report", "Index", "UserDownload")</li>'
+                }
+            }
+            else {
+
+            }
+            @*Added new view by Ravi on 16-07-2018 Task id - 4009*@
+
+            if (abc[cd].pageurl == '/ConnectAssist/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Connect Assist", "Index", "ConnectAssist")</li>'
+                }
+            }
+            else {
+
+            }
+            @*Added new view by Ravi on 16-07-2018 Task id - 4411*@
+            if (abc[cd].pageurl == '/ConnectAssistReport/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Assist Report", "Index", "ConnectAssistReport")</li>'
+                }
+            }
+            else {
+
+            }
+            @*Added new view by Ravi on 23-11-2018 Task id - 4411*@
+
+            if (abc[cd].pageurl == '/MarqueeContest/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Contest Event", "Index", "MarqueeContest")</li>'
+                }
+            }
+            else {
+
+            }
+            @*Added new view by Ravi on 28-11-2018 *@
+
+            if (abc[cd].pageurl == '/ContestRating/Index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Contest Rating", "Index", "ContestRating")</li>'
+                }
+            }
+            else {
+
+            }
+
+            @*Added menu lucky 7 by Ravi on 28-11-2018 *@
+
+
+
+
+            //Notification
+            if (abc[cd].pageurl == '/ticket/ticket') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += '  <li>@Html.ActionLink("Tickets", "ticket", "ticket")</li>'
+                }
+            }
+            else {
+
+            }
+
+
+            if (abc[cd].pageurl == '/nbillentry/billentry') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += '   <li>@Html.ActionLink("Bill Entry", "billentry", "nbillentry")</li>'
+                }
+            }
+            else {
+
+            }
+
+            if (abc[cd].pageurl == '/accountpaymentdetail/index') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += '   <li>@Html.ActionLink("Bill Entry Detail", "index", "accountpaymentdetail")</li>'
+
+                }
+            }
+            else {
+
+            }
+
+            if (abc[cd].pageurl == '/googlecheck/googlecheck') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += ' <li>@Html.ActionLink("Google Verification", "googlecheck", "googlecheck")</li>'
+                }
+            }
+            else {
+
+            }
+            if (abc[cd].pageurl == '/billverified/billverified') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += '   <li>@Html.ActionLink("Bill Verified", "billverified", "billverified")</li>'
+                }
+            }
+            else {
+
+            }
+            if (abc[cd].pageurl == '/Initialte/Initialte') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += '<li>@Html.ActionLink("Initiate", "initialte", "initialte")</li>'
+                }
+            }
+            else {
+
+            }
+            if (abc[cd].pageurl == '/approvalone/approvalone') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += '   <li>@Html.ActionLink("Approval Level 1", "Approvalone", "Approvalone")</li>'
+                }
+            }
+            else {
+
+            }
+
+            if (abc[cd].pageurl == '/finalapproval/finalapproval') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += '   <li>@Html.ActionLink("Approval Level 2", "finalapproval", "finalapproval")</li>'
+                }
+            }
+            else {
+
+            }
+            if (abc[cd].pageurl == '/payment/payment') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += '     <li>@Html.ActionLink("Export Payment", "payment", "payment")</li>'
+                }
+            }
+            else {
+
+            }
+
+
+            if (abc[cd].pageurl == '/paymentimport/paymentimport') {
+                if (abc[cd].createrole == '0' && abc[cd].editrole == '0' && abc[cd].deleterole == '0' && abc[cd].uview == '0') {
+
+                }
+                else {
+                    table += '     <li>@Html.ActionLink("Import Payment", "paymentimport", "paymentimport")</li>'
+                }
+            }
+            else {
+
+            }
+
+        }
+        table += '</ul>'
+
+
+
+
+        var tablemain = "";
+        @*if (countermaster > 0) {
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/state/state/")">Master</a></li>'
+
+
+    }
+        //if (countersetup > 0) {
+
+        tablemain += '<li class="nav_dashboard active"><a href="@Url.Content("~/Banner/Index/")">Transaction</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/ProductCategory/Index/")">Catalog</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/CreatePermotionScheme_New/Index/")">Scheme</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/CreatePermotionPrice_New/Index/")">Price List</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/HomeCard/Index/")">Home Card</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/ConnectPlus/Index/")">Connect +</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/Media/Index/")">Gallery</a></li>'*@
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/LSD_Gift/Index/")">Lucky 7</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/CreatePermotionPrice_New/Index/")">Price List</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/CreatePermotionScheme_New/Index/")">Scheme</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/HomeCard/Index/")">Home Card</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/ProductCategory/Index/")">Catalog</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/Gallery/Index/")">Gallery</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/Notifications/Notification/")">Notification</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/NotificationSurvey/Index/")">Survey</a></li>'
+        tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/FAQ/Index/")">FAQs</a></li>'
+        @*tablemain += '<li class="nav_dashboard"><a href="@Url.Content("~/ContactUs/Index/")">Contact Us</a></li>'*@
+        //}
+        if (countersecurity > 0) {
+
+            @*tablemain += '<li class="nav_dashboard">@Html.ActionLink("Security ", "pagename", "pagename")</li>'*@
+
+        }
+
+
+        $('#mainmenu').html(tablemain);
+        $('#dmenu').html(table);
+
+    }
+</script>
+</head>
+
+<body>
+    </header>
+    <!--Dreamworks Container-->
+    <div id="dreamworks_container">
+        <!--Primary Navigation-->
+        <nav id="primary_nav">
+            <ul>
+                <div id="mainmenu"></div>
+                @*  <li class="nav_dashboard"><a href="@Url.Content("~/state/state/")">Master</a></li>
+                    <li class="nav_dashboard active">@Html.ActionLink("Process", "misexcel", "misexcel")</li>
+                     <li class="nav_dashboard">@Html.ActionLink("Security ", "pagename", "pagename")</li>*@
+            </ul>
+        </nav>
+
+        <!--Main Content-->
+        <section id="main_content">
+            <!--Secondary Navigation-->
+            <nav id="secondary_nav">
+
+                <!--UserInfo-->
+                <dl class="user_info">
+                    <dt><a href="#"><img src="@Url.Content("~/images/loginuser.jpg")" alt="" width="85px" /></a></dt>
+                    <div><br /> <span> <font color=red>Welcome</font>    @Session["userid"]</span><div style="float:right;margin-top:35px;margin-right:18px; "> @Html.ActionLink("Logout", "Logout", "Logout")</div></div>
+                </dl>
+                <!--Responsive Nav-->
+                <a class="res_icon" href="#"></a>
+                <div id="dmenu"></div>
+
+            </nav>
+            <!--Content Wrap-->
+            @RenderBody()
+
+            @*Working LuminousMpartnerIB*@
+        </section>
+    </div>
+
+</body>
+</html>
