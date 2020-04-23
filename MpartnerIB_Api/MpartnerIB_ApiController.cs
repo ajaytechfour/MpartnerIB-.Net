@@ -1556,6 +1556,97 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         }
 
 
+        [System.Web.Http.HttpGet]
+        [ActionName("Gallery_maindata")]
+        public object Gallery_maindata(string user_id, int gallery_categoryid, string token, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel, string browser = null, string Browser_version = null)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+
+            try
+            {
+
+
+                var getAppMessage = getAppversion(app_version, os_type, channel);
+                var getTokenMessage = getToken(user_id, app_version, device_id, token);
+                var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
+                var dataexistornot = Checked_data_existornot_gallery_data(user_id ,gallery_categoryid);
+
+
+                if (getTokenMessage.Status != "" || getAppMessage.Status != "" || checkedThreeUserLoggedIn.Status != "" || dataexistornot.Status == "0")
+                {
+                    if (getTokenMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getTokenMessage.Message + ",Status : " + getTokenMessage.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_gallery_maindata(getTokenMessage.Message, getTokenMessage.Status, "", null);
+                    }
+                    if (getAppMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
+                        #endregion
+
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_gallery_maindata(getAppMessage.Message, getAppMessage.Status, getTokenMessage.Token, null);
+                    }
+
+                    if (checkedThreeUserLoggedIn.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + checkedThreeUserLoggedIn.Message + ",Status : " + checkedThreeUserLoggedIn.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_gallery_maindata(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
+                    }
+                    if (dataexistornot.Status == "0")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_gallery_maindata(dataexistornot.Message, dataexistornot.Status, "", null);
+                    }
+
+
+
+                }
+                if (dataexistornot.Status == "200")
+                {
+                    var gallery_maindata = getGalleryMainData(user_id,gallery_categoryid);
+                    //Save Api log data//
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    //End Save Api log data//
+
+                    return getJson_gallery_maindata(dataexistornot.Message, dataexistornot.Status, getTokenMessage.Token, gallery_maindata);
+
+                }
+
+            }
+            catch (Exception exc)
+            {
+                var exception = getTryCatchExc();
+
+                #region save request and response data in api log
+                string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
+                #endregion
+                SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                return getJson_gallery_maindata(exception.Message, exception.Status, "", null);
+            }
+
+            return "";
+
+        }
 
 
 
@@ -2228,7 +2319,52 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return msgdata;
         }
 
-      
+
+        public MessageData Checked_data_existornot_gallery_data(string userId, int categoryid)
+        {
+            LuminousMpartnerIBEntities luminous = new LuminousMpartnerIBEntities();
+            MessageData msgdata = new MessageData();
+
+            try
+            {
+                var userType = luminous.UsersLists.Where(c => c.UserId == userId).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
+                if (userType.CustomerType.ToLower().Equals("dealer"))
+                {
+                    var getGallery_data = luminous.MediaDatas.Where(c => c.Status == 1 && c.LabelId == categoryid && c.CreatedBy.Equals(userType.CreatedBY)).Count();
+
+                    if (getGallery_data == 0)
+                    {
+                        msgdata.Message = "No Data Found";
+                        msgdata.Status = "0";
+                    }
+                    else
+                    {
+                        msgdata.Status = "200";
+                        msgdata.Message = "Data  fetched successfully.";
+                    }
+                }
+                else
+                {
+                    var getGallery_data = luminous.MediaDatas.Where(c => c.Status == 1 && c.LabelId == categoryid && c.CreatedBy.Equals(userId)).Count();
+                    if (getGallery_data == 0)
+                    {
+                        msgdata.Message = "No Data Found";
+                        msgdata.Status = "0";
+                    }
+                    else
+                    {
+                        msgdata.Status = "200";
+                        msgdata.Message = "Data  fetched successfully.";
+                    }
+                }
+
+            }
+            catch(Exception exc)
+            {
+
+            }
+            return msgdata;
+        }
 
 
 
@@ -2629,12 +2765,31 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return res;
         }
 
+        public object getJson_gallery_maindata(string message, string status, string token, dynamic carddata)
+        {
 
-        
+            var json = JsonConvert.SerializeObject(new
+            {
+                Message = message,
+                Status = status,
+                Token = token,
+                gallery_data = carddata
+            });
 
-        
+            //Create a HTTP response - Set to OK
+            var res = Request.CreateResponse(HttpStatusCode.OK);
+            res.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            //Return the Response
+            return res;
+        }
 
-        
+
+
+
+
+
+
+
 
 
         #endregion
@@ -5046,6 +5201,37 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         }
 
 
+        public dynamic getGalleryMainData( string userId,int categoryid)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+            LuminousMpartnerIBEntities luminous = new LuminousMpartnerIBEntities();           
+            MessageData msgdata = new MessageData();          
+
+            try
+            {               
+                
+                    var userType = luminous.UsersLists.Where(c => c.UserId == userId).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
+                if (userType.CustomerType.ToLower().Equals("dealer"))
+                {
+                    var getGallery_data = luminous.MediaDatas.Where(c => c.Status == 1 && c.LabelId == categoryid && c.CreatedBy.Equals(userType.CreatedBY)).OrderByDescending(c => c.CreatedOn).ToList();
+
+                    return getGallery_data;
+                }
+                else
+                {
+                    var getGallery_data = luminous.MediaDatas.Where(c => c.Status == 1 && c.LabelId == categoryid && c.CreatedBy.Equals(userId)).OrderByDescending(c => c.CreatedOn).ToList();
+
+                    return getGallery_data;
+                }
+
+            }
+            catch (Exception exc)
+            {
+                SaveServiceLog("", url, "", "", 1, exc.InnerException.ToString(), "", DateTime.Now, "", "", "", "");
+                return exc;
+            }
+           
+        }
 
 
 
