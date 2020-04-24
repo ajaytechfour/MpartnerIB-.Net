@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Web;
 using System.Net.Http;
@@ -29,60 +29,6 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         [System.Web.Http.HttpGet]
         [ActionName("LogInCreateOtp")]
         public object LogInCreateOtp(string user_id, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel)
-        {
-            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
-
-            try
-            {
-
-                var getAppMessage = getAppversion(app_version, os_type, channel);
-
-
-
-
-                if (getAppMessage.Status != "")
-                {
-                    #region save request and response data in api log
-                    string RequestParameter = "UserID :" + user_id + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "'";
-                    string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
-                    #endregion
-                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
-                    return getJson_LoginAuthentication(getAppMessage.Message, getAppMessage.Status);
-
-                }
-                else
-                {
-                    var logincreate_otp = func_LoginCreateOtp(user_id, device_id, os_version_code, device_name, app_version);
-                    #region save request and response data in api log
-                    string RequestParameter = "UserID :" + user_id + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "";
-                    string ResponseParameter = "Message : " + logincreate_otp.Message + ",Status : " + logincreate_otp.Status + "";
-                    #endregion
-                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, logincreate_otp.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
-                    //End Save Api log data//
-
-                    return getJson_LoginAuthentication(logincreate_otp.Message, logincreate_otp.Status);
-                }
-
-            }
-            catch (Exception exc)
-            {
-                var exception = getTryCatchExc();
-
-                #region save request and response data in api log
-                string RequestParameter = "UserID :" + user_id + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "'";
-                string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
-                #endregion
-                SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
-                return getJson_LoginAuthentication(exception.Message, exception.Status);
-            }
-
-            return "";
-
-        }
-
-        [System.Web.Http.HttpGet]
-        [ActionName("DealerCreation")]
-        public object DealerCreation(string user_id, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
 
@@ -175,7 +121,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     var otp_authentication = func_OTPAuthentication(user_id, device_id, os_version_code, device_name, otp, os_version_name, os_type, app_version);
                     if (otp_authentication.Status == "200")
                     {
-                       
+
                         var userprofile = luminous.get_UserProfile(user_id).SingleOrDefault();
                         Userprofile usr_profile = new Userprofile();
                         usr_profile.Employeeid = userprofile.Userid;
@@ -344,7 +290,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_CardProvider(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null, "HomePage");
                 }
-                var dataexistornot = Checked_data_existornot(user_id,"HomePage", "");
+                var dataexistornot = Checked_data_existornot(user_id, "HomePage", "");
 
                 if (dataexistornot.Status == "0")
                 {
@@ -418,7 +364,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_CardProvider(getTokenMessage.Message, getTokenMessage.Status, "", null, "Scheme");
                 }
-               
+
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
                 if (checkedThreeUserLoggedIn.Status != "")
                 {
@@ -429,7 +375,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_CardProvider(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null, "Scheme");
                 }
-                var dataexistornot = Checked_data_existornot(user_id,"Scheme", "");
+                var dataexistornot = Checked_data_existornot(user_id, "Scheme", "");
                 if (dataexistornot.Status == "0")
                 {
                     #region save request and response data in api log
@@ -504,7 +450,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_CardProvider(getTokenMessage.Message, getTokenMessage.Status, "", null, "Price");
                 }
-              
+
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
                 if (checkedThreeUserLoggedIn.Status != "")
                 {
@@ -515,7 +461,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_CardProvider(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null, "Price");
                 }
-                var dataexistornot = Checked_data_existornot(user_id,"Price", parentid);
+                var dataexistornot = Checked_data_existornot(user_id, "Price", parentid);
 
                 if (dataexistornot.Status == "0")
                 {
@@ -526,7 +472,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_CardProvider(dataexistornot.Message, dataexistornot.Status, "", null, "Price");
                 }
-              
+
                 if (dataexistornot.Status == "200")
                 {
                     var cardProvider = getCardprovider(user_id, "Price", parentid, channel);
@@ -591,7 +537,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_ParentCategory(getTokenMessage.Message, getTokenMessage.Status, "", null);
                 }
-               
+
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
                 if (checkedThreeUserLoggedIn.Status != "")
                 {
@@ -602,7 +548,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_ParentCategory(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
                 }
-                var dataexistornot = Checked_data_existornot(user_id,"ParentCategory", "");
+                var dataexistornot = Checked_data_existornot(user_id, "ParentCategory", "");
 
                 if (dataexistornot.Status == "0")
                 {
@@ -614,7 +560,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     return getJson_ParentCategory(dataexistornot.Message, dataexistornot.Status, "", null);
                 }
 
-               
+
                 if (dataexistornot.Status == "200")
                 {
                     var cardProvider = func_GetParentCategory();
@@ -678,7 +624,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_ProductCategory(getTokenMessage.Message, getTokenMessage.Status, "", null, "ProductCategory");
                 }
-               
+
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
                 if (checkedThreeUserLoggedIn.Status != "")
                 {
@@ -689,7 +635,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_ProductCategory(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null, "ProductCategory");
                 }
-                var dataexistornot = Checked_data_existornot(user_id,"ProductCategory", "");
+                var dataexistornot = Checked_data_existornot(user_id, "ProductCategory", "");
 
                 if (dataexistornot.Status == "0")
                 {
@@ -702,7 +648,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 }
                 if (dataexistornot.Status == "200")
                 {
-                    var product_category = getProductCategory(user_id,"ProductCategory");
+                    var product_category = getProductCategory(user_id, "ProductCategory");
                     //Save Api log data//
                     #region save request and response data in api log
                     string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
@@ -763,7 +709,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_Product_catalog(getTokenMessage.Message, getTokenMessage.Status, "", null, "ProductCategory");
                 }
-             
+
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
                 if (checkedThreeUserLoggedIn.Status != "")
                 {
@@ -774,7 +720,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_Product_catalog(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null, "ProductCategory");
                 }
-                var dataexistornot = Checked_data_existornot_catalog_products(user_id,productcategoryid);
+                var dataexistornot = Checked_data_existornot_catalog_products(user_id, productcategoryid);
                 if (dataexistornot.Status == "0")
                 {
                     #region save request and response data in api log
@@ -788,7 +734,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                 if (dataexistornot.Status == "200")
                 {
-                    var product_catalog = getProduct_Catalog(user_id,productcategoryid);
+                    var product_catalog = getProduct_Catalog(user_id, productcategoryid);
                     //Save Api log data//
                     #region save request and response data in api log
                     string RequestParameter = "UserID :" + user_id + ",productcategoryid :" + productcategoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
@@ -850,7 +796,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_Product_search(getTokenMessage.Message, getTokenMessage.Status, "", null);
                 }
-               
+
 
 
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
@@ -863,22 +809,22 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_Product_search(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
                 }
-                var dataexistornot = Checked_data_existornot_search_products(user_id,search_key);
+                var dataexistornot = Checked_data_existornot_search_products(user_id, search_key);
 
-                    if (dataexistornot.Status == "0")
-                    {
-                        #region save request and response data in api log
-                        string RequestParameter = "SearchKey : " + search_key + ",UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
-                        string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
-                        #endregion
-                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
-                        return getJson_Product_search(dataexistornot.Message, dataexistornot.Status, "", null);
-                    }
+                if (dataexistornot.Status == "0")
+                {
+                    #region save request and response data in api log
+                    string RequestParameter = "SearchKey : " + search_key + ",UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    return getJson_Product_search(dataexistornot.Message, dataexistornot.Status, "", null);
+                }
 
 
                 if (dataexistornot.Status == "200")
                 {
-                    var product_catalog = getProduct_Search(user_id,search_key);
+                    var product_catalog = getProduct_Search(user_id, search_key);
                     //Save Api log data//
                     #region save request and response data in api log
                     string RequestParameter = "SearchKey : " + search_key + ",UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
@@ -940,7 +886,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_Product_search_data(getTokenMessage.Message, getTokenMessage.Status, "", null);
                 }
-               
+
 
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
                 if (checkedThreeUserLoggedIn.Status != "")
@@ -952,7 +898,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_Product_search_data(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
                 }
-                var dataexistornot = Checked_data_existornot_getdata_searchproduct(user_id,productname, plus_flag);
+                var dataexistornot = Checked_data_existornot_getdata_searchproduct(user_id, productname, plus_flag);
                 if (dataexistornot.Status == "0")
                 {
                     #region save request and response data in api log
@@ -1025,7 +971,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_Product_catalog_menu_upper(getTokenMessage.Message, getTokenMessage.Status, "", null);
                 }
-               
+
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
                 if (checkedThreeUserLoggedIn.Status != "")
                 {
@@ -1036,7 +982,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_Product_catalog_menu_upper(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
                 }
-                var dataexistornot = Checked_data_existornot_catalog_upper(user_id,productcategoryid);
+                var dataexistornot = Checked_data_existornot_catalog_upper(user_id, productcategoryid);
                 if (dataexistornot.Status == "0")
                 {
                     #region save request and response data in api log
@@ -1048,10 +994,10 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 }
 
 
-                
+
                 if (dataexistornot.Status == "200")
                 {
-                    var product_catalog_upper = getProduct_Catalog_Upper(user_id,productcategoryid);
+                    var product_catalog_upper = getProduct_Catalog_Upper(user_id, productcategoryid);
                     //Save Api log data//
                     #region save request and response data in api log
                     string RequestParameter = "UserID :" + user_id + ",productcategoryid :" + productcategoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
@@ -1115,7 +1061,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_contactus_details(getTokenMessage.Message, getTokenMessage.Status, "", null);
                 }
-                
+
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
                 if (checkedThreeUserLoggedIn.Status != "")
                 {
@@ -1138,7 +1084,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 }
 
 
-               
+
                 if (dataexistornot.Status == "200")
                 {
                     var contactus = getContactUs(user_id);
@@ -1205,7 +1151,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(value.user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, value.user_id, DateTime.Now, value.device_id, value.app_version, value.os_type, value.os_version_code);
                     return getJson_contactus_suggestion(getTokenMessage.Message, getTokenMessage.Status, "");
                 }
-               
+
 
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(value.user_id, value.device_id);
                 if (checkedThreeUserLoggedIn.Status != "")
@@ -1220,7 +1166,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                 var contactus_suggestion = save_contactus_suggetion(value.user_id, value.name, value.email, value.message, value.contactusimage, value.filename);
 
-                
+
                 if (contactus_suggestion.Status == "200" || contactus_suggestion.Status == "0")
                 {
                     //Save Api log data//
@@ -1283,7 +1229,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_gallery_menu_upper(getTokenMessage.Message, getTokenMessage.Status, "", null);
                 }
-                
+
                 var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
                 if (checkedThreeUserLoggedIn.Status != "")
                 {
@@ -1294,7 +1240,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     return getJson_gallery_menu_upper(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
                 }
-                var dataexistornot = Checked_data_existornot(user_id,"Gallery_Menu_Upper", "");
+                var dataexistornot = Checked_data_existornot(user_id, "Gallery_Menu_Upper", "");
                 if (dataexistornot.Status == "0")
                 {
                     #region save request and response data in api log
@@ -1307,7 +1253,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
 
 
-               
+
                 if (dataexistornot.Status == "200")
                 {
                     var gallery_menu_upper = getGalleryUpperData(user_id);
@@ -1341,6 +1287,468 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         }
         #endregion
 
+        // Tarun API
+
+        [System.Web.Http.HttpGet]
+        [ActionName("Faq_data")]
+        public object Faq_data(string user_id, string token, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel, string browser = null, string Browser_version = null)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+
+            try
+            {
+
+
+                var getAppMessage = getAppversion(app_version, os_type, channel);
+                var getTokenMessage = getToken(user_id, app_version, device_id, token);
+                var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
+                var dataexistornot = Checked_data_existornot_FAQ(user_id);
+
+
+                if (getTokenMessage.Status != "" || getAppMessage.Status != "" || checkedThreeUserLoggedIn.Status != "" || dataexistornot.Status == "0")
+                {
+                    if (getTokenMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getTokenMessage.Message + ",Status : " + getTokenMessage.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_faq(getTokenMessage.Message, getTokenMessage.Status, "", null);
+                    }
+                    if (getAppMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
+                        #endregion
+
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_faq(getAppMessage.Message, getAppMessage.Status, getTokenMessage.Token, null);
+                    }
+
+                    if (checkedThreeUserLoggedIn.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + checkedThreeUserLoggedIn.Message + ",Status : " + checkedThreeUserLoggedIn.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_faq(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
+                    }
+                    if (dataexistornot.Status == "0")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_faq(dataexistornot.Message, dataexistornot.Status, "", null);
+                    }
+
+
+
+                }
+                if (dataexistornot.Status == "200")
+                {
+                    var faqdata = getFaqData(user_id);
+                    //Save Api log data//
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    //End Save Api log data//
+
+                    return getJson_faq(dataexistornot.Message, dataexistornot.Status, getTokenMessage.Token, faqdata);
+
+                }
+
+            }
+            catch (Exception exc)
+            {
+                var exception = getTryCatchExc();
+
+                #region save request and response data in api log
+                string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
+                #endregion
+                SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                return getJson_faq(exception.Message, exception.Status, "", null);
+            }
+
+            return "";
+
+        }
+
+
+        [System.Web.Http.HttpGet]
+        [ActionName("GetSurveyNotificationList")]
+        public object GetSurveyNotificationList(string user_id, string token, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel, string browser = null, string Browser_version = null)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+
+            try
+            {
+
+
+                var getAppMessage = getAppversion(app_version, os_type, channel);
+                var getTokenMessage = getToken(user_id, app_version, device_id, token);
+                var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
+                var dataexistornot = Checked_data_existornot_SurveyNotificationList(user_id);
+
+
+                if (getTokenMessage.Status != "" || getAppMessage.Status != "" || checkedThreeUserLoggedIn.Status != "" || dataexistornot.Status == "0")
+                {
+                    if (getTokenMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getTokenMessage.Message + ",Status : " + getTokenMessage.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_SurveyNotificationList(getTokenMessage.Message, getTokenMessage.Status, "", null);
+                    }
+                    if (getAppMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
+                        #endregion
+
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_SurveyNotificationList(getAppMessage.Message, getAppMessage.Status, getTokenMessage.Token, null);
+                    }
+
+                    if (checkedThreeUserLoggedIn.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + checkedThreeUserLoggedIn.Message + ",Status : " + checkedThreeUserLoggedIn.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_SurveyNotificationList(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
+                    }
+                    if (dataexistornot.Status == "0")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_SurveyNotificationList(dataexistornot.Message, dataexistornot.Status, "", null);
+                    }
+
+
+
+                }
+                if (dataexistornot.Status == "200")
+                {
+                    var survey_not_list = func_SurveyNotificationList(user_id);
+                    //Save Api log data//
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    //End Save Api log data//
+
+                    return getJson_SurveyNotificationList(dataexistornot.Message, dataexistornot.Status, getTokenMessage.Token, survey_not_list);
+
+                }
+
+            }
+            catch (Exception exc)
+            {
+                var exception = getTryCatchExc();
+
+                #region save request and response data in api log
+                string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
+                #endregion
+                SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                return getJson_SurveyNotificationList(exception.Message, exception.Status, "", null);
+            }
+
+            return "";
+
+        }
+
+
+        [System.Web.Http.HttpPost]
+        [ActionName("SaveDealerData")]
+        public object SaveDealerData([FromBody] JObject obj, string user_id, string token, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel, string browser = null, string Browser_version = null)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+
+            try
+            {
+
+
+                var getAppMessage = getAppversion(app_version, os_type, channel);
+                var getTokenMessage = getToken(user_id, app_version, device_id, token);
+                var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
+
+
+
+                if (getTokenMessage.Status != "" || getAppMessage.Status != "" || checkedThreeUserLoggedIn.Status != "")
+                {
+                    if (getTokenMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + "Json :" + obj + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getTokenMessage.Message + ",Status : " + getTokenMessage.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_SaveDealerData(getTokenMessage.Message, getTokenMessage.Status, "");
+                    }
+                    if (getAppMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + "Json :" + obj + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
+                        #endregion
+
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_SaveDealerData(getAppMessage.Message, getAppMessage.Status, getTokenMessage.Token);
+                    }
+
+                    if (checkedThreeUserLoggedIn.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + "Json :" + obj + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + checkedThreeUserLoggedIn.Message + ",Status : " + checkedThreeUserLoggedIn.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_SaveDealerData(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "");
+                    }
+                }
+                if (getTokenMessage.Status == "" || getAppMessage.Status == "" || checkedThreeUserLoggedIn.Status == "")
+                {
+                    var save_dealer_data = func_SaveDealerData(user_id, obj);
+                    //Save Api log data//
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + "Json :" + obj + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + save_dealer_data.Message + ",Status : " + save_dealer_data.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, save_dealer_data.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    //End Save Api log data//
+
+                    return getJson_SaveDealerData(save_dealer_data.Message, save_dealer_data.Status, getTokenMessage.Token);
+
+                }
+
+            }
+            catch (Exception exc)
+            {
+                var exception = getTryCatchExc();
+
+                #region save request and response data in api log
+                string RequestParameter = "UserID :" + user_id + "Json :" + obj + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
+                #endregion
+                SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                return getJson_SaveDealerData(exception.Message, exception.Status, "");
+            }
+
+            return "";
+
+        }
+
+        [System.Web.Http.HttpPost]
+        [ActionName("Save_SaleEmployee")]
+        public object Save_SaleEmployee([FromBody] JObject obj, string user_id, string token, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel, string browser = null, string Browser_version = null)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+
+            try
+            {
+
+
+                var getAppMessage = getAppversion(app_version, os_type, channel);
+                var getTokenMessage = getToken(user_id, app_version, device_id, token);
+                var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
+
+
+
+                if (getTokenMessage.Status != "" || getAppMessage.Status != "" || checkedThreeUserLoggedIn.Status != "")
+                {
+                    if (getTokenMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + "Json :" + obj + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getTokenMessage.Message + ",Status : " + getTokenMessage.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_Save_SaleEmployeeData(getTokenMessage.Message, getTokenMessage.Status, "");
+                    }
+                    if (getAppMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + "Json :" + obj + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
+                        #endregion
+
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_Save_SaleEmployeeData(getAppMessage.Message, getAppMessage.Status, getTokenMessage.Token);
+                    }
+
+                    if (checkedThreeUserLoggedIn.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + "Json :" + obj + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + checkedThreeUserLoggedIn.Message + ",Status : " + checkedThreeUserLoggedIn.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_Save_SaleEmployeeData(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "");
+                    }
+                }
+                if (getTokenMessage.Status == "" || getAppMessage.Status == "" || checkedThreeUserLoggedIn.Status == "")
+                {
+                    var save_sale_employee_data = func_SaveSalesEmployeeData(user_id, obj);
+                    //Save Api log data//
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + "Json :" + obj + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + save_sale_employee_data.Message + ",Status : " + save_sale_employee_data.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, save_sale_employee_data.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    //End Save Api log data//
+
+                    return getJson_Save_SaleEmployeeData(save_sale_employee_data.Message, save_sale_employee_data.Status, getTokenMessage.Token);
+
+                }
+
+            }
+            catch (Exception exc)
+            {
+                var exception = getTryCatchExc();
+
+                #region save request and response data in api log
+                string RequestParameter = "UserID :" + user_id + "Json :" + obj + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
+                #endregion
+                SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                return getJson_Save_SaleEmployeeData(exception.Message, exception.Status, "");
+            }
+
+            return "";
+
+        }
+
+
+        [System.Web.Http.HttpGet]
+        [ActionName("Gallery_maindata")]
+        public object Gallery_maindata(string user_id, int gallery_categoryid, string token, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel, string browser = null, string Browser_version = null)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+
+            try
+            {
+
+
+                var getAppMessage = getAppversion(app_version, os_type, channel);
+                var getTokenMessage = getToken(user_id, app_version, device_id, token);
+                var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
+                var dataexistornot = Checked_data_existornot_gallery_data(user_id, gallery_categoryid);
+
+
+                if (getTokenMessage.Status != "" || getAppMessage.Status != "" || checkedThreeUserLoggedIn.Status != "" || dataexistornot.Status == "0")
+                {
+                    if (getTokenMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getTokenMessage.Message + ",Status : " + getTokenMessage.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_gallery_maindata(getTokenMessage.Message, getTokenMessage.Status, "", null);
+                    }
+                    if (getAppMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
+                        #endregion
+
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_gallery_maindata(getAppMessage.Message, getAppMessage.Status, getTokenMessage.Token, null);
+                    }
+
+                    if (checkedThreeUserLoggedIn.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + checkedThreeUserLoggedIn.Message + ",Status : " + checkedThreeUserLoggedIn.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_gallery_maindata(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
+                    }
+                    if (dataexistornot.Status == "0")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                        string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_gallery_maindata(dataexistornot.Message, dataexistornot.Status, "", null);
+                    }
+
+
+
+                }
+                if (dataexistornot.Status == "200")
+                {
+                    var gallery_maindata = getGalleryMainData(user_id, gallery_categoryid);
+                    //Save Api log data//
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    //End Save Api log data//
+
+                    return getJson_gallery_maindata(dataexistornot.Message, dataexistornot.Status, getTokenMessage.Token, gallery_maindata);
+
+                }
+
+            }
+            catch (Exception exc)
+            {
+                var exception = getTryCatchExc();
+
+                #region save request and response data in api log
+                string RequestParameter = "UserID :" + user_id + ",Gallery_CategoryId :" + gallery_categoryid + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
+                #endregion
+                SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                return getJson_gallery_maindata(exception.Message, exception.Status, "", null);
+            }
+
+            return "";
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         #region check token valid or not
         public MessageData getToken(string user_id, string app_version, string deviceid, string token)
@@ -1350,7 +1758,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
             // string TokenString = user_id + app_version + deviceid;
             MessageData msgdata = new MessageData();
-            
+
 
             var gettoken = luminous.UserVerifications.Where(c => c.UserId == user_id && c.DeviceId == deviceid).Select(c => new { c.Token, c.TokenFlag }).Count();
             if (user_id == "9900000000")
@@ -1450,9 +1858,9 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         #endregion check token valid or not
 
         #region appversion valid or not
-        public  MessageData getAppversion(string app_version, string ostype, string channel)
+        public MessageData getAppversion(string app_version, string ostype, string channel)
         {
-            
+
             int? appVersionCount;
             //if (channel.Contains("Web"))
             //{
@@ -1484,7 +1892,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         #region Checked data exist or not customer permission
         public MessageData Checked_data_existornot_customerpermission_data(string userid, string language)
         {
-            
+
             MessageData msgdata = new MessageData();
 
             List<getCustomerPermission_New_Result> getPerm = luminous.getCustomerPermission_New(userid, language).ToList();
@@ -1507,7 +1915,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         #endregion
 
         #region Checked data exist or not catalog_products
-        public MessageData Checked_data_existornot_catalog_products(string userid,int productcategoryid)
+        public MessageData Checked_data_existornot_catalog_products(string userid, int productcategoryid)
         {
             var usertype = luminous.UsersLists.Where(c => c.UserId == userid).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
             if (usertype.CustomerType == "Dealer" || usertype.CustomerType == "DEALER")
@@ -1519,7 +1927,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             var getproduct_catalog = (from prdcat in luminous.ProductLevelThrees
                                       join prdimages in luminous.ProductthreeImageMappings
                                       on prdcat.id equals prdimages.ProductLevelThreeid
-                                      where prdcat.productCategoryid == productcategoryid && prdcat.CreatedBy==userid && prdcat.PlTwStatus == 1
+                                      where prdcat.productCategoryid == productcategoryid && prdcat.CreatedBy == userid && prdcat.PlTwStatus == 1
                                       select new
                                       {
                                           Id = prdcat.id,
@@ -1547,9 +1955,9 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         #endregion
 
         #region Checked data exist or not search_products
-        public MessageData Checked_data_existornot_search_products(string userid,string search_key)
+        public MessageData Checked_data_existornot_search_products(string userid, string search_key)
         {
-           
+
             MessageData msgdata = new MessageData();
             var usertype = luminous.UsersLists.Where(c => c.UserId == userid).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
             if (usertype.CustomerType == "Dealer" || usertype.CustomerType == "DEALER")
@@ -1558,7 +1966,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             }
 
             var getproduct_catalog = (from prdcat in luminous.ProductLevelThrees
-                                      where prdcat.PlTwStatus == 1 && prdcat.CreatedBy==userid && prdcat.Name.Contains(search_key)
+                                      where prdcat.PlTwStatus == 1 && prdcat.CreatedBy == userid && prdcat.Name.Contains(search_key)
                                       select new
                                       {
                                           Id = prdcat.id,
@@ -1586,7 +1994,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         #endregion
 
         #region Checked data exist or not search_products_data
-        public MessageData Checked_data_existornot_getdata_searchproduct(string userid,string productname, string plus_flag)
+        public MessageData Checked_data_existornot_getdata_searchproduct(string userid, string productname, string plus_flag)
         {
             string replacePlus = "";
             if (plus_flag == "1")
@@ -1597,7 +2005,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             {
                 replacePlus = productname;
             }
-            
+
             MessageData msgdata = new MessageData();
             var usertype = luminous.UsersLists.Where(c => c.UserId == userid).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
             if (usertype.CustomerType == "Dealer" || usertype.CustomerType == "DEALER")
@@ -1606,7 +2014,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             }
 
             var getproduct_catalog = (from prdcat in luminous.ProductLevelThrees
-                                      where prdcat.Name == replacePlus && prdcat.CreatedBy==userid && prdcat.PlTwStatus == 1
+                                      where prdcat.Name == replacePlus && prdcat.CreatedBy == userid && prdcat.PlTwStatus == 1
                                       select new
                                       {
                                           Id = prdcat.id,
@@ -1634,9 +2042,9 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         #endregion
 
         #region Checked data exist or not catalog_uppper
-        public MessageData Checked_data_existornot_catalog_upper(string userid,int productcategoryid)
+        public MessageData Checked_data_existornot_catalog_upper(string userid, int productcategoryid)
         {
-           
+
             MessageData msgdata = new MessageData();
 
             var usertype = luminous.UsersLists.Where(c => c.UserId == userid).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
@@ -1646,7 +2054,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             }
 
 
-            var getproduct_catalog = luminous.getCatalog_Upper(userid,productcategoryid).ToList();
+            var getproduct_catalog = luminous.getCatalog_Upper(userid, productcategoryid).ToList();
 
             if (getproduct_catalog.Count == 0)
             {
@@ -1668,10 +2076,10 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         #region Checked data exist or not contact_us_details
         public MessageData Checked_data_existornot_contactus_details(string userid)
         {
-            
+
             MessageData msgdata = new MessageData();
 
-            var contactusdata = luminous.contactUsDetails.Where(c => c.Cstatus == 1 && c.CreatedBy==userid).Count();
+            var contactusdata = luminous.contactUsDetails.Where(c => c.Cstatus == 1 && c.CreatedBy == userid).Count();
 
             if (contactusdata == 0)
             {
@@ -1691,7 +2099,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         #endregion
 
         #region Checked data exist or not by page name
-        public MessageData Checked_data_existornot(string userid,string pagename, string parentid)
+        public MessageData Checked_data_existornot(string userid, string pagename, string parentid)
         {
             LuminousMpartnerIBEntities luminous = new LuminousMpartnerIBEntities();
             MessageData msgdata = new MessageData();
@@ -1702,7 +2110,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             }
             if (pagename == "ProductCategory")
             {
-                var getProductcategory = luminous.ProductCatergories.Where(c => c.Pstatus == 1 && c.CreatedBy==userid).Select(c => new { c.id, c.PName, c.PdfSystemName }).ToList();
+                var getProductcategory = luminous.ProductCatergories.Where(c => c.Pstatus == 1 && c.CreatedBy == userid).Select(c => new { c.id, c.PName, c.PdfSystemName }).ToList();
 
                 if (getProductcategory.Count == 0)
                 {
@@ -1870,12 +2278,186 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         }
         #endregion
 
+        public MessageData Checked_data_existornot_FAQ(string userId)
+        {
+            LuminousMpartnerIBEntities luminous = new LuminousMpartnerIBEntities();
+            MessageData msgdata = new MessageData();
+
+            try
+            {
+
+                var userType = luminous.UsersLists.Where(c => c.UserId == userId).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
+                if (userType.CustomerType.ToLower().Equals("dealer"))
+                {
+                    var currentdate = DateTime.Now.Date;
+                    var getFaq = (from c in luminous.FAQs
+                                  where c.StartDate <= currentdate && c.EndDate >= currentdate && c.Status == 1 && c.CreatedBy == userType.CreatedBY
+                                  select new
+                                  {
+                                      id = c.Id,
+                                      question = c.QuestionName,
+                                      answer = c.Answer
+                                  }).Count();
+
+                    if (getFaq == 0)
+                    {
+                        msgdata.Message = "No Data Found";
+                        msgdata.Status = "0";
+                    }
+                    else
+                    {
+                        msgdata.Status = "200";
+                        msgdata.Message = "Data  fetched successfully.";
+                    }
+
+                }
+                else
+                {
+                    var currentdate = DateTime.Now.Date;
+                    var getFaq = (from c in luminous.FAQs
+                                  where c.StartDate <= currentdate && c.EndDate >= currentdate && c.Status == 1 && c.CreatedBy == userId
+                                  select new
+                                  {
+                                      id = c.Id,
+                                      question = c.QuestionName,
+                                      answer = c.Answer
+                                  }).Count();
+
+                    if (getFaq == 0)
+                    {
+                        msgdata.Message = "No Data Found";
+                        msgdata.Status = "0";
+                    }
+                    else
+                    {
+                        msgdata.Status = "200";
+                        msgdata.Message = "Data  fetched successfully.";
+                    }
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+
+            }
+            return msgdata;
+        }
+
+        public MessageData Checked_data_existornot_SurveyNotificationList(string userid)
+        {
+            LuminousMpartnerIBEntities luminous = new LuminousMpartnerIBEntities();
+            MessageData msgdata = new MessageData();
+
+
+            var userType = luminous.UsersLists.Where(c => c.UserId == userid).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
+            if (userType.CustomerType.ToLower().Equals("dealer"))
+            {
+                var currentdate = DateTime.Now.Date;
+                var data = from cl in luminous.NotificationSurveys
+                           where (
+                               from i in luminous.SaveNotificationSurveys
+                               where i.SurveyID == cl.SurveyID && i.UserId == userType.CreatedBY
+                               select i).Count() == 0
+                           select new { SurveyID = cl.SurveyID, Survey = cl.Survey, StartDate = cl.StartDate, Enddate = cl.Enddate };
+
+                if (data.Count() == 0)
+                {
+                    msgdata.Message = "No Data Found";
+                    msgdata.Status = "0";
+                }
+                else
+                {
+                    msgdata.Status = "200";
+                    msgdata.Message = "Data  fetched successfully.";
+                }
+            }
+
+            else
+            {
+                var currentdate = DateTime.Now.Date;
+                var data = from cl in luminous.NotificationSurveys
+                           where (
+                               from i in luminous.SaveNotificationSurveys
+                               where i.SurveyID == cl.SurveyID && i.UserId == userid
+                               select i).Count() == 0
+                           select new { SurveyID = cl.SurveyID, Survey = cl.Survey, StartDate = cl.StartDate, Enddate = cl.Enddate };
+
+                if (data.Count() == 0)
+                {
+                    msgdata.Message = "No Data Found";
+                    msgdata.Status = "0";
+                }
+                else
+                {
+                    msgdata.Status = "200";
+                    msgdata.Message = "Data  fetched successfully.";
+                }
+
+            }
+
+            return msgdata;
+        }
+
+
+        public MessageData Checked_data_existornot_gallery_data(string userId, int categoryid)
+        {
+            LuminousMpartnerIBEntities luminous = new LuminousMpartnerIBEntities();
+            MessageData msgdata = new MessageData();
+
+            try
+            {
+                var userType = luminous.UsersLists.Where(c => c.UserId == userId).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
+                if (userType.CustomerType.ToLower().Equals("dealer"))
+                {
+                    var getGallery_data = luminous.MediaDatas.Where(c => c.Status == 1 && c.LabelId == categoryid && c.CreatedBy.Equals(userType.CreatedBY)).Count();
+
+                    if (getGallery_data == 0)
+                    {
+                        msgdata.Message = "No Data Found";
+                        msgdata.Status = "0";
+                    }
+                    else
+                    {
+                        msgdata.Status = "200";
+                        msgdata.Message = "Data  fetched successfully.";
+                    }
+                }
+                else
+                {
+                    var getGallery_data = luminous.MediaDatas.Where(c => c.Status == 1 && c.LabelId == categoryid && c.CreatedBy.Equals(userId)).Count();
+                    if (getGallery_data == 0)
+                    {
+                        msgdata.Message = "No Data Found";
+                        msgdata.Status = "0";
+                    }
+                    else
+                    {
+                        msgdata.Status = "200";
+                        msgdata.Message = "Data  fetched successfully.";
+                    }
+                }
+
+            }
+            catch (Exception exc)
+            {
+
+            }
+            return msgdata;
+        }
+
+
+
+
+
+
+
 
 
         #region check three user logged in
         public MessageData checked_ThreeUserLoggedIn(string user_id, string device_id)
         {
-           
+
             var checkstatus = luminous.UserVerifications.Where(c => c.Status == 1 && c.DeviceId == device_id && c.UserId == user_id).Count();
             MessageData msgdata = new MessageData();
             if (checkstatus != 0)
@@ -2209,6 +2791,103 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             //Return the Response
             return res;
         }
+
+        public object getJson_faq(string message, string status, string token, dynamic faqData)
+        {
+
+            var json = JsonConvert.SerializeObject(new
+            {
+                Message = message,
+                Status = status,
+                Token = token,
+                faq_data = faqData
+            });
+
+            //Create a HTTP response - Set to OK
+            var res = Request.CreateResponse(HttpStatusCode.OK);
+            res.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            //Return the Response
+            return res;
+        }
+
+        public object getJson_SurveyNotificationList(string message, string status, string token, dynamic surveyNotificatioData)
+        {
+
+            var json = JsonConvert.SerializeObject(new
+            {
+                Message = message,
+                Status = status,
+                Token = token,
+                survey_notification = surveyNotificatioData
+            });
+
+            //Create a HTTP response - Set to OK
+            var res = Request.CreateResponse(HttpStatusCode.OK);
+            res.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            //Return the Response
+            return res;
+        }
+
+        public object getJson_SaveDealerData(string message, string status, string token)
+        {
+
+            var json = JsonConvert.SerializeObject(new
+            {
+                Message = message,
+                Status = status,
+                Token = token,
+            });
+
+            //Create a HTTP response - Set to OK
+            var res = Request.CreateResponse(HttpStatusCode.OK);
+            res.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            //Return the Response
+            return res;
+        }
+
+        public object getJson_Save_SaleEmployeeData(string message, string status, string token)
+        {
+
+            var json = JsonConvert.SerializeObject(new
+            {
+                Message = message,
+                Status = status,
+                Token = token,
+            });
+
+            //Create a HTTP response - Set to OK
+            var res = Request.CreateResponse(HttpStatusCode.OK);
+            res.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            //Return the Response
+            return res;
+        }
+        public object getJson_gallery_maindata(string message, string status, string token, dynamic carddata)
+        {
+
+            var json = JsonConvert.SerializeObject(new
+            {
+                Message = message,
+                Status = status,
+                Token = token,
+                gallery_data = carddata
+            });
+
+            //Create a HTTP response - Set to OK
+            var res = Request.CreateResponse(HttpStatusCode.OK);
+            res.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            //Return the Response
+            return res;
+        }
+
+
+
+
+
+
+
+
+
+
         #endregion
 
         #region check try catch exception
@@ -2231,7 +2910,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             MessageData msg = new MessageData();
             try
             {
-             
+
                 var check_electexistornot = luminous.UsersLists.Where(c => c.UserId == user_id && c.isActive == 1).Count();
 
 
@@ -2258,7 +2937,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
         public MessageData check_userexist_or_not(string user_id, string device_id, string os_version_code, string device_name, string app_version)
         {
-            
+
             MessageData msg = new MessageData();
             var userexist = luminous.UsersLists.Where(c => c.UserId == user_id && c.isActive == 1).Count();
             if (userexist > 0)
@@ -2319,11 +2998,9 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return msg;
         }
 
-
-
         public MessageData func_OTPAuthentication(string user_id, string device_id, string os_version_code, string device_name, string otp, string os_version_name, string os_type, string app_version)
         {
-        
+
             MessageData msg = new MessageData();
             try
             {
@@ -2399,7 +3076,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         public List<UserPermission> getcustomer_permission(string userid, string language)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
-           
+
             //Get Home Page List
             List<UserPermission> permissionlist = new List<UserPermission>();
             MessageData msgdata = new MessageData();
@@ -2476,13 +3153,13 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             List<HomePage> HomepageData = new List<HomePage>();
             MessageData msgdata = new MessageData();
 
-            
+
 
             try
             {
-                
+
                 var usertype = luminous.UsersLists.Where(c => c.UserId == userid).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
-                if(usertype.CustomerType=="Dealer" || usertype.CustomerType=="DEALER" )
+                if (usertype.CustomerType == "Dealer" || usertype.CustomerType == "DEALER")
                 {
                     userid = usertype.CreatedBY;
                 }
@@ -2492,8 +3169,8 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                     var getHomePage = (from c in luminous.Card_dynamicPage
                                        where c.Startdate <= currentdate && c.Enddate >= currentdate && c.Pagename == pagename && c.Subcatid == parentid && c.Status == 1
-                                       && c.CreatedBy==userid
-                                       
+                                       && c.CreatedBy == userid
+
                                        select new
                                        {
                                            id = c.Id,
@@ -2516,7 +3193,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                                            mainimage = c.SystemMainImage,
                                            status = c.Status,
                                            sequence = c.Sequence,
-                                           createdby=c.CreatedBy
+                                           createdby = c.CreatedBy
                                        }).OrderBy(c => c.sequence).ToList();
 
                     //var getHomePage = luminous.GetHomePage_Parent_ByUserId(userid, pagename).Where(c => c.Startdate <= currentdate && c.Enddate >= currentdate && c.Subcatid == parentid && c.status == 1).ToList();
@@ -2755,7 +3432,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                                         Cdata.main_image = ConfigurationSettings.AppSettings["UatUrl"].ToString() + "MpartnerIB_Api/CardImage/" + cdata.main_image;
 
-                                       
+
 
 
 
@@ -2789,8 +3466,8 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                                         //}
                                         //else
                                         //{
-                                            Cdata.card_action = cdata.card_action;
-                                      //  }
+                                        Cdata.card_action = cdata.card_action;
+                                        //  }
 
 
 
@@ -2825,7 +3502,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                                         Cdata.background_image = ConfigurationSettings.AppSettings["UatUrl"].ToString() + "MpartnerIB_Api/CardImage/" + cdata.background_image;
 
-                                      
+
 
 
                                         if (cdata.main_image == "")
@@ -2869,8 +3546,8 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                                         //else
                                         //{
-                                            Cdata.card_action = cdata.card_action;
-                                       // }
+                                        Cdata.card_action = cdata.card_action;
+                                        // }
 
 
 
@@ -2920,7 +3597,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     }
                     else
                     {
-                        Checked_data_existornot(userid,pagename, "");
+                        Checked_data_existornot(userid, pagename, "");
                     }
 
                 }
@@ -2928,7 +3605,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     if (pagename == "Scheme" || pagename == "Price")
                     {
 
-                        var getprice_scheme_data = luminous.GetPrice_SchemeByUserId(userid, pagename).Where(c => c.Startdate <= currentdate && c.Enddate >= currentdate && c.Pagename == pagename && c.status == 1 && c.Subcatid == parentid && c.CreatedBy==userid).ToList();
+                        var getprice_scheme_data = luminous.GetPrice_SchemeByUserId(userid, pagename).Where(c => c.Startdate <= currentdate && c.Enddate >= currentdate && c.Pagename == pagename && c.status == 1 && c.Subcatid == parentid && c.CreatedBy == userid).ToList();
 
                         var getHomePage = (from c in getprice_scheme_data
 
@@ -2999,8 +3676,8 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                                 }
                                 else
                                 {
-                                   
-                                        pr.background_image = ConfigurationSettings.AppSettings["UatUrl"].ToString() + "MpartnerIB_Api/CardImage/" + data.background_image;
+
+                                    pr.background_image = ConfigurationSettings.AppSettings["UatUrl"].ToString() + "MpartnerIB_Api/CardImage/" + data.background_image;
 
 
                                 }
@@ -3029,7 +3706,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                                     pr.main_image = ConfigurationSettings.AppSettings["UatUrl"].ToString() + "MpartnerIB_Api/CardImage/" + data.mainimage;
 
-                                 
+
 
 
                                 }
@@ -3095,7 +3772,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                         }
                         else
                         {
-                            Checked_data_existornot(userid,pagename, "");
+                            Checked_data_existornot(userid, pagename, "");
                         }
 
 
@@ -3155,10 +3832,10 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return pcategory;
         }
 
-        public List<ProductsCategory> getProductCategory(string userid,string pagename)
+        public List<ProductsCategory> getProductCategory(string userid, string pagename)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
-            
+
             //Get Home Page List
             List<ProductsCategory> Pcategorylist = new List<ProductsCategory>();
             MessageData msgdata = new MessageData();
@@ -3172,7 +3849,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     userid = usertype.CreatedBY;
                 }
 
-                var getProductcategory = luminous.ProductCatergories.Where(c => c.Pstatus == 1 && c.CreatedBy==userid).Select(c => new { c.id, c.PName, c.PdfSystemName, c.ordersequence }).OrderBy(c => c.ordersequence).ToList();
+                var getProductcategory = luminous.ProductCatergories.Where(c => c.Pstatus == 1 && c.CreatedBy == userid).Select(c => new { c.id, c.PName, c.PdfSystemName, c.ordersequence }).OrderBy(c => c.ordersequence).ToList();
 
                 if (getProductcategory.Count > 0)
                 {
@@ -3226,10 +3903,10 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return Pcategorylist;
         }
 
-        public List<ProductCatalog> getProduct_Catalog(string userid,int productcategoryid)
+        public List<ProductCatalog> getProduct_Catalog(string userid, int productcategoryid)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
-            
+
             //Get Home Page List
             List<ProductCatalog> Pcataloglist = new List<ProductCatalog>();
             MessageData msgdata = new MessageData();
@@ -3252,7 +3929,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                                           join attribute in luminous.ProductLevelOnes
                                           on prdcat.ProductLevelOne equals attribute.id into ps
                                           from p in ps.DefaultIfEmpty()
-                                          where prdcat.productCategoryid == productcategoryid && prdcat.CreatedBy==userid && prdcat.PlTwStatus == 1
+                                          where prdcat.productCategoryid == productcategoryid && prdcat.CreatedBy == userid && prdcat.PlTwStatus == 1
                                           select new
                                           {
                                               Id = prdcat.id,
@@ -3305,649 +3982,649 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                                           }
                     ).ToList();
 
-               
-                    // Checked_data_existornot(pagename);
-                    foreach (var data in getproduct_catalog)
+
+                // Checked_data_existornot(pagename);
+                foreach (var data in getproduct_catalog)
+                {
+                    List<Technicalspecification> techspecification = new List<Technicalspecification>();
+                    ProductCatalog pcatalog = new ProductCatalog();
+                    pcatalog.id = data.Id;
+                    var pchildcatalog = luminous.ProductthreeImageMappings.Where(c => c.ProductLevelThreeid == pcatalog.id).Select(c => c.Primage).Take(1).Count();
+                    if (pchildcatalog == 0)
                     {
-                        List<Technicalspecification> techspecification = new List<Technicalspecification>();
-                       ProductCatalog pcatalog = new ProductCatalog();
-                        pcatalog.id = data.Id;
-                        var pchildcatalog = luminous.ProductthreeImageMappings.Where(c => c.ProductLevelThreeid == pcatalog.id).Select(c => c.Primage).Take(1).Count();
-                        if (pchildcatalog == 0)
+                        if (data.productimages == "")
                         {
-                            if (data.productimages == "")
-                            {
-                                pcatalog.productcatalog_image_url = "";
-                            }
+                            pcatalog.productcatalog_image_url = "";
+                        }
+                    }
+                    else
+                    {
+                        var pchildcatalogimg = luminous.ProductthreeImageMappings.Where(c => c.ProductLevelThreeid == pcatalog.id).Select(c => c.Primage).Take(1).SingleOrDefault();
+                        pcatalog.productcatalog_image_url = ConfigurationSettings.AppSettings["UatUrl"].ToString() + "ProductImages/" + pchildcatalogimg;
+                    }
+                    if (data.name == "")
+                    {
+                        pcatalog.productioncatalog_name = "";
+                    }
+                    else
+                    {
+                        pcatalog.productioncatalog_name = data.name;
+                    }
+                    if (data.rating == "")
+                    {
+                        pcatalog.productioncatalog_rating = "";
+                    }
+                    else
+                    {
+                        pcatalog.productioncatalog_rating = data.rating;
+                    }
+                    if (data.keyfeature == "")
+                    {
+                        pcatalog.keyfeature = "";
+                    }
+                    else
+                    {
+                        pcatalog.keyfeature = data.keyfeature;
+                    }
+                    if (data.warrenty == "")
+                    {
+                        pcatalog.warrenty = "";
+                    }
+                    else
+                    {
+                        pcatalog.warrenty = data.warrenty;
+                    }
+                    if (data.prd2name == "")
+                    {
+                        pcatalog.productleveltwo = "";
+                    }
+                    else
+                    {
+                        pcatalog.productleveltwo = data.prd2name;
+                    }
+                    if (data.attribute_name == "" || data.attribute_name == null)
+                    {
+                        pcatalog.attribute_name = "";
+                    }
+                    else
+                    {
+                        pcatalog.attribute_name = data.attribute_name;
+                    }
+                    if (productcategoryid == 30) //HUPS
+                    {
+                        if (data.maxcurrentcharge == "" || data.maxcurrentcharge == null)
+                        {
+                            pcatalog.tech_specification = null;
                         }
                         else
                         {
-                            var pchildcatalogimg = luminous.ProductthreeImageMappings.Where(c => c.ProductLevelThreeid == pcatalog.id).Select(c => c.Primage).Take(1).SingleOrDefault();
-                            pcatalog.productcatalog_image_url = ConfigurationSettings.AppSettings["UatUrl"].ToString() + "ProductImages/" + pchildcatalogimg;
+
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Maximum Charging current";
+                            techdata.Value = data.maxcurrentcharge;
+
+
+                            //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+
                         }
-                        if (data.name == "")
+
+                        if (data.noofbattery == "" || data.noofbattery == null)
                         {
-                            pcatalog.productioncatalog_name = "";
+                            pcatalog.tech_specification = null;
                         }
                         else
                         {
-                            pcatalog.productioncatalog_name = data.name;
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Number of battery";
+                            techdata.Value = data.noofbattery;
+                            //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+
                         }
-                        if (data.rating == "")
+
+                        if (data.supportedbatterytype == "" || data.supportedbatterytype == null)
                         {
-                            pcatalog.productioncatalog_rating = "";
+                            pcatalog.tech_specification = null;
                         }
                         else
                         {
-                            pcatalog.productioncatalog_rating = data.rating;
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Supported battery type";
+                            techdata.Value = data.supportedbatterytype;
+                            //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+
                         }
-                        if (data.keyfeature == "")
+
+                        if (data.maxbulbload == "" || data.maxbulbload == null)
                         {
-                            pcatalog.keyfeature = "";
+                            pcatalog.tech_specification = null;
                         }
                         else
                         {
-                            pcatalog.keyfeature = data.keyfeature;
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Maximum bulb load";
+                            techdata.Value = data.maxbulbload;
+                            //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+
                         }
-                        if (data.warrenty == "")
+
+                        if (data.technology == "" || data.technology == null)
                         {
-                            pcatalog.warrenty = "";
+                            pcatalog.tech_specification = null;
                         }
                         else
                         {
-                            pcatalog.warrenty = data.warrenty;
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Technology";
+                            techdata.Value = data.technology;
+                            //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+
                         }
-                        if (data.prd2name == "")
+                    }
+                    if (productcategoryid == 31)
+                    {
+                        if (data.nominalvoltage == "" || data.nominalvoltage == null)
                         {
-                            pcatalog.productleveltwo = "";
+                            pcatalog.tech_specification = null;
                         }
                         else
                         {
-                            pcatalog.productleveltwo = data.prd2name;
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Nominal Voltage";
+                            techdata.Value = data.nominalvoltage;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
                         }
-                        if (data.attribute_name == "" || data.attribute_name == null)
+
+                        if (data.dimensionmm == "" || data.dimensionmm == null)
                         {
-                            pcatalog.attribute_name = "";
+                            pcatalog.tech_specification = null;
                         }
                         else
                         {
-                            pcatalog.attribute_name = data.attribute_name;
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Dimension(in MM)";
+                            techdata.Value = data.dimensionmm;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
                         }
-                        if (productcategoryid == 30) //HUPS
+
+                        if (data.weightfilledbattery == "" || data.weightfilledbattery == null)
                         {
-                            if (data.maxcurrentcharge == "" || data.maxcurrentcharge == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Maximum Charging current";
-                                techdata.Value = data.maxcurrentcharge;
-
-
-                                //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-
-                            }
-
-                            if (data.noofbattery == "" || data.noofbattery == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Number of battery";
-                                techdata.Value = data.noofbattery;
-                                //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-
-                            }
-
-                            if (data.supportedbatterytype == "" || data.supportedbatterytype == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Supported battery type";
-                                techdata.Value = data.supportedbatterytype;
-                                //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-
-                            }
-
-                            if (data.maxbulbload == "" || data.maxbulbload == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Maximum bulb load";
-                                techdata.Value = data.maxbulbload;
-                                //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-
-                            }
-
-                            if (data.technology == "" || data.technology == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Technology";
-                                techdata.Value = data.technology;
-                                //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-
-                            }
+                            pcatalog.tech_specification = null;
                         }
-                        if (productcategoryid == 31)
+                        else
                         {
-                            if (data.nominalvoltage == "" || data.nominalvoltage == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Nominal Voltage";
-                                techdata.Value = data.nominalvoltage;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.dimensionmm == "" || data.dimensionmm == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Dimension(in MM)";
-                                techdata.Value = data.dimensionmm;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.weightfilledbattery == "" || data.weightfilledbattery == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Weight (Filled battery)";
-                                techdata.Value = data.weightfilledbattery;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Weight (Filled battery)";
+                            techdata.Value = data.weightfilledbattery;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
                         }
-                        //New CR
-                        if (productcategoryid == 32) //Charge Controller
+
+
+                    }
+                    //New CR
+                    if (productcategoryid == 32) //Charge Controller
+                    {
+                        if (data.DCOutputVoltage == "" || data.DCOutputVoltage == null)
                         {
-                            if (data.DCOutputVoltage == "" || data.DCOutputVoltage == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "DC Output Voltage (V)";
-                                techdata.Value = data.DCOutputVoltage;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.DCOutputCurrent == "" || data.DCOutputCurrent == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "DC Output Current (Amp.)";
-                                techdata.Value = data.DCOutputCurrent;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Max Supported Panel power (Wp)";
-                                techdata.Value = data.MaxSupportedPanelpower;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.MaxSolarPanelVoltage == "" || data.MaxSolarPanelVoltage == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Max Solar Panel Voltage (V)";
-                                techdata.Value = data.MaxSolarPanelVoltage;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
+                            pcatalog.tech_specification = null;
                         }
-
-                        else if (productcategoryid == 33) //HKVA
+                        else
                         {
-                            if (data.VA == "" || data.VA == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "VA";
-                                techdata.Value = data.VA;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.maxcurrentcharge == "" || data.maxcurrentcharge == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Maximum Charging current";
-                                techdata.Value = data.maxcurrentcharge;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.noofbattery == "" || data.noofbattery == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Number of battery";
-                                techdata.Value = data.noofbattery;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.supportedbatterytype == "" || data.supportedbatterytype == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Supported battery type";
-                                techdata.Value = data.supportedbatterytype;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "DC Output Voltage (V)";
+                            techdata.Value = data.DCOutputVoltage;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
                         }
 
-                        else if (productcategoryid == 34) //Panel
+                        if (data.DCOutputCurrent == "" || data.DCOutputCurrent == null)
                         {
-                            if (data.NoofCells == "" || data.NoofCells == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "No. of Cells";
-                                techdata.Value = data.NoofCells;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.PeakPowerPMax == "" || data.PeakPowerPMax == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Peak Power PMax (Wp)";
-                                techdata.Value = data.PeakPowerPMax;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.RatedModuleVoltage == "" || data.RatedModuleVoltage == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Rated Module Voltage (V)";
-                                techdata.Value = data.RatedModuleVoltage;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.MaximumPowerVoltage == "" || data.MaximumPowerVoltage == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Maximum Power Voltage Vmp (V)";
-                                techdata.Value = data.MaximumPowerVoltage;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.MaximumPowerCurrent == "" || data.MaximumPowerCurrent == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Maximum Power Current Imp (A)";
-                                techdata.Value = data.MaximumPowerCurrent;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
+                            pcatalog.tech_specification = null;
                         }
-
-                        else if (productcategoryid == 35) //Retrofit
+                        else
                         {
-                            if (data.NominalDCOutputVoltage == "" || data.NominalDCOutputVoltage == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Nominal DC Output Voltage (V)";
-                                techdata.Value = data.NominalDCOutputVoltage;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.MaxDCOutputCurrent == "" || data.MaxDCOutputCurrent == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Max DC Output Current (Amp.)";
-                                techdata.Value = data.MaxDCOutputCurrent;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Max Supported Panel power (Wp)";
-                                techdata.Value = data.MaxSupportedPanelpower;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.MaxSolarPanelVoltage == "" || data.MaxSolarPanelVoltage == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Max Solar Panel Voltage (V)";
-                                techdata.Value = data.MaxSolarPanelVoltage;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.Noof12VBatteriesinSeries == "" || data.Noof12VBatteriesinSeries == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "No. of 12V Batteries in Series";
-                                techdata.Value = data.Noof12VBatteriesinSeries;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "DC Output Current (Amp.)";
+                            techdata.Value = data.DCOutputCurrent;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
                         }
 
-                        else if (productcategoryid == 36) //Solar Battery
+                        if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
                         {
-                            if (data.RatedCapacity == "" || data.RatedCapacity == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Rated Capacity (Ah) - C10";
-                                techdata.Value = data.RatedCapacity;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.SolarLength == "" || data.SolarLength == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Length +- 3 mm";
-                                techdata.Value = data.SolarLength;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.SolarWidth == "" || data.SolarWidth == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Width +- 3 mm";
-                                techdata.Value = data.SolarWidth;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.Heightuptofloattop == "" || data.Heightuptofloattop == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Height upto float top +- 3 mm";
-                                techdata.Value = data.Heightuptofloattop;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.DryWeight == "" || data.DryWeight == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Dry Weight +- 5% kg";
-                                techdata.Value = data.DryWeight;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
+                            pcatalog.tech_specification = null;
                         }
-
-                        else if (productcategoryid == 37) //Solar HUPS
+                        else
                         {
-                            if (data.RatedACpower == "" || data.RatedACpower == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Rated AC power (VA)";
-                                techdata.Value = data.RatedACpower;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Max Supported Panel power (Wp)";
-                                techdata.Value = data.MaxSupportedPanelpower;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.OperatingVoltage == "" || data.OperatingVoltage == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Operating Voltage";
-                                techdata.Value = data.OperatingVoltage;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.ChargeControllerRating == "" || data.ChargeControllerRating == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Charge Controller Rating";
-                                techdata.Value = data.ChargeControllerRating;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.NominalBatterybankvoltage == "" || data.NominalBatterybankvoltage == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Nominal Battery bank voltage";
-                                techdata.Value = data.NominalBatterybankvoltage;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Max Supported Panel power (Wp)";
+                            techdata.Value = data.MaxSupportedPanelpower;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
                         }
 
-                        else if (productcategoryid == 38) //Stabilizers
+                        if (data.MaxSolarPanelVoltage == "" || data.MaxSolarPanelVoltage == null)
                         {
-                            if (data.InputVoltageWorkingRange == "" || data.InputVoltageWorkingRange == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Input Voltage Working Range";
-                                techdata.Value = data.InputVoltageWorkingRange;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.OutputVoltageWorkingRange == "" || data.OutputVoltageWorkingRange == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Output Voltage Working Range";
-                                techdata.Value = data.OutputVoltageWorkingRange;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.MainsACLowCut == "" || data.MainsACLowCut == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Mains AC Low Cut";
-                                techdata.Value = data.MainsACLowCut;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
-                            if (data.MainACLowCutRecovery == "" || data.MainACLowCutRecovery == null)
-                            {
-                                pcatalog.tech_specification = null;
-                            }
-                            else
-                            {
-                                Technicalspecification techdata = new Technicalspecification();
-                                techdata.ColumnName = "Mains AC Low Cut Recovery";
-                                techdata.Value = data.MainACLowCutRecovery;
-                                techspecification.Add(techdata);
-                                pcatalog.tech_specification = techspecification;
-                            }
-
+                            pcatalog.tech_specification = null;
                         }
-                        //End New CR
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Max Solar Panel Voltage (V)";
+                            techdata.Value = data.MaxSolarPanelVoltage;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+                    }
 
-                        // pcatalog.tech_specification = techspecification;
+                    else if (productcategoryid == 33) //HKVA
+                    {
+                        if (data.VA == "" || data.VA == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "VA";
+                            techdata.Value = data.VA;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
 
-                        Pcataloglist.Add(pcatalog);
+                        if (data.maxcurrentcharge == "" || data.maxcurrentcharge == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Maximum Charging current";
+                            techdata.Value = data.maxcurrentcharge;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.noofbattery == "" || data.noofbattery == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Number of battery";
+                            techdata.Value = data.noofbattery;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.supportedbatterytype == "" || data.supportedbatterytype == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Supported battery type";
+                            techdata.Value = data.supportedbatterytype;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
 
                     }
 
-                    // }
+                    else if (productcategoryid == 34) //Panel
+                    {
+                        if (data.NoofCells == "" || data.NoofCells == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "No. of Cells";
+                            techdata.Value = data.NoofCells;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
 
-                
+                        if (data.PeakPowerPMax == "" || data.PeakPowerPMax == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Peak Power PMax (Wp)";
+                            techdata.Value = data.PeakPowerPMax;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.RatedModuleVoltage == "" || data.RatedModuleVoltage == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Rated Module Voltage (V)";
+                            techdata.Value = data.RatedModuleVoltage;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.MaximumPowerVoltage == "" || data.MaximumPowerVoltage == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Maximum Power Voltage Vmp (V)";
+                            techdata.Value = data.MaximumPowerVoltage;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.MaximumPowerCurrent == "" || data.MaximumPowerCurrent == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Maximum Power Current Imp (A)";
+                            techdata.Value = data.MaximumPowerCurrent;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+                    }
+
+                    else if (productcategoryid == 35) //Retrofit
+                    {
+                        if (data.NominalDCOutputVoltage == "" || data.NominalDCOutputVoltage == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Nominal DC Output Voltage (V)";
+                            techdata.Value = data.NominalDCOutputVoltage;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.MaxDCOutputCurrent == "" || data.MaxDCOutputCurrent == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Max DC Output Current (Amp.)";
+                            techdata.Value = data.MaxDCOutputCurrent;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Max Supported Panel power (Wp)";
+                            techdata.Value = data.MaxSupportedPanelpower;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.MaxSolarPanelVoltage == "" || data.MaxSolarPanelVoltage == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Max Solar Panel Voltage (V)";
+                            techdata.Value = data.MaxSolarPanelVoltage;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.Noof12VBatteriesinSeries == "" || data.Noof12VBatteriesinSeries == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "No. of 12V Batteries in Series";
+                            techdata.Value = data.Noof12VBatteriesinSeries;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+                    }
+
+                    else if (productcategoryid == 36) //Solar Battery
+                    {
+                        if (data.RatedCapacity == "" || data.RatedCapacity == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Rated Capacity (Ah) - C10";
+                            techdata.Value = data.RatedCapacity;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.SolarLength == "" || data.SolarLength == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Length +- 3 mm";
+                            techdata.Value = data.SolarLength;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.SolarWidth == "" || data.SolarWidth == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Width +- 3 mm";
+                            techdata.Value = data.SolarWidth;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.Heightuptofloattop == "" || data.Heightuptofloattop == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Height upto float top +- 3 mm";
+                            techdata.Value = data.Heightuptofloattop;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.DryWeight == "" || data.DryWeight == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Dry Weight +- 5% kg";
+                            techdata.Value = data.DryWeight;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                    }
+
+                    else if (productcategoryid == 37) //Solar HUPS
+                    {
+                        if (data.RatedACpower == "" || data.RatedACpower == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Rated AC power (VA)";
+                            techdata.Value = data.RatedACpower;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Max Supported Panel power (Wp)";
+                            techdata.Value = data.MaxSupportedPanelpower;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.OperatingVoltage == "" || data.OperatingVoltage == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Operating Voltage";
+                            techdata.Value = data.OperatingVoltage;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.ChargeControllerRating == "" || data.ChargeControllerRating == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Charge Controller Rating";
+                            techdata.Value = data.ChargeControllerRating;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.NominalBatterybankvoltage == "" || data.NominalBatterybankvoltage == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Nominal Battery bank voltage";
+                            techdata.Value = data.NominalBatterybankvoltage;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                    }
+
+                    else if (productcategoryid == 38) //Stabilizers
+                    {
+                        if (data.InputVoltageWorkingRange == "" || data.InputVoltageWorkingRange == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Input Voltage Working Range";
+                            techdata.Value = data.InputVoltageWorkingRange;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.OutputVoltageWorkingRange == "" || data.OutputVoltageWorkingRange == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Output Voltage Working Range";
+                            techdata.Value = data.OutputVoltageWorkingRange;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.MainsACLowCut == "" || data.MainsACLowCut == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Mains AC Low Cut";
+                            techdata.Value = data.MainsACLowCut;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                        if (data.MainACLowCutRecovery == "" || data.MainACLowCutRecovery == null)
+                        {
+                            pcatalog.tech_specification = null;
+                        }
+                        else
+                        {
+                            Technicalspecification techdata = new Technicalspecification();
+                            techdata.ColumnName = "Mains AC Low Cut Recovery";
+                            techdata.Value = data.MainACLowCutRecovery;
+                            techspecification.Add(techdata);
+                            pcatalog.tech_specification = techspecification;
+                        }
+
+                    }
+                    //End New CR
+
+                    // pcatalog.tech_specification = techspecification;
+
+                    Pcataloglist.Add(pcatalog);
+
+                }
+
+                // }
+
+
 
 
             }
@@ -3960,9 +4637,9 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return Pcataloglist;
         }
 
-        public List<Product_Search> getProduct_Search(string userid,string search_key)
+        public List<Product_Search> getProduct_Search(string userid, string search_key)
         {
-            
+
             //Get Home Page List
             List<Product_Search> Pcataloglist = new List<Product_Search>();
             MessageData msgdata = new MessageData();
@@ -3978,7 +4655,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 }
 
                 var getproduct_search = (from prdcat in luminous.ProductLevelThrees
-                                         where prdcat.PlTwStatus == 1 && prdcat.CreatedBy==userid && prdcat.Name.Contains(search_key)
+                                         where prdcat.PlTwStatus == 1 && prdcat.CreatedBy == userid && prdcat.Name.Contains(search_key)
                                          select new
                                          {
                                              Id = prdcat.id,
@@ -4021,7 +4698,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             {
 
 
-                
+
             }
             return Pcataloglist;
         }
@@ -4029,7 +4706,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         public List<Product_Searchdata> getProduct_SearchData(string productname, string plus_flag, string userid)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
-            
+
             //Get Home Page List
             List<Product_Searchdata> Pcataloglist = new List<Product_Searchdata>();
             MessageData msgdata = new MessageData();
@@ -4067,7 +4744,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                                               on prdcat.productCategoryid equals prodcategory.id
 
 
-                                              where prdcat.Name == replacePlus && prdcat.PlTwStatus == 1 && prdcat.CreatedBy==userid && prd2.PlTwStatus == 1
+                                              where prdcat.Name == replacePlus && prdcat.PlTwStatus == 1 && prdcat.CreatedBy == userid && prd2.PlTwStatus == 1
                                               select new
                                               {
                                                   productcategoryid = prodcategory.id,
@@ -4144,7 +4821,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         }
 
 
-        public List<Catalog_Menu_Upper> getProduct_Catalog_Upper(string userid,int productcategoryid)
+        public List<Catalog_Menu_Upper> getProduct_Catalog_Upper(string userid, int productcategoryid)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
 
@@ -4153,7 +4830,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             {
                 userid = usertype.CreatedBY;
             }
-           
+
             //Get Home Page List
             List<Catalog_Menu_Upper> cat_menu_upper = new List<Catalog_Menu_Upper>();
 
@@ -4165,48 +4842,48 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             {
 
 
-                var getproduct_catalog = luminous.getCatalog_Upper(userid,productcategoryid).ToList();
+                var getproduct_catalog = luminous.getCatalog_Upper(userid, productcategoryid).ToList();
 
-              
-                    // Checked_data_existornot(pagename);
-                    foreach (var data in getproduct_catalog)
+
+                // Checked_data_existornot(pagename);
+                foreach (var data in getproduct_catalog)
+                {
+
+                    Catalog_Menu_Upper cat_upper = new Catalog_Menu_Upper();
+                    cat_upper.catalog_menu_upper_id = data.id;
+
+
+                    if (data.Name == "")
                     {
-
-                        Catalog_Menu_Upper cat_upper = new Catalog_Menu_Upper();
-                        cat_upper.catalog_menu_upper_id = data.id;
-
-
-                        if (data.Name == "")
+                        cat_upper.catalog_menu_upper_name = "";
+                        cat_upper.filter_key = "";
+                    }
+                    else
+                    {
+                        if (data.CreatedBy == "prodlevelone")
                         {
-                            cat_upper.catalog_menu_upper_name = "";
-                            cat_upper.filter_key = "";
+                            cat_upper.filter_key = "attribute_name";
+                            cat_upper.catalog_menu_upper_name = data.Name;
                         }
                         else
                         {
-                            if (data.CreatedBy == "prodlevelone")
-                            {
-                                cat_upper.filter_key = "attribute_name";
-                                cat_upper.catalog_menu_upper_name = data.Name;
-                            }
-                            else
-                            {
-                                cat_upper.filter_key = "productleveltwo";
-                                cat_upper.catalog_menu_upper_name = data.Name;
-                            }
-
+                            cat_upper.filter_key = "productleveltwo";
+                            cat_upper.catalog_menu_upper_name = data.Name;
                         }
-
-
-
-                        cat_menu_upper.Add(cat_upper);
-
 
                     }
 
-                    // }
 
-                
-                
+
+                    cat_menu_upper.Add(cat_upper);
+
+
+                }
+
+                // }
+
+
+
 
 
             }
@@ -4222,12 +4899,12 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         public List<ContactUs> getContactUs(string userid)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
-            
+
             //Get Home Page List
             List<ContactUs> contactus_data = new List<ContactUs>();
             MessageData msgdata = new MessageData();
 
-           
+
             //Get Card Data List
 
             try
@@ -4237,7 +4914,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 {
                     userid = usertype.CreatedBY;
                 }
-                var getContact = luminous.contactUsDetails.Where(c => c.Cstatus == 1 && c.CreatedBy==userid).Select(c => new { c.id, c.Contact_Us_Type, c.CAddress, c.PhoneNumber, c.Email, c.Fax }).ToList();
+                var getContact = luminous.contactUsDetails.Where(c => c.Cstatus == 1 && c.CreatedBy == userid).Select(c => new { c.id, c.Contact_Us_Type, c.CAddress, c.PhoneNumber, c.Email, c.Fax }).ToList();
 
 
 
@@ -4313,7 +4990,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         public MessageData save_contactus_suggetion(string userid, string custname, string email, string message, byte[] image, string filename)
         {
             string Filename = "";
-          
+
             MessageData msgdata = new MessageData();
             if (image != null)
             {
@@ -4323,18 +5000,18 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 bw.Write(image);
                 bw.Close();
             }
-             var contectus_suggetion=new Suggestion();
-            
-                contectus_suggetion.Suggestion1 = message;
-                contectus_suggetion.Email = email;
-                contectus_suggetion.createdBy = userid;
-                contectus_suggetion.CustName = custname;
-                contectus_suggetion.CreateDate = DateTime.Now;
-                contectus_suggetion.ImageName = Filename;
+            var contectus_suggetion = new Suggestion();
+
+            contectus_suggetion.Suggestion1 = message;
+            contectus_suggetion.Email = email;
+            contectus_suggetion.createdBy = userid;
+            contectus_suggetion.CustName = custname;
+            contectus_suggetion.CreateDate = DateTime.Now;
+            contectus_suggetion.ImageName = Filename;
 
 
-                luminous.Suggestions.Add(contectus_suggetion);
-                         
+            luminous.Suggestions.Add(contectus_suggetion);
+
 
             int savestatus = luminous.SaveChanges();
 
@@ -4359,7 +5036,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         public List<Gallery_Menu_Upper> getGalleryUpperData(string userid)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
-           
+
             //Get Home Page List
             List<Gallery_Menu_Upper> gallery_data = new List<Gallery_Menu_Upper>();
             MessageData msgdata = new MessageData();
@@ -4410,7 +5087,294 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return gallery_data;
         }
 
+        public dynamic getFaqData(string userId)
+        {
+            LuminousMpartnerIBEntities luminous = new LuminousMpartnerIBEntities();
+            try
+            {
+                var userType = luminous.UsersLists.Where(c => c.UserId == userId).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
+                if (userType.CustomerType.ToLower().Equals("dealer"))
+                {
+                    var currentdate = DateTime.Now.Date;
+                    var getFaqList = (from c in luminous.FAQs
+                                      where c.StartDate <= currentdate && c.EndDate >= currentdate && c.Status == 1 && c.CreatedBy == userType.CreatedBY
+                                      select new
+                                      {
+                                          id = c.Id,
+                                          question = c.QuestionName,
+                                          answer = c.Answer
+                                      }).Count();
+                    return getFaqList;
+                }
+                else
+                {
+                    var currentdate = DateTime.Now.Date;
+                    var getFaqList = (from c in luminous.FAQs
+                                      where c.StartDate <= currentdate && c.EndDate >= currentdate && c.Status == 1 && c.CreatedBy == userId
+                                      select new
+                                      {
+                                          id = c.Id,
+                                          question = c.QuestionName,
+                                          answer = c.Answer
+                                      }).Count();
+                    return getFaqList;
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                return ex;
+            }
+
+        }
+
+        public dynamic func_SurveyNotificationList(string userid)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+            LuminousMpartnerIBEntities luminous = new LuminousMpartnerIBEntities();
+            try
+            {
+                var userType = luminous.UsersLists.Where(c => c.UserId == userid).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
+                if (userType.CustomerType.ToLower().Equals("dealer"))
+                {
+
+                    var currentdate = DateTime.Now.Date;
+
+                    var survey_data = from cl in luminous.NotificationSurveys
+                                      where (
+                                          from i in luminous.SaveNotificationSurveys
+                                          where i.SurveyID == cl.SurveyID && i.UserId == userType.CreatedBY
+                                          select i).Count() == 0
+                                      select new { SurveyID = cl.SurveyID, Survey = cl.Survey, StartDate = cl.StartDate, Enddate = cl.Enddate, cl.ContestId, cl.Status };
+
+                    var Surveylist = from cdata in survey_data
+                                     where cdata.StartDate <= currentdate && cdata.Enddate >= currentdate && cdata.ContestId == 1
+                                     && cdata.Status == 1
+                                     select new
+                                     {
+                                         SurveyID = cdata.SurveyID,
+                                         Survey = cdata.Survey
+                                     };
+                    return Surveylist;
+                }
+                else
+                {
+                    var currentdate = DateTime.Now.Date;
+
+                    var survey_data = from cl in luminous.NotificationSurveys
+                                      where (
+                                          from i in luminous.SaveNotificationSurveys
+                                          where i.SurveyID == cl.SurveyID && i.UserId == userid
+                                          select i).Count() == 0
+                                      select new { SurveyID = cl.SurveyID, Survey = cl.Survey, StartDate = cl.StartDate, Enddate = cl.Enddate, cl.ContestId, cl.Status };
+
+                    var Surveylist = from cdata in survey_data
+                                     where cdata.StartDate <= currentdate && cdata.Enddate >= currentdate && cdata.ContestId == 1
+                                     && cdata.Status == 1
+                                     select new
+                                     {
+                                         SurveyID = cdata.SurveyID,
+                                         Survey = cdata.Survey
+                                     };
+                    return Surveylist;
+                }
+            }
+            catch (Exception exc)
+            {
+                SaveServiceLog("", url, "", "", 1, exc.InnerException.ToString(), "", DateTime.Now, "", "", "", "");
+                return exc;
+            }
+        }
+
+        public MessageData func_SaveDealerData(string userid, JObject obj)
+        {
+            MessageData msg = new MessageData();
+            try
+            {
+                JToken JtokenResult = JToken.Parse(JsonConvert.SerializeObject(obj));
+                var dealerData = JsonConvert.DeserializeObject<DealerData>(JtokenResult["CreateDealer"].ToString());
+                UsersList ul = new UsersList();
+                ul.UserId = dealerData.sapcode;
+                ul.CustomerType = "DEALER";
+                ul.Dis_Sap_Code = dealerData.sapcode;
+                ul.Dis_Name = dealerData.DealerName;
+                ul.Dis_Address1 = dealerData.DealerAddress;
+                ul.Dis_City = dealerData.City;
+                ul.Dis_State = dealerData.State;
+                ul.Dis_ContactNo = dealerData.ContactNo;
+                ul.Dis_Email = dealerData.Email;
+                ul.isActive = 1;
+                ul.CreatedON = DateTime.Now;
+                ul.CreatedBY = userid;
+                ul.Latitude = Convert.ToDecimal(dealerData.Latitude);
+                ul.Longitude = Convert.ToDecimal(dealerData.Longitude);
+
+                luminous.UsersLists.Add(ul);
+                Dealer_Save_Image dsi = new Dealer_Save_Image();
+                foreach (var item in dealerData.ImageList)
+                {
+
+                    if (item.Image1 != null)
+                    {
+                        dsi.DealerID = 12345;
+                        string Filename = "Image1" + DateTime.Now.ToString("ddMMyyhhmmss") + ".jpg";
+                        string str = Path.Combine(HttpContext.Current.Server.MapPath("~/MpartnerIB_Api/DealerImage/"), Filename);
+                        BinaryWriter bw = new BinaryWriter(new FileStream(str, FileMode.Create, FileAccess.Write));
+                        bw.Write(item.Image1);
+                        bw.Close();
+                        dsi.ImageName = Filename;
+                        dsi.status = 1;
+                        dsi.CreatedBy = userid;
+                        dsi.CreatedOn = DateTime.Now;
+                        luminous.Dealer_Save_Image.Add(dsi);
+                        luminous.SaveChanges();
+                    }
+
+                    if (item.Image2 != null)
+                    {
+                        dsi.DealerID = 12345;
+                        string Filename = "Image2" + DateTime.Now.ToString("ddMMyyhhmmss") + ".jpg";
+                        string str = Path.Combine(HttpContext.Current.Server.MapPath("~/MpartnerIB_Api/DealerImage/"), Filename);
+                        BinaryWriter bw = new BinaryWriter(new FileStream(str, FileMode.Create, FileAccess.Write));
+                        bw.Write(item.Image2);
+                        bw.Close();
+                        dsi.ImageName = Filename;
+                        dsi.status = 1;
+                        dsi.CreatedBy = userid;
+                        dsi.CreatedOn = DateTime.Now;
+                        luminous.Dealer_Save_Image.Add(dsi);
+                        luminous.SaveChanges();
+                    }
+
+                    if (item.Image3 != null)
+                    {
+                        dsi.DealerID = 12345;
+                        string Filename = "Image3" + DateTime.Now.ToString("ddMMyyhhmmss") + ".jpg";
+                        string str = Path.Combine(HttpContext.Current.Server.MapPath("~/MpartnerIB_Api/DealerImage/"), Filename);
+                        BinaryWriter bw = new BinaryWriter(new FileStream(str, FileMode.Create, FileAccess.Write));
+                        bw.Write(item.Image3);
+                        bw.Close();
+                        dsi.ImageName = Filename;
+                        dsi.status = 1;
+                        dsi.CreatedBy = userid;
+                        dsi.CreatedOn = DateTime.Now;
+                        luminous.Dealer_Save_Image.Add(dsi);
+                        luminous.SaveChanges();
+                    }
+
+                    if (item.Image4 != null)
+                    {
+                        dsi.DealerID = 12345;
+                        string Filename = "Image4" + DateTime.Now.ToString("ddMMyyhhmmss") + ".jpg";
+                        string str = Path.Combine(HttpContext.Current.Server.MapPath("~/MpartnerIB_Api/DealerImage/"), Filename);
+                        BinaryWriter bw = new BinaryWriter(new FileStream(str, FileMode.Create, FileAccess.Write));
+                        bw.Write(item.Image4);
+                        bw.Close();
+                        dsi.ImageName = Filename;
+                        dsi.status = 1;
+                        dsi.CreatedBy = userid;
+                        dsi.CreatedOn = DateTime.Now;
+                        luminous.Dealer_Save_Image.Add(dsi);
+                        luminous.SaveChanges();
+                    }
+
+
+                }
+
+                luminous.SaveChanges();
+                msg.Message = "Record Save Successfully!";
+                msg.Status = "200";
+                return msg;
+            }
+
+            catch (Exception ex)
+            {
+                msg.Message = "Some Excption Occur. No data save";
+                msg.Status = "0";
+                return msg;
+            }
+        }
+
+
+        public MessageData func_SaveSalesEmployeeData(string userid, JObject obj)
+        {
+            MessageData msg = new MessageData();
+            try
+            {
+                JToken JtokenResult = JToken.Parse(JsonConvert.SerializeObject(obj));
+                var salesData = JsonConvert.DeserializeObject<SalesEmployee>(JtokenResult["CreatSaleEmployee"].ToString());
+                UsersList ul = new UsersList();
+                ul.UserId = salesData.sapcode;
+                ul.CustomerType = "SalesEmployee";
+                ul.Dis_Sap_Code = salesData.sapcode;
+                ul.Dis_Name = salesData.name;
+                ul.Dis_Address1 = salesData.address;
+                ul.Dis_City = salesData.city;
+                ul.Dis_State = salesData.state;
+                ul.Dis_ContactNo = salesData.contactno;
+                ul.Dis_Email = salesData.email;
+                ul.isActive = 1;
+                ul.CreatedON = DateTime.Now;
+                ul.CreatedBY = userid;
+                
+                luminous.UsersLists.Add(ul);
+                
+                luminous.SaveChanges();
+                msg.Message = "Record Save Successfully!";
+                msg.Status = "200";
+                return msg;
+            }
+
+            catch (Exception ex)
+            {
+                msg.Message = "Some Excption Occur. No data save";
+                msg.Status = "0";
+                return msg;
+            }
+        }
+
+
+        public dynamic getGalleryMainData(string userId, int categoryid)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+            LuminousMpartnerIBEntities luminous = new LuminousMpartnerIBEntities();
+            MessageData msgdata = new MessageData();
+
+            try
+            {
+
+                var userType = luminous.UsersLists.Where(c => c.UserId == userId).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
+                if (userType.CustomerType.ToLower().Equals("dealer"))
+                {
+                    var getGallery_data = luminous.MediaDatas.Where(c => c.Status == 1 && c.LabelId == categoryid && c.CreatedBy.Equals(userType.CreatedBY)).OrderByDescending(c => c.CreatedOn).ToList();
+
+                    return getGallery_data;
+                }
+                else
+                {
+                    var getGallery_data = luminous.MediaDatas.Where(c => c.Status == 1 && c.LabelId == categoryid && c.CreatedBy.Equals(userId)).OrderByDescending(c => c.CreatedOn).ToList();
+
+                    return getGallery_data;
+                }
+
+            }
+            catch (Exception exc)
+            {
+                SaveServiceLog("", url, "", "", 1, exc.InnerException.ToString(), "", DateTime.Now, "", "", "", "");
+                return exc;
+            }
+
+        }
+
+
+
+
         #endregion
+
+
+
+
 
 
 
@@ -4418,7 +5382,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         {
             try
             {
-               
+
                 string[] redirect;
                 string comments = "";
                 string[] status;
@@ -4437,27 +5401,27 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                         Req_Parameter = status[0];
                     }
 
-                   MPartnerServiceLog mpl =   new MPartnerServiceLog();
-               
+                MPartnerServiceLog mpl = new MPartnerServiceLog();
 
-                    mpl.UserId = Userid;
-                    mpl.Url = url;
-                    mpl.Req_Parameter = Req_Parameter;
-                    mpl.Res_parameter = Res_Parameter;
-                    mpl.Error = Error;
-                    mpl.ErrorDescription = ErrorDes;
-                    mpl.Flag = flag;
 
-                    mpl.CreatedBy = Userid;
-                    mpl.CreatedOn = Createdon;
-                    mpl.DeviceId = deviceid;
-                    mpl.AppVersion = Appversion;
-                    mpl.OSType = Ostype;
-                    mpl.OSVersion = Osversion;
-                    mpl.NewURL = url;
-                    mpl.Comments = comments;
+                mpl.UserId = Userid;
+                mpl.Url = url;
+                mpl.Req_Parameter = Req_Parameter;
+                mpl.Res_parameter = Res_Parameter;
+                mpl.Error = Error;
+                mpl.ErrorDescription = ErrorDes;
+                mpl.Flag = flag;
 
-                    luminous.MPartnerServiceLogs.Add(mpl);
+                mpl.CreatedBy = Userid;
+                mpl.CreatedOn = Createdon;
+                mpl.DeviceId = deviceid;
+                mpl.AppVersion = Appversion;
+                mpl.OSType = Ostype;
+                mpl.OSVersion = Osversion;
+                mpl.NewURL = url;
+                mpl.Comments = comments;
+
+                luminous.MPartnerServiceLogs.Add(mpl);
 
                 luminous.SaveChanges();
             }
