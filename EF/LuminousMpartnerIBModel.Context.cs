@@ -28,6 +28,8 @@ namespace LuminousMpartnerIB.EF
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<DealersMaster> DealersMasters { get; set; }
+        public DbSet<DealersMaster_History> DealersMaster_History { get; set; }
         public DbSet<DistributorMaster> DistributorMasters { get; set; }
         public DbSet<DistributorMaster_History> DistributorMaster_History { get; set; }
         public DbSet<Mapping_Company_Distributor_Dealers> Mapping_Company_Distributor_Dealers { get; set; }
@@ -44,8 +46,6 @@ namespace LuminousMpartnerIB.EF
         public DbSet<Card_ActionMaster> Card_ActionMaster { get; set; }
         public DbSet<Card_CardData> Card_CardData { get; set; }
         public DbSet<Card_ColourMaster> Card_ColourMaster { get; set; }
-        public DbSet<Card_dynamicPage> Card_dynamicPage { get; set; }
-        public DbSet<Card_dynamicPage_History> Card_dynamicPage_History { get; set; }
         public DbSet<Card_LanguageMaster> Card_LanguageMaster { get; set; }
         public DbSet<Card_ProviderMaster> Card_ProviderMaster { get; set; }
         public DbSet<catalog_MainPdf> catalog_MainPdf { get; set; }
@@ -57,24 +57,20 @@ namespace LuminousMpartnerIB.EF
         public DbSet<CustomerType> CustomerTypes { get; set; }
         public DbSet<EscalationMatrix> EscalationMatrices { get; set; }
         public DbSet<EscalationMatrix_History> EscalationMatrix_History { get; set; }
-        public DbSet<FAQ> FAQs { get; set; }
-        public DbSet<FAQ_History> FAQ_History { get; set; }
         public DbSet<FooterCategory> FooterCategories { get; set; }
         public DbSet<FooterCategoryHistory> FooterCategoryHistories { get; set; }
         public DbSet<MappingUrl_Page> MappingUrl_Page { get; set; }
-        public DbSet<MediaData> MediaDatas { get; set; }
-        public DbSet<MediaDataHistory> MediaDataHistories { get; set; }
         public DbSet<MPartnerServiceLog> MPartnerServiceLogs { get; set; }
         public DbSet<NotificationSurvey> NotificationSurveys { get; set; }
         public DbSet<ParentCategory> ParentCategories { get; set; }
-        public DbSet<ParentCategoryhistory> ParentCategoryhistories { get; set; }
-        public DbSet<Price_SchemeAccessTable> Price_SchemeAccessTable { get; set; }
         public DbSet<ProductAccessTable> ProductAccessTables { get; set; }
         public DbSet<ProductAccessTableForProduct> ProductAccessTableForProducts { get; set; }
         public DbSet<ProductLevelOne> ProductLevelOnes { get; set; }
         public DbSet<ProductLevelOneHistory> ProductLevelOneHistories { get; set; }
         public DbSet<ProductLevelThree> ProductLevelThrees { get; set; }
         public DbSet<ProductLevelThreeHistory> ProductLevelThreeHistories { get; set; }
+        public DbSet<ProductLevelTwo> ProductLevelTwoes { get; set; }
+        public DbSet<ProductLevelTwoHistory> ProductLevelTwoHistories { get; set; }
         public DbSet<ProductthreeImageMapping> ProductthreeImageMappings { get; set; }
         public DbSet<Suggestion> Suggestions { get; set; }
         public DbSet<useraccount> useraccounts { get; set; }
@@ -99,14 +95,17 @@ namespace LuminousMpartnerIB.EF
         public DbSet<GCM_NotificationLog> GCM_NotificationLog { get; set; }
         public DbSet<ContestMaster> ContestMasters { get; set; }
         public DbSet<ContestPicture_Tab> ContestPicture_Tab { get; set; }
-        public DbSet<ProductLevelTwo> ProductLevelTwoes { get; set; }
-        public DbSet<ProductLevelTwoHistory> ProductLevelTwoHistories { get; set; }
         public DbSet<Dealer_Save_Image> Dealer_Save_Image { get; set; }
         public DbSet<Dealer_Save_Image_History> Dealer_Save_Image_History { get; set; }
-        public DbSet<DealersMaster> DealersMasters { get; set; }
-        public DbSet<DealersMaster_History> DealersMaster_History { get; set; }
-        public DbSet<SaveNotificationSurvey> SaveNotificationSurveys { get; set; }
+        public DbSet<ParentCategoryhistory> ParentCategoryhistories { get; set; }
         public DbSet<ProductCatergoryHistory> ProductCatergoryHistories { get; set; }
+        public DbSet<FAQ> FAQs { get; set; }
+        public DbSet<FAQ_History> FAQ_History { get; set; }
+        public DbSet<Card_dynamicPage> Card_dynamicPage { get; set; }
+        public DbSet<Card_dynamicPage_History> Card_dynamicPage_History { get; set; }
+        public DbSet<Price_SchemeAccessTable> Price_SchemeAccessTable { get; set; }
+        public DbSet<MediaData> MediaDatas { get; set; }
+        public DbSet<MediaDataHistory> MediaDataHistories { get; set; }
     
         public virtual ObjectResult<PermotonsListPagingScheme_Price_New_Result> PermotonsListPagingScheme_Price_New(string pagename)
         {

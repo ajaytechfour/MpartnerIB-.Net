@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using LuminousMpartnerIB.EF;
+using Luminous.EF;
 using System.Data;
+using LuminousMpartnerIB.EF;
 
-namespace LuminousMpartnerIB.Controllers
+namespace Luminous.Controllers
 {
     public class DestributorController : Controller
     {
         //
-        // GET: /Destributor/      
+        // GET: /Destributor/
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
         private string PageUrl = "/Destributor/index";
@@ -44,10 +45,10 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                dt = Session["permission"] as DataTable;
-                string pageUrl2 = PageUrl;
-                DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (result[0]["uview"].ToString() == "1")
+                //dt = Session["permission"] as DataTable;
+                //string pageUrl2 = PageUrl;
+                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
+                if (true)
                 {
                     var Company = (from c in db.Regions
                                    where c.status != 2 && c.status != 0
@@ -140,124 +141,124 @@ namespace LuminousMpartnerIB.Controllers
         //}
 
 
-        public JsonResult GetContactDetail(int? page)
-        {
-            if (Session["userid"] == null)
-            {
-                return Json("Login", JsonRequestBehavior.AllowGet);
-            }
-            else
-            {
-                dt = Session["permission"] as DataTable;
-                string pageUrl2 = PageUrl;
-                DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (result[0]["uview"].ToString() == "1")
-                {
-                    var contactdetails = (from c in db.DestributorLists
-                                          where c.status != 2
-                                          select c).ToList();
-                    int totalrecord;
-                    if (page != null)
-                    {
-                        page = (page - 1) * 15;
-                    }
+        //public JsonResult GetContactDetail(int? page)
+        //{
+        //    if (Session["userid"] == null)
+        //    {
+        //        return Json("Login", JsonRequestBehavior.AllowGet);
+        //    }
+        //    else
+        //    {
+        //        dt = Session["permission"] as DataTable;
+        //        string pageUrl2 = PageUrl;
+        //        DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
+        //        if (result[0]["uview"].ToString() == "1")
+        //        {
+        //            var contactdetails = (from c in db.DestributorLists
+        //                                  where c.status != 2
+        //                                  select c).ToList();
+        //            int totalrecord;
+        //            if (page != null)
+        //            {
+        //                page = (page - 1) * 15;
+        //            }
 
-                    var contactDetails2 = (from c in contactdetails
+        //            var contactDetails2 = (from c in contactdetails
 
-                                           select new
-                                           {
-                                               id = c.id,
-                                               RegionName = c.Region.name,
-                                               Name = c.name,
-                                               status = c.status == 1 ? "Active" : "Deactive",
-
-
-                                           }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
-                    if (contactdetails.Count() % 15 == 0)
-                    {
-                        totalrecord = contactdetails.Count() / 15;
-                    }
-                    else
-                    {
-                        totalrecord = (contactdetails.Count() / 15) + 1;
-                    }
-                    var data = new { result = contactDetails2, TotalRecord = totalrecord };
-
-                    return Json(data, JsonRequestBehavior.AllowGet);
-                }
-                else
-                {
-                    return Json("snotallowed", JsonRequestBehavior.AllowGet);
-
-                }
-            }
-        }
+        //                                   select new
+        //                                   {
+        //                                       id = c.id,
+        //                                       RegionName = c.Region.name,
+        //                                       Name = c.name,
+        //                                       status = c.status == 1 ? "Active" : "Deactive",
 
 
-        public JsonResult DeleteContact(int id)
-        {
-            if (Session["userid"] == null)
-            {
-                return Json("Login", JsonRequestBehavior.AllowGet);
-            }
-            else
-            {
-                dt = Session["permission"] as DataTable;
-                string pageUrl2 = PageUrl;
-                DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (result[0]["deleterole"].ToString() == "1")
-                {
-                    DestributorList contactUs = db.DestributorLists.Single(a => a.id == id);
-                    DestributorsHistory regionHistory = new DestributorsHistory();
-                  //Save Previous Record In History
-                    regionHistory.DestributorId = id;
-                    regionHistory.name = contactUs.name;
-                    regionHistory.Updatetime = DateTime.Now;
-                    regionHistory.UpdatedBy = Session["userid"].ToString();
-                    regionHistory.RegionId = contactUs.RegionId;
-                    regionHistory.status = contactUs.status;
-                    //Update new Record
-                    contactUs.status = 2;
-                    contactUs.UpdatedBy = Session["userid"].ToString();
-                    contactUs.Updatetime = DateTime.Now;
-                    db.DestributorsHistories.AddObject(regionHistory);
-                    db.SaveChanges();
-                    return Json("Record Deleted Successfully", JsonRequestBehavior.AllowGet);
-                }
-                else
-                {
-                    return Json("snotallowed", JsonRequestBehavior.AllowGet);
+        //                                   }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
+        //            if (contactdetails.Count() % 15 == 0)
+        //            {
+        //                totalrecord = contactdetails.Count() / 15;
+        //            }
+        //            else
+        //            {
+        //                totalrecord = (contactdetails.Count() / 15) + 1;
+        //            }
+        //            var data = new { result = contactDetails2, TotalRecord = totalrecord };
 
-                }
-            }
+        //            return Json(data, JsonRequestBehavior.AllowGet);
+        //        }
+        //        else
+        //        {
+        //            return Json("snotallowed", JsonRequestBehavior.AllowGet);
+
+        //        }
+        //    }
+        //}
 
 
-        }
+        //public JsonResult DeleteContact(int id)
+        //{
+        //    if (Session["userid"] == null)
+        //    {
+        //        return Json("Login", JsonRequestBehavior.AllowGet);
+        //    }
+        //    else
+        //    {
+        //        dt = Session["permission"] as DataTable;
+        //        string pageUrl2 = PageUrl;
+        //        DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
+        //        if (result[0]["deleterole"].ToString() == "1")
+        //        {
+        //            DestributorList contactUs = db.DestributorLists.Single(a => a.id == id);
+        //            DestributorsHistory regionHistory = new DestributorsHistory();
+        //          //Save Previous Record In History
+        //            regionHistory.DestributorId = id;
+        //            regionHistory.name = contactUs.name;
+        //            regionHistory.Updatetime = DateTime.Now;
+        //            regionHistory.UpdatedBy = Session["userid"].ToString();
+        //            regionHistory.RegionId = contactUs.RegionId;
+        //            regionHistory.status = contactUs.status;
+        //            //Update new Record
+        //            contactUs.status = 2;
+        //            contactUs.UpdatedBy = Session["userid"].ToString();
+        //            contactUs.Updatetime = DateTime.Now;
+        //            db.DestributorsHistories.AddObject(regionHistory);
+        //            db.SaveChanges();
+        //            return Json("Record Deleted Successfully", JsonRequestBehavior.AllowGet);
+        //        }
+        //        else
+        //        {
+        //            return Json("snotallowed", JsonRequestBehavior.AllowGet);
 
-        public ActionResult Edit(int id)
-        {
-            if (Session["userid"] == null)
-            {
-                return RedirectToAction("login", "login");
-            }
-            else
-            {
-                dt = Session["permission"] as DataTable;
-                string pageUrl2 = PageUrl;
-                DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (result[0]["editrole"].ToString() == "1")
-                {
-                    DestributorList cud = db.DestributorLists.Single(a => a.id == id);
-                    ViewBag.status = cud.status;
-                    ViewBag.RegionId = cud.RegionId;
-                    return View(cud);
-                }
-                else
-                {
-                    return RedirectToAction("snotallowed", "snotallowed");
-                }
-            }
-        }
+        //        }
+        //    }
+
+
+        //}
+
+        //public ActionResult Edit(int id)
+        //{
+        //    if (Session["userid"] == null)
+        //    {
+        //        return RedirectToAction("login", "login");
+        //    }
+        //    else
+        //    {
+        //        dt = Session["permission"] as DataTable;
+        //        string pageUrl2 = PageUrl;
+        //        DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
+        //        if (result[0]["editrole"].ToString() == "1")
+        //        {
+        //            DestributorList cud = db.DestributorLists.Single(a => a.id == id);
+        //            ViewBag.status = cud.status;
+        //            ViewBag.RegionId = cud.RegionId;
+        //            return View(cud);
+        //        }
+        //        else
+        //        {
+        //            return RedirectToAction("snotallowed", "snotallowed");
+        //        }
+        //    }
+        //}
 
         //public ActionResult Update(DestributorList destributor, string regionst, string statusC)
         //{

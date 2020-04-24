@@ -5,8 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="LuminousMpartnerIBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotificationAccessTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AlertNotificationAccessTable">
           <Key>
             <PropertyRef Name="id" />
@@ -27,8 +25,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotificationAccessTabl
           <Property Name="SpecificDealerAccess" Type="varchar" MaxLength="20" />
           <Property Name="SpecificDestriAccess" Type="varchar" MaxLength="20" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotificationReadStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AlertNotificationReadStatus">
           <Key>
             <PropertyRef Name="id" />
@@ -39,8 +35,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotificationReadStatus
           <Property Name="UserId" Type="varchar" MaxLength="100" />
           <Property Name="DeviceId" Type="varchar" MaxLength="100" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotifications' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AlertNotifications">
           <Key>
             <PropertyRef Name="id" />
@@ -56,8 +50,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotifications' does no
           <Property Name="ModifyOn" Type="datetime" />
           <Property Name="Type" Type="varchar" MaxLength="5" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotifications_History' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AlertNotifications_History">
           <Key>
             <PropertyRef Name="id" />
@@ -209,13 +201,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.Card_ColourMaster' does not
           <Property Name="ModifiedBy" Type="varchar" MaxLength="30" />
           <Property Name="Status" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.Card_dynamicPage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Card_dynamicPage">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Id" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CardProviderId" Type="varchar" MaxLength="20" />
           <Property Name="CardProviderName" Type="varchar" MaxLength="100" />
           <Property Name="CardActionId" Type="varchar" MaxLength="20" />
@@ -252,14 +242,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.Card_dynamicPage' does not 
           <Property Name="SystemMainImage" Type="varchar" MaxLength="100" />
           <Property Name="Sequence" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.Card_dynamicPage_History' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Card_dynamicPage_History">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Parent_Card_Id" />
           </Key>
-          <Property Name="Id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Id" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Parent_Card_Id" Type="bigint" Nullable="false" />
           <Property Name="CardProviderId" Type="varchar" MaxLength="20" />
           <Property Name="CardProviderName" Type="varchar" MaxLength="100" />
@@ -601,13 +588,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.EscalationMatrix_History' d
           <Property Name="status" Type="int" />
           <Property Name="Phoneno" Type="varchar" MaxLength="15" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.FAQ' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="FAQ">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="QuestionName" Type="varchar(max)" />
           <Property Name="Answer" Type="varchar(max)" />
           <Property Name="StartDate" Type="datetime" />
@@ -618,13 +603,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.FAQ' does not have a primar
           <Property Name="ModifiedOn" Type="datetime" />
           <Property Name="Status" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.FAQ_History' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="FAQ_History">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Id" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FAQ_ParentId" Type="numeric" Precision="18" Scale="0" />
           <Property Name="QuestionName" Type="varchar" MaxLength="200" />
           <Property Name="Answer" Type="varchar(max)" />
@@ -636,8 +619,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.FAQ_History' does not have 
           <Property Name="ModifiedOn" Type="datetime" />
           <Property Name="Status" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.FooterCategory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="FooterCategory">
           <Key>
             <PropertyRef Name="Id" />
@@ -648,8 +629,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.FooterCategory' does not ha
           <Property Name="CatType" Type="varchar" MaxLength="5" />
           <Property Name="CreatedOn" Type="datetime" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.FooterCategoryHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="FooterCategoryHistory">
           <Key>
             <PropertyRef Name="Id" />
@@ -715,13 +694,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.MappingUrl_Page' does not h
           <Property Name="CreatedOn" Type="datetime" />
           <Property Name="PageName" Type="varchar" MaxLength="100" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.MediaData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="MediaData">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="VideoName" Type="varchar" MaxLength="200" />
           <Property Name="Url" Type="varchar(max)" />
           <Property Name="CreatedBy" Type="int" />
@@ -733,13 +710,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.MediaData' does not have a 
           <Property Name="Status" Type="int" />
           <Property Name="PageFlag" Type="varchar" MaxLength="10" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.MediaDataHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="MediaDataHistory">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MediaDataId" Type="int" />
           <Property Name="VideoName" Type="varchar" MaxLength="200" />
           <Property Name="Url" Type="varchar(max)" />
@@ -851,8 +826,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationReadStatus' doe
           <Property Name="Alertflag" Type="varchar" MaxLength="1" />
           <Property Name="ImagePath" Type="varchar" MaxLength="500" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationsHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="NotificationsHistory">
           <Key>
             <PropertyRef Name="id" />
@@ -867,8 +840,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationsHistory' does 
           <Property Name="Alertflag" Type="varchar" MaxLength="1" />
           <Property Name="ImagePath" Type="varchar" MaxLength="500" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationSurvey' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="NotificationSurvey">
           <Key>
             <PropertyRef Name="SurveyID" />
@@ -892,8 +863,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationSurvey' does no
           <Property Name="Status" Type="int" />
           <Property Name="ContestId" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationSurveyHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="NotificationSurveyHistory">
           <Key>
             <PropertyRef Name="ID" />
@@ -932,8 +901,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationSurveyHistory' 
           <Property Name="PageName" Type="varchar" MaxLength="20" />
           <Property Name="PdfUrl" Type="varchar(max)" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.ParentCategoryhistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="ParentCategoryhistory">
           <Key>
             <PropertyRef Name="ID" />
@@ -947,13 +914,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ParentCategoryhistory' does
           <Property Name="ModifyBy" Type="varchar" MaxLength="30" />
           <Property Name="ModifyOn" Type="datetime" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.Price_SchemeAccessTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Price_SchemeAccessTable">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RegId" Type="int" />
           <Property Name="DestributorID" Type="int" />
           <Property Name="DealerId" Type="int" />
@@ -1239,23 +1204,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.Regions' does not have a pr
           <Property Name="status" Type="int" />
           <Property Name="RegionCode" Type="varchar" MaxLength="30" />
         </EntityType>
-        <EntityType Name="SaveNotificationSurvey">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UserId" Type="varchar" MaxLength="30" />
-          <Property Name="DeviceId" Type="varchar" MaxLength="20" />
-          <Property Name="SurveyID" Type="int" />
-          <Property Name="CreatedBy" Type="varchar" MaxLength="30" />
-          <Property Name="CreatedOn" Type="datetime" />
-          <Property Name="ModifyBy" Type="varchar" MaxLength="30" />
-          <Property Name="ModifyOn" Type="datetime" />
-          <Property Name="Options" Type="varchar" MaxLength="20" />
-          <Property Name="OptionValue" Type="varchar(max)" />
-          <Property Name="ContestId" Type="int" />
-          <Property Name="Marqueeid" Type="int" />
-        </EntityType>
         <EntityType Name="State">
           <Key>
             <PropertyRef Name="Id" />
@@ -1264,8 +1212,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.Regions' does not have a pr
           <Property Name="StateID" Type="int" />
           <Property Name="StateName" Type="varchar" MaxLength="100" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.Suggestion' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Suggestion">
           <Key>
             <PropertyRef Name="id" />
@@ -1566,8 +1512,14 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
           <Parameter Name="userid" Type="varchar" Mode="In" />
         </Function>
         <EntityContainer Name="LuminousMpartnerIBModelStoreContainer">
+          <EntitySet Name="AlertNotificationAccessTable" EntityType="Self.AlertNotificationAccessTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AlertNotificationReadStatus" EntityType="Self.AlertNotificationReadStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AlertNotifications" EntityType="Self.AlertNotifications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AlertNotifications_History" EntityType="Self.AlertNotifications_History" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AllPages" EntityType="Self.AllPages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AppVersion" EntityType="Self.AppVersion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Card_dynamicPage" EntityType="Self.Card_dynamicPage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Card_dynamicPage_History" EntityType="Self.Card_dynamicPage_History" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="city" EntityType="Self.city" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerModule" EntityType="Self.CustomerModule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerPermissions" EntityType="Self.CustomerPermissions" Schema="dbo" store:Type="Tables" />
@@ -1578,82 +1530,37 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
           <EntitySet Name="DealersMaster_History" EntityType="Self.DealersMaster_History" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DistributorMaster" EntityType="Self.DistributorMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DistributorMaster_History" EntityType="Self.DistributorMaster_History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FAQ" EntityType="Self.FAQ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FAQ_History" EntityType="Self.FAQ_History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FooterCategory" EntityType="Self.FooterCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FooterCategoryHistory" EntityType="Self.FooterCategoryHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GCM_NotificationLog" EntityType="Self.GCM_NotificationLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Logger" EntityType="Self.Logger" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mapping_Company_Distributor_Dealers" EntityType="Self.Mapping_Company_Distributor_Dealers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MediaData" EntityType="Self.MediaData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MediaDataHistory" EntityType="Self.MediaDataHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MHrOtp" EntityType="Self.MHrOtp" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MostSearchItem" EntityType="Self.MostSearchItem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NotificationAccessTable" EntityType="Self.NotificationAccessTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NotificationsHistory" EntityType="Self.NotificationsHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NotificationSurvey" EntityType="Self.NotificationSurvey" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NotificationSurveyHistory" EntityType="Self.NotificationSurveyHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ParentCategory" EntityType="Self.ParentCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ParentCategoryhistory" EntityType="Self.ParentCategoryhistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Price_SchemeAccessTable" EntityType="Self.Price_SchemeAccessTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductCatergory" EntityType="Self.ProductCatergory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductCatergoryHistory" EntityType="Self.ProductCatergoryHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductLevelTwo" EntityType="Self.ProductLevelTwo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductLevelTwoHistory" EntityType="Self.ProductLevelTwoHistory" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SaveNotificationSurvey" EntityType="Self.SaveNotificationSurvey" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Suggestion" EntityType="Self.Suggestion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users_History" EntityType="Self.Users_History" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UsersList" EntityType="Self.UsersList" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserVerification" EntityType="Self.UserVerification" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserVerification_log" EntityType="Self.UserVerification_log" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AlertNotificationAccessTable" EntityType="Self.AlertNotificationAccessTable" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[AlertNotificationAccessTable].[id] AS [id], 
-[AlertNotificationAccessTable].[RegId] AS [RegId], 
-[AlertNotificationAccessTable].[DestributorID] AS [DestributorID], 
-[AlertNotificationAccessTable].[DealerId] AS [DealerId], 
-[AlertNotificationAccessTable].[AllAcess] AS [AllAcess], 
-[AlertNotificationAccessTable].[createdate] AS [createdate], 
-[AlertNotificationAccessTable].[createby] AS [createby], 
-[AlertNotificationAccessTable].[modifieddate] AS [modifieddate], 
-[AlertNotificationAccessTable].[modifiedBy] AS [modifiedBy], 
-[AlertNotificationAccessTable].[notificationid] AS [notificationid], 
-[AlertNotificationAccessTable].[deleted] AS [deleted], 
-[AlertNotificationAccessTable].[AllDestriAccess] AS [AllDestriAccess], 
-[AlertNotificationAccessTable].[AllDealerAccess] AS [AllDealerAccess], 
-[AlertNotificationAccessTable].[SpecificDealerAccess] AS [SpecificDealerAccess], 
-[AlertNotificationAccessTable].[SpecificDestriAccess] AS [SpecificDestriAccess]
-FROM [dbo].[AlertNotificationAccessTable] AS [AlertNotificationAccessTable]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="AlertNotificationReadStatus" EntityType="Self.AlertNotificationReadStatus" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[AlertNotificationReadStatus].[id] AS [id], 
-[AlertNotificationReadStatus].[NotificationId] AS [NotificationId], 
-[AlertNotificationReadStatus].[IsRead] AS [IsRead], 
-[AlertNotificationReadStatus].[UserId] AS [UserId], 
-[AlertNotificationReadStatus].[DeviceId] AS [DeviceId]
-FROM [dbo].[AlertNotificationReadStatus] AS [AlertNotificationReadStatus]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="AlertNotifications" EntityType="Self.AlertNotifications" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[AlertNotifications].[id] AS [id], 
-[AlertNotifications].[_text] AS [_text], 
-[AlertNotifications].[Imagename] AS [Imagename], 
-[AlertNotifications].[Imagepath] AS [Imagepath], 
-[AlertNotifications].[_Status] AS [_Status], 
-[AlertNotifications].[CreatedBy] AS [CreatedBy], 
-[AlertNotifications].[CreatedOn] AS [CreatedOn], 
-[AlertNotifications].[ModifyBy] AS [ModifyBy], 
-[AlertNotifications].[ModifyOn] AS [ModifyOn], 
-[AlertNotifications].[Type] AS [Type]
-FROM [dbo].[AlertNotifications] AS [AlertNotifications]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="AlertNotifications_History" EntityType="Self.AlertNotifications_History" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[AlertNotifications_History].[id] AS [id], 
-[AlertNotifications_History].[NotificationId] AS [NotificationId], 
-[AlertNotifications_History].[_text] AS [_text], 
-[AlertNotifications_History].[Imagename] AS [Imagename], 
-[AlertNotifications_History].[Imagepath] AS [Imagepath], 
-[AlertNotifications_History].[_Status] AS [_Status], 
-[AlertNotifications_History].[CreatedBy] AS [CreatedBy], 
-[AlertNotifications_History].[CreatedOn] AS [CreatedOn], 
-[AlertNotifications_History].[ModifyBy] AS [ModifyBy], 
-[AlertNotifications_History].[ModifyOn] AS [ModifyOn]
-FROM [dbo].[AlertNotifications_History] AS [AlertNotifications_History]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="App_Log" EntityType="Self.App_Log" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [App_Log].[Id] AS [Id], 
@@ -1747,87 +1654,6 @@ FROM [dbo].[Card_CardData] AS [Card_CardData]</DefiningQuery>
 [Card_ColourMaster].[ModifiedBy] AS [ModifiedBy], 
 [Card_ColourMaster].[Status] AS [Status]
 FROM [dbo].[Card_ColourMaster] AS [Card_ColourMaster]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Card_dynamicPage" EntityType="Self.Card_dynamicPage" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[Card_dynamicPage].[Id] AS [Id], 
-[Card_dynamicPage].[CardProviderId] AS [CardProviderId], 
-[Card_dynamicPage].[CardProviderName] AS [CardProviderName], 
-[Card_dynamicPage].[CardActionId] AS [CardActionId], 
-[Card_dynamicPage].[ClassName] AS [ClassName], 
-[Card_dynamicPage].[CardAction_Deeplink] AS [CardAction_Deeplink], 
-[Card_dynamicPage].[CardAction_Pagename] AS [CardAction_Pagename], 
-[Card_dynamicPage].[ColourId] AS [ColourId], 
-[Card_dynamicPage].[ColourName] AS [ColourName], 
-[Card_dynamicPage].[Hexacode] AS [Hexacode], 
-[Card_dynamicPage].[ImageOriginalName] AS [ImageOriginalName], 
-[Card_dynamicPage].[ImageSystemName] AS [ImageSystemName], 
-[Card_dynamicPage].[Height] AS [Height], 
-[Card_dynamicPage].[Width] AS [Width], 
-[Card_dynamicPage].[Title] AS [Title], 
-[Card_dynamicPage].[Sub_Title] AS [Sub_Title], 
-[Card_dynamicPage].[Sub_TitleColour] AS [Sub_TitleColour], 
-[Card_dynamicPage].[CardDataFlag] AS [CardDataFlag], 
-[Card_dynamicPage].[Action1_Colour] AS [Action1_Colour], 
-[Card_dynamicPage].[Action1_Text] AS [Action1_Text], 
-[Card_dynamicPage].[Startdate] AS [Startdate], 
-[Card_dynamicPage].[Enddate] AS [Enddate], 
-[Card_dynamicPage].[CreatedOn] AS [CreatedOn], 
-[Card_dynamicPage].[CreatedBy] AS [CreatedBy], 
-[Card_dynamicPage].[ModifiedOn] AS [ModifiedOn], 
-[Card_dynamicPage].[ModifiedBy] AS [ModifiedBy], 
-[Card_dynamicPage].[Status] AS [Status], 
-[Card_dynamicPage].[TitleColour] AS [TitleColour], 
-[Card_dynamicPage].[Pagename] AS [Pagename], 
-[Card_dynamicPage].[PdfOriginalName] AS [PdfOriginalName], 
-[Card_dynamicPage].[PdfSystemName] AS [PdfSystemName], 
-[Card_dynamicPage].[Subcatid] AS [Subcatid], 
-[Card_dynamicPage].[Subcatname] AS [Subcatname], 
-[Card_dynamicPage].[OriginalMainImage] AS [OriginalMainImage], 
-[Card_dynamicPage].[SystemMainImage] AS [SystemMainImage], 
-[Card_dynamicPage].[Sequence] AS [Sequence]
-FROM [dbo].[Card_dynamicPage] AS [Card_dynamicPage]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Card_dynamicPage_History" EntityType="Self.Card_dynamicPage_History" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[Card_dynamicPage_History].[Id] AS [Id], 
-[Card_dynamicPage_History].[Parent_Card_Id] AS [Parent_Card_Id], 
-[Card_dynamicPage_History].[CardProviderId] AS [CardProviderId], 
-[Card_dynamicPage_History].[CardProviderName] AS [CardProviderName], 
-[Card_dynamicPage_History].[CardActionId] AS [CardActionId], 
-[Card_dynamicPage_History].[ClassName] AS [ClassName], 
-[Card_dynamicPage_History].[CardAction_Deeplink] AS [CardAction_Deeplink], 
-[Card_dynamicPage_History].[CardAction_Pagename] AS [CardAction_Pagename], 
-[Card_dynamicPage_History].[ColourId] AS [ColourId], 
-[Card_dynamicPage_History].[ColourName] AS [ColourName], 
-[Card_dynamicPage_History].[Hexacode] AS [Hexacode], 
-[Card_dynamicPage_History].[ImageOriginalName] AS [ImageOriginalName], 
-[Card_dynamicPage_History].[ImageSystemName] AS [ImageSystemName], 
-[Card_dynamicPage_History].[Height] AS [Height], 
-[Card_dynamicPage_History].[Width] AS [Width], 
-[Card_dynamicPage_History].[Title] AS [Title], 
-[Card_dynamicPage_History].[Sub_Title] AS [Sub_Title], 
-[Card_dynamicPage_History].[Sub_TitleColour] AS [Sub_TitleColour], 
-[Card_dynamicPage_History].[CardDataFlag] AS [CardDataFlag], 
-[Card_dynamicPage_History].[Action1_Colour] AS [Action1_Colour], 
-[Card_dynamicPage_History].[Action1_Text] AS [Action1_Text], 
-[Card_dynamicPage_History].[Startdate] AS [Startdate], 
-[Card_dynamicPage_History].[Enddate] AS [Enddate], 
-[Card_dynamicPage_History].[CreatedOn] AS [CreatedOn], 
-[Card_dynamicPage_History].[CreatedBy] AS [CreatedBy], 
-[Card_dynamicPage_History].[ModifiedOn] AS [ModifiedOn], 
-[Card_dynamicPage_History].[ModifiedBy] AS [ModifiedBy], 
-[Card_dynamicPage_History].[Status] AS [Status], 
-[Card_dynamicPage_History].[TitleColour] AS [TitleColour], 
-[Card_dynamicPage_History].[Pagename] AS [Pagename], 
-[Card_dynamicPage_History].[PdfOriginalName] AS [PdfOriginalName], 
-[Card_dynamicPage_History].[PdfSystemName] AS [PdfSystemName], 
-[Card_dynamicPage_History].[Subcatid] AS [Subcatid], 
-[Card_dynamicPage_History].[Subcatname] AS [Subcatname], 
-[Card_dynamicPage_History].[OriginalMainImage] AS [OriginalMainImage], 
-[Card_dynamicPage_History].[SystemMainImage] AS [SystemMainImage], 
-[Card_dynamicPage_History].[Sequence] AS [Sequence]
-FROM [dbo].[Card_dynamicPage_History] AS [Card_dynamicPage_History]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Card_LanguageMaster" EntityType="Self.Card_LanguageMaster" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -1954,57 +1780,6 @@ FROM [dbo].[EscalationMatrix] AS [EscalationMatrix]</DefiningQuery>
 [EscalationMatrix_History].[Phoneno] AS [Phoneno]
 FROM [dbo].[EscalationMatrix_History] AS [EscalationMatrix_History]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="FAQ" EntityType="Self.FAQ" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[FAQ].[Id] AS [Id], 
-[FAQ].[QuestionName] AS [QuestionName], 
-[FAQ].[Answer] AS [Answer], 
-[FAQ].[StartDate] AS [StartDate], 
-[FAQ].[EndDate] AS [EndDate], 
-[FAQ].[CreatedBy] AS [CreatedBy], 
-[FAQ].[CreatedOn] AS [CreatedOn], 
-[FAQ].[ModifiedBy] AS [ModifiedBy], 
-[FAQ].[ModifiedOn] AS [ModifiedOn], 
-[FAQ].[Status] AS [Status]
-FROM [dbo].[FAQ] AS [FAQ]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="FAQ_History" EntityType="Self.FAQ_History" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[FAQ_History].[Id] AS [Id], 
-[FAQ_History].[FAQ_ParentId] AS [FAQ_ParentId], 
-[FAQ_History].[QuestionName] AS [QuestionName], 
-[FAQ_History].[Answer] AS [Answer], 
-[FAQ_History].[StartDate] AS [StartDate], 
-[FAQ_History].[EndDate] AS [EndDate], 
-[FAQ_History].[CreatedBy] AS [CreatedBy], 
-[FAQ_History].[CreatedOn] AS [CreatedOn], 
-[FAQ_History].[ModifiedBy] AS [ModifiedBy], 
-[FAQ_History].[ModifiedOn] AS [ModifiedOn], 
-[FAQ_History].[Status] AS [Status]
-FROM [dbo].[FAQ_History] AS [FAQ_History]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="FooterCategory" EntityType="Self.FooterCategory" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[FooterCategory].[Id] AS [Id], 
-[FooterCategory].[FCategoryName] AS [FCategoryName], 
-[FooterCategory].[Status] AS [Status], 
-[FooterCategory].[CatType] AS [CatType], 
-[FooterCategory].[CreatedOn] AS [CreatedOn]
-FROM [dbo].[FooterCategory] AS [FooterCategory]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="FooterCategoryHistory" EntityType="Self.FooterCategoryHistory" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[FooterCategoryHistory].[Id] AS [Id], 
-[FooterCategoryHistory].[FootercateId] AS [FootercateId], 
-[FooterCategoryHistory].[FCategoryName] AS [FCategoryName], 
-[FooterCategoryHistory].[Status] AS [Status], 
-[FooterCategoryHistory].[CatType] AS [CatType], 
-[FooterCategoryHistory].[CreatedBy] AS [CreatedBy], 
-[FooterCategoryHistory].[CreatedOn] AS [CreatedOn], 
-[FooterCategoryHistory].[ModifyBy] AS [ModifyBy], 
-[FooterCategoryHistory].[ModifyOn] AS [ModifyOn]
-FROM [dbo].[FooterCategoryHistory] AS [FooterCategoryHistory]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="MappingUrl_Page" EntityType="Self.MappingUrl_Page" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [MappingUrl_Page].[Id] AS [Id], 
@@ -2014,37 +1789,6 @@ FROM [dbo].[FooterCategoryHistory] AS [FooterCategoryHistory]</DefiningQuery>
 [MappingUrl_Page].[CreatedOn] AS [CreatedOn], 
 [MappingUrl_Page].[PageName] AS [PageName]
 FROM [dbo].[MappingUrl_Page] AS [MappingUrl_Page]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="MediaData" EntityType="Self.MediaData" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[MediaData].[Id] AS [Id], 
-[MediaData].[VideoName] AS [VideoName], 
-[MediaData].[Url] AS [Url], 
-[MediaData].[CreatedBy] AS [CreatedBy], 
-[MediaData].[CreatedOn] AS [CreatedOn], 
-[MediaData].[ModifyBy] AS [ModifyBy], 
-[MediaData].[ModifyOn] AS [ModifyOn], 
-[MediaData].[VideoImage] AS [VideoImage], 
-[MediaData].[LabelId] AS [LabelId], 
-[MediaData].[Status] AS [Status], 
-[MediaData].[PageFlag] AS [PageFlag]
-FROM [dbo].[MediaData] AS [MediaData]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="MediaDataHistory" EntityType="Self.MediaDataHistory" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[MediaDataHistory].[Id] AS [Id], 
-[MediaDataHistory].[MediaDataId] AS [MediaDataId], 
-[MediaDataHistory].[VideoName] AS [VideoName], 
-[MediaDataHistory].[Url] AS [Url], 
-[MediaDataHistory].[CreatedBy] AS [CreatedBy], 
-[MediaDataHistory].[CreatedOn] AS [CreatedOn], 
-[MediaDataHistory].[ModifyBy] AS [ModifyBy], 
-[MediaDataHistory].[ModifyOn] AS [ModifyOn], 
-[MediaDataHistory].[VideoImage] AS [VideoImage], 
-[MediaDataHistory].[LabelId] AS [LabelId], 
-[MediaDataHistory].[Status] AS [Status], 
-[MediaDataHistory].[PageFlag] AS [PageFlag]
-FROM [dbo].[MediaDataHistory] AS [MediaDataHistory]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="MPartnerServiceLog" EntityType="Self.MPartnerServiceLog" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -2073,96 +1817,6 @@ FROM [dbo].[MPartnerServiceLog] AS [MPartnerServiceLog]</DefiningQuery>
 [NotificationReadStatus].[IsRead] AS [IsRead], 
 [NotificationReadStatus].[UserId] AS [UserId]
 FROM [dbo].[NotificationReadStatus] AS [NotificationReadStatus]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="NotificationsHistory" EntityType="Self.NotificationsHistory" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[NotificationsHistory].[id] AS [id], 
-[NotificationsHistory].[NotificationId] AS [NotificationId], 
-[NotificationsHistory].[_Subject] AS [_Subject], 
-[NotificationsHistory].[_text] AS [_text], 
-[NotificationsHistory].[_status] AS [_status], 
-[NotificationsHistory].[ModifiedBy] AS [ModifiedBy], 
-[NotificationsHistory].[ModifiedDate] AS [ModifiedDate], 
-[NotificationsHistory].[Alertflag] AS [Alertflag], 
-[NotificationsHistory].[ImagePath] AS [ImagePath]
-FROM [dbo].[NotificationsHistory] AS [NotificationsHistory]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="NotificationSurvey" EntityType="Self.NotificationSurvey" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[NotificationSurvey].[SurveyID] AS [SurveyID], 
-[NotificationSurvey].[Survey] AS [Survey], 
-[NotificationSurvey].[QuestionType] AS [QuestionType], 
-[NotificationSurvey].[QuestionTitle] AS [QuestionTitle], 
-[NotificationSurvey].[OptionA] AS [OptionA], 
-[NotificationSurvey].[OptionB] AS [OptionB], 
-[NotificationSurvey].[OptionC] AS [OptionC], 
-[NotificationSurvey].[OptionD] AS [OptionD], 
-[NotificationSurvey].[OptionE] AS [OptionE], 
-[NotificationSurvey].[CorrectAns] AS [CorrectAns], 
-[NotificationSurvey].[StartDate] AS [StartDate], 
-[NotificationSurvey].[Enddate] AS [Enddate], 
-[NotificationSurvey].[CreatedBy] AS [CreatedBy], 
-[NotificationSurvey].[CreatedOn] AS [CreatedOn], 
-[NotificationSurvey].[ModifyBy] AS [ModifyBy], 
-[NotificationSurvey].[ModifyOn] AS [ModifyOn], 
-[NotificationSurvey].[Status] AS [Status], 
-[NotificationSurvey].[ContestId] AS [ContestId]
-FROM [dbo].[NotificationSurvey] AS [NotificationSurvey]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="NotificationSurveyHistory" EntityType="Self.NotificationSurveyHistory" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[NotificationSurveyHistory].[ID] AS [ID], 
-[NotificationSurveyHistory].[SurveyID] AS [SurveyID], 
-[NotificationSurveyHistory].[Survey] AS [Survey], 
-[NotificationSurveyHistory].[QuestionType] AS [QuestionType], 
-[NotificationSurveyHistory].[QuestionTitle] AS [QuestionTitle], 
-[NotificationSurveyHistory].[OptionA] AS [OptionA], 
-[NotificationSurveyHistory].[OptionB] AS [OptionB], 
-[NotificationSurveyHistory].[OptionC] AS [OptionC], 
-[NotificationSurveyHistory].[OptionD] AS [OptionD], 
-[NotificationSurveyHistory].[OptionE] AS [OptionE], 
-[NotificationSurveyHistory].[CorrectAns] AS [CorrectAns], 
-[NotificationSurveyHistory].[StartDate] AS [StartDate], 
-[NotificationSurveyHistory].[Enddate] AS [Enddate], 
-[NotificationSurveyHistory].[CreatedBy] AS [CreatedBy], 
-[NotificationSurveyHistory].[CreatedOn] AS [CreatedOn], 
-[NotificationSurveyHistory].[ModifyBy] AS [ModifyBy], 
-[NotificationSurveyHistory].[ModifyOn] AS [ModifyOn], 
-[NotificationSurveyHistory].[deviceIP] AS [deviceIP], 
-[NotificationSurveyHistory].[Status] AS [Status]
-FROM [dbo].[NotificationSurveyHistory] AS [NotificationSurveyHistory]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="ParentCategoryhistory" EntityType="Self.ParentCategoryhistory" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[ParentCategoryhistory].[ID] AS [ID], 
-[ParentCategoryhistory].[Pcid] AS [Pcid], 
-[ParentCategoryhistory].[PCName] AS [PCName], 
-[ParentCategoryhistory].[CreatedBy] AS [CreatedBy], 
-[ParentCategoryhistory].[CreatedOn] AS [CreatedOn], 
-[ParentCategoryhistory].[PCStatus] AS [PCStatus], 
-[ParentCategoryhistory].[ModifyBy] AS [ModifyBy], 
-[ParentCategoryhistory].[ModifyOn] AS [ModifyOn]
-FROM [dbo].[ParentCategoryhistory] AS [ParentCategoryhistory]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Price_SchemeAccessTable" EntityType="Self.Price_SchemeAccessTable" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[Price_SchemeAccessTable].[id] AS [id], 
-[Price_SchemeAccessTable].[RegId] AS [RegId], 
-[Price_SchemeAccessTable].[DestributorID] AS [DestributorID], 
-[Price_SchemeAccessTable].[DealerId] AS [DealerId], 
-[Price_SchemeAccessTable].[AllAcess] AS [AllAcess], 
-[Price_SchemeAccessTable].[createdate] AS [createdate], 
-[Price_SchemeAccessTable].[createby] AS [createby], 
-[Price_SchemeAccessTable].[modifieddate] AS [modifieddate], 
-[Price_SchemeAccessTable].[modifiedBy] AS [modifiedBy], 
-[Price_SchemeAccessTable].[promotionid] AS [promotionid], 
-[Price_SchemeAccessTable].[deleted] AS [deleted], 
-[Price_SchemeAccessTable].[AllDestriAccess] AS [AllDestriAccess], 
-[Price_SchemeAccessTable].[AllDealerAccess] AS [AllDealerAccess], 
-[Price_SchemeAccessTable].[SpecificDealerAccess] AS [SpecificDealerAccess], 
-[Price_SchemeAccessTable].[SpecificDestriAccess] AS [SpecificDestriAccess], 
-[Price_SchemeAccessTable].[Pagename] AS [Pagename]
-FROM [dbo].[Price_SchemeAccessTable] AS [Price_SchemeAccessTable]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="ProductAccessTable" EntityType="Self.ProductAccessTable" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -2341,20 +1995,6 @@ FROM [dbo].[ProductthreeImageMapping] AS [ProductthreeImageMapping]</DefiningQue
 [Regions].[RegionCode] AS [RegionCode]
 FROM [dbo].[Regions] AS [Regions]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Suggestion" EntityType="Self.Suggestion" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[Suggestion].[id] AS [id], 
-[Suggestion].[FunctionID] AS [FunctionID], 
-[Suggestion].[Suggestion] AS [Suggestion], 
-[Suggestion].[ImageName] AS [ImageName], 
-[Suggestion].[CreateDate] AS [CreateDate], 
-[Suggestion].[createdBy] AS [createdBy], 
-[Suggestion].[SentMailStatus] AS [SentMailStatus], 
-[Suggestion].[SentMailDate] AS [SentMailDate], 
-[Suggestion].[CustName] AS [CustName], 
-[Suggestion].[Email] AS [Email]
-FROM [dbo].[Suggestion] AS [Suggestion]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="useraccount" EntityType="Self.useraccount" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [useraccount].[id] AS [id], 
@@ -2444,6 +2084,49 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LuminousMpartnerIBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DealersMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="DealerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DealerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StateID" Type="Int32" />
+          <Property Name="CityID" Type="Int32" />
+          <Property Name="PinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EmailID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Latitude" Type="Decimal" Precision="12" Scale="9" />
+          <Property Name="Longitude" Type="Decimal" Precision="12" Scale="9" />
+          <Property Name="GoogleAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DealersMaster_History">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="DealersMasterID" Type="Int64" />
+          <Property Name="DealerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DealerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StateID" Type="Int32" />
+          <Property Name="CityID" Type="Int32" />
+          <Property Name="PinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EmailID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="Decimal" Precision="12" Scale="9" />
+          <Property Name="Longitude" Type="Decimal" Precision="12" Scale="9" />
+          <Property Name="GoogleAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="DistributorMaster">
           <Key>
             <PropertyRef Name="ID" />
@@ -2700,90 +2383,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="ModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Status" Type="Int32" />
         </EntityType>
-        <EntityType Name="Card_dynamicPage">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="CardProviderId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="CardProviderName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CardActionId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CardAction_Deeplink" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="CardAction_Pagename" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="ColourId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ColourName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Hexacode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="ImageOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="ImageSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Width" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="Sub_Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
-          <Property Name="Sub_TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="CardDataFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Action1_Colour" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Action1_Text" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Startdate" Type="DateTime" Precision="3" />
-          <Property Name="Enddate" Type="DateTime" Precision="3" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Status" Type="Int32" />
-          <Property Name="TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="Pagename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="PdfOriginalName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="PdfSystemName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="Subcatid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Subcatname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="OriginalMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="SystemMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Sequence" Type="Int32" />
-        </EntityType>
-        <EntityType Name="Card_dynamicPage_History">
-          <Key>
-            <PropertyRef Name="Id" />
-            <PropertyRef Name="Parent_Card_Id" />
-          </Key>
-          <Property Name="Id" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="Parent_Card_Id" Type="Int64" Nullable="false" />
-          <Property Name="CardProviderId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="CardProviderName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CardActionId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CardAction_Deeplink" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="CardAction_Pagename" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="ColourId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ColourName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Hexacode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="ImageOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="ImageSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Width" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="Sub_Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="Sub_TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="CardDataFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Action1_Colour" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Action1_Text" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Startdate" Type="DateTime" Precision="3" />
-          <Property Name="Enddate" Type="DateTime" Precision="3" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Status" Type="Int32" />
-          <Property Name="TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="Pagename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="PdfOriginalName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="PdfSystemName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="Subcatid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Subcatname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="OriginalMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="SystemMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Sequence" Type="Int32" />
-        </EntityType>
         <EntityType Name="Card_LanguageMaster">
           <Key>
             <PropertyRef Name="Id" />
@@ -2929,37 +2528,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="status" Type="Int32" />
           <Property Name="Phoneno" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="FAQ">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int64" Nullable="false" />
-          <Property Name="QuestionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="StartDate" Type="DateTime" Precision="3" />
-          <Property Name="EndDate" Type="DateTime" Precision="3" />
-          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
-          <Property Name="Status" Type="Int32" />
-        </EntityType>
-        <EntityType Name="FAQ_History">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="FAQ_ParentId" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="QuestionName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="StartDate" Type="DateTime" Precision="3" />
-          <Property Name="EndDate" Type="DateTime" Precision="3" />
-          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
-          <Property Name="Status" Type="Int32" />
-        </EntityType>
         <EntityType Name="FooterCategory">
           <Key>
             <PropertyRef Name="Id" />
@@ -2994,39 +2562,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="Status" Type="Int32" />
           <Property Name="CreatedOn" Type="DateTime" Precision="3" />
           <Property Name="PageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="MediaData">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="VideoName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedBy" Type="Int32" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifyBy" Type="Int32" />
-          <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-          <Property Name="VideoImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="LabelId" Type="Int32" />
-          <Property Name="Status" Type="Int32" />
-          <Property Name="PageFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="MediaDataHistory">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="MediaDataId" Type="Int32" />
-          <Property Name="VideoName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedBy" Type="Int32" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifyBy" Type="Int32" />
-          <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-          <Property Name="VideoImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="LabelId" Type="Int32" />
-          <Property Name="Status" Type="Int32" />
-          <Property Name="PageFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="MPartnerServiceLog">
           <Key>
@@ -3086,40 +2621,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="PageName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="PdfUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="ProductCatergories" Relationship="LuminousMpartnerIBModel.fk_Prntid" FromRole="ParentCategory" ToRole="ProductCatergory" />
-        </EntityType>
-        <EntityType Name="ParentCategoryhistory">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="Pcid" Type="Int32" />
-          <Property Name="PCName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="PCStatus" Type="Int32" />
-          <Property Name="ModifyBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-        </EntityType>
-        <EntityType Name="Price_SchemeAccessTable">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="RegId" Type="Int32" />
-          <Property Name="DestributorID" Type="Int32" />
-          <Property Name="DealerId" Type="Int32" />
-          <Property Name="AllAcess" Type="Boolean" />
-          <Property Name="createdate" Type="DateTime" Precision="3" />
-          <Property Name="createby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="modifieddate" Type="DateTime" Precision="3" />
-          <Property Name="modifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="promotionid" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="deleted" Type="Boolean" />
-          <Property Name="AllDestriAccess" Type="Boolean" />
-          <Property Name="AllDealerAccess" Type="Boolean" />
-          <Property Name="SpecificDealerAccess" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="SpecificDestriAccess" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Pagename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="ProductAccessTable">
           <Key>
@@ -3285,6 +2786,44 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="DimensionMM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Weight_Filled_battery" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="ProductLevelTwo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="pc_Lvl_oneId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PlTwStatus" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="startDate" Type="DateTime" Precision="3" />
+          <Property Name="enddate" Type="DateTime" Precision="3" />
+          <Property Name="PrductID" Type="Int32" />
+          <Property Name="ImageName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ImageFileName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="ParentCatid" Type="Int32" />
+          <Property Name="OrderSequence" Type="Int32" />
+          <NavigationProperty Name="ProductCatergory" Relationship="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101" FromRole="ProductLevelTwo" ToRole="ProductCatergory" />
+        </EntityType>
+        <EntityType Name="ProductLevelTwoHistory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" />
+          <Property Name="pc_Lvl_oneId" Type="Int32" />
+          <Property Name="ProductlevlTwoId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PlTwStatus" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="startDate" Type="DateTime" Precision="3" />
+          <Property Name="enddate" Type="DateTime" Precision="3" />
+          <Property Name="ImageName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ImageFileName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="ProductthreeImageMapping">
           <Key>
             <PropertyRef Name="ProductID" />
@@ -3377,6 +2916,8 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="languageCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="LuminousMpartnerIBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DealersMasters" EntityType="Self.DealersMaster" />
+          <EntitySet Name="DealersMaster_History" EntityType="Self.DealersMaster_History" />
           <EntitySet Name="DistributorMasters" EntityType="Self.DistributorMaster" />
           <EntitySet Name="DistributorMaster_History" EntityType="Self.DistributorMaster_History" />
           <EntitySet Name="Mapping_Company_Distributor_Dealers" EntityType="Self.Mapping_Company_Distributor_Dealers" />
@@ -3393,8 +2934,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <EntitySet Name="Card_ActionMaster" EntityType="Self.Card_ActionMaster" />
           <EntitySet Name="Card_CardData" EntityType="Self.Card_CardData" />
           <EntitySet Name="Card_ColourMaster" EntityType="Self.Card_ColourMaster" />
-          <EntitySet Name="Card_dynamicPage" EntityType="Self.Card_dynamicPage" />
-          <EntitySet Name="Card_dynamicPage_History" EntityType="Self.Card_dynamicPage_History" />
           <EntitySet Name="Card_LanguageMaster" EntityType="Self.Card_LanguageMaster" />
           <EntitySet Name="Card_ProviderMaster" EntityType="Self.Card_ProviderMaster" />
           <EntitySet Name="catalog_MainPdf" EntityType="Self.catalog_MainPdf" />
@@ -3406,24 +2945,20 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <EntitySet Name="CustomerTypes" EntityType="Self.CustomerType" />
           <EntitySet Name="EscalationMatrices" EntityType="Self.EscalationMatrix" />
           <EntitySet Name="EscalationMatrix_History" EntityType="Self.EscalationMatrix_History" />
-          <EntitySet Name="FAQs" EntityType="Self.FAQ" />
-          <EntitySet Name="FAQ_History" EntityType="Self.FAQ_History" />
           <EntitySet Name="FooterCategories" EntityType="Self.FooterCategory" />
           <EntitySet Name="FooterCategoryHistories" EntityType="Self.FooterCategoryHistory" />
           <EntitySet Name="MappingUrl_Page" EntityType="Self.MappingUrl_Page" />
-          <EntitySet Name="MediaDatas" EntityType="Self.MediaData" />
-          <EntitySet Name="MediaDataHistories" EntityType="Self.MediaDataHistory" />
           <EntitySet Name="MPartnerServiceLogs" EntityType="Self.MPartnerServiceLog" />
           <EntitySet Name="NotificationSurveys" EntityType="Self.NotificationSurvey" />
           <EntitySet Name="ParentCategories" EntityType="Self.ParentCategory" />
-          <EntitySet Name="ParentCategoryhistories" EntityType="Self.ParentCategoryhistory" />
-          <EntitySet Name="Price_SchemeAccessTable" EntityType="Self.Price_SchemeAccessTable" />
           <EntitySet Name="ProductAccessTables" EntityType="Self.ProductAccessTable" />
           <EntitySet Name="ProductAccessTableForProducts" EntityType="Self.ProductAccessTableForProduct" />
           <EntitySet Name="ProductLevelOnes" EntityType="Self.ProductLevelOne" />
           <EntitySet Name="ProductLevelOneHistories" EntityType="Self.ProductLevelOneHistory" />
           <EntitySet Name="ProductLevelThrees" EntityType="Self.ProductLevelThree" />
           <EntitySet Name="ProductLevelThreeHistories" EntityType="Self.ProductLevelThreeHistory" />
+          <EntitySet Name="ProductLevelTwoes" EntityType="Self.ProductLevelTwo" />
+          <EntitySet Name="ProductLevelTwoHistories" EntityType="Self.ProductLevelTwoHistory" />
           <EntitySet Name="ProductthreeImageMappings" EntityType="Self.ProductthreeImageMapping" />
           <EntitySet Name="Suggestions" EntityType="Self.Suggestion" />
           <EntitySet Name="useraccounts" EntityType="Self.useraccount" />
@@ -3468,23 +3003,26 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <FunctionImport Name="GetSurveyRecord">
           <Parameter Name="Id" Mode="In" Type="Int32" />
           </FunctionImport>
+          <AssociationSet Name="FK__ProductLe__Prduc__5CA1C101" Association="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101">
+            <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+            <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
+          </AssociationSet>
           <FunctionImport Name="GetColumnNames" ReturnType="Collection(LuminousMpartnerIBModel.GetColumnNames_Result)" />
           <FunctionImport Name="ProductLevelThreePaging" ReturnType="Collection(LuminousMpartnerIBModel.ProductLevelThreePaging_Result)" />
           <FunctionImport Name="GetProductLevelFourAccessTable" ReturnType="Collection(LuminousMpartnerIBModel.GetProductLevelFourAccessTable_Result)">
           <Parameter Name="Pid" Mode="In" Type="Int32" />
           </FunctionImport>
-          <EntitySet Name="ProductLevelTwoes" EntityType="LuminousMpartnerIBModel.ProductLevelTwo" />
-          <AssociationSet Name="FK__ProductLe__Prduc__5CA1C101" Association="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101">
-            <End Role="ProductCatergory" EntitySet="ProductCatergories" />
-            <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
-          </AssociationSet>
-          <EntitySet Name="ProductLevelTwoHistories" EntityType="LuminousMpartnerIBModel.ProductLevelTwoHistory" />
           <EntitySet Name="Dealer_Save_Image" EntityType="LuminousMpartnerIBModel.Dealer_Save_Image" />
           <EntitySet Name="Dealer_Save_Image_History" EntityType="LuminousMpartnerIBModel.Dealer_Save_Image_History" />
-          <EntitySet Name="DealersMasters" EntityType="LuminousMpartnerIBModel.DealersMaster" />
-          <EntitySet Name="DealersMaster_History" EntityType="LuminousMpartnerIBModel.DealersMaster_History" />
-          <EntitySet Name="SaveNotificationSurveys" EntityType="LuminousMpartnerIBModel.SaveNotificationSurvey" />
+          <EntitySet Name="ParentCategoryhistories" EntityType="LuminousMpartnerIBModel.ParentCategoryhistory" />
           <EntitySet Name="ProductCatergoryHistories" EntityType="LuminousMpartnerIBModel.ProductCatergoryHistory" />
+          <EntitySet Name="FAQs" EntityType="LuminousMpartnerIBModel.FAQ" />
+          <EntitySet Name="FAQ_History" EntityType="LuminousMpartnerIBModel.FAQ_History" />
+          <EntitySet Name="Card_dynamicPage" EntityType="LuminousMpartnerIBModel.Card_dynamicPage" />
+          <EntitySet Name="Card_dynamicPage_History" EntityType="LuminousMpartnerIBModel.Card_dynamicPage_History" />
+          <EntitySet Name="Price_SchemeAccessTable" EntityType="LuminousMpartnerIBModel.Price_SchemeAccessTable" />
+          <EntitySet Name="MediaDatas" EntityType="LuminousMpartnerIBModel.MediaData" />
+          <EntitySet Name="MediaDataHistories" EntityType="LuminousMpartnerIBModel.MediaDataHistory" />
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -3879,6 +3417,18 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="CreatedOn" Type="DateTime" Precision="3" />
           <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
+        <Association Name="FK__ProductLe__Prduc__5CA1C101">
+          <End Type="LuminousMpartnerIBModel.ProductCatergory" Role="ProductCatergory" Multiplicity="0..1" />
+          <End Type="LuminousMpartnerIBModel.ProductLevelTwo" Role="ProductLevelTwo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductCatergory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductLevelTwo">
+              <PropertyRef Name="PrductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <ComplexType Name="GetColumnNames_Result">
           <Property Type="Int32" Name="ORDINAL_POSITION" Nullable="true" />
           <Property Type="String" Name="COLUMN_NAME" Nullable="true" MaxLength="128" />
@@ -3908,56 +3458,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Type="Boolean" Name="AllDestriAccess" Nullable="true" />
           <Property Type="Boolean" Name="AllDealerAccess" Nullable="true" />
         </ComplexType>
-        <EntityType Name="ProductLevelTwo">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="pc_Lvl_oneId" Type="Int32" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="PlTwStatus" Type="Int32" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="startDate" Type="DateTime" Precision="3" />
-          <Property Name="enddate" Type="DateTime" Precision="3" />
-          <Property Name="PrductID" Type="Int32" />
-          <Property Name="ImageName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-          <Property Name="ImageFileName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
-          <Property Name="ParentCatid" Type="Int32" />
-          <Property Name="OrderSequence" Type="Int32" />
-          <NavigationProperty Name="ProductCatergory" Relationship="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101" FromRole="ProductLevelTwo" ToRole="ProductCatergory" />
-        </EntityType>
-        <Association Name="FK__ProductLe__Prduc__5CA1C101">
-          <End Type="LuminousMpartnerIBModel.ProductCatergory" Role="ProductCatergory" Multiplicity="0..1" />
-          <End Type="LuminousMpartnerIBModel.ProductLevelTwo" Role="ProductLevelTwo" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ProductCatergory">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="ProductLevelTwo">
-              <PropertyRef Name="PrductID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="ProductLevelTwoHistory">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="ProductId" Type="Int32" />
-          <Property Name="pc_Lvl_oneId" Type="Int32" />
-          <Property Name="ProductlevlTwoId" Type="Int32" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="PlTwStatus" Type="Int32" />
-          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="startDate" Type="DateTime" Precision="3" />
-          <Property Name="enddate" Type="DateTime" Precision="3" />
-          <Property Name="ImageName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-          <Property Name="ImageFileName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="Dealer_Save_Image">
           <Key>
             <PropertyRef Name="ID" />
@@ -3985,65 +3485,18 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="DealersMaster">
+        <EntityType Name="ParentCategoryhistory">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int64" Nullable="false" />
-          <Property Name="DealerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="DealerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="StateID" Type="Int32" />
-          <Property Name="CityID" Type="Int32" />
-          <Property Name="PinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="EmailID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Latitude" Type="Decimal" Precision="12" Scale="9" />
-          <Property Name="Longitude" Type="Decimal" Precision="12" Scale="9" />
-          <Property Name="GoogleAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="status" Type="Int32" />
-          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="DealersMaster_History">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int64" Nullable="false" />
-          <Property Name="DealersMasterID" Type="Int64" />
-          <Property Name="DealerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="DealerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="StateID" Type="Int32" />
-          <Property Name="CityID" Type="Int32" />
-          <Property Name="PinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="EmailID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Latitude" Type="Decimal" Precision="12" Scale="9" />
-          <Property Name="Longitude" Type="Decimal" Precision="12" Scale="9" />
-          <Property Name="GoogleAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="status" Type="Int32" />
-          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="SaveNotificationSurvey">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="DeviceId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="SurveyID" Type="Int32" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Pcid" Type="Int32" />
+          <Property Name="PCName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="PCStatus" Type="Int32" />
           <Property Name="ModifyBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-          <Property Name="Options" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="OptionValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="ContestId" Type="Int32" />
-          <Property Name="Marqueeid" Type="Int32" />
         </EntityType>
         <EntityType Name="ProductCatergoryHistory">
           <Key>
@@ -4059,12 +3512,225 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="PdfOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="PdfSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="FAQ">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FAQ_History">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FAQ_ParentId" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="QuestionName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Card_dynamicPage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CardProviderId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CardProviderName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CardActionId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CardAction_Deeplink" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="CardAction_Pagename" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ColourId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ColourName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Hexacode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ImageOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ImageSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Width" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Sub_Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Sub_TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="CardDataFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Action1_Colour" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Action1_Text" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Startdate" Type="DateTime" Precision="3" />
+          <Property Name="Enddate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Pagename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PdfOriginalName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="PdfSystemName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Subcatid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Subcatname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OriginalMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SystemMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Sequence" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Card_dynamicPage_History">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Parent_Card_Id" Type="Int64" Nullable="false" />
+          <Property Name="CardProviderId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CardProviderName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CardActionId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CardAction_Deeplink" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="CardAction_Pagename" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ColourId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ColourName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Hexacode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ImageOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ImageSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Width" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Sub_Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Sub_TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="CardDataFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Action1_Colour" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Action1_Text" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Startdate" Type="DateTime" Precision="3" />
+          <Property Name="Enddate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Pagename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PdfOriginalName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="PdfSystemName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Subcatid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Subcatname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OriginalMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SystemMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Sequence" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Price_SchemeAccessTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegId" Type="Int32" />
+          <Property Name="DestributorID" Type="Int32" />
+          <Property Name="DealerId" Type="Int32" />
+          <Property Name="AllAcess" Type="Boolean" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="createby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="modifieddate" Type="DateTime" Precision="3" />
+          <Property Name="modifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="promotionid" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="deleted" Type="Boolean" />
+          <Property Name="AllDestriAccess" Type="Boolean" />
+          <Property Name="AllDealerAccess" Type="Boolean" />
+          <Property Name="SpecificDealerAccess" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SpecificDestriAccess" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Pagename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MediaData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VideoName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifyBy" Type="Int32" />
+          <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+          <Property Name="VideoImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LabelId" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="PageFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MediaDataHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MediaDataId" Type="Int32" />
+          <Property Name="VideoName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifyBy" Type="Int32" />
+          <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+          <Property Name="VideoImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LabelId" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="PageFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="LuminousMpartnerIBModelStoreContainer" CdmEntityContainer="LuminousMpartnerIBEntities">
+          <EntitySetMapping Name="DealersMasters">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.DealersMaster">
+              <MappingFragment StoreEntitySet="DealersMaster">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+                <ScalarProperty Name="DealerAddress" ColumnName="DealerAddress" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DealersMaster_History">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.DealersMaster_History">
+              <MappingFragment StoreEntitySet="DealersMaster_History">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DealersMasterID" ColumnName="DealersMasterID" />
+                <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+                <ScalarProperty Name="DealerAddress" ColumnName="DealerAddress" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="DistributorMasters">
             <EntityTypeMapping TypeName="LuminousMpartnerIBModel.DistributorMaster">
               <MappingFragment StoreEntitySet="DistributorMaster">
@@ -4337,91 +4003,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Card_dynamicPage">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Card_dynamicPage">
-              <MappingFragment StoreEntitySet="Card_dynamicPage">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="CardProviderId" ColumnName="CardProviderId" />
-                <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
-                <ScalarProperty Name="CardActionId" ColumnName="CardActionId" />
-                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
-                <ScalarProperty Name="CardAction_Deeplink" ColumnName="CardAction_Deeplink" />
-                <ScalarProperty Name="CardAction_Pagename" ColumnName="CardAction_Pagename" />
-                <ScalarProperty Name="ColourId" ColumnName="ColourId" />
-                <ScalarProperty Name="ColourName" ColumnName="ColourName" />
-                <ScalarProperty Name="Hexacode" ColumnName="Hexacode" />
-                <ScalarProperty Name="ImageOriginalName" ColumnName="ImageOriginalName" />
-                <ScalarProperty Name="ImageSystemName" ColumnName="ImageSystemName" />
-                <ScalarProperty Name="Height" ColumnName="Height" />
-                <ScalarProperty Name="Width" ColumnName="Width" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
-                <ScalarProperty Name="Sub_TitleColour" ColumnName="Sub_TitleColour" />
-                <ScalarProperty Name="CardDataFlag" ColumnName="CardDataFlag" />
-                <ScalarProperty Name="Action1_Colour" ColumnName="Action1_Colour" />
-                <ScalarProperty Name="Action1_Text" ColumnName="Action1_Text" />
-                <ScalarProperty Name="Startdate" ColumnName="Startdate" />
-                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="TitleColour" ColumnName="TitleColour" />
-                <ScalarProperty Name="Pagename" ColumnName="Pagename" />
-                <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
-                <ScalarProperty Name="PdfSystemName" ColumnName="PdfSystemName" />
-                <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
-                <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
-                <ScalarProperty Name="OriginalMainImage" ColumnName="OriginalMainImage" />
-                <ScalarProperty Name="SystemMainImage" ColumnName="SystemMainImage" />
-                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Card_dynamicPage_History">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Card_dynamicPage_History">
-              <MappingFragment StoreEntitySet="Card_dynamicPage_History">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Parent_Card_Id" ColumnName="Parent_Card_Id" />
-                <ScalarProperty Name="CardProviderId" ColumnName="CardProviderId" />
-                <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
-                <ScalarProperty Name="CardActionId" ColumnName="CardActionId" />
-                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
-                <ScalarProperty Name="CardAction_Deeplink" ColumnName="CardAction_Deeplink" />
-                <ScalarProperty Name="CardAction_Pagename" ColumnName="CardAction_Pagename" />
-                <ScalarProperty Name="ColourId" ColumnName="ColourId" />
-                <ScalarProperty Name="ColourName" ColumnName="ColourName" />
-                <ScalarProperty Name="Hexacode" ColumnName="Hexacode" />
-                <ScalarProperty Name="ImageOriginalName" ColumnName="ImageOriginalName" />
-                <ScalarProperty Name="ImageSystemName" ColumnName="ImageSystemName" />
-                <ScalarProperty Name="Height" ColumnName="Height" />
-                <ScalarProperty Name="Width" ColumnName="Width" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
-                <ScalarProperty Name="Sub_TitleColour" ColumnName="Sub_TitleColour" />
-                <ScalarProperty Name="CardDataFlag" ColumnName="CardDataFlag" />
-                <ScalarProperty Name="Action1_Colour" ColumnName="Action1_Colour" />
-                <ScalarProperty Name="Action1_Text" ColumnName="Action1_Text" />
-                <ScalarProperty Name="Startdate" ColumnName="Startdate" />
-                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="TitleColour" ColumnName="TitleColour" />
-                <ScalarProperty Name="Pagename" ColumnName="Pagename" />
-                <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
-                <ScalarProperty Name="PdfSystemName" ColumnName="PdfSystemName" />
-                <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
-                <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
-                <ScalarProperty Name="OriginalMainImage" ColumnName="OriginalMainImage" />
-                <ScalarProperty Name="SystemMainImage" ColumnName="SystemMainImage" />
-                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Card_LanguageMaster">
             <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Card_LanguageMaster">
               <MappingFragment StoreEntitySet="Card_LanguageMaster">
@@ -4578,39 +4159,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="FAQs">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.FAQ">
-              <MappingFragment StoreEntitySet="FAQ">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="QuestionName" ColumnName="QuestionName" />
-                <ScalarProperty Name="Answer" ColumnName="Answer" />
-                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="FAQ_History">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.FAQ_History">
-              <MappingFragment StoreEntitySet="FAQ_History">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="FAQ_ParentId" ColumnName="FAQ_ParentId" />
-                <ScalarProperty Name="QuestionName" ColumnName="QuestionName" />
-                <ScalarProperty Name="Answer" ColumnName="Answer" />
-                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="FooterCategories">
             <EntityTypeMapping TypeName="LuminousMpartnerIBModel.FooterCategory">
               <MappingFragment StoreEntitySet="FooterCategory">
@@ -4646,41 +4194,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
                 <ScalarProperty Name="PageName" ColumnName="PageName" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MediaDatas">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.MediaData">
-              <MappingFragment StoreEntitySet="MediaData">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="VideoName" ColumnName="VideoName" />
-                <ScalarProperty Name="Url" ColumnName="Url" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
-                <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
-                <ScalarProperty Name="VideoImage" ColumnName="VideoImage" />
-                <ScalarProperty Name="LabelId" ColumnName="LabelId" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="PageFlag" ColumnName="PageFlag" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MediaDataHistories">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.MediaDataHistory">
-              <MappingFragment StoreEntitySet="MediaDataHistory">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="MediaDataId" ColumnName="MediaDataId" />
-                <ScalarProperty Name="VideoName" ColumnName="VideoName" />
-                <ScalarProperty Name="Url" ColumnName="Url" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
-                <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
-                <ScalarProperty Name="VideoImage" ColumnName="VideoImage" />
-                <ScalarProperty Name="LabelId" ColumnName="LabelId" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="PageFlag" ColumnName="PageFlag" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4742,42 +4255,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
                 <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
                 <ScalarProperty Name="PageName" ColumnName="PageName" />
                 <ScalarProperty Name="PdfUrl" ColumnName="PdfUrl" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ParentCategoryhistories">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ParentCategoryhistory">
-              <MappingFragment StoreEntitySet="ParentCategoryhistory">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Pcid" ColumnName="Pcid" />
-                <ScalarProperty Name="PCName" ColumnName="PCName" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="PCStatus" ColumnName="PCStatus" />
-                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
-                <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Price_SchemeAccessTable">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Price_SchemeAccessTable">
-              <MappingFragment StoreEntitySet="Price_SchemeAccessTable">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="RegId" ColumnName="RegId" />
-                <ScalarProperty Name="DestributorID" ColumnName="DestributorID" />
-                <ScalarProperty Name="DealerId" ColumnName="DealerId" />
-                <ScalarProperty Name="AllAcess" ColumnName="AllAcess" />
-                <ScalarProperty Name="createdate" ColumnName="createdate" />
-                <ScalarProperty Name="createby" ColumnName="createby" />
-                <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
-                <ScalarProperty Name="modifiedBy" ColumnName="modifiedBy" />
-                <ScalarProperty Name="promotionid" ColumnName="promotionid" />
-                <ScalarProperty Name="deleted" ColumnName="deleted" />
-                <ScalarProperty Name="AllDestriAccess" ColumnName="AllDestriAccess" />
-                <ScalarProperty Name="AllDealerAccess" ColumnName="AllDealerAccess" />
-                <ScalarProperty Name="SpecificDealerAccess" ColumnName="SpecificDealerAccess" />
-                <ScalarProperty Name="SpecificDestriAccess" ColumnName="SpecificDestriAccess" />
-                <ScalarProperty Name="Pagename" ColumnName="Pagename" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4948,6 +4425,45 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
                 <ScalarProperty Name="NominalVoltage" ColumnName="NominalVoltage" />
                 <ScalarProperty Name="DimensionMM" ColumnName="DimensionMM" />
                 <ScalarProperty Name="Weight_Filled_battery" ColumnName="Weight_Filled_battery" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductLevelTwoes">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductLevelTwo">
+              <MappingFragment StoreEntitySet="ProductLevelTwo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pc_Lvl_oneId" ColumnName="pc_Lvl_oneId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PlTwStatus" ColumnName="PlTwStatus" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="startDate" ColumnName="startDate" />
+                <ScalarProperty Name="enddate" ColumnName="enddate" />
+                <ScalarProperty Name="PrductID" ColumnName="PrductID" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="ImageFileName" ColumnName="ImageFileName" />
+                <ScalarProperty Name="ParentCatid" ColumnName="ParentCatid" />
+                <ScalarProperty Name="OrderSequence" ColumnName="OrderSequence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductLevelTwoHistories">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductLevelTwoHistory">
+              <MappingFragment StoreEntitySet="ProductLevelTwoHistory">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="pc_Lvl_oneId" ColumnName="pc_Lvl_oneId" />
+                <ScalarProperty Name="ProductlevlTwoId" ColumnName="ProductlevlTwoId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PlTwStatus" ColumnName="PlTwStatus" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="startDate" ColumnName="startDate" />
+                <ScalarProperty Name="enddate" ColumnName="enddate" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="ImageFileName" ColumnName="ImageFileName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5503,45 +5019,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="ProductLevelTwoes">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductLevelTwo">
-              <MappingFragment StoreEntitySet="ProductLevelTwo">
-                <ScalarProperty Name="OrderSequence" ColumnName="OrderSequence" />
-                <ScalarProperty Name="ParentCatid" ColumnName="ParentCatid" />
-                <ScalarProperty Name="ImageFileName" ColumnName="ImageFileName" />
-                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
-                <ScalarProperty Name="PrductID" ColumnName="PrductID" />
-                <ScalarProperty Name="enddate" ColumnName="enddate" />
-                <ScalarProperty Name="startDate" ColumnName="startDate" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="PlTwStatus" ColumnName="PlTwStatus" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="pc_Lvl_oneId" ColumnName="pc_Lvl_oneId" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ProductLevelTwoHistories">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductLevelTwoHistory">
-              <MappingFragment StoreEntitySet="ProductLevelTwoHistory">
-                <ScalarProperty Name="ImageFileName" ColumnName="ImageFileName" />
-                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
-                <ScalarProperty Name="enddate" ColumnName="enddate" />
-                <ScalarProperty Name="startDate" ColumnName="startDate" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-                <ScalarProperty Name="PlTwStatus" ColumnName="PlTwStatus" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ProductlevlTwoId" ColumnName="ProductlevlTwoId" />
-                <ScalarProperty Name="pc_Lvl_oneId" ColumnName="pc_Lvl_oneId" />
-                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Dealer_Save_Image">
             <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Dealer_Save_Image">
               <MappingFragment StoreEntitySet="Dealer_Save_Image">
@@ -5571,65 +5048,16 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DealersMasters">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.DealersMaster">
-              <MappingFragment StoreEntitySet="DealersMaster">
-                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="status" ColumnName="status" />
-                <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
-                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
-                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
-                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
-                <ScalarProperty Name="PinCode" ColumnName="PinCode" />
-                <ScalarProperty Name="CityID" ColumnName="CityID" />
-                <ScalarProperty Name="StateID" ColumnName="StateID" />
-                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
-                <ScalarProperty Name="DealerAddress" ColumnName="DealerAddress" />
-                <ScalarProperty Name="DealerName" ColumnName="DealerName" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DealersMaster_History">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.DealersMaster_History">
-              <MappingFragment StoreEntitySet="DealersMaster_History">
-                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="status" ColumnName="status" />
-                <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
-                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
-                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
-                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
-                <ScalarProperty Name="PinCode" ColumnName="PinCode" />
-                <ScalarProperty Name="CityID" ColumnName="CityID" />
-                <ScalarProperty Name="StateID" ColumnName="StateID" />
-                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
-                <ScalarProperty Name="DealerAddress" ColumnName="DealerAddress" />
-                <ScalarProperty Name="DealerName" ColumnName="DealerName" />
-                <ScalarProperty Name="DealersMasterID" ColumnName="DealersMasterID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SaveNotificationSurveys">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.SaveNotificationSurvey">
-              <MappingFragment StoreEntitySet="SaveNotificationSurvey">
-                <ScalarProperty Name="Marqueeid" ColumnName="Marqueeid" />
-                <ScalarProperty Name="ContestId" ColumnName="ContestId" />
-                <ScalarProperty Name="OptionValue" ColumnName="OptionValue" />
-                <ScalarProperty Name="Options" ColumnName="Options" />
+          <EntitySetMapping Name="ParentCategoryhistories">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ParentCategoryhistory">
+              <MappingFragment StoreEntitySet="ParentCategoryhistory">
                 <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
                 <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+                <ScalarProperty Name="PCStatus" ColumnName="PCStatus" />
                 <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
                 <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
-                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="PCName" ColumnName="PCName" />
+                <ScalarProperty Name="Pcid" ColumnName="Pcid" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -5646,6 +5074,181 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
                 <ScalarProperty Name="PCode" ColumnName="PCode" />
                 <ScalarProperty Name="pid" ColumnName="pid" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAQs">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.FAQ">
+              <MappingFragment StoreEntitySet="FAQ">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+                <ScalarProperty Name="QuestionName" ColumnName="QuestionName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAQ_History">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.FAQ_History">
+              <MappingFragment StoreEntitySet="FAQ_History">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+                <ScalarProperty Name="QuestionName" ColumnName="QuestionName" />
+                <ScalarProperty Name="FAQ_ParentId" ColumnName="FAQ_ParentId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Card_dynamicPage">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Card_dynamicPage">
+              <MappingFragment StoreEntitySet="Card_dynamicPage">
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="SystemMainImage" ColumnName="SystemMainImage" />
+                <ScalarProperty Name="OriginalMainImage" ColumnName="OriginalMainImage" />
+                <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
+                <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
+                <ScalarProperty Name="PdfSystemName" ColumnName="PdfSystemName" />
+                <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
+                <ScalarProperty Name="Pagename" ColumnName="Pagename" />
+                <ScalarProperty Name="TitleColour" ColumnName="TitleColour" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+                <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+                <ScalarProperty Name="Action1_Text" ColumnName="Action1_Text" />
+                <ScalarProperty Name="Action1_Colour" ColumnName="Action1_Colour" />
+                <ScalarProperty Name="CardDataFlag" ColumnName="CardDataFlag" />
+                <ScalarProperty Name="Sub_TitleColour" ColumnName="Sub_TitleColour" />
+                <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="ImageSystemName" ColumnName="ImageSystemName" />
+                <ScalarProperty Name="ImageOriginalName" ColumnName="ImageOriginalName" />
+                <ScalarProperty Name="Hexacode" ColumnName="Hexacode" />
+                <ScalarProperty Name="ColourName" ColumnName="ColourName" />
+                <ScalarProperty Name="ColourId" ColumnName="ColourId" />
+                <ScalarProperty Name="CardAction_Pagename" ColumnName="CardAction_Pagename" />
+                <ScalarProperty Name="CardAction_Deeplink" ColumnName="CardAction_Deeplink" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="CardActionId" ColumnName="CardActionId" />
+                <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
+                <ScalarProperty Name="CardProviderId" ColumnName="CardProviderId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Card_dynamicPage_History">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Card_dynamicPage_History">
+              <MappingFragment StoreEntitySet="Card_dynamicPage_History">
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="SystemMainImage" ColumnName="SystemMainImage" />
+                <ScalarProperty Name="OriginalMainImage" ColumnName="OriginalMainImage" />
+                <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
+                <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
+                <ScalarProperty Name="PdfSystemName" ColumnName="PdfSystemName" />
+                <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
+                <ScalarProperty Name="Pagename" ColumnName="Pagename" />
+                <ScalarProperty Name="TitleColour" ColumnName="TitleColour" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+                <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+                <ScalarProperty Name="Action1_Text" ColumnName="Action1_Text" />
+                <ScalarProperty Name="Action1_Colour" ColumnName="Action1_Colour" />
+                <ScalarProperty Name="CardDataFlag" ColumnName="CardDataFlag" />
+                <ScalarProperty Name="Sub_TitleColour" ColumnName="Sub_TitleColour" />
+                <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="ImageSystemName" ColumnName="ImageSystemName" />
+                <ScalarProperty Name="ImageOriginalName" ColumnName="ImageOriginalName" />
+                <ScalarProperty Name="Hexacode" ColumnName="Hexacode" />
+                <ScalarProperty Name="ColourName" ColumnName="ColourName" />
+                <ScalarProperty Name="ColourId" ColumnName="ColourId" />
+                <ScalarProperty Name="CardAction_Pagename" ColumnName="CardAction_Pagename" />
+                <ScalarProperty Name="CardAction_Deeplink" ColumnName="CardAction_Deeplink" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="CardActionId" ColumnName="CardActionId" />
+                <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
+                <ScalarProperty Name="CardProviderId" ColumnName="CardProviderId" />
+                <ScalarProperty Name="Parent_Card_Id" ColumnName="Parent_Card_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Price_SchemeAccessTable">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Price_SchemeAccessTable">
+              <MappingFragment StoreEntitySet="Price_SchemeAccessTable">
+                <ScalarProperty Name="Pagename" ColumnName="Pagename" />
+                <ScalarProperty Name="SpecificDestriAccess" ColumnName="SpecificDestriAccess" />
+                <ScalarProperty Name="SpecificDealerAccess" ColumnName="SpecificDealerAccess" />
+                <ScalarProperty Name="AllDealerAccess" ColumnName="AllDealerAccess" />
+                <ScalarProperty Name="AllDestriAccess" ColumnName="AllDestriAccess" />
+                <ScalarProperty Name="deleted" ColumnName="deleted" />
+                <ScalarProperty Name="promotionid" ColumnName="promotionid" />
+                <ScalarProperty Name="modifiedBy" ColumnName="modifiedBy" />
+                <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+                <ScalarProperty Name="createby" ColumnName="createby" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="AllAcess" ColumnName="AllAcess" />
+                <ScalarProperty Name="DealerId" ColumnName="DealerId" />
+                <ScalarProperty Name="DestributorID" ColumnName="DestributorID" />
+                <ScalarProperty Name="RegId" ColumnName="RegId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MediaDatas">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.MediaData">
+              <MappingFragment StoreEntitySet="MediaData">
+                <ScalarProperty Name="PageFlag" ColumnName="PageFlag" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="LabelId" ColumnName="LabelId" />
+                <ScalarProperty Name="VideoImage" ColumnName="VideoImage" />
+                <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
+                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MediaDataHistories">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.MediaDataHistory">
+              <MappingFragment StoreEntitySet="MediaDataHistory">
+                <ScalarProperty Name="PageFlag" ColumnName="PageFlag" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="LabelId" ColumnName="LabelId" />
+                <ScalarProperty Name="VideoImage" ColumnName="VideoImage" />
+                <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
+                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+                <ScalarProperty Name="MediaDataId" ColumnName="MediaDataId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

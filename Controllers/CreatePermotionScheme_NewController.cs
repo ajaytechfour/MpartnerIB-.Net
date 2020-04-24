@@ -93,10 +93,10 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                dt = Session["permission"] as DataTable;
-                string pageUrl2 = PageUrl;
-                DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (result[0]["createrole"].ToString() == "1")
+                //dt = Session["permission"] as DataTable;
+                //string pageUrl2 = PageUrl;
+                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
+                if (true)
                 {
 
 

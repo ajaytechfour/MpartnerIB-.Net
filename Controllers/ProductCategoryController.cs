@@ -416,7 +416,7 @@ namespace LuminousMpartnerIB.Controllers
                     //dt = Session["permission"] as DataTable;
                     //pageUrl2 = PageUrl;
                 }
-              //  DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
+                //  DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
                 if (true)
                 {
                     var getParentCat = (from c in db.ParentCategories

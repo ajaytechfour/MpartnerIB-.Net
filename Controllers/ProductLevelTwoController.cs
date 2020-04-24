@@ -330,10 +330,10 @@ namespace Luminous.Controllers
                                                select new
                                                {
                                                    id = c.id,
-                                                   PCat = c.ProductCatergory.PName,
+                                                 //  PCat = c.ProductCatergory.PName,
                                                    Name = c.Name,
-                                                   proCatOne = c.ProductLevelOne.Name,
-                                                   parntcat = c.ParentCategory.PCName,
+                                                //   proCatOne = c.ProductLevelOne.Name,
+                                                  // parntcat = c.ParentCategory.PCName,
                                                    status = c.PlTwStatus == 1 ? "Enable" : "Disable",
 
 
