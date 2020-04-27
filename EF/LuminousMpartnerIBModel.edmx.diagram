@@ -38,7 +38,6 @@
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.FooterCategoryHistory" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.MappingUrl_Page" Width="1.5" PointX="18.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.MPartnerServiceLog" Width="1.5" PointX="16.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurvey" Width="1.5" PointX="18.75" PointY="18.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ParentCategory" Width="1.5" PointX="10.75" PointY="19.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductAccessTable" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductAccessTableForProduct" Width="1.5" PointX="20.75" PointY="14.75" IsExpanded="true" />
@@ -67,8 +66,6 @@
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.city" Width="1.5" PointX="9.375" PointY="14.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationAccessTable" Width="1.5" PointX="27.375" PointY="0.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationReadStatu" Width="1.5" PointX="27.375" PointY="5.75" />
-        <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationsHistory" Width="1.5" PointX="27.375" PointY="8.75" />
-        <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" Width="1.5" PointX="27.375" PointY="12.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.Notification" Width="1.5" PointX="27.375" PointY="18.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.GCM_NotificationLog" Width="1.5" PointX="27.375" PointY="22.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ContestMaster" Width="1.5" PointX="27.375" PointY="26.75" />
@@ -85,6 +82,9 @@
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.Price_SchemeAccessTable" Width="1.5" PointX="11.375" PointY="14.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.MediaData" Width="1.5" PointX="13.375" PointY="16.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.MediaDataHistory" Width="1.5" PointX="21.375" PointY="29.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationsHistory" Width="1.5" PointX="5.375" PointY="18.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurvey" Width="1.5" PointX="23.375" PointY="29.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" Width="1.5" PointX="29.375" PointY="24.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

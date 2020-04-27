@@ -115,17 +115,17 @@ namespace LuminousMpartnerIB.Controllers
                     //else
                     if (userupload_file == null)
                     {
-                        Alls = Alls ?? "off";
-                        if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (rglist == "" || rglist == null || rglist == "0") && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
-                        {
+                        //Alls = Alls ?? "off";
+                        //if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (rglist == "" || rglist == null || rglist == "0") && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
+                        //{
 
-                            ModelState.AddModelError("status", "Permission For Has No Value");
+                        //    ModelState.AddModelError("status", "Permission For Has No Value");
 
-                        }
-                        else if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
-                        {
-                            ModelState.AddModelError("status", "Check Either Distributor OR Dealer");
-                        }
+                        //}
+                        //else if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
+                        //{
+                        //    ModelState.AddModelError("status", "Check Either Distributor OR Dealer");
+                        //}
                     }
 
                     #endregion

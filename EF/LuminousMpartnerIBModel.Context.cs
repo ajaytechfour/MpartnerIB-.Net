@@ -61,7 +61,6 @@ namespace LuminousMpartnerIB.EF
         public DbSet<FooterCategoryHistory> FooterCategoryHistories { get; set; }
         public DbSet<MappingUrl_Page> MappingUrl_Page { get; set; }
         public DbSet<MPartnerServiceLog> MPartnerServiceLogs { get; set; }
-        public DbSet<NotificationSurvey> NotificationSurveys { get; set; }
         public DbSet<ParentCategory> ParentCategories { get; set; }
         public DbSet<ProductAccessTable> ProductAccessTables { get; set; }
         public DbSet<ProductAccessTableForProduct> ProductAccessTableForProducts { get; set; }
@@ -89,8 +88,6 @@ namespace LuminousMpartnerIB.EF
         public DbSet<city> cities { get; set; }
         public DbSet<NotificationAccessTable> NotificationAccessTables { get; set; }
         public DbSet<NotificationReadStatu> NotificationReadStatus { get; set; }
-        public DbSet<NotificationsHistory> NotificationsHistories { get; set; }
-        public DbSet<NotificationSurveyHistory> NotificationSurveyHistories { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<GCM_NotificationLog> GCM_NotificationLog { get; set; }
         public DbSet<ContestMaster> ContestMasters { get; set; }
@@ -106,6 +103,9 @@ namespace LuminousMpartnerIB.EF
         public DbSet<Price_SchemeAccessTable> Price_SchemeAccessTable { get; set; }
         public DbSet<MediaData> MediaDatas { get; set; }
         public DbSet<MediaDataHistory> MediaDataHistories { get; set; }
+        public DbSet<NotificationsHistory> NotificationsHistories { get; set; }
+        public DbSet<NotificationSurvey> NotificationSurveys { get; set; }
+        public DbSet<NotificationSurveyHistory> NotificationSurveyHistories { get; set; }
     
         public virtual ObjectResult<PermotonsListPagingScheme_Price_New_Result> PermotonsListPagingScheme_Price_New(string pagename)
         {

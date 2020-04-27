@@ -403,14 +403,17 @@
                 $("#lblmessagesubmit").text("Please fill all the fields");
                 return false;
             }
-            if ($('#file_headerimage').length == 0 || $('#file_headerimage').val() == '') {
-                $("#lblmessagesubmit").text("Please fill all the fields");
-                return false;
-            }
-            if ($('#file_mainimage').length == 0 || $('#file_mainimage').val() == '') {
-                $("#lblmessagesubmit").text("Please fill all the fields");
-                return false;
-            }
+
+            //if ($('#file_headerimage').length == 0 || $('#file_headerimage').val() == '') {
+            //    $("#lblmessagesubmit").text("Please fill all the fields");
+            //    return false;
+            //}
+
+            //if ($('#file_mainimage').length == 0 || $('#file_mainimage').val() == '') {
+            //    $("#lblmessagesubmit").text("Please fill all the fields");
+            //    return false;
+            //}
+
             if ($("#sdate").val() == "") {
                 $("#lblmessagesubmit").text("Please fill all the fields");
                 return false;
@@ -637,13 +640,13 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="form-group">
+                                @*<div class="form-group">
                                     <label>Permission For</label>
                                     @{
             int id = Convert.ToInt32(Model.Id);
             <a href="/EditPromotion_Price_Permission/Index/@id">Edit Permission</a>
                                     }
-                                </div>
+                                </div>*@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">

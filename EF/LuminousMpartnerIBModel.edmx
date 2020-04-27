@@ -830,7 +830,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationReadStatus' doe
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NotificationId" Type="int" />
           <Property Name="_Subject" Type="varchar" MaxLength="100" />
           <Property Name="_text" Type="varchar" MaxLength="250" />
@@ -844,7 +844,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationReadStatus' doe
           <Key>
             <PropertyRef Name="SurveyID" />
           </Key>
-          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="SurveyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Survey" Type="varchar(max)" />
           <Property Name="QuestionType" Type="varchar" MaxLength="20" />
           <Property Name="QuestionTitle" Type="nvarchar(max)" />
@@ -867,7 +867,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationReadStatus' doe
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SurveyID" Type="int" />
           <Property Name="Survey" Type="varchar(max)" />
           <Property Name="QuestionType" Type="varchar" MaxLength="20" />
@@ -2584,29 +2584,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="Comments" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Flag" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="NotificationSurvey">
-          <Key>
-            <PropertyRef Name="SurveyID" />
-          </Key>
-          <Property Name="SurveyID" Type="Int32" Nullable="false" />
-          <Property Name="Survey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="QuestionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="QuestionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptionA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptionB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptionD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptionE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CorrectAns" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="StartDate" Type="DateTime" Precision="3" />
-          <Property Name="Enddate" Type="DateTime" Precision="3" />
-          <Property Name="CreatedBy" Type="Int32" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifyBy" Type="Int32" />
-          <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-          <Property Name="Status" Type="Int32" />
-          <Property Name="ContestId" Type="Int32" />
-        </EntityType>
         <EntityType Name="ParentCategory">
           <Key>
             <PropertyRef Name="Pcid" />
@@ -2949,7 +2926,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <EntitySet Name="FooterCategoryHistories" EntityType="Self.FooterCategoryHistory" />
           <EntitySet Name="MappingUrl_Page" EntityType="Self.MappingUrl_Page" />
           <EntitySet Name="MPartnerServiceLogs" EntityType="Self.MPartnerServiceLog" />
-          <EntitySet Name="NotificationSurveys" EntityType="Self.NotificationSurvey" />
           <EntitySet Name="ParentCategories" EntityType="Self.ParentCategory" />
           <EntitySet Name="ProductAccessTables" EntityType="Self.ProductAccessTable" />
           <EntitySet Name="ProductAccessTableForProducts" EntityType="Self.ProductAccessTableForProduct" />
@@ -2988,8 +2964,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           </FunctionImport>
           <EntitySet Name="NotificationAccessTables" EntityType="LuminousMpartnerIBModel.NotificationAccessTable" />
           <EntitySet Name="NotificationReadStatus" EntityType="LuminousMpartnerIBModel.NotificationReadStatu" />
-          <EntitySet Name="NotificationsHistories" EntityType="LuminousMpartnerIBModel.NotificationsHistory" />
-          <EntitySet Name="NotificationSurveyHistories" EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" />
           <FunctionImport Name="GetNotificationAccessTable" ReturnType="Collection(LuminousMpartnerIBModel.GetNotificationAccessTable_Result)">
           <Parameter Name="Nid" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -3023,6 +2997,9 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <EntitySet Name="Price_SchemeAccessTable" EntityType="LuminousMpartnerIBModel.Price_SchemeAccessTable" />
           <EntitySet Name="MediaDatas" EntityType="LuminousMpartnerIBModel.MediaData" />
           <EntitySet Name="MediaDataHistories" EntityType="LuminousMpartnerIBModel.MediaDataHistory" />
+          <EntitySet Name="NotificationsHistories" EntityType="LuminousMpartnerIBModel.NotificationsHistory" />
+          <EntitySet Name="NotificationSurveys" EntityType="LuminousMpartnerIBModel.NotificationSurvey" />
+          <EntitySet Name="NotificationSurveyHistories" EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" />
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -3318,44 +3295,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="NotificationId" Type="Int32" />
           <Property Name="IsRead" Type="Boolean" />
           <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="NotificationsHistory">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="NotificationId" Type="Int32" />
-          <Property Name="C_Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="C_text" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="C_status" Type="Int32" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
-          <Property Name="Alertflag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="NotificationSurveyHistory">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="SurveyID" Type="Int32" />
-          <Property Name="Survey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="QuestionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="QuestionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptionA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptionB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptionD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OptionE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="CorrectAns" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="StartDate" Type="DateTime" Precision="3" />
-          <Property Name="Enddate" Type="DateTime" Precision="3" />
-          <Property Name="CreatedBy" Type="Int32" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifyBy" Type="Int32" />
-          <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-          <Property Name="deviceIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Status" Type="Int32" />
         </EntityType>
         <ComplexType Name="GetNotificationAccessTable_Result">
           <Property Type="Boolean" Name="AllAcess" Nullable="true" />
@@ -3679,6 +3618,67 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="LabelId" Type="Int32" />
           <Property Name="Status" Type="Int32" />
           <Property Name="PageFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="NotificationsHistory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NotificationId" Type="Int32" />
+          <Property Name="C_Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="C_text" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="C_status" Type="Int32" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Alertflag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="NotificationSurvey">
+          <Key>
+            <PropertyRef Name="SurveyID" />
+          </Key>
+          <Property Name="SurveyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Survey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QuestionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="QuestionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CorrectAns" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="Enddate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifyBy" Type="Int32" />
+          <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="ContestId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="NotificationSurveyHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="Int32" />
+          <Property Name="Survey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QuestionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="QuestionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CorrectAns" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="Enddate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifyBy" Type="Int32" />
+          <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+          <Property Name="deviceIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -4216,30 +4216,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
                 <ScalarProperty Name="NewURL" ColumnName="NewURL" />
                 <ScalarProperty Name="Comments" ColumnName="Comments" />
                 <ScalarProperty Name="Flag" ColumnName="Flag" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="NotificationSurveys">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationSurvey">
-              <MappingFragment StoreEntitySet="NotificationSurvey">
-                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
-                <ScalarProperty Name="Survey" ColumnName="Survey" />
-                <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
-                <ScalarProperty Name="QuestionTitle" ColumnName="QuestionTitle" />
-                <ScalarProperty Name="OptionA" ColumnName="OptionA" />
-                <ScalarProperty Name="OptionB" ColumnName="OptionB" />
-                <ScalarProperty Name="OptionC" ColumnName="OptionC" />
-                <ScalarProperty Name="OptionD" ColumnName="OptionD" />
-                <ScalarProperty Name="OptionE" ColumnName="OptionE" />
-                <ScalarProperty Name="CorrectAns" ColumnName="CorrectAns" />
-                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
-                <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="ContestId" ColumnName="ContestId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4865,46 +4841,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="NotificationsHistories">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationsHistory">
-              <MappingFragment StoreEntitySet="NotificationsHistory">
-                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
-                <ScalarProperty Name="Alertflag" ColumnName="Alertflag" />
-                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="C_status" ColumnName="_status" />
-                <ScalarProperty Name="C_text" ColumnName="_text" />
-                <ScalarProperty Name="C_Subject" ColumnName="_Subject" />
-                <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="NotificationSurveyHistories">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationSurveyHistory">
-              <MappingFragment StoreEntitySet="NotificationSurveyHistory">
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="deviceIP" ColumnName="deviceIP" />
-                <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
-                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
-                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-                <ScalarProperty Name="CorrectAns" ColumnName="CorrectAns" />
-                <ScalarProperty Name="OptionE" ColumnName="OptionE" />
-                <ScalarProperty Name="OptionD" ColumnName="OptionD" />
-                <ScalarProperty Name="OptionC" ColumnName="OptionC" />
-                <ScalarProperty Name="OptionB" ColumnName="OptionB" />
-                <ScalarProperty Name="OptionA" ColumnName="OptionA" />
-                <ScalarProperty Name="QuestionTitle" ColumnName="QuestionTitle" />
-                <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
-                <ScalarProperty Name="Survey" ColumnName="Survey" />
-                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="GetNotificationAccessTable" FunctionName="LuminousMpartnerIBModel.Store.GetNotificationAccessTable">
             <ResultMapping>
               <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.GetNotificationAccessTable_Result">
@@ -5249,6 +5185,70 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
                 <ScalarProperty Name="VideoName" ColumnName="VideoName" />
                 <ScalarProperty Name="MediaDataId" ColumnName="MediaDataId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NotificationsHistories">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationsHistory">
+              <MappingFragment StoreEntitySet="NotificationsHistory">
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="Alertflag" ColumnName="Alertflag" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="C_status" ColumnName="_status" />
+                <ScalarProperty Name="C_text" ColumnName="_text" />
+                <ScalarProperty Name="C_Subject" ColumnName="_Subject" />
+                <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NotificationSurveys">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationSurvey">
+              <MappingFragment StoreEntitySet="NotificationSurvey">
+                <ScalarProperty Name="ContestId" ColumnName="ContestId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
+                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="CorrectAns" ColumnName="CorrectAns" />
+                <ScalarProperty Name="OptionE" ColumnName="OptionE" />
+                <ScalarProperty Name="OptionD" ColumnName="OptionD" />
+                <ScalarProperty Name="OptionC" ColumnName="OptionC" />
+                <ScalarProperty Name="OptionB" ColumnName="OptionB" />
+                <ScalarProperty Name="OptionA" ColumnName="OptionA" />
+                <ScalarProperty Name="QuestionTitle" ColumnName="QuestionTitle" />
+                <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
+                <ScalarProperty Name="Survey" ColumnName="Survey" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NotificationSurveyHistories">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationSurveyHistory">
+              <MappingFragment StoreEntitySet="NotificationSurveyHistory">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="deviceIP" ColumnName="deviceIP" />
+                <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
+                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="CorrectAns" ColumnName="CorrectAns" />
+                <ScalarProperty Name="OptionE" ColumnName="OptionE" />
+                <ScalarProperty Name="OptionD" ColumnName="OptionD" />
+                <ScalarProperty Name="OptionC" ColumnName="OptionC" />
+                <ScalarProperty Name="OptionB" ColumnName="OptionB" />
+                <ScalarProperty Name="OptionA" ColumnName="OptionA" />
+                <ScalarProperty Name="QuestionTitle" ColumnName="QuestionTitle" />
+                <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
+                <ScalarProperty Name="Survey" ColumnName="Survey" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
