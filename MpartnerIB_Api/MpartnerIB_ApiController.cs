@@ -3096,6 +3096,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     UserPermission obj_permission = new UserPermission();
 
                     obj_permission.CustomerType = data.Usertype;
+                    obj_permission.Permission = data.Permission.ToString();
 
                     if (data.ModuleName == "")
                     {
