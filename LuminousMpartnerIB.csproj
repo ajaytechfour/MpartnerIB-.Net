@@ -127,6 +127,7 @@
     <Folder Include="MpartnerIB_Api\DealerImage\" />
     <Folder Include="MpartnerIB_Api\Pdf\" />
     <Folder Include="ProductImages\" />
+    <Folder Include="Views\MultiLanguage\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\MultiLanguageController.cs" />
     <Compile Include="EF\Dealer_Save_Image.cs">
       <DependentUpon>LuminousMpartnerIB.tt</DependentUpon>
     </Compile>

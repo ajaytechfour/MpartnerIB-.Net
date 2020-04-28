@@ -2990,10 +2990,6 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             {
                 List<getCustomerPermission_New_Result> getPerm = luminous.getCustomerPermission_New(userid, language).ToList();
 
-
-
-
-
                 foreach (var data in getPerm)
                 {
 
