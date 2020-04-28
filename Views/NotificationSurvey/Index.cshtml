@@ -374,12 +374,12 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="">
-                                    <label style="display:block;">Contest Type<span class="required">*</span></label>
+                                    <label style="display:block;">Contest Type<span class="required">*</span></label>                                 
                                     @Html.RadioButton("contesttype", "Survey", new { id = "survey", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">Survey</span>
                                     @Html.RadioButton("contesttype", "Contest", new { id = "contest", @style = "border:none; Height:inherit" }) <span>Contest</span>
                                 </div>
                             </div>
-                            <div class="col-md-3" id="surveylbl2">
+                            @*<div class="col-md-3" id="surveylbl2">
                                 <div class="">
                                     <label id="surveylbl">Survey Name<span class="required">*</span></label>
                                     <div class="" id="surveytxt">
@@ -388,8 +388,8 @@
                                         @Html.ValidationMessageFor(a => a.Survey, "", new { @class = "required" })
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
+                            </div>*@
+                            @*<div class="col-md-3">
                                 <div class="">
                                     <label id="contname">Contest Name<span class="required">*</span></label>
                                     <div class="" id="contdrop">
@@ -398,8 +398,8 @@
                                         @Html.ValidationMessageFor(a => a.Survey, "", new { @class = "required" })
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
+                            </div>*@
+                            <div class="col-md-6">
                                 <div class="">
                                     <label style="display:block;">Type<span class="required">*</span></label>
                                     @Html.RadioButton("Questiontype", "MCQ", new { id = "MCQ", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">MCQ</span>
@@ -408,7 +408,7 @@
                                 </div>
                             </div>
 
-                            <div class="" style="display:block; float:left; height:1px; width:100%;"></div>
+                            <div class="" style="display:block; float:left; height:1px; width:100%; margin-top:10px"></div>
                             <div class="col-md-6">
                                 <div class="">
                                     <label>Question Title<span class="required">*</span></label>

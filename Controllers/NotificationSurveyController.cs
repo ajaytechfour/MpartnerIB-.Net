@@ -239,10 +239,11 @@ namespace LuminousMpartnerIB.Controllers
                     #endregion
                     if (Type =="")
                     {
-                        if (Survey == "" || Survey == null)
-                        {
-                            ModelState.AddModelError("Survey", "Survey Field Cannot Be Blank");
-                        }
+                        //rajesh
+                        //if (Survey == "" || Survey == null)
+                        //{
+                        //    ModelState.AddModelError("Survey", "Survey Field Cannot Be Blank");
+                        //}
                     }
                     if (QuestionTitle == "" || QuestionTitle == null)
                     {
