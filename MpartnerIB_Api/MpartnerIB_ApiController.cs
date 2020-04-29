@@ -3096,7 +3096,6 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     UserPermission obj_permission = new UserPermission();
 
                     obj_permission.CustomerType = data.Usertype;
-                    obj_permission.Permission = data.Permission.ToString();
 
                     if (data.ModuleName == "")
                     {
@@ -3125,6 +3124,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
 
                     }
+                    obj_permission.Languagecode = data.languagecode != null ? data.languagecode : "0";
 
                     permissionlist.Add(obj_permission);
 
@@ -5318,9 +5318,9 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 ul.isActive = 1;
                 ul.CreatedON = DateTime.Now;
                 ul.CreatedBY = userid;
-                
+
                 luminous.UsersLists.Add(ul);
-                
+
                 luminous.SaveChanges();
                 msg.Message = "Record Save Successfully!";
                 msg.Status = "200";
