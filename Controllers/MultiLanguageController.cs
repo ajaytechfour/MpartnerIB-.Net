@@ -3,15 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Luminous.Models;
 
-namespace LuminousMpartnerIB.Controllers
+namespace Luminous.Controllers
 {
     public class MultiLanguageController : Controller
     {
-        // GET: MultiLanguage
-        public ActionResult Index()
+        protected override IAsyncResult BeginExecuteCore(AsyncCallback callback, object state)
         {
-            return View();
+            string lang = null;
+            HttpCookie langCookie = Request.Cookies["culture"];
+            if (langCookie != null)
+            {
+                lang = langCookie.Value;
+            }
+            else
+            {
+                var userLanguage = Request.UserLanguages;
+                var userLang = userLanguage != null ? userLanguage[0] : "";
+                if (userLang != "")
+                {
+                    lang = userLang;
+                }
+                else
+                {
+                    lang = LanguageManage.GetDefaultLanguage();
+                    
+                }
+            }
+            new LanguageManage().SetLanguage(lang);
+            return base.BeginExecuteCore(callback, state);
         }
     }
 }
