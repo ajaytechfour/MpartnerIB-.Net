@@ -1,0 +1,794 @@
+﻿@model LuminousMpartnerIB.EF.Card_dynamicPage
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+<script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $.post("@Url.Content("~/ProductCategory/GetParentCategory")", null, function (data) { SetParentCategory(data); }, "Json");
+        $.post("@Url.Content("~/CreatePermotionPrice_New/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+        @*$.post("@Url.Content("~/CreatePermotionPrice_New/GetCardProvider")", null, function (data) { SetCardGrid(data); }, "Json");
+        $.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },*@
+        "Json");
+        $(".date").datepicker(
+     { dateFormat: "dd-mm-yy" }
+        );
+
+        ValidationMessage();
+
+    });
+
+</script>
+<script type="text/javascript">
+
+    $(function () {
+
+        $("#title_colour").click(function () {
+
+            window.open('https://htmlcolorcodes.com/color-picker/');
+        })
+
+        $("#subtitle_colour").click(function () {
+            window.open('https://htmlcolorcodes.com/color-picker/');
+
+        })
+
+    });
+</script>
+<script>
+    $(document).ready(function () {
+
+        $("#hex1Titlecolor, #hex2subtitlecolor").change(function () {
+
+
+            var regExp = new RegExp("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$");
+            var text1 = $("#hex1Titlecolor").val();
+            var text2 = $("#hex2subtitlecolor").val();
+
+            if ($("#hex1Titlecolor").val() != '') {
+                if (regExp.test(text1)) {
+                    $("#lblmessagehex1price").hide();
+                }
+                else {
+                    $("#lblmessagehex1price").show();
+                    $("#lblmessagehex1price").text("Please Enter a Valid Hex Code");
+                    $("#hex1Titlecolor").val('');
+                }
+
+            }
+
+            if ($("#hex2subtitlecolor").val() != '') {
+                if (regExp.test(text2)) {
+                    $("#lblmessagehex2price").hide();
+                }
+                else {
+                    $("#lblmessagehex2price").show();
+                    $("#lblmessagehex2price").text("Please Enter a Valid Hex Code");
+                    $("#hex2subtitlecolor").val('');
+                }
+
+            }
+
+
+        });
+    });
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#btnsubmit").click(function () {
+
+            if ($('#ParentCategory').val() == 0 || $('#ParentCategory option:selected').val() == 0) {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+
+            if ($('#Ctype').val() == 0 || $('#Ctype option:selected').val() == 0) {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+
+            if ($("#txttitle").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($("#hex1Titlecolor").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($("#txtsubtitle").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($("#hex2subtitlecolor").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($('#file_headerimage').length == 0 || $('#file_headerimage').val() == '') {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($('#file_mainimage').length == 0 || $('#file_mainimage').val() == '') {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($("#sdate").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            if ($("#edate").val() == "") {
+                $("#lblmessagesubmit").text("Please fill all the fields");
+                return false;
+            }
+            //if ($("#pdf").val() == "") {
+            //    $("#lblmessagesubmit").text("Please fill all the fields");
+            //    return false;
+            //}
+
+
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    function ValidationMessage() {
+        if ('@ViewBag.StartDate' != "") {
+            $("#sdate").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#edate").text('@ViewBag.EndDate');
+        }
+
+        if ('@ViewBag.File' != "") {
+            $("#file").text('@ViewBag.File');
+        }
+
+        if ('@ViewBag.HFile' != "") {
+            $("#Hfile").text('@ViewBag.HFile');
+        }
+        if ('@ViewBag.MFile' != "") {
+            $("#Mfile").text('@ViewBag.MFile');
+        }
+        if ('@ViewBag.PFile' != "") {
+            $("#Pfile").text('@ViewBag.PFile');
+        }
+
+
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            location.href = "@Url.Content("~/CreatePermotionPrice_New/Index")";
+        }
+        @*$("#sdate").val('@ViewBag.preStartDate');
+        $("#edate").val('@ViewBag.PreEndDate');*@
+        //  debugger;
+    }
+</script>
+<script type="text/javascript">
+
+
+    function SetGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            debugger;
+            $("#Grid tbody").empty();
+            $.each(data.result, function (key, value) {
+
+                body += "<tr><td> " + value.id + "</td>" +
+                     "<td>" + value.ParntCat + "</td>" +
+
+                "<td>" + value.CardProvider + "</td>" +
+                  "<td>" + value.Title + "</td>" +
+                    "<td>" + value.Subtitle + "</td>" +
+
+             "<td>" + value.StartDate + "</td>" +
+             "<td>" + value.EndDate + "</td>" +
+             "<td>" + value.status + "</td>" +
+
+            "<td style='text-align:right;'>  <a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+
+            });
+            $("#Grid tbody").append(body);
+            // SetPages(data.TotalRecord)
+
+            paging();
+        }
+    }
+    //function SetPages(paging) {
+    //    var pages = "";
+    //    $("#Paging").empty();
+    //    for (var i = 1; i <= parseInt(paging); i++) {
+    //        pages += "<a style='cursor:pointer' onclick=GetPagesValues(" + i + ");> " + i + "  </a>";
+
+    //    }
+    //    $("#Paging").append("<u> Pages:-</u>" + pages);
+    //}
+    @*function GetPagesValues(id) {
+        $.post("@Url.Content("~/CreatePermotionPrice_New/GetContactDetail")", { page: id }, function (data) { SetGrid(data); }, "Json");
+    }*@
+    function Edit(id) {
+        location.href = "@Url.Content("~/CreatePermotionPrice_New/Edit/")" + id;
+    }
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+
+            $.post("@Url.Content("~/CreatePermotionPrice_New/Delete")", { id: id }, function (data) {
+                $.post("@Url.Content("~/CreatePermotionPrice_New/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+
+                alert(data);
+
+            }, "Json");
+        }
+    }
+
+
+
+    //Set Parent Category//
+    function SetParentCategory(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#ParentCategory");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+        }
+    }
+
+
+    //Set Card Grid//
+    function SetCardGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#Ctype");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+        }
+    }
+
+</script>
+<script type="text/javascript">
+    function Allch() {
+        if ($("#All").is(":checked")) {
+            $("#region").attr("disabled", true);
+            $("#destributor").attr("disabled", true);
+            $("#Dealer").attr("disabled", true);
+            $("#userupload_file").attr("disabled", true);
+
+
+
+            $("#checkDistri").hide();
+            $("#checkDeal").hide();
+        }
+        else {
+            $("#region").attr("disabled", false);
+            $("#destributor").attr("disabled", false);
+            $("#Dealer").attr("disabled", false);
+            $("#userupload_file").attr("disabled", false);
+
+
+
+            $("#checkDistri").show();
+            $("#checkDeal").show();
+        }
+
+    }
+
+
+    function GetRegions() {
+        $.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },
+                 "Json");
+
+    }
+    function GetDestributor() {
+
+        SetDestributor();
+
+        //        $.post("../Dealers/GetAllDestributors", null, function (data) { SetProdcutCategory(data, 'DestributorList'); }, "Json");
+
+
+
+    }
+    function GetDealer() {
+
+        SetDealer();
+        //$.post("../Dealers/GetAllDealer", null, function (data) { SetProdcutCategory(data, 'DealerList'); }, "Json");
+
+    }
+    function SetProdcutCategory(data, id) {
+        debugger;
+        option = '';
+        var procat = $("#" + id);
+        procat.empty();
+        // procat.append("<option value=0 disabled='disabled' >Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+        });
+        procat.append(option);
+        procat.multiselect({
+            nonSelectedText: 'Select Region!',
+            includeSelectAllOption: true,
+            enableFiltering: true,
+            maxHeight: 150,
+            buttonWidth: 120,
+            enableClickableOptGroups: true,
+            enableCollapsibleOptGroups: true
+        });
+
+    }
+
+    function SetRegion() {
+        $("#RgList").val($("#RegionList").val());
+        var regionlist = $("#RgList").val();
+
+        $.post("@Url.Content("~/Dealers/GetDestributorsByMultiPleids")", { RegionId: regionlist }, function (data) { SetProdcutCategory(data, 'DestributorList'); }, "Json");
+    }
+    function SetDestributor() {
+        $("#disList").val($("#DestributorList").val());
+
+        var regionlist = $("#disList").val();
+
+        $.post("@Url.Content("~/Dealers/GetAllDealerByMultiPleIds")", { RegionId: regionlist }, function (data) { SetProdcutCategory(data, 'DealerList'); }, "Json");
+    }
+    function SetDealer() {
+        $("#Dealist").val($("#DealerList").val());
+    }
+
+
+    $(function () {
+
+        $("#txtsearch").on("keyup", function (event) {
+
+            if (event.which == 8) {
+
+                if ($("#txtsearch").val() == null || $("#txtsearch").val() == 0) {
+                    $('#Paging').empty();
+                    $.post("@Url.Content("~/CreatePermotionPrice_New/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+                }
+
+            }
+
+            else {
+                if ($("#txtsearch").val() != null || $("#txtsearch").val() > 0) {
+                    var value = this.value.toLowerCase().trim();
+
+                    $('#Grid tr').each(function (index) {
+
+                        if (!index) return;
+
+                        $(this).find("td").each(function () {
+
+                            var id = $(this).text().toLowerCase().trim();
+                            var not_found = (id.indexOf(value) == -1);
+                            $(this).closest('tr').toggle(!not_found);
+                            return not_found;
+                        });
+
+                    });
+
+                }
+
+            }
+        });
+    });
+
+
+    function paging() {
+        $('#Paging').empty();
+
+        $(document).ready(function () {
+
+            var totalRows = $('#Grid').find('tbody tr:has(td)').length;
+
+            var recordPerPage = 15;
+            var numberOfPages = Math.ceil(totalRows / recordPerPage);
+
+            for (var i = 0; i < numberOfPages; i++) {
+                var pageNum = i + 1;
+                $('#Paging').append('<a href="#" rel="' + i + '">' + pageNum + '</a> ');
+            }
+
+            $('#Grid tbody tr').hide();
+            $('#Grid tbody tr').slice(0, recordPerPage).show();
+            $('#Paging a:first').addClass('active');
+            $('#Paging a').bind('click', function () {
+
+                var currentPage = $(this).attr('rel');
+                var startitem = currentPage * recordPerPage;
+                var enditem = startitem + recordPerPage;
+
+                //$('#Grid tbody tr').hide().slice(startitem, enditem).css('display', 'table-row').animate({ opacity: 1 }, 300);
+                $('#Grid tbody tr').hide().slice(startitem, enditem).show();
+            });
+
+        });
+    }
+
+
+</script>
+<script type="text/javascript">
+
+    //var flag1 = true;
+    //var flag2 = false;
+    //var flag3 = false;
+
+    $(function () {
+
+        //var _URL = window.URL || window.webkitURL;
+        //var imgwidth = "";
+        //var imgheight = "";
+
+        //$('input:file').change(function () {
+        //    debugger;
+        //   // alert("Change");
+
+        //    var file_size = (this.files[0].size);
+
+        //    if (flag1 == true || flag3 == false) {
+        //       // flag1 = false;
+
+        //        if ($("#file_headerimage").val() != '' && $("#file_headerimage").length != 0) {
+        //            if ($("#file_headerimage").length != 0 && file_size >= 45000) {
+
+        //                $(".h_file_error").html("File size should not be greater than 4 KB");
+        //                $("#file_headerimage").val('');
+        //                flag3 = false;
+
+        //                return false;
+        //            }
+
+        //            else {
+
+        //                if ((file = this.files[0])) {
+        //                    img = new Image();
+        //                    img.onload = function () {
+        //                        imgwidth = this.width;
+        //                        imgheight = this.height;
+
+        //                        if (imgwidth == 250 && imgheight ==204) {
+        //                            $(".h_file_error").html("");
+        //                            flag1 = false;
+        //                            flag2 = true;
+        //                            flag3 = true;
+        //                            return true;
+        //                        }
+        //                        else {
+        //                            $(".h_file_error").html("Dimension should be 700*151");
+        //                            $("#file_headerimage").val('');
+        //                            flag1 = false;
+        //                            flag3 = false;
+
+        //                            return false;
+        //                        }
+
+        //                    }
+        //                    img.src = _URL.createObjectURL(file);
+
+        //                }
+        //            }
+        //        }
+        //    }
+
+        //    if (flag2==true && flag3==true) {
+
+        //        if ($("#file_mainimage").val() != '' && $("#file_mainimage").length != 0) {
+        //            if ($("#file_mainimage").length != 0 && file_size >= 50000) {
+
+        //                $(".m_file_error").html("File size should not be greater than 50 KB");
+        //                $("#file_mainimage").val('');
+        //                return false;
+        //            }
+
+        //        }
+        //        else {
+
+        //            if ((file = this.files[0])) {
+
+        //                img = new Image();
+        //                img.onload = function () {
+
+        //                    imgwidth = this.width;
+        //                    imgheight = this.height;
+
+        //                    if (imgwidth == 250 && imgheight == 204) {
+
+        //                        $(".m_file_error").html("");
+        //                        flag2 = false;
+        //                        return true;
+        //                    }
+        //                    else {
+        //                        $(".m_file_error").html("Dimension should be 500*500");
+        //                        $("#file_mainimage").val('');
+        //                        return false;
+        //                    }
+        //                };
+        //                img.src = _URL.createObjectURL(file);
+        //            }
+        //        }
+
+        //    }
+
+
+
+        //});
+
+        $("#title_colour").click(function () {
+
+            window.open('https://htmlcolorcodes.com/color-picker/');
+
+        })
+        $("#subtitle_colour").click(function () {
+            window.open('https://htmlcolorcodes.com/color-picker/');
+
+        })
+    });
+
+
+</script>
+<script type="text/javascript">
+
+    $(function () {
+
+        var _URL = window.URL || window.webkitURL;
+        var imgwidth = "";
+        var imgheight = "";
+
+        $("#file_headerimage").change(function () {
+            //debugger;
+
+            var file_size = (this.files[0].size);
+
+            if ($("#file_headerimage").val() != '' && $("#file_headerimage").length != 0) {
+                if ($("#file_headerimage").length != 0 && file_size >= 4000) {
+                    $(".h_file_error").html("File size should not be greater than 4 KB");
+                    $("#file_headerimage").val('');
+                    return false;
+                }
+                else {
+                    if ((file = this.files[0])) {
+                        img = new Image();
+                        img.onload = function () {
+                            imgwidth = this.width;
+                            imgheight = this.height;
+
+                            if (imgwidth == 700 && imgheight == 151) {
+                                $(".h_file_error").html("");
+                                return true;
+                            }
+                            else {
+                                $(".h_file_error").html("Dimension should be 700*151");
+                                $("#file_headerimage").val('');
+                                return false;
+                            }
+                        };
+                        img.src = _URL.createObjectURL(file);
+
+                    }
+                }
+            }
+
+
+        });
+
+
+
+
+        $("#file_mainimage").change(function () {
+              debugger;
+
+            var file_size = (this.files[0].size);
+
+            if ($("#file_mainimage").val() != '' && $("#file_mainimage").length != 0) {
+                if ($("#file_mainimage").length != 0 && file_size >= 150000) {
+                    $(".m_file_error").html("File size should not be greater than 50 KB");
+                    $("#file_mainimage").val('');
+                    return false;
+                }
+                else {
+                    if ((file = this.files[0])) {
+                        img = new Image();
+                        img.onload = function () {
+                            debugger;
+                            imgwidth = this.width;
+                            imgheight = this.height;
+
+                            if (imgwidth <= 800 && imgheight == 500) {
+                                $(".m_file_error").html("");
+                                return true;
+                            }
+                            else {
+                                $(".m_file_error").html("Dimension should be maximum 500*800");
+                                $("#file_mainimage").val('');
+                                return false;
+                            }
+                        };
+                        img.src = _URL.createObjectURL(file);
+
+                    }
+                }
+            }
+
+
+        });
+
+
+
+
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+        var coords = new Array();
+        $('#Grid tbody').addClass("DragMe");
+
+        $('.DragMe').sortable({
+            disabled: false,
+            axis: 'y',
+            //items: "> tr:not(:first)",
+            forceHelperSize: true,
+            update: function (event, ui) {
+                var Newpos = ui.item.index();
+
+                var RefID = $('tr').find('td:first').html();
+                //var RefID=   $(this).closest('tr').attr('id');
+
+                //alert("Position " + Newpos + "..... RefID: " + RefID);
+                $("#Grid tr:has(td)").each(function () {
+
+                    var RefID = $(this).find("td:eq(0)").html();
+                    var NewPosition = $(".ui-sortable-handle").index(this) + 1;
+                    //alert(RefID + " " + NewPosition);
+                    coords.push({ x: RefID, y: NewPosition });
+                });
+
+                for (var i = 0; i < coords.length; i++) {
+                    var xcoord = coords[i].x + "," + coords[i].y;
+
+                    var arr = { ids: xcoord };
+                    $.ajax({
+                        url: '@Url.Action("UpdateSequence", "CreatePermotionPrice_New")',
+                        type: 'POST',
+                        data: JSON.stringify(arr),
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function (msg) {
+                            alert(msg);
+                        }
+                    });
+                }
+
+                coords.length = 0;
+
+
+            }
+        }).disableSelection();
+    });
+    //Grid Swapping End//
+
+</script>
+
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span></span>Price List</h1>
+        </div>
+    </div>
+    <div id="form">
+        <div class="row">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="">
+                                <label>Distributor Name <span class="required">*</span></label>
+                                <select name="ParentCatid" id="ParentCategory" class="form-control">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom:30px;">
+                    <div style="float:right;margin-right:12px; margin-top: -8px">
+                        @using (Html.BeginForm("Index", "CreatePermotionPrice_New", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+
+                            <table class="headingHd" style="width:100%;">
+                                <tr>
+                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Price Data List</th>
+                                    <th style="font-size: 20px;font-weight: normal;float: left;width: 200px;background: none;color: #595959;margin-right: 20px;border: 1px solid #eee;border-radius: 3px;">
+                                        <select id="selectDropDown" class="form-control" style="border:none; box-shadow:none; font-size:13px;">
+                                            <option value="" selected>Select For Rearrange data</option>
+                                            <option value="INBT">INBT</option>
+                                            <option value="Solar">Solar</option>
+                                        </select>
+                                    </th>
+                                    <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:15px; opacity: 0.2;">
+                                        @*<input type="submit" id="btnsearch" value="Search" style="border:none; background: #ffaf38; padding: 7px 18px; border-radius: 5px;" />*@
+                                    </th>
+                                </tr>
+                            </table>
+                        }
+                    </div>
+                    <div id="list" class="tabelGridRow">
+                        <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:40px; display:block;">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th style="width:15%;">Parent Category</th>
+                                    <th>Card Type</th>
+                                    <th>Title </th>
+                                    <th>Sub Title</th>
+                                    <th style="width:12%;">Start Date</th>
+                                    <th style="width:11%;">End Date</th>
+                                    <th>Status</th>
+                                    <th style="text-align:right; width:10%;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+
+                        </table>
+                        <div>
+                            Pages :<span id="Paging"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</div>

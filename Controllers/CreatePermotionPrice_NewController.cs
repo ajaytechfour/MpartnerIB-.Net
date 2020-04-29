@@ -20,8 +20,10 @@ namespace LuminousMpartnerIB.Controllers
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
         private string PageUrl = "/CreatePermotionPrice_New/Index";
+        string utype = string.Empty;
         public ActionResult Index(string Search)
         {
+            utype = Session["ctype"].ToString();
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
@@ -40,15 +42,21 @@ namespace LuminousMpartnerIB.Controllers
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (true)
+                if (utype != "Luminous")
                 {
                     return View();
                 }
                 else
                 {
-                    return RedirectToAction("snotallowed", "snotallowed");
+                    return RedirectToAction("Index", "PermotionPrice");
+                    //return RedirectToAction("snotallowed", "snotallowed");
                 }
             }
+        }
+
+        public ActionResult PriceList()
+        {
+            return View();
         }
 
         public JsonResult GetCardProvider()
@@ -115,7 +123,7 @@ namespace LuminousMpartnerIB.Controllers
                     //    ModelState.AddModelError("status", "Permission For Has No Value");
                     //}
                     //else
-                   
+
                     if (userupload_file == null)
                     {
                         //Rajesh
@@ -636,7 +644,7 @@ namespace LuminousMpartnerIB.Controllers
 
                     //                       }).ToList();
 
-                    
+
 
                     //var temp1= contactDetails2.Where(x=>x.StartDate!=null).
 
@@ -985,7 +993,7 @@ namespace LuminousMpartnerIB.Controllers
                             pdffile = PdfFileName.Replace(" ", string.Empty);
                             var ServerSavePath_Pdf = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + pdffile);
                             //Save file to server folder  
-                           Pdf_file.SaveAs(ServerSavePath_Pdf);
+                            Pdf_file.SaveAs(ServerSavePath_Pdf);
 
                             //End PDF Image//
                             contactusd.PdfOriginalName = Pdf_file.FileName;
