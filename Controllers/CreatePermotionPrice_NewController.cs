@@ -42,13 +42,13 @@ namespace LuminousMpartnerIB.Controllers
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (utype != "Luminous")
+                if (utype == "Luminous")
                 {
-                    return View();
+                    return RedirectToAction("Index", "Price");
                 }
                 else
                 {
-                    return RedirectToAction("Index", "PermotionPrice");
+                    return View();
                     //return RedirectToAction("snotallowed", "snotallowed");
                 }
             }

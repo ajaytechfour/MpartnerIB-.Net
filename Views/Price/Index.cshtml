@@ -1,0 +1,270 @@
+﻿@model LuminousMpartnerIB.EF.Card_dynamicPage
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+<script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $.post("@Url.Content("~/Price/GetDistributors")", null, function (data) { SetParentCategory(data); }, "Json");
+        $.post("@Url.Content("~/Price/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+
+        //ValidationMessage();
+    });
+
+</script>
+
+<script>
+    $(document).ready(function () {
+
+
+    });
+</script>
+
+<script type="text/javascript">
+
+
+    function SetGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            debugger;
+            $("#Grid tbody").empty();
+            $.each(data.result, function (key, value) {
+
+                body += "<tr><td> " + value.id + "</td>" +
+                     "<td>" + value.ParntCat + "</td>" +
+
+                "<td>" + value.CardProvider + "</td>" +
+                  "<td>" + value.Title + "</td>" +
+                    "<td>" + value.Subtitle + "</td>" +
+
+             "<td>" + value.StartDate + "</td>" +
+             "<td>" + value.EndDate + "</td>" +
+             "<td>" + value.status + "</td>" +
+
+            "<td style='text-align:right;'>  <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+
+            });
+            $("#Grid tbody").append(body);
+            // SetPages(data.TotalRecord)
+
+            paging();
+        }
+    }
+
+
+    //Set Parent Category//
+    function SetParentCategory(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#ParentCategory");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+        }
+    }
+
+    function Getgriddata(e) {
+        debugger;
+        var id = e;
+        if (id == "0") {
+            // $("#Address1").val("");
+        }
+        else {
+            $.post("@Url.Content("~/Price/GetContactDetail")", { id: id }, function (data) { SetGrid(data); }, "Json");
+        }
+    }
+
+
+
+    //Set Card Grid//
+    function SetCardGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#Ctype");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+        }
+    }
+
+    function Delete(id)
+    {
+        debugger;
+
+    }
+
+
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        var coords = new Array();
+        $('#Grid tbody').addClass("DragMe");
+
+        $('.DragMe').sortable({
+            disabled: false,
+            axis: 'y',
+            //items: "> tr:not(:first)",
+            forceHelperSize: true,
+            update: function (event, ui) {
+                var Newpos = ui.item.index();
+
+                var RefID = $('tr').find('td:first').html();
+                //var RefID=   $(this).closest('tr').attr('id');
+
+                //alert("Position " + Newpos + "..... RefID: " + RefID);
+                $("#Grid tr:has(td)").each(function () {
+
+                    var RefID = $(this).find("td:eq(0)").html();
+                    var NewPosition = $(".ui-sortable-handle").index(this) + 1;
+                    //alert(RefID + " " + NewPosition);
+                    coords.push({ x: RefID, y: NewPosition });
+                });
+
+                for (var i = 0; i < coords.length; i++) {
+                    var xcoord = coords[i].x + "," + coords[i].y;
+
+                    var arr = { ids: xcoord };
+                    $.ajax({
+                        url: '@Url.Action("UpdateSequence", "CreatePermotionPrice_New")',
+                        type: 'POST',
+                        data: JSON.stringify(arr),
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function (msg) {
+                            alert(msg);
+                        }
+                    });
+                }
+
+                coords.length = 0;
+
+
+            }
+        }).disableSelection();
+    });
+    //Grid Swapping End//
+
+</script>
+
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span></span>Price List</h1>
+        </div>
+    </div>
+    <div id="form">
+        <div class="row">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="">
+                                <label>Distributor Name <span class="required">*</span></label>
+                                <select name="ParentCatid" id="ParentCategory" onchange="Getgriddata(this.value);" class="form-control">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom:30px;">
+                    <div style="float:right;margin-right:12px; margin-top: -8px">
+                        @using (Html.BeginForm("Index", "CreatePermotionPrice_New", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+
+                            <table class="headingHd" style="width:100%;">
+                                <tr>
+                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Price Data List</th>
+                                    <th style="font-size: 20px;font-weight: normal;float: left;width: 200px;background: none;color: #595959;margin-right: 20px;border: 1px solid #eee;border-radius: 3px;">
+                                        <select id="selectDropDown" class="form-control" style="border:none; box-shadow:none; font-size:13px;">
+                                            <option value="" selected>Select For Rearrange data</option>
+                                            <option value="INBT">INBT</option>
+                                            <option value="Solar">Solar</option>
+                                        </select>
+                                    </th>
+                                    <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:15px; opacity: 0.2;">
+                                        @*<input type="submit" id="btnsearch" value="Search" style="border:none; background: #ffaf38; padding: 7px 18px; border-radius: 5px;" />*@
+                                    </th>
+                                </tr>
+                            </table>
+                        }
+                    </div>
+                    <div id="list" class="tabelGridRow">
+                        <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:40px; display:block;">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th style="width:15%;">Parent Category</th>
+                                    <th>Card Type</th>
+                                    <th>Title </th>
+                                    <th>Sub Title</th>
+                                    <th style="width:12%;">Start Date</th>
+                                    <th style="width:11%;">End Date</th>
+                                    <th>Status</th>
+                                    <th style="text-align:right; width:10%;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+
+                        </table>
+                        <div>
+                            Pages :<span id="Paging"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</div>
