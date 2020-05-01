@@ -449,7 +449,7 @@ namespace LuminousMpartnerIB.Controllers
                                     pat.promotionid = Convert.ToInt32(c_dynamicpage.Id);
                                     pat.AllAcess = true;
                                     pat.Pagename = "Price";
-                                    pat.createdate = DateTime.Now;
+                                    pat.createdate = DateTime.Now; 
                                     pat.createby = Session["userid"].ToString();
                                     db.Price_SchemeAccessTable.Add(pat);
                                     db.SaveChanges();

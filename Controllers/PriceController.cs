@@ -102,7 +102,39 @@ namespace LuminousMpartnerIB.Controllers
 
         }
 
-
+        [HttpGet]
+        public ActionResult View(int id)
+        {
+            if (Session["userid"] == null)
+            {
+                return RedirectToAction("login", "login");
+            }
+            else
+            {
+                //dt = Session["permission"] as DataTable;
+                //string pageUrl2 = PageUrl;
+                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
+                if (true/*result[0]["editrole"].ToString() == "1"*/)
+                {
+                    Card_dynamicPage cud = db.Card_dynamicPage.Single(a => a.Id == id);
+                    List<Price_SchemeAccessTable> pat = db.Price_SchemeAccessTable.Where(a => a.promotionid == id).ToList();
+                    ViewBag.status = cud.Status;
+                    ViewBag.preStartDate = Convert.ToDateTime(cud.Startdate).ToShortDateString();
+                    ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToShortDateString();
+                    ViewBag.Providerid = cud.CardProviderId;
+                    ViewBag.Prntid = cud.Subcatid;
+                    ViewBag.HeaderImageName = cud.ImageSystemName;
+                    ViewBag.MainImageName = cud.SystemMainImage;
+                    ViewBag.ProviderName = cud.CardProviderName;
+                    ViewBag.PrntName = cud.Subcatname;
+                    return View(cud);
+                }
+                else
+                {
+                    return RedirectToAction("snotallowed", "snotallowed");
+                }
+            }
+        }
     }
 }
 

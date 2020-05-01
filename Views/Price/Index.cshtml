@@ -54,7 +54,7 @@
              "<td>" + value.EndDate + "</td>" +
              "<td>" + value.status + "</td>" +
 
-            "<td style='text-align:right;'>  <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+            "<td style='text-align:right;'>  <a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
 
             });
             $("#Grid tbody").append(body);
@@ -119,6 +119,11 @@
             procat.append(option);
         }
     }
+
+     function Edit(id) {
+        location.href = "@Url.Content("~/Price/View/")" + id;
+    }
+
 
     function Delete(id)
     {

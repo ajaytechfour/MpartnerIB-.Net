@@ -225,7 +225,8 @@
     function Edit(id) {
         location.href = "@Url.Content("~/CreatePermotionPrice_New/Edit/")" + id;
     }
-    function Delete(id) {
+    function Delete(id)
+    {
         if (confirm("Do You Want To Delete This Record")) {
 
             $.post("@Url.Content("~/CreatePermotionPrice_New/Delete")", { id: id }, function (data) {
