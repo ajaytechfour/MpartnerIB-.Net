@@ -1,0 +1,357 @@
+﻿@model Luminous.EF.ProductCatergory
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("~/assets/js/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+<script type="text/javascript">
+    $(function () {
+        $.post("@Url.Content("~/ProductCategory/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+        $.post("@Url.Content("~/ProductCategory/GetParentCategory")", null, function (data) { SetParentCategory(data); }, "Json");
+        ValidationMessage();
+    });
+    function ValidationMessage() {
+        if ('@ViewBag.File' != "") {
+            $("#file").text('@ViewBag.File');
+        }
+    }
+    function SetGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            $("#Grid tbody").empty();
+            $.each(data.result, function (key, value) {
+                body += "<tr><td>" + value.id + "</td>" +
+                     "<td>" + value.ParentCat + "</td>" +
+                //"<td>" + value.PCode + "</td>" +
+            "<td>" + value.PName + "</td>" +
+             "<td>" + value.status + "</td>" +
+
+            "<td style='text-align:right;'><a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+                debugger;
+            });
+            $("#Grid tbody").append(body);
+            // SetPages(data.TotalRecord);
+           
+            paging();
+
+        }
+    }
+
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+            $.post("@Url.Content("~/ProductCategory/DeleteContact")", { id: id }, function (data) {
+                $.post("@Url.Content("~/ProductCategory/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+                alert(data);
+            }, "Json");
+        }
+    }
+
+    function Edit(id) {
+
+        location.href = "@Url.Content("~/ProductCategory/Edit/")" + id;
+    }
+    function SetParentCategory(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#ParentCategory");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+        }
+    }
+    //function SetPages(paging) {
+    //    var pages = "";
+    //    $("#Paging").empty();
+    //    $("#Paging").empty();
+
+    //    for (var i = 1; i <= parseInt(paging) ; i++) {
+
+    //        pages += "<a style='cursor:pointer' onclick=GetPagesValues(" + i + ");>  " + i + "  </a>";
+
+
+    //    }
+    //    $("#Paging").append("<u>Pages:-</u>" + pages);
+    //}
+
+    @*function GetPagesValues(id) {
+        $.post("@Url.Content("~/ProductCategory/GetContactDetail")", { page: id }, function (data) { SetGrid(data); }, "Json");
+    }*@
+
+
+
+    $(function () {
+
+        $("#txtsearch").on("keyup", function (event) {
+
+            if (event.which == 8) {
+
+                if ($("#txtsearch").val() == null || $("#txtsearch").val() == 0) {
+                    $('#Paging').empty();
+                    $.post("@Url.Content("~/ProductCategory/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+                }
+
+            }
+
+            else {
+                if ($("#txtsearch").val() != null || $("#txtsearch").val() > 0) {
+                    var value = this.value.toLowerCase().trim();
+
+                    $('#Grid tr').each(function (index) {
+
+                        if (!index) return;
+
+                        $(this).find("td").each(function () {
+
+                            var id = $(this).text().toLowerCase().trim();
+                            var not_found = (id.indexOf(value) == -1);
+                            $(this).closest('tr').toggle(!not_found);
+                            return not_found;
+                        });
+
+                    });
+
+                }
+
+            }
+        });
+    });
+
+
+    function paging() {
+        $('#Paging').empty();
+
+        $(document).ready(function () {
+
+            var totalRows = $('#Grid').find('tbody tr:has(td)').length;
+
+            var recordPerPage = 15;
+            var numberOfPages = Math.ceil(totalRows / recordPerPage);
+
+            for (var i = 0; i < numberOfPages; i++) {
+                var pageNum = i + 1;
+                $('#Paging').append('<a href="#" rel="' + i + '">' + pageNum + '</a> ');
+            }
+
+            $('#Grid tbody tr').hide();
+            $('#Grid tbody tr').slice(0, recordPerPage).show();
+            $('#Paging a:first').addClass('active');
+            $('#Paging a').bind('click', function () {
+
+                var currentPage = $(this).attr('rel');
+                var startitem = currentPage * recordPerPage;
+                var enditem = startitem + recordPerPage;
+
+                //$('#Grid tbody tr').hide().slice(startitem, enditem).css('display', 'table-row').animate({ opacity: 1 }, 300);
+                $('#Grid tbody tr').hide().slice(startitem, enditem).show();
+            });
+
+        });
+    }
+
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8; min-height:800px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>@Luminous.Resource.Catalog - </span>@Luminous.Resource.ProductCategory</h1>
+        </div>
+    </div>
+
+    @using (Html.BeginForm("SaveContact", "ProductCategory", FormMethod.Post, new { @id = "forms", enctype = "multipart/form-data" }))
+    {
+        <div class="row">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500" id="content_wrap">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row" id="GridView">
+                        <div class="col-md-3">
+                            <div class="">
+                                <label>@Luminous.Resource.ParentCategory <span class="required">*</span></label>
+                                <select name="pcId" id="ParentCategory" class="form-control">
+                                    <option>@Luminous.Resource.Select</option>
+                                </select>
+                             
+                                @Html.ValidationMessageFor(model => model.ParentCatid, "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>@Luminous.Resource.ProductCategory <span class="required">*</span></label>
+                                @Html.TextBoxFor(a => a.PName, new { @class = "form-control" })
+
+                                @Html.ValidationMessageFor(a => a.PName, "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>@Luminous.Resource.UploadPDF<span class="required">*</span></label>
+                                <input type="file" name="Postedfile" style="border:none; height:inherit;" />
+                                <span id="file" class="required"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>@Luminous.Resource.Status</label>
+                                <input type="checkbox" checked="checked" name="statusC" style="border:none; height:inherit;" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="submit" class="submitBtn" value="Submit" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div style="float:right;margin-right:12px; margin-top: -15px">
+                        @*@using (Html.BeginForm("Index", "LSD_DistCouponCount", FormMethod.Post,
+                                      new { enctype = "multipart/form-data" }))
+                            {*@
+                            <table class="headingHd">
+                                <tr>
+                                    <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@Luminous.Resource.GalleryList</th>
+                                    <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = @Luminous.Resource.Gallery, @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+
+                                    </th>
+                                </tr>
+                            </table>
+
+                          @*}*@
+                    </div>
+
+                    <div id="list" class="tabelGridRow">
+                        <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Luminous.Resource.ID
+                                    </th>
+                                    <th>
+                                        @Luminous.Resource.ParentCategory
+                                    </th>
+                                    <th>
+                                        @Luminous.Resource.ProductCategory
+                                    </th>
+                                    <th>
+                                        @Luminous.Resource.Status
+                                    </th>
+                                    <th style="text-align:right;">
+                                        @Luminous.Resource.Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <div>
+                            Pages :<span id="Paging"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 Luminous | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

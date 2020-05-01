@@ -1,0 +1,281 @@
+﻿@model Luminous.EF.MediaData
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+    $(function () {
+
+        ValidationMessage();
+    });
+    function ValidationMessage() {
+
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            location.href = "@Url.Content("~/Media/Index")";
+        }
+
+
+    }
+</script>
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th,
+        table tr th a,
+        table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td,
+    tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td,
+    #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr,
+    tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+
+<script type="text/javascript">
+    $(function () {
+        $.post("@Url.Content("~/Media/GetCategory")", null, function (data) { SetCategory(data); }, "Json");
+        $.post("@Url.Content("~/Media/GetMediaDetail")", null, function (data) { SetGrid(data); }, "Json");
+    });
+    function SetGrid(data) {
+
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            $("#Grid tbody").empty();
+            $.each(data.result, function (key, value) {
+
+                body += "<tr><td>" + value.Id + "</td>" +
+                     "<td>" + value.Category + "</td>" +
+                "<td>" + value.Description + "</td>" +
+            "<td>" + value.URL + "</td>" +
+
+                 "<td>" + value.status + "</td>" +
+
+            "<td><a style='cursor:pointer' onclick=Edit(" + value.Id + ");>Edit</a> <a style='cursor:pointer' onclick=Delete(" + value.Id + ");>Delete</a></td></tr>";
+
+            });
+            $("#Grid tbody").append(body);
+            SetPages(data.TotalRecord);
+
+        }
+
+    }
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+
+            $.post("@Url.Content("~/Media/Delete")", { id: id }, function (data) {
+                $.post("@Url.Content("~/Media/GetMediaDetail")", null, function (data) { SetGrid(data); }, "Json");
+
+                alert(data);
+
+            }, "Json");
+        }
+    }
+    function SetCategory(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#ParentCategory");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+        }
+    }
+    function Edit(id) {
+        location.href = "@Url.Content("~/Media/Edit/")" + id;
+    }
+    function SetPages(paging) {
+        var pages = "";
+        $("#Paging").empty();
+        for (var i = 1; i <= parseInt(paging) ; i++) {
+            pages += "<a style='cursor:pointer' onclick=GetPagesValues(" + i + ");> " + i + "  </a>";
+
+        }
+        $("#Paging").append("<u> Pages:-</u>" + pages);
+    }
+
+    function GetPagesValues(id) {
+        $.post("@Url.Content("~/Media/GetMediaDetail")", { page: id }, function (data) { SetGrid(data); }, "Json");
+    }
+</script>
+
+@using (@Html.BeginForm("Save", "Media", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+
+    <div id="content_wrap">
+        <div class="msgbar msg_Info heading">Media</div>
+        <div class="content_main">
+            <div class="boxes1">
+
+
+
+                <table style="width: 100%;">
+                    <tr>
+
+                        <td style="width: 137px;">
+                            Category <span class="required">*</span>
+                        </td>
+                        <td style="width: 221px">
+                            <select name="ParentCatid" style="color: black" id="ParentCategory">
+                                <option>Select</option>
+                            </select>
+                            <br />
+                            @Html.ValidationMessageFor(model => model.LabelId, "", new { @class = "required" })
+                        </td>
+
+                        <td style="width: 137px;">
+                            Description <span style="color: red;">*</span>
+                        </td>
+                        <td colspan="3">
+                            @Html.TextAreaFor(model => model.VideoName, new { @style = "Width:300px;Height:100px" })<br />
+
+                            @Html.ValidationMessageFor(model => model.VideoName, "", new { @class = "required" })
+                        </td>
+                    </tr>
+              
+
+                    
+                  
+
+                    <tr>
+                        <td style="width: 137px;">
+                            URL <span style="color: red;">*</span>
+                        </td>
+                        <td>
+                            @Html.TextAreaFor(model => model.Url, new { @style = "Width:200px" })<br />
+                            @Html.ValidationMessageFor(model => model.Url, "", new { @class = "required" })
+                        </td>
+                        <td>
+                            Status <span style="color: red;">*</span>
+                        </td>
+                        <td>
+                            <input id="status" type="checkbox" checked="checked" name="Status" />
+                            <br />
+                            <span class="Status"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="center">
+                            <input type="submit" class="save-but-m" value="Submit" />
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+}
+<div id="list" style="width: 997px; float: right; margin-right: 15px;">
+    <table id="Grid">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Category
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    URL
+                </th>
+                <th>
+                    Status
+                </th>
+
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="Paging">
+    </div>
+</div>

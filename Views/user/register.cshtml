@@ -1,0 +1,667 @@
+﻿
+@{
+   
+    Layout = "~/Views/Shared/security.cshtml";
+}
+
+
+@model TVS.Models.User
+@using TVS
+@{
+    datautility objdatautility = new datautility();
+  
+    }
+
+
+<html>
+<head>
+<title>
+Create Account
+</title>
+
+
+ <style type="text/css">
+table {
+border: 0;
+border-spacing: 0;
+font-size: 0.857em;
+margin: 10px 0;
+width: 100%;
+}
+table table {
+font-size: 1em;
+}
+#footer-wrapper table {
+font-size: 1em;
+}
+table tr th {
+background: #757575;
+background: rgba(0, 0, 0, 0.51);
+border-bottom-style: none;
+}
+table tr th,
+table tr th a,
+table tr th a:hover {
+color: #FFF;
+font-weight: bold;
+}
+table tbody tr th {
+vertical-align: top;
+}
+tr td,
+tr th {
+padding: 4px 9px;
+border: 1px solid #fff;
+text-align: left; /* LTR */
+}
+#footer-wrapper tr td,
+#footer-wrapper tr th {
+border-color: #555;
+border-color: rgba(255, 255, 255, 0.18);
+}
+tr.odd {
+background: #e4e4e4;
+background: rgba(0, 0, 0, 0.105);
+}
+tr,
+tr.even {
+background: #efefef;
+background: rgba(0, 0, 0, 0.063);
+}
+table ul.links {
+margin: 0;
+padding: 0;
+font-size: 1em;
+}
+table ul.links li {
+padding: 0 1em 0 0;
+}
+</style> 
+<script type="text/javascript">
+    $(document).ready(
+        function () {
+          
+            show();
+        }); 
+</script>
+
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        showuserinfo();
+    });
+
+</script>
+ <script type="text/javascript">
+     function getvalues() {
+         $('input, textarea, select').attr('disabled', 'disabled');
+
+     }
+            
+    </script>
+
+      
+
+       <script type='text/javascript'>
+           function GetMessage() {
+               PageMethods.Message(OnGetMessageSuccess, OnGetMessageFailure);
+           }
+           function OnGetMessageSuccess(result, userContext, methodName) {
+               alert(result);
+           }
+           function OnGetMessageFailure(error, userContext, methodName) {
+               alert(error.get_message());
+           }
+    </script>
+<script type="text/javascript">
+    function save() {
+      
+        var email = $('#email').val().trim();
+        var username = $('#username').val().trim();
+        var password = $('#password').val().trim();
+        var status = $('#Select1').val().trim();
+        var profileid = $('#Countries').val().trim();
+
+        if (email == "") {
+            alert('Please Enter Email');
+            return false;
+        }
+        if (username == "") {
+            alert('Please Enter User Name');
+            return false;
+        }
+        if (password == "") {
+            alert('Please Enter Password');
+            return false;
+        }
+
+        if (status == "0") {
+            alert('Please Select Status');
+            return false;
+        }
+        if (profileid == "0") {
+            alert('Please Select Profile Type');
+            return false;
+        }
+
+
+        $.post("@Url.Content("~/user/save")", {email : email , username : username , password : password ,status : status, profileid : profileid }, function (data) { checkdata(data); })
+
+        function checkdata(abc) {
+            alert(abc);
+            if (abc == "session expire") {
+                location.href = '@Url.Action("login", "login")';
+            }
+            else {
+                if (abc == "Record has been saved successfully") {
+                    //alert(abc);
+                    location.href = document.URL;
+                }
+            }
+        }
+    }
+
+    var create = "";
+    var edit = "";
+    var delete1 = "";
+    var view = "";
+
+    function showuserinfo() {
+        $.get("@Url.Content("~/user/showuserinfo")", null, function (data) { chkuserinfo(data); })
+            .error(function (data) { chkuserinfo(data); });
+    }
+
+    function chkuserinfo(abc) {
+
+        var str = abc;
+        var temp = new Array();
+        temp = str.split(",");
+
+
+        var counter = 0;
+        for (a in temp) {
+
+            if (counter == 0) {
+                create = temp[a];
+                if (create == 1) {
+
+                }
+                else {
+                    getvalues();
+
+                }
+
+            }
+            if (counter == 1) {
+                edit = temp[a];
+
+            }
+            if (counter == 2) {
+
+                delete1 = temp[a];
+
+            }
+
+            if (counter == 3) {
+
+                view = temp[a];
+                if (view == 1) {
+
+                }
+                else {
+
+
+                }
+
+            }
+
+            counter = counter + 1;
+        }
+    }
+
+    var GData = "";
+
+    function show() {
+
+        $.get("@Url.Content("~/user/Showstate")", null, function (data) { chk(data); })
+            .error(function (data) { chk(data); });
+    }
+
+
+
+     
+
+
+    function chk(abc) {
+        if (abc == "You do not have view permission") {
+            alert('You Do Not Have View Permission');
+        }
+        else {
+            if (abc == "session expire") {
+                location.href = '@Url.Action("login", "login")';
+            }
+            else {
+                GData = abc;
+                BuildTable(GData, 0);
+            }
+        }
+    }
+
+            var profileid = "";
+            var status = "";
+            function BuildTable(data, eid) {
+
+                var table = '<table id=gridview11 width=100%><thead><tr><th width:20%; >User Name</th><th width:20%; >Password</th><th width:20%; >Email</th><th style=width:5%;display:none >Status</th><th width:5%; >Status</th><th style=width:5%;display:none; >Profile</th><th width:5%; >Profile</th><th width:20%; >Action</th></thead><tbody>';
+                for (var cd in data) {
+
+                    var row = '<tr>';
+                    if (eid != data[cd].id) {
+                        row += '<td style=background-color:Silver;width:20%; >' + data[cd].userid + '</td>';
+                          row += '<td style=background-color:Silver;width:20%;font-weight:bold;font-size:25px; >........</td>';
+                       // row += '<td style=background-color:Silver;width:20%; >' + data[cd].password + '</td>';
+                        row += '<td style=background-color:Silver;width:20%; >' + data[cd].email + '</td>';
+                        row += '<td style=background-color:Silver;width:5%;display:none >' + data[cd].status + '</td>';
+                        if (data[cd].status == 1) {
+                            row += '<td style=background-color:Silver;width:5%; >Active</td>';
+                        }
+                        else {
+                            row += '<td style=background-color:Silver;width:5%; >Block</td>';
+                        }
+                        row += '<td style=background-color:Silver;width:5%;display:none >' + data[cd].profileid + '</td>';
+                        row += '<td style=background-color:Silver;width:5%; >' + data[cd].profilename + '</td>';
+                        
+                        row += '<td style=background-color:Silver;width:10%; >'
+                                 + "<img src='@Url.Content("~/images/edit.png")' onclick=editRecord(" + data[cd].id + ") id='btnEdit'  value='Edit' /> </td>";
+
+
+
+                      
+                                 
+                    }
+                    else {
+
+
+
+                        var dsss = data[cd].userid;
+                        status = data[cd].status;
+                        profileid = data[cd].profileid;
+                        
+                       
+                        row += '<td style=background-color:Silver;width:20%; ><input id=txtuserid value="' + dsss + '" style=width:200px;  class=input-form  type=text  /><font color=red >*</font></td>';
+                     // row += '<td style=background-color:Silver;width:10%; ><input id=txtpassword value=........ style=width:100px;  class=input-form  type=password  /><font color=red >*</font></td>';
+                       
+                        row += '<td style=background-color:Silver;width:10%; ><input id=txtpassword value="' + data[cd].password + '" style=width:100px;  class=input-form  type=password  /><font color=red >*</font></td>';
+                       
+                        row += '<td style=background-color:Silver;width:20%; ><input id=txtEmail value="' + data[cd].email + '" style=width:200px;  class=input-form  type=text  /><font color=red >*</font></td>';
+                        row += '<td style=background-color:Silver;width:10%; ><select id=Select1new style=width:100px; class=input-form><option value=0>Select</option><option value=1>Active</option><option value=2>Block</option></select><font color=red >*</font></td>';
+                        row += '<td style=background-color:Silver;width:10%; ><select id=Selectnewone style=width:100px; class=input-form><option value=0>Select</option></select><font color=red >*</font></td>';
+                      
+                        var da = data[cd].id;
+
+
+                        var deleteimage;
+                        if (delete1 == 1) {
+                            deleteimage = " <img src='@Url.Content("~/images/delete1.png")' onclick=updatedelete(" + data[cd].id + ")  id='btndelete' type='button' value='Delete'";
+                        }
+                        else {
+                            deleteimage = "";
+                        }
+                     
+                        var editimage;
+                        if (edit == 1) {
+                            editimage = " <img src='@Url.Content("~/images/editsan.png")'  id='btnUpdate' value='" + da + "'   />";
+                        }
+                        else {
+                            editimage = "";
+                        }
+
+                        
+
+
+                        row += '<td style=background-color:Silver;width:20%; >'
+                + "" + editimage + ""
+                + " <img src='@Url.Content("~/images/deletesan.png")' onclick=cancelRecord() id='btnCancel' type='button' value='Cancel' /> "
+                + "" + deleteimage + " </td>";
+                        
+                    }
+
+
+                    row += '</tr>';
+                    table += row;
+                }
+
+                table += '</tbody></table>';
+                $('#d1').html(table);
+            }
+
+
+
+
+            function editRecord(eid) {
+   
+                BuildTable(GData, eid);
+                editcall();
+                demo();
+
+
+            }
+
+     
+
+            function cancelRecord() {
+                BuildTable(GData, 0);
+            }
+
+
+            function demo() {
+                $(document).ready(function () {
+
+                    //Dropdownlist Selectedchange event
+
+
+
+
+                    $("#Selectnewone").empty();
+
+                    $.ajax({
+
+                        type: 'POST',
+
+                        url: '@Url.Action("Getprofiles", "user")',
+
+
+
+                        dataType: 'json',
+
+
+
+                        data: { id: $("#Countries").val() },
+
+
+
+
+
+                        success: function (states) {
+
+
+
+                            $.each(states, function (i, state) {
+
+                                $("#Selectnewone").append('<option value="' + state.Value + '">' +
+
+                         state.Text + '</option>');
+
+
+                            
+                                if (state.Value == profileid) {
+                                    $("#Selectnewone").val(profileid);
+                                    $("#Select1new").val(status);
+                                    
+                                }
+                                // here we are adding option for States
+
+
+
+                            });
+
+
+
+
+                        },
+
+                        error: function (ex) {
+
+                            alert('Failed To Retrieve States.' + ex);
+
+                        }
+
+                    });
+
+                    return false;
+
+
+
+                });
+
+
+            }
+
+
+
+            function updatedelete(eid) {
+
+                if (confirm("Do you want to Delete...")) 
+                {
+                    $.post("@Url.Content("~/user/Deletestate")",
+
+            {
+             empId: eid
+
+           },
+
+            function (data) { chkupdateRecorddette(data); });
+                }
+            }
+            function chkupdateRecorddette(abc) {
+                alert(abc);
+
+                if (abc == "session expire") {
+                    location.href = '@Url.Action("login", "login")';
+                }
+                else {
+
+                    show();
+                }
+
+            }
+
+
+
+            function updateRecord(eid) {
+                var userid = $("#txtuserid").val().trim();
+                var password = $("#txtpassword").val();
+                var email = $("#txtEmail").val();
+                var status = $("#Select1new").val();
+                var profile = $("#Selectnewone").val();
+
+                $.post("@Url.Content("~/user/UpdateEmployee")",
+            {empid : eid , userid: userid, password: password, email: email, status: status, profile: profile },
+            function (data) { chkupdateRecord(data); });
+            }
+            function chkupdateRecord(abc) {
+
+                alert(abc);
+                if (abc == "session expire") {
+                    location.href = '@Url.Action("login", "login")';
+                }
+                else {
+
+                 
+                    show();
+                }
+
+            }
+
+
+</script>
+
+<script  type="text/javascript">
+    function editcall() {
+        $(document).ready(function () {
+            $("#btnUpdate").on("click", function (e) {
+                var id = $(this).attr("value")
+
+
+                var userid = $("#txtuserid").val().trim();
+                var password = $("#txtpassword").val();
+                var email = $("#txtEmail").val();
+                var status = $("#Select1new").val();
+                var profile = $("#Selectnewone").val();
+                if (userid == "") {
+                    e.preventDefault();
+                    alert("Please Enter User Name");
+                    return false;
+
+                }
+                if (password == "") {
+                    e.preventDefault();
+                    alert("Please Enter Password");
+                    return false;
+                }
+                if (email == "") {
+                    e.preventDefault();
+                    alert("Please Enter Email");
+                    return false;
+                }
+                if (status == "0") {
+                    e.preventDefault();
+                    alert("Please Select Status");
+                    return false;
+                }
+                if (profile == "0") {
+                    e.preventDefault();
+                    alert("Please Select Profile Type");
+                    return false;
+
+                }
+
+                updateRecord(id);
+
+
+
+
+
+
+            });
+        });
+    }
+</script>
+
+
+</head>
+<body>
+
+
+
+
+    <div id="content_wrap">
+      <div class="msgbar msg_Info heading">Create Account</div>
+      <div class="content_main" >
+        <div class="boxes1">
+
+       
+           <table>
+  
+    
+
+      <tr>
+       <td>
+            Email<font color=red >*</font>
+        </td>
+        <td>
+     
+        <div >
+           @Html.TextBoxFor(model => model.email, new { @class = "input-form" })
+           @Html.ValidationMessageFor(model => model.email)
+           
+        </div>
+ 
+        </td>
+    </tr>
+
+
+      <tr>
+       <td>
+            User Name<font color=red >*</font>
+        </td>
+        <td>
+     
+        <div >
+            @Html.TextBoxFor(model => model.username, new { @class = "input-form" })
+           @Html.ValidationMessageFor(model => model.username)
+           
+        </div>
+ 
+        </td>
+    </tr>
+
+
+      <tr>
+       <td>
+           Password<font color=red >*</font>
+        </td>
+        <td>
+     
+        <div >
+            @Html.TextBoxFor(model =>  model.password, new { @class = "input-form" , @Type="Password" })
+           @Html.ValidationMessageFor(model => model.password)
+           
+        </div>
+ 
+        </td>
+    </tr>
+      <tr>
+       <td>
+          Status<font color=red >*</font>
+        </td>
+        <td>
+     
+     
+            <select id="Select1" class = "input-form">
+                <option value="0">Select</option>
+                  <option value="1">Active</option>
+                    <option value="2">Block</option>
+            </select>
+ 
+        </td>
+    </tr>
+      <tr>
+       <td>
+           Profile Type<font color=red >*</font>
+        </td>
+        <td>
+     
+        <div >
+               @Html.DropDownList("Countries", ViewData["country"] as List<SelectListItem>, new { @class = "input-form" })
+           
+        </div>
+ 
+        </td>
+    </tr>
+    <tr>
+        <td>
+        
+            
+        </td>
+          <td>
+        
+          
+         <input type="submit" value="Create"   onclick="save();" class="save-but-m" />
+    </tr>
+    
+  
+  
+    
+</table>
+        
+
+          
+        </div>
+      
+        
+         <div style="float:left; width: 100%"  id="d1" ></div>
+      
+
+</div>
+  
+</div>
+
+
+
+
+
+
+</body>
+</html>

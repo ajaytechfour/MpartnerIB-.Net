@@ -1,0 +1,205 @@
+﻿@model Luminous.EF.ProductLevelThree
+@{
+    ViewBag.Title = "FullProductDetails";
+    Layout = "~/Views/Shared/Catalog.cshtml";
+}
+<style type="text/css">
+    .required
+    {
+        color: Red;
+    }
+    table
+    {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+    table table
+    {
+        font-size: 1em;
+    }
+    #footer-wrapper table
+    {
+        font-size: 1em;
+    }
+    table tr th
+    {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+    table tr th, table tr th a, table tr th a:hover
+    {
+        color: #FFF;
+        font-weight: bold;
+    }
+    table tbody tr th
+    {
+        vertical-align: top;
+    }
+    tr td, tr th
+    {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+    #footer-wrapper tr td, #footer-wrapper tr th
+    {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+    tr.odd
+    {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+    tr, tr.even
+    {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+    table ul.links
+    {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+    table ul.links li
+    {
+        padding: 0 1em 0 0;
+    }
+</style>
+<script type="text/javascript">
+  function Delete(id) {
+      $.post("@Url.Content("~/ProductLevel3/DeleteContact")", { id: id }, function (data) {
+          location.href = "@Url.Content("~/ProductLevel3/index")"
+            alert(data);
+            
+        }, "Json");
+    }
+    //Delete Record End
+
+    //Edit Record Begin
+    function Edit(id) {
+        location.href = "@Url.Content("~/ProductLevel3/Edit/")" + id;
+    }
+    //Edit Record End
+    </script>
+<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+<div id="form" style="margin-bottom: 11px">
+     <div id="content_wrap">
+            <div class="msgbar msg_Info heading">
+             Full Product Details</div>
+            <div class="content_main">
+                <div class="boxes1">
+        <table id="GridView">
+            <tr>
+                <td style="width: 137px;">
+                    Product Id
+                </td>
+                <td style="width: 221px">
+                    <text>PLT</text>@Model.id
+                </td>
+                <td style="width: 124px;">
+                    Produc Category
+                </td>
+                <td style="width: 221px">
+                    @Model.ProductCatergory.PName
+            </tr>
+            <tr>
+                <td>
+                    Product level One
+                </td>
+                <td>
+                    @Model.ProductLevelOne1.Name
+                </td>
+                <td>
+                    Product level Two
+                <td>
+                    @Model.ProductLevelTwo.Name
+            </tr>
+            <tr>
+              <td>
+                    Product level Three
+                </td>
+                <td >
+                    @Model.Name
+                </td>
+                <td>
+                    Product Code
+                </td>
+                <td>
+                    @Model.PrCode
+            </tr>
+        
+            <tr>
+                <td>
+                    Description
+                </td>
+                <td>
+                    @Model.PrDiscription
+                </td>
+                <td>
+                    Start Date
+                </td>
+                <td>
+                @{
+                    string sdate = Convert.ToDateTime(@Model.startDate).ToShortDateString();
+                    <text>@sdate</text>
+                    }
+            <tr>
+                <td>
+                    End Date
+                </td>
+                <td>
+                  @{
+                      string edate = Convert.ToDateTime(@Model.enddate).ToShortDateString();
+                    <text>@edate</text>
+                    }
+                    
+                </td>
+                <td>
+                    Status
+                </td>
+                <td>
+                    @{
+                        if (Model.PlTwStatus == 1)
+                       {
+                        <text>
+                        <input type="checkbox" checked="checked" disabled="disabled" />
+                        </text>                     
+                       }
+                       else
+                       {                     
+                        <text>
+                        <input type="checkbox" disabled="disabled" />
+                        </text>
+                       }
+                      
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Images
+                </td>
+                <td>
+                    <a href="@Url.Content("~/ProductImages/Index/")@Model.id")" style="color:#EA7272;text-decoration: underline;">
+                        Product Images</a>
+                </td>
+                <td>
+                Brochure
+                </td>
+                <td>
+                <a href="@Url.Content("~/ProductImages/")@Model.brochure")">Brochure</a>
+                </td>
+            </tr>
+        </table>
+        <input type="button" value="Edit" onclick="Edit(@Model.id);" />
+        <input type="button" value="Delete" onclick="Delete(@Model.id);" />
+    </div>
+    </div>
+    </div>
+</div>

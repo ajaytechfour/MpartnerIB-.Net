@@ -1,0 +1,203 @@
+﻿@model IEnumerable<Luminous.EF.InsertContext>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Error.cshtml";
+}
+
+
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+<div id="content_wrap">
+    <div class="msgbar msg_Info heading">
+        Point Allocation
+    </div>
+    @if (TempData["ERR"] != null)
+    {
+        <span style="color:red">@TempData["ERR"]</span>
+    }
+    @using (Html.BeginForm("ExportToExcel", "DealerContest"))
+    {
+        <input type="submit" value="Upload Sheet" style="float:right;margin-top:5px" />
+    }
+    @using (Html.BeginForm("GetDealerData", "DealerContest"))
+    {
+        <input type="submit" value="Points" style="float: right; margin-top: 5px;margin-right:8px" />
+    }
+    @*@Html.ActionLink("Bulk Point", "GetDealerData", "DealerContest");*@
+
+    <div class="content_main">
+        <div class="boxes1">
+            <div style="overflow-y:scroll;max-height:880px">
+                <table id="GridView">
+                    <tr>
+                        <th>
+                            @Html.DisplayName("Image")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Dealer Name")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Dealer City")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Dealer Phone")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Dealer Email")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Dist Code")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Emp Code")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Dealer Id")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Rating")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Created By")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Created On")
+                        </th>
+                        @*<th>
+                                @Html.DisplayNameFor(model => model.ModifyBy)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ModifyOn)
+                            </th>*@
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @*<img src="~/ProfileImages/upload270417062500.jpg" />*@
+
+                                <img src="@("/ProfileImages/" + item.ImageEncode)" alt="" id="adimg" width:"50px" height="50px" />
+                                @*@Html.DisplayFor(modelItem => item.ImageEncode)*@
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DealerName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DealerCity)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DealerPhone)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DealerEmail)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DistributorCode)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmpCode)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DealerId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Rating)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CreatedBy)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CreatedOn)
+                            </td>
+                            @*<td>
+                                    @Html.DisplayFor(modelItem => item.ModifyBy)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ModifyOn)
+                                </td>*@
+                            <td>
+                                @*@if(item.Rating==""||item.Rating==null)
+                                    {*@
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id, Type = "PEdit" }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                @*}*@
+                                @*@Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+       
+    </div>
+</div>

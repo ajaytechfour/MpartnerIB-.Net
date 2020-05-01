@@ -19,6 +19,7 @@ namespace Luminous.Controllers
         {
             new LanguageManage().SetLanguage(lang);
             return RedirectToAction("Luminous", "LuminousHome");
+            // return View();
         }
     }
 }

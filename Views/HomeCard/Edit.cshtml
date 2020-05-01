@@ -1,0 +1,1139 @@
+﻿@model Luminous.EF.Card_dynamicPage
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
+    var title1 = ViewData["Title"] as string[];
+
+}
+<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+@*<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+<style type="text/css">
+    #Button_addRow {
+        position: absolute;
+        top: 150px;
+        background: #4B99AD;
+    }
+
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+<style>
+    .FullDes {
+        position: relative;
+        background-color: #1D1D1D;
+        width: 245px;
+        color: white;
+        border: 1px solid black;
+        display: none;
+    }
+</style>
+<script type="text/javascript">
+
+    $(function () {
+
+        @*$.post("@Url.Content("~/HomeCard/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");*@
+        $.post("@Url.Content("~/HomeCard/GetCardProvider")", null, function (data) { SetCardGrid(data); }, "Json");
+        $.post("@Url.Content("~/HomeCard/GetRedirectPage")", null, function (data) { SetRedirectPage(data); }, "Json");
+        @*$.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },"Json");*@
+
+        $(".date").datepicker(
+     { dateFormat: "dd-mm-yy" }
+        );
+        $("#DestributorList").chosen({ width: "100px" });
+        $("#DealerList").chosen({ width: "100px" });
+
+        $(".oneimagecard").hide();
+        $(".scheme_Priceheader").hide();
+        $(".gridcard").hide();
+        $(".submit").hide();
+        $(".grid_childimage").hide();
+        $(".more_cardprovider").hide();
+        $(".banner_cardprovider").hide();
+        $(".carddata").hide();
+        $(".datetime").hide();
+        $(".status").hide();
+
+        //$("#Ctype").change(function () {
+
+        //if ($("option:selected").val() == '1')
+        //    {
+        //        $(".oneimagecard").show();
+        //        $(".submit").show();
+        //        $("#dynaTableContent").hide();
+        //        $(".carddata").show();
+        //        $(".datetime").show();
+        //        $(".status").show();
+        //        $(".scheme_Priceheader").hide();
+        //        $(".gridcard").hide();
+        //        $(".grid_childimage").hide();
+        //        $(".more_cardprovider").hide();
+        //        $(".banner_cardprovider").hide();
+
+        //    }
+        //    if ($("#Ctype").val() == '2') {
+        //        $(".oneimagecard").hide();
+        //        $("#dynaTableContent").hide();
+        //        $(".submit").show();
+        //        $(".carddata").show();
+        //        $(".datetime").show();
+        //        $(".status").show();
+        //        $(".scheme_Priceheader").show();
+        //        $(".gridcard").hide();
+        //        $(".grid_childimage").hide();
+        //        $(".more_cardprovider").hide();
+        //        $(".banner_cardprovider").hide();
+
+        //    }
+        //    if ($("#Ctype").val() == '6') {
+        //        $(".oneimagecard").hide();
+        //        $("#dynaTableContent").hide();
+        //        $(".submit").show();
+        //        $(".carddata").show();
+        //        $(".datetime").show();
+        //        $(".scheme_Priceheader").hide();
+        //        $(".gridcard").show();
+        //        $(".status").show();
+        //        $(".grid_childimage").show();
+        //        $(".more_cardprovider").hide();
+        //        $(".banner_cardprovider").hide();
+
+        //    }
+        //    if ($("#Ctype").val() == '7') {
+        //        $(".oneimagecard").hide();
+        //        $("#dynaTableContent").hide();
+        //        $(".submit").show();
+        //        $(".carddata").show();
+        //        $(".datetime").show();
+        //        $(".status").show();
+        //        $(".scheme_Priceheader").hide();
+        //        $(".gridcard").hide();
+        //        $(".grid_childimage").hide();
+        //        $(".more_cardprovider").show();
+        //        $(".banner_cardprovider").hide();
+
+        //    }
+        //    if ($("#Ctype").val() == '8') {
+        //        $(".oneimagecard").hide();
+        //        $("#dynaTableContent").show();
+        //        $(".submit").show();
+        //        $(".carddata").show();
+        //        $(".datetime").show();
+        //        $(".status").show();
+        //        $(".scheme_Priceheader").hide();
+        //        $(".gridcard").hide();
+        //        $(".grid_childimage").hide();
+        //        $(".more_cardprovider").hide();
+        //        $(".banner_cardprovider").show();
+
+        //    }
+        //    if ($("#Ctype").val() == '11') {
+        //        $(".oneimagecard").hide();
+        //        $("#dynaTableContent").hide();
+        //        $(".submit").show();
+        //        $(".carddata").show();
+        //        $(".datetime").show();
+        //        $(".scheme_Priceheader").show();
+        //        $(".gridcard").hide();
+        //        $(".status").show();
+        //        $(".grid_childimage").hide();
+        //        $(".more_cardprovider").hide();
+        //        $(".banner_cardprovider").hide();
+
+        //    }
+        //}
+
+        // ValidationMessage();
+
+    });
+
+</script>
+<script type="text/javascript">
+    @*function Edit(id) {
+        location.href = "@Url.Content("~/HomeCard/Edit/")" + id;
+    }*@
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+
+            $.post("@Url.Content("~/HomeCard/Delete")", { id: id }, function (data) {
+                $.post("@Url.Content("~/HomeCard/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+
+                alert(data);
+
+            }, "Json");
+        }
+    }
+
+    //Set Card Grid//
+    function SetCardGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#Ctype");
+            procat.empty();
+            //procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                if (value.id == '@ViewBag.cid') {
+                    option += "<option value=" + value.id + ">" + value.Name + "</option>";
+                    //alert(value.id + "," + value.Name);
+                }
+            });
+            procat.append(option);
+        }
+
+
+        if ($("#Ctype option:selected").val() == '1') {
+            $(".oneimagecard").show();
+            $(".submit").show();
+            $("#dynaRow, #getValue").hide();
+            $("#dynaTableContent").hide();
+            $(".carddata").show();
+            $(".datetime").show();
+            $(".status").show();
+            $(".scheme_Priceheader").hide();
+            $(".gridcard").hide();
+            $(".grid_childimage").hide();
+            $(".more_cardprovider").hide();
+            $(".banner_cardprovider").hide();
+
+        }
+        if ($("#Ctype option:selected").val() == '2') {
+            $(".oneimagecard").hide();
+            $("#dynaRow, #getValue").hide();
+            $("#dynaTableContent").hide();
+            $(".submit").show();
+            $(".carddata").show();
+            $(".datetime").show();
+            $(".status").show();
+            $(".scheme_Priceheader").show();
+            $(".gridcard").hide();
+            $(".grid_childimage").hide();
+            $(".more_cardprovider").hide();
+            $(".banner_cardprovider").hide();
+
+        }
+        if ($("#Ctype option:selected").val() == '6') {
+            $(".oneimagecard").hide();
+            $("#dynaRow, #getValue").hide();
+            $("#dynaTableContent").hide();
+            $(".submit").show();
+            $(".carddata").show();
+            $(".datetime").show();
+            $(".scheme_Priceheader").hide();
+            $(".gridcard").show();
+            $(".status").show();
+            $(".grid_childimage").show();
+            $(".more_cardprovider").hide();
+            $(".banner_cardprovider").hide();
+
+        }
+        if ($("#Ctype option:selected").val() == '7') {
+            $(".oneimagecard").hide();
+            $("#dynaRow, #getValue").hide();
+            $("#dynaTableContent").hide();
+            $(".submit").show();
+            $(".carddata").show();
+            $(".datetime").show();
+            $(".status").show();
+            $(".scheme_Priceheader").hide();
+            $(".gridcard").hide();
+            $(".grid_childimage").hide();
+            $(".more_cardprovider").show();
+            $(".banner_cardprovider").hide();
+
+        }
+        if ($("#Ctype option:selected").val() == '8') {
+            $(".oneimagecard").hide();
+            $("#getValue").hide();
+            $("#dynaTableContent").show();
+            $(".submit").show();
+            $(".carddata").show();
+            $(".datetime").show();
+            $(".status").show();
+            $(".scheme_Priceheader").hide();
+            $(".gridcard").hide();
+            $(".grid_childimage").hide();
+            $(".more_cardprovider").hide();
+            $(".banner_cardprovider").show();
+
+        }
+        if ($("#Ctype option:selected").val() == '11') {
+            $(".oneimagecard").hide();
+            $("#dynaTableContent").hide();
+            $(".submit").show();
+            $(".carddata").show();
+            $(".datetime").show();
+            $(".scheme_Priceheader").show();
+            $(".gridcard").hide();
+            $(".status").show();
+            $(".grid_childimage").hide();
+            $(".more_cardprovider").hide();
+            $(".banner_cardprovider").hide();
+
+        }
+
+    }
+
+    //Set Card Grid//
+    function SetRedirectPage(data) {
+
+        // debugger;
+        // alert("hello");
+
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+
+            //debugger;
+            // alert("hHHHHHHHHHHHHHHHHHHHHHHHHH");
+
+
+
+
+
+
+
+            option = "";
+            var i, j, k, l;
+            var procat1 = $(".redirectpage1");
+            var procat2 = $(".redirectpage2");
+            var procat3 = $(".redirectpage3");
+            var procat4 = $(".redirectpage4");
+            var procat5_Banner = $(".redirectpage1_Banner");
+
+            procat1.empty();
+            procat2.empty();
+            procat3.empty();
+            procat4.empty();
+            procat5_Banner.empty();
+
+            procat1.append("<option value=0>Select</option>");
+            procat2.append("<option value=0>Select</option>");
+            procat3.append("<option value=0>Select</option>");
+            procat4.append("<option value=0>Select</option>");
+            procat5_Banner.append("<option value=0>Select</option>");
+
+
+
+            $.each(data, function (key, value) {
+
+                if (value.Name == '@ViewBag.RedirectPage1') {
+                    i = value.id;
+                }
+                if (value.Name == '@ViewBag.RedirectPage2') {
+                    j = value.id;
+                }
+                if (value.Name == '@ViewBag.RedirectPage3') {
+                    k = value.id;
+
+                }
+                if (value.Name == '@ViewBag.RedirectPage4') {
+                    l = value.id;
+                }
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+
+
+            procat1.append(option);
+            procat2.append(option);
+            procat3.append(option);
+            procat4.append(option);
+
+            procat1.val(i);
+            procat2.val(j);
+            procat3.val(k);
+            procat4.val(l);
+
+            //$('#dynaTableContent tr').click(function(){
+            //    var x = $(this).index();
+            //    alert(x);
+            //});
+
+            option="";
+            if ('@ViewBag.cid' == '8') {
+
+
+                debugger;
+                $('#Button_addRow').show();
+
+                var str = @Html.Raw(Json.Encode(@ViewBag.Redirect));
+                var img = @Html.Raw(Json.Encode(@ViewBag.Imagename));
+
+                var myTab = document.getElementById('dynaTableContent');
+
+                for(var i=0;i< str.length ;i++){
+                    var temp1="";
+                    var temp2="";
+                    // debugger;
+                    //   alert("aaaaaa");
+                    var markup = "<tr><td><select name='redirectpage1_ConnectPlus_banner_header' class='form-control' id='redirectpage1_Banner"+i+"' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' name='file_Images' style='border:none;' /></td><td style='text-align:right;'><img style='height:50px;' src='@Url.Content("~/MpartnerNewApi/CardImage/")"+img[i]+"'></td></tr>";
+
+                    $('#dynaTableContent tbody').append(markup);
+
+                    $.each(data, function (key, value) {
+
+                        option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+                        if(value.Name == str[i])
+                        {
+                            temp1 = value.id;
+                            temp2 = value.Name;
+                        }
+
+                    });
+
+
+                    $("#redirectpage1_Banner"+i+"").append(option);
+
+                    //  $(".redirectpage1_Banner").append("<option value=" + temp1 + " selected>" + temp2 + "</option>");
+
+
+
+                    option="";
+
+
+                    for (row = i+1; row < myTab.rows.length ; row++) {
+
+                        for (c = 0; c < myTab.rows[row].cells.length; c++) {
+
+                            var element = myTab.rows.item(row).cells[c];
+                            if (element.childNodes[0].type == "select-one" ) {
+                                var select = document.getElementById("redirectpage1_Banner"+i+"");
+
+                                for(j=0;j<select.length;j++)
+                                {
+                                    var op = select.options[j];
+
+                                    if(op.value==str[i])
+                                    {
+                                        element.childNodes[0].selectedIndex=j;
+                                    }
+                                }
+
+
+                                //var temp =str[i];
+                                //element.childNodes[0].selectedIndex=str[i];
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+    }
+
+
+    @*function NewRow() {
+        $('#Button_addRow').click(function () {
+
+            var markup = "<tr><td><input type='checkbox' name='record'></td><td><select name='redirectpage1_Banner[]' style='color: black' id='redirectpage1_Banner' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' name='bannermainimage' /></td><td><img src='@Url.Content("~/MpartnerNewApi/CardImage/")' style='width:30px; height:30px;'/></td></tr>";
+
+            $('#dynaTableContent tbody').append(markup);
+
+        });
+    }*@
+
+    $(document).ready(function(){
+
+        $('#getValue').on('click',function(){
+            var myTab = document.getElementById('dynaTableContent');
+            var values = new Array();
+            //debugger;
+
+            for (row = 1; row < myTab.rows.length ; row++) {
+
+                for (c = 0; c < myTab.rows[row].cells.length; c++) {   // EACH CELL IN A ROW.
+
+                    var element = myTab.rows.item(row).cells[c];
+
+                    if (element.childNodes[0].type == "select-one" ) {
+
+                        var temp = element.childNodes[0].value;
+
+                        values.push("'" + temp + "'");
+
+                    }
+                }
+            }
+
+            alert(values);
+
+            alert(final);
+        });
+
+    });
+
+
+</script>
+<script type="text/javascript">
+
+    function Allch() {
+        if ($("#All").is(":checked")) {
+            $("#region").attr("disabled", true);
+            $("#destributor").attr("disabled", true);
+            $("#Dealer").attr("disabled", true);
+            $("#userupload_file").attr("disabled", true);
+            $("#RegionList_chosen").hide();
+            $("#DestributorList_chosen").hide();
+            $("#DealerList_chosen").hide();
+            $("#checkDistri").hide();
+            $("#checkDeal").hide();
+        }
+        else {
+            $("#region").attr("disabled", false);
+            $("#destributor").attr("disabled", false);
+            $("#Dealer").attr("disabled", false);
+            $("#userupload_file").attr("disabled", false);
+            $("#RegionList_chosen").show();
+            $("#DestributorList_chosen").show();
+            $("#DealerList_chosen").show();
+            $("#checkDistri").show();
+            $("#checkDeal").show();
+        }
+
+    }
+
+    $("body").on("click", "#addRow", function (e) {
+        e.preventDefault();
+
+        // var str = '<tr><td><input type="text" name="redirectpage_1" value="" /></td><td></td><td>3</td><td>4</td><td>5</td></tr>';
+
+        $("table#dynaTableContent").append("<tr>" + $(".banner_cardprovider").html() + "</tr>");
+
+    });
+
+
+    $(function () {
+        $("input:file").change(function () {
+
+            var file_size = (this.files[0].size);
+            alert(file_size);
+            if (file_size > 50000) {
+
+                $(this).next(".file_error").html("File size is greater than 50 KB");
+                /*$(".file_error").html("File size is greater than 20 KB");*/
+
+
+                return false;
+            }
+            else
+            {
+                $(this).next(".file_error").html("");
+                return true;
+            }
+
+        });
+    });
+
+
+    //Grid Swapping//
+    $(document).ready(function () {
+
+        var coords = new Array();
+        $('#Grid tbody').addClass("DragMe");
+
+        $('.DragMe').sortable({
+            disabled: false,
+            axis: 'y',
+            //items: "> tr:not(:first)",
+            forceHelperSize: true,
+            update: function (event, ui) {
+                var Newpos = ui.item.index();
+
+                var RefID = $('tr').find('td:first').html();
+                //var RefID=   $(this).closest('tr').attr('id');
+
+                //alert("Position " + Newpos + "..... RefID: " + RefID);
+                $("#Grid tr:has(td)").each(function () {
+
+                    var RefID = $(this).find("td:eq(0)").html();
+                    var NewPosition = $(".ui-sortable-handle").index(this) + 1;
+                    //alert(RefID + " " + NewPosition);
+                    coords.push({ x: RefID, y: NewPosition });
+                });
+
+                for (var i = 0; i < coords.length; i++) {
+                    var xcoord = coords[i].x + "," + coords[i].y;
+
+                    var arr = { ids: xcoord };
+                    $.ajax({
+                        url: '@Url.Action("UpdateSequence", "HomeCard")',
+                        type: 'POST',
+                        data: JSON.stringify(arr),
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function (msg) {
+                            alert(msg);
+                        }
+                    });
+                }
+
+                coords.length = 0;
+
+
+            }
+        }).disableSelection();
+    });
+    //Grid Swapping End//
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        $("#Button_addRow").click(function() {
+
+            debugger;
+
+            var rowCount = $("#dynaTableContent > tbody").children().length;
+
+            var i= rowCount;
+
+            if ('@ViewBag.cid' == '8') {
+
+                var markup1 = "<tr><td><select name='redirectpage1_ConnectPlus_banner_header' class='form-control' id='redirectpage1_Banner"+i+"' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' id='upload"+i+"' name='file_Images' onchange='myfn(this)' style='border:none;'/></td><td></td></tr>";
+                $('#dynaTableContent tbody').append(markup1);
+
+                $.post("@Url.Content("~/HomeCard/GetRedirectPage")", null, function (data) { ABC(data); }, "Json");
+
+                function ABC(data)
+                {
+                    debugger;
+                    var d= JSON.stringify(data);
+                    // alert(d);
+
+                    option='';
+                    debugger;
+                    $("#redirectpage1_Banner"+i+"").append("<option value=0>Select</option>");
+                    $.each(data, function (key, value) {
+
+                        option += "<option value=" + value.id + ">" + value.Name + "</option>";
+                    });
+                    debugger;
+
+                    $("#redirectpage1_Banner"+i+"").append(option);
+                    $("#redirectpage1_Banner"+i+"").val(0);
+
+                }
+
+
+            }
+
+        });
+    });
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Home Card - </span> Edit View</h1>
+        </div>
+    </div>
+    <div id="form" style="position:relative;">
+        <div style="font-weight:bolder;font-size:15px" class="carddata">
+            <button id="Button_addRow" style="display:none;" class="submitBtn">Add Row</button>
+        </div>
+        @using (Html.BeginForm("Update", "HomeCard", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+            <div class="row">
+                <div class="aos-init aos-animate" style="margin-bottom:82px;">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label> Card Type<span class="required">*</span></label>
+                                    <select name="Ctype" class="form-control" id="Ctype">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate oneimagecard">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    @Html.HiddenFor(c => c.Id)
+                                    <select name="redirectpage1" class="redirectpage1 form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="postedFile" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="display:block; width:100%;">Previous Image</label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate scheme_Priceheader">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label> Header Title<span class="required">*</span></label>
+                                    @Html.TextBox("Title", (string)@ViewBag.HeaderTitle, new { @Name = "HeaderTitle_Schemecard", @class = "form-control" })
+                                    @Html.ValidationMessage("Title", "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Header Title Colour<span class="required">*</span></label>
+                                    @Html.TextBox("TitleColor", (string)@ViewBag.HeaderTitlecolor, new { @Name = "HeaderTitleColor_Schemecard", @class = "form-control" })
+                                    @Html.ValidationMessage("TitleColour", "", new { @class = "required" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate scheme_Priceheader">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Header Sub Title<span class="required">*</span></label>
+                                    @Html.TextBox("SubTitle", (string)@ViewBag.SubTitle, new { @Name = "HeaderSubTitle_Schemecard", @class = "form-control" })
+                                    @Html.ValidationMessage("SubTitleColour", "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Header SubTitle Colour<span class="required">*</span></label>
+                                    @Html.TextBox("SubTitle", (string)@ViewBag.SubTitleColor, new { @Name = "HeaderSubTitleColor_Schemecard", @class = "form-control" })
+                                    @Html.ValidationMessage("SubTitleColour", "", new { @class = "required" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate scheme_Priceheader">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Header Image<span class="required">*</span></label>
+                                    <input type="file" name="SchemeCard_HeaderImage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="display:block; width:100%;">Previous Image</label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate scheme_Priceheader">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1_SchemeCard" class="redirectpage1 form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label> Upload Main Image<span class="required">*</span></label>
+                                    <input type="file" name="SchemeCard_MainImage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="display:block; width:100%;">Previous Image</label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Imagename1" style="height:100px;width:100%;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate gridcard">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Upload Main Image<span class="required">*</span></label>
+                                    <input type="file" name="mainimageup" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Imagemain" style="height:100px;width:100%;" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Upload Grid Background Image<span class="required">*</span></label>
+                                    <input type="file" name="gridbackimage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label style="display:block; width:100%;"> previous image<span class="required">*</span></label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageBack" style="height:100px;width:100%;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aos-init aos-animate grid_childimage">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>First Title<span class="required">*</span></label>
+                                    @Html.TextBox("First Title", (string)@ViewBag.Title1, new { @Name = "first_gridtitle", @class = "form-control" })
+                                    @Html.ValidationMessage("", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="first_upload_gridchildmainimage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label style="display:block; width:100%;"> Previous Image</label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image1" style="height:100px;" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1_Homecard" class="redirectpage1 form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate grid_childimage">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Second Title<span class="required">*</span></label>
+                                    @Html.TextBox("Second Title", (string)@ViewBag.Title2, new { @Name = "second_gridtitle", @class = "form-control" })
+                                    @Html.ValidationMessage("", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="second_upload_gridchildmainimage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label style="display:block; width:100%;">Previous Image</label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image2" style="height:100px;" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label> Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage2_Homecard" class="redirectpage2 form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate grid_childimage">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Third Title<span class="required">*</span></label>
+                                    @Html.TextBox("Third Title", (string)@ViewBag.Title3, new { @Name = "third_gridtitle", @class = "form-control" })
+                                    @Html.ValidationMessage("", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="third_upload_gridchildmainimage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label style="display:block; width:100%;">Previous Image</label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image3" style="height:100px;" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage3_Homecard" class="redirectpage3 form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate grid_childimage">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Fourth Title<span class="required">*</span></label>
+                                    @Html.TextBox("Fourth Title", (string)@ViewBag.Title4, new { @Name = "four_gridtitle", @class = "form-control" })
+                                    @Html.ValidationMessage("", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="four_upload_gridchildmainimage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label style="display:block; width:100%;"> Previous Image</label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image4" style="height:100px;" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label> Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage4_Homecard" class="redirectpage4 form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate more_cardprovider">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1_knowMore" class="redirectpage1 form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Image<span class="required">*</span></label>
+                                    <input type="file" name="mainimage_KnowMoreCard" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate more_cardprovider">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Button Know More Colour<span class="required">*</span></label>
+                                    @Html.TextBox("Action1_Colour", (string)@ViewBag.Colour, new { @Name = "KnowMoreColor", @class = "form-control" })
+                                    @Html.ValidationMessage("Action1_Colour", "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label> Button Know More Text<span class="required">*</span></label>
+                                    @Html.TextBox("Action1_Text", (string)@ViewBag.Text, new { @Name = "KnowMoreText", @class = "form-control" })
+                                    @Html.ValidationMessage("Action1_Text", "", new { @class = "required" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate" id="dynaRow">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table id="dynaTableContent" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                                    <thead>
+                                        <tr class="banner_cardprovider">
+                                            <th>Redirect Pages</th>
+                                            <th>ImageName</th>
+                                            <th style="text-align:right;">Previous Image</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row datetime">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Start Date<span class="required">*</span></label>
+                                    <input id="sdate" type="text" class="date form-control" name="StartDate" value="@ViewBag.preStartDate" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>End Date<span class="required">*</span></label>
+                                    <input id="edate" type="text" class="date form-control" name="EndDate" value="@ViewBag.PreEndDate" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label> Status</label>
+                                    <input type="checkbox" checked="checked" name="statusC" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="submit" value="Update" class="submit submitBtn" style="background:#ffaf38;" />
+                    </div>
+                </div>
+            </div>
+        }
+        <button id="getValue" class="getValue">Get Value</button>
+    </div>
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 Luminous | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

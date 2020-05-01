@@ -1,0 +1,450 @@
+﻿@model Luminous.EF.Card_dynamicPage
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+@*<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+
+<style>
+    .FullDes {
+        position: relative;
+        background-color: #1D1D1D;
+        width: 245px;
+        color: white;
+        border: 1px solid black;
+        display: none;
+    }
+
+    #Button_addRow {
+        position: absolute;
+        top: 150px;
+        background: #4B99AD;
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+        $.post("@Url.Content("~/ConnectPlus/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+        $.post("@Url.Content("~/ConnectPlus/GetCardProvider")", null, function (data) { SetCardGrid(data); }, "Json");
+        $.post("@Url.Content("~/ConnectPlus/GetRedirectPage")", null, function (data) { SetRedirectPage(data); }, "Json");
+        @*$.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },
+        "Json");*@
+        $(".date").datepicker(
+     { dateFormat: "dd-mm-yy" }
+        );
+        $("#DestributorList").chosen({ width: "100px" });
+        $("#DealerList").chosen({ width: "100px" });
+        $(".submit").hide();
+        $(".banner_cardprovider").hide();
+        $(".carddata").hide();
+        $(".datetime").hide();
+        $(".status").hide();
+        $(".Scroll_cardprovider").hide();
+    });
+
+</script>
+<script type="text/javascript">
+    function ValidationMessage() {
+        if ('@ViewBag.StartDate' != "") {
+            $("#sdate").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#edate").text('@ViewBag.EndDate');
+        }
+
+        if ('@ViewBag.File' != "") {
+            $("#file").text('@ViewBag.File');
+        }
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            location.href = "@Url.Content("~/ConnectPlus/Index")";
+        }
+        $("#sdate").val('@ViewBag.preStartDate');
+        $("#edate").val('@ViewBag.PreEndDate');
+        debugger;
+    }
+</script>
+
+<script type="text/javascript">
+    function SetGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            $("#Grid tbody").empty();
+            $.each(data.result, function (key, value) {
+
+                body += "<tr><td> " + value.id + "</td>" +
+
+
+                "<td>" + value.CardProvider + "</td>" +
+                  "<td>" + value.Title + "</td>" +
+                    "<td>" + value.Subtitle + "</td>" +
+
+             "<td>" + value.StartDate + "</td>" +
+             "<td>" + value.EndDate + "</td>" +
+             "<td>" + value.status + "</td>" +
+
+            "<td>  <a style='cursor:pointer' onclick=Edit(" + value.id + ");>Edit</a> <a style='cursor:pointer' onclick=Delete(" + value.id + ");>Delete</a></td></tr>";
+
+            });
+            $("#Grid tbody").append(body);
+            SetPages(data.TotalRecord)
+        }
+    }
+    function SetPages(paging) {
+        var pages = "";
+        $("#Paging").empty();
+        for (var i = 1; i <= parseInt(paging) ; i++) {
+            pages += "<a style='cursor:pointer' onclick=GetPagesValues(" + i + ");> " + i + "  </a>";
+        }
+        $("#Paging").append("<u> Pages:-</u>" + pages);
+    }
+    function GetPagesValues(id) {
+        $.post("@Url.Content("~/ConnectPlus/GetContactDetail")", { page: id }, function (data) { SetGrid(data); }, "Json");
+    }
+    function Edit(id) {
+        location.href = "@Url.Content("~/ConnectPlus/Edit/")" + id;
+    }
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+            $.post("@Url.Content("~/ConnectPlus/Delete")", { id: id }, function (data) {
+                $.post("@Url.Content("~/ConnectPlus/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+                alert(data);
+            }, "Json");
+        }
+    }
+
+    //Set Card Grid//
+    function SetCardGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#Ctype");
+            procat.empty();
+            //  procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                if (value.id == '@ViewBag.cid') {
+
+                    option += "<option value=" + value.id + ">" + value.Name + "</option>";
+                }
+            });
+            procat.append(option);
+        }
+
+        if ($("#Ctype").val() == '16') {
+            $("#dynaTableContent").show();
+            $(".submit").show();
+            $(".carddata").show();
+            $(".datetime").show();
+            $(".status").show();
+            $(".Scroll_cardprovider").hide();
+            $(".banner_cardprovider").show();
+            $('#Button_addRow').show();
+
+        }
+        if ($("#Ctype").val() == '15') {
+
+            $("#dynaTableContent").show();
+            $(".submit").show();
+            $(".carddata").show();
+            $(".datetime").show();
+            $(".GridView").show();
+            $(".status").show();
+            $(".Scroll_cardprovider").show();
+            $(".banner_cardprovider").hide();
+            $('#Button_addRow').show();
+
+        }
+    }
+
+    //Set Card Grid//
+    function SetRedirectPage(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = '';
+            var procat = $(".redirectpage");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+
+            if ('@ViewBag.cid' == '15') {
+
+                $('.Scroll_cardprovider').hide();
+
+                var str = @Html.Raw(Json.Encode(@ViewBag.Redirect));
+                var img = @Html.Raw(Json.Encode(@ViewBag.Imagename));
+                var titl= @Html.Raw(Json.Encode(@ViewBag.Titlee));
+                 debugger
+                //alert("loop");
+
+                var myTab = document.getElementById('dynaTableContent');
+
+                for(var i=0;i< str.length ;i++){
+                    option = '';
+                    var markup = "<tr><td><input id='title"+i+"' type='text' class='form-control' name='Titles' value='"+titl[i]+"' /></td><td><select name='redirectpage1_ConnectPlus_scroll_Image' style='color: black' id='redirectpage1_Banner"+i+"' class='form-control redirectpage1_Banner'><option></option></select></td><td><input type='file' class='form-control' id='upload' name='file_Images' onchange='myfn(this)'/></td><td><img src='@Url.Content("~/MpartnerNewApi/CardImage/")"+img[i]+"' style='height:100px;width:90%;'></td></tr>";
+                    $('#dynaTableContent tbody').append(markup);
+
+                    $.each(data, function (key, value) {
+
+                        option += "<option value=" + value.id + ">" + value.Name + "</option>";
+                    });
+                    $("#redirectpage1_Banner"+i+"").append(option);
+
+
+                    for (row = i+1; row < myTab.rows.length ; row++) {
+                        for (c = 0; c < myTab.rows[row].cells.length; c++) {
+                            var element = myTab.rows.item(row).cells[c];
+                            if (element.childNodes[0].type == "select-one" ) {
+                                var select = document.getElementById("redirectpage1_Banner"+i+"");
+                                for(j=0;j<select.length;j++)
+                                {
+                                    var op = select.options[j];
+
+                                    if(op.value==str[i])
+                                    {
+                                        element.childNodes[0].selectedIndex=j;
+                                    }
+                                }
+
+                                //var temp =str[i];
+                                //element.childNodes[0].selectedIndex=str[i];
+                            }
+                        }
+                    }
+
+                }
+            }
+            debugger;
+            if ('@ViewBag.cid' == '16') {
+                // 16 For Home Banner
+                //$('.Scroll_cardprovider').hide();
+                debugger;
+
+                var str = @Html.Raw(Json.Encode(@ViewBag.Redirect));
+                var img = @Html.Raw(Json.Encode(@ViewBag.Imagename));
+
+                var myTab = document.getElementById('dynaTableContent');
+
+                for(var i=0;i< str.length ;i++){
+                    option='';
+                    var markup = "<tr><td><select name='redirectpage1_ConnectPlus_banner_header' class='form-control' id='redirectpage1_Banner"+i+"' class='redirectpage1_Banner'><option></option></select></td><td><input style='border:none;' type='file' id='upload' name='file_Images' onchange='myfn(this)'/></td><td style='text-align:right;'><img style='width:100px; height:50px;' src='@Url.Content("~/MpartnerNewApi/CardImage/")"+img[i]+"'></td></tr>";
+                    $('#dynaTableContent tbody').append(markup);
+
+                    $.each(data, function (key, value) {
+
+                        option += "<option value=" + value.id + ">" + value.Name + "</option>";
+                    });
+                    $("#redirectpage1_Banner"+i+"").append(option);
+
+                    option='';
+                    for (row = i+1; row < myTab.rows.length ; row++) {
+                        for (c = 0; c < myTab.rows[row].cells.length; c++) {
+                            var element = myTab.rows.item(row).cells[c];
+
+                            if (element.childNodes[0].type == "select-one" ) {
+
+                                var select = document.getElementById("redirectpage1_Banner"+i+"");
+
+                                for(j=0;j<select.length;j++)
+                                {
+                                    var op = select.options[j];
+
+                                    if(op.value==str[i])
+                                    {
+                                        element.childNodes[0].selectedIndex=j;
+                                    }
+                                }
+
+                                //var temp =str[i];
+                                //element.childNodes[0].selectedIndex=str[i];
+                            }
+                        }
+                    }
+
+                }
+            }
+            $('.Scroll_cardprovider').hide('dynaTableContent');
+        }
+    }
+
+</script>
+<script type="text/javascript">
+
+    $("body").on("click", "#addRow", function (e) {
+        e.preventDefault();
+        $("table#dynaTableContent").append("<tr>" + $(".banner_cardprovider").html() + "</tr>");
+    });
+    $("body").on("click", "#addRowScroll", function (e) {
+        e.preventDefault();
+        $("table#dynaTableContent").append("<tr>" + $(".Scroll_cardprovider").html() + "</tr>");
+    });
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#Button_addRow").click(function() {
+            debugger;
+            var rowCount = $("#dynaTableContent > tbody").children().length;
+            var i= rowCount;
+            if ('@ViewBag.cid' == '15') {
+                var markup = "<tr><td><input id='title"+i+"' type='text' class='col-md-4 form-group date form-control' name='Titles' value='' /></td><td><select name='redirectpage1_ConnectPlus_scroll_Image' class='form-control' id='redirectpage1_Banner"+i+"' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' style='border:none;' id='upload"+i+"' name='file_Images' onchange='myfn(this)'/></td><td></td></tr>";
+                $('#dynaTableContent tbody').append(markup);
+                //$.post('@Url.Action("GetRedirectPage","ConnectPlus")', null, function (data) {  ;}, "Json");
+                $.get("/ConnectPlus/GetRedirectPage",function(dataa){
+                    option='';
+                    $.each(dataa, function (key, value) {
+
+                        option += "<option value=" + value.id + ">" + value.Name + "</option>";
+                    });
+                   // debugger;
+                    $("#redirectpage1_Banner"+i+"").append(option);
+                });
+            }
+
+            //debugger;
+
+            if ('@ViewBag.cid' == '16') {
+
+                debugger;
+
+                var markup = "<tr><td><select name='redirectpage1_ConnectPlus_banner_header' class='form-control' id='redirectpage1_Banner"+i+"' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' id='upload' name='file_Images' onchange='myfn(this)' style='border:none;' /></td><td></td></tr>";
+
+                $('#dynaTableContent tbody').append(markup);
+
+                $.get("/ConnectPlus/GetRedirectPage",function(dataa){
+                    option='';
+                    $.each(dataa, function (key, value) {
+
+                        option += "<option value=" + value.id + ">" + value.Name + "</option>";
+                    });
+                    debugger;
+                    $("#redirectpage1_Banner"+i+"").append(option);
+                });
+            }
+        });
+    });
+
+</script>
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Connect Plus - </span> Edit View</h1>
+        </div>
+    </div>
+
+    <div id="form" style="position:relative;">
+        <button id="Button_addRow" style="display:none;" class="submitBtn">Add Row</button>
+        @using (Html.BeginForm("Update", "ConnectPlus", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500" style="margin-bottom:82px;">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label> Card Type<span class="required">*</span></label>
+                                    <select name="Ctype" class="form-control" id="Ctype">
+                                        <option>Select</option>
+                                    </select>
+                                    @Html.ValidationMessageFor(a => a.CardProviderId, "", new { @class = "required" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @Html.Hidden("Id")
+
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <table id="dynaTableContent" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                                <thead>
+                                    <tr>
+                                        @if (@ViewBag.cid == "16")
+                                        {
+                                            <th style="display:none;">Title*</th>
+                                        }
+                                        else
+                                        {
+                                            <th>Title*</th>
+                                        }
+                                        <th>Redirect Page*</th>
+                                        <th>Upload Image*</th>
+                                        <th style="text-align:left;">Previous Image*</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate datetime" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Start Date<span class="required">*</span></label>
+                                    <input id="sdate" type="text" class="date form-control" name="StartDate" value="@ViewBag.preStartDate" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>End Date<span class="required">*</span></label>
+                                    <input id="edate" type="text" class="date form-control" name="EndDate" value="@ViewBag.PreEndDate" />
+                                    @Html.ValidationMessageFor(a => a.Enddate, "", new { @class = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <input type="checkbox" checked="checked" name="statusC" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="submit" value="Update" class="submit submitBtn" style="background:#ffaf38;" />
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 Luminous | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</div>

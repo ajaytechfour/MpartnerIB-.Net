@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Luminous</title>
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.js")" type="text/javascript"></script>
+    <link href="@Url.Content("~/Login/StyleSheet.css")" rel="stylesheet" type="text/css" />
+     <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+
+        
+        <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+    </style>
+   <script type="text/javascript">
+
+       $(document).ready(function () {
+           $("#Button1").on("click", function (e) {
+               var email = $("#txtUserName").val().trim();
+               if (email == "") {
+                   e.preventDefault();
+                   alert("Please Enter User Name");
+                   ctrlValidate('#txtUserName');
+                   $("#txtUserName").focus();
+                   return false;
+               }
+               else {
+                   ctrlValidate('#txtUserName');
+                   var email1 = $("#txtPassword").val().trim();
+                   if (email1 == "") {
+
+                       e.preventDefault();
+                       alert("Please Enter Password.");
+                       $("#txtPassword").focus();
+                       return false;
+                   }
+                   else {
+                       var userid = $("#txtUserName").val().trim();
+                       var password = $("#txtPassword").val().trim();
+
+
+                       $.post('Login/validatelogin', { userid: userid, password: password }, function (data) { check(data) })
+
+
+                       function check(abc) {
+
+                           if (abc == "Invalid userid and password") {
+                               alert(abc);
+                               return false;
+                           }
+                           else {
+                               if (abc == 'ticket/ticket') {
+                                   location.href = '@Url.Action("ticket", "ticket")';
+                               }
+                               if (abc == 'Approvalone/Approvalone') {
+                                   location.href = '@Url.Action("Approvalone", "Approvalone")';
+                               }
+                               if (abc == 'finalapproval/finalapproval') {
+                                   location.href = '@Url.Action("finalapproval", "finalapproval")';
+                               }
+                               if (abc == 'initialte/initialte') {
+                                   location.href = '@Url.Action("initialte", "initialte")';
+                               }
+                               
+                           }
+
+                       }
+                   }
+
+
+               }
+           });
+       });
+
+
+       function ctrlValidate(Id) {
+
+           if ($(Id).val() == "") {
+               $(Id).css("border-color", "red");
+               return false;
+           }
+           else {
+               $(Id).css("border-color", "");
+           }
+       }
+   </script>
+
+   <script type="text/javascript">
+
+       
+       
+   </script>
+</head>
+<body>
+  <table class="style1" style="background-color:white">
+    <tr>
+        <td>
+             <div style="float:right">
+        <img  style="margin-left:18px" alt="" src="@Url.Content("~/images/Untitled.jpg")"  width="250px" /><br />
+        
+       <h3>TVS Payment Processing System</h3> 
+    </div>
+    <div>
+   
+    </div>
+    
+    </td>
+        <td style="padding-top:60px">
+              <div id="wrapper">
+
+    <form name="login-form" class="login-form">
+    
+
+    
+        
+    
+        <div class="content">
+       
+    
+        
+        <input name="username" id="txtUserName" type="text" class="input username" placeholder="Username" />
+        <div class="user-icon"></div>
+        <input name="password" id="txtPassword" type="password" class="input password" placeholder="Password" />
+        <div class="pass-icon"></div>        
+        </div>
+        
+        <div class="footer">
+        <input type="button" id="Button1" name="button"  value="Login" class="button" />
+        
+        </div>
+   
+    </form>
+
+</div>
+<div class="gradient">
+   
+</div></td>
+    </tr>
+    <tr>
+        <td>
+            </td>
+        <td>
+            &nbsp;</td>
+    </tr>
+</table>
+
+</body>
+</html>
