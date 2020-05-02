@@ -79,6 +79,24 @@ namespace Luminous {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Scheme.
+        /// </summary>
+        public static string AddScheme {
+            get {
+                return ResourceManager.GetString("AddScheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         public static string All {
@@ -160,6 +178,24 @@ namespace Luminous {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        public static string City {
+            get {
+                return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact No.
+        /// </summary>
+        public static string ContactNo {
+            get {
+                return ResourceManager.GetString("ContactNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contact Us.
         /// </summary>
         public static string ContactUs {
@@ -210,6 +246,15 @@ namespace Luminous {
         public static string CustomerName {
             get {
                 return ResourceManager.GetString("CustomerName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer Type.
+        /// </summary>
+        public static string CustomerType {
+            get {
+                return ResourceManager.GetString("CustomerType", resourceCulture);
             }
         }
         
@@ -277,6 +322,33 @@ namespace Luminous {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Distributor Address.
+        /// </summary>
+        public static string DistributorAddress {
+            get {
+                return ResourceManager.GetString("DistributorAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DistributorList.
+        /// </summary>
+        public static string DistributorList {
+            get {
+                return ResourceManager.GetString("DistributorList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distributor Name.
+        /// </summary>
+        public static string DistributorName {
+            get {
+                return ResourceManager.GetString("DistributorName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Download.
         /// </summary>
         public static string Download {
@@ -300,6 +372,24 @@ namespace Luminous {
         public static string E {
             get {
                 return ResourceManager.GetString("E", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Permission.
+        /// </summary>
+        public static string EditPermission {
+            get {
+                return ResourceManager.GetString("EditPermission", resourceCulture);
             }
         }
         
@@ -565,6 +655,15 @@ namespace Luminous {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Previous Image.
+        /// </summary>
+        public static string PreviousImage {
+            get {
+                return ResourceManager.GetString("PreviousImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Price Data List.
         /// </summary>
         public static string PriceDataList {
@@ -700,6 +799,15 @@ namespace Luminous {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Scheme Data List.
+        /// </summary>
+        public static string SchemeDataList {
+            get {
+                return ResourceManager.GetString("SchemeDataList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Schemes.
         /// </summary>
         public static string Schemes {
@@ -759,6 +867,15 @@ namespace Luminous {
         public static string StartDate {
             get {
                 return ResourceManager.GetString("StartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State.
+        /// </summary>
+        public static string State {
+            get {
+                return ResourceManager.GetString("State", resourceCulture);
             }
         }
         
@@ -957,6 +1074,15 @@ namespace Luminous {
         public static string URL {
             get {
                 return ResourceManager.GetString("URL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UserId.
+        /// </summary>
+        public static string UserId {
+            get {
+                return ResourceManager.GetString("UserId", resourceCulture);
             }
         }
         

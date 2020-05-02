@@ -123,6 +123,12 @@
   <data name="Action" xml:space="preserve">
     <value>عمل</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="AddScheme" xml:space="preserve">
+    <value>إضافة مخطط</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>الكل</value>
   </data>
@@ -150,6 +156,12 @@
   <data name="Category" xml:space="preserve">
     <value>الفئة</value>
   </data>
+  <data name="City" xml:space="preserve">
+    <value>مدينة</value>
+  </data>
+  <data name="ContactNo" xml:space="preserve">
+    <value>رقم الاتصال</value>
+  </data>
   <data name="ContactUs" xml:space="preserve">
     <value>اتصل بنا</value>
   </data>
@@ -167,6 +179,9 @@
   </data>
   <data name="CustomerName" xml:space="preserve">
     <value>اسم الزبون</value>
+  </data>
+  <data name="CustomerType" xml:space="preserve">
+    <value>نوع العميل</value>
   </data>
   <data name="D" xml:space="preserve">
     <value>د</value>
@@ -189,6 +204,15 @@
   <data name="Distributor" xml:space="preserve">
     <value>موزع</value>
   </data>
+  <data name="DistributorAddress" xml:space="preserve">
+    <value>عنوان الموزع</value>
+  </data>
+  <data name="DistributorList" xml:space="preserve">
+    <value>قائمة الموزعين</value>
+  </data>
+  <data name="DistributorName" xml:space="preserve">
+    <value>اسم الموزع</value>
+  </data>
   <data name="Download" xml:space="preserve">
     <value>تحميل</value>
   </data>
@@ -197,6 +221,12 @@
   </data>
   <data name="E" xml:space="preserve">
     <value>هـ</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="EditPermission" xml:space="preserve">
+    <value>تحرير الإذن</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>البريد الإلكتروني</value>
@@ -276,14 +306,17 @@
   <data name="OptionE" xml:space="preserve">
     <value>الخيار هـ</value>
   </data>
-  <data name="Parent Category List" xml:space="preserve">
-    <value>قائمة الفئات الرئيسية</value>
-  </data>
   <data name="ParentCategory" xml:space="preserve">
     <value>القسم الرئيسي</value>
   </data>
+  <data name="ParentCategoryList" xml:space="preserve">
+    <value>قائمة الفئات الرئيسية</value>
+  </data>
   <data name="PermissionFor" xml:space="preserve">
     <value>إذن لـ</value>
+  </data>
+  <data name="PreviousImage" xml:space="preserve">
+    <value>الصورة السابقة</value>
   </data>
   <data name="PriceDataList" xml:space="preserve">
     <value>قائمة بيانات الأسعار</value>
@@ -330,6 +363,9 @@
   <data name="Region" xml:space="preserve">
     <value>منطقة</value>
   </data>
+  <data name="SchemeDataList" xml:space="preserve">
+    <value>قائمة بيانات المخطط</value>
+  </data>
   <data name="Schemes" xml:space="preserve">
     <value>المخططات</value>
   </data>
@@ -350,6 +386,9 @@
   </data>
   <data name="StartDate" xml:space="preserve">
     <value>تاريخ البدء</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>حالة</value>
   </data>
   <data name="Status" xml:space="preserve">
     <value>الحالة</value>
@@ -416,6 +455,9 @@
   </data>
   <data name="URL" xml:space="preserve">
     <value>URL</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>معرف المستخدم</value>
   </data>
   <data name="Warranty" xml:space="preserve">
     <value>ضمان</value>

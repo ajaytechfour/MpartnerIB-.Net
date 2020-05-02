@@ -123,6 +123,12 @@
   <data name="Action" xml:space="preserve">
     <value>Action</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AddScheme" xml:space="preserve">
+    <value>Ajouter un schéma</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>Toute</value>
   </data>
@@ -150,6 +156,12 @@
   <data name="Category" xml:space="preserve">
     <value>Catégorie</value>
   </data>
+  <data name="City" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="ContactNo" xml:space="preserve">
+    <value>Contact Non</value>
+  </data>
   <data name="ContactUs" xml:space="preserve">
     <value>Nous contacter</value>
   </data>
@@ -167,6 +179,9 @@
   </data>
   <data name="CustomerName" xml:space="preserve">
     <value>Nom du client</value>
+  </data>
+  <data name="CustomerType" xml:space="preserve">
+    <value>Type de client</value>
   </data>
   <data name="D" xml:space="preserve">
     <value>D</value>
@@ -189,6 +204,15 @@
   <data name="Distributor" xml:space="preserve">
     <value>Distributrice</value>
   </data>
+  <data name="DistributorAddress" xml:space="preserve">
+    <value>Adresse du distributeur</value>
+  </data>
+  <data name="DistributorList" xml:space="preserve">
+    <value>Liste des distributeurs</value>
+  </data>
+  <data name="DistributorName" xml:space="preserve">
+    <value>Nom du distributeur</value>
+  </data>
   <data name="Download" xml:space="preserve">
     <value>Télécharger</value>
   </data>
@@ -197,6 +221,12 @@
   </data>
   <data name="E" xml:space="preserve">
     <value>E</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Éditer</value>
+  </data>
+  <data name="EditPermission" xml:space="preserve">
+    <value>Modifier l'autorisation</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
@@ -285,6 +315,9 @@
   <data name="PermissionFor" xml:space="preserve">
     <value>Autorisation pour</value>
   </data>
+  <data name="PreviousImage" xml:space="preserve">
+    <value>Image précédente</value>
+  </data>
   <data name="PriceDataList" xml:space="preserve">
     <value>Liste des données de prix</value>
   </data>
@@ -330,6 +363,9 @@
   <data name="Region" xml:space="preserve">
     <value>Région</value>
   </data>
+  <data name="SchemeDataList" xml:space="preserve">
+    <value>Liste des données du schéma</value>
+  </data>
   <data name="Schemes" xml:space="preserve">
     <value>Schémas</value>
   </data>
@@ -350,6 +386,9 @@
   </data>
   <data name="StartDate" xml:space="preserve">
     <value>Date de début</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Etat</value>
   </data>
   <data name="Status" xml:space="preserve">
     <value>Statut</value>
@@ -416,6 +455,9 @@
   </data>
   <data name="URL" xml:space="preserve">
     <value>URL</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>Identifiant d'utilisateur</value>
   </data>
   <data name="Warranty" xml:space="preserve">
     <value>garantie</value>
