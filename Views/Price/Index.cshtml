@@ -75,7 +75,7 @@
         }
         else {
             option = "";
-            var procat = $("#ParentCategory");
+            var procat = $("#ddlDistributor");
             procat.empty();
             procat.append("<option value=0>Select</option>");
             $.each(data, function (key, value) {
@@ -200,7 +200,7 @@
                         <div class="col-md-6">
                             <div class="">
                                 <label>Distributor Name <span class="required">*</span></label>
-                                <select name="ParentCatid" id="ParentCategory" onchange="Getgriddata(this.value);" class="form-control">
+                                <select name="ddlDistributor" id="ddlDistributor" onchange="Getgriddata(this.value);" class="form-control">
                                     <option>Select</option>
                                 </select>
                             </div>
@@ -217,8 +217,8 @@
 
                             <table class="headingHd" style="width:100%;">
                                 <tr>
-                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Price Data List</th>
-                                    <th style="font-size: 20px;font-weight: normal;float: left;width: 200px;background: none;color: #595959;margin-right: 20px;border: 1px solid #eee;border-radius: 3px;">
+                                    <th colspan="8" align="right" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Price Data List</th>
+                                    @*<th style="font-size: 20px;font-weight: normal;float: left;width: 200px;background: none;color: #595959;margin-right: 20px;border: 1px solid #eee;border-radius: 3px;">
                                         <select id="selectDropDown" class="form-control" style="border:none; box-shadow:none; font-size:13px;">
                                             <option value="" selected>Select For Rearrange data</option>
                                             <option value="INBT">INBT</option>
@@ -227,8 +227,8 @@
                                     </th>
                                     <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
                                         @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:15px; opacity: 0.2;">
-                                        @*<input type="submit" id="btnsearch" value="Search" style="border:none; background: #ffaf38; padding: 7px 18px; border-radius: 5px;" />*@
-                                    </th>
+                                       
+                                    </th>*@
                                 </tr>
                             </table>
                         }
