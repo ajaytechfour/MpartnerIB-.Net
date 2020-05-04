@@ -17,8 +17,10 @@ namespace LuminousMpartnerIB.Controllers
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
         private string PageUrl = "/FAQ/Index";
+        string utype = string.Empty;
         public ActionResult Index()
         {
+            utype = Session["ctype"].ToString();
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
@@ -29,13 +31,14 @@ namespace LuminousMpartnerIB.Controllers
                 //string pageUrl2 = "/FAQ/Index";
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
                 var data = db.FAQs.OrderByDescending(a => a.Id).ToList().ToPagedList(1, 1);
-                if (true)
+                if (utype == "Luminous")
                 {
-                    return View(data);
+                    return RedirectToAction("Index", "FAQView");
                 }
                 else
                 {
-                    return RedirectToAction("snotallowed", "snotallowed");
+                    return View(data);
+                    //return RedirectToAction("snotallowed", "snotallowed");
                 }
             }
 

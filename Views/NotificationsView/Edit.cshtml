@@ -1,0 +1,166 @@
+﻿@model LuminousMpartnerIB.EF.Notification
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/Notifications.cshtml";
+}
+<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+<style type="text/css">
+    .required
+    {
+        color: Red;
+    }
+    table
+    {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+    table table
+    {
+        font-size: 1em;
+    }
+    #footer-wrapper table
+    {
+        font-size: 1em;
+    }
+    table tr th
+    {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+    table tr th, table tr th a, table tr th a:hover
+    {
+        color: #FFF;
+        font-weight: bold;
+    }
+    table tbody tr th
+    {
+        vertical-align: top;
+    }
+    tr td, tr th
+    {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+    #footer-wrapper tr td, #footer-wrapper tr th
+    {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+    tr.odd
+    {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+    tr, tr.even
+    {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+    table ul.links
+    {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+    table ul.links li
+    {
+        padding: 0 1em 0 0;
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+        if (@ViewBag.status == 1) {
+        debugger;
+            $("#statusCc").prop("checked", "checked");
+        }
+        if (@ViewBag.Alertstatus == 1) {
+            debugger;
+            $("#statusDd").prop("checked", "checked");
+        }
+        if ('@ViewBag.Result' != "") {
+            debugger;
+            alert('@ViewBag.Result');
+            location.href = "@Url.Content("~/ProductLevelThree/index")";
+        }
+    });
+    function Cancel() {
+        location.href = "@Url.Content("~/ProductCategory/index")";
+    }
+</script>
+
+<div id="form" style="margin-bottom: 11px">
+    @using (Html.BeginForm("Update", "Notifications", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    { 
+        <div id="content_wrap">
+            <div class="msgbar msg_Info heading">
+                Notification</div>
+            <div class="content_main">
+                <div class="boxes1">
+                    <table id="GridView">                   
+                        <tr>
+                           <td style="width: 124px;">
+                                Subject <span class="required">*</span>
+                            </td>
+                            <td>@Html.TextBoxFor(a => a.C_Subject)
+                           @Html.HiddenFor(a=>a.id)
+                                <br />
+                                @Html.ValidationMessageFor(a => a.C_Subject, "", new { @class = "required" })
+                            </td>
+                            <td>
+                            Edit Receiver
+                            </td>
+                            <td>
+                            @Html.ActionLink("Edit Reciver List","EditReciverList",new{id=@Model.id})
+                            </td>
+                       
+                        </tr>   
+                        <tr>
+                             <td>
+                                Text <span class="required">*</span>
+                            </td>
+                            <td colspan="3">@Html.TextAreaFor(a => a.C_text, 5, 50, new { })
+                                <br />
+                                @Html.ValidationMessageFor(a => a.C_text, "", new { @class = "required" })
+                            </td>
+                        </tr>  
+                        <tr>
+                            <td>
+                                Upload Image <span class="required">*</span>
+                            </td>
+                            <td>
+                                <input type="file" name="postedFile" />
+                                <span id="file" class="required"></span>
+                            </td>
+                            <td>Previous Image</td>
+                            <td>
+                                <img src="@Url.Content("~/NotificationImage/")@Model.ImagePath" title="@Model.ImagePath" style="width:100px; height:100px" />
+                            </td>
+                        </tr>                   
+                        <tr>
+                            @*<td>
+                                Alert Notification
+                            </td>
+                            <td>
+                                <input type="checkbox" id="statusDd" name="statusD" />
+                            </td>*@
+                            <td>
+                                Status
+                            </td>
+                            <td colspan="3">
+                                <input type="checkbox" id="statusCc"  name="statusC" />
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Submit" />
+                </div>
+            </div>
+        </div>              
+    }
+</div>

@@ -142,7 +142,7 @@ namespace LuminousMpartnerIB.Controllers
         }
 
 
-        public JsonResult GetMediaDetail(int? page)
+        public JsonResult GetMediaDetail(int? page, int id = 0)
         {
             if (Session["userid"] == null)
             {
@@ -165,27 +165,57 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
 
-                    var MediaDetail2 = (from c in Mediadetails
-                                        join sw in db.FooterCategories on c.LabelId equals sw.Id
-                                        select new
-                                        {
-                                            Id = c.Id,
-                                            Category = sw.FCategoryName,
-                                            Description = c.VideoName,
-                                            URL = c.Url,
-                                            status = c.Status == 1 ? "Enable" : "Disable"
-                                        }).OrderByDescending(a => a.Id).Skip(page ?? 0).Take(15).ToList();
-                    if (Mediadetails.Count() % 15 == 0)
+                    if (id != 0)
                     {
-                        totalrecord = Mediadetails.Count() / 15;
+                        var MediaDetail2 = (from c in Mediadetails
+                                            join sw in db.FooterCategories on c.LabelId equals sw.Id
+                                            where c.CreatedBy == id
+                                            select new
+                                            {
+                                                Id = c.Id,
+                                                Category = sw.FCategoryName,
+                                                Description = c.VideoName,
+                                                URL = c.Url,
+                                                status = c.Status == 1 ? "Enable" : "Disable"
+                                            }).OrderByDescending(a => a.Id).Skip(page ?? 0).Take(15).ToList();
+                        if (Mediadetails.Count() % 15 == 0)
+                        {
+                            totalrecord = Mediadetails.Count() / 15;
+                        }
+                        else
+                        {
+                            totalrecord = (Mediadetails.Count() / 15) + 1;
+                        }
+                        var data = new { result = MediaDetail2, TotalRecord = totalrecord };
+
+                        return Json(data, JsonRequestBehavior.AllowGet);
                     }
                     else
                     {
-                        totalrecord = (Mediadetails.Count() / 15) + 1;
-                    }
-                    var data = new { result = MediaDetail2, TotalRecord = totalrecord };
 
-                    return Json(data, JsonRequestBehavior.AllowGet);
+                        var MediaDetail2 = (from c in Mediadetails
+                                            join sw in db.FooterCategories on c.LabelId equals sw.Id
+                                            select new
+                                            {
+                                                Id = c.Id,
+                                                Category = sw.FCategoryName,
+                                                Description = c.VideoName,
+                                                URL = c.Url,
+                                                status = c.Status == 1 ? "Enable" : "Disable"
+                                            }).OrderByDescending(a => a.Id).Skip(page ?? 0).Take(15).ToList();
+                        if (Mediadetails.Count() % 15 == 0)
+                        {
+                            totalrecord = Mediadetails.Count() / 15;
+                        }
+                        else
+                        {
+                            totalrecord = (Mediadetails.Count() / 15) + 1;
+                        }
+                        var data = new { result = MediaDetail2, TotalRecord = totalrecord };
+
+                        return Json(data, JsonRequestBehavior.AllowGet);
+                    }
+
                 }
                 else
                 {
@@ -194,7 +224,7 @@ namespace LuminousMpartnerIB.Controllers
                 }
             }
         }
-        public ActionResult Edit(int id)
+        public ActionResult View(int id)
         {
             if (Session["userid"] == null)
             {

@@ -11,9 +11,11 @@ using System.Data;
 using System.Web.Routing;
 using System.Text.RegularExpressions;
 using System.Text;
+using Luminous.Controllers;
+
 namespace LuminousMpartnerIB.Controllers
 {
-    public class CreatePermotionPrice_NewController : Controller
+    public class CreatePermotionPrice_NewController : MultiLanguageController
     {
         //
         // GET: /CreatePermotions/

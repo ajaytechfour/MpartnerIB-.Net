@@ -20,8 +20,10 @@ namespace LuminousMpartnerIB.Controllers
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
         private string PageUrl = "/CreatePermotionScheme_New/Index";
+        string utype = string.Empty;
         public ActionResult Index(string Search)
         {
+            utype = Session["ctype"].ToString();
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
@@ -40,13 +42,14 @@ namespace LuminousMpartnerIB.Controllers
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (true/*result[0]["uview"].ToString() == "1"*/)
+                if (utype == "Luminous")
                 {
-                    return View();
+                    return RedirectToAction("Index", "Scheme");
                 }
                 else
                 {
-                    return RedirectToAction("snotallowed", "snotallowed");
+                    return View();
+                    //return RedirectToAction("snotallowed", "snotallowed");
                 }
             }
         }

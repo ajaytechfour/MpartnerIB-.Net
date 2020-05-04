@@ -100,7 +100,7 @@
         $(".date").datepicker(
      { dateFormat: "dd-mm-yy" }
         );
-        
+
         ValidationMessage();
 
     });
@@ -196,7 +196,7 @@
              "<td>" + value.EndDate + "</td>" +
              "<td>" + value.status + "</td>" +
 
-            "<td style='text-align:right;'><a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+            "<td style='text-align:right;'><a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> </td></tr>";
 
             });
             $("#Grid tbody").append(body);
@@ -218,7 +218,7 @@
         $.post("@Url.Content("~/CreatePermotionScheme_New/GetContactDetail")", { page: id }, function (data) { SetGrid(data); }, "Json");
     }
     function Edit(id) {
-        location.href = "@Url.Content("~/CreatePermotionScheme_New/Edit/")" + id;
+        location.href = "@Url.Content("~/Scheme/View/")" + id;
     }
     function Delete(id) {
         if (confirm("Do You Want To Delete This Record")) {
@@ -812,10 +812,7 @@
                                 {
                                     <table class="headingHd" style="width:100%;">
                                         <tr>
-                                            <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;"> Scheme Data List</th>
-                                            @*<th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
-                                            </th>*@
+                                            <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;"> Scheme Data List</th>                                           
                                         </tr>
                                     </table>
                                 }

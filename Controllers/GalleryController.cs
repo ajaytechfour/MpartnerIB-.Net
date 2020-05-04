@@ -18,8 +18,10 @@ namespace LuminousMpartnerIB.Controllers
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
         private string PageUrl = "/Media/Index";
+        string utype = string.Empty;
         public ActionResult Index()
         {
+            utype = Session["ctype"].ToString();
             RouteCollection rc = RouteTable.Routes;
             if (Session["userid"] == null)
             {
@@ -30,13 +32,14 @@ namespace LuminousMpartnerIB.Controllers
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = "/Banner/Index";
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (true)
+                if (utype == "Luminous")
                 {
-                    return View();
+                    return RedirectToAction("Index", "GalleryView");
                 }
                 else
                 {
-                    return RedirectToAction("snotallowed", "snotallowed");
+                    return View();
+                    //return RedirectToAction("snotallowed", "snotallowed");
                 }
             }
         }

@@ -15,7 +15,7 @@ using System.Configuration;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class NotificationsController : Controller
+    public class NotificationsViewController : Controller
     {
         //
         // GET: /Notifications/
@@ -26,13 +26,9 @@ namespace LuminousMpartnerIB.Controllers
 
         string url = ConfigurationSettings.AppSettings["UatUrl"].ToString();
         private DataTable dt = new DataTable();
-
-        string utype = string.Empty;
-
         [ActionName("Notification")]
         public ActionResult Notification()
         {
-            utype = Session["ctype"].ToString();
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
@@ -42,14 +38,13 @@ namespace LuminousMpartnerIB.Controllers
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (utype == "Luminous")
+                if (true)
                 {
-                    return RedirectToAction("Notification", "NotificationsView");
+                    return View();
                 }
                 else
                 {
-                    return View();
-                    //return RedirectToAction("snotallowed", "snotallowed");
+                    return RedirectToAction("snotallowed", "snotallowed");
                 }
             }
         }
@@ -466,25 +461,25 @@ namespace LuminousMpartnerIB.Controllers
                             string image = Imagepath;
                             string title = NotificationSubject;
                             string description = NotificationDescription;
-                            
+
                             if (i.OSType == "iOS")
                             {
                                 if (image == "")
                                 {
                                     var payload = new
-              {
-                  to = fcmtoken,
+                                    {
+                                        to = fcmtoken,
 
-                  priority = "high",
-                  content_available = true,
-                  notification = new
-                  {
-                      body = description,
-                      title = title,
-                    
-                      badge = 1
-                  },
-              };
+                                        priority = "high",
+                                        content_available = true,
+                                        notification = new
+                                        {
+                                            body = description,
+                                            title = title,
+
+                                            badge = 1
+                                        },
+                                    };
                                     var serializer = new JavaScriptSerializer();
                                     var json = serializer.Serialize(payload);
                                     SendGCMNotification(ios_serverkey, json);
@@ -634,7 +629,7 @@ namespace LuminousMpartnerIB.Controllers
 
             return "error";
         }
-        public JsonResult GetNotificationsDetail(int? page)
+        public JsonResult GetNotificationsDetail(int? page, int id = 0)
         {
             if (Session["userid"] == null)
             {
@@ -656,27 +651,58 @@ namespace LuminousMpartnerIB.Controllers
                         page = (page - 1) * 15;
                     }
 
-                    var Notificationdetails2 = (from c in Notificationdetails
-
-                                                select new
-                                                {
-                                                    id = c.id,
-                                                    Subject = c.C_Subject,
-                                                    Imagepath = c.ImagePath,
-                                                    Text = c.C_text,
-                                                    status = c.C_status == 1 ? "Active" : "Deactive",
-                                                }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
-                    if (Notificationdetails.Count() % 15 == 0)
+                    if (id != 0)
                     {
-                        totalrecord = Notificationdetails.Count() / 15;
+                        var Notificationdetails2 = (from c in Notificationdetails
+                                                    where c.createdBy == id.ToString()
+                                                    select new
+                                                    {
+                                                        id = c.id,
+                                                        Subject = c.C_Subject,
+                                                        Imagepath = c.ImagePath,
+                                                        Text = c.C_text,
+                                                        status = c.C_status == 1 ? "Active" : "Deactive",
+                                                    }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
+                        if (Notificationdetails.Count() % 15 == 0)
+                        {
+                            totalrecord = Notificationdetails.Count() / 15;
+                        }
+                        else
+                        {
+                            totalrecord = (Notificationdetails.Count() / 15) + 1;
+                        }
+                        var data = new { result = Notificationdetails2, TotalRecord = totalrecord };
+
+                        return Json(data, JsonRequestBehavior.AllowGet);
+
                     }
                     else
                     {
-                        totalrecord = (Notificationdetails.Count() / 15) + 1;
-                    }
-                    var data = new { result = Notificationdetails2, TotalRecord = totalrecord };
+                        var Notificationdetails2 = (from c in Notificationdetails
 
-                    return Json(data, JsonRequestBehavior.AllowGet);
+                                                    select new
+                                                    {
+                                                        id = c.id,
+                                                        Subject = c.C_Subject,
+                                                        Imagepath = c.ImagePath,
+                                                        Text = c.C_text,
+                                                        status = c.C_status == 1 ? "Active" : "Deactive",
+                                                    }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
+                        if (Notificationdetails.Count() % 15 == 0)
+                        {
+                            totalrecord = Notificationdetails.Count() / 15;
+                        }
+                        else
+                        {
+                            totalrecord = (Notificationdetails.Count() / 15) + 1;
+                        }
+                        var data = new { result = Notificationdetails2, TotalRecord = totalrecord };
+
+                        return Json(data, JsonRequestBehavior.AllowGet);
+
+                    }
+
+
                 }
                 else
                 {
