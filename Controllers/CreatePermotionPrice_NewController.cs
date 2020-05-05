@@ -25,13 +25,14 @@ namespace LuminousMpartnerIB.Controllers
         string utype = string.Empty;
         public ActionResult Index(string Search)
         {
-            utype = Session["ctype"].ToString();
+          
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
             }
             else
             {
+                utype = Session["ctype"].ToString();
                 if (Search != null && Search != "")
                 {
                     Session["Search"] = Search;

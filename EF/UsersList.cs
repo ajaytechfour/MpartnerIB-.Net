@@ -59,5 +59,7 @@ namespace LuminousMpartnerIB.EF
         public Nullable<decimal> Latitude { get; set; }
         public Nullable<decimal> Longitude { get; set; }
         public string GoogleAddress { get; set; }
+        public string Language { get; set; }
+        public string Country { get; set; }
     }
 }

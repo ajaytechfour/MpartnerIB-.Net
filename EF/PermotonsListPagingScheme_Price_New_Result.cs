@@ -21,6 +21,7 @@ namespace LuminousMpartnerIB.EF
         public Nullable<System.DateTime> EndDate { get; set; }
         public string Subcatid { get; set; }
         public string Subcatname { get; set; }
+        public string CreatedBy { get; set; }
         public Nullable<int> status { get; set; }
     }
 }

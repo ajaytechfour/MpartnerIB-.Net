@@ -13,12 +13,11 @@ using System.Text;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class ProductLevel3Controller : Controller
+    public class ProductLevel3ViewController : Controller
     {
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
         private string PageUrl = "/ProductLevel3/index";
-        string utype = string.Empty;
         public ActionResult Index(string Search)
         {
             if (Session["userid"] == null)
@@ -27,7 +26,6 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                utype = Session["ctype"].ToString();
                 if (Search != null && Search != "")
                 {
                     Session["Search"] = Search;
@@ -40,14 +38,14 @@ namespace LuminousMpartnerIB.Controllers
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (utype == "Luminous")
+                if (true)
                 {
-                    return RedirectToAction("Index", "ProductLevel3View");
+                    return View();
                 }
                 else
                 {
-                    return View();
-                }               
+                    return RedirectToAction("snotallowed", "snotallowed");
+                }
             }
         }
         public JsonResult GetProductLevelTwoCategory(string procatid)
@@ -962,7 +960,7 @@ namespace LuminousMpartnerIB.Controllers
 
         }
 
-        public JsonResult GetContactDetail()
+        public JsonResult GetContactDetail(string id = "")
         {
             //int? PagId = page;
             if (Session["userid"] == null)
@@ -979,76 +977,62 @@ namespace LuminousMpartnerIB.Controllers
                     int contactdetails = (from c in db.ProductLevelThrees
                                           where c.PlTwStatus != 2
                                           select c).Count();
-                    //int totalrecord;
-                    //if (page != null)
-                    //{
-                    //    page = (page - 1) * 15;
-                    //}
-                    //if (contactdetails % 15 == 0)
-                    //{
-                    //    totalrecord = contactdetails / 15;
-                    //}
-                    //else
-                    //{
-                    //    totalrecord = (contactdetails / 15) + 1;
-                    //}
-                    //if (Session["Search"] != null)
-                    //{
-                    //    var contactDetails2 = (from c in db.ProductLevelThreePaging(PagId ?? 1, 100)
-
-                    //                           select new
-                    //                           {
-                    //                               id = c.id,
-                    //                               PCat = c.ProductCategory,
-                    //                               Name = c.ProductLevelThreeName,
-                    //                               proCatOne = c.ProductLeveloneName,
-                    //                               ProCatTwo = c.ProductwoName,
-                    //                               ProductCode = c.prcode,
-                    //                               //  Descriptions = c.prDiscription,
-                    //                               Rating = c.Rating,
-                    //                               StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
-                    //                               EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
-                    //                               Parentcat = c.ParentCategory,
-                    //                               status = c.pltwstatus == 1 ? "Active" : "Deactive",
 
 
-                    //                           }).Where(c => c.id.ToString().Contains(Session["Search"].ToString()) || c.PCat.Contains(Session["Search"].ToString()) || c.Name.Contains(Session["Search"].ToString()) || c.proCatOne.Contains(Session["Search"].ToString()) || c.ProCatTwo.Contains(Session["Search"].ToString()) || c.ProductCode.Contains(Session["Search"].ToString()) || c.status.Contains(Session["Search"].ToString()) || c.StartDate.Contains(Session["Search"].ToString()) || c.EndDate.Contains(Session["Search"].ToString()) || c.Parentcat.Contains(Session["Search"].ToString())).ToList();
-
-                    //    if (contactDetails2.Count == 0)
-                    //    {
-                    //        var data = new { result = contactDetails2 };
-                    //        return Json(data, JsonRequestBehavior.AllowGet);
-                    //    }
-                    //    else
-                    //    {
-                    //        var data = new { result = contactDetails2, TotalRecord = totalrecord };
-                    //        return Json(data, JsonRequestBehavior.AllowGet);
-                    //    }
-                    //}
-                    //else
-                    //{
-                    var contactDetails2 = (from c in db.ProductLevelThreePaging()
-
-                                           select new
-                                           {
-                                               id = c.id,
-                                               PCat = c.ProductCategory,
-                                               Name = c.ProductLevelThreeName,
-                                               proCatOne = c.ProductLeveloneName,
-                                               ProCatTwo = c.ProductwoName,
-                                               ProductCode = c.prcode,
-                                               Descriptions = c.prDiscription,
-                                               Rating = c.Rating,
-                                               Parentcat = c.ParentCategory,
-                                               StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
-                                               EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
-                                               status = c.pltwstatus == 1 ? "Active" : "Deactive",
+                    if (id != "")
+                    {
+                        var contactDetails2 = (from c in db.ProductLevelThreePaging()
+                                               where c.CreatedBy.ToLower() == id.ToLower()
+                                               select new
+                                               {
+                                                   id = c.id,
+                                                   PCat = c.ProductCategory,
+                                                   Name = c.ProductLevelThreeName,
+                                                   proCatOne = c.ProductLeveloneName,
+                                                   ProCatTwo = c.ProductwoName,
+                                                   ProductCode = c.prcode,
+                                                   Descriptions = c.prDiscription,
+                                                   Rating = c.Rating,
+                                                   Parentcat = c.ParentCategory,
+                                                   StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
+                                                   EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
+                                                   status = c.pltwstatus == 1 ? "Active" : "Deactive",
 
 
-                                           }).ToList();
-                    var data = new { result = contactDetails2, TotalRecord = contactDetails2.Count() };
+                                               }).ToList();
+                        var data = new { result = contactDetails2, TotalRecord = contactDetails2.Count() };
 
-                    return Json(data, JsonRequestBehavior.AllowGet);
+                        return Json(data, JsonRequestBehavior.AllowGet);
+
+                    }
+                    else
+                    {
+                        var contactDetails2 = (from c in db.ProductLevelThreePaging()
+
+                                               select new
+                                               {
+                                                   id = c.id,
+                                                   PCat = c.ProductCategory,
+                                                   Name = c.ProductLevelThreeName,
+                                                   proCatOne = c.ProductLeveloneName,
+                                                   ProCatTwo = c.ProductwoName,
+                                                   ProductCode = c.prcode,
+                                                   Descriptions = c.prDiscription,
+                                                   Rating = c.Rating,
+                                                   Parentcat = c.ParentCategory,
+                                                   StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
+                                                   EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
+                                                   status = c.pltwstatus == 1 ? "Active" : "Deactive",
+
+
+                                               }).ToList();
+                        var data = new { result = contactDetails2, TotalRecord = contactDetails2.Count() };
+
+                        return Json(data, JsonRequestBehavior.AllowGet);
+
+                    }
+
+
                 }
 
 
@@ -1822,7 +1806,7 @@ namespace LuminousMpartnerIB.Controllers
                             }
 
                         }
-                        if (multiplepostedfiles[0]!=null)
+                        if (multiplepostedfiles[0] != null)
                         {
                             foreach (HttpPostedFileBase Primagemapping in multiplepostedfiles)
                             {
@@ -1873,7 +1857,7 @@ namespace LuminousMpartnerIB.Controllers
                         {
                             db.SaveChanges();
                         }
-                        catch(Exception ex)
+                        catch (Exception ex)
                         {
 
                         }
@@ -1955,7 +1939,7 @@ namespace LuminousMpartnerIB.Controllers
                             contactusd.PlTwStatus = 0;
                         }
 
-                        int affectedRows=0;
+                        int affectedRows = 0;
                         try
                         {
                             affectedRows = db.SaveChanges();
@@ -1963,8 +1947,8 @@ namespace LuminousMpartnerIB.Controllers
                         catch (Exception ex)
                         {
                         }
-                        
-                       // int affectedRows = db.SaveChanges();
+
+                        // int affectedRows = db.SaveChanges();
                         if (affectedRows > 0)
                         {
                             if (Brochurename != null)

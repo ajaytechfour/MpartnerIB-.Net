@@ -1,0 +1,172 @@
+﻿@model LuminousMpartnerIB.EF.ProductCatergory
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+<script type="text/javascript">
+    $(function () {
+        $.post("@Url.Content("~/ProductCategory/GetParentCategory")", null, function (data) { SetProdcutCategory(data); }, "Json");
+        if ('@ViewBag.status' == 1) {
+            $("#statusC").prop("checked", "checked");
+        }
+        if ('@ViewBag.Result' != "") {
+            debugger;
+            alert('@ViewBag.Result');
+            location.href = "@Url.Content("~/ProductCategory/index")";
+        }
+    });
+    function Cancel() {
+        location.href = "@Url.Content("~/ProductCategory/index")";
+    }
+    function SetProdcutCategory(data) {
+        option = "";
+        var procat = $("#ProductCategory");
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+
+        });
+        procat.append(option);
+        procat.val('@ViewBag.Pid');
+
+
+    }
+</script>
+
+
+
+
+<div id="page-wrapper" style="background: #f2f4f8; height:800px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span>Catalog - </span> Edit Product Category</h1>
+        </div>
+    </div>
+
+    @using (Html.BeginForm("Update", "ProductCategory", FormMethod.Post, new { @id = "forms", enctype = "multipart/form-data" }))
+    {
+
+        <div class="row">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500" id="content_wrap">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row" id="GridView">
+                        <div class="col-md-3">
+                            <div class="">
+                                <label>Parent Category <span class="required">*</span></label>
+                                <select name="pcId" class="form-control" id="ProductCategory">
+                                    <option>Select</option>
+                                </select>
+
+                 
+                                @Html.ValidationMessageFor(model => model.ParentCatid, "", new { @class = "required" })                                
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @Html.HiddenFor(a => a.id)
+                                <label>Product Category <span class="required">*</span></label>
+                                @Html.TextBoxFor(a => a.PName, new { @class = "form-control" })
+
+                                @Html.ValidationMessageFor(a => a.PName, "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Upload PDF<span class="required">*</span></label>
+                                <input type="file" name="Postedfile" style="border:none; height:inherit;" />
+
+                                <span id="file" class="required"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Status</label>
+                                <input type="checkbox" checked="checked" name="statusC" style="border:none; height:inherit;" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="submit" class="submitBtn" value="Submit" />
+                                <input type="button" class="submitBtn" value="Cancel" onclick="Cancel();" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    }
+</div>
+

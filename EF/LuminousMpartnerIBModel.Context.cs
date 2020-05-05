@@ -107,15 +107,6 @@ namespace LuminousMpartnerIB.EF
         public DbSet<NotificationSurvey> NotificationSurveys { get; set; }
         public DbSet<NotificationSurveyHistory> NotificationSurveyHistories { get; set; }
     
-        public virtual ObjectResult<PermotonsListPagingScheme_Price_New_Result> PermotonsListPagingScheme_Price_New(string pagename)
-        {
-            var pagenameParameter = pagename != null ?
-                new ObjectParameter("pagename", pagename) :
-                new ObjectParameter("pagename", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PermotonsListPagingScheme_Price_New_Result>("PermotonsListPagingScheme_Price_New", pagenameParameter);
-        }
-    
         public virtual ObjectResult<userpermission_Result> userpermission(Nullable<int> mode, string userid)
         {
             var modeParameter = mode.HasValue ?
@@ -161,11 +152,6 @@ namespace LuminousMpartnerIB.EF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetColumnNames_Result>("GetColumnNames");
         }
     
-        public virtual ObjectResult<ProductLevelThreePaging_Result> ProductLevelThreePaging()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ProductLevelThreePaging_Result>("ProductLevelThreePaging");
-        }
-    
         public virtual ObjectResult<GetProductLevelFourAccessTable_Result> GetProductLevelFourAccessTable(Nullable<int> pid)
         {
             var pidParameter = pid.HasValue ?
@@ -173,6 +159,20 @@ namespace LuminousMpartnerIB.EF
                 new ObjectParameter("Pid", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetProductLevelFourAccessTable_Result>("GetProductLevelFourAccessTable", pidParameter);
+        }
+    
+        public virtual ObjectResult<PermotonsListPagingScheme_Price_New_Result> PermotonsListPagingScheme_Price_New(string pagename)
+        {
+            var pagenameParameter = pagename != null ?
+                new ObjectParameter("pagename", pagename) :
+                new ObjectParameter("pagename", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PermotonsListPagingScheme_Price_New_Result>("PermotonsListPagingScheme_Price_New", pagenameParameter);
+        }
+    
+        public virtual ObjectResult<ProductLevelThreePaging_Result> ProductLevelThreePaging()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ProductLevelThreePaging_Result>("ProductLevelThreePaging");
         }
     }
 }

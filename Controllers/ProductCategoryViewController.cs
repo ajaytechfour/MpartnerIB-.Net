@@ -8,7 +8,7 @@ using System.Data;
 using System.IO;
 namespace LuminousMpartnerIB.Controllers
 {
-    public class ProductCategoryController : Controller
+    public class ProductCategoryViewController : Controller
     {
         //
         // GET: /ProductCategory/
@@ -16,7 +16,6 @@ namespace LuminousMpartnerIB.Controllers
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
         private string PageUrl = "/ProductCategory/index";
-        string utype = string.Empty;
         public ActionResult Index()
         {
 
@@ -26,19 +25,17 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                utype = Session["ctype"].ToString();
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (utype == "Luminous")
-                {
-                    return RedirectToAction("Index", "ProductCategoryView");
-                }
-                else
+                if (true)
                 {
                     return View();
                 }
-               
+                else
+                {
+                    return RedirectToAction("snotallowed", "snotallowed");
+                }
             }
         }
         public ActionResult SaveContact(ProductCatergory contactUs, string statusC, string pcId, HttpPostedFileBase Postedfile)
@@ -145,7 +142,7 @@ namespace LuminousMpartnerIB.Controllers
             }
         }
 
-        public JsonResult GetContactDetail()
+        public JsonResult GetContactDetail(string id = "")
         {
             if (Session["userid"] == null)
             {
@@ -161,34 +158,48 @@ namespace LuminousMpartnerIB.Controllers
                     var contactdetails = (from c in db.ProductCatergories
                                           where c.Pstatus != 2
                                           select c).ToList();
-                    int totalrecord;
-                    //if (page != null)
-                    //{
-                    //    page = (page - 1) * 15;
-                    //}
 
-                    var contactDetails2 = (from c in contactdetails
+                    if (id != "")
+                    {
 
-                                           select new
-                                           {
-                                               ParentCat = c.ParentCategory.PCName,
-                                               // PCode = c.PCode,
-                                               PName = c.PName,
-                                               status = c.Pstatus == 1 ? "Enable" : "Disable",
-                                               id = c.id
+                        var contactDetails2 = (from c in contactdetails
+                                               where c.CreatedBy.ToLower() == id.ToLower()
+                                               select new
+                                               {
+                                                   ParentCat = c.ParentCategory.PCName,
+                                                   // PCode = c.PCode,
+                                                   PName = c.PName,
+                                                   status = c.Pstatus == 1 ? "Enable" : "Disable",
+                                                   id = c.id
 
-                                           }).OrderByDescending(a => a.id).ToList();
-                    //if (contactdetails.Count() % 15 == 0)
-                    //{
-                    //    totalrecord = contactdetails.Count() / 15;
-                    //}
-                    //else
-                    //{
-                    //    totalrecord = (contactdetails.Count() / 15) + 1;
-                    //}
-                    var data = new { result = contactDetails2, TotalRecord = contactDetails2.Count };
+                                               }).OrderByDescending(a => a.id).ToList();
 
-                    return Json(data, JsonRequestBehavior.AllowGet);
+                        var data = new { result = contactDetails2, TotalRecord = contactDetails2.Count };
+
+                        return Json(data, JsonRequestBehavior.AllowGet);
+
+                    }
+                    else
+                    {
+
+                        var contactDetails2 = (from c in contactdetails
+                                                   //where c.CreatedBy.ToLower() == id.ToLower()
+                                               select new
+                                               {
+                                                   ParentCat = c.ParentCategory.PCName,
+                                                   // PCode = c.PCode,
+                                                   PName = c.PName,
+                                                   status = c.Pstatus == 1 ? "Enable" : "Disable",
+                                                   id = c.id
+
+                                               }).OrderByDescending(a => a.id).ToList();
+
+                        var data = new { result = contactDetails2, TotalRecord = contactDetails2.Count };
+
+                        return Json(data, JsonRequestBehavior.AllowGet);
+
+                    }
+
                 }
                 else
                 {

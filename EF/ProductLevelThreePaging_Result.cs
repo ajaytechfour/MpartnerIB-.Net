@@ -30,5 +30,6 @@ namespace LuminousMpartnerIB.EF
         public Nullable<int> ParentCatid { get; set; }
         public Nullable<int> ProductLevelOne { get; set; }
         public Nullable<int> productCategoryid { get; set; }
+        public string CreatedBy { get; set; }
     }
 }

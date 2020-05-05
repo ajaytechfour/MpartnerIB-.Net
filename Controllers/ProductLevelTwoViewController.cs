@@ -9,14 +9,13 @@ using LuminousMpartnerIB.EF;
 
 namespace Luminous.Controllers
 {
-    public class ProductLevelTwoController : Controller
+    public class ProductLevelTwoViewController : Controller
     {
         //
         // GET: /ProductLevelTwo/
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
         private string PageUrl = "/ProductLevelTwo/index";
-        string utype = string.Empty;
         public ActionResult Index(string Search)
         {
             if (Session["userid"] == null)
@@ -25,7 +24,6 @@ namespace Luminous.Controllers
             }
             else
             {
-                utype = Session["ctype"].ToString();
                 if (Search != null && Search != "")
                 {
                     Session["Search"] = Search;
@@ -38,14 +36,14 @@ namespace Luminous.Controllers
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (utype == "Luminous")
+                if (true)
                 {
-                    return RedirectToAction("Index", "ProductLevelTwoView");
+                    return View();
                 }
                 else
                 {
-                    return View();
-                }               
+                    return RedirectToAction("snotallowed", "snotallowed");
+                }
             }
         }
         public JsonResult GetProductLevelOneCategory()
@@ -261,7 +259,7 @@ namespace Luminous.Controllers
             }
         }
 
-        public JsonResult GetContactDetail()
+        public JsonResult GetContactDetail(string id = "")
         {
             if (Session["userid"] == null)
             {
@@ -279,63 +277,18 @@ namespace Luminous.Controllers
                                           where c.PlTwStatus != 2
                                           select c).ToList();
 
-                    //if (page != null)
-                    //{
-                    //    page = (page - 1) * 15;
-                    //}
-                    //if (contactdetails.Count() % 15 == 0)
-                    //{
-                    //    totalrecord = contactdetails.Count() / 15;
-                    //}
-                    //else
-                    //{
+                    if (id != "")
+                    {
 
-                    //    totalrecord = (contactdetails.Count() / 15) + 1;
-
-
-                    //}
-                    //if (Session["Search"] != null)
-                    //{
-
-
-                    //    var contactDetails2 = (from c in contactdetails
-
-                    //                           select new
-                    //                           {
-                    //                               id = c.id,
-                    //                               PCat = c.ProductCatergory.PName,
-                    //                               Name = c.Name,
-                    //                               // proCatOne = c.ProductLevelOne.Name,
-                    //                               parntcat = c.ParentCategory.PCName,
-                    //                               status = c.PlTwStatus == 1 ? "Enable" : "Disable",
-
-
-                    //                           }).Where(a => a.id.ToString().Contains(Session["Search"].ToString()) || a.PCat.Contains(Session["Search"].ToString()) || a.Name.Contains(Session["Search"].ToString()) || a.status.Contains(Session["Search"].ToString())).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
-
-                    //    if (contactDetails2.Count() == 0)
-                    //    {
-                    //        var data = new { result = contactDetails2 };
-
-                    //        return Json(data, JsonRequestBehavior.AllowGet);
-                    //    }
-                    //    else
-                    //    {
-                    //        var data = new { result = contactDetails2, TotalRecord = totalrecord };
-
-                    //        return Json(data, JsonRequestBehavior.AllowGet);
-                    //    }
-                    //}
-                    //else
-                    //{
                         var contactDetails2 = (from c in contactdetails
-
+                                               where c.CreatedBy.ToLower() == id.ToLower()
                                                select new
                                                {
                                                    id = c.id,
-                                                 //  PCat = c.ProductCatergory.PName,
+                                                   //  PCat = c.ProductCatergory.PName,
                                                    Name = c.Name,
-                                                //   proCatOne = c.ProductLevelOne.Name,
-                                                  // parntcat = c.ParentCategory.PCName,
+                                                   //   proCatOne = c.ProductLevelOne.Name,
+                                                   // parntcat = c.ParentCategory.PCName,
                                                    status = c.PlTwStatus == 1 ? "Enable" : "Disable",
 
 
@@ -345,7 +298,29 @@ namespace Luminous.Controllers
 
                         return Json(data, JsonRequestBehavior.AllowGet);
                     }
-              //  }
+                    else
+                    {
+
+                        var contactDetails2 = (from c in contactdetails
+                                                   // where c.CreatedBy.ToLower() == id.ToLower()
+                                               select new
+                                               {
+                                                   id = c.id,
+                                                   //  PCat = c.ProductCatergory.PName,
+                                                   Name = c.Name,
+                                                   //   proCatOne = c.ProductLevelOne.Name,
+                                                   // parntcat = c.ParentCategory.PCName,
+                                                   status = c.PlTwStatus == 1 ? "Enable" : "Disable",
+
+
+                                               }).OrderByDescending(a => a.id).ToList();
+
+                        var data = new { result = contactDetails2, TotalRecord = contactDetails2.Count };
+
+                        return Json(data, JsonRequestBehavior.AllowGet);
+                    }
+                }
+
                 else
                 {
                     return Json("snotallowed", JsonRequestBehavior.AllowGet);

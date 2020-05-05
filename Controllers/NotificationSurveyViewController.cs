@@ -7,14 +7,13 @@ using LuminousMpartnerIB.EF;
 using System.Data;
 namespace LuminousMpartnerIB.Controllers
 {
-    public class NotificationSurveyController : Controller
+    public class NotificationSurveyViewController : Controller
     {
         //
         // GET: /NotificationSurvey/
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
         private string PageUrl = "/NotificationSurvey/Index";
-        string utype = string.Empty;
         public ActionResult Index()
         {
             if (Session["userid"] == null)
@@ -23,27 +22,14 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                utype = Session["ctype"].ToString();
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-
-                if (utype == "Luminous")
-                {
-                    return RedirectToAction("Index", "NotificationSurveyView");
-                }
-                else
+                if (true)
                 {
                     ViewBag.contest = new SelectList(db.ContestMasters.Where(c => c.Status != 0), "Id", "ContestName");
 
                     return View();
-                }
-
-
-
-                if (true)
-                {
-                    
                 }
                 else
                 {
@@ -53,7 +39,7 @@ namespace LuminousMpartnerIB.Controllers
             }
 
         }
-        public JsonResult GetContactDetail(int? page)
+        public JsonResult GetContactDetail(int? page, int id = 0)
         {
             if (Session["userid"] == null)
             {
@@ -75,32 +61,63 @@ namespace LuminousMpartnerIB.Controllers
                         page = (page - 1) * 15;
                     }
 
-                    var contactDetails2 = (from c in contactdetails
 
-
-                                           select new
-                                           {
-                                               Survey = c.Survey,
-                                               Question = c.QuestionTitle,
-                                               QuestionType = c.QuestionType,
-                                               status = c.Status == 1 ? "Enable" : "Disable",
-                                               id = c.SurveyID,
-                                               Startdate = c.StartDate,
-                                               Enddate = c.Enddate
-
-
-                                           }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
-                    if (contactdetails.Count() % 15 == 0)
+                    if (id != 0)
                     {
-                        totalrecord = contactdetails.Count() / 15;
+                        var contactDetails2 = (from c in contactdetails
+                                               where c.CreatedBy == id
+
+                                               select new
+                                               {
+                                                   Survey = c.Survey,
+                                                   Question = c.QuestionTitle,
+                                                   QuestionType = c.QuestionType,
+                                                   status = c.Status == 1 ? "Enable" : "Disable",
+                                                   id = c.SurveyID,
+                                                   Startdate = c.StartDate,
+                                                   Enddate = c.Enddate
+
+
+                                               }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
+                        if (contactdetails.Count() % 15 == 0)
+                        {
+                            totalrecord = contactdetails.Count() / 15;
+                        }
+                        else
+                        {
+                            totalrecord = (contactdetails.Count() / 15) + 1;
+                        }
+                        var data = new { result = contactDetails2, TotalRecord = totalrecord };
+
+                        return Json(data, JsonRequestBehavior.AllowGet);
                     }
                     else
                     {
-                        totalrecord = (contactdetails.Count() / 15) + 1;
-                    }
-                    var data = new { result = contactDetails2, TotalRecord = totalrecord };
+                        var contactDetails2 = (from c in contactdetails
+                                               select new
+                                               {
+                                                   Survey = c.Survey,
+                                                   Question = c.QuestionTitle,
+                                                   QuestionType = c.QuestionType,
+                                                   status = c.Status == 1 ? "Enable" : "Disable",
+                                                   id = c.SurveyID,
+                                                   Startdate = c.StartDate,
+                                                   Enddate = c.Enddate
 
-                    return Json(data, JsonRequestBehavior.AllowGet);
+
+                                               }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
+                        if (contactdetails.Count() % 15 == 0)
+                        {
+                            totalrecord = contactdetails.Count() / 15;
+                        }
+                        else
+                        {
+                            totalrecord = (contactdetails.Count() / 15) + 1;
+                        }
+                        var data = new { result = contactDetails2, TotalRecord = totalrecord };
+
+                        return Json(data, JsonRequestBehavior.AllowGet);
+                    }
                 }
                 else
                 {
@@ -172,7 +189,7 @@ namespace LuminousMpartnerIB.Controllers
 
 
         [HttpPost]
-        public ActionResult SaveSurveyQuestion(string contesttype, string Type, string QuestionTitle, string Questiontype, string OptionA, string OptionB, string OptionC, string OptionD, string OptionE, string Answer, string StartDate, string enddate, string statusC)
+        public ActionResult SaveSurveyQuestion(string Survey, string Type, string QuestionTitle, string Questiontype, string OptionA, string OptionB, string OptionC, string OptionD, string OptionE, string Answer, string StartDate, string enddate, string statusC)
         {
             if (Session["userid"] == null)
             {
@@ -251,7 +268,7 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
                     #endregion
-                    if (Type =="")
+                    if (Type == "")
                     {
                         //rajesh
                         //if (Survey == "" || Survey == null)
@@ -292,7 +309,7 @@ namespace LuminousMpartnerIB.Controllers
                     if (ModelState.IsValid)
                     {
                         NotificationSurvey Nos = new NotificationSurvey();
-                        Nos.Survey = contesttype;
+                        Nos.Survey = Survey;
                         Nos.QuestionTitle = QuestionTitle;
                         Nos.QuestionType = Questiontype;
                         Nos.StartDate = Convert.ToDateTime(StartDate);
@@ -326,7 +343,7 @@ namespace LuminousMpartnerIB.Controllers
 
                         db.NotificationSurveys.Add(Nos);
 
-                       
+
                         db.SaveChanges();
                         return Content("<script>alert('Record Save Successfully');location.href='../NotificationSurvey/Index';</script>");
 
@@ -359,17 +376,17 @@ namespace LuminousMpartnerIB.Controllers
                 {
                     NotificationSurvey cud = db.NotificationSurveys.Single(a => a.SurveyID == id);
                     ViewBag.status = cud.Status;
-                 
-                      if(cud.ContestId==1)
-                      {
-                          ViewBag.ContestData = "Survey";
-                      }
-                    if(cud.ContestId==2)
-                      {
-                          ViewBag.ContestData="Contest";
-                      }
-                  
-                 
+
+                    if (cud.ContestId == 1)
+                    {
+                        ViewBag.ContestData = "Survey";
+                    }
+                    if (cud.ContestId == 2)
+                    {
+                        ViewBag.ContestData = "Contest";
+                    }
+
+
                     if (cud.QuestionType == "MCQ")
                     {
                         ViewBag.Questypemcq = cud.QuestionType;
@@ -385,7 +402,7 @@ namespace LuminousMpartnerIB.Controllers
                     ViewBag.Correctans = cud.CorrectAns;
                     ViewBag.preStartDate = Convert.ToDateTime(cud.StartDate).ToString("dd-MM-yyyy");
                     ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToString("dd-MM-yyyy");
-                    ViewBag.contest = new SelectList(db.ContestMasters, "Id", "ContestName",cud.ContestId);
+                    ViewBag.contest = new SelectList(db.ContestMasters, "Id", "ContestName", cud.ContestId);
                     return View(cud);
                 }
                 else
@@ -555,8 +572,8 @@ namespace LuminousMpartnerIB.Controllers
                         }
                     }
                     NotificationSurvey nots = db.NotificationSurveys.Single(a => a.SurveyID == contactUs.SurveyID);
-                   return View("Edit", nots);
-                  
+                    return View("Edit", nots);
+
                 }
                 else
                 {

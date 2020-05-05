@@ -27,11 +27,11 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                var data = db.NotificationSurveys.Where(x => x.ContestId == 1).Select(c=>new{c.SurveyID,c.Survey});            
-                   
+               // var data = db.NotificationSurveys.Where(x => x.ContestId == 1).Select(c=>new{c.SurveyID,c.Survey});
+                var data = db.NotificationSurveys.Select(c => new { c.SurveyID, c.Survey });
 
-                  
-                    return View();
+
+                return View();
                // return Json(data, JsonRequestBehavior.AllowGet);
 
 

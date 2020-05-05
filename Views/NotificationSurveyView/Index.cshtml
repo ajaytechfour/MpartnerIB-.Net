@@ -1,0 +1,507 @@
+﻿@model LuminousMpartnerIB.EF.NotificationSurvey
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+<style>
+    .FullDes {
+        position: relative;
+        background-color: #1D1D1D;
+        width: 245px;
+        color: white;
+        border: 1px solid black;
+        display: none;
+    }
+</style>
+
+<script type="text/javascript">
+    $(function () {
+
+        $.post("@Url.Content("~/Price/GetDistributors")", null, function (data) { SetParentCategory(data); }, "Json");
+
+        $.post("@Url.Content("~/NotificationSurveyView/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+
+        ValidationMessage();
+
+    });
+    function showFullDescription(currentTag) {
+        $(currentTag).parent().find(".FullDes").show();
+    }
+    function hideFullDescription(currentTag) {
+        $(currentTag).parent().find(".FullDes").hide();
+    }
+
+    function SetParentCategory(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            option = "";
+            var procat = $("#ddlDistributor");
+            procat.empty();
+            procat.append("<option value=0>Select</option>");
+            $.each(data, function (key, value) {
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+
+            });
+            procat.append(option);
+        }
+    }
+
+ function Getgriddata(e) {
+        debugger;
+        var id = e;
+        if (id == "0") {
+            // $("#Address1").val("");
+        }
+        else {
+            $.post("@Url.Content("~/NotificationSurveyView/GetContactDetail")", { id: id }, function (data) { SetGrid(data); }, "Json");
+        }
+    }
+
+    function SetGrid(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            $("#Grid tbody").empty();
+
+            $.each(data.result, function (key, value) {
+                var Description = value.Question.toString();
+                if (Description == null || Description == "") {
+                    var shorDescriptions = Description;
+                }
+                else {
+                    var shorDescriptions = Description.substring(0, 10);
+                }
+                //var datevalue = new Date(parseInt(childData[i].Startdate.replace("/Date(", "").replace(")/", ""), 10));
+
+                ////alert(value.getDate()+" "+value.getMonth()+" "+value.getYear());
+                //var Startdate = (datevalue.getDate() + '/' + (datevalue.getMonth() + 1) + '/' + datevalue.getFullYear());
+                body += "<tr><td>" + value.id + "</td>" +
+ "<td>" + value.Survey + "</td>" +
+                "<td><div style='Position:absolute;cursor:pointer'> <span class='Des' onmouseout='hideFullDescription(this);' onmouseover='showFullDescription(this);'>" + shorDescriptions + "</span><div style='position:relative;' class='FullDes'>" + value.Question + "</div></div></td>" +
+            "<td>" + value.QuestionType + "</td>" +
+             //"<td>" + value.Startdate + "</td>" +
+             // "<td>" + value.Enddate + "</td>" +
+               "<td>" + value.status + "</td>" +
+
+            "<td style='text-align:right;'><a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> </td></tr>";
+                debugger;
+            });
+            $("#Grid tbody").append(body);
+            paging();
+        }
+    }
+
+    function SetGrid_contest(data) {
+        if (data == "Login") {
+            location.href = "@Url.Content("~/Logout/Logout")";
+        }
+        else if (data == "snotallowed") {
+            location.href = "@Url.Content("~/snotallowed/snotallowed")";
+        }
+        else {
+            var body = "";
+            $("#Grid_contest tbody").empty();
+
+            $.each(data.result, function (key, value) {
+
+
+                body += "<tr><td>" + value.id + "</td>" +
+"<td>" + value.Question + "</td>" +
+  "<td>" + value.QuestionType + "</td>" +
+             "<td>" + value.status + "</td>" +
+
+          "<td style='text-align:right;'><a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+                debugger;
+            });
+            $("#Grid_contest tbody").append(body);
+            //SetPages(data.TotalRecord);
+            paging();
+        }
+    }
+
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+            $.post("@Url.Content("~/NotificationSurvey/DeleteContact")", { id: id }, function (data) {
+                $.post("@Url.Content("~/NotificationSurvey/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+                alert(data);
+
+            }, "Json");
+        }
+    }
+    //Delete Record End
+
+    //Edit Record Begin
+    function Edit(id) {
+        location.href = "@Url.Content("~/NotificationSurveyView/Edit/")" + id;
+    }
+    function Delete(id) {
+        if (confirm("Do You Want To Delete This Record")) {
+            $.post("@Url.Content("~/NotificationSurvey/DeleteContact")", { id: id }, function (data) {
+                $.post("@Url.Content("~/NotificationSurvey/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+                alert(data);
+
+            }, "Json");
+        }
+    }
+    @*function Detail(id) {
+        location.href = "@Url.Content("~/ProductLevel3/FullProductDetails/")" + id;
+
+    }*@
+    $(document).ready(function () {
+        $('#survey').attr('checked', true);
+        $("#contdrop").hide();
+        $("#contname").hide();
+        $("#surveylbl").show();
+        $("#surveylbl2").show();
+        $("#surveytxt").show();
+        $("#Grid").show();
+        $("#Grid_contest").hide();
+        $("#survey").click(function () {
+            $("#surveylbl").show();
+            $("#surveylbl2").show();
+            $("#surveytxt").show();
+            $("#contdrop").hide();
+            $("#contname").hide();
+            $("#Text").show();
+            $("#spntxt").show();
+            $("#Grid").show();
+            $("#Grid_contest").hide();
+
+        });
+        $("#contest").click(function () {
+            $("#contdrop").show();
+            $("#contname").show();
+            $("#surveylbl").hide();
+            $("#surveylbl2").hide();
+            $("#surveytxt").hide();
+            $("#Text").hide();
+            $("#spntxt").hide();
+            $("#Grid").hide();
+            $("#Grid_contest").show();
+
+
+            $.post("@Url.Content("~/NotificationSurvey/GetContactDetail_Contest")", null, function (data) { SetGrid_contest(data); }, "Json");
+
+
+        });
+        $("#MCQ").click(function () {
+            var value = $(this).val();
+            $("#OptionA").prop("disabled", false);
+            $("#OptionB").prop("disabled", false);
+            $("#OptionC").prop("disabled", false);
+            $("#OptionD").prop("disabled", false);
+            $("#OptionE").prop("disabled", false);
+
+            $("#OptionAAns").prop("disabled", false);
+            $("#OptionBAns").prop("disabled", false);
+            $("#OptionCAns").prop("disabled", false);
+            $("#OptionDAns").prop("disabled", false);
+            $("#OptionEAns").prop("disabled", false);
+        });
+        $("#Text").click(function () {
+            var value = $(this).val();
+            $("#OptionA").prop("disabled", true);
+            $("#OptionB").prop("disabled", true);
+            $("#OptionC").prop("disabled", true);
+            $("#OptionD").prop("disabled", true);
+            $("#OptionE").prop("disabled", true);
+            $("#OptionAAns").prop("disabled", true);
+            $("#OptionBAns").prop("disabled", true);
+            $("#OptionCAns").prop("disabled", true);
+            $("#OptionDAns").prop("disabled", true);
+            $("#OptionEAns").prop("disabled", true);
+
+            //$('input[name=Answer]:checked').prop("disabled", true);
+        });
+    });
+
+
+
+</script>
+<script type="text/javascript">
+    function ValidationMessage() {
+        if ('@ViewBag.StartDate' != "") {
+            $("#sdate").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#edate").text('@ViewBag.EndDate');
+        }
+
+
+
+
+        $("#stdate").val('@ViewBag.preStartDate');
+        $("#etdate").val('@ViewBag.PreEndDate');
+
+    }
+
+    $(function () {
+
+        $("#txtsearch").on("keyup", function (event) {
+
+            if (event.which == 8) {
+
+                if ($("#txtsearch").val() == null || $("#txtsearch").val() == 0) {
+                    $('#Paging').empty();
+                    $.post("@Url.Content("~/NotificationSurvey/GetContactDetail_Contest")", null, function (data) { SetGrid(data); }, "Json");
+                }
+
+            }
+
+            else {
+                if ($("#txtsearch").val() != null || $("#txtsearch").val() > 0) {
+                    var value = this.value.toLowerCase().trim();
+
+                    $('#Grid tr').each(function (index) {
+
+                        if (!index) return;
+
+                        $(this).find("td").each(function () {
+
+                            var id = $(this).text().toLowerCase().trim();
+                            var not_found = (id.indexOf(value) == -1);
+                            $(this).closest('tr').toggle(!not_found);
+                            return not_found;
+                        });
+
+                    });
+
+                }
+
+            }
+        });
+    });
+
+
+    function paging() {
+        $('#Paging').empty();
+
+        $(document).ready(function () {
+
+            var totalRows = $('#Grid').find('tbody tr:has(td)').length;
+
+            var recordPerPage = 15;
+            var numberOfPages = Math.ceil(totalRows / recordPerPage);
+
+            for (var i = 0; i < numberOfPages; i++) {
+                var pageNum = i + 1;
+                $('#Paging').append('<a href="#" rel="' + i + '">' + pageNum + '</a> ');
+            }
+
+            $('#Grid tbody tr').hide();
+            $('#Grid tbody tr').slice(0, recordPerPage).show();
+            $('#Paging a:first').addClass('active');
+            $('#Paging a').bind('click', function () {
+
+                var currentPage = $(this).attr('rel');
+                var startitem = currentPage * recordPerPage;
+                var enditem = startitem + recordPerPage;
+
+                //$('#Grid tbody tr').hide().slice(startitem, enditem).css('display', 'table-row').animate({ opacity: 1 }, 300);
+                $('#Grid tbody tr').hide().slice(startitem, enditem).show();
+            });
+
+        });
+    }
+
+</script>
+<style type="text/css">
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td, tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr, tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
+
+
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span></span>Survey Poll log</h1>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500" id="content_wrap">
+            <div class="addgift" style="padding-bottom: 10px;">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="">
+                            <label>Distributor Name <span class="required">*</span></label>
+                            <select name="ddlDistributor" id="ddlDistributor" onchange="Getgriddata(this.value);" class="form-control">
+                                <option>Select</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aos-init aos-animate">
+            <div class="addgift" style="padding-bottom: 10px;">
+                <table class="headingHd">
+                    <tr>
+                        <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Survey/Contest List</th>
+                        <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                            @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+
+                        </th>
+                    </tr>
+                </table>
+                <div class="">
+                    <div id="list" class="tabelGridRow">
+                        <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ID
+                                    </th>
+
+                                    <th>
+                                        Survey
+                                    </th>
+                                    <th>
+                                        Question
+                                    </th>
+                                    <th>
+                                        QuestionType
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th style="text-align:right;">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <table id="Grid_contest" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Question
+                                    </th>
+                                    <th>
+                                        QuestionType
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th style="text-align:right;">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <div>
+                            Pages :<span id="Paging"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
