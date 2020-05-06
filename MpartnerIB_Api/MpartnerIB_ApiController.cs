@@ -5210,7 +5210,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 ul.CreatedBY = userid;
                 ul.Latitude = Convert.ToDecimal(dealerData.Latitude);
                 ul.Longitude = Convert.ToDecimal(dealerData.Longitude);
-
+                ul.Country = dealerData.Country;
                 luminous.UsersLists.Add(ul);
                 Dealer_Save_Image dsi = new Dealer_Save_Image();
                 foreach (var item in dealerData.ImageList)
@@ -5218,7 +5218,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                     if (item.Image1 != null)
                     {
-                        dsi.DealerID = 12345;
+                        dsi.DealerID = dealerData.sapcode;
                         string Filename = "Image1" + DateTime.Now.ToString("ddMMyyhhmmss") + ".jpg";
                         string str = Path.Combine(HttpContext.Current.Server.MapPath("~/MpartnerIB_Api/DealerImage/"), Filename);
                         BinaryWriter bw = new BinaryWriter(new FileStream(str, FileMode.Create, FileAccess.Write));
@@ -5234,7 +5234,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                     if (item.Image2 != null)
                     {
-                        dsi.DealerID = 12345;
+                        dsi.DealerID = dealerData.sapcode; ;
                         string Filename = "Image2" + DateTime.Now.ToString("ddMMyyhhmmss") + ".jpg";
                         string str = Path.Combine(HttpContext.Current.Server.MapPath("~/MpartnerIB_Api/DealerImage/"), Filename);
                         BinaryWriter bw = new BinaryWriter(new FileStream(str, FileMode.Create, FileAccess.Write));
@@ -5250,7 +5250,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                     if (item.Image3 != null)
                     {
-                        dsi.DealerID = 12345;
+                        dsi.DealerID = dealerData.sapcode;
                         string Filename = "Image3" + DateTime.Now.ToString("ddMMyyhhmmss") + ".jpg";
                         string str = Path.Combine(HttpContext.Current.Server.MapPath("~/MpartnerIB_Api/DealerImage/"), Filename);
                         BinaryWriter bw = new BinaryWriter(new FileStream(str, FileMode.Create, FileAccess.Write));
@@ -5266,7 +5266,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                     if (item.Image4 != null)
                     {
-                        dsi.DealerID = 12345;
+                        dsi.DealerID = dealerData.sapcode; ;
                         string Filename = "Image4" + DateTime.Now.ToString("ddMMyyhhmmss") + ".jpg";
                         string str = Path.Combine(HttpContext.Current.Server.MapPath("~/MpartnerIB_Api/DealerImage/"), Filename);
                         BinaryWriter bw = new BinaryWriter(new FileStream(str, FileMode.Create, FileAccess.Write));
