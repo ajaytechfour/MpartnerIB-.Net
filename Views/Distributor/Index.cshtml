@@ -291,6 +291,28 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="">
+                                <label>Sap Code <span class="required">*</span></label>
+                                <input id="SapCode" type="text" autocomplete="off" placeholder="Sap Code" class="date form-control" name="SapCode" />
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <label>Country <span class="required">*</span></label>
+                                <select name="Country" id="ddlCountryMaster" onchange="GetState(this.value);" class="form-control">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="">
                                 <label>State <span class="required">*</span></label>
                                 <select name="states" id="ddlStateMaster" onchange="GetCity(this.value);" class="form-control">
                                     <option>Select</option>
@@ -346,19 +368,19 @@
                 <div class="addgift" style="padding-bottom:30px;">
                     <div>
                         @using (Html.BeginForm("Index", "CreatePermotionPrice_New", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                                                                                                                                                    {
+                        {
 
-                        <table class="headingHd" style="width:100%;">
-                            <tr>
-                                <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Distributor List</th>
+                            <table class="headingHd" style="width:100%;">
+                                <tr>
+                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Distributor List</th>
 
-                                @*<th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:15px; opacity: 0.2;">
+                                    @*<th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                                    @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:15px; opacity: 0.2;">
 
-                                    </th>*@
-                            </tr>
-                        </table>
-                                                                                                                                                    }
+                                </th>*@
+                                </tr>
+                            </table>
+                        }
                     </div>
                     <div id="list" class="tabelGridRow">
                         <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:15px; margin-bottom:15px">

@@ -418,6 +418,14 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ContestPicture_Tab' does no
           <Property Name="CreatedOn" Type="datetime" />
           <Property Name="CreatedBy" Type="varchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryID" Type="int" />
+          <Property Name="CountryName" Type="varchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="CustomerModule">
           <Key>
             <PropertyRef Name="ModId" />
@@ -453,7 +461,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ContestPicture_Tab' does no
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DealerID" Type="bigint" />
+          <Property Name="DealerID" Type="varchar" MaxLength="20" />
           <Property Name="ImageName" Type="nvarchar(max)" />
           <Property Name="status" Type="int" />
           <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
@@ -1211,6 +1219,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.Regions' does not have a pr
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="StateID" Type="int" />
           <Property Name="StateName" Type="varchar" MaxLength="100" />
+          <Property Name="CountryID" Type="int" />
         </EntityType>
         <EntityType Name="Suggestion">
           <Key>
@@ -1523,6 +1532,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
           <EntitySet Name="Card_dynamicPage" EntityType="Self.Card_dynamicPage" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Card_dynamicPage_History" EntityType="Self.Card_dynamicPage_History" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="city" EntityType="Self.city" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerModule" EntityType="Self.CustomerModule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerPermissions" EntityType="Self.CustomerPermissions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerType" EntityType="Self.CustomerType" Schema="dbo" store:Type="Tables" />
@@ -2206,6 +2216,7 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="StateID" Type="Int32" />
           <Property Name="StateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CountryID" Type="Int32" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -2984,7 +2995,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <FunctionImport Name="GetProductLevelFourAccessTable" ReturnType="Collection(LuminousMpartnerIBModel.GetProductLevelFourAccessTable_Result)">
           <Parameter Name="Pid" Mode="In" Type="Int32" />
           </FunctionImport>
-          <EntitySet Name="Dealer_Save_Image" EntityType="LuminousMpartnerIBModel.Dealer_Save_Image" />
           <EntitySet Name="Dealer_Save_Image_History" EntityType="LuminousMpartnerIBModel.Dealer_Save_Image_History" />
           <EntitySet Name="ParentCategoryhistories" EntityType="LuminousMpartnerIBModel.ParentCategoryhistory" />
           <EntitySet Name="ProductCatergoryHistories" EntityType="LuminousMpartnerIBModel.ProductCatergoryHistory" />
@@ -3002,6 +3012,8 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Parameter Name="pagename" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="ProductLevelThreePaging" ReturnType="Collection(LuminousMpartnerIBModel.ProductLevelThreePaging_Result)" />
+          <EntitySet Name="Countries" EntityType="LuminousMpartnerIBModel.Country" />
+          <EntitySet Name="Dealer_Save_Image" EntityType="LuminousMpartnerIBModel.Dealer_Save_Image" />
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -3371,19 +3383,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Type="Boolean" Name="AllDestriAccess" Nullable="true" />
           <Property Type="Boolean" Name="AllDealerAccess" Nullable="true" />
         </ComplexType>
-        <EntityType Name="Dealer_Save_Image">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DealerID" Type="Int64" />
-          <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="status" Type="Int32" />
-          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="Dealer_Save_Image_History">
           <Key>
             <PropertyRef Name="ID" />
@@ -3686,6 +3685,27 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Type="Int32" Name="productCategoryid" Nullable="true" />
           <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="100" />
         </ComplexType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="Int32" />
+          <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Dealer_Save_Image">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DealerID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3814,6 +3834,7 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <EntitySetMapping Name="States">
             <EntityTypeMapping TypeName="LuminousMpartnerIBModel.State">
               <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="StateID" ColumnName="StateID" />
                 <ScalarProperty Name="StateName" ColumnName="StateName" />
@@ -4925,20 +4946,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="Dealer_Save_Image">
-            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Dealer_Save_Image">
-              <MappingFragment StoreEntitySet="Dealer_Save_Image">
-                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="status" ColumnName="status" />
-                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
-                <ScalarProperty Name="DealerID" ColumnName="DealerID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Dealer_Save_Image_History">
             <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Dealer_Save_Image_History">
               <MappingFragment StoreEntitySet="Dealer_Save_Image_History">
@@ -5262,6 +5269,29 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dealer_Save_Image">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Dealer_Save_Image">
+              <MappingFragment StoreEntitySet="Dealer_Save_Image">
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="DealerID" ColumnName="DealerID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

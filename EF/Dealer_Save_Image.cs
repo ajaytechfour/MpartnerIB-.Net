@@ -15,7 +15,7 @@ namespace LuminousMpartnerIB.EF
     public partial class Dealer_Save_Image
     {
         public long ID { get; set; }
-        public Nullable<long> DealerID { get; set; }
+        public string DealerID { get; set; }
         public string ImageName { get; set; }
         public Nullable<int> status { get; set; }
         public string CreatedBy { get; set; }

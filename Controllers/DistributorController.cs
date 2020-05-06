@@ -49,7 +49,7 @@ namespace LuminousMpartnerIB.Controllers
                               orderby vs.CustomerType
                               select new
                               {
-                                  id= vs.id,
+                                  id = vs.id,
                                   UserId = vs.UserId,
                                   CustomerType = vs.CustomerType,
                                   Name = vs.Dis_Name,
@@ -79,10 +79,30 @@ namespace LuminousMpartnerIB.Controllers
         }
 
 
-        public JsonResult getStateMasters()
+        public JsonResult getCountryMasters()
         {
             var getStateMasterslst = (from c in db.States
                                           // where c.status != 0
+                                      select new
+                                      {
+                                          id = c.StateID,
+                                          Name = c.StateName
+                                      }).ToList();
+
+            if (getStateMasterslst != null)
+            {
+                return Json(getStateMasterslst, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json("Null", JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        public JsonResult getStateMasters(int countryId)
+        {
+            var getStateMasterslst = (from c in db.States
+                                      where c.CountryID == countryId
                                       select new
                                       {
                                           id = c.StateID,

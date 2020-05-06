@@ -92,7 +92,6 @@ namespace LuminousMpartnerIB.EF
         public DbSet<GCM_NotificationLog> GCM_NotificationLog { get; set; }
         public DbSet<ContestMaster> ContestMasters { get; set; }
         public DbSet<ContestPicture_Tab> ContestPicture_Tab { get; set; }
-        public DbSet<Dealer_Save_Image> Dealer_Save_Image { get; set; }
         public DbSet<Dealer_Save_Image_History> Dealer_Save_Image_History { get; set; }
         public DbSet<ParentCategoryhistory> ParentCategoryhistories { get; set; }
         public DbSet<ProductCatergoryHistory> ProductCatergoryHistories { get; set; }
@@ -106,6 +105,8 @@ namespace LuminousMpartnerIB.EF
         public DbSet<NotificationsHistory> NotificationsHistories { get; set; }
         public DbSet<NotificationSurvey> NotificationSurveys { get; set; }
         public DbSet<NotificationSurveyHistory> NotificationSurveyHistories { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Dealer_Save_Image> Dealer_Save_Image { get; set; }
     
         public virtual ObjectResult<userpermission_Result> userpermission(Nullable<int> mode, string userid)
         {

@@ -71,7 +71,6 @@
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ContestMaster" Width="1.5" PointX="27.375" PointY="26.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ContestPicture_Tab" Width="1.5" PointX="29.375" PointY="0.75" />
         <AssociationConnector Association="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101" />
-        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Dealer_Save_Image" Width="1.5" PointX="29.375" PointY="3.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.Dealer_Save_Image_History" Width="1.5" PointX="5.375" PointY="29.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ParentCategoryhistory" Width="1.5" PointX="29.375" PointY="7.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductCatergoryHistory" Width="4.5" PointX="8.875" PointY="31.875" />
@@ -85,6 +84,8 @@
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationsHistory" Width="1.5" PointX="5.375" PointY="18.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurvey" Width="1.5" PointX="23.375" PointY="29.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" Width="1.5" PointX="29.375" PointY="24.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Country" Width="1.5" PointX="19.375" PointY="4.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Dealer_Save_Image" Width="1.5" PointX="19.375" PointY="19.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

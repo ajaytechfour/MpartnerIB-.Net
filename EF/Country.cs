@@ -12,11 +12,10 @@ namespace LuminousMpartnerIB.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class State
+    public partial class Country
     {
         public int Id { get; set; }
-        public Nullable<int> StateID { get; set; }
-        public string StateName { get; set; }
         public Nullable<int> CountryID { get; set; }
+        public string CountryName { get; set; }
     }
 }
