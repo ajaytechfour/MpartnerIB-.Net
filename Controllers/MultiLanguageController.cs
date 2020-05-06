@@ -9,6 +9,7 @@ namespace Luminous.Controllers
 {
     public class MultiLanguageController : Controller
     {
+// Multi Language contrioller
         protected override IAsyncResult BeginExecuteCore(AsyncCallback callback, object state)
         {
             string lang = null;
