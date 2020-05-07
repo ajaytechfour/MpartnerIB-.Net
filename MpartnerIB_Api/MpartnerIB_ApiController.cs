@@ -86,7 +86,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         {
 
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
-            List<Userprofile> u_profile = new List<Userprofile>();
+
 
             try
             {
@@ -108,7 +108,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                         #endregion
 
                         SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
-                        return getJson_OTPAuthentication(getAppMessage.Message, getAppMessage.Status, "", null);
+                        return getJson_OTPAuthentication(getAppMessage.Message, getAppMessage.Status, "");
                     }
 
 
@@ -119,20 +119,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 {
 
                     var otp_authentication = func_OTPAuthentication(user_id, device_id, os_version_code, device_name, otp, os_version_name, os_type, app_version);
-                    if (otp_authentication.Status == "200")
-                    {
 
-                        var userprofile = luminous.get_UserProfile(user_id).SingleOrDefault();
-                        Userprofile usr_profile = new Userprofile();
-                        usr_profile.Employeeid = userprofile.Userid;
-                        usr_profile.Username = userprofile.Username.ToString().TrimEnd();
-                        usr_profile.PhoneNumber = userprofile.PhoneNumber;
-                        usr_profile.Address = userprofile.Address.TrimEnd();
-                        usr_profile.State = userprofile.State;
-                        usr_profile.City = userprofile.City;
-                        //usr_profile.Pincode = userprofile.Pincode;
-                        u_profile.Add(usr_profile);
-                    }
                     //Save Api log data/v
                     #region save request and response data in api log
                     string RequestParameter = "UserID :" + user_id + ",OTP :" + otp + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "";
@@ -141,7 +128,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, otp_authentication.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
                     //End Save Api log data//
 
-                    return getJson_OTPAuthentication(otp_authentication.Message, otp_authentication.Status, otp_authentication.Token, u_profile);
+                    return getJson_OTPAuthentication(otp_authentication.Message, otp_authentication.Status, otp_authentication.Token);
 
 
                 }
@@ -157,7 +144,98 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
                 #endregion
                 SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
-                return getJson_OTPAuthentication(exception.Message, exception.Status, "", null);
+                return getJson_OTPAuthentication(exception.Message, exception.Status, "");
+            }
+
+            return "";
+
+        }
+
+        [System.Web.Http.HttpGet]
+        [ActionName("Userverification")]
+        public object Userverification(string user_id, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel, string fcm_token)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+            List<Userprofile> u_profile = new List<Userprofile>();
+            try
+            {
+
+
+
+                var getAppMessage = getAppversion(app_version, os_type, channel);
+                var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
+
+
+                if (getAppMessage.Status != "" || checkedThreeUserLoggedIn.Status != "")
+                {
+                    if (getAppMessage.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "";
+                        string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
+                        #endregion
+
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_Userverification(getAppMessage.Message, getAppMessage.Status, "0", null);
+                    }
+
+
+                    if (checkedThreeUserLoggedIn.Status != "")
+                    {
+                        #region save request and response data in api log
+                        string RequestParameter = "UserID :" + user_id + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "";
+                        string ResponseParameter = "Message : " + checkedThreeUserLoggedIn.Message + ",Status : " + checkedThreeUserLoggedIn.Status + "";
+                        #endregion
+                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                        return getJson_Userverification(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "0", null);
+                    }
+                }
+                else
+                {
+
+
+
+                    var userverification = func_Userverification(user_id, device_id, app_version, os_version_code, os_type, fcm_token);
+                    if (userverification.Status == "200")
+                    {
+
+                        var userprofile = luminous.get_UserProfile(user_id).SingleOrDefault();
+                        Userprofile usr_profile = new Userprofile();
+                        usr_profile.Employeeid = userprofile.Userid;
+                        usr_profile.Username = userprofile.Username.ToString().TrimEnd();
+                        usr_profile.PhoneNumber = userprofile.PhoneNumber;
+                        usr_profile.Address = userprofile.Address.TrimEnd();
+                        usr_profile.State = userprofile.State;
+                        usr_profile.City = userprofile.City;
+                        //usr_profile.Pincode = userprofile.Pincode;
+                        u_profile.Add(usr_profile);
+
+                    }
+                    //Save Api log data//
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "";
+                    string ResponseParameter = "Message : " + userverification.Message + ",Status : " + userverification.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, userverification.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    //End Save Api log data//
+
+                    return getJson_Userverification(userverification.Message, userverification.Status, userverification.Token, u_profile);
+
+
+
+                }
+
+            }
+            catch (Exception exc)
+            {
+                var exception = getTryCatchExc();
+
+                #region save request and response data in api log
+                string RequestParameter = "UserID :" + user_id + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + "";
+                string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
+                #endregion
+                SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                return getJson_Userverification(exception.Message, exception.Status, "0", null);
             }
 
             return "";
@@ -2493,15 +2571,15 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return res;
         }
 
-        public object getJson_OTPAuthentication(string message, string status, string token, List<Userprofile> get_userprofile)
+        public object getJson_OTPAuthentication(string message, string status, string token)
         {
 
             var json = JsonConvert.SerializeObject(new
             {
                 Message = message,
                 Status = status,
-                Token = token,
-                get_user_profile = get_userprofile
+                Token = token
+
             });
 
             //Create a HTTP response - Set to OK
@@ -2828,6 +2906,23 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return res;
         }
 
+        public object getJson_Userverification(string message, string status, string token, List<Userprofile> get_userprofile)
+        {
+
+            var json = JsonConvert.SerializeObject(new
+            {
+                Message = message,
+                Status = status,
+                Token = token,
+                get_user_profile = get_userprofile
+            });
+
+            //Create a HTTP response - Set to OK
+            var res = Request.CreateResponse(HttpStatusCode.OK);
+            res.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+            //Return the Response
+            return res;
+        }
         public object getJson_SaveDealerData(string message, string status, string token)
         {
 
@@ -3004,16 +3099,16 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             MessageData msg = new MessageData();
             try
             {
-                string LoginToken = "";
-                string TokenString = user_id + app_version + device_id;
+                //string LoginToken = "";
+                //string TokenString = user_id + app_version + device_id;
 
-                using (MD5 md5Hash = MD5.Create())
-                {
+                //using (MD5 md5Hash = MD5.Create())
+                //{
 
-                    LoginToken = GetMd5Hash(md5Hash, TokenString);
+                //    LoginToken = GetMd5Hash(md5Hash, TokenString);
 
 
-                }
+                //}
                 var mhrVarifyOtpNotificationResult =
                         luminous.MHrVarifyOtpNotification(user_id, device_id, os_version_code, device_name, otp, os_version_name, device_id, os_type);
                 if (mhrVarifyOtpNotificationResult != null)
@@ -3034,7 +3129,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                         //msg.UserType = inputMessage.UserType;
                         msg.Status = inputMessage.Status;
                         msg.Message = inputMessage.Message;
-                        msg.Token = LoginToken;
+                        // msg.Token = LoginToken;
                         //luminous.Database.ExecuteSqlCommand("Update EmployeeMaster set Token='" + LoginToken + "',TokenFlag=1,DeviceId='" + device_id + "',Appversion='" + app_version + "' where EmployeeId='" + user_id + "'");
 
                     }
@@ -3073,6 +3168,133 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return msg;
         }
 
+        public MessageData func_Userverification(string userid, string deviceid, string appversion, string osversion, string ostype, string fcm_token)
+        {
+
+            MessageData msgdata = new MessageData();
+            int savestatus = 0;
+            string LoginToken = "";
+            string TokenString = userid + appversion + deviceid;
+
+            using (MD5 md5Hash = MD5.Create())
+            {
+
+                LoginToken = GetMd5Hash(md5Hash, TokenString);
+
+
+            }
+            var Usercount = luminous.UserVerifications.Where(c => c.UserId == userid && c.DeviceId == deviceid && c.Status != 0 && c.Status != 1).Count();
+            var Usercountexist = luminous.UserVerifications.Where(c => c.UserId == userid && c.Status == 2).Count();
+            if (Usercount == 0 && Usercountexist <= 2)
+            {
+                //var Usercountexist = luminous.UserVerifications.Where(c => c.UserId == userid && c.DeviceId == deviceid && c.Status==2).Count();
+
+                UserVerification obj_userverification = new UserVerification();
+
+
+                obj_userverification.UserId = userid;
+                obj_userverification.DeviceId = deviceid;
+                obj_userverification.Otp = "";
+                obj_userverification.AppVersion = appversion;
+                obj_userverification.OSVersion = osversion;
+                obj_userverification.OSType = ostype;
+                obj_userverification.Status = 2;
+                obj_userverification.Token = LoginToken;
+                obj_userverification.Fcm_token = fcm_token;
+                obj_userverification.TokenFlag = 1;
+                obj_userverification.CreatedOn = DateTime.Now;
+                obj_userverification.CreatedBy = userid.ToString();
+                luminous.UserVerifications.Add(obj_userverification);
+                savestatus = luminous.SaveChanges();
+                if (savestatus > 0)
+                {
+                    msgdata.Status = "200";
+                    msgdata.Message = "Data fetched successfully";
+                    msgdata.Token = LoginToken;
+                }
+                else
+                {
+                    msgdata.Message = "Data not inserted";
+                    msgdata.Status = "0";
+                    msgdata.Token = "0";
+                }
+
+
+
+
+
+
+            }
+            else
+            {
+
+                if (Usercount == 1)
+                {
+                    var uvdata = luminous.UserVerifications.Single(c => c.UserId == userid && c.DeviceId == deviceid);
+
+                    Auditlog_Userverificationstatus audit_user = new Auditlog_Userverificationstatus();
+                    audit_user.Userverification_Id = uvdata.Id;
+                    audit_user.AppVersion = uvdata.AppVersion;
+                    audit_user.UserId = uvdata.UserId;
+                    audit_user.OSVersion = uvdata.OSVersion;
+                    audit_user.Fcm_token = fcm_token;
+                    audit_user.OSType = uvdata.OSType;
+                    audit_user.DeviceId = uvdata.DeviceId;
+                    audit_user.CreatedOn = DateTime.Now;
+                    audit_user.CreatedBy = userid;
+                    audit_user.UnBolckedBy = uvdata.UnBolckedBy;
+                    audit_user.Status = uvdata.Status;
+                    luminous.Auditlog_Userverificationstatus.Add(audit_user);
+                    luminous.SaveChanges();
+
+                    //var data = luminous.update_Userverification(userid, osversion, ostype, appversion, deviceid, fcm_token);
+                    var data = luminous.update_Userverification(userid, osversion, ostype, appversion, deviceid, fcm_token, LoginToken);
+
+
+                    if (data > 0)
+                    {
+
+
+                        msgdata.Status = "200";
+                        msgdata.Message = "Data fetched successfully";
+                        msgdata.Token = LoginToken;
+                    }
+                    else
+                    {
+                        msgdata.Message = "Data not inserted";
+                        msgdata.Status = "0";
+                        msgdata.Token = "0";
+                    }
+
+                }
+                else
+                {
+                    //luminous.AddToUserVerifications(new UserVerification
+                    //{
+
+                    //    UserId = userid,
+                    //    DeviceId = deviceid,
+                    //    Otp = "",
+                    //    OSVersion = osversion,
+                    //    OSType = ostype,
+                    //    UnauthorizedUser = "logged in three devices",
+                    //    Status = 0,
+                    //    CreatedOn = DateTime.Now,
+                    //    CreatedBy = userid.ToString()
+                    //});
+                    //luminous.SaveChanges();
+
+
+                    msgdata.Status = "0";
+                    msgdata.Message = "User already logged in three devices";
+                    msgdata.Token = "0";
+                }
+            }
+
+
+
+            return msgdata;
+        }
         public List<UserPermission> getcustomer_permission(string userid, string language)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
