@@ -296,7 +296,7 @@ namespace LuminousMpartnerIB.Controllers
                                     {
                                         c_dynamicpage.Status = 0;
                                     }
-                                    db.Card_dynamicPage.AddObject(c_dynamicpage);
+                                    db.Card_dynamicPage.Add(c_dynamicpage);
                                     db.SaveChanges();
                                     //string str = Path.Combine(Server.MapPath("~/PermotionsImage/"), filename);
                                     //file.SaveAs(str);
@@ -392,7 +392,7 @@ namespace LuminousMpartnerIB.Controllers
                                 {
                                     c_dynamicpage_header.Status = 0;
                                 }
-                                db.Card_dynamicPage.AddObject(c_dynamicpage_header);
+                                db.Card_dynamicPage.Add(c_dynamicpage_header);
                                 db.SaveChanges();
 
                                 //string str = Path.Combine(Server.MapPath("~/PermotionsImage/"), filename);
@@ -480,7 +480,7 @@ namespace LuminousMpartnerIB.Controllers
                                     {
                                         c_dynamicpage_main.Status = 0;
                                     }
-                                    db.Card_dynamicPage.AddObject(c_dynamicpage_main);
+                                    db.Card_dynamicPage.Add(c_dynamicpage_main);
                                     db.SaveChanges();
 
                                 }
@@ -562,7 +562,7 @@ namespace LuminousMpartnerIB.Controllers
                                 {
                                     c_dynamicpage_header.Status = 0;
                                 }
-                                db.Card_dynamicPage.AddObject(c_dynamicpage_header);
+                                db.Card_dynamicPage.Add(c_dynamicpage_header);
                                 db.SaveChanges();
                                 //string str = Path.Combine(Server.MapPath("~/PermotionsImage/"), filename);
                                 //file.SaveAs(str);
@@ -633,7 +633,7 @@ namespace LuminousMpartnerIB.Controllers
                                     {
                                         c_dynamicpage_main.Status = 0;
                                     }
-                                    db.Card_dynamicPage.AddObject(c_dynamicpage_main);
+                                    db.Card_dynamicPage.Add(c_dynamicpage_main);
                                     db.SaveChanges();
 
                                 }
@@ -710,7 +710,7 @@ namespace LuminousMpartnerIB.Controllers
                                     {
                                         c_dynamicpage_main.Status = 0;
                                     }
-                                    db.Card_dynamicPage.AddObject(c_dynamicpage_main);
+                                    db.Card_dynamicPage.Add(c_dynamicpage_main);
                                     db.SaveChanges();
                                     parentId = Convert.ToInt32(c_dynamicpage_main.Id);
                                 }
@@ -756,7 +756,7 @@ namespace LuminousMpartnerIB.Controllers
                                 c_data.CreatedOn = DateTime.Now;
                                 c_data.CreatedBy = Session["userid"].ToString();
                                 c_data.Status = 1;
-                                db.Card_CardData.AddObject(c_data);
+                                db.Card_CardData.Add(c_data);
                                 db.SaveChanges();
                             }
 
@@ -841,7 +841,7 @@ namespace LuminousMpartnerIB.Controllers
                                     {
                                         c_dynamicpage.Status = 0;
                                     }
-                                    db.Card_dynamicPage.AddObject(c_dynamicpage);
+                                    db.Card_dynamicPage.Add(c_dynamicpage);
                                     db.SaveChanges();
 
                                     //string str = Path.Combine(Server.MapPath("~/PermotionsImage/"), filename);
@@ -908,7 +908,7 @@ namespace LuminousMpartnerIB.Controllers
                             {
                                 c_dynamicpage_main.Status = 0;
                             }
-                            db.Card_dynamicPage.AddObject(c_dynamicpage_main);
+                            db.Card_dynamicPage.Add(c_dynamicpage_main);
                             db.SaveChanges();
                             parentId = Convert.ToInt32(c_dynamicpage_main.Id);
 
@@ -947,7 +947,7 @@ namespace LuminousMpartnerIB.Controllers
                                 c_data.CreatedOn = DateTime.Now;
                                 c_data.CreatedBy = Session["userid"].ToString();
                                 c_data.Status = 1;
-                                db.Card_CardData.AddObject(c_data);
+                                db.Card_CardData.Add(c_data);
                                 db.SaveChanges();
 
                             }
@@ -1859,7 +1859,7 @@ namespace LuminousMpartnerIB.Controllers
                                     cdynamic.CreatedBy = Session["userid"].ToString();
 
                                     cdynamic.Pagename = "HomePage";
-                                    db.Card_CardData.AddObject(cdata);
+                                    db.Card_CardData.Add(cdata);
                                     //db.Card_dynamicPage.AddObject(cdynamic);
 
                                     string status1 = statusC ?? "off";

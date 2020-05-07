@@ -81,12 +81,12 @@ namespace LuminousMpartnerIB.Controllers
 
         public JsonResult getCountryMasters()
         {
-            var getStateMasterslst = (from c in db.States
+            var getStateMasterslst = (from c in db.Countries
                                           // where c.status != 0
                                       select new
                                       {
-                                          id = c.StateID,
-                                          Name = c.StateName
+                                          id = c.CountryID,
+                                          Name = c.CountryName
                                       }).ToList();
 
             if (getStateMasterslst != null)
@@ -99,7 +99,7 @@ namespace LuminousMpartnerIB.Controllers
             }
         }
 
-        public JsonResult getStateMasters(int countryId)
+        public JsonResult getStateByCountry(int countryId)
         {
             var getStateMasterslst = (from c in db.States
                                       where c.CountryID == countryId
@@ -171,10 +171,12 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                var echkexist = db.UsersLists.Where(x => x.Dis_Name.Trim().ToLower() == obj.Name.Trim().ToLower() & x.CustomerType == "DISTY").ToList();
+                //var echkexist = db.UsersLists.Where(x => x.Dis_Name.Trim().ToLower() == obj.Name.Trim().ToLower() & x.CustomerType == "DISTY").ToList();
+                var echkexist = db.UsersLists.Where(x => x.Dis_Sap_Code == obj.SapCode & x.CustomerType == "DISTY").ToList();
+
                 if (echkexist.Count() > 0)
                 {
-                    data = new { result = new List<UsersListModel>(), TotalRecord = tcount, Message = "", MessageExist = "This Distributor Already Exists" };
+                    data = new { result = new List<UsersListModel>(), TotalRecord = tcount, Message = "", MessageExist = "This Sap Code Already Exists" };
                     return Json(data, JsonRequestBehavior.AllowGet);
                 }
 
@@ -194,6 +196,9 @@ namespace LuminousMpartnerIB.Controllers
                 objUsersList.Dis_Sap_Code = userid;
                 objUsersList.CreatedBY = userid;
                 objUsersList.CreatedON = DateTime.Now;
+
+                objUsersList.Dis_Sap_Code = obj.SapCode;
+                objUsersList.Country = obj.Country;                               
 
                 db.UsersLists.Add(objUsersList);
                 if (db.SaveChanges() > 0)

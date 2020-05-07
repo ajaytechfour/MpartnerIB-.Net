@@ -66,7 +66,8 @@
 
             objdata.State = $('#ddlStateMaster option:selected').text();
             objdata.City = $('#ddlCityMaster option:selected').text();
-
+            objdata.SapCode = $('#SapCode').val();
+            objdata.Country = $('#ddlCountryMaster option:selected').text(); 
 
             //debugger;
             $.ajax({
@@ -81,11 +82,11 @@
                         debugger;
                         //var result = JSON.parse(data);
                         //alert(result);
-                        $('#lblmessagesuccess').text("");
+                        $('#lblmessagesubmit').text("");
 
                         if (data.Message != "") {
 
-                            $('#lblmessagesuccess').text(data.Message);
+                            $('#lblmessagesubmit').text(data.Message);
 
                             $('#ddlStateMaster').val(0);
                             $('#ddlCityMaster').val(0);
@@ -99,7 +100,8 @@
                         }
 
                         if (data.MessageExist != "") {
-                            $('#lblmessagesuccess').text(data.MessageExist);
+                            debugger;
+                            $('#lblmessagesubmit').text(data.MessageExist);
                         }
 
                     }
@@ -136,12 +138,13 @@
 
     $(function () {
         debugger;
-        $.post("@Url.Content("~/Distributor/getStateMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");
+         $.post("@Url.Content("~/Distributor/getCountryMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");
+        @*$.post("@Url.Content("~/Distributor/getStateMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");*@
         $.post("@Url.Content("~/Distributor/GetGridData")", null, function (data) { SetGrid(data); }, "Json");
 
         setTimeout(function () {
             $('#lblmessagesuccess').fadeOut("slow");
-        }, 5000);
+        }, 15000);
 
 
         $(".numeric").keypress(function (e) {
@@ -158,15 +161,26 @@
     //Set Parent Category//
     function SetDistributerMaster(data) {
         option = "";
-        var procat = $("#ddlStateMaster");
+        var procat = $("#ddlCountryMaster");
         procat.empty();
         procat.append("<option value=0>Select</option>");
         $.each(data, function (key, value) {
             option += "<option value=" + value.id + ">" + value.Name + "</option>";
         });
         procat.append(option);
+        //ddlStateMaster
     }
 
+    function GetState(e) {
+        debugger;
+        var id = e;
+        if (id == "0") {
+            // $("#Address1").val("");
+        }
+        else {
+            $.post("@Url.Content("~/Distributor/getStateByCountry")", { countryId: id }, function (data) { SetStateMaster(data); }, "Json");
+        }
+    }
 
     function GetCity(e) {
         debugger;
@@ -179,6 +193,16 @@
         }
     }
 
+    function SetStateMaster(data) {
+        option = "";
+        var procat = $("#ddlStateMaster");
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+        });
+        procat.append(option);
+    }
 
 
     function SetCityMaster(data) {
@@ -263,157 +287,157 @@
     </div>
     <div id="form">
         @using (Html.BeginForm("Index", "SchedulePDIVisit", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                                                {
-        <div class="row">
-            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                <div class="addgift" style="padding-bottom: 10px;">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="">
-                                <label>Distributor Name <span class="required">*</span></label>
-                                <input id="DistributorName" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control" name="DistributorName" />
+        {
+            <div class="row">
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Distributor Name <span class="required">*</span></label>
+                                    <input id="DistributorName" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control" name="DistributorName" />
 
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="">
-                                <label>Distributor Address <span class="required">*</span></label>
-                                <input id="DistributorAddress" type="text" autocomplete="off" placeholder="Distributor Address" class="date form-control" name="DistributorAddress" />
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Distributor Address <span class="required">*</span></label>
+                                    <input id="DistributorAddress" type="text" autocomplete="off" placeholder="Distributor Address" class="date form-control" name="DistributorAddress" />
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                <div class="addgift" style="padding-bottom: 10px;">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="">
-                                <label>Sap Code <span class="required">*</span></label>
-                                <input id="SapCode" type="text" autocomplete="off" placeholder="Sap Code" class="date form-control" name="SapCode" />
-
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="">
-                                <label>Country <span class="required">*</span></label>
-                                <select name="Country" id="ddlCountryMaster" onchange="GetState(this.value);" class="form-control">
-                                    <option>Select</option>
-                                </select>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                <div class="addgift" style="padding-bottom: 10px;">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="">
-                                <label>State <span class="required">*</span></label>
-                                <select name="states" id="ddlStateMaster" onchange="GetCity(this.value);" class="form-control">
-                                    <option>Select</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="">
-                                <label>City<span class="required">*</span></label>
-                                <select name="City" id="ddlCityMaster" class="form-control">
-                                    <option>Select</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Sap Code <span class="required">*</span></label>
+                                    <input id="SapCode" type="text" autocomplete="off" placeholder="Sap Code" class="date form-control" name="SapCode" />
 
-            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                <div class="addgift" style="padding-bottom: 10px;">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="">
-                                <label>Contact No <span class="required">*</span></label>
-                                <input id="ContactNo" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control numeric" name="DistributorName" />
-
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="">
-                                <label>Email<span class="required">*</span></label>
-                                <input id="Email" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control" name="DistributorName" />
-                                <span style="display:none" class="error" id="invalid_email">Email-id is invalid</span>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Country <span class="required">*</span></label>
+                                    <select name="Country" id="ddlCountryMaster" onchange="GetState(this.value);" class="form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                <div class="addgift" style="padding-bottom:30px;">
-                    <div class="row" id="GridView">
-                        <div class="col-md-12">
-                            <input type="button" id="btnsubmit" value="Submit" class="submitBtn" />
-                            <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
-                            <label id="lblmessagesuccess" style="font-size: 16px; color:red;"></label>
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>State <span class="required">*</span></label>
+                                    <select name="states" id="ddlStateMaster" onchange="GetCity(this.value);" class="form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>City<span class="required">*</span></label>
+                                    <select name="City" id="ddlCityMaster" class="form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                <div class="addgift" style="padding-bottom:30px;">
-                    <div>
-                        @using (Html.BeginForm("Index", "CreatePermotionPrice_New", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                        {
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Contact No <span class="required">*</span></label>
+                                    <input id="ContactNo" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control numeric" name="DistributorName" />
 
-                            <table class="headingHd" style="width:100%;">
-                                <tr>
-                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Distributor List</th>
-
-                                    @*<th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                    @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:15px; opacity: 0.2;">
-
-                                </th>*@
-                                </tr>
-                            </table>
-                        }
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Email<span class="required">*</span></label>
+                                    <input id="Email" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control" name="DistributorName" />
+                                    <span style="display:none" class="error" id="invalid_email">Email-id is invalid</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="list" class="tabelGridRow">
-                        <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:15px; margin-bottom:15px">
-                            <thead>
-                                <tr>
-                                    <th>UserId</th>
-                                    <th>Customer Type</th>
-                                    <th>Name</th>
-                                    <th>Address </th>
-                                    <th>City</th>
-                                    <th>State</th>
-                                    <th>Contact No</th>
-                                    @*<th>Email</th>*@
-                                    @*<th>Created BY</th>*@
-                                    <th style="display:none">id</th>
-                                    <th style="text-align:right; width:10%;">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
+                </div>
 
-                        </table>
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom:30px;">
+                        <div class="row" id="GridView">
+                            <div class="col-md-12">
+                                <input type="button" id="btnsubmit" value="Submit" class="submitBtn" />
+                                <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
+                                <label id="lblmessagesuccess" style="font-size: 16px; color:red;"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom:30px;">
                         <div>
-                            Pages :<span id="Paging"></span>
+                            @using (Html.BeginForm("Index", "CreatePermotionPrice_New", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+
+                                <table class="headingHd" style="width:100%;">
+                                    <tr>
+                                        <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Distributor List</th>
+
+                                        @*<th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:15px; opacity: 0.2;">
+
+                                            </th>*@
+                                    </tr>
+                                </table>
+                            }
                         </div>
+                        <div id="list" class="tabelGridRow">
+                            <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:15px; margin-bottom:15px">
+                                <thead>
+                                    <tr>
+                                        <th>UserId</th>
+                                        <th>Customer Type</th>
+                                        <th>Name</th>
+                                        <th>Address </th>
+                                        <th>City</th>
+                                        <th>State</th>
+                                        <th>Contact No</th>
+                                        @*<th>Email</th>*@
+                                        @*<th>Created BY</th>*@
+                                        <th style="display:none">id</th>
+                                        <th style="text-align:right; width:10%;">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+
+                            </table>
+                            <div>
+                                Pages :<span id="Paging"></span>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-                                                }
+        }
     </div>
 
     <div class="space30"></div>
