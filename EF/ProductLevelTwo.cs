@@ -14,6 +14,11 @@ namespace LuminousMpartnerIB.EF
     
     public partial class ProductLevelTwo
     {
+        public ProductLevelTwo()
+        {
+            this.ProductLevelThrees = new HashSet<ProductLevelThree>();
+        }
+    
         public int id { get; set; }
         public Nullable<int> pc_Lvl_oneId { get; set; }
         public string Name { get; set; }
@@ -31,5 +36,6 @@ namespace LuminousMpartnerIB.EF
         public Nullable<int> OrderSequence { get; set; }
     
         public virtual ProductCatergory ProductCatergory { get; set; }
+        public virtual ICollection<ProductLevelThree> ProductLevelThrees { get; set; }
     }
 }

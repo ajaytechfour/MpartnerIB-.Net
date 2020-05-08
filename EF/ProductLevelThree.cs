@@ -71,5 +71,8 @@ namespace LuminousMpartnerIB.EF
         public string OutputVoltageWorkingRange { get; set; }
         public string MainsACLowCut { get; set; }
         public string MainACLowCutRecovery { get; set; }
+    
+        public virtual ProductCatergory ProductCatergory { get; set; }
+        public virtual ProductLevelTwo ProductLevelTwo { get; set; }
     }
 }

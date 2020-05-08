@@ -17,6 +17,8 @@ namespace LuminousMpartnerIB.EF
         public ProductCatergory()
         {
             this.ProductLevelTwoes = new HashSet<ProductLevelTwo>();
+            this.ProductLevelThrees = new HashSet<ProductLevelThree>();
+            this.ProductLevelOnes = new HashSet<ProductLevelOne>();
         }
     
         public int id { get; set; }
@@ -34,5 +36,7 @@ namespace LuminousMpartnerIB.EF
     
         public virtual ParentCategory ParentCategory { get; set; }
         public virtual ICollection<ProductLevelTwo> ProductLevelTwoes { get; set; }
+        public virtual ICollection<ProductLevelThree> ProductLevelThrees { get; set; }
+        public virtual ICollection<ProductLevelOne> ProductLevelOnes { get; set; }
     }
 }

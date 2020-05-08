@@ -16,15 +16,13 @@ using System.Dynamic;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class HomeCardController : Controller
+    public class HomeCardViewController : Controller
     {
         //
         // GET: /CreatePermotions/
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
         private string PageUrl = "/HomeCard/Index";
-        string utype = string.Empty;
-
         public ActionResult Index(string Search)
         {
             if (Session["userid"] == null)
@@ -33,7 +31,6 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                utype = Session["ctype"].ToString();
                 if (Search != null && Search != "")
                 {
                     Session["Search"] = Search;
@@ -47,15 +44,10 @@ namespace LuminousMpartnerIB.Controllers
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
 
-                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (utype == "Luminous")
-                {
-                    return RedirectToAction("Index", "HomeCardView");
-                }
-                else
-                {
-                    return View();
-                }
+                //if (result[0]["uview"].ToString() == true)
+                //{
+                return View();
+                //}
                 //else
                 //{
                 //    return RedirectToAction("snotallowed", "snotallowed");
@@ -463,7 +455,7 @@ namespace LuminousMpartnerIB.Controllers
 
                                     c_dynamicpage_main.Sub_Title = "";
                                     c_dynamicpage_main.Sub_TitleColour = "";
-                                    c_dynamicpage_main.ImageOriginalName = mainimage[1].FileName; 
+                                    c_dynamicpage_main.ImageOriginalName = mainimage[1].FileName;
                                     c_dynamicpage_main.ImageSystemName = main_image1;
                                     c_dynamicpage_main.OriginalMainImage = "";
                                     c_dynamicpage_main.SystemMainImage = "";
@@ -978,7 +970,10 @@ namespace LuminousMpartnerIB.Controllers
 
 
         }
-        public JsonResult GetContactDetail(int? page)
+
+
+
+        public JsonResult GetContactDetail(int? page, string id = "")
         {
             int? PageId = page;
             if (Session["userid"] == null)
@@ -992,78 +987,162 @@ namespace LuminousMpartnerIB.Controllers
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
                 if (true)
                 {
-                    int contactdetails = (from c in db.Card_dynamicPage
-                                          where c.Status != 2 && c.CardProviderId != "3" && c.CardProviderId != "12" && c.Pagename == "HomePage"
-                                          select c).Count();
-                    int totalrecord;
-                    if (page != null)
+                    if (id != "")
                     {
-                        page = (page - 1) * 15;
-                    }
-                    if (contactdetails % 15 == 0)
-                    {
-                        totalrecord = contactdetails / 15;
-                    }
-                    else
-                    {
-                        totalrecord = (contactdetails / 15) + 1;
-                    }
-                    if (Session["Search"] != null)
-                    {
-                        var contactDetails2 = (from c in db.HomePage_Paging(PageId ?? 1, 15, "HomePage")
-
-                                               select new
-                                               {
-                                                   id = c.id,
-
-                                                   CardProvider = c.ProviderName,
-                                                   // ProviderName=c.ProviderName,
-                                                   Title = c.Title,
-                                                   Subtitle = c.Sub_Title,
-                                                   sequence = c.Sequence,
-                                                   StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
-                                                   EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
-                                                   status = c.status == 1 ? "Active" : "Deactive",
-
-
-                                               }).Where(c => c.id.ToString().Contains(Session["Search"].ToString()) || c.status.Contains(Session["Search"].ToString()) || c.CardProvider.Contains(Session["Search"].ToString()) || c.StartDate.Contains(Session["Search"].ToString()) || c.EndDate.Contains(Session["Search"].ToString())).OrderBy(c => c.sequence).ToList();
-
-
-
-                        if (contactDetails2.Count == 0)
+                        int contactdetails = (from c in db.Card_dynamicPage
+                                              where c.CreatedBy.ToLower() == id.ToLower()//added
+                                              where c.Status != 2 && c.CardProviderId != "3" && c.CardProviderId != "12" && c.Pagename == "HomePage"
+                                              select c).Count();
+                        int totalrecord;
+                        if (page != null)
                         {
-                            var data = new { result = contactDetails2 };
-                            return Json(data, JsonRequestBehavior.AllowGet);
+                            page = (page - 1) * 15;
+                        }
+                        if (contactdetails % 15 == 0)
+                        {
+                            totalrecord = contactdetails / 15;
                         }
                         else
                         {
+                            totalrecord = (contactdetails / 15) + 1;
+                        }
+                        if (Session["Search"] != null)
+                        {
+                            var contactDetails2 = (from c in db.HomePage_Paging(PageId ?? 1, 15, "HomePage")
+                                                   where c.CreatedBy.ToLower() == id.ToLower()
+                                                   select new
+                                                   {
+                                                       id = c.id,
+
+                                                       CardProvider = c.ProviderName,
+                                                       // ProviderName=c.ProviderName,
+                                                       Title = c.Title,
+                                                       Subtitle = c.Sub_Title,
+                                                       sequence = c.Sequence,
+                                                       StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
+                                                       EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
+                                                       status = c.status == 1 ? "Active" : "Deactive",
+
+
+                                                   }).Where(c => c.id.ToString().Contains(Session["Search"].ToString()) || c.status.Contains(Session["Search"].ToString()) || c.CardProvider.Contains(Session["Search"].ToString()) || c.StartDate.Contains(Session["Search"].ToString()) || c.EndDate.Contains(Session["Search"].ToString())).OrderBy(c => c.sequence).ToList();
+
+
+
+                            if (contactDetails2.Count == 0)
+                            {
+                                var data = new { result = contactDetails2 };
+                                return Json(data, JsonRequestBehavior.AllowGet);
+                            }
+                            else
+                            {
+                                var data = new { result = contactDetails2, TotalRecord = totalrecord };
+                                return Json(data, JsonRequestBehavior.AllowGet);
+                            }
+                        }
+                        else
+                        {
+                            var contactDetails2 = (from c in db.HomePage_Paging(PageId ?? 1, 15, "HomePage")
+                                                   where c.CreatedBy.ToLower() == id.ToLower()
+                                                   select new
+                                                   {
+                                                       id = c.id,
+
+                                                       CardProvider = c.ProviderName,
+
+                                                       sequence = c.Sequence,
+                                                       Title = c.Title,
+                                                       Subtitle = c.Sub_Title,
+                                                       StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
+                                                       EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
+                                                       status = c.status == 1 ? "Active" : "Deactive",
+
+
+                                                   }).OrderBy(c => c.sequence).ToList();
+
+
                             var data = new { result = contactDetails2, TotalRecord = totalrecord };
                             return Json(data, JsonRequestBehavior.AllowGet);
                         }
+
                     }
                     else
                     {
-                        var contactDetails2 = (from c in db.HomePage_Paging(PageId ?? 1, 15, "HomePage")
-                                               select new
-                                               {
-                                                   id = c.id,
+                        int contactdetails = (from c in db.Card_dynamicPage
+                                              where c.Status != 2 && c.CardProviderId != "3" && c.CardProviderId != "12" && c.Pagename == "HomePage"
+                                              select c).Count();
+                        int totalrecord;
+                        if (page != null)
+                        {
+                            page = (page - 1) * 15;
+                        }
+                        if (contactdetails % 15 == 0)
+                        {
+                            totalrecord = contactdetails / 15;
+                        }
+                        else
+                        {
+                            totalrecord = (contactdetails / 15) + 1;
+                        }
+                        if (Session["Search"] != null)
+                        {
+                            var contactDetails2 = (from c in db.HomePage_Paging(PageId ?? 1, 15, "HomePage")
+                                                       //where c.cr
+                                                   select new
+                                                   {
+                                                       id = c.id,
 
-                                                   CardProvider = c.ProviderName,
-
-                                                   sequence = c.Sequence,
-                                                   Title = c.Title,
-                                                   Subtitle = c.Sub_Title,
-                                                   StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
-                                                   EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
-                                                   status = c.status == 1 ? "Active" : "Deactive",
-
-
-                                               }).OrderBy(c => c.sequence).ToList();
+                                                       CardProvider = c.ProviderName,
+                                                       // ProviderName=c.ProviderName,
+                                                       Title = c.Title,
+                                                       Subtitle = c.Sub_Title,
+                                                       sequence = c.Sequence,
+                                                       StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
+                                                       EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
+                                                       status = c.status == 1 ? "Active" : "Deactive",
 
 
-                        var data = new { result = contactDetails2, TotalRecord = totalrecord };
-                        return Json(data, JsonRequestBehavior.AllowGet);
+                                                   }).Where(c => c.id.ToString().Contains(Session["Search"].ToString()) || c.status.Contains(Session["Search"].ToString()) || c.CardProvider.Contains(Session["Search"].ToString()) || c.StartDate.Contains(Session["Search"].ToString()) || c.EndDate.Contains(Session["Search"].ToString())).OrderBy(c => c.sequence).ToList();
+
+
+
+                            if (contactDetails2.Count == 0)
+                            {
+                                var data = new { result = contactDetails2 };
+                                return Json(data, JsonRequestBehavior.AllowGet);
+                            }
+                            else
+                            {
+                                var data = new { result = contactDetails2, TotalRecord = totalrecord };
+                                return Json(data, JsonRequestBehavior.AllowGet);
+                            }
+                        }
+                        else
+                        {
+                            var contactDetails2 = (from c in db.HomePage_Paging(PageId ?? 1, 15, "HomePage")
+                                                   select new
+                                                   {
+                                                       id = c.id,
+
+                                                       CardProvider = c.ProviderName,
+
+                                                       sequence = c.Sequence,
+                                                       Title = c.Title,
+                                                       Subtitle = c.Sub_Title,
+                                                       StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
+                                                       EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
+                                                       status = c.status == 1 ? "Active" : "Deactive",
+
+
+                                                   }).OrderBy(c => c.sequence).ToList();
+
+
+                            var data = new { result = contactDetails2, TotalRecord = totalrecord };
+                            return Json(data, JsonRequestBehavior.AllowGet);
+                        }
+
                     }
+
+
                 }
                 else
                 {
@@ -1074,7 +1153,7 @@ namespace LuminousMpartnerIB.Controllers
         }
 
         [HttpGet]
-        public ActionResult Edit(int id)
+        public ActionResult View(int id)
         {
             if (Session["userid"] == null)
             {
@@ -1216,7 +1295,7 @@ namespace LuminousMpartnerIB.Controllers
 
                         // ViewBag.ImageName = Cdp.ImageOriginalName;
                         ViewBag.ImageName = Cdp.ImageSystemName;
-                        ViewBag.Imagename1 = db.Card_dynamicPage.Where(x=>x.Id==id+1).AsEnumerable().ElementAt(0).ImageSystemName;
+                        ViewBag.Imagename1 = db.Card_dynamicPage.Where(x => x.Id == id + 1).AsEnumerable().ElementAt(0).ImageSystemName;
                         return View(Cdp);
                     }
 
@@ -1390,7 +1469,7 @@ namespace LuminousMpartnerIB.Controllers
 
                         if (ModelState.IsValid)
                         {
-                          //  PermotionsList contactusd = db.PermotionsLists.Single(a => a.id == id);
+                            //  PermotionsList contactusd = db.PermotionsLists.Single(a => a.id == id);
 
                             Card_dynamicPage cdynamic = db.Card_dynamicPage.Single(a => a.Id == id);
 
@@ -1398,7 +1477,7 @@ namespace LuminousMpartnerIB.Controllers
                             {
 
                                 string filename = Path.GetFileNameWithoutExtension(postedFile.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(postedFile.FileName);
-                               
+
                                 string str = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), filename);
                                 postedFile.SaveAs(str);
                                 cdynamic.ImageSystemName = filename;
@@ -1423,7 +1502,7 @@ namespace LuminousMpartnerIB.Controllers
                             }
                             else
                             {
-                                cdynamic.Status= 0;
+                                cdynamic.Status = 0;
                             }
 
                             db.SaveChanges();
@@ -1502,7 +1581,7 @@ namespace LuminousMpartnerIB.Controllers
                             //SchemeCard_MainImage.SaveAs(str2);
 
 
-                           // contactusd.createby = Session["userid"].ToString();
+                            // contactusd.createby = Session["userid"].ToString();
                             cdynamic.CreatedOn = DateTime.Now;
                             cdynamic.Startdate = Convert.ToDateTime(StartDate);
                             cdynamic.Enddate = Convert.ToDateTime(EndDate);
@@ -1561,7 +1640,7 @@ namespace LuminousMpartnerIB.Controllers
                             {
                                 //PermotionsList contactusd1 = db.PermotionsLists.Single(a => a.id == id+1);
 
-                                Card_dynamicPage cdynamic1 = db.Card_dynamicPage.Single(a => a.Id == id+1);
+                                Card_dynamicPage cdynamic1 = db.Card_dynamicPage.Single(a => a.Id == id + 1);
                                 if (SchemeCard_MainImage != null)
                                 {
 
@@ -1663,7 +1742,7 @@ namespace LuminousMpartnerIB.Controllers
 
                             if (first_upload_gridchildmainimage != null)
                             {
-                               // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
+                                // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild1 = Path.GetFileNameWithoutExtension(first_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(first_upload_gridchildmainimage.FileName);
                                 string strMain = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), Chaild1);
                                 first_upload_gridchildmainimage.SaveAs(strMain);
@@ -1673,7 +1752,7 @@ namespace LuminousMpartnerIB.Controllers
 
                             if (second_upload_gridchildmainimage != null)
                             {
-                               // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
+                                // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild2 = Path.GetFileNameWithoutExtension(second_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(second_upload_gridchildmainimage.FileName);
                                 string strMain = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), Chaild2);
                                 second_upload_gridchildmainimage.SaveAs(strMain);
@@ -1682,7 +1761,7 @@ namespace LuminousMpartnerIB.Controllers
 
                             if (third_upload_gridchildmainimage != null)
                             {
-                               // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
+                                // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild3 = Path.GetFileNameWithoutExtension(third_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(third_upload_gridchildmainimage.FileName);
                                 string strMain = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), Chaild3);
                                 third_upload_gridchildmainimage.SaveAs(strMain);
@@ -1691,7 +1770,7 @@ namespace LuminousMpartnerIB.Controllers
 
                             if (four_upload_gridchildmainimage != null)
                             {
-                               // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
+                                // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild4 = Path.GetFileNameWithoutExtension(four_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(four_upload_gridchildmainimage.FileName);
                                 string strMain = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), Chaild4);
                                 four_upload_gridchildmainimage.SaveAs(strMain);
@@ -2042,7 +2121,7 @@ namespace LuminousMpartnerIB.Controllers
                 if (true)
                 {
                     //PermotionsList contactusd = db.PermotionsLists.Single(a => a.id == id);
-                    Card_dynamicPage contactusd = db.Card_dynamicPage.Single(a => a.Id==id);
+                    Card_dynamicPage contactusd = db.Card_dynamicPage.Single(a => a.Id == id);
 
                     //PermotionsListHistory plh = new PermotionsListHistory();
                     //plh.Descriptions = contactusd.Descriptions;
@@ -2059,7 +2138,7 @@ namespace LuminousMpartnerIB.Controllers
                     //db.PermotionsListHistories.AddObject(plh);
 
                     contactusd.Status = 2;
-                    contactusd.ModifiedBy= Session["userid"].ToString();
+                    contactusd.ModifiedBy = Session["userid"].ToString();
                     contactusd.ModifiedOn = DateTime.Now;
                     if (db.SaveChanges() > 0)
                     {

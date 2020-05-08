@@ -105,8 +105,10 @@ namespace LuminousMpartnerIB.EF
         public DbSet<NotificationsHistory> NotificationsHistories { get; set; }
         public DbSet<NotificationSurvey> NotificationSurveys { get; set; }
         public DbSet<NotificationSurveyHistory> NotificationSurveyHistories { get; set; }
-        public DbSet<Country> Countries { get; set; }
         public DbSet<Dealer_Save_Image> Dealer_Save_Image { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<PermotionsList> PermotionsLists { get; set; }
+        public DbSet<PermotionsListHistory> PermotionsListHistories { get; set; }
     
         public virtual ObjectResult<userpermission_Result> userpermission(Nullable<int> mode, string userid)
         {
@@ -174,6 +176,23 @@ namespace LuminousMpartnerIB.EF
         public virtual ObjectResult<ProductLevelThreePaging_Result> ProductLevelThreePaging()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ProductLevelThreePaging_Result>("ProductLevelThreePaging");
+        }
+    
+        public virtual ObjectResult<HomePage_Paging_Result> HomePage_Paging(Nullable<int> pageId, Nullable<int> totalPage, string pagename)
+        {
+            var pageIdParameter = pageId.HasValue ?
+                new ObjectParameter("PageId", pageId) :
+                new ObjectParameter("PageId", typeof(int));
+    
+            var totalPageParameter = totalPage.HasValue ?
+                new ObjectParameter("TotalPage", totalPage) :
+                new ObjectParameter("TotalPage", typeof(int));
+    
+            var pagenameParameter = pagename != null ?
+                new ObjectParameter("pagename", pagename) :
+                new ObjectParameter("pagename", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<HomePage_Paging_Result>("HomePage_Paging", pageIdParameter, totalPageParameter, pagenameParameter);
         }
     }
 }

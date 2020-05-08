@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Luminous.EF
+namespace LuminousMpartnerIB.EF
 {
     using System;
     
@@ -22,5 +22,6 @@ namespace Luminous.EF
         public Nullable<System.DateTime> EndDate { get; set; }
         public Nullable<int> Sequence { get; set; }
         public Nullable<int> status { get; set; }
+        public string CreatedBy { get; set; }
     }
 }

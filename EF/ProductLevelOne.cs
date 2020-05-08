@@ -26,5 +26,7 @@ namespace LuminousMpartnerIB.EF
         public Nullable<System.DateTime> enddate { get; set; }
         public Nullable<int> ParentCatid { get; set; }
         public Nullable<int> OrderSequence { get; set; }
+    
+        public virtual ProductCatergory ProductCatergory { get; set; }
     }
 }

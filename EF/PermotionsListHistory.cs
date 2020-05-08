@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Luminous.EF
+namespace LuminousMpartnerIB.EF
 {
     using System;
     using System.Collections.Generic;
@@ -28,8 +28,5 @@ namespace Luminous.EF
         public string Modifiedby { get; set; }
         public string PDFName { get; set; }
         public Nullable<int> ParentCatid { get; set; }
-    
-        public virtual ParentCategory ParentCategory { get; set; }
-        public virtual PermotionsList PermotionsList { get; set; }
     }
 }

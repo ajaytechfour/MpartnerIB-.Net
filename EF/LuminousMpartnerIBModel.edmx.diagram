@@ -84,8 +84,13 @@
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationsHistory" Width="1.5" PointX="5.375" PointY="18.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurvey" Width="1.5" PointX="23.375" PointY="29.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" Width="1.5" PointX="29.375" PointY="24.75" />
-        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Country" Width="1.5" PointX="19.375" PointY="4.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.Dealer_Save_Image" Width="1.5" PointX="19.375" PointY="19.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Country" Width="1.5" PointX="19.375" PointY="4.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.PermotionsList" Width="1.5" PointX="25.375" PointY="29.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.PermotionsListHistory" Width="1.5" PointX="17.375" PointY="30.75" />
+        <AssociationConnector Association="LuminousMpartnerIBModel.FK__ProductLe__produ__30C33EC3" />
+        <AssociationConnector Association="LuminousMpartnerIBModel.FK__ProductLev__pcId__2704CA5F" />
+        <AssociationConnector Association="LuminousMpartnerIBModel.FK__ProductLe__pc_Lv__2FCF1A8A" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -7,19 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Luminous.EF
+namespace LuminousMpartnerIB.EF
 {
     using System;
     using System.Collections.Generic;
     
     public partial class PermotionsList
     {
-        public PermotionsList()
-        {
-            this.PermotionsListHistories = new HashSet<PermotionsListHistory>();
-            this.ProductAccessTables = new HashSet<ProductAccessTable>();
-        }
-    
         public int id { get; set; }
         public Nullable<int> PermotionTypeId { get; set; }
         public Nullable<int> ProductCatId { get; set; }
@@ -35,12 +29,5 @@ namespace Luminous.EF
         public string Modifiedby { get; set; }
         public string PDFName { get; set; }
         public Nullable<int> ParentCatid { get; set; }
-    
-        public virtual ParentCategory ParentCategory { get; set; }
-        public virtual PermotionType PermotionType { get; set; }
-        public virtual ProductLevelOne ProductLevelOne { get; set; }
-        public virtual ICollection<PermotionsListHistory> PermotionsListHistories { get; set; }
-        public virtual ICollection<ProductAccessTable> ProductAccessTables { get; set; }
-        public virtual ProductCatergory ProductCatergory { get; set; }
     }
 }
