@@ -7,162 +7,38 @@ using PagedList;
 using PagedList.Mvc;
 using System.Data;
 using LuminousMpartnerIB.EF;
+using TVS;
+using LuminousMpartnerIB.Models;
 
 namespace LuminousMpartnerIB.Controllers
 {
     public class CreateSalesEmployeesController : Controller
     {
-        //
-        // GET: /ContactUs/
-        private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
-        private DataTable dt = new DataTable();
-        private string PageUrl = "/FAQ/Index";
-        string utype = string.Empty;
+        datautility dut = new datautility();
+        DataTable dt = new DataTable();
+        DataSet ds = new DataSet();
+        LuminousMpartnerIBEntities db;
+        List<SideBarMenuModel> sideBarMenuLst = new List<SideBarMenuModel>();
+        string userid = string.Empty;
+
+        public CreateSalesEmployeesController()
+        {
+            db = new LuminousMpartnerIBEntities();
+        }
+
         public ActionResult Index()
         {
-            utype = Session["ctype"].ToString();
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
             }
             else
             {
-                //dt = Session["permission"] as DataTable;
-                //string pageUrl2 = "/FAQ/Index";
-                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                var data = db.FAQs.OrderByDescending(a => a.Id).ToList().ToPagedList(1, 1);
-                if (utype == "Luminous")
-                {
-                    return RedirectToAction("Index", "FAQView");
-                }
-                else
-                {
-                    return View(data);
-                    //return RedirectToAction("snotallowed", "snotallowed");
-                }
-            }
-
-        }
-        public ActionResult SaveContact(string QuestionName, string Answer, string Status, string StartDate, string EndDate)
-        {
-            if (Session["userid"] == null)
-            {
-                return RedirectToAction("login", "login");
-            }
-            else
-            {
-                //dt = Session["permission"] as DataTable;
-                //string pageUrl2 = "/FAQ/Index";
-                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (true)
-                {
-                    Status = Status ?? "off";
-                    ViewBag.preStartDate = StartDate;
-                    ViewBag.PreEndDate = EndDate;
-
-                    #region Check Validation
-
-                    if (QuestionName == null || QuestionName == "")
-                    {
-                        ModelState.AddModelError("QuestionName", "Question is required");
-                    }
-                    if (Answer == null || Answer == "")
-                    {
-                        ModelState.AddModelError("Answer", "Answer is required");
-                    }
-
-                    if (StartDate == null || StartDate == "")
-                    {
-                        ModelState.AddModelError("StartDate", "*");
-                        ViewBag.StartDate = "Start Date Is Not Selected";
-                    }
-                    else
-                    {
-                        try
-                        {
-
-                            if (Convert.ToDateTime(StartDate) < Convert.ToDateTime(DateTime.Now.ToShortDateString()))
-                            {
-                                ModelState.AddModelError("StartDate", "Start Date Should Be Greater Than or Equal To Current Date");
-                                ViewBag.StartDate = "Start Date Should Be Greater Than or Equal To Current Date";
-                            }
-
-                        }
-                        catch (FormatException ex)
-                        {
-                            ModelState.AddModelError("StartDate", "Invalid Start Date");
-                            ViewBag.StartDate = "Invalid Start Date";
-                        }
-
-                    }
-                    if (EndDate == null || EndDate == "")
-                    {
-                        ModelState.AddModelError("Enddate", "*");
-                        ViewBag.EndDate = "End Date Is Not Selected";
-                    }
-                    else
-                    {
-                        DateTime startDate = new DateTime();
-                        try
-                        {
-                            startDate = Convert.ToDateTime(StartDate);
-                            try
-                            {
-                                if (Convert.ToDateTime(EndDate) < startDate)
-                                {
-                                    ModelState.AddModelError("Enddate", "*");
-                                    ViewBag.EndDate = "End Date Should Be Greater Than or Equal To Start Date";
-                                }
-                            }
-                            catch (FormatException ex)
-                            {
-                                ModelState.AddModelError("Enddate", "Invalid End Date");
-                                ViewBag.EndDate = "Invalid End Date";
-                            }
-                        }
-                        catch (FormatException ex)
-                        {
-                            ModelState.AddModelError("Enddate", "Invalid End Date");
-                            ViewBag.EndDate = "Invalid Start Date";
-                        }
-
-                    }
-                    #endregion
-                    if (ModelState.IsValid)
-                    {
-                        FAQ obj_faq = new FAQ();
-                        obj_faq.QuestionName = QuestionName;
-                        obj_faq.Answer = Answer;
-                        obj_faq.CreatedOn = DateTime.Now;
-                        obj_faq.CreatedBy = Session["userid"].ToString();
-                        string status = Status ?? "off";
-                        if (status == "on")
-                        {
-                            obj_faq.Status = 1;
-                        }
-                        else
-                        {
-                            obj_faq.Status = 0;
-                        }
-                        obj_faq.StartDate = Convert.ToDateTime(StartDate);
-                        obj_faq.EndDate = Convert.ToDateTime(EndDate);
-
-                        db.FAQs.Add(obj_faq);
-                        db.SaveChanges();
-                        return Content("<script>alert('Data Successfully Submitted');location.href='../FAQ/Index';</script>");
-
-                    }
-                    return View("Index");
-                }
-                else
-                {
-                    return RedirectToAction("snotallowed", "snotallowed");
-
-                }
+                return View();
             }
         }
 
-        public JsonResult GetFAQDetail(int? page)
+        public JsonResult GetGridData()
         {
             if (Session["userid"] == null)
             {
@@ -170,265 +46,222 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                //dt = Session["permission"] as DataTable;
-                //string pageUrl2 = PageUrl;
-                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (true)
+                var getGrid = from vs in db.UsersLists
+                              where vs.CustomerType == "SalesEmployee"
+                              orderby vs.CustomerType
+                              select new
+                              {
+                                  id = vs.id,
+                                  UserId = vs.UserId,
+                                  CustomerType = vs.CustomerType,
+                                  Name = vs.Dis_Name,
+                                  Address = vs.Dis_Address1,
+                                  City = vs.Dis_City,
+                                  State = vs.Dis_State,
+                                  ContactNo = vs.Dis_ContactNo,
+                                  Email = vs.Dis_Email,
+                              };
+
+
+                if (getGrid != null)
                 {
-                    var contactdetails = (from c in db.FAQs
-                                          where c.Status != 2
-                                          select c).ToList();
-                    int totalrecord;
-                    if (page != null)
-                    {
-                        page = (page - 1) * 15;
-                    }
-
-                    var contactDetails2 = (from c in contactdetails
-                                           select new
-                                           {
-                                               quesname = c.QuestionName,
-                                               answer = c.Answer,
-                                               status = c.Status == 1 ? "Enable" : "Disable",
-                                               startdate = Convert.ToDateTime(c.StartDate).ToShortDateString(),
-                                               enddate = Convert.ToDateTime(c.EndDate).ToShortDateString(),
 
 
-
-                                               id = c.Id,
-                                           }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
-                    if (contactdetails.Count() % 15 == 0)
-                    {
-                        totalrecord = contactdetails.Count() / 15;
-                    }
-                    else
-                    {
-                        totalrecord = (contactdetails.Count() / 15) + 1;
-                    }
-
-                    var data = new { result = contactDetails2, TotalRecord = totalrecord };
+                    var data = new { result = getGrid, TotalRecord = getGrid.Count() };
                     return Json(data, JsonRequestBehavior.AllowGet);
+                    // }
                 }
                 else
                 {
                     return Json("snotallowed", JsonRequestBehavior.AllowGet);
 
                 }
+
             }
         }
 
-        public void EditContact(int id)
-        {
 
+        public JsonResult getCountryMasters()
+        {
+            var getStateMasterslst = (from c in db.Countries
+                                          // where c.status != 0
+                                      select new
+                                      {
+                                          id = c.CountryID,
+                                          Name = c.CountryName
+                                      }).ToList();
+
+            if (getStateMasterslst != null)
+            {
+                return Json(getStateMasterslst, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json("Null", JsonRequestBehavior.AllowGet);
+            }
         }
 
-        [HttpPost]
+        public JsonResult getStateByCountry(int countryId)
+        {
+            var getStateMasterslst = (from c in db.States
+                                      where c.CountryID == countryId
+                                      select new
+                                      {
+                                          id = c.StateID,
+                                          Name = c.StateName
+                                      }).ToList();
+
+            if (getStateMasterslst != null)
+            {
+                return Json(getStateMasterslst, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json("Null", JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        public JsonResult GetCityBystate(string stateId)
+        {
+            if (Session["userid"] == null)
+            {
+                return Json("Login", JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                if (stateId != "")
+                {
+                    int id = Convert.ToInt32(stateId);
+
+                    //var getCity = db.cities.Where(x => x.stateid == id).ToList();
+
+                    var getCity = (from c in db.cities
+                                   where c.stateid == id
+                                   select new
+                                   {
+                                       id = c.id,
+                                       Name = c.cityname
+                                   }).ToList();
+
+
+                    return Json(getCity, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    return Json("", JsonRequestBehavior.AllowGet);
+                }
+
+            }
+        }
+
+
+        public JsonResult saveData(UsersListModel obj)
+        {
+            List<UsersListModel> UsersListModellst = new List<UsersListModel>();
+
+            if (Session["userid"] != null)
+            {
+                userid = Session["userid"].ToString();
+            }
+
+            int tcount = 0;
+            var data = new { result = new List<UsersListModel>(), TotalRecord = tcount, Message = "", MessageExist = "" };
+
+            if (obj == null)
+            {
+                return Json(data, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                //var echkexist = db.UsersLists.Where(x => x.Dis_Name.Trim().ToLower() == obj.Name.Trim().ToLower() & x.CustomerType == "DISTY").ToList();
+                var echkexist = db.UsersLists.Where(x => x.Dis_Sap_Code == obj.SapCode & x.CustomerType == "DISTY").ToList();
+
+                if (echkexist.Count() > 0)
+                {
+                    data = new { result = new List<UsersListModel>(), TotalRecord = tcount, Message = "", MessageExist = "This Sap Code Already Exists" };
+                    return Json(data, JsonRequestBehavior.AllowGet);
+                }
+
+
+
+                UsersList objUsersList = new UsersList();
+
+                objUsersList.Dis_Name = obj.Name;
+                objUsersList.Dis_Address1 = obj.Address;
+                objUsersList.Dis_ContactNo = obj.ContactNo;
+                objUsersList.Dis_Email = obj.Email;
+                objUsersList.Dis_State = obj.State;
+                objUsersList.Dis_City = obj.City;
+
+                objUsersList.UserId = userid;
+                objUsersList.CustomerType = "SalesEmployee";
+                objUsersList.Dis_Sap_Code = userid;
+                objUsersList.CreatedBY = userid;
+                objUsersList.CreatedON = DateTime.Now;
+
+                objUsersList.Dis_Sap_Code = obj.SapCode;
+                objUsersList.Country = obj.Country;
+
+                db.UsersLists.Add(objUsersList);
+                if (db.SaveChanges() > 0)
+                {
+
+                    var griddata = from vs in db.UsersLists
+                                   where vs.CustomerType == "SalesEmployee"
+                                   orderby vs.CustomerType
+                                   select new UsersListModel
+                                   {
+                                       UserId = vs.UserId,
+                                       CustomerType = vs.CustomerType,
+                                       Name = vs.Dis_Name,
+                                       Address = vs.Dis_Address1,
+                                       City = vs.Dis_City,
+                                       State = vs.Dis_State,
+                                       ContactNo = vs.Dis_ContactNo,
+                                       Email = vs.Dis_Email,
+                                       //CreatedBY = vs.CreatedBY,
+                                   };
+
+                    UsersListModellst = griddata.ToList();
+
+
+                    data = new { result = UsersListModellst, TotalRecord = UsersListModellst.Count(), Message = "Data save successfully", MessageExist = "" };
+
+                }
+
+                else
+                {
+                    return Json(data, JsonRequestBehavior.AllowGet);
+                }
+
+            }
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
         public JsonResult Delete(int id)
         {
             if (Session["userid"] == null)
             {
-                return Json("Login", JsonRequestBehavior.AllowGet);
+                return Json("login", JsonRequestBehavior.AllowGet);
             }
             else
             {
-                //dt = Session["permission"] as DataTable;
-                //string pageUrl2 = PageUrl;
-                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (true)
+                //VisitSchedule contactusd = db.VisitSchedules.Single(a => a.ID == id);
+
+                UsersList usersList = db.UsersLists.Where(x => x.id == id).FirstOrDefault();
+                db.UsersLists.Remove(usersList);
+
+                if (db.SaveChanges() > 0)
                 {
-                    FAQ faq = db.FAQs.Single(a => a.Id == id);
-                    //Save Previous Data In History Table
-                    FAQ_History CUDHistory = new FAQ_History();
-                    CUDHistory.FAQ_ParentId = faq.Id;
-                    CUDHistory.QuestionName = faq.QuestionName;
-                    CUDHistory.Answer = faq.Answer;
-                    CUDHistory.Status = 2;
-                    CUDHistory.StartDate = faq.StartDate;
-                    CUDHistory.EndDate = faq.EndDate;
-
-                    CUDHistory.ModifiedBy = Session["userid"].ToString();
-                    CUDHistory.ModifiedOn = DateTime.Now;
-                    db.FAQ_History.Add(CUDHistory);
-
-                    //Update Data With New Value
-                    faq.Status = 2;
-                    faq.ModifiedBy = Session["userid"].ToString();
-                    faq.ModifiedOn = DateTime.Now;
-
-
-                    int affectedReocrds = db.SaveChanges();
-                    if (affectedReocrds > 0)
-                    {
-                        return Json("Record Deleted Successfully", JsonRequestBehavior.AllowGet);
-                    }
-                    else
-                    {
-                        return Json("Record Not Deleted", JsonRequestBehavior.AllowGet);
-                    }
+                    return Json("Record Deleted Successfully", JsonRequestBehavior.AllowGet);
                 }
                 else
                 {
-                    return Json("snotallowed", JsonRequestBehavior.AllowGet);
-
+                    return Json("Record Not Deleted", JsonRequestBehavior.AllowGet);
                 }
+
             }
         }
-
-        [HttpGet]
-        public ActionResult Edit(int id)
-        {
-            if (Session["userid"] == null)
-            {
-                return RedirectToAction("login", "login");
-            }
-            else
-            {
-                //dt = Session["permission"] as DataTable;
-                //string pageUrl2 = PageUrl;
-                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (true)
-                {
-                    FAQ cud = db.FAQs.Single(a => a.Id == id);
-                    ViewBag.status = cud.Status;
-                    ViewBag.preStartDate = Convert.ToDateTime(cud.StartDate).ToString("dd-MM-yyyy");
-                    ViewBag.PreEndDate = Convert.ToDateTime(cud.EndDate).ToString("dd-MM-yyyy");
-                    return View(cud);
-                }
-                else
-                {
-                    return RedirectToAction("snotallowed", "snotallowed");
-                }
-            }
-        }
-        public ActionResult Update(int Id, string QuestionName, string Answer, string Status, string StartDate, string EndDate)
-        {
-            if (Session["userid"] == null)
-            {
-                return RedirectToAction("login", "login");
-            }
-            else
-            {
-                //dt = Session["permission"] as DataTable;
-                //string pageUrl2 = PageUrl;
-                //Status = Status ?? "off";
-                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (true)
-                {
-
-
-                    if (QuestionName == null || QuestionName == "")
-                    {
-                        ModelState.AddModelError("QuestionName", "Question is required");
-                    }
-                    if (Answer == null || Answer == "")
-                    {
-                        ModelState.AddModelError("Answer", "Answer is required");
-                    }
-                    if (StartDate == null || StartDate == "")
-                    {
-                        ModelState.AddModelError("StartDate", "*");
-                        ViewBag.StartDate = "Start Date Is Not Selected";
-                    }
-                    //else
-                    //{
-                    //    try
-                    //    {
-
-                    //        if (Convert.ToDateTime(StartDate) < Convert.ToDateTime())
-                    //        {
-                    //            ModelState.AddModelError("StartDate", "Start Date Should Be Greater Than or Equal To Current Date");
-                    //            ViewBag.StartDate = "Start Date Should Be Greater Than or Equal To Current Date";
-                    //        }
-
-                    //    }
-                    //    catch (FormatException ex)
-                    //    {
-                    //        ModelState.AddModelError("StartDate", "Invalid Start Date");
-                    //        ViewBag.StartDate = "Invalid Start Date";
-                    //    }
-
-                    //}
-                    if (EndDate == null || EndDate == "")
-                    {
-                        ModelState.AddModelError("Enddate", "*");
-                        ViewBag.EndDate = "End Date Is Not Selected";
-                    }
-                    else
-                    {
-                        DateTime startDate = new DateTime();
-                        try
-                        {
-                            startDate = Convert.ToDateTime(StartDate);
-                            try
-                            {
-                                if (Convert.ToDateTime(EndDate) < startDate)
-                                {
-                                    ModelState.AddModelError("Enddate", "*");
-                                    ViewBag.EndDate = "End Date Should Be Greater Than or Equal To Start Date";
-                                }
-                            }
-                            catch (FormatException ex)
-                            {
-                                ModelState.AddModelError("Enddate", "Invalid End Date");
-                                ViewBag.EndDate = "Invalid End Date";
-                            }
-                        }
-                        catch (FormatException ex)
-                        {
-                            ModelState.AddModelError("Enddate", "Invalid End Date");
-                            ViewBag.EndDate = "Invalid Start Date";
-                        }
-
-                    }
-
-                    if (ModelState.IsValid)
-                    {
-                        FAQ obj_faq = db.FAQs.Single(a => a.Id == Id);
-
-                        //Save Record In History table
-                        FAQ_History CUDHistory = new FAQ_History();
-                        CUDHistory.FAQ_ParentId = obj_faq.Id;
-                        CUDHistory.QuestionName = obj_faq.QuestionName;
-                        CUDHistory.Answer = obj_faq.Answer;
-                        CUDHistory.Status = obj_faq.Status;
-                        CUDHistory.StartDate = obj_faq.StartDate;
-                        CUDHistory.EndDate = obj_faq.EndDate;
-
-                        CUDHistory.ModifiedBy = Session["userid"].ToString();
-                        CUDHistory.ModifiedOn = DateTime.Now;
-                        db.FAQ_History.Add(CUDHistory);
-
-                        //Save Record
-                        obj_faq.QuestionName = QuestionName;
-                        obj_faq.Answer = Answer;
-                        obj_faq.ModifiedOn = DateTime.Now;
-                        obj_faq.ModifiedBy = Session["userid"].ToString();
-                        obj_faq.StartDate = Convert.ToDateTime(StartDate);
-                        obj_faq.EndDate = Convert.ToDateTime(EndDate);
-                        if (Status.ToLower() == "on")
-                        {
-                            obj_faq.Status = 1;
-                        }
-                        else
-                        {
-                            obj_faq.Status = 0;
-                        }
-
-
-                        ViewBag.Update = "Done";
-                        db.SaveChanges();
-                    }
-
-
-                    return View("Edit", db.FAQs.Single(a => a.Id == Id));
-                }
-                else
-                {
-                    return RedirectToAction("snotallowed", "snotallowed");
-                }
-            }
-        }
-
 
     }
 }

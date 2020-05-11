@@ -859,29 +859,31 @@
             <div class="aos-init aos-animate gridcard">
                 <div class="addgift" style="padding-bottom: 10px;">
                     <div class="row">
-                        <div class="col-md-3">
+                        @*<div class="col-md-3">
                             <div class="form-group">
                                 <label>Upload Main Image<span class="required">*</span></label>
                                 <input type="file" name="mainimageup" style="border:none;" />
                                 <span class="file_error" style="color:red"></span>
                             </div>
-                        </div>
-                        <div class="col-md-3">
+                        </div>*@
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>
+                                <label>Upload Main Image<span class="required"></span></label>
+                                @*<label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>*@
                                 <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Imagemain" style="height:100px;width:100%;" />
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        @*<div class="col-md-3">
                             <div class="form-group">
                                 <label>Upload Grid Background Image<span class="required">*</span></label>
                                 <input type="file" name="gridbackimage" style="border:none;" />
                                 <span class="file_error" style="color:red"></span>
                             </div>
-                        </div>
-                        <div class="col-md-3">
+                        </div>*@
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label style="display:block; width:100%;"> previous image<span class="required">*</span></label>
+                                <label>Upload Grid Background Image<span class="required"></span></label>
+                                @*<label style="display:block; width:100%;"> previous image<span class="required">*</span></label>*@
                                 <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageBack" style="height:100px;width:100%;" />
                             </div>
                         </div>
@@ -893,30 +895,31 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>First Title<span class="required">*</span></label>
+                                <label>First Title<span class="required"></span></label>
                                 @Html.TextBox("First Title", (string)@ViewBag.Title1, new { @Name = "first_gridtitle", @class = "form-control", @readonly = "readonly" })
-                                @Html.ValidationMessage("", new { @class = "required" })
+                                @*@Html.ValidationMessage("", new { @class = "required" })*@
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Upload Image<span class="required">*</span></label>
+                                @*<label>Upload Image<span class="required">*</span></label>
                                 <input type="file" name="first_upload_gridchildmainimage" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>
+                                <span class="file_error" style="color:red"></span>*@
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label style="display:block; width:100%;"> Previous Image</label>
+                                <label>Upload Image<span class="required"></span></label>
+                                @*<label style="display:block; width:100%;"> Previous Image</label>*@
                                 <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image1" style="height:100px;" />
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Redirect Page<span class="required">*</span></label>
+                                @*<label>Redirect Page<span class="required">*</span></label>
                                 <select name="redirectpage1_Homecard" class="redirectpage1 form-control">
                                     <option>Select</option>
-                                </select>
+                                </select>*@
                             </div>
                         </div>
                     </div>
@@ -930,28 +933,29 @@
                             <div class="form-group">
                                 <label>Second Title<span class="required">*</span></label>
                                 @Html.TextBox("Second Title", (string)@ViewBag.Title2, new { @Name = "second_gridtitle", @class = "form-control", @readonly = "readonly" })
-                                @Html.ValidationMessage("", new { @class = "required" })
+                                @*@Html.ValidationMessage("", new { @class = "required" })*@
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @*<label>Upload Image<span class="required">*</span></label>
+                                <input type="file" name="second_upload_gridchildmainimage" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>*@
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Upload Image<span class="required">*</span></label>
-                                <input type="file" name="second_upload_gridchildmainimage" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label style="display:block; width:100%;">Previous Image</label>
+                                @*<label style="display:block; width:100%;">Previous Image</label>*@
                                 <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image2" style="height:100px;" />
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label> Redirect Page<span class="required">*</span></label>
+                                @*<label> Redirect Page<span class="required">*</span></label>
                                 <select name="redirectpage2_Homecard" class="redirectpage2 form-control">
                                     <option>Select</option>
-                                </select>
+                                </select>*@
                             </div>
                         </div>
                     </div>
@@ -965,28 +969,29 @@
                             <div class="form-group">
                                 <label>Third Title<span class="required">*</span></label>
                                 @Html.TextBox("Third Title", (string)@ViewBag.Title3, new { @Name = "third_gridtitle", @class = "form-control", @readonly = "readonly" })
-                                @Html.ValidationMessage("", new { @class = "required" })
+                                @*@Html.ValidationMessage("", new { @class = "required" })*@
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                @*<label>Upload Image<span class="required">*</span></label>
+                                <input type="file" name="third_upload_gridchildmainimage" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>*@
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Upload Image<span class="required">*</span></label>
-                                <input type="file" name="third_upload_gridchildmainimage" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label style="display:block; width:100%;">Previous Image</label>
+                                @*<label style="display:block; width:100%;">Previous Image</label>*@
                                 <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image3" style="height:100px;" />
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Redirect Page<span class="required">*</span></label>
-                                <select name="redirectpage3_Homecard" class="redirectpage3 form-control">
+                                @*<label>Redirect Page<span class="required">*</span></label>
+                                <select name="redirectpage3_Homecard" class="redirectpage3 form-control" >
                                     <option>Select</option>
-                                </select>
+                                </select>*@
                             </div>
                         </div>
                     </div>
@@ -1000,28 +1005,29 @@
                             <div class="form-group">
                                 <label>Fourth Title<span class="required">*</span></label>
                                 @Html.TextBox("Fourth Title", (string)@ViewBag.Title4, new { @Name = "four_gridtitle", @class = "form-control", @readonly = "readonly" })
-                                @Html.ValidationMessage("", new { @class = "required" })
+                                @*@Html.ValidationMessage("", new { @class = "required" })*@
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Upload Image<span class="required">*</span></label>
+                                @*<label>Upload Image<span class="required">*</span></label>
                                 <input type="file" name="four_upload_gridchildmainimage" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>
+                                <span class="file_error" style="color:red"></span>*@
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label style="display:block; width:100%;"> Previous Image</label>
+                                <label>Upload Image<span class="required"></span></label>
+                                @*<label style="display:block; width:100%;"> Previous Image</label>*@
                                 <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image4" style="height:100px;" />
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label> Redirect Page<span class="required">*</span></label>
+                                @*<label> Redirect Page<span class="required">*</span></label>
                                 <select name="redirectpage4_Homecard" class="redirectpage4 form-control">
                                     <option>Select</option>
-                                </select>
+                                </select>*@
                             </div>
                         </div>
                     </div>
@@ -1032,23 +1038,24 @@
                 <div class="addgift" style="padding-bottom: 10px;">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Redirect Page<span class="required">*</span></label>
+                            @*<div class="form-group">
+                                <label>Redirect Page<span class="required"></span></label>
                                 <select name="redirectpage1_knowMore" class="redirectpage1 form-control">
                                     <option>Select</option>
                                 </select>
-                            </div>
+                            </div>*@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Upload Image<span class="required">*</span></label>
+                                @*<label>Upload Image<span class="required">*</span></label>
                                 <input type="file" name="mainimage_KnowMoreCard" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>
+                                <span class="file_error" style="color:red"></span>*@
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>
+                                <label>Upload Image<span class="required"></span></label>
+                                @*<label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>*@
                                 <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
                             </div>
                         </div>
@@ -1061,16 +1068,16 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Button Know More Colour<span class="required">*</span></label>
+                                <label>Button Know More Colour<span class="required"></span></label>
                                 @Html.TextBox("Action1_Colour", (string)@ViewBag.Colour, new { @Name = "KnowMoreColor", @class = "form-control", @readonly = "readonly" })
-                                @Html.ValidationMessage("Action1_Colour", "", new { @class = "required" })
+                                @*@Html.ValidationMessage("Action1_Colour", "", new { @class = "required" })*@
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label> Button Know More Text<span class="required">*</span></label>
+                                <label> Button Know More Text<span class="required"></span></label>
                                 @Html.TextBox("Action1_Text", (string)@ViewBag.Text, new { @Name = "KnowMoreText", @class = "form-control", @readonly = "readonly" })
-                                @Html.ValidationMessage("Action1_Text", "", new { @class = "required" })
+                                @*@Html.ValidationMessage("Action1_Text", "", new { @class = "required" })*@
                             </div>
                         </div>
 

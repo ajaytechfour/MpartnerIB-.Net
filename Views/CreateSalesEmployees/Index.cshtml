@@ -1,6 +1,456 @@
-﻿@{
-    ViewBag.Title = "Index";
+﻿@*@model LuminousMpartnerIB.Models*@
+@{
+    ViewBag.Title = "Sales Employee";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+
 }
 
-<h2>Index</h2>
+@*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>*@
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#btnsubmit").click(function () {
+            debugger;
+
+
+            if ($("#EmployeeName").val() == "") {
+                $("#lblmessagesubmit").text("Please fill Employee Name ");
+                return false;
+            }
+            if ($("#EmployeeAddress").val() == "") {
+                $("#lblmessagesubmit").text("Please fill Employee Address");
+                return false;
+            }
+
+            if ($('#ddlCountryMaster').val() == 0 || $('#ddlCountryMaster option:selected').val() == 0) {
+                $("#lblmessagesubmit").text("Please select Country");
+                return false;
+            }
+
+            if ($('#ddlStateMaster').val() == 0 || $('#ddlStateMaster option:selected').val() == 0) {
+                $("#lblmessagesubmit").text("Please select State");
+                return false;
+            }
+
+            if ($('#ddlCityMaster').val() == 0 || $('#ddlCityMaster option:selected').val() == 0) {
+                $("#lblmessagesubmit").text("Please select City");
+                return false;
+            }
+
+
+            if ($("#ContactNo").val() == "") {
+                $("#lblmessagesubmit").text("Please fill Contact No.");
+                return false;
+            }
+
+            if ($("#Email").val() == "") {
+                $("#lblmessagesubmit").text("Please fill Email");
+                return false;
+            }
+
+            var email = $('#Email').val();
+
+            //if (IsEmail(email) == false) {
+            //    $('#invalid_email').show();
+            //    return false;
+            //}
+
+
+            var objdata = new Object();
+
+
+            objdata.Name = $('#EmployeeName').val();
+            objdata.Address = $('#EmployeeAddress').val();
+            objdata.ContactNo = $('#ContactNo').val();
+            objdata.Email = $('#Email').val();
+
+            objdata.State = $('#ddlStateMaster option:selected').text();
+            objdata.City = $('#ddlCityMaster option:selected').text();
+            objdata.SapCode = $('#SapCode').val();
+            objdata.Country = $('#ddlCountryMaster option:selected').text();
+
+            //debugger;
+            $.ajax({
+                url: "/CreateSalesEmployees/saveData",
+                type: "POST",
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ obj: objdata }),
+                datatype: "json",
+                success: function (data) {
+                    debugger;
+                    if (data != "") {
+                        debugger;
+                        //var result = JSON.parse(data);
+                        //alert(result);
+                        $('#lblmessagesubmit').text("");
+
+                        if (data.Message != "") {
+
+                            $('#lblmessagesubmit').text(data.Message);
+                            $('#ddlCountryMaster').val(0);
+                            $('#ddlStateMaster').val(0);
+                            $('#ddlCityMaster').val(0);
+                            $('#EmployeeName').val('');
+                            $('#EmployeeAddress').val('');
+                            $('#ContactNo').val('');
+                            $('#Email').val('');
+
+                            SetGrid(data);
+
+                        }
+
+                        if (data.MessageExist != "") {
+                            debugger;
+                            $('#lblmessagesubmit').text(data.MessageExist);
+                        }
+
+                    }
+                },
+                error: function (errormessage) {
+                    debugger;
+                    alert(errormessage.responseText);
+                }
+            });
+
+
+
+         });
+
+
+
+    });
+
+
+     @*function IsEmail(email)
+        {
+     //var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+ ([a - zA - Z0 - 9]{ 2, 4})+$ /;
+
+     var regex = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+               if(!regex.test(email)) {
+                  return false;
+                }else{
+                 return true;
+                 }
+     }*@
+
+
+
+    $(function () {
+        debugger;
+         $.post("@Url.Content("~/CreateSalesEmployees/getCountryMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");
+        @*$.post("@Url.Content("~/Distributor/getStateMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");*@
+        $.post("@Url.Content("~/CreateSalesEmployees/GetGridData")", null, function (data) { SetGrid(data); }, "Json");
+
+        setTimeout(function () {
+            $('#lblmessagesuccess').fadeOut("slow");
+        }, 15000);
+
+
+        $(".numeric").keypress(function (e) {
+            debugger;
+            if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
+        });
+
+
+    });
+
+
+
+
+    //Set Parent Category//
+    function SetDistributerMaster(data) {
+        option = "";
+        var procat = $("#ddlCountryMaster");
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+        });
+        procat.append(option);
+        //ddlStateMaster
+    }
+
+    function GetState(e) {
+        debugger;
+        var id = e;
+        if (id == "0") {
+            // $("#Address1").val("");
+        }
+        else {
+            $.post("@Url.Content("~/CreateSalesEmployees/getStateByCountry")", { countryId: id }, function (data) { SetStateMaster(data); }, "Json");
+        }
+    }
+
+    function GetCity(e) {
+        debugger;
+        var id = e;
+        if (id == "0") {
+            // $("#Address1").val("");
+        }
+        else {
+            $.post("@Url.Content("~/CreateSalesEmployees/GetCityBystate")", { stateId: id }, function (data) { SetCityMaster(data); }, "Json");
+        }
+    }
+
+    function SetStateMaster(data) {
+        option = "";
+        var procat = $("#ddlStateMaster");
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+        });
+        procat.append(option);
+    }
+
+
+    function SetCityMaster(data) {
+        option = "";
+        var procat = $("#ddlCityMaster");
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+        });
+        procat.append(option);
+    }
+
+
+    function SetGrid(data) {
+        debugger;
+
+        var body = "";
+        $("#Grid tbody").empty();
+        $.each(data.result, function (key, value) {
+            debugger;
+
+            body += "<tr><td> " + value.UserId + "</td>" +
+                "<td>" + value.CustomerType + "</td>" +
+
+
+                "<td>" + value.Name + "</td>" +
+                "<td>" + value.Address + "</td>" +
+                "<td>" + value.City + "</td>" +
+
+                "<td>" + value.State + "</td>" +
+
+                "<td>" + value.ContactNo + "</td>" +
+
+
+                //"<td>" + value.Email + "</td>" +
+                //"<td>" + value.CreatedBY + "</td>" +
+
+                "<td style='display: none'>" + value.id + "</td>" +
+
+                //"<td style='text-align:right;'></td></tr>";
+
+                "<td style='text-align:right;'>  <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+
+            //"<td style='text-align:right;'>  <a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+
+        });
+        $("#Grid tbody").append(body);
+        // SetPages(data.TotalRecord)
+
+        paging();
+    }
+
+
+    function Delete(id) {
+        debugger;
+        if (confirm("Do You Want To Delete This Record")) {
+
+            $.post("@Url.Content("~/CreateSalesEmployees/Delete")", { id: id }, function (data) {
+
+               $.post("@Url.Content("~/CreateSalesEmployees/GetGridData")", null, function (data) { SetGrid(data); }, "Json");
+
+                alert(data);
+
+            }, "Json");
+        }
+    }
+
+
+</script>
+
+
+
+
+
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span></span>Sales Employee </h1>
+        </div>
+    </div>
+    <div id="form">
+        @using (Html.BeginForm("Index", "SchedulePDIVisit", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Employee Name <span class="required">*</span></label>
+                                    <input id="EmployeeName" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control" name="EmployeeName" />
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Employee Address <span class="required">*</span></label>
+                                    <input id="EmployeeAddress" type="text" autocomplete="off" placeholder="Distributor Address" class="date form-control" name="EmployeeAddress" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Sap Code <span class="required">*</span></label>
+                                    <input id="SapCode" type="text" autocomplete="off" placeholder="Sap Code" class="date form-control" name="SapCode" />
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Country <span class="required">*</span></label>
+                                    <select name="Country" id="ddlCountryMaster" onchange="GetState(this.value);" class="form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>State <span class="required">*</span></label>
+                                    <select name="states" id="ddlStateMaster" onchange="GetCity(this.value);" class="form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>City<span class="required">*</span></label>
+                                    <select name="City" id="ddlCityMaster" class="form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Contact No <span class="required">*</span></label>
+                                    <input id="ContactNo" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control numeric" name="ContactNo" />
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Email<span class="required">*</span></label>
+                                    <input id="Email" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control" name="Email" />
+                                    <span style="display:none" class="error" id="invalid_email">Email-id is invalid</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom:30px;">
+                        <div class="row" id="GridView">
+                            <div class="col-md-12">
+                                <input type="button" id="btnsubmit" value="Submit" class="submitBtn" />
+                                <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
+                                <label id="lblmessagesuccess" style="font-size: 16px; color:red;"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom:30px;">
+                        <div>
+                            @using (Html.BeginForm("Index", "CreatePermotionPrice_New", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+
+                                <table class="headingHd" style="width:100%;">
+                                    <tr>
+                                        <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Distributor List</th>
+
+                                        @*<th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:15px; opacity: 0.2;">
+
+                                            </th>*@
+                                    </tr>
+                                </table>
+                            }
+                        </div>
+                        <div id="list" class="tabelGridRow">
+                            <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:15px; margin-bottom:15px">
+                                <thead>
+                                    <tr>
+                                        <th>UserId</th>
+                                        <th>Customer Type</th>
+                                        <th>Name</th>
+                                        <th>Address </th>
+                                        <th>City</th>
+                                        <th>State</th>
+                                        <th>Contact No</th>
+                                        @*<th>Email</th>*@
+                                        @*<th>Created BY</th>*@
+                                        <th style="display:none">id</th>
+                                        <th style="text-align:right; width:10%;">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+
+                            </table>
+                            <div>
+                                Pages :<span id="Paging"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        }
+    </div>
+
+    <div class="space30"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footerRow">
+                © Copyright 2019 Luminous | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</div>
