@@ -230,7 +230,7 @@
         $.each(data.result, function (key, value) {
             debugger;
 
-            body += "<tr><td> " + value.UserId + "</td>" +
+            body += "<tr><td> " + value.SapCode + "</td>" +
                 "<td>" + value.CustomerType + "</td>" +
 
 
@@ -299,15 +299,15 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Employee Name <span class="required">*</span></label>
-                                    <input id="EmployeeName" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control" name="EmployeeName" />
+                                    <label>Employee Name <span class="required"></span></label>
+                                    <input id="EmployeeName" type="text" autocomplete="off" placeholder="Employee Name" class="date form-control" name="EmployeeName" />
 
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="">
                                     <label>Employee Address <span class="required">*</span></label>
-                                    <input id="EmployeeAddress" type="text" autocomplete="off" placeholder="Distributor Address" class="date form-control" name="EmployeeAddress" />
+                                    <input id="EmployeeAddress" type="text" autocomplete="off" placeholder="Employee Address" class="date form-control" name="EmployeeAddress" />
 
                                 </div>
                             </div>
@@ -415,7 +415,7 @@
                             <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:15px; margin-bottom:15px">
                                 <thead>
                                     <tr>
-                                        <th>UserId</th>
+                                        <th>SapCode</th>
                                         <th>Customer Type</th>
                                         <th>Name</th>
                                         <th>Address </th>

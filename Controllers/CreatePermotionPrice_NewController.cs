@@ -23,9 +23,9 @@ namespace LuminousMpartnerIB.Controllers
         private DataTable dt = new DataTable();
         private string PageUrl = "/CreatePermotionPrice_New/Index";
         string utype = string.Empty;
+
         public ActionResult Index(string Search)
-        {
-          
+        {          
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");

@@ -20,6 +20,7 @@ namespace LuminousMpartnerIB.Controllers
         LuminousMpartnerIBEntities db;
         List<SideBarMenuModel> sideBarMenuLst = new List<SideBarMenuModel>();
         string userid = string.Empty;
+        string utype = string.Empty;
 
         public CreateSalesEmployeesController()
         {
@@ -34,7 +35,15 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                return View();
+                utype = Session["ctype"].ToString();
+                if (utype == "Luminous")
+                {
+                    return RedirectToAction("Index", "CreateSalesEmployeesView");
+                }
+                else
+                {
+                    return View();
+                }
             }
         }
 
@@ -53,6 +62,7 @@ namespace LuminousMpartnerIB.Controllers
                               {
                                   id = vs.id,
                                   UserId = vs.UserId,
+                                  SapCode = vs.Dis_Sap_Code,
                                   CustomerType = vs.CustomerType,
                                   Name = vs.Dis_Name,
                                   Address = vs.Dis_Address1,
