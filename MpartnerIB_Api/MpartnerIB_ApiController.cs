@@ -2669,7 +2669,13 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
             MessageData msgdata = new MessageData();
 
-            var contactusdata = luminous.contactUsDetails.Where(c => c.Cstatus == 1 && c.CreatedBy == userid).Count();
+            var usertype = luminous.UsersLists.Where(c => c.UserId == userid).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
+            if (usertype.CustomerType == "Dealer" || usertype.CustomerType == "DEALER")
+            {
+                userid = usertype.CreatedBY;
+            }
+
+            var contactusdata = luminous.getContactUs_Details(userid).Count();
 
             if (contactusdata == 0)
             {
@@ -3377,7 +3383,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return res;
         }
 
-        public object getJson_contactus_details(string message, string status, string token, List<ContactUs> carddata)
+        public object getJson_contactus_details(string message, string status, string token, dynamic carddata)
         {
 
             var json = JsonConvert.SerializeObject(new
@@ -5799,12 +5805,12 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return cat_menu_upper;
         }
 
-        public List<ContactUs> getContactUs(string userid)
+        public dynamic getContactUs(string userid)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
 
             //Get Home Page List
-            List<ContactUs> contactus_data = new List<ContactUs>();
+
             MessageData msgdata = new MessageData();
 
 
@@ -5817,62 +5823,10 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 {
                     userid = usertype.CreatedBY;
                 }
-                var getContact = luminous.contactUsDetails.Where(c => c.Cstatus == 1 && c.CreatedBy == userid).Select(c => new { c.id, c.Contact_Us_Type, c.CAddress, c.PhoneNumber, c.Email, c.Fax }).ToList();
+                var getContact = luminous.getContactUs_Details(userid);
 
 
-
-                foreach (var data in getContact)
-                {
-
-                    ContactUs contact_us = new ContactUs();
-
-
-                    if (data.Contact_Us_Type == "")
-                    {
-                        contact_us.contactus_title = "";
-                    }
-                    else
-                    {
-                        contact_us.contactus_title = data.Contact_Us_Type;
-                    }
-
-                    if (data.CAddress == "")
-                    {
-                        contact_us.address = "";
-                    }
-                    else
-                    {
-                        contact_us.address = data.CAddress;
-                    }
-                    if (data.PhoneNumber == "")
-                    {
-                        contact_us.phoneno = "";
-                    }
-                    else
-                    {
-                        contact_us.phoneno = data.PhoneNumber;
-                    }
-                    if (data.Fax == "")
-                    {
-                        contact_us.sales_support_phoneno = "";
-                    }
-                    else
-                    {
-                        contact_us.sales_support_phoneno = data.Fax;
-                    }
-                    if (data.Email == "")
-                    {
-                        contact_us.email = "";
-                    }
-                    else
-                    {
-                        contact_us.email = data.Email;
-                    }
-
-                    contactus_data.Add(contact_us);
-
-
-                }
+                return getContact;
 
                 // }
 
@@ -5886,7 +5840,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
                 SaveServiceLog("", url, "", "", 1, exc.InnerException.ToString(), "", DateTime.Now, "", "", "", "");
             }
-            return contactus_data;
+            return "";
         }
 
         #region save contact us suggestion
