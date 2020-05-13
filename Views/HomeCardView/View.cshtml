@@ -706,7 +706,10 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Home Card - </span> View</h1>
+            @if (Session["seldistributor"] != null)
+            {
+                <h1 class="pageHeading"><span>@Session["seldistributor"].ToString() </span></h1>
+            }
         </div>
     </div>
     <div id="form" style="position:relative;">
@@ -1119,12 +1122,12 @@
                                 <input id="edate" type="text" class="date form-control" name="EndDate" value="@ViewBag.PreEndDate" readonly="readonly" />
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        @*<div class="col-md-4">
                             <div class="form-group">
                                 <label> Status</label>
                                 <input type="checkbox" checked="checked" name="statusC" disabled="disabled" />
                             </div>
-                        </div>
+                        </div>*@
                     </div>
                 </div>
             </div>

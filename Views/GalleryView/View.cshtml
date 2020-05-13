@@ -1,6 +1,6 @@
 ﻿@model LuminousMpartnerIB.EF.MediaData
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "View";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
@@ -132,7 +132,10 @@
 <div id="page-wrapper" style="background: #f2f4f8; min-height:800px;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Gallery - </span> Edit Gallery</h1>
+            @if (Session["seldistributor"] != null)
+            {
+                <h1 class="pageHeading"><span>@Session["seldistributor"].ToString() </span></h1>
+            }
         </div>
     </div>
 
@@ -167,18 +170,18 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="p">
+                        @*<div class="p">
                             <label>Status <span style="color: red;">*</span></label>
                             <input id="status" type="checkbox" checked="checked" name="Status" style="border:none; height:inherit;" readonly="readonly" />
                             <br />
                             <span class="Status"></span>
-                        </div>
+                        </div>*@
                     </div>
-                    <div class="col-md-12">
+                    @*<div class="col-md-12">
                         <div class="form-group">
                             <input type="button" class="submitBtn" value="Back" , readonly="readonly" />
                         </div>
-                    </div>
+                    </div*@>
                 </div>
             </div>
         </div>

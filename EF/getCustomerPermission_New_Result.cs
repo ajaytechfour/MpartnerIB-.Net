@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Luminous.EF
+namespace LuminousMpartnerIB.EF
 {
     using System;
     
@@ -18,5 +18,6 @@ namespace Luminous.EF
         public string Usertype { get; set; }
         public Nullable<int> Permission { get; set; }
         public string ModuleImage { get; set; }
+        public string languagecode { get; set; }
     }
 }

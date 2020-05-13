@@ -1,7 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="LuminousMpartnerIBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotificationAccessTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="AlertNotificationAccessTable">
     <Key>
       <PropertyRef Name="id" />
@@ -22,8 +20,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotificationAccessTabl
     <Property Name="SpecificDealerAccess" Type="varchar" MaxLength="20" />
     <Property Name="SpecificDestriAccess" Type="varchar" MaxLength="20" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotificationReadStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="AlertNotificationReadStatus">
     <Key>
       <PropertyRef Name="id" />
@@ -34,8 +30,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotificationReadStatus
     <Property Name="UserId" Type="varchar" MaxLength="100" />
     <Property Name="DeviceId" Type="varchar" MaxLength="100" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotifications' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="AlertNotifications">
     <Key>
       <PropertyRef Name="id" />
@@ -51,8 +45,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotifications' does no
     <Property Name="ModifyOn" Type="datetime" />
     <Property Name="Type" Type="varchar" MaxLength="5" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.AlertNotifications_History' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="AlertNotifications_History">
     <Key>
       <PropertyRef Name="id" />
@@ -123,13 +115,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.App_Log' does not have a pr
     <Property Name="Version" Type="varchar" MaxLength="10" />
     <Property Name="Status" Type="bit" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.Auditlog_Userverificationstatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Auditlog_Userverificationstatus">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Userverification_Id" Type="int" />
     <Property Name="UserId" Type="varchar" MaxLength="100" />
     <Property Name="Otp" Type="varchar" MaxLength="20" />
@@ -147,13 +137,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.Auditlog_Userverificationst
     <Property Name="Fcm_token" Type="varchar" MaxLength="500" />
     <Property Name="LanguageCode" Type="varchar" MaxLength="10" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.Card_ActionMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Card_ActionMaster">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Id" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Deeplink" Type="varchar" MaxLength="100" />
     <Property Name="Pagename" Type="varchar" MaxLength="100" />
     <Property Name="CreatedOn" Type="datetime" />
@@ -204,13 +192,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.Card_ColourMaster' does not
     <Property Name="ModifiedBy" Type="varchar" MaxLength="30" />
     <Property Name="Status" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.Card_dynamicPage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Card_dynamicPage">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Id" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CardProviderId" Type="varchar" MaxLength="20" />
     <Property Name="CardProviderName" Type="varchar" MaxLength="100" />
     <Property Name="CardActionId" Type="varchar" MaxLength="20" />
@@ -247,14 +233,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.Card_dynamicPage' does not 
     <Property Name="SystemMainImage" Type="varchar" MaxLength="100" />
     <Property Name="Sequence" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.Card_dynamicPage_History' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Card_dynamicPage_History">
     <Key>
       <PropertyRef Name="Id" />
-      <PropertyRef Name="Parent_Card_Id" />
     </Key>
-    <Property Name="Id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Id" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Parent_Card_Id" Type="bigint" Nullable="false" />
     <Property Name="CardProviderId" Type="varchar" MaxLength="20" />
     <Property Name="CardProviderName" Type="varchar" MaxLength="100" />
@@ -367,13 +350,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.city_history' does not have
     <Property Name="updatedby" Type="nvarchar" MaxLength="50" />
     <Property Name="deletedby" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.contactUsDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="contactUsDetail">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Contact_Us_Type" Type="varchar" MaxLength="100" />
     <Property Name="CAddress" Type="varchar" MaxLength="500" />
     <Property Name="PhoneNumber" Type="varchar" MaxLength="30" />
@@ -384,6 +365,9 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.contactUsDetail' does not h
     <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
     <Property Name="ModifiedDate" Type="date" />
     <Property Name="ModifiedBy" Type="varchar(max)" />
+    <Property Name="Country" Type="int" />
+    <Property Name="State" Type="int" />
+    <Property Name="City" Type="int" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'LuminousMpartnerIB.dbo.contactUsDetail_History' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -426,6 +410,14 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ContestPicture_Tab' does no
     <Property Name="CreatedOn" Type="datetime" />
     <Property Name="CreatedBy" Type="varchar" MaxLength="20" />
   </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryID" Type="int" />
+    <Property Name="CountryName" Type="varchar" MaxLength="100" />
+  </EntityType>
   <EntityType Name="CustomerModule">
     <Key>
       <PropertyRef Name="ModId" />
@@ -461,7 +453,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ContestPicture_Tab' does no
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="DealerID" Type="bigint" />
+    <Property Name="DealerID" Type="varchar" MaxLength="20" />
     <Property Name="ImageName" Type="nvarchar(max)" />
     <Property Name="status" Type="int" />
     <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
@@ -596,13 +588,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.EscalationMatrix_History' d
     <Property Name="status" Type="int" />
     <Property Name="Phoneno" Type="varchar" MaxLength="15" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.FAQ' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="FAQ">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="QuestionName" Type="varchar(max)" />
     <Property Name="Answer" Type="varchar(max)" />
     <Property Name="StartDate" Type="datetime" />
@@ -613,13 +603,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.FAQ' does not have a primar
     <Property Name="ModifiedOn" Type="datetime" />
     <Property Name="Status" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.FAQ_History' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="FAQ_History">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Id" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FAQ_ParentId" Type="numeric" Precision="18" Scale="0" />
     <Property Name="QuestionName" Type="varchar" MaxLength="200" />
     <Property Name="Answer" Type="varchar(max)" />
@@ -631,8 +619,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.FAQ_History' does not have 
     <Property Name="ModifiedOn" Type="datetime" />
     <Property Name="Status" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.FooterCategory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="FooterCategory">
     <Key>
       <PropertyRef Name="Id" />
@@ -643,8 +629,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.FooterCategory' does not ha
     <Property Name="CatType" Type="varchar" MaxLength="5" />
     <Property Name="CreatedOn" Type="datetime" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.FooterCategoryHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="FooterCategoryHistory">
     <Key>
       <PropertyRef Name="Id" />
@@ -710,16 +694,14 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.MappingUrl_Page' does not h
     <Property Name="CreatedOn" Type="datetime" />
     <Property Name="PageName" Type="varchar" MaxLength="100" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.MediaData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="MediaData">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="VideoName" Type="varchar" MaxLength="200" />
     <Property Name="Url" Type="varchar(max)" />
-    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="20" />
     <Property Name="CreatedOn" Type="datetime" />
     <Property Name="ModifyBy" Type="int" />
     <Property Name="ModifyOn" Type="datetime" />
@@ -728,17 +710,15 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.MediaData' does not have a 
     <Property Name="Status" Type="int" />
     <Property Name="PageFlag" Type="varchar" MaxLength="10" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.MediaDataHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="MediaDataHistory">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MediaDataId" Type="int" />
     <Property Name="VideoName" Type="varchar" MaxLength="200" />
     <Property Name="Url" Type="varchar(max)" />
-    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="20" />
     <Property Name="CreatedOn" Type="datetime" />
     <Property Name="ModifyBy" Type="int" />
     <Property Name="ModifyOn" Type="datetime" />
@@ -846,13 +826,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationReadStatus' doe
     <Property Name="Alertflag" Type="varchar" MaxLength="1" />
     <Property Name="ImagePath" Type="varchar" MaxLength="500" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationsHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="NotificationsHistory">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NotificationId" Type="int" />
     <Property Name="_Subject" Type="varchar" MaxLength="100" />
     <Property Name="_text" Type="varchar" MaxLength="250" />
@@ -862,13 +840,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationsHistory' does 
     <Property Name="Alertflag" Type="varchar" MaxLength="1" />
     <Property Name="ImagePath" Type="varchar" MaxLength="500" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationSurvey' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="NotificationSurvey">
     <Key>
       <PropertyRef Name="SurveyID" />
     </Key>
-    <Property Name="SurveyID" Type="int" Nullable="false" />
+    <Property Name="SurveyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Survey" Type="varchar(max)" />
     <Property Name="QuestionType" Type="varchar" MaxLength="20" />
     <Property Name="QuestionTitle" Type="nvarchar(max)" />
@@ -880,20 +856,18 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationSurvey' does no
     <Property Name="CorrectAns" Type="nvarchar(max)" />
     <Property Name="StartDate" Type="datetime" />
     <Property Name="Enddate" Type="datetime" />
-    <Property Name="CreatedBy" Type="int" />
     <Property Name="CreatedOn" Type="datetime" />
     <Property Name="ModifyBy" Type="int" />
     <Property Name="ModifyOn" Type="datetime" />
     <Property Name="Status" Type="int" />
     <Property Name="ContestId" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="20" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationSurveyHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="NotificationSurveyHistory">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SurveyID" Type="int" />
     <Property Name="Survey" Type="varchar(max)" />
     <Property Name="QuestionType" Type="varchar" MaxLength="20" />
@@ -906,12 +880,12 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationSurveyHistory' 
     <Property Name="CorrectAns" Type="varchar" MaxLength="50" />
     <Property Name="StartDate" Type="datetime" />
     <Property Name="Enddate" Type="datetime" />
-    <Property Name="CreatedBy" Type="int" />
     <Property Name="CreatedOn" Type="datetime" />
     <Property Name="ModifyBy" Type="int" />
     <Property Name="ModifyOn" Type="datetime" />
     <Property Name="deviceIP" Type="varchar" MaxLength="20" />
     <Property Name="Status" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="ParentCategory">
     <Key>
@@ -927,8 +901,6 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.NotificationSurveyHistory' 
     <Property Name="PageName" Type="varchar" MaxLength="20" />
     <Property Name="PdfUrl" Type="varchar(max)" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.ParentCategoryhistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="ParentCategoryhistory">
     <Key>
       <PropertyRef Name="ID" />
@@ -943,12 +915,53 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ParentCategoryhistory' does
     <Property Name="ModifyOn" Type="datetime" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.Price_SchemeAccessTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="Price_SchemeAccessTable">
+warning 6002: The table/view 'LuminousMpartnerIB.dbo.PermotionsList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PermotionsList">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="PermotionTypeId" Type="int" />
+    <Property Name="ProductCatId" Type="int" />
+    <Property Name="ProductLvlOneId" Type="int" />
+    <Property Name="Descriptions" Type="varchar(max)" />
+    <Property Name="ImageName" Type="varchar" MaxLength="100" />
+    <Property Name="status" Type="int" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Enddate" Type="datetime" />
+    <Property Name="createdate" Type="datetime" />
+    <Property Name="createby" Type="varchar" MaxLength="100" />
+    <Property Name="modifieddate" Type="datetime" />
+    <Property Name="Modifiedby" Type="varchar" MaxLength="100" />
+    <Property Name="PDFName" Type="varchar" MaxLength="100" />
+    <Property Name="ParentCatid" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LuminousMpartnerIB.dbo.PermotionsListHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PermotionsListHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="promotionListId" Type="int" />
+    <Property Name="PermotionTypeId" Type="int" />
+    <Property Name="ProductCatId" Type="int" />
+    <Property Name="ProductLvlOneId" Type="int" />
+    <Property Name="Descriptions" Type="varchar(max)" />
+    <Property Name="ImageName" Type="varchar" MaxLength="100" />
+    <Property Name="status" Type="int" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Enddate" Type="datetime" />
+    <Property Name="modifieddate" Type="datetime" />
+    <Property Name="Modifiedby" Type="varchar" MaxLength="100" />
+    <Property Name="PDFName" Type="varchar" MaxLength="100" />
+    <Property Name="ParentCatid" Type="int" />
+  </EntityType>
+  <EntityType Name="Price_SchemeAccessTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="RegId" Type="int" />
     <Property Name="DestributorID" Type="int" />
     <Property Name="DealerId" Type="int" />
@@ -1040,13 +1053,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ProductAccessTableForProduc
     <Property Name="PdfOriginalName" Type="varchar" MaxLength="100" />
     <Property Name="PdfSystemName" Type="varchar" MaxLength="100" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.ProductLevelOne' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="ProductLevelOne">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="pcId" Type="int" />
     <Property Name="Name" Type="varchar" MaxLength="100" />
     <Property Name="PlStatus" Type="int" />
@@ -1075,13 +1086,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ProductLevelOneHistory' doe
     <Property Name="startDate" Type="datetime" />
     <Property Name="enddate" Type="datetime" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.ProductLevelThree' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="ProductLevelThree">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="pc_Lv2_oneId" Type="int" />
     <Property Name="PrCode" Type="varchar" MaxLength="100" />
     <Property Name="PrDiscription" Type="varchar(max)" />
@@ -1176,7 +1185,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ProductLevelThreeHistory' d
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="pc_Lvl_oneId" Type="int" />
     <Property Name="Name" Type="varchar" MaxLength="100" />
     <Property Name="PlTwStatus" Type="int" />
@@ -1209,13 +1218,11 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ProductLevelThreeHistory' d
     <Property Name="ImageName" Type="varchar" MaxLength="60" />
     <Property Name="ImageFileName" Type="varchar" MaxLength="70" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.ProductthreeImageMapping' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="ProductthreeImageMapping">
     <Key>
       <PropertyRef Name="ProductID" />
     </Key>
-    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ProductLevelThreeid" Type="int" />
     <Property Name="Primage" Type="varchar" MaxLength="200" />
   </EntityType>
@@ -1258,9 +1265,8 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.Regions' does not have a pr
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="StateID" Type="int" />
     <Property Name="StateName" Type="varchar" MaxLength="100" />
+    <Property Name="CountryID" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'LuminousMpartnerIB.dbo.Suggestion' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Suggestion">
     <Key>
       <PropertyRef Name="id" />
@@ -1430,6 +1436,8 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.useraccounthistory' does no
     <Property Name="Latitude" Type="decimal" Precision="12" Scale="9" />
     <Property Name="Longitude" Type="decimal" Precision="12" Scale="9" />
     <Property Name="GoogleAddress" Type="nvarchar(max)" />
+    <Property Name="Language" Type="varchar" MaxLength="20" />
+    <Property Name="Country" Type="varchar(max)" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1515,7 +1523,19 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
     <Property Name="languageCode" Type="varchar" MaxLength="10" />
     <Property Name="LoggedDate" Type="datetime" />
   </EntityType>
-  <Association Name="FK__ProductLe__Prduc__5CA1C101">
+  <Association Name="FK__ProductLe__pc_Lv__2FCF1A8A">
+    <End Role="ProductLevelTwo" Type="Self.ProductLevelTwo" Multiplicity="0..1" />
+    <End Role="ProductLevelThree" Type="Self.ProductLevelThree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelTwo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThree">
+        <PropertyRef Name="pc_Lv2_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__Prduc__29E1370A">
     <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
     <End Role="ProductLevelTwo" Type="Self.ProductLevelTwo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1524,6 +1544,30 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
       </Principal>
       <Dependent Role="ProductLevelTwo">
         <PropertyRef Name="PrductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__produ__30C33EC3">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductLevelThree" Type="Self.ProductLevelThree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThree">
+        <PropertyRef Name="productCategoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLev__pcId__2704CA5F">
+    <End Role="ProductCatergory" Type="Self.ProductCatergory" Multiplicity="0..1" />
+    <End Role="ProductLevelOne" Type="Self.ProductLevelOne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelOne">
+        <PropertyRef Name="pcId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1539,9 +1583,30 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="get_UserProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Userid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetAlertNotificationByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getCatalog_Upper" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+    <Parameter Name="prodcatid" Type="int" Mode="In" />
+  </Function>
   <Function Name="GetColumnNames" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getContactUs_Details" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Userid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getCustomerPermission_New" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="Languagecode" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="GetNotificationAccessTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Nid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetPrice_SchemeByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+    <Parameter Name="Pagename" Type="varchar" Mode="In" />
   </Function>
   <Function Name="GetProductLevelFourAccessTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Pid" Type="int" Mode="In" />
@@ -1549,10 +1614,44 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
   <Function Name="GetSurveyRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id" Type="int" Mode="In" />
   </Function>
+  <Function Name="HomePage_Paging" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageId" Type="int" Mode="In" />
+    <Parameter Name="TotalPage" Type="int" Mode="In" />
+    <Parameter Name="pagename" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="MHrVarifyOtpNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="empid" Type="varchar" Mode="In" />
+    <Parameter Name="imeinumber" Type="varchar" Mode="In" />
+    <Parameter Name="osversion" Type="varchar" Mode="In" />
+    <Parameter Name="devicename" Type="varchar" Mode="In" />
+    <Parameter Name="otp" Type="varchar" Mode="In" />
+    <Parameter Name="appid" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="devid" Type="varchar" Mode="In" />
+    <Parameter Name="ostype" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="PermotonsListPagingScheme_Price_New" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="pagename" Type="varchar" Mode="In" />
   </Function>
   <Function Name="ProductLevelThreePaging" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Sp_MHrCreateOtp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="empid" Type="varchar" Mode="In" />
+    <Parameter Name="imeinumber" Type="varchar" Mode="In" />
+    <Parameter Name="osversion" Type="varchar" Mode="In" />
+    <Parameter Name="devicename" Type="varchar" Mode="In" />
+    <Parameter Name="appversion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_UserPermission_bottomMenu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="update_Userverification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Userid" Type="varchar" Mode="In" />
+    <Parameter Name="osversion" Type="varchar" Mode="In" />
+    <Parameter Name="ostype" Type="varchar" Mode="In" />
+    <Parameter Name="appversion" Type="varchar" Mode="In" />
+    <Parameter Name="deviceid" Type="varchar" Mode="In" />
+    <Parameter Name="fcm_token" Type="varchar" Mode="In" />
+    <Parameter Name="token" Type="varchar(max)" Mode="In" />
+  </Function>
   <Function Name="userIdForPushNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="NotificationId" Type="int" Mode="In" />
   </Function>
@@ -1561,9 +1660,19 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
     <Parameter Name="userid" Type="varchar" Mode="In" />
   </Function>
   <EntityContainer Name="LuminousMpartnerIBModelStoreContainer">
+    <EntitySet Name="AlertNotificationAccessTable" EntityType="Self.AlertNotificationAccessTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AlertNotificationReadStatus" EntityType="Self.AlertNotificationReadStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AlertNotifications" EntityType="Self.AlertNotifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AlertNotifications_History" EntityType="Self.AlertNotifications_History" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AllPages" EntityType="Self.AllPages" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AppVersion" EntityType="Self.AppVersion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Auditlog_Userverificationstatus" EntityType="Self.Auditlog_Userverificationstatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Card_ActionMaster" EntityType="Self.Card_ActionMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Card_dynamicPage" EntityType="Self.Card_dynamicPage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Card_dynamicPage_History" EntityType="Self.Card_dynamicPage_History" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="city" EntityType="Self.city" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contactUsDetail" EntityType="Self.contactUsDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CustomerModule" EntityType="Self.CustomerModule" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CustomerPermissions" EntityType="Self.CustomerPermissions" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CustomerType" EntityType="Self.CustomerType" Schema="dbo" store:Type="Tables" />
@@ -1573,82 +1682,41 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
     <EntitySet Name="DealersMaster_History" EntityType="Self.DealersMaster_History" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DistributorMaster" EntityType="Self.DistributorMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DistributorMaster_History" EntityType="Self.DistributorMaster_History" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FAQ" EntityType="Self.FAQ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FAQ_History" EntityType="Self.FAQ_History" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FooterCategory" EntityType="Self.FooterCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FooterCategoryHistory" EntityType="Self.FooterCategoryHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GCM_NotificationLog" EntityType="Self.GCM_NotificationLog" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Logger" EntityType="Self.Logger" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Mapping_Company_Distributor_Dealers" EntityType="Self.Mapping_Company_Distributor_Dealers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MediaData" EntityType="Self.MediaData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MediaDataHistory" EntityType="Self.MediaDataHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MHrOtp" EntityType="Self.MHrOtp" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MostSearchItem" EntityType="Self.MostSearchItem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NotificationAccessTable" EntityType="Self.NotificationAccessTable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotificationsHistory" EntityType="Self.NotificationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotificationSurvey" EntityType="Self.NotificationSurvey" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotificationSurveyHistory" EntityType="Self.NotificationSurveyHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ParentCategory" EntityType="Self.ParentCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParentCategoryhistory" EntityType="Self.ParentCategoryhistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Price_SchemeAccessTable" EntityType="Self.Price_SchemeAccessTable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductCatergory" EntityType="Self.ProductCatergory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductCatergoryHistory" EntityType="Self.ProductCatergoryHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductLevelOne" EntityType="Self.ProductLevelOne" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductLevelThree" EntityType="Self.ProductLevelThree" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductLevelTwo" EntityType="Self.ProductLevelTwo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductLevelTwoHistory" EntityType="Self.ProductLevelTwoHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductthreeImageMapping" EntityType="Self.ProductthreeImageMapping" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SaveNotificationSurvey" EntityType="Self.SaveNotificationSurvey" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Suggestion" EntityType="Self.Suggestion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users_History" EntityType="Self.Users_History" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UsersList" EntityType="Self.UsersList" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserVerification" EntityType="Self.UserVerification" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserVerification_log" EntityType="Self.UserVerification_log" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="AlertNotificationAccessTable" EntityType="Self.AlertNotificationAccessTable" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[AlertNotificationAccessTable].[id] AS [id], 
-[AlertNotificationAccessTable].[RegId] AS [RegId], 
-[AlertNotificationAccessTable].[DestributorID] AS [DestributorID], 
-[AlertNotificationAccessTable].[DealerId] AS [DealerId], 
-[AlertNotificationAccessTable].[AllAcess] AS [AllAcess], 
-[AlertNotificationAccessTable].[createdate] AS [createdate], 
-[AlertNotificationAccessTable].[createby] AS [createby], 
-[AlertNotificationAccessTable].[modifieddate] AS [modifieddate], 
-[AlertNotificationAccessTable].[modifiedBy] AS [modifiedBy], 
-[AlertNotificationAccessTable].[notificationid] AS [notificationid], 
-[AlertNotificationAccessTable].[deleted] AS [deleted], 
-[AlertNotificationAccessTable].[AllDestriAccess] AS [AllDestriAccess], 
-[AlertNotificationAccessTable].[AllDealerAccess] AS [AllDealerAccess], 
-[AlertNotificationAccessTable].[SpecificDealerAccess] AS [SpecificDealerAccess], 
-[AlertNotificationAccessTable].[SpecificDestriAccess] AS [SpecificDestriAccess]
-FROM [dbo].[AlertNotificationAccessTable] AS [AlertNotificationAccessTable]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="AlertNotificationReadStatus" EntityType="Self.AlertNotificationReadStatus" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[AlertNotificationReadStatus].[id] AS [id], 
-[AlertNotificationReadStatus].[NotificationId] AS [NotificationId], 
-[AlertNotificationReadStatus].[IsRead] AS [IsRead], 
-[AlertNotificationReadStatus].[UserId] AS [UserId], 
-[AlertNotificationReadStatus].[DeviceId] AS [DeviceId]
-FROM [dbo].[AlertNotificationReadStatus] AS [AlertNotificationReadStatus]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="AlertNotifications" EntityType="Self.AlertNotifications" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[AlertNotifications].[id] AS [id], 
-[AlertNotifications].[_text] AS [_text], 
-[AlertNotifications].[Imagename] AS [Imagename], 
-[AlertNotifications].[Imagepath] AS [Imagepath], 
-[AlertNotifications].[_Status] AS [_Status], 
-[AlertNotifications].[CreatedBy] AS [CreatedBy], 
-[AlertNotifications].[CreatedOn] AS [CreatedOn], 
-[AlertNotifications].[ModifyBy] AS [ModifyBy], 
-[AlertNotifications].[ModifyOn] AS [ModifyOn], 
-[AlertNotifications].[Type] AS [Type]
-FROM [dbo].[AlertNotifications] AS [AlertNotifications]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="AlertNotifications_History" EntityType="Self.AlertNotifications_History" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[AlertNotifications_History].[id] AS [id], 
-[AlertNotifications_History].[NotificationId] AS [NotificationId], 
-[AlertNotifications_History].[_text] AS [_text], 
-[AlertNotifications_History].[Imagename] AS [Imagename], 
-[AlertNotifications_History].[Imagepath] AS [Imagepath], 
-[AlertNotifications_History].[_Status] AS [_Status], 
-[AlertNotifications_History].[CreatedBy] AS [CreatedBy], 
-[AlertNotifications_History].[CreatedOn] AS [CreatedOn], 
-[AlertNotifications_History].[ModifyBy] AS [ModifyBy], 
-[AlertNotifications_History].[ModifyOn] AS [ModifyOn]
-FROM [dbo].[AlertNotifications_History] AS [AlertNotifications_History]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="App_Log" EntityType="Self.App_Log" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
 [App_Log].[Id] AS [Id], 
@@ -1673,39 +1741,6 @@ FROM [dbo].[AlertNotifications_History] AS [AlertNotifications_History]</Definin
 [App_Log].[Channel] AS [Channel], 
 [App_Log].[Status] AS [Status]
 FROM [dbo].[App_Log] AS [App_Log]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Auditlog_Userverificationstatus" EntityType="Self.Auditlog_Userverificationstatus" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[Auditlog_Userverificationstatus].[Id] AS [Id], 
-[Auditlog_Userverificationstatus].[Userverification_Id] AS [Userverification_Id], 
-[Auditlog_Userverificationstatus].[UserId] AS [UserId], 
-[Auditlog_Userverificationstatus].[Otp] AS [Otp], 
-[Auditlog_Userverificationstatus].[DeviceId] AS [DeviceId], 
-[Auditlog_Userverificationstatus].[CreatedOn] AS [CreatedOn], 
-[Auditlog_Userverificationstatus].[CreatedBy] AS [CreatedBy], 
-[Auditlog_Userverificationstatus].[ModifyOn] AS [ModifyOn], 
-[Auditlog_Userverificationstatus].[ModifyBy] AS [ModifyBy], 
-[Auditlog_Userverificationstatus].[OSType] AS [OSType], 
-[Auditlog_Userverificationstatus].[OSVersion] AS [OSVersion], 
-[Auditlog_Userverificationstatus].[AppVersion] AS [AppVersion], 
-[Auditlog_Userverificationstatus].[UnBolckedBy] AS [UnBolckedBy], 
-[Auditlog_Userverificationstatus].[UnauthorizedUser] AS [UnauthorizedUser], 
-[Auditlog_Userverificationstatus].[Status] AS [Status], 
-[Auditlog_Userverificationstatus].[Fcm_token] AS [Fcm_token], 
-[Auditlog_Userverificationstatus].[LanguageCode] AS [LanguageCode]
-FROM [dbo].[Auditlog_Userverificationstatus] AS [Auditlog_Userverificationstatus]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Card_ActionMaster" EntityType="Self.Card_ActionMaster" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[Card_ActionMaster].[Id] AS [Id], 
-[Card_ActionMaster].[Deeplink] AS [Deeplink], 
-[Card_ActionMaster].[Pagename] AS [Pagename], 
-[Card_ActionMaster].[CreatedOn] AS [CreatedOn], 
-[Card_ActionMaster].[CreatedBy] AS [CreatedBy], 
-[Card_ActionMaster].[ModifiedOn] AS [ModifiedOn], 
-[Card_ActionMaster].[ModifiedBy] AS [ModifiedBy], 
-[Card_ActionMaster].[Status] AS [Status]
-FROM [dbo].[Card_ActionMaster] AS [Card_ActionMaster]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Card_CardData" EntityType="Self.Card_CardData" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -1742,87 +1777,6 @@ FROM [dbo].[Card_CardData] AS [Card_CardData]</DefiningQuery>
 [Card_ColourMaster].[ModifiedBy] AS [ModifiedBy], 
 [Card_ColourMaster].[Status] AS [Status]
 FROM [dbo].[Card_ColourMaster] AS [Card_ColourMaster]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Card_dynamicPage" EntityType="Self.Card_dynamicPage" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[Card_dynamicPage].[Id] AS [Id], 
-[Card_dynamicPage].[CardProviderId] AS [CardProviderId], 
-[Card_dynamicPage].[CardProviderName] AS [CardProviderName], 
-[Card_dynamicPage].[CardActionId] AS [CardActionId], 
-[Card_dynamicPage].[ClassName] AS [ClassName], 
-[Card_dynamicPage].[CardAction_Deeplink] AS [CardAction_Deeplink], 
-[Card_dynamicPage].[CardAction_Pagename] AS [CardAction_Pagename], 
-[Card_dynamicPage].[ColourId] AS [ColourId], 
-[Card_dynamicPage].[ColourName] AS [ColourName], 
-[Card_dynamicPage].[Hexacode] AS [Hexacode], 
-[Card_dynamicPage].[ImageOriginalName] AS [ImageOriginalName], 
-[Card_dynamicPage].[ImageSystemName] AS [ImageSystemName], 
-[Card_dynamicPage].[Height] AS [Height], 
-[Card_dynamicPage].[Width] AS [Width], 
-[Card_dynamicPage].[Title] AS [Title], 
-[Card_dynamicPage].[Sub_Title] AS [Sub_Title], 
-[Card_dynamicPage].[Sub_TitleColour] AS [Sub_TitleColour], 
-[Card_dynamicPage].[CardDataFlag] AS [CardDataFlag], 
-[Card_dynamicPage].[Action1_Colour] AS [Action1_Colour], 
-[Card_dynamicPage].[Action1_Text] AS [Action1_Text], 
-[Card_dynamicPage].[Startdate] AS [Startdate], 
-[Card_dynamicPage].[Enddate] AS [Enddate], 
-[Card_dynamicPage].[CreatedOn] AS [CreatedOn], 
-[Card_dynamicPage].[CreatedBy] AS [CreatedBy], 
-[Card_dynamicPage].[ModifiedOn] AS [ModifiedOn], 
-[Card_dynamicPage].[ModifiedBy] AS [ModifiedBy], 
-[Card_dynamicPage].[Status] AS [Status], 
-[Card_dynamicPage].[TitleColour] AS [TitleColour], 
-[Card_dynamicPage].[Pagename] AS [Pagename], 
-[Card_dynamicPage].[PdfOriginalName] AS [PdfOriginalName], 
-[Card_dynamicPage].[PdfSystemName] AS [PdfSystemName], 
-[Card_dynamicPage].[Subcatid] AS [Subcatid], 
-[Card_dynamicPage].[Subcatname] AS [Subcatname], 
-[Card_dynamicPage].[OriginalMainImage] AS [OriginalMainImage], 
-[Card_dynamicPage].[SystemMainImage] AS [SystemMainImage], 
-[Card_dynamicPage].[Sequence] AS [Sequence]
-FROM [dbo].[Card_dynamicPage] AS [Card_dynamicPage]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Card_dynamicPage_History" EntityType="Self.Card_dynamicPage_History" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[Card_dynamicPage_History].[Id] AS [Id], 
-[Card_dynamicPage_History].[Parent_Card_Id] AS [Parent_Card_Id], 
-[Card_dynamicPage_History].[CardProviderId] AS [CardProviderId], 
-[Card_dynamicPage_History].[CardProviderName] AS [CardProviderName], 
-[Card_dynamicPage_History].[CardActionId] AS [CardActionId], 
-[Card_dynamicPage_History].[ClassName] AS [ClassName], 
-[Card_dynamicPage_History].[CardAction_Deeplink] AS [CardAction_Deeplink], 
-[Card_dynamicPage_History].[CardAction_Pagename] AS [CardAction_Pagename], 
-[Card_dynamicPage_History].[ColourId] AS [ColourId], 
-[Card_dynamicPage_History].[ColourName] AS [ColourName], 
-[Card_dynamicPage_History].[Hexacode] AS [Hexacode], 
-[Card_dynamicPage_History].[ImageOriginalName] AS [ImageOriginalName], 
-[Card_dynamicPage_History].[ImageSystemName] AS [ImageSystemName], 
-[Card_dynamicPage_History].[Height] AS [Height], 
-[Card_dynamicPage_History].[Width] AS [Width], 
-[Card_dynamicPage_History].[Title] AS [Title], 
-[Card_dynamicPage_History].[Sub_Title] AS [Sub_Title], 
-[Card_dynamicPage_History].[Sub_TitleColour] AS [Sub_TitleColour], 
-[Card_dynamicPage_History].[CardDataFlag] AS [CardDataFlag], 
-[Card_dynamicPage_History].[Action1_Colour] AS [Action1_Colour], 
-[Card_dynamicPage_History].[Action1_Text] AS [Action1_Text], 
-[Card_dynamicPage_History].[Startdate] AS [Startdate], 
-[Card_dynamicPage_History].[Enddate] AS [Enddate], 
-[Card_dynamicPage_History].[CreatedOn] AS [CreatedOn], 
-[Card_dynamicPage_History].[CreatedBy] AS [CreatedBy], 
-[Card_dynamicPage_History].[ModifiedOn] AS [ModifiedOn], 
-[Card_dynamicPage_History].[ModifiedBy] AS [ModifiedBy], 
-[Card_dynamicPage_History].[Status] AS [Status], 
-[Card_dynamicPage_History].[TitleColour] AS [TitleColour], 
-[Card_dynamicPage_History].[Pagename] AS [Pagename], 
-[Card_dynamicPage_History].[PdfOriginalName] AS [PdfOriginalName], 
-[Card_dynamicPage_History].[PdfSystemName] AS [PdfSystemName], 
-[Card_dynamicPage_History].[Subcatid] AS [Subcatid], 
-[Card_dynamicPage_History].[Subcatname] AS [Subcatname], 
-[Card_dynamicPage_History].[OriginalMainImage] AS [OriginalMainImage], 
-[Card_dynamicPage_History].[SystemMainImage] AS [SystemMainImage], 
-[Card_dynamicPage_History].[Sequence] AS [Sequence]
-FROM [dbo].[Card_dynamicPage_History] AS [Card_dynamicPage_History]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Card_LanguageMaster" EntityType="Self.Card_LanguageMaster" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -1874,21 +1828,6 @@ FROM [dbo].[catalog_MainPdf] AS [catalog_MainPdf]</DefiningQuery>
 [city_history].[updatedby] AS [updatedby], 
 [city_history].[deletedby] AS [deletedby]
 FROM [dbo].[city_history] AS [city_history]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="contactUsDetail" EntityType="Self.contactUsDetail" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[contactUsDetail].[id] AS [id], 
-[contactUsDetail].[Contact_Us_Type] AS [Contact_Us_Type], 
-[contactUsDetail].[CAddress] AS [CAddress], 
-[contactUsDetail].[PhoneNumber] AS [PhoneNumber], 
-[contactUsDetail].[Email] AS [Email], 
-[contactUsDetail].[Fax] AS [Fax], 
-[contactUsDetail].[Cstatus] AS [Cstatus], 
-[contactUsDetail].[Created_date] AS [Created_date], 
-[contactUsDetail].[CreatedBy] AS [CreatedBy], 
-[contactUsDetail].[ModifiedDate] AS [ModifiedDate], 
-[contactUsDetail].[ModifiedBy] AS [ModifiedBy]
-FROM [dbo].[contactUsDetail] AS [contactUsDetail]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="contactUsDetail_History" EntityType="Self.contactUsDetail_History" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -1949,57 +1888,6 @@ FROM [dbo].[EscalationMatrix] AS [EscalationMatrix]</DefiningQuery>
 [EscalationMatrix_History].[Phoneno] AS [Phoneno]
 FROM [dbo].[EscalationMatrix_History] AS [EscalationMatrix_History]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="FAQ" EntityType="Self.FAQ" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[FAQ].[Id] AS [Id], 
-[FAQ].[QuestionName] AS [QuestionName], 
-[FAQ].[Answer] AS [Answer], 
-[FAQ].[StartDate] AS [StartDate], 
-[FAQ].[EndDate] AS [EndDate], 
-[FAQ].[CreatedBy] AS [CreatedBy], 
-[FAQ].[CreatedOn] AS [CreatedOn], 
-[FAQ].[ModifiedBy] AS [ModifiedBy], 
-[FAQ].[ModifiedOn] AS [ModifiedOn], 
-[FAQ].[Status] AS [Status]
-FROM [dbo].[FAQ] AS [FAQ]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="FAQ_History" EntityType="Self.FAQ_History" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[FAQ_History].[Id] AS [Id], 
-[FAQ_History].[FAQ_ParentId] AS [FAQ_ParentId], 
-[FAQ_History].[QuestionName] AS [QuestionName], 
-[FAQ_History].[Answer] AS [Answer], 
-[FAQ_History].[StartDate] AS [StartDate], 
-[FAQ_History].[EndDate] AS [EndDate], 
-[FAQ_History].[CreatedBy] AS [CreatedBy], 
-[FAQ_History].[CreatedOn] AS [CreatedOn], 
-[FAQ_History].[ModifiedBy] AS [ModifiedBy], 
-[FAQ_History].[ModifiedOn] AS [ModifiedOn], 
-[FAQ_History].[Status] AS [Status]
-FROM [dbo].[FAQ_History] AS [FAQ_History]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="FooterCategory" EntityType="Self.FooterCategory" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[FooterCategory].[Id] AS [Id], 
-[FooterCategory].[FCategoryName] AS [FCategoryName], 
-[FooterCategory].[Status] AS [Status], 
-[FooterCategory].[CatType] AS [CatType], 
-[FooterCategory].[CreatedOn] AS [CreatedOn]
-FROM [dbo].[FooterCategory] AS [FooterCategory]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="FooterCategoryHistory" EntityType="Self.FooterCategoryHistory" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[FooterCategoryHistory].[Id] AS [Id], 
-[FooterCategoryHistory].[FootercateId] AS [FootercateId], 
-[FooterCategoryHistory].[FCategoryName] AS [FCategoryName], 
-[FooterCategoryHistory].[Status] AS [Status], 
-[FooterCategoryHistory].[CatType] AS [CatType], 
-[FooterCategoryHistory].[CreatedBy] AS [CreatedBy], 
-[FooterCategoryHistory].[CreatedOn] AS [CreatedOn], 
-[FooterCategoryHistory].[ModifyBy] AS [ModifyBy], 
-[FooterCategoryHistory].[ModifyOn] AS [ModifyOn]
-FROM [dbo].[FooterCategoryHistory] AS [FooterCategoryHistory]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="MappingUrl_Page" EntityType="Self.MappingUrl_Page" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
 [MappingUrl_Page].[Id] AS [Id], 
@@ -2009,37 +1897,6 @@ FROM [dbo].[FooterCategoryHistory] AS [FooterCategoryHistory]</DefiningQuery>
 [MappingUrl_Page].[CreatedOn] AS [CreatedOn], 
 [MappingUrl_Page].[PageName] AS [PageName]
 FROM [dbo].[MappingUrl_Page] AS [MappingUrl_Page]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="MediaData" EntityType="Self.MediaData" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[MediaData].[Id] AS [Id], 
-[MediaData].[VideoName] AS [VideoName], 
-[MediaData].[Url] AS [Url], 
-[MediaData].[CreatedBy] AS [CreatedBy], 
-[MediaData].[CreatedOn] AS [CreatedOn], 
-[MediaData].[ModifyBy] AS [ModifyBy], 
-[MediaData].[ModifyOn] AS [ModifyOn], 
-[MediaData].[VideoImage] AS [VideoImage], 
-[MediaData].[LabelId] AS [LabelId], 
-[MediaData].[Status] AS [Status], 
-[MediaData].[PageFlag] AS [PageFlag]
-FROM [dbo].[MediaData] AS [MediaData]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="MediaDataHistory" EntityType="Self.MediaDataHistory" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[MediaDataHistory].[Id] AS [Id], 
-[MediaDataHistory].[MediaDataId] AS [MediaDataId], 
-[MediaDataHistory].[VideoName] AS [VideoName], 
-[MediaDataHistory].[Url] AS [Url], 
-[MediaDataHistory].[CreatedBy] AS [CreatedBy], 
-[MediaDataHistory].[CreatedOn] AS [CreatedOn], 
-[MediaDataHistory].[ModifyBy] AS [ModifyBy], 
-[MediaDataHistory].[ModifyOn] AS [ModifyOn], 
-[MediaDataHistory].[VideoImage] AS [VideoImage], 
-[MediaDataHistory].[LabelId] AS [LabelId], 
-[MediaDataHistory].[Status] AS [Status], 
-[MediaDataHistory].[PageFlag] AS [PageFlag]
-FROM [dbo].[MediaDataHistory] AS [MediaDataHistory]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="MPartnerServiceLog" EntityType="Self.MPartnerServiceLog" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -2069,95 +1926,42 @@ FROM [dbo].[MPartnerServiceLog] AS [MPartnerServiceLog]</DefiningQuery>
 [NotificationReadStatus].[UserId] AS [UserId]
 FROM [dbo].[NotificationReadStatus] AS [NotificationReadStatus]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="NotificationsHistory" EntityType="Self.NotificationsHistory" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="PermotionsList" EntityType="Self.PermotionsList" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-[NotificationsHistory].[id] AS [id], 
-[NotificationsHistory].[NotificationId] AS [NotificationId], 
-[NotificationsHistory].[_Subject] AS [_Subject], 
-[NotificationsHistory].[_text] AS [_text], 
-[NotificationsHistory].[_status] AS [_status], 
-[NotificationsHistory].[ModifiedBy] AS [ModifiedBy], 
-[NotificationsHistory].[ModifiedDate] AS [ModifiedDate], 
-[NotificationsHistory].[Alertflag] AS [Alertflag], 
-[NotificationsHistory].[ImagePath] AS [ImagePath]
-FROM [dbo].[NotificationsHistory] AS [NotificationsHistory]</DefiningQuery>
+[PermotionsList].[id] AS [id], 
+[PermotionsList].[PermotionTypeId] AS [PermotionTypeId], 
+[PermotionsList].[ProductCatId] AS [ProductCatId], 
+[PermotionsList].[ProductLvlOneId] AS [ProductLvlOneId], 
+[PermotionsList].[Descriptions] AS [Descriptions], 
+[PermotionsList].[ImageName] AS [ImageName], 
+[PermotionsList].[status] AS [status], 
+[PermotionsList].[StartDate] AS [StartDate], 
+[PermotionsList].[Enddate] AS [Enddate], 
+[PermotionsList].[createdate] AS [createdate], 
+[PermotionsList].[createby] AS [createby], 
+[PermotionsList].[modifieddate] AS [modifieddate], 
+[PermotionsList].[Modifiedby] AS [Modifiedby], 
+[PermotionsList].[PDFName] AS [PDFName], 
+[PermotionsList].[ParentCatid] AS [ParentCatid]
+FROM [dbo].[PermotionsList] AS [PermotionsList]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="NotificationSurvey" EntityType="Self.NotificationSurvey" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="PermotionsListHistory" EntityType="Self.PermotionsListHistory" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-[NotificationSurvey].[SurveyID] AS [SurveyID], 
-[NotificationSurvey].[Survey] AS [Survey], 
-[NotificationSurvey].[QuestionType] AS [QuestionType], 
-[NotificationSurvey].[QuestionTitle] AS [QuestionTitle], 
-[NotificationSurvey].[OptionA] AS [OptionA], 
-[NotificationSurvey].[OptionB] AS [OptionB], 
-[NotificationSurvey].[OptionC] AS [OptionC], 
-[NotificationSurvey].[OptionD] AS [OptionD], 
-[NotificationSurvey].[OptionE] AS [OptionE], 
-[NotificationSurvey].[CorrectAns] AS [CorrectAns], 
-[NotificationSurvey].[StartDate] AS [StartDate], 
-[NotificationSurvey].[Enddate] AS [Enddate], 
-[NotificationSurvey].[CreatedBy] AS [CreatedBy], 
-[NotificationSurvey].[CreatedOn] AS [CreatedOn], 
-[NotificationSurvey].[ModifyBy] AS [ModifyBy], 
-[NotificationSurvey].[ModifyOn] AS [ModifyOn], 
-[NotificationSurvey].[Status] AS [Status], 
-[NotificationSurvey].[ContestId] AS [ContestId]
-FROM [dbo].[NotificationSurvey] AS [NotificationSurvey]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="NotificationSurveyHistory" EntityType="Self.NotificationSurveyHistory" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[NotificationSurveyHistory].[ID] AS [ID], 
-[NotificationSurveyHistory].[SurveyID] AS [SurveyID], 
-[NotificationSurveyHistory].[Survey] AS [Survey], 
-[NotificationSurveyHistory].[QuestionType] AS [QuestionType], 
-[NotificationSurveyHistory].[QuestionTitle] AS [QuestionTitle], 
-[NotificationSurveyHistory].[OptionA] AS [OptionA], 
-[NotificationSurveyHistory].[OptionB] AS [OptionB], 
-[NotificationSurveyHistory].[OptionC] AS [OptionC], 
-[NotificationSurveyHistory].[OptionD] AS [OptionD], 
-[NotificationSurveyHistory].[OptionE] AS [OptionE], 
-[NotificationSurveyHistory].[CorrectAns] AS [CorrectAns], 
-[NotificationSurveyHistory].[StartDate] AS [StartDate], 
-[NotificationSurveyHistory].[Enddate] AS [Enddate], 
-[NotificationSurveyHistory].[CreatedBy] AS [CreatedBy], 
-[NotificationSurveyHistory].[CreatedOn] AS [CreatedOn], 
-[NotificationSurveyHistory].[ModifyBy] AS [ModifyBy], 
-[NotificationSurveyHistory].[ModifyOn] AS [ModifyOn], 
-[NotificationSurveyHistory].[deviceIP] AS [deviceIP], 
-[NotificationSurveyHistory].[Status] AS [Status]
-FROM [dbo].[NotificationSurveyHistory] AS [NotificationSurveyHistory]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="ParentCategoryhistory" EntityType="Self.ParentCategoryhistory" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[ParentCategoryhistory].[ID] AS [ID], 
-[ParentCategoryhistory].[Pcid] AS [Pcid], 
-[ParentCategoryhistory].[PCName] AS [PCName], 
-[ParentCategoryhistory].[CreatedBy] AS [CreatedBy], 
-[ParentCategoryhistory].[CreatedOn] AS [CreatedOn], 
-[ParentCategoryhistory].[PCStatus] AS [PCStatus], 
-[ParentCategoryhistory].[ModifyBy] AS [ModifyBy], 
-[ParentCategoryhistory].[ModifyOn] AS [ModifyOn]
-FROM [dbo].[ParentCategoryhistory] AS [ParentCategoryhistory]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Price_SchemeAccessTable" EntityType="Self.Price_SchemeAccessTable" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[Price_SchemeAccessTable].[id] AS [id], 
-[Price_SchemeAccessTable].[RegId] AS [RegId], 
-[Price_SchemeAccessTable].[DestributorID] AS [DestributorID], 
-[Price_SchemeAccessTable].[DealerId] AS [DealerId], 
-[Price_SchemeAccessTable].[AllAcess] AS [AllAcess], 
-[Price_SchemeAccessTable].[createdate] AS [createdate], 
-[Price_SchemeAccessTable].[createby] AS [createby], 
-[Price_SchemeAccessTable].[modifieddate] AS [modifieddate], 
-[Price_SchemeAccessTable].[modifiedBy] AS [modifiedBy], 
-[Price_SchemeAccessTable].[promotionid] AS [promotionid], 
-[Price_SchemeAccessTable].[deleted] AS [deleted], 
-[Price_SchemeAccessTable].[AllDestriAccess] AS [AllDestriAccess], 
-[Price_SchemeAccessTable].[AllDealerAccess] AS [AllDealerAccess], 
-[Price_SchemeAccessTable].[SpecificDealerAccess] AS [SpecificDealerAccess], 
-[Price_SchemeAccessTable].[SpecificDestriAccess] AS [SpecificDestriAccess], 
-[Price_SchemeAccessTable].[Pagename] AS [Pagename]
-FROM [dbo].[Price_SchemeAccessTable] AS [Price_SchemeAccessTable]</DefiningQuery>
+[PermotionsListHistory].[id] AS [id], 
+[PermotionsListHistory].[promotionListId] AS [promotionListId], 
+[PermotionsListHistory].[PermotionTypeId] AS [PermotionTypeId], 
+[PermotionsListHistory].[ProductCatId] AS [ProductCatId], 
+[PermotionsListHistory].[ProductLvlOneId] AS [ProductLvlOneId], 
+[PermotionsListHistory].[Descriptions] AS [Descriptions], 
+[PermotionsListHistory].[ImageName] AS [ImageName], 
+[PermotionsListHistory].[status] AS [status], 
+[PermotionsListHistory].[StartDate] AS [StartDate], 
+[PermotionsListHistory].[Enddate] AS [Enddate], 
+[PermotionsListHistory].[modifieddate] AS [modifieddate], 
+[PermotionsListHistory].[Modifiedby] AS [Modifiedby], 
+[PermotionsListHistory].[PDFName] AS [PDFName], 
+[PermotionsListHistory].[ParentCatid] AS [ParentCatid]
+FROM [dbo].[PermotionsListHistory] AS [PermotionsListHistory]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="ProductAccessTable" EntityType="Self.ProductAccessTable" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -2197,22 +2001,6 @@ FROM [dbo].[ProductAccessTable] AS [ProductAccessTable]</DefiningQuery>
 [ProductAccessTableForProduct].[SpecificDestriAccess] AS [SpecificDestriAccess]
 FROM [dbo].[ProductAccessTableForProduct] AS [ProductAccessTableForProduct]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="ProductLevelOne" EntityType="Self.ProductLevelOne" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[ProductLevelOne].[id] AS [id], 
-[ProductLevelOne].[pcId] AS [pcId], 
-[ProductLevelOne].[Name] AS [Name], 
-[ProductLevelOne].[PlStatus] AS [PlStatus], 
-[ProductLevelOne].[CreatedDate] AS [CreatedDate], 
-[ProductLevelOne].[CreatedBy] AS [CreatedBy], 
-[ProductLevelOne].[ModifiedDate] AS [ModifiedDate], 
-[ProductLevelOne].[ModifiedBy] AS [ModifiedBy], 
-[ProductLevelOne].[startDate] AS [startDate], 
-[ProductLevelOne].[enddate] AS [enddate], 
-[ProductLevelOne].[ParentCatid] AS [ParentCatid], 
-[ProductLevelOne].[OrderSequence] AS [OrderSequence]
-FROM [dbo].[ProductLevelOne] AS [ProductLevelOne]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="ProductLevelOneHistory" EntityType="Self.ProductLevelOneHistory" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
 [ProductLevelOneHistory].[id] AS [id], 
@@ -2225,67 +2013,6 @@ FROM [dbo].[ProductLevelOne] AS [ProductLevelOne]</DefiningQuery>
 [ProductLevelOneHistory].[startDate] AS [startDate], 
 [ProductLevelOneHistory].[enddate] AS [enddate]
 FROM [dbo].[ProductLevelOneHistory] AS [ProductLevelOneHistory]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="ProductLevelThree" EntityType="Self.ProductLevelThree" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[ProductLevelThree].[id] AS [id], 
-[ProductLevelThree].[pc_Lv2_oneId] AS [pc_Lv2_oneId], 
-[ProductLevelThree].[PrCode] AS [PrCode], 
-[ProductLevelThree].[PrDiscription] AS [PrDiscription], 
-[ProductLevelThree].[Name] AS [Name], 
-[ProductLevelThree].[PlTwStatus] AS [PlTwStatus], 
-[ProductLevelThree].[CreatedDate] AS [CreatedDate], 
-[ProductLevelThree].[CreatedBy] AS [CreatedBy], 
-[ProductLevelThree].[ModifiedDate] AS [ModifiedDate], 
-[ProductLevelThree].[ModifiedBy] AS [ModifiedBy], 
-[ProductLevelThree].[startDate] AS [startDate], 
-[ProductLevelThree].[enddate] AS [enddate], 
-[ProductLevelThree].[productCategoryid] AS [productCategoryid], 
-[ProductLevelThree].[ProductLevelOne] AS [ProductLevelOne], 
-[ProductLevelThree].[productLevelThreefId] AS [productLevelThreefId], 
-[ProductLevelThree].[MRP] AS [MRP], 
-[ProductLevelThree].[Warrenty] AS [Warrenty], 
-[ProductLevelThree].[KeyFeature] AS [KeyFeature], 
-[ProductLevelThree].[brochure] AS [brochure], 
-[ProductLevelThree].[Rating] AS [Rating], 
-[ProductLevelThree].[ParentCatid] AS [ParentCatid], 
-[ProductLevelThree].[OrderSequence] AS [OrderSequence], 
-[ProductLevelThree].[MaximumChargeCurrent] AS [MaximumChargeCurrent], 
-[ProductLevelThree].[NoOfBattery] AS [NoOfBattery], 
-[ProductLevelThree].[SupportedBatteryType] AS [SupportedBatteryType], 
-[ProductLevelThree].[Maximumbulbload] AS [Maximumbulbload], 
-[ProductLevelThree].[Technology] AS [Technology], 
-[ProductLevelThree].[NominalVoltage] AS [NominalVoltage], 
-[ProductLevelThree].[DimensionMM] AS [DimensionMM], 
-[ProductLevelThree].[Weight_Filled_battery] AS [Weight_Filled_battery], 
-[ProductLevelThree].[RatedCapacity] AS [RatedCapacity], 
-[ProductLevelThree].[FilledWeight] AS [FilledWeight], 
-[ProductLevelThree].[DCOutputVoltage] AS [DCOutputVoltage], 
-[ProductLevelThree].[DCOutputCurrent] AS [DCOutputCurrent], 
-[ProductLevelThree].[MaxSupportedPanelpower] AS [MaxSupportedPanelpower], 
-[ProductLevelThree].[MaxSolarPanelVoltage] AS [MaxSolarPanelVoltage], 
-[ProductLevelThree].[VA] AS [VA], 
-[ProductLevelThree].[NoofCells] AS [NoofCells], 
-[ProductLevelThree].[PeakPowerPMax] AS [PeakPowerPMax], 
-[ProductLevelThree].[RatedModuleVoltage] AS [RatedModuleVoltage], 
-[ProductLevelThree].[MaximumPowerVoltage] AS [MaximumPowerVoltage], 
-[ProductLevelThree].[MaximumPowerCurrent] AS [MaximumPowerCurrent], 
-[ProductLevelThree].[NominalDCOutputVoltage] AS [NominalDCOutputVoltage], 
-[ProductLevelThree].[MaxDCOutputCurrent] AS [MaxDCOutputCurrent], 
-[ProductLevelThree].[Noof12VBatteriesinSeries] AS [Noof12VBatteriesinSeries], 
-[ProductLevelThree].[SolarLength] AS [SolarLength], 
-[ProductLevelThree].[SolarWidth] AS [SolarWidth], 
-[ProductLevelThree].[Heightuptofloattop] AS [Heightuptofloattop], 
-[ProductLevelThree].[DryWeight] AS [DryWeight], 
-[ProductLevelThree].[RatedACpower] AS [RatedACpower], 
-[ProductLevelThree].[OperatingVoltage] AS [OperatingVoltage], 
-[ProductLevelThree].[ChargeControllerRating] AS [ChargeControllerRating], 
-[ProductLevelThree].[NominalBatterybankvoltage] AS [NominalBatterybankvoltage], 
-[ProductLevelThree].[InputVoltageWorkingRange] AS [InputVoltageWorkingRange], 
-[ProductLevelThree].[OutputVoltageWorkingRange] AS [OutputVoltageWorkingRange], 
-[ProductLevelThree].[MainsACLowCut] AS [MainsACLowCut], 
-[ProductLevelThree].[MainACLowCutRecovery] AS [MainACLowCutRecovery]
-FROM [dbo].[ProductLevelThree] AS [ProductLevelThree]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="ProductLevelThreeHistory" EntityType="Self.ProductLevelThreeHistory" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -2317,13 +2044,6 @@ FROM [dbo].[ProductLevelThree] AS [ProductLevelThree]</DefiningQuery>
 [ProductLevelThreeHistory].[Weight_Filled_battery] AS [Weight_Filled_battery]
 FROM [dbo].[ProductLevelThreeHistory] AS [ProductLevelThreeHistory]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="ProductthreeImageMapping" EntityType="Self.ProductthreeImageMapping" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[ProductthreeImageMapping].[ProductID] AS [ProductID], 
-[ProductthreeImageMapping].[ProductLevelThreeid] AS [ProductLevelThreeid], 
-[ProductthreeImageMapping].[Primage] AS [Primage]
-FROM [dbo].[ProductthreeImageMapping] AS [ProductthreeImageMapping]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="Regions" EntityType="Self.Regions" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
 [Regions].[id] AS [id], 
@@ -2335,20 +2055,6 @@ FROM [dbo].[ProductthreeImageMapping] AS [ProductthreeImageMapping]</DefiningQue
 [Regions].[status] AS [status], 
 [Regions].[RegionCode] AS [RegionCode]
 FROM [dbo].[Regions] AS [Regions]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="Suggestion" EntityType="Self.Suggestion" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[Suggestion].[id] AS [id], 
-[Suggestion].[FunctionID] AS [FunctionID], 
-[Suggestion].[Suggestion] AS [Suggestion], 
-[Suggestion].[ImageName] AS [ImageName], 
-[Suggestion].[CreateDate] AS [CreateDate], 
-[Suggestion].[createdBy] AS [createdBy], 
-[Suggestion].[SentMailStatus] AS [SentMailStatus], 
-[Suggestion].[SentMailDate] AS [SentMailDate], 
-[Suggestion].[CustName] AS [CustName], 
-[Suggestion].[Email] AS [Email]
-FROM [dbo].[Suggestion] AS [Suggestion]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="useraccount" EntityType="Self.useraccount" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -2426,9 +2132,21 @@ FROM [dbo].[useraccounthistory] AS [useraccounthistory]</DefiningQuery>
 [UsersListHistory].[GoogleAddress] AS [GoogleAddress]
 FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
     </EntitySet>
-    <AssociationSet Name="FK__ProductLe__Prduc__5CA1C101" Association="Self.FK__ProductLe__Prduc__5CA1C101">
+    <AssociationSet Name="FK__ProductLe__pc_Lv__2FCF1A8A" Association="Self.FK__ProductLe__pc_Lv__2FCF1A8A">
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwo" />
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThree" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__Prduc__29E1370A" Association="Self.FK__ProductLe__Prduc__29E1370A">
       <End Role="ProductCatergory" EntitySet="ProductCatergory" />
       <End Role="ProductLevelTwo" EntitySet="ProductLevelTwo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__produ__30C33EC3" Association="Self.FK__ProductLe__produ__30C33EC3">
+      <End Role="ProductCatergory" EntitySet="ProductCatergory" />
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThree" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLev__pcId__2704CA5F" Association="Self.FK__ProductLev__pcId__2704CA5F">
+      <End Role="ProductCatergory" EntitySet="ProductCatergory" />
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOne" />
     </AssociationSet>
     <AssociationSet Name="fk_Prntid" Association="Self.fk_Prntid">
       <End Role="ParentCategory" EntitySet="ParentCategory" />

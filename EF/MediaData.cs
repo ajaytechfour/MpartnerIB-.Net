@@ -17,7 +17,7 @@ namespace LuminousMpartnerIB.EF
         public int Id { get; set; }
         public string VideoName { get; set; }
         public string Url { get; set; }
-        public Nullable<int> CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
         public Nullable<int> ModifyBy { get; set; }
         public Nullable<System.DateTime> ModifyOn { get; set; }

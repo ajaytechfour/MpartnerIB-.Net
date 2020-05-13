@@ -25,5 +25,8 @@ namespace LuminousMpartnerIB.EF
         public string CreatedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public string ModifiedBy { get; set; }
+        public Nullable<int> Country { get; set; }
+        public Nullable<int> State { get; set; }
+        public Nullable<int> City { get; set; }
     }
 }

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Luminous.EF
+namespace LuminousMpartnerIB.EF
 {
     using System;
     

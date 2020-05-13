@@ -41,8 +41,8 @@ namespace LuminousMpartnerIB.Controllers
             }
 
         }
-      
-        public JsonResult GetFAQDetail(int? page, int id = 0)
+
+        public JsonResult GetFAQDetail(int? page, string id = "")
         {
             if (Session["userid"] == null)
             {
@@ -65,8 +65,11 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
 
-                    if (id != 0)
+                    if (id != "")
                     {
+                        var distname = db.UsersLists.Where(x => x.Dis_Sap_Code == id).FirstOrDefault();
+                        Session["seldistributor"] = distname.Dis_Name;
+
                         var contactDetails2 = (from c in contactdetails
                                                where c.CreatedBy == id.ToString()
                                                select new
@@ -94,6 +97,7 @@ namespace LuminousMpartnerIB.Controllers
                     else
                     {
                         var contactDetails2 = (from c in contactdetails
+                                               where c.CreatedBy == id.ToString()
                                                select new
                                                {
                                                    quesname = c.QuestionName,
@@ -126,8 +130,8 @@ namespace LuminousMpartnerIB.Controllers
             }
         }
 
-       
-       
+
+
         [HttpGet]
         public ActionResult View(int id)
         {
@@ -155,7 +159,7 @@ namespace LuminousMpartnerIB.Controllers
             }
         }
 
-      
+
 
     }
 }

@@ -1,5 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="LuminousMpartnerIBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DealersMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="DealerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DealerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="CityID" Type="Int32" />
+    <Property Name="PinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Latitude" Type="Decimal" Precision="12" Scale="9" />
+    <Property Name="Longitude" Type="Decimal" Precision="12" Scale="9" />
+    <Property Name="GoogleAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DealersMaster_History">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="DealersMasterID" Type="Int64" />
+    <Property Name="DealerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DealerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="CityID" Type="Int32" />
+    <Property Name="PinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Decimal" Precision="12" Scale="9" />
+    <Property Name="Longitude" Type="Decimal" Precision="12" Scale="9" />
+    <Property Name="GoogleAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="DistributorMaster">
     <Key>
       <PropertyRef Name="ID" />
@@ -77,6 +120,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="StateID" Type="Int32" />
     <Property Name="StateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CountryID" Type="Int32" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -256,90 +300,6 @@
     <Property Name="ModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Status" Type="Int32" />
   </EntityType>
-  <EntityType Name="Card_dynamicPage">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="CardProviderId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="CardProviderName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="CardActionId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="CardAction_Deeplink" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="CardAction_Pagename" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="ColourId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ColourName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Hexacode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="ImageOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ImageSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="Width" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="Sub_Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
-    <Property Name="Sub_TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="CardDataFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="Action1_Colour" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Action1_Text" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Startdate" Type="DateTime" Precision="3" />
-    <Property Name="Enddate" Type="DateTime" Precision="3" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Status" Type="Int32" />
-    <Property Name="TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="Pagename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PdfOriginalName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="PdfSystemName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="Subcatid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="Subcatname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="OriginalMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="SystemMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Sequence" Type="Int32" />
-  </EntityType>
-  <EntityType Name="Card_dynamicPage_History">
-    <Key>
-      <PropertyRef Name="Id" />
-      <PropertyRef Name="Parent_Card_Id" />
-    </Key>
-    <Property Name="Id" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="Parent_Card_Id" Type="Int64" Nullable="false" />
-    <Property Name="CardProviderId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="CardProviderName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="CardActionId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="CardAction_Deeplink" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="CardAction_Pagename" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="ColourId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ColourName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Hexacode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="ImageOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ImageSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="Width" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="Sub_Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="Sub_TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="CardDataFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="Action1_Colour" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Action1_Text" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Startdate" Type="DateTime" Precision="3" />
-    <Property Name="Enddate" Type="DateTime" Precision="3" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Status" Type="Int32" />
-    <Property Name="TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-    <Property Name="Pagename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PdfOriginalName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="PdfSystemName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="Subcatid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="Subcatname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="OriginalMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="SystemMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Sequence" Type="Int32" />
-  </EntityType>
   <EntityType Name="Card_LanguageMaster">
     <Key>
       <PropertyRef Name="Id" />
@@ -410,6 +370,9 @@
     <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
     <Property Name="ModifiedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="State" Type="Int32" />
+    <Property Name="City" Type="Int32" />
   </EntityType>
   <EntityType Name="contactUsDetail_History">
     <Key>
@@ -485,37 +448,6 @@
     <Property Name="status" Type="Int32" />
     <Property Name="Phoneno" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="FAQ">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int64" Nullable="false" />
-    <Property Name="QuestionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="StartDate" Type="DateTime" Precision="3" />
-    <Property Name="EndDate" Type="DateTime" Precision="3" />
-    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
-    <Property Name="Status" Type="Int32" />
-  </EntityType>
-  <EntityType Name="FAQ_History">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="FAQ_ParentId" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="QuestionName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="StartDate" Type="DateTime" Precision="3" />
-    <Property Name="EndDate" Type="DateTime" Precision="3" />
-    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
-    <Property Name="Status" Type="Int32" />
-  </EntityType>
   <EntityType Name="FooterCategory">
     <Key>
       <PropertyRef Name="Id" />
@@ -551,39 +483,6 @@
     <Property Name="CreatedOn" Type="DateTime" Precision="3" />
     <Property Name="PageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="MediaData">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="VideoName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="CreatedBy" Type="Int32" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifyBy" Type="Int32" />
-    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-    <Property Name="VideoImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="LabelId" Type="Int32" />
-    <Property Name="Status" Type="Int32" />
-    <Property Name="PageFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="MediaDataHistory">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="MediaDataId" Type="Int32" />
-    <Property Name="VideoName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="CreatedBy" Type="Int32" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifyBy" Type="Int32" />
-    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-    <Property Name="VideoImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="LabelId" Type="Int32" />
-    <Property Name="Status" Type="Int32" />
-    <Property Name="PageFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-  </EntityType>
   <EntityType Name="MPartnerServiceLog">
     <Key>
       <PropertyRef Name="Id" />
@@ -605,29 +504,6 @@
     <Property Name="Comments" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="Flag" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="NotificationSurvey">
-    <Key>
-      <PropertyRef Name="SurveyID" />
-    </Key>
-    <Property Name="SurveyID" Type="Int32" Nullable="false" />
-    <Property Name="Survey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="QuestionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="QuestionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OptionA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OptionB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OptionD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OptionE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="CorrectAns" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="StartDate" Type="DateTime" Precision="3" />
-    <Property Name="Enddate" Type="DateTime" Precision="3" />
-    <Property Name="CreatedBy" Type="Int32" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifyBy" Type="Int32" />
-    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-    <Property Name="Status" Type="Int32" />
-    <Property Name="ContestId" Type="Int32" />
-  </EntityType>
   <EntityType Name="ParentCategory">
     <Key>
       <PropertyRef Name="Pcid" />
@@ -642,40 +518,6 @@
     <Property Name="PageName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="PdfUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="ProductCatergories" Relationship="LuminousMpartnerIBModel.fk_Prntid" FromRole="ParentCategory" ToRole="ProductCatergory" />
-  </EntityType>
-  <EntityType Name="ParentCategoryhistory">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="Pcid" Type="Int32" />
-    <Property Name="PCName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="PCStatus" Type="Int32" />
-    <Property Name="ModifyBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-  </EntityType>
-  <EntityType Name="Price_SchemeAccessTable">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="RegId" Type="Int32" />
-    <Property Name="DestributorID" Type="Int32" />
-    <Property Name="DealerId" Type="Int32" />
-    <Property Name="AllAcess" Type="Boolean" />
-    <Property Name="createdate" Type="DateTime" Precision="3" />
-    <Property Name="createby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="modifieddate" Type="DateTime" Precision="3" />
-    <Property Name="modifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="promotionid" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="deleted" Type="Boolean" />
-    <Property Name="AllDestriAccess" Type="Boolean" />
-    <Property Name="AllDealerAccess" Type="Boolean" />
-    <Property Name="SpecificDealerAccess" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="SpecificDestriAccess" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="Pagename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="ProductAccessTable">
     <Key>
@@ -733,6 +575,7 @@
     <Property Name="enddate" Type="DateTime" Precision="3" />
     <Property Name="ParentCatid" Type="Int32" />
     <Property Name="OrderSequence" Type="Int32" />
+    <NavigationProperty Name="ProductCatergory" Relationship="LuminousMpartnerIBModel.FK__ProductLev__pcId__2704CA5F" FromRole="ProductLevelOne" ToRole="ProductCatergory" />
   </EntityType>
   <EntityType Name="ProductLevelOneHistory">
     <Key>
@@ -809,6 +652,8 @@
     <Property Name="OutputVoltageWorkingRange" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="MainsACLowCut" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="MainACLowCutRecovery" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductCatergory" Relationship="LuminousMpartnerIBModel.FK__ProductLe__produ__30C33EC3" FromRole="ProductLevelThree" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelTwo" Relationship="LuminousMpartnerIBModel.FK__ProductLe__pc_Lv__2FCF1A8A" FromRole="ProductLevelThree" ToRole="ProductLevelTwo" />
   </EntityType>
   <EntityType Name="ProductLevelThreeHistory">
     <Key>
@@ -840,6 +685,45 @@
     <Property Name="NominalVoltage" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="DimensionMM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Weight_Filled_battery" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ProductLevelTwo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="pc_Lvl_oneId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <Property Name="PrductID" Type="Int32" />
+    <Property Name="ImageName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="ImageFileName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="ParentCatid" Type="Int32" />
+    <Property Name="OrderSequence" Type="Int32" />
+    <NavigationProperty Name="ProductCatergory" Relationship="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101" FromRole="ProductLevelTwo" ToRole="ProductCatergory" />
+    <NavigationProperty Name="ProductLevelThrees" Relationship="LuminousMpartnerIBModel.FK__ProductLe__pc_Lv__2FCF1A8A" FromRole="ProductLevelTwo" ToRole="ProductLevelThree" />
+  </EntityType>
+  <EntityType Name="ProductLevelTwoHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="pc_Lvl_oneId" Type="Int32" />
+    <Property Name="ProductlevlTwoId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PlTwStatus" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <Property Name="ImageName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="ImageFileName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="ProductthreeImageMapping">
     <Key>
@@ -933,6 +817,8 @@
     <Property Name="languageCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="LuminousMpartnerIBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DealersMasters" EntityType="Self.DealersMaster" />
+    <EntitySet Name="DealersMaster_History" EntityType="Self.DealersMaster_History" />
     <EntitySet Name="DistributorMasters" EntityType="Self.DistributorMaster" />
     <EntitySet Name="DistributorMaster_History" EntityType="Self.DistributorMaster_History" />
     <EntitySet Name="Mapping_Company_Distributor_Dealers" EntityType="Self.Mapping_Company_Distributor_Dealers" />
@@ -949,8 +835,6 @@
     <EntitySet Name="Card_ActionMaster" EntityType="Self.Card_ActionMaster" />
     <EntitySet Name="Card_CardData" EntityType="Self.Card_CardData" />
     <EntitySet Name="Card_ColourMaster" EntityType="Self.Card_ColourMaster" />
-    <EntitySet Name="Card_dynamicPage" EntityType="Self.Card_dynamicPage" />
-    <EntitySet Name="Card_dynamicPage_History" EntityType="Self.Card_dynamicPage_History" />
     <EntitySet Name="Card_LanguageMaster" EntityType="Self.Card_LanguageMaster" />
     <EntitySet Name="Card_ProviderMaster" EntityType="Self.Card_ProviderMaster" />
     <EntitySet Name="catalog_MainPdf" EntityType="Self.catalog_MainPdf" />
@@ -962,24 +846,19 @@
     <EntitySet Name="CustomerTypes" EntityType="Self.CustomerType" />
     <EntitySet Name="EscalationMatrices" EntityType="Self.EscalationMatrix" />
     <EntitySet Name="EscalationMatrix_History" EntityType="Self.EscalationMatrix_History" />
-    <EntitySet Name="FAQs" EntityType="Self.FAQ" />
-    <EntitySet Name="FAQ_History" EntityType="Self.FAQ_History" />
     <EntitySet Name="FooterCategories" EntityType="Self.FooterCategory" />
     <EntitySet Name="FooterCategoryHistories" EntityType="Self.FooterCategoryHistory" />
     <EntitySet Name="MappingUrl_Page" EntityType="Self.MappingUrl_Page" />
-    <EntitySet Name="MediaDatas" EntityType="Self.MediaData" />
-    <EntitySet Name="MediaDataHistories" EntityType="Self.MediaDataHistory" />
     <EntitySet Name="MPartnerServiceLogs" EntityType="Self.MPartnerServiceLog" />
-    <EntitySet Name="NotificationSurveys" EntityType="Self.NotificationSurvey" />
     <EntitySet Name="ParentCategories" EntityType="Self.ParentCategory" />
-    <EntitySet Name="ParentCategoryhistories" EntityType="Self.ParentCategoryhistory" />
-    <EntitySet Name="Price_SchemeAccessTable" EntityType="Self.Price_SchemeAccessTable" />
     <EntitySet Name="ProductAccessTables" EntityType="Self.ProductAccessTable" />
     <EntitySet Name="ProductAccessTableForProducts" EntityType="Self.ProductAccessTableForProduct" />
     <EntitySet Name="ProductLevelOnes" EntityType="Self.ProductLevelOne" />
     <EntitySet Name="ProductLevelOneHistories" EntityType="Self.ProductLevelOneHistory" />
     <EntitySet Name="ProductLevelThrees" EntityType="Self.ProductLevelThree" />
     <EntitySet Name="ProductLevelThreeHistories" EntityType="Self.ProductLevelThreeHistory" />
+    <EntitySet Name="ProductLevelTwoes" EntityType="Self.ProductLevelTwo" />
+    <EntitySet Name="ProductLevelTwoHistories" EntityType="Self.ProductLevelTwoHistory" />
     <EntitySet Name="ProductthreeImageMappings" EntityType="Self.ProductthreeImageMapping" />
     <EntitySet Name="Suggestions" EntityType="Self.Suggestion" />
     <EntitySet Name="useraccounts" EntityType="Self.useraccount" />
@@ -1000,17 +879,12 @@
     <EntitySet Name="UserVerification_log" EntityType="LuminousMpartnerIBModel.UserVerification_log" />
     <EntitySet Name="AllPages" EntityType="LuminousMpartnerIBModel.AllPage" />
     <EntitySet Name="cities" EntityType="LuminousMpartnerIBModel.city" />
-    <FunctionImport Name="PermotonsListPagingScheme_Price_New" ReturnType="Collection(LuminousMpartnerIBModel.PermotonsListPagingScheme_Price_New_Result)">
-      <Parameter Name="pagename" Mode="In" Type="String" />
-    </FunctionImport>
     <FunctionImport Name="userpermission" ReturnType="Collection(LuminousMpartnerIBModel.userpermission_Result)">
       <Parameter Name="mode" Mode="In" Type="Int32" />
       <Parameter Name="userid" Mode="In" Type="String" />
     </FunctionImport>
     <EntitySet Name="NotificationAccessTables" EntityType="LuminousMpartnerIBModel.NotificationAccessTable" />
     <EntitySet Name="NotificationReadStatus" EntityType="LuminousMpartnerIBModel.NotificationReadStatu" />
-    <EntitySet Name="NotificationsHistories" EntityType="LuminousMpartnerIBModel.NotificationsHistory" />
-    <EntitySet Name="NotificationSurveyHistories" EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" />
     <FunctionImport Name="GetNotificationAccessTable" ReturnType="Collection(LuminousMpartnerIBModel.GetNotificationAccessTable_Result)">
       <Parameter Name="Nid" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -1024,23 +898,103 @@
     <FunctionImport Name="GetSurveyRecord">
       <Parameter Name="Id" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="GetColumnNames" ReturnType="Collection(LuminousMpartnerIBModel.GetColumnNames_Result)" />
-    <FunctionImport Name="ProductLevelThreePaging" ReturnType="Collection(LuminousMpartnerIBModel.ProductLevelThreePaging_Result)" />
-    <FunctionImport Name="GetProductLevelFourAccessTable" ReturnType="Collection(LuminousMpartnerIBModel.GetProductLevelFourAccessTable_Result)">
-      <Parameter Name="Pid" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <EntitySet Name="ProductLevelTwoes" EntityType="LuminousMpartnerIBModel.ProductLevelTwo" />
     <AssociationSet Name="FK__ProductLe__Prduc__5CA1C101" Association="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101">
       <End Role="ProductCatergory" EntitySet="ProductCatergories" />
       <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
     </AssociationSet>
-    <EntitySet Name="ProductLevelTwoHistories" EntityType="LuminousMpartnerIBModel.ProductLevelTwoHistory" />
-    <EntitySet Name="Dealer_Save_Image" EntityType="LuminousMpartnerIBModel.Dealer_Save_Image" />
+    <FunctionImport Name="GetColumnNames" ReturnType="Collection(LuminousMpartnerIBModel.GetColumnNames_Result)" />
+    <FunctionImport Name="GetProductLevelFourAccessTable" ReturnType="Collection(LuminousMpartnerIBModel.GetProductLevelFourAccessTable_Result)">
+      <Parameter Name="Pid" Mode="In" Type="Int32" />
+    </FunctionImport>
     <EntitySet Name="Dealer_Save_Image_History" EntityType="LuminousMpartnerIBModel.Dealer_Save_Image_History" />
-    <EntitySet Name="DealersMasters" EntityType="LuminousMpartnerIBModel.DealersMaster" />
-    <EntitySet Name="DealersMaster_History" EntityType="LuminousMpartnerIBModel.DealersMaster_History" />
-    <EntitySet Name="SaveNotificationSurveys" EntityType="LuminousMpartnerIBModel.SaveNotificationSurvey" />
+    <EntitySet Name="ParentCategoryhistories" EntityType="LuminousMpartnerIBModel.ParentCategoryhistory" />
     <EntitySet Name="ProductCatergoryHistories" EntityType="LuminousMpartnerIBModel.ProductCatergoryHistory" />
+    <EntitySet Name="FAQs" EntityType="LuminousMpartnerIBModel.FAQ" />
+    <EntitySet Name="FAQ_History" EntityType="LuminousMpartnerIBModel.FAQ_History" />
+    <EntitySet Name="Card_dynamicPage" EntityType="LuminousMpartnerIBModel.Card_dynamicPage" />
+    <EntitySet Name="Card_dynamicPage_History" EntityType="LuminousMpartnerIBModel.Card_dynamicPage_History" />
+    <EntitySet Name="Price_SchemeAccessTable" EntityType="LuminousMpartnerIBModel.Price_SchemeAccessTable" />
+    <EntitySet Name="NotificationsHistories" EntityType="LuminousMpartnerIBModel.NotificationsHistory" />
+    <FunctionImport Name="PermotonsListPagingScheme_Price_New" ReturnType="Collection(LuminousMpartnerIBModel.PermotonsListPagingScheme_Price_New_Result)">
+      <Parameter Name="pagename" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ProductLevelThreePaging" ReturnType="Collection(LuminousMpartnerIBModel.ProductLevelThreePaging_Result)" />
+    <EntitySet Name="Dealer_Save_Image" EntityType="LuminousMpartnerIBModel.Dealer_Save_Image" />
+    <EntitySet Name="Countries" EntityType="LuminousMpartnerIBModel.Country" />
+    <EntitySet Name="PermotionsLists" EntityType="LuminousMpartnerIBModel.PermotionsList" />
+    <EntitySet Name="PermotionsListHistories" EntityType="LuminousMpartnerIBModel.PermotionsListHistory" />
+    <AssociationSet Name="FK__ProductLe__produ__30C33EC3" Association="LuminousMpartnerIBModel.FK__ProductLe__produ__30C33EC3">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLev__pcId__2704CA5F" Association="LuminousMpartnerIBModel.FK__ProductLev__pcId__2704CA5F">
+      <End Role="ProductCatergory" EntitySet="ProductCatergories" />
+      <End Role="ProductLevelOne" EntitySet="ProductLevelOnes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLe__pc_Lv__2FCF1A8A" Association="LuminousMpartnerIBModel.FK__ProductLe__pc_Lv__2FCF1A8A">
+      <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
+      <End Role="ProductLevelThree" EntitySet="ProductLevelThrees" />
+    </AssociationSet>
+    <FunctionImport Name="HomePage_Paging" ReturnType="Collection(LuminousMpartnerIBModel.HomePage_Paging_Result)">
+      <Parameter Name="PageId" Mode="In" Type="Int32" />
+      <Parameter Name="TotalPage" Mode="In" Type="Int32" />
+      <Parameter Name="pagename" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="MediaDatas" EntityType="LuminousMpartnerIBModel.MediaData" />
+    <EntitySet Name="MediaDataHistories" EntityType="LuminousMpartnerIBModel.MediaDataHistory" />
+    <FunctionImport Name="get_UserProfile" ReturnType="Collection(LuminousMpartnerIBModel.get_UserProfile_Result)">
+      <Parameter Name="Userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAlertNotificationByUserId" ReturnType="Collection(LuminousMpartnerIBModel.GetAlertNotificationByUserId_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getCatalog_Upper" ReturnType="Collection(LuminousMpartnerIBModel.getCatalog_Upper_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+      <Parameter Name="prodcatid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getContactUs_Details" ReturnType="Collection(LuminousMpartnerIBModel.getContactUs_Details_Result)">
+      <Parameter Name="Userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getCustomerPermission_New" ReturnType="Collection(LuminousMpartnerIBModel.getCustomerPermission_New_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+      <Parameter Name="Languagecode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetPrice_SchemeByUserId" ReturnType="Collection(LuminousMpartnerIBModel.GetPrice_SchemeByUserId_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+      <Parameter Name="Pagename" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MHrVarifyOtpNotification" ReturnType="Collection(LuminousMpartnerIBModel.MHrVarifyOtpNotification_Result)">
+      <Parameter Name="empid" Mode="In" Type="String" />
+      <Parameter Name="imeinumber" Mode="In" Type="String" />
+      <Parameter Name="osversion" Mode="In" Type="String" />
+      <Parameter Name="devicename" Mode="In" Type="String" />
+      <Parameter Name="otp" Mode="In" Type="String" />
+      <Parameter Name="appid" Mode="In" Type="String" />
+      <Parameter Name="devid" Mode="In" Type="String" />
+      <Parameter Name="ostype" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="SaveNotificationSurveys" EntityType="LuminousMpartnerIBModel.SaveNotificationSurvey" />
+    <FunctionImport Name="update_Userverification">
+      <Parameter Name="Userid" Mode="In" Type="String" />
+      <Parameter Name="osversion" Mode="In" Type="String" />
+      <Parameter Name="ostype" Mode="In" Type="String" />
+      <Parameter Name="appversion" Mode="In" Type="String" />
+      <Parameter Name="deviceid" Mode="In" Type="String" />
+      <Parameter Name="fcm_token" Mode="In" Type="String" />
+      <Parameter Name="token" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UserPermission_bottomMenu" ReturnType="Collection(LuminousMpartnerIBModel.SP_UserPermission_bottomMenu_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_MHrCreateOtp" ReturnType="Collection(LuminousMpartnerIBModel.Sp_MHrCreateOtp_Result)">
+      <Parameter Name="empid" Mode="In" Type="String" />
+      <Parameter Name="imeinumber" Mode="In" Type="String" />
+      <Parameter Name="osversion" Mode="In" Type="String" />
+      <Parameter Name="devicename" Mode="In" Type="String" />
+      <Parameter Name="appversion" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="NotificationSurveys" EntityType="LuminousMpartnerIBModel.NotificationSurvey" />
+    <EntitySet Name="NotificationSurveyHistories" EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" />
   </EntityContainer>
   <EntityType Name="User">
     <Key>
@@ -1150,6 +1104,8 @@
     <Property Name="Latitude" Type="Decimal" Precision="12" Scale="9" />
     <Property Name="Longitude" Type="Decimal" Precision="12" Scale="9" />
     <Property Name="GoogleAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="UsersListHistory">
     <Key>
@@ -1224,6 +1180,8 @@
     <Property Name="PdfSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="ParentCategory" Relationship="LuminousMpartnerIBModel.fk_Prntid" FromRole="ProductCatergory" ToRole="ParentCategory" />
     <NavigationProperty Name="ProductLevelTwoes" Relationship="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101" FromRole="ProductCatergory" ToRole="ProductLevelTwo" />
+    <NavigationProperty Name="ProductLevelThrees" Relationship="LuminousMpartnerIBModel.FK__ProductLe__produ__30C33EC3" FromRole="ProductCatergory" ToRole="ProductLevelThree" />
+    <NavigationProperty Name="ProductLevelOnes" Relationship="LuminousMpartnerIBModel.FK__ProductLev__pcId__2704CA5F" FromRole="ProductCatergory" ToRole="ProductLevelOne" />
   </EntityType>
   <Association Name="fk_Prntid">
     <End Type="LuminousMpartnerIBModel.ParentCategory" Role="ParentCategory" Multiplicity="0..1" />
@@ -1292,17 +1250,6 @@
     <Property Name="updatedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="updatedtime" Type="DateTime" Precision="3" />
   </EntityType>
-  <ComplexType Name="PermotonsListPagingScheme_Price_New_Result">
-    <Property Type="Decimal" Name="id" Nullable="false" Precision="18" Scale="0" />
-    <Property Type="String" Name="CardProviderName" Nullable="true" MaxLength="100" />
-    <Property Type="String" Name="Title" Nullable="true" MaxLength="80" />
-    <Property Type="String" Name="Sub_Title" Nullable="true" MaxLength="1000" />
-    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
-    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
-    <Property Type="String" Name="Subcatid" Nullable="true" MaxLength="10" />
-    <Property Type="String" Name="Subcatname" Nullable="true" MaxLength="20" />
-    <Property Type="Int32" Name="status" Nullable="true" />
-  </ComplexType>
   <ComplexType Name="userpermission_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
     <Property Type="String" Name="approvallevel" Nullable="true" MaxLength="50" />
@@ -1336,44 +1283,6 @@
     <Property Name="NotificationId" Type="Int32" />
     <Property Name="IsRead" Type="Boolean" />
     <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="NotificationsHistory">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="NotificationId" Type="Int32" />
-    <Property Name="C_Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="C_text" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Name="C_status" Type="Int32" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
-    <Property Name="Alertflag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-    <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="NotificationSurveyHistory">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="SurveyID" Type="Int32" />
-    <Property Name="Survey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="QuestionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="QuestionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OptionA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OptionB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OptionD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="OptionE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="CorrectAns" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="StartDate" Type="DateTime" Precision="3" />
-    <Property Name="Enddate" Type="DateTime" Precision="3" />
-    <Property Name="CreatedBy" Type="Int32" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifyBy" Type="Int32" />
-    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
-    <Property Name="deviceIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="Status" Type="Int32" />
   </EntityType>
   <ComplexType Name="GetNotificationAccessTable_Result">
     <Property Type="Boolean" Name="AllAcess" Nullable="true" />
@@ -1435,9 +1344,229 @@
     <Property Name="CreatedOn" Type="DateTime" Precision="3" />
     <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
+  <Association Name="FK__ProductLe__Prduc__5CA1C101">
+    <End Type="LuminousMpartnerIBModel.ProductCatergory" Role="ProductCatergory" Multiplicity="0..1" />
+    <End Type="LuminousMpartnerIBModel.ProductLevelTwo" Role="ProductLevelTwo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelTwo">
+        <PropertyRef Name="PrductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <ComplexType Name="GetColumnNames_Result">
     <Property Type="Int32" Name="ORDINAL_POSITION" Nullable="true" />
     <Property Type="String" Name="COLUMN_NAME" Nullable="true" MaxLength="128" />
+  </ComplexType>
+  <ComplexType Name="GetProductLevelFourAccessTable_Result">
+    <Property Type="Boolean" Name="AllAcess" Nullable="true" />
+    <Property Type="String" Name="RegionName" Nullable="false" MaxLength="1" />
+    <Property Type="Boolean" Name="AllDestriAccess" Nullable="true" />
+    <Property Type="Boolean" Name="AllDealerAccess" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Dealer_Save_Image_History">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="DealersanID" Type="Int64" />
+    <Property Name="DealerID" Type="Int64" />
+    <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ParentCategoryhistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Pcid" Type="Int32" />
+    <Property Name="PCName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="PCStatus" Type="Int32" />
+    <Property Name="ModifyBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProductCatergoryHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="pid" Type="Int32" />
+    <Property Name="PCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Pstatus" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PdfOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PdfSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FAQ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuestionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="FAQ_History">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FAQ_ParentId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="QuestionName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Card_dynamicPage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CardProviderId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CardProviderName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CardActionId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CardAction_Deeplink" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="CardAction_Pagename" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ColourId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ColourName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Hexacode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ImageOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ImageSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Width" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Sub_Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Sub_TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="CardDataFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Action1_Colour" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Action1_Text" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Startdate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Pagename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PdfOriginalName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="PdfSystemName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Subcatid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Subcatname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OriginalMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SystemMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Sequence" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Card_dynamicPage_History">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Parent_Card_Id" Type="Int64" Nullable="false" />
+    <Property Name="CardProviderId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CardProviderName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CardActionId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CardAction_Deeplink" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="CardAction_Pagename" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ColourId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ColourName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Hexacode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ImageOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ImageSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Width" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Sub_Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Sub_TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="CardDataFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Action1_Colour" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Action1_Text" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Startdate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="TitleColour" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Pagename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PdfOriginalName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="PdfSystemName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Subcatid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Subcatname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OriginalMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SystemMainImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Sequence" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Price_SchemeAccessTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegId" Type="Int32" />
+    <Property Name="DestributorID" Type="Int32" />
+    <Property Name="DealerId" Type="Int32" />
+    <Property Name="AllAcess" Type="Boolean" />
+    <Property Name="createdate" Type="DateTime" Precision="3" />
+    <Property Name="createby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="modifieddate" Type="DateTime" Precision="3" />
+    <Property Name="modifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="promotionid" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="deleted" Type="Boolean" />
+    <Property Name="AllDestriAccess" Type="Boolean" />
+    <Property Name="AllDealerAccess" Type="Boolean" />
+    <Property Name="SpecificDealerAccess" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SpecificDestriAccess" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Pagename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NotificationsHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NotificationId" Type="Int32" />
+    <Property Name="C_Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="C_text" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="C_status" Type="Int32" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="Alertflag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="PermotonsListPagingScheme_Price_New_Result">
+    <Property Type="Decimal" Name="id" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="CardProviderName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Sub_Title" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Subcatid" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Subcatname" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="status" Nullable="true" />
   </ComplexType>
   <ComplexType Name="ProductLevelThreePaging_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
@@ -1457,69 +1586,14 @@
     <Property Type="Int32" Name="ParentCatid" Nullable="true" />
     <Property Type="Int32" Name="ProductLevelOne" Nullable="true" />
     <Property Type="Int32" Name="productCategoryid" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="100" />
   </ComplexType>
-  <ComplexType Name="GetProductLevelFourAccessTable_Result">
-    <Property Type="Boolean" Name="AllAcess" Nullable="true" />
-    <Property Type="String" Name="RegionName" Nullable="false" MaxLength="1" />
-    <Property Type="Boolean" Name="AllDestriAccess" Nullable="true" />
-    <Property Type="Boolean" Name="AllDealerAccess" Nullable="true" />
-  </ComplexType>
-  <EntityType Name="ProductLevelTwo">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="pc_Lvl_oneId" Type="Int32" />
-    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PlTwStatus" Type="Int32" />
-    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="startDate" Type="DateTime" Precision="3" />
-    <Property Name="enddate" Type="DateTime" Precision="3" />
-    <Property Name="PrductID" Type="Int32" />
-    <Property Name="ImageName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-    <Property Name="ImageFileName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
-    <Property Name="ParentCatid" Type="Int32" />
-    <Property Name="OrderSequence" Type="Int32" />
-    <NavigationProperty Name="ProductCatergory" Relationship="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101" FromRole="ProductLevelTwo" ToRole="ProductCatergory" />
-  </EntityType>
-  <Association Name="FK__ProductLe__Prduc__5CA1C101">
-    <End Type="LuminousMpartnerIBModel.ProductCatergory" Role="ProductCatergory" Multiplicity="0..1" />
-    <End Type="LuminousMpartnerIBModel.ProductLevelTwo" Role="ProductLevelTwo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ProductCatergory">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="ProductLevelTwo">
-        <PropertyRef Name="PrductID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="ProductLevelTwoHistory">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="ProductId" Type="Int32" />
-    <Property Name="pc_Lvl_oneId" Type="Int32" />
-    <Property Name="ProductlevlTwoId" Type="Int32" />
-    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PlTwStatus" Type="Int32" />
-    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="startDate" Type="DateTime" Precision="3" />
-    <Property Name="enddate" Type="DateTime" Precision="3" />
-    <Property Name="ImageName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-    <Property Name="ImageFileName" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
-  </EntityType>
   <EntityType Name="Dealer_Save_Image">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="DealerID" Type="Int64" />
+    <Property Name="DealerID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="status" Type="Int32" />
     <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -1527,63 +1601,207 @@
     <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="Dealer_Save_Image_History">
+  <EntityType Name="Country">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="Id" />
     </Key>
-    <Property Name="ID" Type="Int64" Nullable="false" />
-    <Property Name="DealersanID" Type="Int64" />
-    <Property Name="DealerID" Type="Int64" />
-    <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="status" Type="Int32" />
-    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryID" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="DealersMaster">
+  <EntityType Name="PermotionsList">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="ID" Type="Int64" Nullable="false" />
-    <Property Name="DealerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="DealerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="StateID" Type="Int32" />
-    <Property Name="CityID" Type="Int32" />
-    <Property Name="PinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="EmailID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="Latitude" Type="Decimal" Precision="12" Scale="9" />
-    <Property Name="Longitude" Type="Decimal" Precision="12" Scale="9" />
-    <Property Name="GoogleAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="PermotionTypeId" Type="Int32" />
+    <Property Name="ProductCatId" Type="Int32" />
+    <Property Name="ProductLvlOneId" Type="Int32" />
+    <Property Name="Descriptions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="status" Type="Int32" />
-    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="createdate" Type="DateTime" Precision="3" />
+    <Property Name="createby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="modifieddate" Type="DateTime" Precision="3" />
+    <Property Name="Modifiedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PDFName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ParentCatid" Type="Int32" />
   </EntityType>
-  <EntityType Name="DealersMaster_History">
+  <EntityType Name="PermotionsListHistory">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="ID" Type="Int64" Nullable="false" />
-    <Property Name="DealersMasterID" Type="Int64" />
-    <Property Name="DealerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="DealerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="StateID" Type="Int32" />
-    <Property Name="CityID" Type="Int32" />
-    <Property Name="PinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="EmailID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Latitude" Type="Decimal" Precision="12" Scale="9" />
-    <Property Name="Longitude" Type="Decimal" Precision="12" Scale="9" />
-    <Property Name="GoogleAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="promotionListId" Type="Int32" />
+    <Property Name="PermotionTypeId" Type="Int32" />
+    <Property Name="ProductCatId" Type="Int32" />
+    <Property Name="ProductLvlOneId" Type="Int32" />
+    <Property Name="Descriptions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="status" Type="Int32" />
-    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="ModifiedOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="modifieddate" Type="DateTime" Precision="3" />
+    <Property Name="Modifiedby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PDFName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ParentCatid" Type="Int32" />
   </EntityType>
+  <Association Name="FK__ProductLe__produ__30C33EC3">
+    <End Type="LuminousMpartnerIBModel.ProductCatergory" Role="ProductCatergory" Multiplicity="0..1" />
+    <End Type="LuminousMpartnerIBModel.ProductLevelThree" Role="ProductLevelThree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThree">
+        <PropertyRef Name="productCategoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLev__pcId__2704CA5F">
+    <End Type="LuminousMpartnerIBModel.ProductCatergory" Role="ProductCatergory" Multiplicity="0..1" />
+    <End Type="LuminousMpartnerIBModel.ProductLevelOne" Role="ProductLevelOne" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCatergory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelOne">
+        <PropertyRef Name="pcId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLe__pc_Lv__2FCF1A8A">
+    <End Type="LuminousMpartnerIBModel.ProductLevelTwo" Role="ProductLevelTwo" Multiplicity="0..1" />
+    <End Type="LuminousMpartnerIBModel.ProductLevelThree" Role="ProductLevelThree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLevelTwo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProductLevelThree">
+        <PropertyRef Name="pc_Lv2_oneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="HomePage_Paging_Result">
+    <Property Type="Decimal" Name="id" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="CardProviderName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProviderName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Sub_Title" Nullable="true" MaxLength="1000" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Sequence" Nullable="true" />
+    <Property Type="Int32" Name="status" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <EntityType Name="MediaData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VideoName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="VideoImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LabelId" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="PageFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MediaDataHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MediaDataId" Type="Int32" />
+    <Property Name="VideoName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="VideoImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LabelId" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="PageFlag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="get_UserProfile_Result">
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Username" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetAlertNotificationByUserId_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="C_status" Nullable="true" />
+    <Property Type="String" Name="C_text" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="createby" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="modifyby" Nullable="true" />
+    <Property Type="DateTime" Name="ModifyOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Imagename" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Imagepath" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="getCatalog_Upper_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="prodid" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="getContactUs_Details_Result">
+    <Property Type="String" Name="name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="phoneno" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="status" Nullable="true" />
+    <Property Type="String" Name="countryname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="statename" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="cityname" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="getCustomerPermission_New_Result">
+    <Property Type="String" Name="ModuleName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Language" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Usertype" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Permission" Nullable="true" />
+    <Property Type="String" Name="ModuleImage" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="languagecode" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="GetPrice_SchemeByUserId_Result">
+    <Property Type="Decimal" Name="Id" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="CardProviderName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ClassName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CardAction_Deeplink" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="ImageSystemName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Height" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Width" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="TitleColour" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Sub_Title" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Sub_TitleColour" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="Action1_Colour" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Action1_Text" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="CardDataFlag" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Pagename" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PdfOriginalName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Subcatname" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SystemMainImage" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="status" Nullable="true" />
+    <Property Type="DateTime" Name="Startdate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Enddate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Subcatid" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Sequence" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="MHrVarifyOtpNotification_Result">
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Message" Nullable="false" MaxLength="11" />
+  </ComplexType>
   <EntityType Name="SaveNotificationSurvey">
     <Key>
       <PropertyRef Name="ID" />
@@ -1601,18 +1819,65 @@
     <Property Name="ContestId" Type="Int32" />
     <Property Name="Marqueeid" Type="Int32" />
   </EntityType>
-  <EntityType Name="ProductCatergoryHistory">
+  <ComplexType Name="SP_UserPermission_bottomMenu_Result">
+    <Property Type="Int32" Name="ModID" Nullable="false" />
+    <Property Type="String" Name="ModuleName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ModuleImage" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="Sp_MHrCreateOtp_Result">
+    <Property Type="String" Name="Emp_Code" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Employee_Name" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Employee_EmailId" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Employee_Mob" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="otp" Nullable="true" MaxLength="6" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="7" />
+    <Property Type="String" Name="Message" Nullable="false" MaxLength="24" />
+  </ComplexType>
+  <EntityType Name="NotificationSurvey">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="SurveyID" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="pid" Type="Int32" />
-    <Property Name="PCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="PName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Pstatus" Type="Int32" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
-    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PdfOriginalName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PdfSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SurveyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Survey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CorrectAns" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="ContestId" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NotificationSurveyHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SurveyID" Type="Int32" />
+    <Property Name="Survey" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionB" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OptionE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CorrectAns" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="deviceIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

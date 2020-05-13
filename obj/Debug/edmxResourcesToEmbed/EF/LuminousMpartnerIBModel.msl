@@ -1,6 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="LuminousMpartnerIBModelStoreContainer" CdmEntityContainer="LuminousMpartnerIBEntities">
+    <EntitySetMapping Name="DealersMasters">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.DealersMaster">
+        <MappingFragment StoreEntitySet="DealersMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+          <ScalarProperty Name="DealerAddress" ColumnName="DealerAddress" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealersMaster_History">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.DealersMaster_History">
+        <MappingFragment StoreEntitySet="DealersMaster_History">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DealersMasterID" ColumnName="DealersMasterID" />
+          <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+          <ScalarProperty Name="DealerAddress" ColumnName="DealerAddress" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="DistributorMasters">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.DistributorMaster">
         <MappingFragment StoreEntitySet="DistributorMaster">
@@ -78,6 +123,7 @@
     <EntitySetMapping Name="States">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.State">
         <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="StateID" ColumnName="StateID" />
           <ScalarProperty Name="StateName" ColumnName="StateName" />
@@ -273,91 +319,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Card_dynamicPage">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Card_dynamicPage">
-        <MappingFragment StoreEntitySet="Card_dynamicPage">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="CardProviderId" ColumnName="CardProviderId" />
-          <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
-          <ScalarProperty Name="CardActionId" ColumnName="CardActionId" />
-          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
-          <ScalarProperty Name="CardAction_Deeplink" ColumnName="CardAction_Deeplink" />
-          <ScalarProperty Name="CardAction_Pagename" ColumnName="CardAction_Pagename" />
-          <ScalarProperty Name="ColourId" ColumnName="ColourId" />
-          <ScalarProperty Name="ColourName" ColumnName="ColourName" />
-          <ScalarProperty Name="Hexacode" ColumnName="Hexacode" />
-          <ScalarProperty Name="ImageOriginalName" ColumnName="ImageOriginalName" />
-          <ScalarProperty Name="ImageSystemName" ColumnName="ImageSystemName" />
-          <ScalarProperty Name="Height" ColumnName="Height" />
-          <ScalarProperty Name="Width" ColumnName="Width" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
-          <ScalarProperty Name="Sub_TitleColour" ColumnName="Sub_TitleColour" />
-          <ScalarProperty Name="CardDataFlag" ColumnName="CardDataFlag" />
-          <ScalarProperty Name="Action1_Colour" ColumnName="Action1_Colour" />
-          <ScalarProperty Name="Action1_Text" ColumnName="Action1_Text" />
-          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
-          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="TitleColour" ColumnName="TitleColour" />
-          <ScalarProperty Name="Pagename" ColumnName="Pagename" />
-          <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
-          <ScalarProperty Name="PdfSystemName" ColumnName="PdfSystemName" />
-          <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
-          <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
-          <ScalarProperty Name="OriginalMainImage" ColumnName="OriginalMainImage" />
-          <ScalarProperty Name="SystemMainImage" ColumnName="SystemMainImage" />
-          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Card_dynamicPage_History">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Card_dynamicPage_History">
-        <MappingFragment StoreEntitySet="Card_dynamicPage_History">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Parent_Card_Id" ColumnName="Parent_Card_Id" />
-          <ScalarProperty Name="CardProviderId" ColumnName="CardProviderId" />
-          <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
-          <ScalarProperty Name="CardActionId" ColumnName="CardActionId" />
-          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
-          <ScalarProperty Name="CardAction_Deeplink" ColumnName="CardAction_Deeplink" />
-          <ScalarProperty Name="CardAction_Pagename" ColumnName="CardAction_Pagename" />
-          <ScalarProperty Name="ColourId" ColumnName="ColourId" />
-          <ScalarProperty Name="ColourName" ColumnName="ColourName" />
-          <ScalarProperty Name="Hexacode" ColumnName="Hexacode" />
-          <ScalarProperty Name="ImageOriginalName" ColumnName="ImageOriginalName" />
-          <ScalarProperty Name="ImageSystemName" ColumnName="ImageSystemName" />
-          <ScalarProperty Name="Height" ColumnName="Height" />
-          <ScalarProperty Name="Width" ColumnName="Width" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
-          <ScalarProperty Name="Sub_TitleColour" ColumnName="Sub_TitleColour" />
-          <ScalarProperty Name="CardDataFlag" ColumnName="CardDataFlag" />
-          <ScalarProperty Name="Action1_Colour" ColumnName="Action1_Colour" />
-          <ScalarProperty Name="Action1_Text" ColumnName="Action1_Text" />
-          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
-          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="TitleColour" ColumnName="TitleColour" />
-          <ScalarProperty Name="Pagename" ColumnName="Pagename" />
-          <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
-          <ScalarProperty Name="PdfSystemName" ColumnName="PdfSystemName" />
-          <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
-          <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
-          <ScalarProperty Name="OriginalMainImage" ColumnName="OriginalMainImage" />
-          <ScalarProperty Name="SystemMainImage" ColumnName="SystemMainImage" />
-          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Card_LanguageMaster">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Card_LanguageMaster">
         <MappingFragment StoreEntitySet="Card_LanguageMaster">
@@ -420,6 +381,9 @@
     <EntitySetMapping Name="contactUsDetails">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.contactUsDetail">
         <MappingFragment StoreEntitySet="contactUsDetail">
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="Contact_Us_Type" ColumnName="Contact_Us_Type" />
           <ScalarProperty Name="CAddress" ColumnName="CAddress" />
@@ -514,39 +478,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="FAQs">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.FAQ">
-        <MappingFragment StoreEntitySet="FAQ">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="QuestionName" ColumnName="QuestionName" />
-          <ScalarProperty Name="Answer" ColumnName="Answer" />
-          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="FAQ_History">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.FAQ_History">
-        <MappingFragment StoreEntitySet="FAQ_History">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="FAQ_ParentId" ColumnName="FAQ_ParentId" />
-          <ScalarProperty Name="QuestionName" ColumnName="QuestionName" />
-          <ScalarProperty Name="Answer" ColumnName="Answer" />
-          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="FooterCategories">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.FooterCategory">
         <MappingFragment StoreEntitySet="FooterCategory">
@@ -585,41 +516,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MediaDatas">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.MediaData">
-        <MappingFragment StoreEntitySet="MediaData">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="VideoName" ColumnName="VideoName" />
-          <ScalarProperty Name="Url" ColumnName="Url" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
-          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
-          <ScalarProperty Name="VideoImage" ColumnName="VideoImage" />
-          <ScalarProperty Name="LabelId" ColumnName="LabelId" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="PageFlag" ColumnName="PageFlag" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="MediaDataHistories">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.MediaDataHistory">
-        <MappingFragment StoreEntitySet="MediaDataHistory">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="MediaDataId" ColumnName="MediaDataId" />
-          <ScalarProperty Name="VideoName" ColumnName="VideoName" />
-          <ScalarProperty Name="Url" ColumnName="Url" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
-          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
-          <ScalarProperty Name="VideoImage" ColumnName="VideoImage" />
-          <ScalarProperty Name="LabelId" ColumnName="LabelId" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="PageFlag" ColumnName="PageFlag" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="MPartnerServiceLogs">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.MPartnerServiceLog">
         <MappingFragment StoreEntitySet="MPartnerServiceLog">
@@ -642,30 +538,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NotificationSurveys">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationSurvey">
-        <MappingFragment StoreEntitySet="NotificationSurvey">
-          <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
-          <ScalarProperty Name="Survey" ColumnName="Survey" />
-          <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
-          <ScalarProperty Name="QuestionTitle" ColumnName="QuestionTitle" />
-          <ScalarProperty Name="OptionA" ColumnName="OptionA" />
-          <ScalarProperty Name="OptionB" ColumnName="OptionB" />
-          <ScalarProperty Name="OptionC" ColumnName="OptionC" />
-          <ScalarProperty Name="OptionD" ColumnName="OptionD" />
-          <ScalarProperty Name="OptionE" ColumnName="OptionE" />
-          <ScalarProperty Name="CorrectAns" ColumnName="CorrectAns" />
-          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
-          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="ContestId" ColumnName="ContestId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ParentCategories">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ParentCategory">
         <MappingFragment StoreEntitySet="ParentCategory">
@@ -678,42 +550,6 @@
           <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
           <ScalarProperty Name="PageName" ColumnName="PageName" />
           <ScalarProperty Name="PdfUrl" ColumnName="PdfUrl" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ParentCategoryhistories">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ParentCategoryhistory">
-        <MappingFragment StoreEntitySet="ParentCategoryhistory">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Pcid" ColumnName="Pcid" />
-          <ScalarProperty Name="PCName" ColumnName="PCName" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="PCStatus" ColumnName="PCStatus" />
-          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
-          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Price_SchemeAccessTable">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Price_SchemeAccessTable">
-        <MappingFragment StoreEntitySet="Price_SchemeAccessTable">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="RegId" ColumnName="RegId" />
-          <ScalarProperty Name="DestributorID" ColumnName="DestributorID" />
-          <ScalarProperty Name="DealerId" ColumnName="DealerId" />
-          <ScalarProperty Name="AllAcess" ColumnName="AllAcess" />
-          <ScalarProperty Name="createdate" ColumnName="createdate" />
-          <ScalarProperty Name="createby" ColumnName="createby" />
-          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
-          <ScalarProperty Name="modifiedBy" ColumnName="modifiedBy" />
-          <ScalarProperty Name="promotionid" ColumnName="promotionid" />
-          <ScalarProperty Name="deleted" ColumnName="deleted" />
-          <ScalarProperty Name="AllDestriAccess" ColumnName="AllDestriAccess" />
-          <ScalarProperty Name="AllDealerAccess" ColumnName="AllDealerAccess" />
-          <ScalarProperty Name="SpecificDealerAccess" ColumnName="SpecificDealerAccess" />
-          <ScalarProperty Name="SpecificDestriAccess" ColumnName="SpecificDestriAccess" />
-          <ScalarProperty Name="Pagename" ColumnName="Pagename" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -887,6 +723,45 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ProductLevelTwoes">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductLevelTwo">
+        <MappingFragment StoreEntitySet="ProductLevelTwo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pc_Lvl_oneId" ColumnName="pc_Lvl_oneId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PlTwStatus" ColumnName="PlTwStatus" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="PrductID" ColumnName="PrductID" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImageFileName" ColumnName="ImageFileName" />
+          <ScalarProperty Name="ParentCatid" ColumnName="ParentCatid" />
+          <ScalarProperty Name="OrderSequence" ColumnName="OrderSequence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductLevelTwoHistories">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductLevelTwoHistory">
+        <MappingFragment StoreEntitySet="ProductLevelTwoHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="pc_Lvl_oneId" ColumnName="pc_Lvl_oneId" />
+          <ScalarProperty Name="ProductlevlTwoId" ColumnName="ProductlevlTwoId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PlTwStatus" ColumnName="PlTwStatus" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImageFileName" ColumnName="ImageFileName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ProductthreeImageMappings">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductthreeImageMapping">
         <MappingFragment StoreEntitySet="ProductthreeImageMapping">
@@ -1048,6 +923,8 @@
     <EntitySetMapping Name="UsersLists">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.UsersList">
         <MappingFragment StoreEntitySet="UsersList">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
           <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
           <ScalarProperty Name="Longitude" ColumnName="Longitude" />
           <ScalarProperty Name="Latitude" ColumnName="Latitude" />
@@ -1230,21 +1107,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="PermotonsListPagingScheme_Price_New" FunctionName="LuminousMpartnerIBModel.Store.PermotonsListPagingScheme_Price_New">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.PermotonsListPagingScheme_Price_New_Result">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
-          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-          <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
-          <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
-          <ScalarProperty Name="status" ColumnName="status" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="userpermission" FunctionName="LuminousMpartnerIBModel.Store.userpermission">
       <ResultMapping>
         <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.userpermission_Result">
@@ -1282,46 +1144,6 @@
           <ScalarProperty Name="IsRead" ColumnName="IsRead" />
           <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
           <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="NotificationsHistories">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationsHistory">
-        <MappingFragment StoreEntitySet="NotificationsHistory">
-          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
-          <ScalarProperty Name="Alertflag" ColumnName="Alertflag" />
-          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="C_status" ColumnName="_status" />
-          <ScalarProperty Name="C_text" ColumnName="_text" />
-          <ScalarProperty Name="C_Subject" ColumnName="_Subject" />
-          <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="NotificationSurveyHistories">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationSurveyHistory">
-        <MappingFragment StoreEntitySet="NotificationSurveyHistory">
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="deviceIP" ColumnName="deviceIP" />
-          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
-          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
-          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-          <ScalarProperty Name="CorrectAns" ColumnName="CorrectAns" />
-          <ScalarProperty Name="OptionE" ColumnName="OptionE" />
-          <ScalarProperty Name="OptionD" ColumnName="OptionD" />
-          <ScalarProperty Name="OptionC" ColumnName="OptionC" />
-          <ScalarProperty Name="OptionB" ColumnName="OptionB" />
-          <ScalarProperty Name="OptionA" ColumnName="OptionA" />
-          <ScalarProperty Name="QuestionTitle" ColumnName="QuestionTitle" />
-          <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
-          <ScalarProperty Name="Survey" ColumnName="Survey" />
-          <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -1406,6 +1228,231 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetProductLevelFourAccessTable" FunctionName="LuminousMpartnerIBModel.Store.GetProductLevelFourAccessTable">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.GetProductLevelFourAccessTable_Result">
+          <ScalarProperty Name="AllAcess" ColumnName="AllAcess" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="AllDestriAccess" ColumnName="AllDestriAccess" />
+          <ScalarProperty Name="AllDealerAccess" ColumnName="AllDealerAccess" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Dealer_Save_Image_History">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Dealer_Save_Image_History">
+        <MappingFragment StoreEntitySet="Dealer_Save_Image_History">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="DealerID" ColumnName="DealerID" />
+          <ScalarProperty Name="DealersanID" ColumnName="DealersanID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParentCategoryhistories">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ParentCategoryhistory">
+        <MappingFragment StoreEntitySet="ParentCategoryhistory">
+          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
+          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+          <ScalarProperty Name="PCStatus" ColumnName="PCStatus" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="Pcid" ColumnName="Pcid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCatergoryHistories">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductCatergoryHistory">
+        <MappingFragment StoreEntitySet="ProductCatergoryHistory">
+          <ScalarProperty Name="PdfSystemName" ColumnName="PdfSystemName" />
+          <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Pstatus" ColumnName="Pstatus" />
+          <ScalarProperty Name="PName" ColumnName="PName" />
+          <ScalarProperty Name="PCode" ColumnName="PCode" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAQs">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.FAQ">
+        <MappingFragment StoreEntitySet="FAQ">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="QuestionName" ColumnName="QuestionName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAQ_History">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.FAQ_History">
+        <MappingFragment StoreEntitySet="FAQ_History">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="QuestionName" ColumnName="QuestionName" />
+          <ScalarProperty Name="FAQ_ParentId" ColumnName="FAQ_ParentId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Card_dynamicPage">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Card_dynamicPage">
+        <MappingFragment StoreEntitySet="Card_dynamicPage">
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="SystemMainImage" ColumnName="SystemMainImage" />
+          <ScalarProperty Name="OriginalMainImage" ColumnName="OriginalMainImage" />
+          <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
+          <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
+          <ScalarProperty Name="PdfSystemName" ColumnName="PdfSystemName" />
+          <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
+          <ScalarProperty Name="Pagename" ColumnName="Pagename" />
+          <ScalarProperty Name="TitleColour" ColumnName="TitleColour" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Action1_Text" ColumnName="Action1_Text" />
+          <ScalarProperty Name="Action1_Colour" ColumnName="Action1_Colour" />
+          <ScalarProperty Name="CardDataFlag" ColumnName="CardDataFlag" />
+          <ScalarProperty Name="Sub_TitleColour" ColumnName="Sub_TitleColour" />
+          <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="ImageSystemName" ColumnName="ImageSystemName" />
+          <ScalarProperty Name="ImageOriginalName" ColumnName="ImageOriginalName" />
+          <ScalarProperty Name="Hexacode" ColumnName="Hexacode" />
+          <ScalarProperty Name="ColourName" ColumnName="ColourName" />
+          <ScalarProperty Name="ColourId" ColumnName="ColourId" />
+          <ScalarProperty Name="CardAction_Pagename" ColumnName="CardAction_Pagename" />
+          <ScalarProperty Name="CardAction_Deeplink" ColumnName="CardAction_Deeplink" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="CardActionId" ColumnName="CardActionId" />
+          <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
+          <ScalarProperty Name="CardProviderId" ColumnName="CardProviderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Card_dynamicPage_History">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Card_dynamicPage_History">
+        <MappingFragment StoreEntitySet="Card_dynamicPage_History">
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="SystemMainImage" ColumnName="SystemMainImage" />
+          <ScalarProperty Name="OriginalMainImage" ColumnName="OriginalMainImage" />
+          <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
+          <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
+          <ScalarProperty Name="PdfSystemName" ColumnName="PdfSystemName" />
+          <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
+          <ScalarProperty Name="Pagename" ColumnName="Pagename" />
+          <ScalarProperty Name="TitleColour" ColumnName="TitleColour" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Action1_Text" ColumnName="Action1_Text" />
+          <ScalarProperty Name="Action1_Colour" ColumnName="Action1_Colour" />
+          <ScalarProperty Name="CardDataFlag" ColumnName="CardDataFlag" />
+          <ScalarProperty Name="Sub_TitleColour" ColumnName="Sub_TitleColour" />
+          <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="ImageSystemName" ColumnName="ImageSystemName" />
+          <ScalarProperty Name="ImageOriginalName" ColumnName="ImageOriginalName" />
+          <ScalarProperty Name="Hexacode" ColumnName="Hexacode" />
+          <ScalarProperty Name="ColourName" ColumnName="ColourName" />
+          <ScalarProperty Name="ColourId" ColumnName="ColourId" />
+          <ScalarProperty Name="CardAction_Pagename" ColumnName="CardAction_Pagename" />
+          <ScalarProperty Name="CardAction_Deeplink" ColumnName="CardAction_Deeplink" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="CardActionId" ColumnName="CardActionId" />
+          <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
+          <ScalarProperty Name="CardProviderId" ColumnName="CardProviderId" />
+          <ScalarProperty Name="Parent_Card_Id" ColumnName="Parent_Card_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Price_SchemeAccessTable">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Price_SchemeAccessTable">
+        <MappingFragment StoreEntitySet="Price_SchemeAccessTable">
+          <ScalarProperty Name="Pagename" ColumnName="Pagename" />
+          <ScalarProperty Name="SpecificDestriAccess" ColumnName="SpecificDestriAccess" />
+          <ScalarProperty Name="SpecificDealerAccess" ColumnName="SpecificDealerAccess" />
+          <ScalarProperty Name="AllDealerAccess" ColumnName="AllDealerAccess" />
+          <ScalarProperty Name="AllDestriAccess" ColumnName="AllDestriAccess" />
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="promotionid" ColumnName="promotionid" />
+          <ScalarProperty Name="modifiedBy" ColumnName="modifiedBy" />
+          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+          <ScalarProperty Name="createby" ColumnName="createby" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="AllAcess" ColumnName="AllAcess" />
+          <ScalarProperty Name="DealerId" ColumnName="DealerId" />
+          <ScalarProperty Name="DestributorID" ColumnName="DestributorID" />
+          <ScalarProperty Name="RegId" ColumnName="RegId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationsHistories">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationsHistory">
+        <MappingFragment StoreEntitySet="NotificationsHistory">
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="Alertflag" ColumnName="Alertflag" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="C_status" ColumnName="_status" />
+          <ScalarProperty Name="C_text" ColumnName="_text" />
+          <ScalarProperty Name="C_Subject" ColumnName="_Subject" />
+          <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PermotonsListPagingScheme_Price_New" FunctionName="LuminousMpartnerIBModel.Store.PermotonsListPagingScheme_Price_New">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.PermotonsListPagingScheme_Price_New_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
+          <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="ProductLevelThreePaging" FunctionName="LuminousMpartnerIBModel.Store.ProductLevelThreePaging">
       <ResultMapping>
         <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.ProductLevelThreePaging_Result">
@@ -1426,58 +1473,10 @@
           <ScalarProperty Name="ParentCatid" ColumnName="ParentCatid" />
           <ScalarProperty Name="ProductLevelOne" ColumnName="ProductLevelOne" />
           <ScalarProperty Name="productCategoryid" ColumnName="productCategoryid" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="GetProductLevelFourAccessTable" FunctionName="LuminousMpartnerIBModel.Store.GetProductLevelFourAccessTable">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.GetProductLevelFourAccessTable_Result">
-          <ScalarProperty Name="AllAcess" ColumnName="AllAcess" />
-          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
-          <ScalarProperty Name="AllDestriAccess" ColumnName="AllDestriAccess" />
-          <ScalarProperty Name="AllDealerAccess" ColumnName="AllDealerAccess" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <EntitySetMapping Name="ProductLevelTwoes">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductLevelTwo">
-        <MappingFragment StoreEntitySet="ProductLevelTwo">
-          <ScalarProperty Name="OrderSequence" ColumnName="OrderSequence" />
-          <ScalarProperty Name="ParentCatid" ColumnName="ParentCatid" />
-          <ScalarProperty Name="ImageFileName" ColumnName="ImageFileName" />
-          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
-          <ScalarProperty Name="PrductID" ColumnName="PrductID" />
-          <ScalarProperty Name="enddate" ColumnName="enddate" />
-          <ScalarProperty Name="startDate" ColumnName="startDate" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="PlTwStatus" ColumnName="PlTwStatus" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="pc_Lvl_oneId" ColumnName="pc_Lvl_oneId" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ProductLevelTwoHistories">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductLevelTwoHistory">
-        <MappingFragment StoreEntitySet="ProductLevelTwoHistory">
-          <ScalarProperty Name="ImageFileName" ColumnName="ImageFileName" />
-          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
-          <ScalarProperty Name="enddate" ColumnName="enddate" />
-          <ScalarProperty Name="startDate" ColumnName="startDate" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-          <ScalarProperty Name="PlTwStatus" ColumnName="PlTwStatus" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ProductlevlTwoId" ColumnName="ProductlevlTwoId" />
-          <ScalarProperty Name="pc_Lvl_oneId" ColumnName="pc_Lvl_oneId" />
-          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <EntitySetMapping Name="Dealer_Save_Image">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Dealer_Save_Image">
         <MappingFragment StoreEntitySet="Dealer_Save_Image">
@@ -1492,66 +1491,208 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Dealer_Save_Image_History">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Dealer_Save_Image_History">
-        <MappingFragment StoreEntitySet="Dealer_Save_Image_History">
-          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermotionsLists">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.PermotionsList">
+        <MappingFragment StoreEntitySet="PermotionsList">
+          <ScalarProperty Name="ParentCatid" ColumnName="ParentCatid" />
+          <ScalarProperty Name="PDFName" ColumnName="PDFName" />
+          <ScalarProperty Name="Modifiedby" ColumnName="Modifiedby" />
+          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+          <ScalarProperty Name="createby" ColumnName="createby" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
           <ScalarProperty Name="status" ColumnName="status" />
           <ScalarProperty Name="ImageName" ColumnName="ImageName" />
-          <ScalarProperty Name="DealerID" ColumnName="DealerID" />
-          <ScalarProperty Name="DealersanID" ColumnName="DealersanID" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="ProductLvlOneId" ColumnName="ProductLvlOneId" />
+          <ScalarProperty Name="ProductCatId" ColumnName="ProductCatId" />
+          <ScalarProperty Name="PermotionTypeId" ColumnName="PermotionTypeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DealersMasters">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.DealersMaster">
-        <MappingFragment StoreEntitySet="DealersMaster">
-          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+    <EntitySetMapping Name="PermotionsListHistories">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.PermotionsListHistory">
+        <MappingFragment StoreEntitySet="PermotionsListHistory">
+          <ScalarProperty Name="ParentCatid" ColumnName="ParentCatid" />
+          <ScalarProperty Name="PDFName" ColumnName="PDFName" />
+          <ScalarProperty Name="Modifiedby" ColumnName="Modifiedby" />
+          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="ProductLvlOneId" ColumnName="ProductLvlOneId" />
+          <ScalarProperty Name="ProductCatId" ColumnName="ProductCatId" />
+          <ScalarProperty Name="PermotionTypeId" ColumnName="PermotionTypeId" />
+          <ScalarProperty Name="promotionListId" ColumnName="promotionListId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="HomePage_Paging" FunctionName="LuminousMpartnerIBModel.Store.HomePage_Paging">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.HomePage_Paging_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
+          <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="MediaDatas">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.MediaData">
+        <MappingFragment StoreEntitySet="MediaData">
+          <ScalarProperty Name="PageFlag" ColumnName="PageFlag" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LabelId" ColumnName="LabelId" />
+          <ScalarProperty Name="VideoImage" ColumnName="VideoImage" />
+          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
+          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
           <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="status" ColumnName="status" />
-          <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
-          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
-          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
-          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
-          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
-          <ScalarProperty Name="CityID" ColumnName="CityID" />
-          <ScalarProperty Name="StateID" ColumnName="StateID" />
-          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
-          <ScalarProperty Name="DealerAddress" ColumnName="DealerAddress" />
-          <ScalarProperty Name="DealerName" ColumnName="DealerName" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DealersMaster_History">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.DealersMaster_History">
-        <MappingFragment StoreEntitySet="DealersMaster_History">
-          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+    <EntitySetMapping Name="MediaDataHistories">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.MediaDataHistory">
+        <MappingFragment StoreEntitySet="MediaDataHistory">
+          <ScalarProperty Name="PageFlag" ColumnName="PageFlag" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LabelId" ColumnName="LabelId" />
+          <ScalarProperty Name="VideoImage" ColumnName="VideoImage" />
+          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
+          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
           <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="status" ColumnName="status" />
-          <ScalarProperty Name="GoogleAddress" ColumnName="GoogleAddress" />
-          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
-          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
-          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
-          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
-          <ScalarProperty Name="CityID" ColumnName="CityID" />
-          <ScalarProperty Name="StateID" ColumnName="StateID" />
-          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
-          <ScalarProperty Name="DealerAddress" ColumnName="DealerAddress" />
-          <ScalarProperty Name="DealerName" ColumnName="DealerName" />
-          <ScalarProperty Name="DealersMasterID" ColumnName="DealersMasterID" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+          <ScalarProperty Name="MediaDataId" ColumnName="MediaDataId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="get_UserProfile" FunctionName="LuminousMpartnerIBModel.Store.get_UserProfile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.get_UserProfile_Result">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAlertNotificationByUserId" FunctionName="LuminousMpartnerIBModel.Store.GetAlertNotificationByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.GetAlertNotificationByUserId_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="C_status" ColumnName="_status" />
+          <ScalarProperty Name="C_text" ColumnName="_text" />
+          <ScalarProperty Name="createby" ColumnName="createby" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="modifyby" ColumnName="modifyby" />
+          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
+          <ScalarProperty Name="Imagename" ColumnName="Imagename" />
+          <ScalarProperty Name="Imagepath" ColumnName="Imagepath" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getCatalog_Upper" FunctionName="LuminousMpartnerIBModel.Store.getCatalog_Upper">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.getCatalog_Upper_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="prodid" ColumnName="prodid" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getContactUs_Details" FunctionName="LuminousMpartnerIBModel.Store.getContactUs_Details">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.getContactUs_Details_Result">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="countryname" ColumnName="countryname" />
+          <ScalarProperty Name="statename" ColumnName="statename" />
+          <ScalarProperty Name="cityname" ColumnName="cityname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getCustomerPermission_New" FunctionName="LuminousMpartnerIBModel.Store.getCustomerPermission_New">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.getCustomerPermission_New_Result">
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Usertype" ColumnName="Usertype" />
+          <ScalarProperty Name="Permission" ColumnName="Permission" />
+          <ScalarProperty Name="ModuleImage" ColumnName="ModuleImage" />
+          <ScalarProperty Name="languagecode" ColumnName="languagecode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPrice_SchemeByUserId" FunctionName="LuminousMpartnerIBModel.Store.GetPrice_SchemeByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.GetPrice_SchemeByUserId_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CardProviderName" ColumnName="CardProviderName" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="CardAction_Deeplink" ColumnName="CardAction_Deeplink" />
+          <ScalarProperty Name="ImageSystemName" ColumnName="ImageSystemName" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TitleColour" ColumnName="TitleColour" />
+          <ScalarProperty Name="Sub_Title" ColumnName="Sub_Title" />
+          <ScalarProperty Name="Sub_TitleColour" ColumnName="Sub_TitleColour" />
+          <ScalarProperty Name="Action1_Colour" ColumnName="Action1_Colour" />
+          <ScalarProperty Name="Action1_Text" ColumnName="Action1_Text" />
+          <ScalarProperty Name="CardDataFlag" ColumnName="CardDataFlag" />
+          <ScalarProperty Name="Pagename" ColumnName="Pagename" />
+          <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
+          <ScalarProperty Name="Subcatname" ColumnName="Subcatname" />
+          <ScalarProperty Name="SystemMainImage" ColumnName="SystemMainImage" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Subcatid" ColumnName="Subcatid" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MHrVarifyOtpNotification" FunctionName="LuminousMpartnerIBModel.Store.MHrVarifyOtpNotification">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.MHrVarifyOtpNotification_Result">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <EntitySetMapping Name="SaveNotificationSurveys">
       <EntityTypeMapping TypeName="LuminousMpartnerIBModel.SaveNotificationSurvey">
         <MappingFragment StoreEntitySet="SaveNotificationSurvey">
@@ -1570,18 +1711,75 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ProductCatergoryHistories">
-      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.ProductCatergoryHistory">
-        <MappingFragment StoreEntitySet="ProductCatergoryHistory">
-          <ScalarProperty Name="PdfSystemName" ColumnName="PdfSystemName" />
-          <ScalarProperty Name="PdfOriginalName" ColumnName="PdfOriginalName" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-          <ScalarProperty Name="Pstatus" ColumnName="Pstatus" />
-          <ScalarProperty Name="PName" ColumnName="PName" />
-          <ScalarProperty Name="PCode" ColumnName="PCode" />
-          <ScalarProperty Name="pid" ColumnName="pid" />
-          <ScalarProperty Name="id" ColumnName="id" />
+    <FunctionImportMapping FunctionImportName="update_Userverification" FunctionName="LuminousMpartnerIBModel.Store.update_Userverification" />
+    <FunctionImportMapping FunctionImportName="SP_UserPermission_bottomMenu" FunctionName="LuminousMpartnerIBModel.Store.SP_UserPermission_bottomMenu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.SP_UserPermission_bottomMenu_Result">
+          <ScalarProperty Name="ModID" ColumnName="ModID" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="ModuleImage" ColumnName="ModuleImage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_MHrCreateOtp" FunctionName="LuminousMpartnerIBModel.Store.Sp_MHrCreateOtp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.Sp_MHrCreateOtp_Result">
+          <ScalarProperty Name="Emp_Code" ColumnName="Emp_Code" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Employee_EmailId" ColumnName="Employee_EmailId" />
+          <ScalarProperty Name="Employee_Mob" ColumnName="Employee_Mob" />
+          <ScalarProperty Name="otp" ColumnName="otp" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="NotificationSurveys">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationSurvey">
+        <MappingFragment StoreEntitySet="NotificationSurvey">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ContestId" ColumnName="ContestId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
+          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="CorrectAns" ColumnName="CorrectAns" />
+          <ScalarProperty Name="OptionE" ColumnName="OptionE" />
+          <ScalarProperty Name="OptionD" ColumnName="OptionD" />
+          <ScalarProperty Name="OptionC" ColumnName="OptionC" />
+          <ScalarProperty Name="OptionB" ColumnName="OptionB" />
+          <ScalarProperty Name="OptionA" ColumnName="OptionA" />
+          <ScalarProperty Name="QuestionTitle" ColumnName="QuestionTitle" />
+          <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
+          <ScalarProperty Name="Survey" ColumnName="Survey" />
+          <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationSurveyHistories">
+      <EntityTypeMapping TypeName="LuminousMpartnerIBModel.NotificationSurveyHistory">
+        <MappingFragment StoreEntitySet="NotificationSurveyHistory">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="deviceIP" ColumnName="deviceIP" />
+          <ScalarProperty Name="ModifyOn" ColumnName="ModifyOn" />
+          <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="CorrectAns" ColumnName="CorrectAns" />
+          <ScalarProperty Name="OptionE" ColumnName="OptionE" />
+          <ScalarProperty Name="OptionD" ColumnName="OptionD" />
+          <ScalarProperty Name="OptionC" ColumnName="OptionC" />
+          <ScalarProperty Name="OptionB" ColumnName="OptionB" />
+          <ScalarProperty Name="OptionA" ColumnName="OptionA" />
+          <ScalarProperty Name="QuestionTitle" ColumnName="QuestionTitle" />
+          <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
+          <ScalarProperty Name="Survey" ColumnName="Survey" />
+          <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

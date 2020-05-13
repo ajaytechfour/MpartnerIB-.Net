@@ -62,6 +62,10 @@ namespace LuminousMpartnerIB.Controllers
             {
                 if (id != "")
                 {
+
+                    var distname = db.UsersLists.Where(x => x.Dis_Sap_Code == id).FirstOrDefault();
+                    Session["seldistributor"] = distname.Dis_Name;
+
                     var getGrid = from vs in db.UsersLists
                                   where vs.CustomerType == "SalesEmployee" && vs.CreatedBY == id
                                   orderby vs.CustomerType
@@ -69,11 +73,11 @@ namespace LuminousMpartnerIB.Controllers
                                   {
                                       id = vs.id,
                                       UserId = vs.UserId,
-                                      SapCode=vs.Dis_Sap_Code,
+                                      SapCode = vs.Dis_Sap_Code,
                                       CustomerType = vs.CustomerType,
                                       Name = vs.Dis_Name,
                                       Address = vs.Dis_Address1,
-                                      Country=vs.Country,
+                                      Country = vs.Country,
                                       City = vs.Dis_City,
                                       State = vs.Dis_State,
                                       ContactNo = vs.Dis_ContactNo,
@@ -87,7 +91,8 @@ namespace LuminousMpartnerIB.Controllers
                 else
                 {
                     var getGrid = from vs in db.UsersLists
-                                  where vs.CustomerType == "SalesEmployee"
+                                      //where vs.CustomerType == "SalesEmployee"
+                                  where vs.CustomerType == "SalesEmployee" && vs.CreatedBY == id
                                   orderby vs.CustomerType
                                   select new
                                   {
@@ -120,28 +125,25 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                //dt = Session["permission"] as DataTable;
-                //string pageUrl2 = PageUrl;
-                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (true/*result[0]["editrole"].ToString() == "1"*/)
+                UsersList sapcode = db.UsersLists.Single(a => a.id == id);
+
+                UsersList cud = db.UsersLists.Where(x => x.Dis_Sap_Code == sapcode.Dis_Sap_Code).FirstOrDefault();
+
+                if (cud != null)
                 {
-                    Card_dynamicPage cud = db.Card_dynamicPage.Single(a => a.Id == id);
-                    List<Price_SchemeAccessTable> pat = db.Price_SchemeAccessTable.Where(a => a.promotionid == id).ToList();
-                    ViewBag.status = cud.Status;
-                    ViewBag.preStartDate = Convert.ToDateTime(cud.Startdate).ToShortDateString();
-                    ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToShortDateString();
-                    ViewBag.Providerid = cud.CardProviderId;
-                    ViewBag.Prntid = cud.Subcatid;
-                    ViewBag.HeaderImageName = cud.ImageSystemName;
-                    ViewBag.MainImageName = cud.SystemMainImage;
-                    ViewBag.ProviderName = cud.CardProviderName;
-                    ViewBag.PrntName = cud.Subcatname;
-                    return View(cud);
+                    ViewBag.SapCode = cud.Dis_Sap_Code;
+                    ViewBag.UserId = cud.UserId;
+                    ViewBag.CustomerType = cud.CustomerType;
+                    ViewBag.Name = cud.Dis_Name;
+                    ViewBag.Address = cud.Dis_Address1;
+                    ViewBag.City = cud.Dis_City;
+                    ViewBag.State = cud.Dis_State;
+                    ViewBag.ContactNo = cud.Dis_ContactNo;
+                    ViewBag.Email = cud.Dis_Email;
+                    ViewBag.Country = cud.Country;
                 }
-                else
-                {
-                    return RedirectToAction("snotallowed", "snotallowed");
-                }
+
+                return View();
             }
         }
 

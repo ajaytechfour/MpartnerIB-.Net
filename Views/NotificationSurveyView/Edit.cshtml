@@ -271,7 +271,10 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Survey Poll log - </span> </h1>
+            @if (Session["seldistributor"] != null)
+            {
+                <h1 class="pageHeading"><span>@Session["seldistributor"].ToString() </span></h1>
+            }
         </div>
     </div>
 
@@ -285,14 +288,14 @@
                             <div class="">
                                 @Html.HiddenFor(model => model.SurveyID)
                                 @Html.HiddenFor(model => model.ContestId)
-                                <label style="display:block;">Contest Type<span class="required">*</span></label>
+                                <label style="display:block;">Contest Type<span class="required"></span></label>
                                 @Html.RadioButton("contesttype", "Survey", new { id = "survey", @style = "border:none; Height:inherit", disabled = "disabled" }) <span id="surveyid" style="margin-right:15px;">Survey</span>
                                 @*@Html.RadioButton("contesttype", "Contest", new { id = "contest", @style = "border:none; Height:inherit", @readonly = "readonly" }) <span id="contestid">Contest</span>*@
                             </div>
                         </div>
                         <div class="col-md-3" id="surveylbl">
                             <div class="">
-                                <label id="">Survey Name<span class="required">*</span></label>
+                                <label id="">Survey Name<span class="required"></span></label>
                                 <div class="" id="surveytxt">
                                     @Html.TextBoxFor(a => a.Survey, new { @class = "form-control", @readonly = "readonly" })
                                     <br />
@@ -400,18 +403,18 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        @*<div class="col-md-6">
                             <div class="form-group">
                                 <label>Status</label>
                                 <input type="checkbox" checked="checked" name="statusC" style="border:none; Height:inherit" disabled = "disabled"/>
                             </div>
-                        </div>
+                        </div>*@
 
-                        <div class="col-md-12">
+                        @*<div class="col-md-12">
                             <div class="form-group">
                                 <input type="button" class="submitBtn" value="Back" />
                             </div>
-                        </div>
+                        </div>*@
                     </div>
                 </div>
             </div>

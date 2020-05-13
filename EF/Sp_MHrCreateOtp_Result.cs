@@ -7,14 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Luminous.EF
+namespace LuminousMpartnerIB.EF
 {
     using System;
     
     public partial class Sp_MHrCreateOtp_Result
     {
-        public string ASMFSEcode { get; set; }
-        public string Mob { get; set; }
+        public string Emp_Code { get; set; }
+        public string Employee_Name { get; set; }
+        public string Employee_EmailId { get; set; }
+        public string Employee_Mob { get; set; }
         public string otp { get; set; }
         public string Status { get; set; }
         public string Message { get; set; }

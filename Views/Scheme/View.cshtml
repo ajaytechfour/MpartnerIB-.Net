@@ -130,7 +130,11 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Scheme </span></h1>
+            @if (Session["seldistributor"] != null)
+            {
+                <h1 class="pageHeading"><span>@Session["seldistributor"].ToString() </span></h1>
+            }
+
         </div>
     </div>
     <div id="form" style="margin-bottom: 11px">
@@ -141,7 +145,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Card Type<span class="required">*</span></label>
+                                <label>Card Type<span class="required"></span></label>
                                 <input type="text" id="Ctype" name="Ctype" class="form-control" readonly="readonly">
                                 @*<select name="Ctype" id="Ctype" class="form-control">
                                         <option>Select</option>
@@ -161,7 +165,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Title<span class="required">*</span></label>
+                                <label>Title<span class="required"></span></label>
                                 @Html.TextBoxFor(a => a.Title, new { @class = "form-control", id = "txttitle", @placeholder = "Enter Title", @readonly = "readonly" })
                                 <br />
                                 @*@Html.ValidationMessageFor(a => a.Title, "", new { @class = "required" })*@
@@ -169,7 +173,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label> Title Colour<span class="required">*</span></label>
+                                <label> Title Colour<span class="required"></span></label>
                                 @Html.TextBoxFor(a => a.TitleColour, new { @class = "form-control", id = "hex1Titlecolor", @placeholder = "Hex Code", @readonly = "readonly" })
                                 @*<i style="font-size:11px; font-style:normal;"><a id="title_colour">Reference for Hex Code</a></i>
                                     <label id="lblmessagehex1price" style=" font-size: 11px; color: red; position: absolute; top: 62px; left: 137px;"></label>*@
@@ -179,7 +183,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Sub Title<span class="required">*</span></label>
+                                <label>Sub Title<span class="required"></span></label>
                                 @Html.TextBoxFor(a => a.Sub_Title, new { @class = "form-control", id = "txtsubtitle", @placeholder = "Sub Title", @readonly = "readonly" })
                                 <br />
                                 @*@Html.ValidationMessageFor(a => a.Sub_Title, "", new { @class = "required" })*@
@@ -187,7 +191,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>SubTitle Colour<span class="required">*</span></label>
+                                <label>SubTitle Colour<span class="required"></span></label>
                                 @Html.TextBoxFor(a => a.Sub_TitleColour, new { @class = "form-control", id = "hex2subtitlecolor", @placeholder = "Hex Code", @readonly = "readonly" })
                                 @*<i style="font-size:11px; font-style:normal;"><a id="subtitle_colour">Reference for Hex Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></i><br />*@
                                 @*<br /><label id="lblmessagehex2price" style=" font-size: 11px; color: red; position: absolute; top: 82px; left: 14px;"></label>*@
@@ -229,13 +233,13 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Start Date<span class="required">*</span></label>
+                                <label>Start Date<span class="required"></span></label>
                                 <input id="sdate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="StartDate" readonly="readonly" />
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>End Date<span class="required">*</span></label>
+                                <label>End Date<span class="required"></span></label>
                                 <input id="edate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="EndDate" readonly="readonly" />
                                 <br />
                                 @*@Html.ValidationMessageFor(a => a.Enddate, "", new { @class = "required" })*@
@@ -258,20 +262,20 @@
                                                         }
                                                     </div>*@
                         </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Status</label>
-                                <input type="checkbox" checked="checked" name="statusC" style="height:inherit;" readonly="readonly" />
-                            </div>
-                        </div>
+                        @*<div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <input type="checkbox" checked="checked" name="statusC" style="height:inherit;" readonly="readonly" />
+                                </div>
+                            </div*@>
 
                     </div>
                 </div>
             </div>
 
             <div class="col-md-12" style=" margin-top: 15px;">
-                <input type="button" id="btnsubmit" value="Back" class="submitBtn" />
-                <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
+                @*<input type="button" id="btnsubmit" value="Back" class="submitBtn" />
+                    <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>*@
             </div>
 
         </div>

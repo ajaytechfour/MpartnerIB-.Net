@@ -7,13 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Luminous.EF
+namespace LuminousMpartnerIB.EF
 {
     using System;
     
     public partial class SP_UserPermission_bottomMenu_Result
     {
-        public int ModId { get; set; }
+        public int ModID { get; set; }
         public string ModuleName { get; set; }
         public string ModuleImage { get; set; }
     }

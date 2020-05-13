@@ -111,7 +111,7 @@ namespace LuminousMpartnerIB.Controllers
                         Media.Url = Url;
                         Media.LabelId = Convert.ToInt32(ParentCatid);
                         Media.CreatedOn = DateTime.Now;
-                        Media.CreatedBy = Convert.ToInt32(Session["Id"]);
+                        Media.CreatedBy = (string)Session["Id"];
                         Media.PageFlag = "Gallery";
                         if (Status.ToLower() == "on")
                         {
@@ -142,7 +142,7 @@ namespace LuminousMpartnerIB.Controllers
         }
 
 
-        public JsonResult GetMediaDetail(int? page, int id = 0)
+        public JsonResult GetMediaDetail(int? page, string id = "")
         {
             if (Session["userid"] == null)
             {
@@ -155,9 +155,12 @@ namespace LuminousMpartnerIB.Controllers
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
                 if (true)
                 {
-                    var Mediadetails = (from c in db.MediaDatas
-                                        where c.Status != 2
-                                        select c).ToList();
+                    var Mediadetails = db.MediaDatas.Where(x => x.Status != 2).ToList();
+
+                    //var Mediadetails = (from c in db.MediaDatas
+                    //                    where c.Status != 2
+                    //                    select c).ToList();
+
                     int totalrecord;
                     if (page != null)
                     {
@@ -165,8 +168,13 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
 
-                    if (id != 0)
+                    if (id != "")
                     {
+
+                        var distname = db.UsersLists.Where(x => x.Dis_Sap_Code == id).FirstOrDefault();
+                        Session["seldistributor"] = distname.Dis_Name;
+
+
                         var MediaDetail2 = (from c in Mediadetails
                                             join sw in db.FooterCategories on c.LabelId equals sw.Id
                                             where c.CreatedBy == id
@@ -195,6 +203,7 @@ namespace LuminousMpartnerIB.Controllers
 
                         var MediaDetail2 = (from c in Mediadetails
                                             join sw in db.FooterCategories on c.LabelId equals sw.Id
+                                            where c.CreatedBy == id
                                             select new
                                             {
                                                 Id = c.Id,

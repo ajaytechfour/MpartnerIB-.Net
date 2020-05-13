@@ -146,8 +146,25 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdjustsalesstockController.cs" />
     <Compile Include="Controllers\CreatePermotionPrice_NewController.cs" />
+    <Compile Include="Controllers\CreateSalesEmployeesViewController.cs" />
+    <Compile Include="Controllers\CreateSalesEmployeesController.cs" />
+    <Compile Include="Controllers\CustomerModuleController.cs" />
+    <Compile Include="Controllers\FAQViewController.cs" />
+    <Compile Include="Controllers\GalleryViewController.cs" />
+    <Compile Include="Controllers\HomeCardController.cs" />
+    <Compile Include="Controllers\HomeCardViewController.cs" />
+    <Compile Include="Controllers\MultiLanguageController.cs" />
+    <Compile Include="Controllers\NotificationSurveyViewController.cs" />
+    <Compile Include="Controllers\NotificationsViewController.cs" />
+    <Compile Include="Controllers\ParentCategoryViewController.cs" />
+    <Compile Include="Controllers\ProductCategoryViewController.cs" />
+    <Compile Include="Controllers\ProductLevel3ViewController.cs" />
+    <Compile Include="Controllers\ProductLevelTwoViewController.cs" />
+    <Compile Include="Controllers\SchemeController.cs" />
     <Compile Include="Controllers\CreatePermotionScheme_NewController.cs" />
+    <Compile Include="Controllers\DestributorController.cs" />
     <Compile Include="Controllers\DistributorController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
@@ -157,13 +174,18 @@
     <Compile Include="Controllers\NotificationsController.cs" />
     <Compile Include="Controllers\NotificationSurveyController.cs" />
     <Compile Include="Controllers\ParentCategoryController.cs" />
+    <Compile Include="Controllers\PriceController.cs" />
     <Compile Include="Controllers\ProductCategoryController.cs" />
     <Compile Include="Controllers\ProductLevel3Controller.cs" />
     <Compile Include="Controllers\ProductLevelTwoController.cs" />
     <Compile Include="Controllers\SuggestionController.cs" />
+    <Compile Include="Controllers\SurveyReportViewController.cs" />
     <Compile Include="Controllers\SurveyReportController.cs" />
     <Compile Include="Controllers\UserDashboardController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\ViewDealerDetailsController.cs" />
+    <Compile Include="Controllers\ViewDealerController.cs" />
+    <Compile Include="Controllers\ViewSalesOrderController.cs" />
     <Compile Include="DAL\datautility.cs" />
     <Compile Include="DAL\message.cs" />
     <Compile Include="EF\AlertNotification.cs">
@@ -236,6 +258,9 @@
     <Compile Include="EF\ContestPicture_Tab.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\Country.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\CustomerModule.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
@@ -286,14 +311,35 @@
     <Compile Include="EF\GCM_NotificationLog.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\GetAlertNotificationByUserId_Result.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\getCatalog_Upper_Result.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\GetColumnNames_Result.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\getContactUs_Details_Result.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\getCustomerPermission_New_Result.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\GetNotificationAccessTable_Result.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\GetNotificationsColumns.cs" />
+    <Compile Include="EF\GetPrice_SchemeByUserId_Result.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\GetProductLevelFourAccessTable_Result.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\get_UserProfile_Result.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\HomePage_Paging_Result.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\imagecountdealer.cs" />
@@ -331,6 +377,9 @@
     <Compile Include="EF\MHrOtp.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\MHrVarifyOtpNotification_Result.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\MostSearchItem.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
@@ -359,6 +408,12 @@
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\ParentCategoryhistory.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PermotionsList.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PermotionsListHistory.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\PermotonsListPagingScheme_Price_New_Result.cs">
@@ -416,7 +471,12 @@
     <Compile Include="EF\SaveNotificationSurvey.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\SMSbyWebservice.cs" />
+    <Compile Include="EF\Sp_MHrCreateOtp_Result.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SP_UserPermission_bottomMenu_Result.cs">
+      <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\State.cs">
       <DependentUpon>LuminousMpartnerIBModel.tt</DependentUpon>
     </Compile>
@@ -462,6 +522,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\LanguageManage.cs" />
+    <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Models\SideBarMenuModel.cs" />
     <Compile Include="Models\MuliplierModel.cs" />
     <Compile Include="Models\SqlHelper.cs" />
@@ -469,6 +531,24 @@
     <Compile Include="Models\user.cs" />
     <Compile Include="Models\UsersListModel.cs" />
     <Compile Include="Models\WRSMultiplierMasterError.cs" />
+    <Compile Include="MpartnerIB_Api\Model\Carddata.cs" />
+    <Compile Include="MpartnerIB_Api\Model\Catalog_Menu_Upper.cs" />
+    <Compile Include="MpartnerIB_Api\Model\ContactUs.cs" />
+    <Compile Include="MpartnerIB_Api\Model\ContactusImage.cs" />
+    <Compile Include="MpartnerIB_Api\Model\DealerData.cs" />
+    <Compile Include="MpartnerIB_Api\Model\Gallery_Details.cs" />
+    <Compile Include="MpartnerIB_Api\Model\Gallery_Menu_Upper.cs" />
+    <Compile Include="MpartnerIB_Api\Model\HomePage.cs" />
+    <Compile Include="MpartnerIB_Api\Model\MessageData.cs" />
+    <Compile Include="MpartnerIB_Api\Model\ParentCategory.cs" />
+    <Compile Include="MpartnerIB_Api\Model\ProductCatalog.cs" />
+    <Compile Include="MpartnerIB_Api\Model\ProductsCategory.cs" />
+    <Compile Include="MpartnerIB_Api\Model\Product_Search.cs" />
+    <Compile Include="MpartnerIB_Api\Model\SMSbyWebservice.cs" />
+    <Compile Include="MpartnerIB_Api\Model\SurveyNotification.cs" />
+    <Compile Include="MpartnerIB_Api\Model\UserPermission.cs" />
+    <Compile Include="MpartnerIB_Api\Model\Userprofile.cs" />
+    <Compile Include="MpartnerIB_Api\MpartnerIB_ApiController.cs" />
     <Compile Include="MpartnerNewApi\Model\AlertNotifications.cs" />
     <Compile Include="MpartnerNewApi\Model\Carddata.cs" />
     <Compile Include="MpartnerNewApi\Model\Catalog_Menu_Upper.cs" />
@@ -509,10 +589,30 @@
     <Compile Include="MpartnerNewApi\Model\UserPermission.cs" />
     <Compile Include="MpartnerNewApi\Model\WinterScheme_Distributor_Dealer_Summery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\OtpClient\Reference.cs">
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Resource.ar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
+      <DependentUpon>Resource.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.luminousindia.lumapi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -941,6 +1041,442 @@
     <Content Include="js\select2.min.css" />
     <Content Include="js\select2.min.js" />
     <Content Include="js\select222.css" />
+    <Content Include="MpartnerIB_Api\CardImage\30years.png" />
+    <Content Include="MpartnerIB_Api\CardImage\30years190619020456.png" />
+    <Content Include="MpartnerIB_Api\CardImage\30years190619020549.png" />
+    <Content Include="MpartnerIB_Api\CardImage\30years190619022430.png" />
+    <Content Include="MpartnerIB_Api\CardImage\30years190619023011.png" />
+    <Content Include="MpartnerIB_Api\CardImage\30years220120025633.png" />
+    <Content Include="MpartnerIB_Api\CardImage\3X_POINT_BANNER_500_200.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\3X_POINT_BANNER_500_392.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\3X_POINT_POP_UP.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\439-439-Size--4KB180719112744.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500x400200619023520-min-Copy-Copy-Copy-Copy%282%29210120062706.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500x400200619023520-min-Copy-Copy-Copy-Copy210120062706.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500x400200619023520-min-Copy-Copy-Copy210120034748.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500x500150719104209.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500x500200619023520.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500x500200619032710.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500x500200619093441.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500x500200619114948.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500x500210619120409.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500x500210619121952.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500_200.1190719040157.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500_400_size__25kb180719110541.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500_400_size__25kb180719110541210120041846.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\500_400_size__25kb_oBD1g6180719112744.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\6_days_pop_up580432.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\700x150150719104209.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\700x150180719104913.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\700x150200619023520.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\700x150200619032710.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\700x150200619044611.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\700x150200619093441.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\700x150200619114948.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\724-290-Size--220KB180719111546.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\7_days_pop_up598098.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\8_days_pop_up443108.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\9_days_pop_up40595.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\accent210619055243.png" />
+    <Content Include="MpartnerIB_Api\CardImage\amazon.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\amazon050619114353.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\amazon050619114802.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\amazon060619044631.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\amazon_gift_voucher_10_06_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\atm080519105346.png" />
+    <Content Include="MpartnerIB_Api\CardImage\atm090519050754.png" />
+    <Content Include="MpartnerIB_Api\CardImage\atm090519051232.png" />
+    <Content Include="MpartnerIB_Api\CardImage\atm130519104802.png" />
+    <Content Include="MpartnerIB_Api\CardImage\backgroundgridimage.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\banner-for-Mpartner-01-min.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\banner-for-Mpartner-01-min250419101856.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\banner-for-Mpartner-01-min300619015153.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\banner-for-Mpartner-01-min300619054652.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\banner-for-Mpartner-01-min300619055055.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\banner-for-Mpartner-01-min300619120222.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\banner-for-Mpartner-01-min300619120515.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\banner2.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Bihar180719122150.png" />
+    <Content Include="MpartnerIB_Api\CardImage\bullet210619055018.png" />
+    <Content Include="MpartnerIB_Api\CardImage\bullet230619111124.png" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUSBANNER_1.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUSBANNER_1160719043446.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUSBANNER_1190719032736.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUSBANNER_1300619015153.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUSBANNER_5.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUS_ BANNER_2.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUS_ BANNER_3.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUS_ BANNER_4.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUS_ BANNER_4160719033244.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\connectplus_4_english_flyer_scheme.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUS_BANNER_2140719103054.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUS_BANNER_3300619122428.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CONNECTPLUS_BANNER_6.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Connect_3_Flier_2.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Connect_3_Optional_gift.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\connect_plus3_banner_slab5.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\connect_plus3_banner_slab5290619114137.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\connect_plus3_slab6.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\connect_plus3_slab6190719035735.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Cruze4KVAF210519053055.png" />
+    <Content Include="MpartnerIB_Api\CardImage\CWC_banner_500_200_699597.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CWC_banner_500_200_699597140719103054.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CWC_banner_500_200_699597140719103130.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\CWC_banner_724_290_526305.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\dealerManagement080419012415.png" />
+    <Content Include="MpartnerIB_Api\CardImage\dealerManagement080419012415050619111833.png" />
+    <Content Include="MpartnerIB_Api\CardImage\dealerManagement080419054704.png" />
+    <Content Include="MpartnerIB_Api\CardImage\dealerManagement080419054708.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Dil_se_banner_mpartner.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\doyouKnow.png" />
+    <Content Include="MpartnerIB_Api\CardImage\doyouKnow040619043659.png" />
+    <Content Include="MpartnerIB_Api\CardImage\doyouKnow190619020423.png" />
+    <Content Include="MpartnerIB_Api\CardImage\doyouKnow190619023011.png" />
+    <Content Include="MpartnerIB_Api\CardImage\eco-fuel090519032638.png" />
+    <Content Include="MpartnerIB_Api\CardImage\eco-fuel090519051232.png" />
+    <Content Include="MpartnerIB_Api\CardImage\eco-fuel130519104802.png" />
+    <Content Include="MpartnerIB_Api\CardImage\ErickshawPricelist.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\FINAL DAY653498_Popup.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\gift_thumbnail1_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\gift_thumbnail2_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\gift_thumbnail3_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\gift_thumbnail4_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\gift_thumbnail5_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\gift_thumbnail6_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\goldvoucher.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\goldvoucher050619114353.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\goldvoucher050619114802.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\goldvoucher300619122428.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\goldvoucher300619124000.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\Gold_coin_giftmaster.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\gold_voucher_10_06_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\gold_voucher_10_06_2019300619121934.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\gridDefault400.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Group2200619053122.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Group3200619053122.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719010534.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header180719013834.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719020718.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719021026.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719021156.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719022344.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719041614.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719043449.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719054636.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719055358.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719055459.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719055628.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719055936.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719060509.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Header180719104913.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header_2310519052613.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header_2310519063456.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header_2310519063551.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header_2310519063551110619044208.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header_2310519063551150619084825.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header_2310519063551150619094721.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header_2310519063551150619100109.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header_2310519063551150619100248.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header_2310519063551150619101729.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\header_2310519063551150619111328.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\heavyBg.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heavyCruze.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Heavydutybg_Home.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heavyPro3Phase.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heavyPro3Phase130519043351.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heavyPro3Phase130519043820.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heavyProUPS.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heavyProUPS130519043351.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heavyProUPS130519043820.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heavyProUPS180519104135.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heavyProUPS190619023114.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heroAccent210619054841.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heroAccent210619055107.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heroAccent230619111123.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heroAccent250619022856.png" />
+    <Content Include="MpartnerIB_Api\CardImage\heroAccent250619120914.png" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA-Combo-banner-min.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA-Combo-banner-min300619122944.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA.JPG" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA290619114137.JPG" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA300619015825.JPG" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA300619120203.JPG" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA310519052613.JPG" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA310519052613110619044208.JPG" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVACombo.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA_Dealer_priceApril_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA_Distributor_PriceApril_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\HKV_Inverter_500_392.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\HKV_Inverter_video_banner.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\HKV_Inverter_video_banner180619100618.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\HKV_Inverter_video_banner180619100945.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\HKV_Inverter_video_banner180619101134.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Homepage_banner_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Homepage_supersinger_banner_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\hospital090519032958.png" />
+    <Content Include="MpartnerIB_Api\CardImage\hospital090519033741.png" />
+    <Content Include="MpartnerIB_Api\CardImage\hospital090519045512.png" />
+    <Content Include="MpartnerIB_Api\CardImage\hospital090519050033.png" />
+    <Content Include="MpartnerIB_Api\CardImage\hospital090519051232.png" />
+    <Content Include="MpartnerIB_Api\CardImage\hospital130519104429.png" />
+    <Content Include="MpartnerIB_Api\CardImage\img1090519051232.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\img2090519051232.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\INBT-Combo-banner-min.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\INBT2.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\INBT2310519062840.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\INBTCombo.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\INBT_Dealer_PriceApril2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\INBT_Distributor_PriceApril_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\ipad.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\ipad060619120130.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\ipad475608.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Jackpot_Banner.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Jackpot_Banner180619100759.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Jackpot_Banner180619100945.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Jharkhand170719113719.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Jharkhand170719114933.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Jharkhand180719120426.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Jharkhand180719122150.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Jharkhand240719095037.png" />
+    <Content Include="MpartnerIB_Api\CardImage\langkawi.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\langkawi050619112900.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\langkawi_10_06_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\langkawi_10_06_2019300619122045.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-1.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-1.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-1240719094410.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-1_test.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-2.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-2160719033313.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-2190719032635.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-2300619054127.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-2300619120515.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-3.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-3290619113840.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_home-page1-3300619120049.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page2-1.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page2-1050619111833.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page2-2.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page2-3.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page2-4.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page2-4050619110009.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page2-5.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page2-5210120062706.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page2.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page3-2.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page3-3.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page3-3050619113610.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Latest_Home-page3-3240719094410.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Lead-Mange200619053508.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\LED_tv604356.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\liftpro.png" />
+    <Content Include="MpartnerIB_Api\CardImage\luckyDraw190619023011.png" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous1200619114948.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous150719105706.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous190619054157.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous190619112846.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous200619114948.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous210619121952.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\luminousbattery200619121205.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous_logo190619054157.png" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous_logo190619112846.png" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous_logo200619114948.png" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous_logo200619121205.png" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous_logo240619120345.png" />
+    <Content Include="MpartnerIB_Api\CardImage\luminous_logo240719095453.png" />
+    <Content Include="MpartnerIB_Api\CardImage\LUMINOUS_STABILIZER_SCHEME_OND_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\MAGICAL 7 banner.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\MAGICAL-7-banner.png" />
+    <Content Include="MpartnerIB_Api\CardImage\MAGICAL7banner.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\MAGICAL7FLIER_1_min.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\MAGICAL7FLIER_1_min300619055055.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\magical_7_Activa.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\MAGICAL_7_FLIER_30_09_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Main180719010534.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719013834.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719015631.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719020718.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719021026.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719021156.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719022344.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719024225.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719041614.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719043449.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719054636.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Main180719055358.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Main180719055529.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719055628.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719055936.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719060509.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main180719111546.png" />
+    <Content Include="MpartnerIB_Api\CardImage\main190719124129.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro080519105346.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro080519110519.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro080519110602.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro090519044356.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro090519050033.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro090519051232.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro090519051612.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro090519051830.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro130519104056.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro130519104429.png" />
+    <Content Include="MpartnerIB_Api\CardImage\metro130519104802.png" />
+    <Content Include="MpartnerIB_Api\CardImage\mobilePhone.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\mobilePhone280619111431.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\monsoon_once_scheme.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Mpartner01.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\ndjgoldpasswordCapture180619010938.PNG" />
+    <Content Include="MpartnerIB_Api\CardImage\ndjgoldpasswordCapture180619120908.PNG" />
+    <Content Include="MpartnerIB_Api\CardImage\ndjgoldpasswordCapture180619122214.PNG" />
+    <Content Include="MpartnerIB_Api\CardImage\noticebanner180619125258.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Noticebanner2180619125258.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList0200619020344.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList0240619125149.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList0250619120914.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList1200619020344.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList1230619111124.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList1230619114728.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList1240619022738.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList1240619125149.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList2230619111124.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList2230619114728.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList2240619022738.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList2240619125149.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList2240719095037.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList2250619022856.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList3230619111124.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList3230619114755.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList3230719045106.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList3240619022738.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList3250619023014.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList4200619020258.png" />
+    <Content Include="MpartnerIB_Api\CardImage\orderedList4230619111124.png" />
+    <Content Include="MpartnerIB_Api\CardImage\OrderviewUI180619120908.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Panel_img3.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Panel_img4.png" />
+    <Content Include="MpartnerIB_Api\CardImage\plainimage.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\plainimage050619110009.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\plainimage050619113610.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\police-station090519044356.png" />
+    <Content Include="MpartnerIB_Api\CardImage\police-station090519045512.png" />
+    <Content Include="MpartnerIB_Api\CardImage\police-station090519050232.png" />
+    <Content Include="MpartnerIB_Api\CardImage\police-station090519050754.png" />
+    <Content Include="MpartnerIB_Api\CardImage\police-station090519052240.png" />
+    <Content Include="MpartnerIB_Api\CardImage\police-station130519104056.png" />
+    <Content Include="MpartnerIB_Api\CardImage\police-station130519104802.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Powerdhamaka_PSB_page_15_july_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Prestige_kitche_ maker558755.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\previous_scheme.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\pricelist.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\ProUPS2250F210519053055.png" />
+    <Content Include="MpartnerIB_Api\CardImage\regalia190619023114.png" />
+    <Content Include="MpartnerIB_Api\CardImage\regalia200519103609.png" />
+    <Content Include="MpartnerIB_Api\CardImage\regaliaByLuminous180519104133.png" />
+    <Content Include="MpartnerIB_Api\CardImage\resturent090519032958.png" />
+    <Content Include="MpartnerIB_Api\CardImage\resturent090519033741.png" />
+    <Content Include="MpartnerIB_Api\CardImage\resturent090519050232.png" />
+    <Content Include="MpartnerIB_Api\CardImage\resturent130519104802.png" />
+    <Content Include="MpartnerIB_Api\CardImage\samsung_mobile_10_06_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\samsung_mobile_10_06_2019300619012602.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\samsung_mobile_10_06_2019300619120515.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Samsung_smartphone316772.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\save-the-earth_bmhr.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Scheme.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\scheme_banner1_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\scheme_banner2_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\scheme_banner3_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\scheme_banner4_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\scheme_banner5_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\scheme_banner6_16_10_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Scheme_header_1.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Scheme_header_1150619025423.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Scheme_header_1250619040943.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Scheme_header_2.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Screenshot 2019-06-18 at 2.24.08 PM210619053434.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Screenshot 2019-06-18 at 2.24.08 PM210619054115.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Screenshot2019-06-14at12.57.53PM210619054006.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Screenshot2019-06-18at2.11.16PM210619054006.png" />
+    <Content Include="MpartnerIB_Api\CardImage\SC_18054_BANNER_resized305634_5_June.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\SC_18054_BANNER_resized305634_latest.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\SC_18054_BANNER_resized305634_latest300619120515.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\SC_18054_Scheme_HomePage.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\SC_18054_Scheme_HomePage300619054127.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\slab_1162647.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\slab_2906281.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\slab_3273638.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\slab_4842706.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\slab_5631034.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\slab_6405114.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphone.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphone060619044631.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphone190719032635.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619010939.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619124134.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619124448.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619124454.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619124548.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619124708.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619124824.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619124922.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619124922170719113719.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619124922170719114933.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619124922180719120426.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\smartphonewinner180619125258.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar150619084825.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar150619094721.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar150619100109.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar150619100248.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar150619101729.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar150619111328.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar250619040943.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar300619120515.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar310519063456.png" />
+    <Content Include="MpartnerIB_Api\CardImage\solarBg.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\solarCombo.png" />
+    <Content Include="MpartnerIB_Api\CardImage\solarCombo180519104135.png" />
+    <Content Include="MpartnerIB_Api\CardImage\solarPcu.png" />
+    <Content Include="MpartnerIB_Api\CardImage\solarPenal.png" />
+    <Content Include="MpartnerIB_Api\CardImage\solarPenal180519104135.png" />
+    <Content Include="MpartnerIB_Api\CardImage\solarProductBg.png" />
+    <Content Include="MpartnerIB_Api\CardImage\solarRetrofit.png" />
+    <Content Include="MpartnerIB_Api\CardImage\solarRetrofit180519104135.png" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar_Dealer_PriceApril_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar_Distributor_PriceApril_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Stabelizer.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Stabelizer310519063747.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Stabilizers-banner-min.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Stabilizers-banner-min300619120515.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Stabilizers-banner-min300619124000.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Stabilizersbanner.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\super_singer_popup433067.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\thailand.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\thailand050619112900.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\thailand060619120130.jpeg" />
+    <Content Include="MpartnerIB_Api\CardImage\thailand_10_06_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\TripleDhamaka_Banner.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\TripleDhamaka_Banner150619025423.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\TripleDhamaka_Banner180619100759.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\TripleDhamaka_Banner180619101134.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\TripleDhamaka_Banner300619015153.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\tv210619121952.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Webp.net-compress-image%2814%29180719024225.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Webp.net-compress-image%2815%29180719112743.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Webp.net-compress-image%2817%29190719122351.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Webp.net-compress-image%2817%29190719123146.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Winter_Scheme_homepage_15_11_2019.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\WMF_Homepage_Scheme.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\zelio-banner-min.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\zelio-banner-min250419101856.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\zelio-banner-min300619121820.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\zeliobanner.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Zelio_gel_battery_banner.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Zelio_gel_battery_banner_latest.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Zelio_gel_ConnectPlusBanner.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Zelio_gel_ConnectPlusBanner160719033113.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Zelio_gel_ConnectPlusBanner160719040945.jpg" />
+    <Content Include="MpartnerIB_Api\CardImage\Zelio_gel_ConnectPlusBanner300619054652.jpg" />
     <Content Include="MpartnerNewApi\CardImage\banner2.jpg" />
     <Content Include="MpartnerNewApi\CardImage\HKVACombo.jpg" />
     <Content Include="MpartnerNewApi\CardImage\INBTCombo.jpg" />
@@ -2080,16 +2616,132 @@
     <Content Include="EF\LuminousMpartnerIBModel.edmx.diagram">
       <DependentUpon>LuminousMpartnerIBModel.edmx</DependentUpon>
     </Content>
-    <None Include="Service References\OtpClient\Service.disco" />
-    <None Include="Service References\OtpClient\configuration91.svcinfo" />
-    <None Include="Service References\OtpClient\configuration.svcinfo" />
-    <None Include="Service References\OtpClient\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <Content Include="MpartnerIB_Api\CardImage\Agreement_BSP206305180719020808.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Agreement_BSP206305180719021026.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\April18060619044631.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Aprilsystemintegratorprice050619112900.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Aprilsystemintegratorprice050619114353.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Aprilsystemintegratorprice050619114802.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Attach_20190425064822_Ranchi_rourkela_10_4_2019080519105346.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Attach_20190425064822_Ranchi_rourkela_10_4_2019090519033741.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\boardingPass180619120908.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\dummy090519045512.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\dummy090519050033.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\dummy090519050232.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\dummy130519104056.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\dummy130519104429.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\gridDefault400.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVADistributorPricelist251652310519052613.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA_Dealer_price_list_April_2019130519043351.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA_Dealer_price_list_April_2019130519043820.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA_Dealer_pric_list3766150619025423.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\HKVA_Distributor_Price_list_21_06_2019180719055628.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\INBTDistributorPriceList605050310519063456.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\JournalofPlanningHistory-2011-Sinha170719114933.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\JournalofPlanningHistory-2011-Sinha180719010535.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\JournalofPlanningHistory-2011-Sinha180719010637.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\JournalofPlanningHistory-2011-Sinha180719055529.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\JournalofPlanningHistory-2011-Sinha180719120246.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\JournalofPlanningHistory-2011-Sinha180719120426.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Lucky7180719022344.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\MAGICAL7banner.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\MAGICAL7FLIER_1180719060510.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\MAGICAL7FLIER_1190719124129.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\MpartnerIssue020619102115.xlsx" />
+    <Content Include="MpartnerIB_Api\CardImage\MpartnerIssue020619102726.xlsx" />
+    <Content Include="MpartnerIB_Api\CardImage\MpartnerTest130519102901.xlsx" />
+    <Content Include="MpartnerIB_Api\CardImage\MpartnerTest130519103257.xlsx" />
+    <Content Include="MpartnerIB_Api\CardImage\MpartnerTest130519104313.xlsx" />
+    <Content Include="MpartnerIB_Api\CardImage\NH2203920226904.INDIA_CustomerVoucher180619122214.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Offer22Aug080419054726.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Offer22Aug080419054726050619110009.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Offer22Aug080419054726050619111833.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Offer22Aug080419054726050619113610.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Offer22Aug250419101856.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Pdf1180719055358.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\pdf150719104209.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\PSBCollectionlinkedscheme-April2019060619120130.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Sales_order_%286%29%281%29180719055936.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Sales_order_%286%29180719021156.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\sample190619054157.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\sample190619112846.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\sample200619023520.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\sample200619032710.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar_Distributor_PriceList_21_06_2019180719041614.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Solar_Distributor_PriceList_21_06_2019180719043449.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\StabilizerDistributorpricelistApril2019210519053055.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Stabilizer_Dealer_price_list249902180719054636.pdf" />
+    <Content Include="MpartnerIB_Api\CardImage\Stabilizer_Distributor_price_list_21_06_2019180719104913.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\BMHR_covering_letter.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\BMHR_Form.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\BMHR_letter.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\BMHR_Registration_process.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\BMHR_state_details.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\connectplus_4_english_flyer_scheme.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\connect_plus_26_04_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\E-RickshawDealerprice_09_10_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\E-rickshaw_Distributor_Price_list_26_07_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\E-rickshaw_Distributor_Price_list_Aug_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\HKVA-converted.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\HKVADistributorPricelist251652.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\HKVA_Dealer_price_list_April_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\HKVA_Dealer_price_list_july.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\HKVA_Dealer_pric_list3766.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\HKVA_Distributor_Price_ list_21_06_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\HKVA_Distributor_Price_list_26_07_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\HKVA_Distributor_Price_list_April_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\HKVA_Distributor_price_list_Aug_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBT.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBTDistributorPriceList605050.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBT_Dealer_Price_july.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBT_Dealer_Price_list09_July_19.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBT_Dealer_Price_list337587.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBT_Dealer_Price_list_09_10_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBT_Dealer_Price_list_April_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBT_Distributor_Price_ List21_06_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBT_Distributor_Price_List_26_07_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBT_Distributor_Price_List_April_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\INBT_Distributor_Price_List__Aug_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Lucky7.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\LUMINOUS_STABILIZER_SCHEME_OND_201983480.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\MAGICAL7FLIER_1.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\monsoon_once_scheme_pdf.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Offer22Aug.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\PriceList22Aug.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\PSB_July_Power_dhamaka_scheme15_july_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\SOLAR.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\SolarDistributorPriceList655363.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Solar_Dealer_Price_List344540.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Solar_Dealer_Price_List_09_10_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Solar_Dealer_Price_List_April_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Solar_Dealer_Price_List_April_2019.pdf.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Solar_Deale_Price_List_july.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Solar_Distributor_PriceList_21_06_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Solar_Distributor_Price_List_26_07_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Solar_Distributor_Price_List_April_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Solar_Distributor_Price_List_Aug_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Stabilizer Dealer price list April 2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Stabilizer Distributor price list April 2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\StabilizerDistributorpricelist340344.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Stabilizer_Dealer_price_list249902.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Stabilizer_Dealer_price_list_09_10_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Stabilizer_Deale_price_list_july.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Stabilizer_Distributor_price_list_21_06_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Stabilizer_Distributor_price_list_26_07_2019.pdf" />
+    <Content Include="MpartnerIB_Api\Pdf\Stabilizer_Distributor_price_list_Aug_2019.pdf" />
+    <Content Include="Views\CreatePermotionPrice_New\PriceList.cshtml" />
     <Content Include="Views\Shared\Error.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\com.luminousindia.lumapi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\com.luminousindia.lumapi\Service.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2130,7 +2782,6 @@
     <Content Include="Views\Shared\Promotion.cshtml" />
     <Content Include="Views\Shared\Promotion_Price.cshtml" />
     <Content Include="Views\ConnectPlus\Index.cshtml" />
-    <Content Include="Views\CreatePermotionPrice_New\Index.cshtml" />
     <Content Include="Views\CreatePermotionScheme_New\Edit.cshtml" />
     <Content Include="Views\CreatePermotionScheme_New\Index.cshtml" />
     <Content Include="Views\FAQ\Edit.cshtml" />
@@ -2151,9 +2802,44 @@
     </Content>
     <Content Include="Views\ConnectPlusMultiple\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout - Copy %282%29.cshtml" />
     <Content Include="Views\Shared\_SideBarMenu.cshtml" />
     <Content Include="Views\Distributor\Index.cshtml" />
+    <Content Include="Views\Price\Index.cshtml" />
+    <Content Include="Views\Price\View.cshtml" />
+    <Content Include="Views\Scheme\Index.cshtml" />
+    <Content Include="Views\Scheme\View.cshtml" />
+    <Content Include="Views\GalleryView\Index.cshtml" />
+    <Content Include="Views\GalleryView\View.cshtml" />
+    <Content Include="Views\FAQView\Index.cshtml" />
+    <Content Include="Views\FAQView\View.cshtml" />
+    <Content Include="Views\NotificationsView\Edit.cshtml" />
+    <Content Include="Views\NotificationsView\EditReciverList.cshtml" />
+    <Content Include="Views\NotificationsView\Notification.cshtml" />
+    <Content Include="Views\NotificationSurveyView\Index.cshtml" />
+    <Content Include="Views\NotificationSurveyView\Edit.cshtml" />
+    <Content Include="Views\ProductCategoryView\Index.cshtml" />
+    <Content Include="Views\ParentCategoryView\Index.cshtml" />
+    <Content Include="Views\ProductLevel3View\Index.cshtml" />
+    <Content Include="Views\ProductLevelTwoView\Index.cshtml" />
+    <Content Include="Views\ParentCategoryView\Edit.cshtml" />
+    <Content Include="Views\ProductCategoryView\Edit.cshtml" />
+    <Content Include="Views\ProductLevel3View\Edit.cshtml" />
+    <Content Include="Views\ProductLevel3View\EditProductPermission.cshtml" />
+    <Content Include="Views\ProductLevel3View\FullProductDetails.cshtml" />
+    <Content Include="Views\ProductLevelTwoView\Edit.cshtml" />
+    <Content Include="Views\SurveyReportView\Index.cshtml" />
+    <Content Include="Views\CreatePermotionPrice_New\Index - Copy.cshtml" />
+    <Content Include="Views\CreatePermotionPrice_New\Index.cshtml" />
+    <Content Include="Views\HomeCardView\View.cshtml" />
+    <Content Include="Views\HomeCardView\Index.cshtml" />
+    <Content Include="Views\Adjustsalesstock\Index.cshtml" />
+    <Content Include="Views\CreateSalesEmployees\Index.cshtml" />
+    <Content Include="Views\ViewDealer\Index.cshtml" />
+    <Content Include="Views\ViewSalesOrder\Index.cshtml" />
+    <Content Include="Views\ViewDealerDetails\Index.cshtml" />
+    <Content Include="Views\CreateSalesEmployeesView\Index.cshtml" />
+    <Content Include="Views\CreateSalesEmployeesView\View.cshtml" />
+    <None Include="Web References\com.luminousindia.lumapi\Service.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2299,16 +2985,42 @@
     <Content Include="Views\Createcontest\Index.cshtml" />
     <Content Include="Views\IOSLogin\IOSLogin.cshtml" />
     <Content Include="Views\NewDealerLogin\NewDealerLogin.cshtml" />
-    <None Include="Service References\OtpClient\Service.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <EmbeddedResource Include="Resource.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\OtpClient\" />
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://lumapi.luminousindia.com/smsservice/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.luminousindia.lumapi\</RelPath>
+      <UpdateFromURL>https://lumapi.luminousindia.com/smsservice/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LuminousMpartnerIB_com_luminousindia_lumapi_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -989,6 +989,10 @@ namespace LuminousMpartnerIB.Controllers
                 {
                     if (id != "")
                     {
+                        var distname = db.UsersLists.Where(x => x.Dis_Sap_Code == id).FirstOrDefault();
+                        Session["seldistributor"] = distname.Dis_Name;
+
+
                         int contactdetails = (from c in db.Card_dynamicPage
                                               where c.CreatedBy.ToLower() == id.ToLower()//added
                                               where c.Status != 2 && c.CardProviderId != "3" && c.CardProviderId != "12" && c.Pagename == "HomePage"

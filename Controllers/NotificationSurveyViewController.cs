@@ -39,7 +39,7 @@ namespace LuminousMpartnerIB.Controllers
             }
 
         }
-        public JsonResult GetContactDetail(int? page, int id = 0)
+        public JsonResult GetContactDetail(int? page, string id = "")
         {
             if (Session["userid"] == null)
             {
@@ -62,8 +62,11 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
 
-                    if (id != 0)
+                    if (id != "")
                     {
+                        var distname = db.UsersLists.Where(x => x.Dis_Sap_Code == id).FirstOrDefault();
+                        Session["seldistributor"] = distname.Dis_Name;
+
                         var contactDetails2 = (from c in contactdetails
                                                where c.CreatedBy == id
 
@@ -94,6 +97,7 @@ namespace LuminousMpartnerIB.Controllers
                     else
                     {
                         var contactDetails2 = (from c in contactdetails
+                                               where c.CreatedBy == id
                                                select new
                                                {
                                                    Survey = c.Survey,
@@ -321,7 +325,7 @@ namespace LuminousMpartnerIB.Controllers
                         Nos.OptionE = OptionE;
                         Nos.CorrectAns = Answer;
                         Nos.CreatedOn = DateTime.Now;
-                        Nos.CreatedBy = Convert.ToInt32(Session["Id"]);
+                        Nos.CreatedBy = Session["Id"].ToString();
                         if (Type == "")
                         {
                             Nos.ContestId = 1;

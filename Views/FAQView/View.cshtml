@@ -124,7 +124,10 @@
 <div id="page-wrapper" style="background: #f2f4f8; min-height:800px;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>FAQs - </span></h1>
+            @if (Session["seldistributor"] != null)
+            {
+                <h1 class="pageHeading"><span>@Session["seldistributor"].ToString() </span></h1>
+            }
         </div>
     </div>
 
@@ -136,20 +139,20 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="">
-                            <label style="display:block;">Question Text <span style="color: red;">*</span></label>
+                            <label style="display:block;">Question Text <span style="color: red;"></span></label>
                             @Html.HiddenFor(a => a.Id)
                             @Html.TextAreaFor(a => a.QuestionName, new { @class = "form-control", @readonly = "readonly" })<br />
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="">
-                            <label style="display:block;"> Answer Text <span class="required">*</span></label>
+                            <label style="display:block;"> Answer Text <span class="required"></span></label>
                             @Html.TextAreaFor(a => a.Answer, new { @class = "form-control", @readonly = "readonly" })<br />
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="">
-                            <label style="display:block;">Start Date<span style="color: red;">*</span></label>
+                            <label style="display:block;">Start Date<span style="color: red;"></span></label>
                             <input id="stdate" type="text" class="date form-control" name="StartDate" readonly="readonly" />
 
                             <br />
@@ -158,25 +161,25 @@
                     </div>
                     <div class="col-md-6">
                         <div class="">
-                            <label style="display:block;"> End Date <span style="color: red;">*</span></label>
+                            <label style="display:block;"> End Date <span style="color: red;"></span></label>
                             <input id="etdate" type="text" class="date form-control" name="EndDate" readonly="readonly" />
                             <br />
                             <span id="edate" class="required"></span>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="form-group">
+                        @*<div class="form-group">
                             <label>Status <span style="color: red;">*</span></label>
                             <input id="status" type="checkbox" checked="checked" name="Status" style="border:none; height:inherit;" readonly="readonly" />
                             <br />
                             <span class="Status"></span>
-                        </div>
+                        </div>*@
                     </div>
-                    <div class="col-md-12">
+                    @*<div class="col-md-12">
                         <div class="form-group">
                             <input type="button" class="submitBtn" value="Back" />
                         </div>
-                    </div>
+                    </div>*@
                 </div>
             </div>
         </div>

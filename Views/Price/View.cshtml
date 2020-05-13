@@ -58,7 +58,11 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Price List </span> </h1>
+            @if (Session["seldistributor"] != null)
+            {
+                <h1 class="pageHeading"><span>@Session["seldistributor"].ToString() </span></h1>
+            }
+
         </div>
     </div>
     <div id="form" style="margin-bottom: 11px">
@@ -70,7 +74,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="">
-                                <label>Parent Category <span class="required">*</span></label>
+                                <label>Parent Category <span class="required"></span></label>
                                 @*<select name="ParentCatid" style="color: black" id="ParentCategory" class="form-control" >
                                         <option>Select</option>
                                     </select>*@
@@ -83,7 +87,7 @@
 
                         <div class="col-md-6">
                             <div class="">
-                                <label>Card Type<span class="required">*</span></label>
+                                <label>Card Type<span class="required"></span></label>
                                 @*<select name="Ctype" style="color: black" id="Ctype" class="form-control">
                                         <option>Select</option>
                                     </select>*@
@@ -103,7 +107,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="">
-                                <label> Title<span class="required">*</span></label>
+                                <label> Title<span class="required"></span></label>
                                 @Html.TextBoxFor(a => a.Title, new { @class = "form-control", id = "txttitle", @placeholder = "Enter Title", @readonly = "readonly" })
                                 <br />
                                 @*@Html.ValidationMessageFor(a => a.Title, "", new { @class = "required" })*@
@@ -111,17 +115,17 @@
                         </div>
                         <div class="col-md-3">
                             <div class="">
-                                <label>Title Colour<span class="required">*</span></label>
+                                <label>Title Colour<span class="required"></span></label>
                                 @Html.TextBoxFor(a => a.TitleColour, new { @class = "form-control", id = "hex1Titlecolor", @placeholder = "Hex Code", @readonly = "readonly" })
-                                <i style="font-size:11px; font-style:normal;"><a id="title_colour">Reference for Hex Code</a></i>
+                                @*<i style="font-size:11px; font-style:normal;"><a id="title_colour">Reference for Hex Code</a></i>
                                 <label id="lblmessagehex1price" style=" font-size: 11px; color: red; position: absolute; top: 62px; left: 137px;"></label>
-                                <br />
+                                <br />*@
                                 @*@Html.ValidationMessageFor(a => a.TitleColour, "", new { @class = "required" })*@
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="">
-                                <label>Sub Title<span class="required">*</span></label>
+                                <label>Sub Title<span class="required"></span></label>
                                 @Html.TextBoxFor(a => a.Sub_Title, new { @class = "form-control", id = "txtsubtitle", @placeholder = "Sub Title", @readonly = "readonly" })
                                 <br />
                                 @*@Html.ValidationMessageFor(a => a.Sub_Title, "", new { @class = "required" })*@
@@ -129,11 +133,11 @@
                         </div>
                         <div class="col-md-3">
                             <div class="">
-                                <label>Sub Title Colour<span class="required">*</span></label>
+                                <label>Sub Title Colour<span class="required"></span></label>
                                 @Html.TextBoxFor(a => a.Sub_TitleColour, new { @class = "form-control", id = "hex2subtitlecolor", @placeholder = "Hex Code", @readonly = "readonly" })
-                                <i style="font-size:11px; font-style:normal;"><a id="subtitle_colour">Reference for Hex Code</a></i>
+                                @*<i style="font-size:11px; font-style:normal;"><a id="subtitle_colour">Reference for Hex Code</a></i>
                                 <label id="lblmessagehex2price" style=" font-size: 11px; color: red; position: absolute; top: 62px; left: 137px;"></label>
-                                <br />
+                                <br />*@
                                 @*@Html.ValidationMessageFor(a => a.Sub_TitleColour, "", new { @class = "required" })*@
                             </div>
                         </div>
@@ -218,12 +222,12 @@
                             </div>*@
                         </div>
 
-                        <div class="col-md-4">
+                        @*<div class="col-md-4">
                             <div class="">
                                 <label>Status</label>
                                 <input type="checkbox" checked="checked" name="statusC" style="height: inherit; margin-left: 5px; vertical-align: -2px;" readonly="readonly" />
                             </div>
-                        </div>
+                        </div>*@
 
 
 
@@ -233,7 +237,7 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <input type="button" id="btnsubmit" value="Back" class="submitBtn" />
+                @*<input type="button" id="btnsubmit" value="Back" class="submitBtn" />*@
                 @*<label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>*@
             </div>
         </div>

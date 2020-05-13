@@ -304,7 +304,7 @@ namespace LuminousMpartnerIB.Controllers
                         Nos.OptionE = OptionE;
                         Nos.CorrectAns = Answer;
                         Nos.CreatedOn = DateTime.Now;
-                        Nos.CreatedBy = Convert.ToInt32(Session["Id"]);
+                        Nos.CreatedBy = Convert.ToString(Session["Id"]);
                         if (Type == "")
                         {
                             Nos.ContestId = 1;

@@ -100,15 +100,16 @@ namespace LuminousMpartnerIB.EF
         public DbSet<Card_dynamicPage> Card_dynamicPage { get; set; }
         public DbSet<Card_dynamicPage_History> Card_dynamicPage_History { get; set; }
         public DbSet<Price_SchemeAccessTable> Price_SchemeAccessTable { get; set; }
-        public DbSet<MediaData> MediaDatas { get; set; }
-        public DbSet<MediaDataHistory> MediaDataHistories { get; set; }
         public DbSet<NotificationsHistory> NotificationsHistories { get; set; }
-        public DbSet<NotificationSurvey> NotificationSurveys { get; set; }
-        public DbSet<NotificationSurveyHistory> NotificationSurveyHistories { get; set; }
         public DbSet<Dealer_Save_Image> Dealer_Save_Image { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<PermotionsList> PermotionsLists { get; set; }
         public DbSet<PermotionsListHistory> PermotionsListHistories { get; set; }
+        public DbSet<MediaData> MediaDatas { get; set; }
+        public DbSet<MediaDataHistory> MediaDataHistories { get; set; }
+        public DbSet<SaveNotificationSurvey> SaveNotificationSurveys { get; set; }
+        public DbSet<NotificationSurvey> NotificationSurveys { get; set; }
+        public DbSet<NotificationSurveyHistory> NotificationSurveyHistories { get; set; }
     
         public virtual ObjectResult<userpermission_Result> userpermission(Nullable<int> mode, string userid)
         {
@@ -193,6 +194,176 @@ namespace LuminousMpartnerIB.EF
                 new ObjectParameter("pagename", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<HomePage_Paging_Result>("HomePage_Paging", pageIdParameter, totalPageParameter, pagenameParameter);
+        }
+    
+        public virtual ObjectResult<get_UserProfile_Result> get_UserProfile(string userid)
+        {
+            var useridParameter = userid != null ?
+                new ObjectParameter("Userid", userid) :
+                new ObjectParameter("Userid", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_UserProfile_Result>("get_UserProfile", useridParameter);
+        }
+    
+        public virtual ObjectResult<GetAlertNotificationByUserId_Result> GetAlertNotificationByUserId(string userid)
+        {
+            var useridParameter = userid != null ?
+                new ObjectParameter("userid", userid) :
+                new ObjectParameter("userid", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAlertNotificationByUserId_Result>("GetAlertNotificationByUserId", useridParameter);
+        }
+    
+        public virtual ObjectResult<getCatalog_Upper_Result> getCatalog_Upper(string userid, Nullable<int> prodcatid)
+        {
+            var useridParameter = userid != null ?
+                new ObjectParameter("userid", userid) :
+                new ObjectParameter("userid", typeof(string));
+    
+            var prodcatidParameter = prodcatid.HasValue ?
+                new ObjectParameter("prodcatid", prodcatid) :
+                new ObjectParameter("prodcatid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getCatalog_Upper_Result>("getCatalog_Upper", useridParameter, prodcatidParameter);
+        }
+    
+        public virtual ObjectResult<getContactUs_Details_Result> getContactUs_Details(string userid)
+        {
+            var useridParameter = userid != null ?
+                new ObjectParameter("Userid", userid) :
+                new ObjectParameter("Userid", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getContactUs_Details_Result>("getContactUs_Details", useridParameter);
+        }
+    
+        public virtual ObjectResult<getCustomerPermission_New_Result> getCustomerPermission_New(string userId, string languagecode)
+        {
+            var userIdParameter = userId != null ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(string));
+    
+            var languagecodeParameter = languagecode != null ?
+                new ObjectParameter("Languagecode", languagecode) :
+                new ObjectParameter("Languagecode", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getCustomerPermission_New_Result>("getCustomerPermission_New", userIdParameter, languagecodeParameter);
+        }
+    
+        public virtual ObjectResult<GetPrice_SchemeByUserId_Result> GetPrice_SchemeByUserId(string userid, string pagename)
+        {
+            var useridParameter = userid != null ?
+                new ObjectParameter("userid", userid) :
+                new ObjectParameter("userid", typeof(string));
+    
+            var pagenameParameter = pagename != null ?
+                new ObjectParameter("Pagename", pagename) :
+                new ObjectParameter("Pagename", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetPrice_SchemeByUserId_Result>("GetPrice_SchemeByUserId", useridParameter, pagenameParameter);
+        }
+    
+        public virtual ObjectResult<MHrVarifyOtpNotification_Result> MHrVarifyOtpNotification(string empid, string imeinumber, string osversion, string devicename, string otp, string appid, string devid, string ostype)
+        {
+            var empidParameter = empid != null ?
+                new ObjectParameter("empid", empid) :
+                new ObjectParameter("empid", typeof(string));
+    
+            var imeinumberParameter = imeinumber != null ?
+                new ObjectParameter("imeinumber", imeinumber) :
+                new ObjectParameter("imeinumber", typeof(string));
+    
+            var osversionParameter = osversion != null ?
+                new ObjectParameter("osversion", osversion) :
+                new ObjectParameter("osversion", typeof(string));
+    
+            var devicenameParameter = devicename != null ?
+                new ObjectParameter("devicename", devicename) :
+                new ObjectParameter("devicename", typeof(string));
+    
+            var otpParameter = otp != null ?
+                new ObjectParameter("otp", otp) :
+                new ObjectParameter("otp", typeof(string));
+    
+            var appidParameter = appid != null ?
+                new ObjectParameter("appid", appid) :
+                new ObjectParameter("appid", typeof(string));
+    
+            var devidParameter = devid != null ?
+                new ObjectParameter("devid", devid) :
+                new ObjectParameter("devid", typeof(string));
+    
+            var ostypeParameter = ostype != null ?
+                new ObjectParameter("ostype", ostype) :
+                new ObjectParameter("ostype", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<MHrVarifyOtpNotification_Result>("MHrVarifyOtpNotification", empidParameter, imeinumberParameter, osversionParameter, devicenameParameter, otpParameter, appidParameter, devidParameter, ostypeParameter);
+        }
+    
+        public virtual int update_Userverification(string userid, string osversion, string ostype, string appversion, string deviceid, string fcm_token, string token)
+        {
+            var useridParameter = userid != null ?
+                new ObjectParameter("Userid", userid) :
+                new ObjectParameter("Userid", typeof(string));
+    
+            var osversionParameter = osversion != null ?
+                new ObjectParameter("osversion", osversion) :
+                new ObjectParameter("osversion", typeof(string));
+    
+            var ostypeParameter = ostype != null ?
+                new ObjectParameter("ostype", ostype) :
+                new ObjectParameter("ostype", typeof(string));
+    
+            var appversionParameter = appversion != null ?
+                new ObjectParameter("appversion", appversion) :
+                new ObjectParameter("appversion", typeof(string));
+    
+            var deviceidParameter = deviceid != null ?
+                new ObjectParameter("deviceid", deviceid) :
+                new ObjectParameter("deviceid", typeof(string));
+    
+            var fcm_tokenParameter = fcm_token != null ?
+                new ObjectParameter("fcm_token", fcm_token) :
+                new ObjectParameter("fcm_token", typeof(string));
+    
+            var tokenParameter = token != null ?
+                new ObjectParameter("token", token) :
+                new ObjectParameter("token", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_Userverification", useridParameter, osversionParameter, ostypeParameter, appversionParameter, deviceidParameter, fcm_tokenParameter, tokenParameter);
+        }
+    
+        public virtual ObjectResult<SP_UserPermission_bottomMenu_Result> SP_UserPermission_bottomMenu(string userid)
+        {
+            var useridParameter = userid != null ?
+                new ObjectParameter("userid", userid) :
+                new ObjectParameter("userid", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_UserPermission_bottomMenu_Result>("SP_UserPermission_bottomMenu", useridParameter);
+        }
+    
+        public virtual ObjectResult<Sp_MHrCreateOtp_Result> Sp_MHrCreateOtp(string empid, string imeinumber, string osversion, string devicename, string appversion)
+        {
+            var empidParameter = empid != null ?
+                new ObjectParameter("empid", empid) :
+                new ObjectParameter("empid", typeof(string));
+    
+            var imeinumberParameter = imeinumber != null ?
+                new ObjectParameter("imeinumber", imeinumber) :
+                new ObjectParameter("imeinumber", typeof(string));
+    
+            var osversionParameter = osversion != null ?
+                new ObjectParameter("osversion", osversion) :
+                new ObjectParameter("osversion", typeof(string));
+    
+            var devicenameParameter = devicename != null ?
+                new ObjectParameter("devicename", devicename) :
+                new ObjectParameter("devicename", typeof(string));
+    
+            var appversionParameter = appversion != null ?
+                new ObjectParameter("appversion", appversion) :
+                new ObjectParameter("appversion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Sp_MHrCreateOtp_Result>("Sp_MHrCreateOtp", empidParameter, imeinumberParameter, osversionParameter, devicenameParameter, appversionParameter);
         }
     }
 }

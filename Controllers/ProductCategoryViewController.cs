@@ -161,6 +161,8 @@ namespace LuminousMpartnerIB.Controllers
 
                     if (id != "")
                     {
+                        var distname = db.UsersLists.Where(x => x.Dis_Sap_Code == id).FirstOrDefault();
+                        Session["seldistributor"] = distname.Dis_Name;
 
                         var contactDetails2 = (from c in contactdetails
                                                where c.CreatedBy.ToLower() == id.ToLower()
@@ -183,7 +185,7 @@ namespace LuminousMpartnerIB.Controllers
                     {
 
                         var contactDetails2 = (from c in contactdetails
-                                                   //where c.CreatedBy.ToLower() == id.ToLower()
+                                               where c.CreatedBy.ToLower() == id.ToLower()
                                                select new
                                                {
                                                    ParentCat = c.ParentCategory.PCName,

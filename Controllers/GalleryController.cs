@@ -114,7 +114,7 @@ namespace LuminousMpartnerIB.Controllers
                         Media.Url = Url;
                         Media.LabelId = Convert.ToInt32(ParentCatid);
                         Media.CreatedOn = DateTime.Now;
-                        Media.CreatedBy = Convert.ToInt32(Session["Id"]);
+                        Media.CreatedBy = Session["userid"].ToString(); 
                         Media.PageFlag = "Gallery";
                         if (Status.ToLower() == "on")
                         {
@@ -282,6 +282,7 @@ namespace LuminousMpartnerIB.Controllers
                             mediaHisotry.MediaDataId = media.Id;
                             mediaHisotry.LabelId = Convert.ToInt32(ParentCatid);
                             mediaHisotry.ModifyBy = Convert.ToInt32(Session["Id"]);
+                            //Session["userid"].ToString();
                             mediaHisotry.ModifyOn = DateTime.Now;
 
                             db.MediaDataHistories.Add(mediaHisotry);
