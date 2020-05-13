@@ -1793,6 +1793,83 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
         }
 
+        [System.Web.Http.HttpGet]
+        [ActionName("SaveSurveyResult_DIst")]
+        public object SaveSurveyResult(string user_id, int surveyid, string option, string optionvalue, string token, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel, string browser = null, string Browser_version = null)
+        {
+            string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+
+            try
+            {
+
+
+                var getAppMessage = getAppversion(app_version, os_type, channel);
+                var getTokenMessage = getToken(user_id, app_version, device_id, token);
+                if (getAppMessage.Status != "")
+                {
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",SurveyId :" + surveyid + ",Option :" + option + ",OptionValue :" + optionvalue + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
+                    #endregion
+
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    return getJson_SaveSurveyResult(getAppMessage.Message, getAppMessage.Status, getTokenMessage.Token);
+                }
+                if (getTokenMessage.Status != "")
+                {
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",SurveyId :" + surveyid + ",Option :" + option + ",OptionValue :" + optionvalue + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + getTokenMessage.Message + ",Status : " + getTokenMessage.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    return getJson_SaveSurveyResult(getTokenMessage.Message, getTokenMessage.Status, "");
+                }
+
+                var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
+                if (checkedThreeUserLoggedIn.Status != "")
+                {
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",SurveyId :" + surveyid + ",Option :" + option + ",OptionValue :" + optionvalue + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + checkedThreeUserLoggedIn.Message + ",Status : " + checkedThreeUserLoggedIn.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    return getJson_SaveSurveyResult(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "");
+                }
+
+                var savesurveyres = func_SaveSurveyResult(user_id, surveyid, option, optionvalue);
+
+
+                if (savesurveyres.Status == "200" || savesurveyres.Status == "0")
+                {
+                    //Save Api log data//
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",SurveyId :" + surveyid + ",Option :" + option + ",OptionValue :" + optionvalue + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + savesurveyres.Message + ",Status : " + savesurveyres.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 0, savesurveyres.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    //End Save Api log data//
+
+                    return getJson_SaveSurveyResult(savesurveyres.Message, savesurveyres.Status, getTokenMessage.Token);
+
+                }
+
+            }
+            catch (Exception exc)
+            {
+                var exception = getTryCatchExc();
+
+                #region save request and response data in api log
+                string RequestParameter = "UserID :" + user_id + ",SurveyId :" + surveyid + ",Option :" + option + ",OptionValue :" + optionvalue + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                string ResponseParameter = "Message : " + exception.Message + ",Status : " + exception.Status + "";
+                #endregion
+                SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, exc.InnerException.ToString(), user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                return getJson_SaveSurveyResult(exception.Message, exception.Status, "");
+            }
+
+            return "";
+
+        }
+
 
         [System.Web.Http.HttpGet]
         [ActionName("GetCountry")]
