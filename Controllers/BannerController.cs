@@ -11,6 +11,7 @@ using System.Data;
 using System.Web.Routing;
 namespace Luminous.Controllers
 {
+// Working on contact us form
     public class BannerController : Controller
     {
         private LuminousEntities db = new LuminousEntities();
