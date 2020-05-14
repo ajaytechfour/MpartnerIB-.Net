@@ -592,7 +592,7 @@
                                     <span class="h_file_error" style="color:red;font-size:11px;"></span>
                                     <br />
                                     <label style="display: block; width: 100%; display: block; width: 100%; position: absolute; left: 269px; top: 5px;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.HeaderImageName" style="height: 100px; width: 200px; position: absolute; left: 399px; top: -16px; " />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.HeaderImageName" style="height: 100px; width: 200px; position: absolute; left: 399px; top: -16px; " />
                                     @Html.ValidationMessageFor(a => a.ImageSystemName, "", new { @class = "required" })
                                 </div>
                             </div>
@@ -612,7 +612,7 @@
                                     <span class="m_file_error" style=" color:red;font-size:11px;"></span>
                                     <br />
                                     <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.MainImageName" style="height: 100px; width: 70%;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.MainImageName" style="height: 100px; width: 70%;" />
                                     @Html.ValidationMessageFor(a => a.ImageSystemName, "", new { @class = "required" })
                                 </div>
                             </div>
@@ -641,12 +641,12 @@
                             </div>
                             <div class="col-md-4">
                                 @*<div class="form-group">
-                                    <label>Permission For</label>
-                                    @{
-            int id = Convert.ToInt32(Model.Id);
-            <a href="/EditPromotion_Price_Permission/Index/@id">Edit Permission</a>
-                                    }
-                                </div>*@
+                                                            <label>Permission For</label>
+                                                            @{
+                                    int id = Convert.ToInt32(Model.Id);
+                                    <a href="/EditPromotion_Price_Permission/Index/@id">Edit Permission</a>
+                                                            }
+                                                        </div>*@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">

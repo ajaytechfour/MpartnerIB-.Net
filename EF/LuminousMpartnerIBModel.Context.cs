@@ -63,13 +63,10 @@ namespace LuminousMpartnerIB.EF
         public DbSet<MPartnerServiceLog> MPartnerServiceLogs { get; set; }
         public DbSet<ParentCategory> ParentCategories { get; set; }
         public DbSet<ProductAccessTable> ProductAccessTables { get; set; }
-        public DbSet<ProductAccessTableForProduct> ProductAccessTableForProducts { get; set; }
         public DbSet<ProductLevelOne> ProductLevelOnes { get; set; }
         public DbSet<ProductLevelOneHistory> ProductLevelOneHistories { get; set; }
         public DbSet<ProductLevelThree> ProductLevelThrees { get; set; }
-        public DbSet<ProductLevelThreeHistory> ProductLevelThreeHistories { get; set; }
         public DbSet<ProductLevelTwo> ProductLevelTwoes { get; set; }
-        public DbSet<ProductLevelTwoHistory> ProductLevelTwoHistories { get; set; }
         public DbSet<ProductthreeImageMapping> ProductthreeImageMappings { get; set; }
         public DbSet<Suggestion> Suggestions { get; set; }
         public DbSet<useraccount> useraccounts { get; set; }
@@ -110,6 +107,9 @@ namespace LuminousMpartnerIB.EF
         public DbSet<SaveNotificationSurvey> SaveNotificationSurveys { get; set; }
         public DbSet<NotificationSurvey> NotificationSurveys { get; set; }
         public DbSet<NotificationSurveyHistory> NotificationSurveyHistories { get; set; }
+        public DbSet<ProductLevelTwoHistory> ProductLevelTwoHistories { get; set; }
+        public DbSet<ProductAccessTableForProduct> ProductAccessTableForProducts { get; set; }
+        public DbSet<ProductLevelThreeHistory> ProductLevelThreeHistories { get; set; }
     
         public virtual ObjectResult<userpermission_Result> userpermission(Nullable<int> mode, string userid)
         {

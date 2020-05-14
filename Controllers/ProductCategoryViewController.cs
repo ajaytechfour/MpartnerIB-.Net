@@ -119,7 +119,7 @@ namespace LuminousMpartnerIB.Controllers
                         int a = db.SaveChanges();
                         if (a > 0)
                         {
-                            string str = Path.Combine(Server.MapPath("~/MpartnerNewApi/ProductPDF/"), productpdf);
+                            string str = Path.Combine(Server.MapPath("~/MpartnerIB_Api/ProductPDF/"), productpdf);
                             Postedfile.SaveAs(str);
                             return Content("<script>alert('Data Successfully Submitted');location.href='../ProductCategory/Index';</script>");
                         }
@@ -393,7 +393,7 @@ namespace LuminousMpartnerIB.Controllers
                         {
                             if (Postedfile != null)
                             {
-                                string str = Path.Combine(Server.MapPath("~/MpartnerNewApi/ProductPDF/"), filename);
+                                string str = Path.Combine(Server.MapPath("~/MpartnerIB_Api/ProductPDF/"), filename);
                                 Postedfile.SaveAs(str);
                             }
                             ViewBag.Result = "Record Updated Successfully";

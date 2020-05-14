@@ -234,7 +234,7 @@ namespace LuminousMpartnerIB.Controllers
 
                                     var InputFileName = Path.GetFileNameWithoutExtension(fileimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(fileimage.FileName);
                                     main_image = InputFileName.Replace(" ", string.Empty);
-                                    var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image);
+                                    var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image);
                                     //Save file to server folder  
                                     fileimage.SaveAs(ServerSavePath);
 
@@ -320,13 +320,13 @@ namespace LuminousMpartnerIB.Controllers
 
                                 var InputFileName = Path.GetFileNameWithoutExtension(headerimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(headerimage.FileName);
                                 main_image = InputFileName.Replace(" ", string.Empty);
-                                var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image);
+                                var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image);
                                 //Save file to server folder  
                                 headerimage.SaveAs(ServerSavePath);
 
                                 var InputFileName1 = Path.GetFileNameWithoutExtension(mainimage[1].FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(mainimage[1].FileName);
                                 main_image1 = InputFileName1.Replace(" ", string.Empty);
-                                var ServerSavePath1 = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image1);
+                                var ServerSavePath1 = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image1);
                                 //Save file to server folder  
                                 mainimage[1].SaveAs(ServerSavePath1);
 
@@ -414,14 +414,14 @@ namespace LuminousMpartnerIB.Controllers
 
                                     var InputFileName1 = Path.GetFileNameWithoutExtension(mainimage[1].FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(mainimage[1].FileName);
                                     main_image1 = InputFileName1.Replace(" ", string.Empty);
-                                    var ServerSavePath1 = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image1);
+                                    var ServerSavePath1 = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image1);
                                     //Save file to server folder  
                                     mainimage[1].SaveAs(ServerSavePath1);
 
 
                                     var InputFileName_main = Path.GetFileNameWithoutExtension(fileimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(fileimage.FileName);
                                     main_image = InputFileName_main.Replace(" ", string.Empty);
-                                    var ServerSavePath_main = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image);
+                                    var ServerSavePath_main = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image);
                                     //Save file to server folder  
                                     fileimage.SaveAs(ServerSavePath_main);
                                     Card_dynamicPage c_dynamicpage_main = new Card_dynamicPage();
@@ -504,7 +504,7 @@ namespace LuminousMpartnerIB.Controllers
 
                                 var InputFileName = Path.GetFileNameWithoutExtension(headerimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(headerimage.FileName);
                                 main_image = InputFileName.Replace(" ", string.Empty);
-                                var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image);
+                                var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image);
                                 //Save file to server folder  
                                 headerimage.SaveAs(ServerSavePath);
 
@@ -577,7 +577,7 @@ namespace LuminousMpartnerIB.Controllers
                                     string main_image = "";
                                     var InputFileName_main = Path.GetFileNameWithoutExtension(fileimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(fileimage.FileName);
                                     main_image = InputFileName_main.Replace(" ", string.Empty);
-                                    var ServerSavePath_main = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image);
+                                    var ServerSavePath_main = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image);
                                     //Save file to server folder  
                                     fileimage.SaveAs(ServerSavePath_main);
                                     Card_dynamicPage c_dynamicpage_main = new Card_dynamicPage();
@@ -659,7 +659,7 @@ namespace LuminousMpartnerIB.Controllers
                                     string main_image = "";
                                     var InputFileName_main = Path.GetFileNameWithoutExtension(fileimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(fileimage.FileName);
                                     main_image = InputFileName_main.Replace(" ", string.Empty);
-                                    var ServerSavePath_main = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image);
+                                    var ServerSavePath_main = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image);
                                     //Save file to server folder  
                                     fileimage.SaveAs(ServerSavePath_main);
                                     Card_dynamicPage c_dynamicpage_main = new Card_dynamicPage();
@@ -725,7 +725,7 @@ namespace LuminousMpartnerIB.Controllers
                                 //Grid Four Image//
                                 var InputFileName_main = Path.GetFileNameWithoutExtension(upload_gridchildmainimage[i].FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(upload_gridchildmainimage[i].FileName);
                                 main_image = InputFileName_main.Replace(" ", string.Empty);
-                                var ServerSavePath_main = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image);
+                                var ServerSavePath_main = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image);
                                 //Save file to server folder  
                                 upload_gridchildmainimage[i].SaveAs(ServerSavePath_main);
                                 //Grid Four Image//
@@ -735,7 +735,7 @@ namespace LuminousMpartnerIB.Controllers
                                     //Grid Four backgound Image//
                                     var InputFileName_main_bg = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                     grid_backgroundimage = InputFileName_main_bg.Replace(" ", string.Empty);
-                                    var ServerSavePath_grid_backgoungimage = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + grid_backgroundimage);
+                                    var ServerSavePath_grid_backgoungimage = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + grid_backgroundimage);
                                     //Save file to server folder  
                                     gridbackimage.SaveAs(ServerSavePath_grid_backgoungimage);
                                     //Grid Four backgound Image//
@@ -779,7 +779,7 @@ namespace LuminousMpartnerIB.Controllers
 
                                     var InputFileName = Path.GetFileNameWithoutExtension(fileimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(fileimage.FileName);
                                     main_image = InputFileName.Replace(" ", string.Empty);
-                                    var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image);
+                                    var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image);
                                     //Save file to server folder  
                                     fileimage.SaveAs(ServerSavePath);
 
@@ -927,7 +927,7 @@ namespace LuminousMpartnerIB.Controllers
                                 //Grid Four Image//
                                 var InputFileName_main = Path.GetFileNameWithoutExtension(bannermainimage[i].FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(bannermainimage[i].FileName);
                                 main_image = InputFileName_main.Replace(" ", string.Empty);
-                                var ServerSavePath_main = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + main_image);
+                                var ServerSavePath_main = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + main_image);
                                 //Save file to server folder  
                                 bannermainimage[i].SaveAs(ServerSavePath_main);
                                 //Grid Four Image//
@@ -1482,7 +1482,7 @@ namespace LuminousMpartnerIB.Controllers
 
                                 string filename = Path.GetFileNameWithoutExtension(postedFile.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(postedFile.FileName);
 
-                                string str = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), filename);
+                                string str = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), filename);
                                 postedFile.SaveAs(str);
                                 cdynamic.ImageSystemName = filename;
                                 cdynamic.ImageOriginalName = postedFile.FileName;
@@ -1569,7 +1569,7 @@ namespace LuminousMpartnerIB.Controllers
 
                                 string filename2 = Path.GetFileNameWithoutExtension(SchemeCard_HeaderImage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(SchemeCard_HeaderImage.FileName);
                                 //contactusd.ImageName = filename1;
-                                string str1 = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), filename2);
+                                string str1 = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), filename2);
                                 SchemeCard_HeaderImage.SaveAs(str1);
 
                                 cdynamic.ImageOriginalName = SchemeCard_HeaderImage.FileName;
@@ -1581,7 +1581,7 @@ namespace LuminousMpartnerIB.Controllers
 
                             //string filename2 = Path.GetFileNameWithoutExtension(SchemeCard_MainImage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(SchemeCard_MainImage.FileName);
                             ////contactusd.ImageName = filename1;
-                            //string str2 = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), filename2);
+                            //string str2 = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), filename2);
                             //SchemeCard_MainImage.SaveAs(str2);
 
 
@@ -1650,7 +1650,7 @@ namespace LuminousMpartnerIB.Controllers
 
                                     string filename2 = Path.GetFileNameWithoutExtension(SchemeCard_MainImage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(SchemeCard_MainImage.FileName);
                                     //contactusd.ImageName = filename2;
-                                    string str2 = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), filename2);
+                                    string str2 = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), filename2);
                                     SchemeCard_MainImage.SaveAs(str2);
                                     cdynamic1.ImageOriginalName = SchemeCard_MainImage.FileName;
                                     cdynamic1.ImageSystemName = filename2;
@@ -1736,7 +1736,7 @@ namespace LuminousMpartnerIB.Controllers
                             if (mainimageup != null)
                             {
                                 string MainImage = Path.GetFileNameWithoutExtension(mainimageup.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(mainimageup.FileName);
-                                string strMain = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), MainImage);
+                                string strMain = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), MainImage);
                                 mainimageup.SaveAs(strMain);
                                 cdynamic.ImageOriginalName = mainimageup.FileName;
                                 cdynamic.ImageSystemName = MainImage;
@@ -1748,7 +1748,7 @@ namespace LuminousMpartnerIB.Controllers
                             {
                                 // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild1 = Path.GetFileNameWithoutExtension(first_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(first_upload_gridchildmainimage.FileName);
-                                string strMain = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), Chaild1);
+                                string strMain = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), Chaild1);
                                 first_upload_gridchildmainimage.SaveAs(strMain);
                                 Ccdata0.Main_image = Chaild1;
 
@@ -1758,7 +1758,7 @@ namespace LuminousMpartnerIB.Controllers
                             {
                                 // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild2 = Path.GetFileNameWithoutExtension(second_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(second_upload_gridchildmainimage.FileName);
-                                string strMain = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), Chaild2);
+                                string strMain = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), Chaild2);
                                 second_upload_gridchildmainimage.SaveAs(strMain);
                                 Ccdata1.Main_image = Chaild2;
                             }
@@ -1767,7 +1767,7 @@ namespace LuminousMpartnerIB.Controllers
                             {
                                 // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild3 = Path.GetFileNameWithoutExtension(third_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(third_upload_gridchildmainimage.FileName);
-                                string strMain = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), Chaild3);
+                                string strMain = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), Chaild3);
                                 third_upload_gridchildmainimage.SaveAs(strMain);
                                 Ccdata2.Main_image = Chaild3;
                             }
@@ -1776,7 +1776,7 @@ namespace LuminousMpartnerIB.Controllers
                             {
                                 // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild4 = Path.GetFileNameWithoutExtension(four_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(four_upload_gridchildmainimage.FileName);
-                                string strMain = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), Chaild4);
+                                string strMain = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), Chaild4);
                                 four_upload_gridchildmainimage.SaveAs(strMain);
                                 Ccdata3.Main_image = Chaild4;
 
@@ -1785,7 +1785,7 @@ namespace LuminousMpartnerIB.Controllers
                             if (gridbackimage != null)
                             {
                                 string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
-                                string strMain = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), BackImage);
+                                string strMain = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), BackImage);
                                 gridbackimage.SaveAs(strMain);
                                 Ccdata0.Background_image = BackImage;
                                 Ccdata1.Background_image = BackImage;
@@ -1887,7 +1887,7 @@ namespace LuminousMpartnerIB.Controllers
                                     var tempdata = db.Card_CardData.Where(a => a.DynamicHomePageId == id).AsEnumerable().ElementAt(j);
                                     // Card_dynamicPage cdynamic = db.Card_dynamicPage.Single(a => a.Id == id);
                                     string filename = Path.GetFileNameWithoutExtension(file_Images[j].FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(file_Images[j].FileName);
-                                    string str = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), filename);
+                                    string str = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), filename);
                                     file_Images[j].SaveAs(str);
                                     tempdata.Background_image = filename;
                                 }
@@ -1898,7 +1898,7 @@ namespace LuminousMpartnerIB.Controllers
                                     {
 
                                         string filename = Path.GetFileNameWithoutExtension(file_Images[j].FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(file_Images[j].FileName);
-                                        string str = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), filename);
+                                        string str = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), filename);
                                         file_Images[j].SaveAs(str);
                                         filename1 = filename;
 
@@ -2038,7 +2038,7 @@ namespace LuminousMpartnerIB.Controllers
                                 string filename = Path.GetFileNameWithoutExtension(mainimage_KnowMoreCard.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(mainimage_KnowMoreCard.FileName);
 
                                 contactusd.ImageName = filename;
-                                string str = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/"), filename);
+                                string str = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), filename);
                                 mainimage_KnowMoreCard.SaveAs(str);
                                 cdynamic.ImageSystemName = filename;
                                 cdynamic.ImageOriginalName = mainimage_KnowMoreCard.FileName;

@@ -40,13 +40,10 @@
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.MPartnerServiceLog" Width="1.5" PointX="16.75" PointY="18.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ParentCategory" Width="1.5" PointX="10.75" PointY="19.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductAccessTable" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductAccessTableForProduct" Width="1.5" PointX="20.75" PointY="14.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelOne" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelOneHistory" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelThree" Width="1.5" PointX="2.75" PointY="22.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelThreeHistory" Width="1.5" PointX="4.75" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelTwo" Width="1.5" PointX="22.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelTwoHistory" Width="1.5" PointX="6.75" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductthreeImageMapping" Width="1.5" PointX="22.75" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.Suggestion" Width="1.5" PointX="22.75" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.useraccount" Width="1.5" PointX="22.75" PointY="17.75" IsExpanded="true" />
@@ -92,6 +89,9 @@
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.SaveNotificationSurvey" Width="1.5" PointX="27.375" PointY="30.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurvey" Width="1.5" PointX="21.375" PointY="29.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" Width="1.5" PointX="29.375" PointY="24.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelTwoHistory" Width="1.5" PointX="29.375" PointY="30.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductAccessTableForProduct" Width="1.5" PointX="19.375" PointY="14.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelThreeHistory" Width="1.5" PointX="5.375" PointY="22.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

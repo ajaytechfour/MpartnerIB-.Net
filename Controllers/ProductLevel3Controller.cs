@@ -47,7 +47,7 @@ namespace LuminousMpartnerIB.Controllers
                 else
                 {
                     return View();
-                }               
+                }
             }
         }
         public JsonResult GetProductLevelTwoCategory(string procatid)
@@ -76,6 +76,36 @@ namespace LuminousMpartnerIB.Controllers
                                    }).ToList();
 
 
+                    return Json(Company, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    return Json("snotallowed", JsonRequestBehavior.AllowGet);
+
+                }
+            }
+        }
+
+        public JsonResult GetProductCategory(int procatid)
+        {
+            if (Session["userid"] == null)
+            {
+                return Json("Login", JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                //dt = Session["permission"] as DataTable;
+                //string pageUrl2 = PageUrl;
+                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
+                if (true)
+                {
+                    var Company = (from c in db.ProductCatergories
+                                   where c.Pstatus != 2 && c.Pstatus != 0 && c.ParentCatid == procatid
+                                   select new
+                                   {
+                                       id = c.id,
+                                       Name = c.PName
+                                   }).ToList();
                     return Json(Company, JsonRequestBehavior.AllowGet);
                 }
                 else
@@ -175,16 +205,17 @@ namespace LuminousMpartnerIB.Controllers
                         //    ModelState.AddModelError("CreatedBy", "Check Eiter Distributor OR Dealer");
                         //}
 
-                        if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (rglist == "" || rglist == null || rglist == "0") && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
-                        {
+                        //if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (rglist == "" || rglist == null || rglist == "0") && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
+                        //{
 
-                            ModelState.AddModelError("createdBy", "Permission For Has No Value");
+                        //    ModelState.AddModelError("createdBy", "Permission For Has No Value");
 
-                        }
-                        else if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
-                        {
-                            ModelState.AddModelError("createdBy", "Check Either Distributor OR Dealer");
-                        }
+                        //}
+
+                        //if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
+                        //{
+                        //    ModelState.AddModelError("createdBy", "Check Either Distributor OR Dealer");
+                        //}
                     }
 
                     #endregion
@@ -1470,6 +1501,7 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
                     ProductLevelThree pHistory;
+
                     #region Check Validation For Start Date And End Date
                     if (StartDate == null || StartDate == "")
                     {
@@ -1822,7 +1854,7 @@ namespace LuminousMpartnerIB.Controllers
                             }
 
                         }
-                        if (multiplepostedfiles[0]!=null)
+                        if (multiplepostedfiles[0] != null)
                         {
                             foreach (HttpPostedFileBase Primagemapping in multiplepostedfiles)
                             {
@@ -1873,7 +1905,7 @@ namespace LuminousMpartnerIB.Controllers
                         {
                             db.SaveChanges();
                         }
-                        catch(Exception ex)
+                        catch (Exception ex)
                         {
 
                         }
@@ -1955,7 +1987,7 @@ namespace LuminousMpartnerIB.Controllers
                             contactusd.PlTwStatus = 0;
                         }
 
-                        int affectedRows=0;
+                        int affectedRows = 0;
                         try
                         {
                             affectedRows = db.SaveChanges();
@@ -1963,8 +1995,8 @@ namespace LuminousMpartnerIB.Controllers
                         catch (Exception ex)
                         {
                         }
-                        
-                       // int affectedRows = db.SaveChanges();
+
+                        // int affectedRows = db.SaveChanges();
                         if (affectedRows > 0)
                         {
                             if (Brochurename != null)
@@ -2123,16 +2155,16 @@ namespace LuminousMpartnerIB.Controllers
                     //    ModelState.AddModelError("CreatedBy", "Check Eiter Distributor OR Dealer");
                     //}
 
-                    if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (rglist == "" || rglist == null || rglist == "0") && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
-                    {
+                    //if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (rglist == "" || rglist == null || rglist == "0") && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
+                    //{
 
-                        ModelState.AddModelError("RegionName", "Permission For Has No Value");
+                    //    ModelState.AddModelError("RegionName", "Permission For Has No Value");
 
-                    }
-                    else if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
-                    {
-                        ModelState.AddModelError("createdBy", "Check Either Distributor OR Dealer");
-                    }
+                    //}
+                    //if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
+                    //{
+                    //    ModelState.AddModelError("createdBy", "Check Either Distributor OR Dealer");
+                    //}
                     #endregion
                     if (ModelState.IsValid)
                     {

@@ -301,7 +301,7 @@ namespace LuminousMpartnerIB.Controllers
                             //Main Image//
                             var InputFileName = Path.GetFileNameWithoutExtension(main_image.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(main_image.FileName);
                             mainimage = InputFileName.Replace(" ", string.Empty);
-                            var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + mainimage);
+                            var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + mainimage);
                             //Save file to server folder  
                             main_image.SaveAs(ServerSavePath);
 
@@ -310,7 +310,7 @@ namespace LuminousMpartnerIB.Controllers
                             //Header Image//
                             var HeaderFileName = Path.GetFileNameWithoutExtension(header_image.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(header_image.FileName);
                             headerimage = HeaderFileName.Replace(" ", string.Empty);
-                            var ServerSavePath_Header = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + headerimage);
+                            var ServerSavePath_Header = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + headerimage);
                             //Save file to server folder  
                             header_image.SaveAs(ServerSavePath_Header);
 
@@ -362,7 +362,7 @@ namespace LuminousMpartnerIB.Controllers
                                 //PDF Image//
                                 var PdfFileName = Path.GetFileNameWithoutExtension(Pdf_file.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(Pdf_file.FileName);
                                 pdffile = PdfFileName.Replace(" ", string.Empty);
-                                var ServerSavePath_Pdf = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + pdffile);
+                                var ServerSavePath_Pdf = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + pdffile);
                                 //Save file to server folder  
                                 Pdf_file.SaveAs(ServerSavePath_Pdf);
 
@@ -597,6 +597,7 @@ namespace LuminousMpartnerIB.Controllers
                     //else
                     //{
                     var contactDetails2 = (from c in db.PermotonsListPagingScheme_Price_New("Scheme")
+                                           where c.CreatedBy == Session["userid"].ToString()
                                            select new
                                            {
                                                id = c.id,
@@ -865,7 +866,7 @@ namespace LuminousMpartnerIB.Controllers
                         {
                             var InputFileName = Path.GetFileNameWithoutExtension(main_image.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(main_image.FileName);
                             mainimage = InputFileName.Replace(" ", string.Empty);
-                            var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + mainimage);
+                            var ServerSavePath = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + mainimage);
                             //Save file to server folder  
                             main_image.SaveAs(ServerSavePath);
                             contactusd.SystemMainImage = mainimage;
@@ -880,7 +881,7 @@ namespace LuminousMpartnerIB.Controllers
                         {
                             var HeaderFileName = Path.GetFileNameWithoutExtension(header_image.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(header_image.FileName);
                             headerimage = HeaderFileName.Replace(" ", string.Empty);
-                            var ServerSavePath_Header = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + headerimage);
+                            var ServerSavePath_Header = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + headerimage);
                             //Save file to server folder  
                             header_image.SaveAs(ServerSavePath_Header);
                             contactusd.ImageSystemName = headerimage;
@@ -895,7 +896,7 @@ namespace LuminousMpartnerIB.Controllers
                             //PDF Image//
                             var PdfFileName = Path.GetFileNameWithoutExtension(Pdf_file.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(Pdf_file.FileName);
                             pdffile = PdfFileName.Replace(" ", string.Empty);
-                            var ServerSavePath_Pdf = Path.Combine(Server.MapPath("~/MpartnerNewApi/CardImage/") + pdffile);
+                            var ServerSavePath_Pdf = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/") + pdffile);
                             //Save file to server folder  
                             Pdf_file.SaveAs(ServerSavePath_Pdf);
 

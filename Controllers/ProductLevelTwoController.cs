@@ -45,7 +45,7 @@ namespace Luminous.Controllers
                 else
                 {
                     return View();
-                }               
+                }
             }
         }
         public JsonResult GetProductLevelOneCategory()
@@ -227,7 +227,7 @@ namespace Luminous.Controllers
                         contactusd.ImageFileName = "";
                         contactusd.ImageName = "";
                         contactusd.ParentCatid = parntcate;
-                        contactusd.CreatedBy = Session["id"].ToString();
+                        contactusd.CreatedBy = Session["userid"].ToString();
                         contactusd.CreatedDate = DateTime.Now;
                         string status = statusC ?? "off";
                         if (status == "on")
@@ -327,25 +327,25 @@ namespace Luminous.Controllers
                     //}
                     //else
                     //{
-                        var contactDetails2 = (from c in contactdetails
+                    var contactDetails2 = (from c in contactdetails
+                                           join d in db.ParentCategories on c.ParentCatid equals d.Pcid
+                                           select new
+                                           {
+                                               id = c.id,
+                                               PCat = c.ProductCatergory.PName,
+                                               Name = c.Name,
+                                               //proCatOne = c.ProductLevelOne.Name,
+                                               parntcat = d.PCName,
+                                               status = c.PlTwStatus == 1 ? "Enable" : "Disable",
 
-                                               select new
-                                               {
-                                                   id = c.id,
-                                                 //  PCat = c.ProductCatergory.PName,
-                                                   Name = c.Name,
-                                                //   proCatOne = c.ProductLevelOne.Name,
-                                                  // parntcat = c.ParentCategory.PCName,
-                                                   status = c.PlTwStatus == 1 ? "Enable" : "Disable",
 
+                                           }).OrderByDescending(a => a.id).ToList();
 
-                                               }).OrderByDescending(a => a.id).ToList();
+                    var data = new { result = contactDetails2, TotalRecord = contactDetails2.Count };
 
-                        var data = new { result = contactDetails2, TotalRecord = contactDetails2.Count };
-
-                        return Json(data, JsonRequestBehavior.AllowGet);
-                    }
-              //  }
+                    return Json(data, JsonRequestBehavior.AllowGet);
+                }
+                //  }
                 else
                 {
                     return Json("snotallowed", JsonRequestBehavior.AllowGet);
