@@ -11,7 +11,7 @@ namespace Luminous.Controllers
 {
     public class SuggestionController : MultiLanguageController
     {
-        //
+        // controller
         // GET: /Suggestion/
         private LuminousEntities db = new LuminousEntities();
 
