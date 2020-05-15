@@ -32,13 +32,13 @@ namespace LuminousMpartnerIB.Controllers
         [ActionName("Notification")]
         public ActionResult Notification()
         {
-            utype = Session["ctype"].ToString();
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
             }
             else
             {
+                utype = Session["ctype"].ToString();
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
@@ -466,25 +466,25 @@ namespace LuminousMpartnerIB.Controllers
                             string image = Imagepath;
                             string title = NotificationSubject;
                             string description = NotificationDescription;
-                            
+
                             if (i.OSType == "iOS")
                             {
                                 if (image == "")
                                 {
                                     var payload = new
-              {
-                  to = fcmtoken,
+                                    {
+                                        to = fcmtoken,
 
-                  priority = "high",
-                  content_available = true,
-                  notification = new
-                  {
-                      body = description,
-                      title = title,
-                    
-                      badge = 1
-                  },
-              };
+                                        priority = "high",
+                                        content_available = true,
+                                        notification = new
+                                        {
+                                            body = description,
+                                            title = title,
+
+                                            badge = 1
+                                        },
+                                    };
                                     var serializer = new JavaScriptSerializer();
                                     var json = serializer.Serialize(payload);
                                     SendGCMNotification(ios_serverkey, json);
@@ -657,7 +657,7 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
                     var Notificationdetails2 = (from c in Notificationdetails
-
+                                                where c.createdBy == Session["userid"].ToString()
                                                 select new
                                                 {
                                                     id = c.id,

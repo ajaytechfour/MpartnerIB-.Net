@@ -25,7 +25,7 @@ namespace LuminousMpartnerIB.Controllers
         string utype = string.Empty;
 
         public ActionResult Index(string Search)
-        {          
+        {
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
@@ -106,7 +106,8 @@ namespace LuminousMpartnerIB.Controllers
             {
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
-
+                DateTime sdate = new DateTime();
+                DateTime edate = new DateTime();
 
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
                 if (true/*result[0]["createrole"].ToString() == "1"*/)
@@ -282,13 +283,23 @@ namespace LuminousMpartnerIB.Controllers
                     }
                     else
                     {
-                        DateTime startDate = new DateTime();
+                        //DateTime sdate = new DateTime();
+                        //DateTime edate = new DateTime();
+
                         try
                         {
-                            startDate = Convert.ToDateTime(StartDate);
+                            string phrase = StartDate;
+                            string[] sdates = phrase.Split('-');
+                            string fdate = sdates[1] + "/" + sdates[0] + "/" + sdates[2];
+                            sdate = Convert.ToDateTime(fdate);
                             try
                             {
-                                if (Convert.ToDateTime(EndDate) < startDate)
+                                string phrase1 = EndDate;
+                                string[] sdate1 = phrase1.Split('-');
+                                string fdate1 = sdate1[1] + "/" + sdate1[0] + "/" + sdate1[2];
+                                edate = Convert.ToDateTime(fdate1);
+
+                                if (edate < sdate)
                                 {
                                     ModelState.AddModelError("Enddate", "End Date Should Be Greater Than or Equal To Start Date");
                                     ViewBag.EndDate = "End Date Should Be Greater Than or Equal To Start Date";
@@ -353,6 +364,8 @@ namespace LuminousMpartnerIB.Controllers
                             c_dynamicpage.CardProviderId = card_id.ToString();
 
 
+                            //DateTime sdate = new DateTime();
+                            //DateTime edate = new DateTime();
 
 
                             var getclassname = db.Card_ProviderMaster.Where(c => c.Id == card_id).Select(c => new { c.Classname, c.CardProviderName }).SingleOrDefault();
@@ -363,8 +376,8 @@ namespace LuminousMpartnerIB.Controllers
                             c_dynamicpage.CreatedBy = Session["userid"].ToString();
 
                             c_dynamicpage.CreatedOn = DateTime.Now;
-                            c_dynamicpage.Startdate = Convert.ToDateTime(StartDate);
-                            c_dynamicpage.Enddate = Convert.ToDateTime(EndDate);
+                            c_dynamicpage.Startdate = sdate;
+                            c_dynamicpage.Enddate = edate;
 
                             c_dynamicpage.Subcatid = ParentCatid.ToString();
                             var pcatid = Convert.ToInt32(ParentCatid);
@@ -452,7 +465,7 @@ namespace LuminousMpartnerIB.Controllers
                                     pat.promotionid = Convert.ToInt32(c_dynamicpage.Id);
                                     pat.AllAcess = true;
                                     pat.Pagename = "Price";
-                                    pat.createdate = DateTime.Now; 
+                                    pat.createdate = DateTime.Now;
                                     pat.createby = Session["userid"].ToString();
                                     db.Price_SchemeAccessTable.Add(pat);
                                     db.SaveChanges();
@@ -655,6 +668,7 @@ namespace LuminousMpartnerIB.Controllers
 
 
                     var contactDetails2 = (from c in db.PermotonsListPagingScheme_Price_New("Price")
+                                           where c.CreatedBy == Session["userid"].ToString()
                                            select new
                                            {
                                                id = c.id,
@@ -697,8 +711,31 @@ namespace LuminousMpartnerIB.Controllers
                     Card_dynamicPage cud = db.Card_dynamicPage.Single(a => a.Id == id);
                     List<Price_SchemeAccessTable> pat = db.Price_SchemeAccessTable.Where(a => a.promotionid == id).ToList();
                     ViewBag.status = cud.Status;
-                    ViewBag.preStartDate = Convert.ToDateTime(cud.Startdate).ToShortDateString();
-                    ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToShortDateString();
+
+                    //ViewBag.preStartDate = Convert.ToDateTime(cud.Startdate).ToShortDateString();
+                    //ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToShortDateString();
+
+                    string[] spearator = { "/", " " };
+                    Int32 count = 4;
+
+                    string sdt1 = cud.Startdate.ToString();
+                    string[] sdt2 = sdt1.Split(spearator, count, StringSplitOptions.RemoveEmptyEntries);
+                    string sdt3 = sdt2[1] + "-" + sdt2[0] + "-" + sdt2[2];
+                    // DateTime? sdt4 = Convert.ToDateTime(sdt3);
+
+                    string edt1 = cud.Enddate.ToString();
+                    string[] edt2 = edt1.Split(spearator, count, StringSplitOptions.RemoveEmptyEntries);
+                    string edt3 = edt2[1] + "-" + edt2[0] + "-" + edt2[2];
+                    //DateTime? edt4 = Convert.ToDateTime(edt3);
+
+                    //ViewBag.preStartDate = Convert.ToDateTime(sdt4).ToShortDateString();
+                    //ViewBag.PreEndDate = Convert.ToDateTime(edt4).ToShortDateString();
+
+                    ViewBag.preStartDate = sdt3;
+                    ViewBag.PreEndDate = edt3;
+
+
+
                     ViewBag.Providerid = cud.CardProviderId;
                     ViewBag.Prntid = cud.Subcatid;
                     ViewBag.HeaderImageName = cud.ImageSystemName;
@@ -722,6 +759,11 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
+
+                DateTime sdate = new DateTime();
+                DateTime edate = new DateTime();
+
+
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
@@ -819,10 +861,18 @@ namespace LuminousMpartnerIB.Controllers
                         DateTime startDate = new DateTime();
                         try
                         {
-                            startDate = Convert.ToDateTime(StartDate);
+                            string phrase = StartDate;
+                            string[] sdates = phrase.Split('-');
+                            string fdate = sdates[1] + "/" + sdates[0] + "/" + sdates[2];
+                            sdate = Convert.ToDateTime(fdate);
                             try
                             {
-                                if (Convert.ToDateTime(EndDate) < startDate)
+                                string phrase1 = EndDate;
+                                string[] sdate1 = phrase1.Split('-');
+                                string fdate1 = sdate1[1] + "/" + sdate1[0] + "/" + sdate1[2];
+                                edate = Convert.ToDateTime(fdate1);
+
+                                if (edate < sdate)
                                 {
                                     ModelState.AddModelError("Enddate", "End Date Should Be Greater Than or Equal To Start Date");
                                     ViewBag.EndDate = "End Date Should Be Greater Than or Equal To Start Date";
@@ -916,8 +966,9 @@ namespace LuminousMpartnerIB.Controllers
                         plh.CreatedBy = Session["userid"].ToString();
 
                         plh.CreatedOn = DateTime.Now;
-                        plh.Startdate = Convert.ToDateTime(StartDate);
-                        plh.Enddate = Convert.ToDateTime(EndDate);
+                        plh.Startdate = sdate;
+                        plh.Enddate = edate;
+
 
                         plh.Subcatid = contactusd.Subcatid.ToString();
 
@@ -1018,8 +1069,8 @@ namespace LuminousMpartnerIB.Controllers
                         contactusd.CreatedBy = Session["userid"].ToString();
 
                         contactusd.CreatedOn = DateTime.Now;
-                        contactusd.Startdate = Convert.ToDateTime(StartDate);
-                        contactusd.Enddate = Convert.ToDateTime(EndDate);
+                        contactusd.Startdate = sdate;
+                        contactusd.Enddate = edate;
 
                         contactusd.Subcatid = ParentCatid.ToString();
                         var pcatid = Convert.ToInt32(ParentCatid);

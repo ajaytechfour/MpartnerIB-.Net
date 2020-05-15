@@ -21,7 +21,7 @@ namespace LuminousMpartnerIB.Controllers
         string utype = string.Empty;
         public ActionResult Index()
         {
-            utype = Session["ctype"].ToString();
+
             RouteCollection rc = RouteTable.Routes;
             if (Session["userid"] == null)
             {
@@ -29,6 +29,7 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
+                utype = Session["ctype"].ToString();
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = "/Banner/Index";
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
@@ -114,7 +115,7 @@ namespace LuminousMpartnerIB.Controllers
                         Media.Url = Url;
                         Media.LabelId = Convert.ToInt32(ParentCatid);
                         Media.CreatedOn = DateTime.Now;
-                        Media.CreatedBy = Session["userid"].ToString(); 
+                        Media.CreatedBy = Session["userid"].ToString();
                         Media.PageFlag = "Gallery";
                         if (Status.ToLower() == "on")
                         {
@@ -170,6 +171,7 @@ namespace LuminousMpartnerIB.Controllers
 
                     var MediaDetail2 = (from c in Mediadetails
                                         join sw in db.FooterCategories on c.LabelId equals sw.Id
+                                        where c.CreatedBy == Session["userid"].ToString()
                                         select new
                                         {
                                             Id = c.Id,

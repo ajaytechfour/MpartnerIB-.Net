@@ -188,6 +188,7 @@
         var procat = $("#ParentCategory :selected").val();
 
         $.post("@Url.Content("~/ProductLevelTwo/GetProductCategory")", { procatid: procat }, function (data) { SetProdcutCategory_ParentCategory(data); }, "Json");
+
     }
 
 

@@ -347,11 +347,13 @@ namespace LuminousMpartnerIB.Controllers
 
                     if (!int.TryParse(pcId, out pcid))
                     {
+                        ViewBag.productCategory = "Select Product Category";
                         ModelState.AddModelError("productCategoryid", "Select Product Category");
 
                     }
                     if (pcid == 0)
                     {
+                        ViewBag.productCategory = "Select Product Category";
                         ModelState.AddModelError("productCategoryid", "Select Product Category");
                     }
 
@@ -361,11 +363,13 @@ namespace LuminousMpartnerIB.Controllers
 
                     if (!int.TryParse(ParentCatid, out parntcatid))
                     {
+                        ViewBag.ParentCat = "Select Parent Category";
                         ModelState.AddModelError("ParentCatid", "Select Parent Category");
 
                     }
                     if (parntcatid == 0)
                     {
+                        ViewBag.ParentCat = "Select Parent Category";
                         ModelState.AddModelError("ParentCatid", "Select Parent Category");
                     }
 
@@ -411,11 +415,13 @@ namespace LuminousMpartnerIB.Controllers
                     #region Validate Product Category Two
                     if (!int.TryParse(ProductCat2, out productCat2))
                     {
+                        ViewBag.productCategory = "Select Product Category";
                         ModelState.AddModelError("ProductLevelTwo", "Select Product Category");
 
                     }
                     if (pcid == 0)
                     {
+                        ViewBag.productCategory = "Select Product Category";
                         ModelState.AddModelError("ProductLevelTwo", "Select Product Category");
                     }
                     #endregion
@@ -1059,7 +1065,7 @@ namespace LuminousMpartnerIB.Controllers
                     //else
                     //{
                     var contactDetails2 = (from c in db.ProductLevelThreePaging()
-
+                                           where c.CreatedBy == Session["userid"].ToString()
                                            select new
                                            {
                                                id = c.id,
@@ -1415,12 +1421,14 @@ namespace LuminousMpartnerIB.Controllers
 
                     //}
 
+                    //Rajesh
                     ViewBag.ProductCat = cud.productCategoryid;
                     ViewBag.ProductCat1 = cud.ProductLevelOne;
                     ViewBag.ProductCat2 = cud.pc_Lv2_oneId;
                     ViewBag.Prntid = cud.ParentCatid;
                     ViewBag.Warranty = cud.Warrenty;
                     ViewBag.Rating = cud.Rating;
+                    ViewBag.productCategory = cud.productCategoryid;
 
 
                     return View(cud);

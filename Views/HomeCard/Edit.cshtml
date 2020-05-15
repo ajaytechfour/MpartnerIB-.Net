@@ -443,7 +443,7 @@
                     var temp2="";
                     // debugger;
                     //   alert("aaaaaa");
-                    var markup = "<tr><td><select name='redirectpage1_ConnectPlus_banner_header' class='form-control' id='redirectpage1_Banner"+i+"' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' name='file_Images' style='border:none;' /></td><td style='text-align:right;'><img style='height:50px;' src='@Url.Content("~/MpartnerNewApi/CardImage/")"+img[i]+"'></td></tr>";
+                    var markup = "<tr><td><select name='redirectpage1_ConnectPlus_banner_header' class='form-control' id='redirectpage1_Banner"+i+"' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' name='file_Images' style='border:none;' /></td><td style='text-align:right;'><img style='height:50px;' src='@Url.Content("~/MpartnerIB_Api/CardImage/")"+img[i]+"'></td></tr>";
 
                     $('#dynaTableContent tbody').append(markup);
 
@@ -505,7 +505,7 @@
     @*function NewRow() {
         $('#Button_addRow').click(function () {
 
-            var markup = "<tr><td><input type='checkbox' name='record'></td><td><select name='redirectpage1_Banner[]' style='color: black' id='redirectpage1_Banner' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' name='bannermainimage' /></td><td><img src='@Url.Content("~/MpartnerNewApi/CardImage/")' style='width:30px; height:30px;'/></td></tr>";
+            var markup = "<tr><td><input type='checkbox' name='record'></td><td><select name='redirectpage1_Banner[]' style='color: black' id='redirectpage1_Banner' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' name='bannermainimage' /></td><td><img src='@Url.Content("~/MpartnerIB_Api/CardImage/")' style='width:30px; height:30px;'/></td></tr>";
 
             $('#dynaTableContent tbody').append(markup);
 
@@ -753,7 +753,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
                                 </div>
                             </div>
                         </div>
@@ -815,7 +815,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
                                 </div>
                             </div>
                         </div>
@@ -843,7 +843,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Imagename1" style="height:100px;width:100%;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Imagename1" style="height:100px;width:100%;" />
                                 </div>
                             </div>
                         </div>
@@ -863,7 +863,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Imagemain" style="height:100px;width:100%;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Imagemain" style="height:100px;width:100%;" />
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -876,7 +876,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label style="display:block; width:100%;"> previous image<span class="required">*</span></label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageBack" style="height:100px;width:100%;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.ImageBack" style="height:100px;width:100%;" />
                                 </div>
                             </div>
                         </div>
@@ -902,7 +902,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label style="display:block; width:100%;"> Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image1" style="height:100px;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Image1" style="height:100px;" />
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -937,7 +937,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image2" style="height:100px;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Image2" style="height:100px;" />
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -972,7 +972,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image3" style="height:100px;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Image3" style="height:100px;" />
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -1007,7 +1007,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label style="display:block; width:100%;"> Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Image4" style="height:100px;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Image4" style="height:100px;" />
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -1043,7 +1043,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
                                 </div>
                             </div>
                         </div>

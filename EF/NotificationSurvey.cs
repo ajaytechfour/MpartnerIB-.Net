@@ -27,10 +27,10 @@ namespace LuminousMpartnerIB.EF
         public Nullable<System.DateTime> StartDate { get; set; }
         public Nullable<System.DateTime> Enddate { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
-        public Nullable<int> ModifyBy { get; set; }
         public Nullable<System.DateTime> ModifyOn { get; set; }
         public Nullable<int> Status { get; set; }
         public Nullable<int> ContestId { get; set; }
         public string CreatedBy { get; set; }
+        public string ModifyBy { get; set; }
     }
 }

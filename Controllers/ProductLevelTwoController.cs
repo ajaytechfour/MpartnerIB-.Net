@@ -329,6 +329,7 @@ namespace Luminous.Controllers
                     //{
                     var contactDetails2 = (from c in contactdetails
                                            join d in db.ParentCategories on c.ParentCatid equals d.Pcid
+                                           where c.CreatedBy == Session["userid"].ToString()
                                            select new
                                            {
                                                id = c.id,

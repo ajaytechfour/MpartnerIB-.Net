@@ -55,8 +55,9 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
+                userid = Session["userid"].ToString();
                 var getGrid = from vs in db.UsersLists
-                              where vs.CustomerType == "SalesEmployee"
+                              where vs.CustomerType == "SalesEmployee" & vs.CreatedBY == userid
                               orderby vs.CustomerType
                               select new
                               {
@@ -205,7 +206,7 @@ namespace LuminousMpartnerIB.Controllers
 
                 objUsersList.UserId = userid;
                 objUsersList.CustomerType = "SalesEmployee";
-                objUsersList.Dis_Sap_Code = userid;
+                // objUsersList.Dis_Sap_Code = userid;
                 objUsersList.CreatedBY = userid;
                 objUsersList.CreatedON = DateTime.Now;
 
@@ -215,9 +216,9 @@ namespace LuminousMpartnerIB.Controllers
                 db.UsersLists.Add(objUsersList);
                 if (db.SaveChanges() > 0)
                 {
-
+                    userid = Session["userid"].ToString();
                     var griddata = from vs in db.UsersLists
-                                   where vs.CustomerType == "SalesEmployee"
+                                   where vs.CustomerType == "SalesEmployee" & vs.CreatedBY == userid
                                    orderby vs.CustomerType
                                    select new UsersListModel
                                    {
@@ -247,6 +248,97 @@ namespace LuminousMpartnerIB.Controllers
             }
             return Json(data, JsonRequestBehavior.AllowGet);
         }
+
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            if (Session["userid"] == null)
+            {
+                return RedirectToAction("login", "login");
+            }
+            else
+            {
+                //dt = Session["permission"] as DataTable;
+                //string pageUrl2 = PageUrl;
+                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
+                if (true)
+                {
+                    UsersList cud = db.UsersLists.Single(a => a.id == id);
+
+
+                    //objUsersList.Dis_Name = obj.Name;
+                    //objUsersList.Dis_Address1 = obj.Address;
+                    //objUsersList.Dis_ContactNo = obj.ContactNo;
+                    //objUsersList.Dis_Email = obj.Email;
+                    //objUsersList.Dis_State = obj.State;
+                    //objUsersList.Dis_City = obj.City;
+
+                    //objUsersList.UserId = userid;
+                    //objUsersList.CustomerType = "SalesEmployee";
+                    //// objUsersList.Dis_Sap_Code = userid;
+                    //objUsersList.CreatedBY = userid;
+                    //objUsersList.CreatedON = DateTime.Now;
+
+                    //objUsersList.Dis_Sap_Code = obj.SapCode;
+                    //objUsersList.Country = obj.Country;
+
+                    //****************************************************
+                    //objdata.Name = $('#EmployeeName').val();
+                    //objdata.Address = $('#EmployeeAddress').val();
+                    //objdata.ContactNo = $('#ContactNo').val();
+                    //objdata.Email = $('#Email').val();
+
+                    //objdata.State = $('#ddlStateMaster option:selected').text();
+                    //objdata.City = $('#ddlCityMaster option:selected').text();
+                    //objdata.SapCode = $('#SapCode').val();
+                    //objdata.Country = $('#ddlCountryMaster option:selected').text();
+
+
+                    if (cud. == 1)
+                    {
+                        ViewBag.EmployeeName = "Survey";
+                    }
+                    if (cud.ContestId == 2)
+                    {
+                        ViewBag.ContestData = "Contest";
+                    }
+
+
+                    if (cud.QuestionType == "MCQ")
+                    {
+                        ViewBag.Questypemcq = cud.QuestionType;
+                    }
+                    if (cud.QuestionType == "Text")
+                    {
+                        ViewBag.Questypetext = cud.QuestionType;
+                    }
+                    if (cud.CorrectAns == "OptionA" || cud.CorrectAns == "OptionB" || cud.CorrectAns == "OptionC" || cud.CorrectAns == "OptionD" || cud.CorrectAns == "OptionE")
+                    {
+                        ViewBag.CorrectAns = cud.CorrectAns;
+                    }
+                    ViewBag.Correctans = cud.CorrectAns;
+                    ViewBag.preStartDate = Convert.ToDateTime(cud.StartDate).ToString("dd-MM-yyyy");
+                    ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToString("dd-MM-yyyy");
+                    ViewBag.contest = new SelectList(db.ContestMasters, "Id", "ContestName", cud.ContestId);
+                    return View(cud);
+                }
+                else
+                {
+                    return RedirectToAction("snotallowed", "snotallowed");
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
 
         public JsonResult Delete(int id)
         {

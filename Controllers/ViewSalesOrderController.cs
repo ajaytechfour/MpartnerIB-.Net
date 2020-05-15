@@ -20,13 +20,14 @@ namespace LuminousMpartnerIB.Controllers
         string utype = string.Empty;
         public ActionResult Index()
         {
-            utype = Session["ctype"].ToString();
+           
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
             }
             else
             {
+                utype = Session["ctype"].ToString();
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = "/FAQ/Index";
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");

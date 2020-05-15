@@ -46,8 +46,9 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
+                userid = Session["userid"].ToString();
                 var getGrid = from vs in db.UsersLists
-                              where vs.CustomerType == "DEALER"
+                              where vs.CustomerType == "DEALER" & vs.CreatedBY == userid
                               orderby vs.CustomerType
                               select new
                               {
@@ -61,7 +62,7 @@ namespace LuminousMpartnerIB.Controllers
                                   State = vs.Dis_State,
                                   ContactNo = vs.Dis_ContactNo,
                                   Email = vs.Dis_Email,
-                                  country=vs.Country,
+                                  country = vs.Country,
                               };
 
 
@@ -80,8 +81,8 @@ namespace LuminousMpartnerIB.Controllers
                 }
 
             }
-        }                     
-      
+        }
+
 
     }
 }

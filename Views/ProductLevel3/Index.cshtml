@@ -140,6 +140,25 @@
         $("#stdate").val('@ViewBag.preStartDate');
         $("#etdate").val('@ViewBag.PreEndDate');
 
+
+        if ('@ViewBag.StartDate' != "") {
+            $("#lblmessagesubmit").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#lblmessagesubmit").text('@ViewBag.EndDate');
+        }
+
+        if ('@ViewBag.result' != "") {
+            $("#lblmessagesubmit").text('@ViewBag.result');
+        }
+        if ('@ViewBag.productCategory' != "") {
+            $("#lblmessagesubmit").text('@ViewBag.productCategory');
+        }
+        if ('@ViewBag.ParentCat' != "") {
+            $("#lblmessagesubmit").text('@ViewBag.ParentCat');
+        }
+
     }
 </script>
 <script type="text/javascript">
@@ -187,9 +206,11 @@
     $(function () {
         $.post("@Url.Content("~/ProductCategory/GetParentCategory")", null, function (data) { SetParentCategory(data); }, "Json");
         $.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },
-        "Json");
-        $.post("@Url.Content("~/ProductLevelOne/GetProductCategory")", null, function (data) { SetProdcutCategoryPC(data, 'ProductCategory'); },
-        "Json");
+            "Json");
+
+        @*$.post("@Url.Content("~/ProductLevel3/GetProductCategory")", null, function (data) { SetProdcutCategoryPC(data, 'ProductCategory'); },
+        "Json");*@
+
         $.post("@Url.Content("~/ProductLevel3/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
         $.post("@Url.Content("~/ProductLevelTwo/GetProductLevelOneCategory")", {}, function (data) { SetProdcutCategoryPC(data, 'pclvlOne'); }, "Json");
 
@@ -202,8 +223,12 @@
         }
         if ('@ViewBag.ProductCat3' != '') {
             $.post("@Url.Content("~/ProductLevelThree/GetProductLevel3")", { productid: '@ViewBag.ProductCat', ProductlvlOneid: '@ViewBag.ProductCat1', ProductLvlTwoId: '@ViewBag.ProductCat2' }, function (data) { SetProdcutCategoryLoad(data, 'pclvlthree'); }, "Json");
-        }
+        }              
 
+        if ('@ViewBag.productCategory' != '') {
+            debugger;
+            $.post("@Url.Content("~/ProductLevel3/GetProductCategory")", { procatid: '@ViewBag.productCategory' }, function (data) { SetProdcutCategory_ParentCategory(data); }, "Json");
+        }
         //Set DropDown By Previous Values end
     });
     //Delete Record Begin
@@ -408,9 +433,8 @@
         }
     }
 
-        function SetProdcutCategory_ParentCategory(data)
-        {
-            debugger;
+    function SetProdcutCategory_ParentCategory(data) {
+        debugger;
         if (data == "Login") {
             location.href = "@Url.Content("~/Logout/Logout")";
         }
@@ -949,61 +973,61 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label> End Date <span class="required">*</span></label>
-                                <input id="etdate" type="text" class="date form-control" name="enddate" placeholder="dd-mm-yyyy" autocomplete="off" / >
+                                <input id="etdate" type="text" class="date form-control" name="enddate" placeholder="dd-mm-yyyy" autocomplete="off" />
                                 <br />
                                 <span id="edate" class="required"></span>
                             </div>
                         </div>
 
                         @*<div class="col-md-12">
-                            <h2 style="border:none; border-top:1px solid #eee; padding-top:25px; margin-top:-15px; margin-bottom:0px;">
-                                Permission For
-                            </h2>
-                            <div class="form-group">
-                                <table class="permissionTbl">
-                                    <tr>
-                                        <td>
-                                            All
-                                        </td>
-                                        <td>
-                                            Region
-                                        </td>
-                                        <td>
-                                            Distributor
-                                        </td>
-                                        <td>
-                                            Dealer
-                                        </td>
-                                        <td>
-                                            Upload User
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="Alls" onchange="Allst();" id="All" />
-                                        </td>
-                                        <td valign="top">
-                                            <select id="RegionList" data-placeholder="Select" onchange="SetRegion();" multiple="multiple" class="chosen-select" style="color: black;"></select>
-                                            <input type="hidden" id="RgList" name="rglist" />
-                                        </td>
-                                        <td valign="top">
-                                            <input type="checkbox" id="checkDistri" name="DistriCheck" />
-                                        </td>
-                                        <td valign="top">
-                                            <input type="checkbox" id="checkDeal" name="DealCheck" />
-                                        </td>
-                                        <td valign="top">
-                                            <input type="file" name="userupload_file" id="userupload_file" style="border:none; height:inherit;" /> <a href="~/Format/UsersFormat.csv">Download Format</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="5">
-                                            @Html.ValidationMessageFor(a => a.CreatedBy, "", new { @class = "required" })
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>*@
+                                <h2 style="border:none; border-top:1px solid #eee; padding-top:25px; margin-top:-15px; margin-bottom:0px;">
+                                    Permission For
+                                </h2>
+                                <div class="form-group">
+                                    <table class="permissionTbl">
+                                        <tr>
+                                            <td>
+                                                All
+                                            </td>
+                                            <td>
+                                                Region
+                                            </td>
+                                            <td>
+                                                Distributor
+                                            </td>
+                                            <td>
+                                                Dealer
+                                            </td>
+                                            <td>
+                                                Upload User
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="Alls" onchange="Allst();" id="All" />
+                                            </td>
+                                            <td valign="top">
+                                                <select id="RegionList" data-placeholder="Select" onchange="SetRegion();" multiple="multiple" class="chosen-select" style="color: black;"></select>
+                                                <input type="hidden" id="RgList" name="rglist" />
+                                            </td>
+                                            <td valign="top">
+                                                <input type="checkbox" id="checkDistri" name="DistriCheck" />
+                                            </td>
+                                            <td valign="top">
+                                                <input type="checkbox" id="checkDeal" name="DealCheck" />
+                                            </td>
+                                            <td valign="top">
+                                                <input type="file" name="userupload_file" id="userupload_file" style="border:none; height:inherit;" /> <a href="~/Format/UsersFormat.csv">Download Format</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                @Html.ValidationMessageFor(a => a.CreatedBy, "", new { @class = "required" })
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>*@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Upload Brochure</label>
@@ -1026,7 +1050,26 @@
                     <div class="form-group">
                         <input type="button" onclick="a();" value="Submit" class="submitBtn" style="margin-top:10px;  margin-left: 15px;" />
                         @*<input type="button" id="btnsubmit" value="Submit" class="submitBtn" style="margin-top:10px;margin-left: 15px;" />*@
-                        <label id="lblmessagesubmit" style="font-size: 15px; color:red;"></label>
+                        @if (ViewBag.StartDate != null)
+                        {
+                            <label id="lblmessagesubmit" style="font-size: 15px; color:red;">@ViewBag.StartDate</label>
+                        }
+                        @if (ViewBag.EndDate != null)
+                        {
+                            <label id="lblmessagesubmit" style="font-size: 15px; color:red;">@ViewBag.EndDate</label>
+                        }
+                        @if (ViewBag.result != null)
+                        {
+                            <label id="lblmessagesubmit" style="font-size: 15px; color:red;">@ViewBag.result</label>
+                        }
+                        @if (ViewBag.productCategory != null)
+                        {
+                            <label id="lblmessagesubmit" style="font-size: 15px; color:red;">@ViewBag.productCategory</label>
+                        }
+                        @if (ViewBag.ParentCat != null)
+                        {
+                            <label id="lblmessagesubmit" style="font-size: 15px; color:red;">@ViewBag.ParentCat</label>
+                        }
                     </div>
                 </div>
             </div>

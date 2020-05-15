@@ -11,19 +11,21 @@ using System.Data;
 using System.Web.Routing;
 using System.Text.RegularExpressions;
 using System.Text;
+using Luminous.Controllers;
+
 namespace LuminousMpartnerIB.Controllers
 {
-    public class CreatePermotionScheme_NewController : Controller
+    public class CreatePermotionPrice_NewController : MultiLanguageController
     {
         //
         // GET: /CreatePermotions/
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();
-        private string PageUrl = "/CreatePermotionScheme_New/Index";
+        private string PageUrl = "/CreatePermotionPrice_New/Index";
         string utype = string.Empty;
+
         public ActionResult Index(string Search)
-        {
-           
+        {          
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
@@ -45,7 +47,7 @@ namespace LuminousMpartnerIB.Controllers
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
                 if (utype == "Luminous")
                 {
-                    return RedirectToAction("Index", "Scheme");
+                    return RedirectToAction("Index", "Price");
                 }
                 else
                 {
@@ -53,6 +55,11 @@ namespace LuminousMpartnerIB.Controllers
                     //return RedirectToAction("snotallowed", "snotallowed");
                 }
             }
+        }
+
+        public ActionResult PriceList()
+        {
+            return View();
         }
 
         public JsonResult GetCardProvider()
@@ -69,7 +76,7 @@ namespace LuminousMpartnerIB.Controllers
                 if (true/*result[0]["uview"].ToString() == "1"*/)
                 {
                     var Company = (from c in db.Card_ProviderMaster
-                                   where c.Status != 2 && c.Pagename == "Scheme"
+                                   where c.Status != 2 && c.Pagename == "PriceList"
                                    select new
                                    {
                                        id = c.Id,
@@ -89,7 +96,7 @@ namespace LuminousMpartnerIB.Controllers
 
         public ActionResult SaveContact(string Alls, string rglist, string disList, string Dealist, string Ctype, HttpPostedFileBase header_image, string Title, string TitleColour,
             string Sub_Title, string Sub_TitleColour, HttpPostedFileBase main_image, string StartDate, string EndDate, string statusC,
-            string DistriCheck, string DealCheck, HttpPostedFileBase Pdf_file, HttpPostedFileBase userupload_file)
+            string DistriCheck, string DealCheck, HttpPostedFileBase Pdf_file, HttpPostedFileBase userupload_file, string ParentCatid, string ParentCatname)
         {
             if (Session["userid"] == null)
             {
@@ -99,8 +106,10 @@ namespace LuminousMpartnerIB.Controllers
             {
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = PageUrl;
+
+
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
-                if (true)
+                if (true/*result[0]["createrole"].ToString() == "1"*/)
                 {
 
 
@@ -109,7 +118,7 @@ namespace LuminousMpartnerIB.Controllers
                     ViewBag.preStartDate = StartDate;
                     ViewBag.PreEndDate = EndDate;
 
-
+                    ViewBag.parntcat = ParentCatid;
 
                     #region Check Validation for permission
                     //if (Alls == null)
@@ -117,8 +126,10 @@ namespace LuminousMpartnerIB.Controllers
                     //    ModelState.AddModelError("status", "Permission For Has No Value");
                     //}
                     //else
+
                     if (userupload_file == null)
                     {
+                        //Rajesh
                         //Alls = Alls ?? "off";
                         //if ((Alls.ToLower() == "off" || Alls == "" || Alls == null) && (rglist == "" || rglist == null || rglist == "0") && (DealCheck == null || DealCheck == "off") && (DistriCheck == null || DistriCheck == "off"))
                         //{
@@ -130,6 +141,7 @@ namespace LuminousMpartnerIB.Controllers
                         //{
                         //    ModelState.AddModelError("status", "Check Either Distributor OR Dealer");
                         //}
+                        //End Rajesh
                     }
 
                     #endregion
@@ -141,7 +153,17 @@ namespace LuminousMpartnerIB.Controllers
 
 
 
+                    #region Validate Parent Category
+                    if (!int.TryParse(ParentCatid, out parntcat))
+                    {
+                        ModelState.AddModelError("Subcatid", "Select Parent Category");
 
+                    }
+                    if (parntcat == 0)
+                    {
+                        ModelState.AddModelError("Subcatid", "Select Parent Category");
+                    }
+                    #endregion
 
                     #region Validate card
                     if (!int.TryParse(Ctype, out card_id))
@@ -149,7 +171,7 @@ namespace LuminousMpartnerIB.Controllers
                         ModelState.AddModelError("CardProviderId", "Select Card Type");
 
                     }
-                    if (card_id == 0)
+                    if (parntcat == 0)
                     {
                         ModelState.AddModelError("CardProviderId", "Select Card Type");
                     }
@@ -220,7 +242,6 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
 
-
                     if (Pdf_file != null)
                     {
                         string FileExtension_pdf = Path.GetExtension(Pdf_file.FileName);
@@ -235,8 +256,6 @@ namespace LuminousMpartnerIB.Controllers
                         }
 
                     }
-
-
 
 
 
@@ -290,6 +309,19 @@ namespace LuminousMpartnerIB.Controllers
 
                     }
                     #endregion
+
+
+
+
+
+                    //#region Validate Descriptions
+                    //if (Descriptions == "" || Descriptions == null)
+                    //{
+                    //    ModelState.AddModelError("Descriptions", "Descriptions Is Empty");
+
+                    //}
+                    //#endregion
+
                     if (ModelState.IsValid)
                     {
 
@@ -326,17 +358,17 @@ namespace LuminousMpartnerIB.Controllers
                             var getclassname = db.Card_ProviderMaster.Where(c => c.Id == card_id).Select(c => new { c.Classname, c.CardProviderName }).SingleOrDefault();
                             c_dynamicpage.ClassName = getclassname.Classname;
                             c_dynamicpage.CardProviderName = getclassname.CardProviderName;
-                            c_dynamicpage.CardAction_Deeplink = "Scheme";
-                            c_dynamicpage.CardAction_Pagename = "Scheme";
+                            c_dynamicpage.CardAction_Deeplink = "Price";
+                            c_dynamicpage.CardAction_Pagename = "Price";
                             c_dynamicpage.CreatedBy = Session["userid"].ToString();
 
                             c_dynamicpage.CreatedOn = DateTime.Now;
                             c_dynamicpage.Startdate = Convert.ToDateTime(StartDate);
                             c_dynamicpage.Enddate = Convert.ToDateTime(EndDate);
 
-                            c_dynamicpage.Subcatid = "";
-
-                            c_dynamicpage.Subcatname = "";
+                            c_dynamicpage.Subcatid = ParentCatid.ToString();
+                            var pcatid = Convert.ToInt32(ParentCatid);
+                            c_dynamicpage.Subcatname = db.ParentCategories.Where(c => c.Pcid == pcatid).Select(c => c.PCName).SingleOrDefault();
                             c_dynamicpage.Title = Title;
                             c_dynamicpage.TitleColour = TitleColour;
                             c_dynamicpage.Sub_Title = Sub_Title;
@@ -355,7 +387,7 @@ namespace LuminousMpartnerIB.Controllers
                             c_dynamicpage.OriginalMainImage = main_image.FileName;
                             c_dynamicpage.SystemMainImage = mainimage;
                             c_dynamicpage.CardDataFlag = "0";
-                            c_dynamicpage.Pagename = "Scheme";
+                            c_dynamicpage.Pagename = "Price";
                             //PDF Upload Code//
 
                             if (Pdf_file != null)
@@ -403,7 +435,7 @@ namespace LuminousMpartnerIB.Controllers
                                             Price_SchemeAccessTable pat = new Price_SchemeAccessTable();
                                             pat.promotionid = Convert.ToInt32(c_dynamicpage.Id);
                                             pat.RegId = int.Parse(s);
-                                            pat.Pagename = "Scheme";
+                                            pat.Pagename = "Price";
                                             pat.createdate = DateTime.Now;
                                             pat.AllDealerAccess = DealCheck == "off" ? false : true;
                                             pat.AllDestriAccess = DistriCheck == "off" ? false : true;
@@ -419,7 +451,9 @@ namespace LuminousMpartnerIB.Controllers
                                     Price_SchemeAccessTable pat = new Price_SchemeAccessTable();
                                     pat.promotionid = Convert.ToInt32(c_dynamicpage.Id);
                                     pat.AllAcess = true;
-                                    pat.Pagename = "Scheme";
+                                    pat.Pagename = "Price";
+                                    pat.createdate = DateTime.Now; 
+                                    pat.createby = Session["userid"].ToString();
                                     db.Price_SchemeAccessTable.Add(pat);
                                     db.SaveChanges();
                                 }
@@ -431,7 +465,7 @@ namespace LuminousMpartnerIB.Controllers
                                     pat.createdate = DateTime.Now;
                                     pat.AllDealerAccess = DealCheck == "off" ? false : true;
                                     pat.AllDestriAccess = DistriCheck == "off" ? false : true;
-                                    pat.Pagename = "Scheme";
+                                    pat.Pagename = "Price";
                                     pat.createby = Session["userid"].ToString();
                                     db.Price_SchemeAccessTable.Add(pat);
                                     db.SaveChanges();
@@ -496,13 +530,13 @@ namespace LuminousMpartnerIB.Controllers
                                             {
                                                 pat.SpecificDealerAccess = "0";
                                                 pat.SpecificDestriAccess = usertype.UserId;
-                                                pat.Pagename = "Scheme";
+                                                pat.Pagename = "Price";
                                             }
                                             if (usertype.CustomerType == "Dealer")
                                             {
                                                 pat.SpecificDealerAccess = usertype.UserId;
                                                 pat.SpecificDestriAccess = "0";
-                                                pat.Pagename = "Scheme";
+                                                pat.Pagename = "Price";
                                             }
                                             pat.createby = Session["userid"].ToString();
                                             db.Price_SchemeAccessTable.Add(pat);
@@ -536,7 +570,7 @@ namespace LuminousMpartnerIB.Controllers
         }
         public JsonResult GetContactDetail()
         {
-            // int? PageId = page;
+
             if (Session["userid"] == null)
             {
                 return Json("Login", JsonRequestBehavior.AllowGet);
@@ -549,7 +583,7 @@ namespace LuminousMpartnerIB.Controllers
                 if (true/*result[0]["uview"].ToString() == "1"*/)
                 {
                     int contactdetails = (from c in db.Card_dynamicPage
-                                          where c.Status != 2 && c.Pagename == "Scheme"
+                                          where c.Status != 2 && c.Pagename == "Price"
                                           select c).Count();
                     int totalrecord;
                     //if (page != null)
@@ -566,7 +600,7 @@ namespace LuminousMpartnerIB.Controllers
                     //}
                     //if (Session["Search"] != null)
                     //{
-                    //    var contactDetails2 = (from c in db.PermotonsListPagingScheme_Price_New("Scheme")
+                    //    var contactDetails2 = (from c in db.PermotonsListPagingScheme_Price_New(PageId ?? 1, 15,"Price")
                     //                           select new
                     //                           {
                     //                               id = c.id,
@@ -597,7 +631,30 @@ namespace LuminousMpartnerIB.Controllers
                     //}
                     //else
                     //{
-                    var contactDetails2 = (from c in db.PermotonsListPagingScheme_Price_New("Scheme")
+                    //var contactDetails2 = (from c in db.PermotonsListPagingScheme_Price_New(PageId ?? 1, 15, "Price")
+                    //                       select new
+                    //                       {
+                    //                           id = c.id,
+                    //                           ParntCat = c.Subcatname,
+                    //                           CardProvider = c.CardProviderName,
+
+                    //                           Title = c.Title,
+                    //                           Subtitle = c.Sub_Title,
+                    //                           StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
+                    //                           EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
+                    //                           status = c.status == 1 ? "Active" : "Deactive",
+
+
+                    //                       }).ToList();
+
+
+
+                    //var temp1= contactDetails2.Where(x=>x.StartDate!=null).
+
+                    //var temp = contactDetails2.ToList();
+
+
+                    var contactDetails2 = (from c in db.PermotonsListPagingScheme_Price_New("Price")
                                            where c.CreatedBy == Session["userid"].ToString()
                                            select new
                                            {
@@ -610,15 +667,12 @@ namespace LuminousMpartnerIB.Controllers
                                                StartDate = c.StartDate != null ? Convert.ToDateTime(c.StartDate).ToShortDateString() : "",
                                                EndDate = c.EndDate != null ? Convert.ToDateTime(c.EndDate).ToShortDateString() : "",
                                                status = c.status == 1 ? "Active" : "Deactive",
-
-
                                            }).OrderByDescending(c => c.id).ToList();
-
 
                     var data = new { result = contactDetails2, TotalRecord = contactDetails2.Count };
                     return Json(data, JsonRequestBehavior.AllowGet);
+                    // }
                 }
-
                 else
                 {
                     return Json("snotallowed", JsonRequestBehavior.AllowGet);
@@ -644,12 +698,18 @@ namespace LuminousMpartnerIB.Controllers
                     Card_dynamicPage cud = db.Card_dynamicPage.Single(a => a.Id == id);
                     List<Price_SchemeAccessTable> pat = db.Price_SchemeAccessTable.Where(a => a.promotionid == id).ToList();
                     ViewBag.status = cud.Status;
+
+                    //ViewBag.preStartDate = Convert.ToDateTime(cud.Startdate).ToShortDateString();
+                    //ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToShortDateString();
+
                     ViewBag.preStartDate = Convert.ToDateTime(cud.Startdate).ToShortDateString();
-                    ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToShortDateString();
+                    ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToShortDateString(); 
+
+
                     ViewBag.Providerid = cud.CardProviderId;
+                    ViewBag.Prntid = cud.Subcatid;
                     ViewBag.HeaderImageName = cud.ImageSystemName;
                     ViewBag.MainImageName = cud.SystemMainImage;
-                    // ViewBag.Prntid = cud.Subcatid;
                     return View(cud);
                 }
                 else
@@ -661,7 +721,7 @@ namespace LuminousMpartnerIB.Controllers
 
         public ActionResult Update(int id, string Ctype, HttpPostedFileBase header_image, string Title, string TitleColour,
             string Sub_Title, string Sub_TitleColour, HttpPostedFileBase main_image, string StartDate, string EndDate, string statusC,
-            string DistriCheck, string DealCheck, HttpPostedFileBase Pdf_file, HttpPostedFileBase userupload_file)
+            string DistriCheck, string DealCheck, HttpPostedFileBase Pdf_file, HttpPostedFileBase userupload_file, string ParentCatid, string ParentCatname)
         {
             if (Session["userid"] == null)
             {
@@ -674,29 +734,56 @@ namespace LuminousMpartnerIB.Controllers
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
                 if (true/*result[0]["editrole"].ToString() == "1"*/)
                 {
-                    int card_id;
-                    int pcid;
-                    int productCat1;
-                    int ptypeid;
                     int parntcat;
-                    bool fileflag = false;
+                    int card_id;
                     ViewBag.preStartDate = StartDate;
                     ViewBag.PreEndDate = EndDate;
 
-                    //  ViewBag.parntcat = ParentCatid;
+                    ViewBag.parntcat = ParentCatid;
 
-                    //#region Validate Parent Category
-                    //if (!int.TryParse(ParentCatid, out parntcat))
-                    //{
-                    //    ModelState.AddModelError("ParentCatid", "Select Parent Category");
+                    #region Validate Parent Category
+                    if (!int.TryParse(ParentCatid, out parntcat))
+                    {
+                        ModelState.AddModelError("Subcatid", "Select Parent Category");
 
-                    //}
-                    //if (parntcat == 0)
-                    //{
-                    //    ModelState.AddModelError("ParentCatid", "Select Parent Category");
-                    //}
-                    //#endregion
+                    }
+                    if (parntcat == 0)
+                    {
+                        ModelState.AddModelError("Subcatid", "Select Parent Category");
+                    }
+                    #endregion
 
+                    #region Validate card
+                    if (!int.TryParse(Ctype, out card_id))
+                    {
+                        ModelState.AddModelError("CardProviderId", "Select Card Type");
+
+                    }
+                    if (parntcat == 0)
+                    {
+                        ModelState.AddModelError("CardProviderId", "Select Card Type");
+                    }
+                    if (Title == "")
+                    {
+                        ModelState.AddModelError("Title", "Title is Required");
+
+                    }
+                    if (Sub_Title == "")
+                    {
+                        ModelState.AddModelError("Sub_Title", "Sub Title is Required");
+
+                    }
+                    if (TitleColour == "")
+                    {
+                        ModelState.AddModelError("TitleColour", "Title Colour is Required");
+
+                    }
+                    if (Sub_TitleColour == "")
+                    {
+                        ModelState.AddModelError("Sub_TitleColour", "Sub Title Colour is Required");
+
+                    }
+                    #endregion
 
 
                     string Status = statusC ?? "off";
@@ -764,40 +851,57 @@ namespace LuminousMpartnerIB.Controllers
 
                     #endregion
                     #region Validate File
-                    //if (header_image == null)
+
+
+                    //string FileExtension = Path.GetExtension(header_image.FileName);
+                    //if (FileExtension.ToLower() == ".jpeg" || FileExtension.ToLower() == ".jpg" || FileExtension.ToLower() == ".png")
                     //{
 
-                    //    ModelState.AddModelError("ImageName", "Image File Is Not Uploaded");
-                    //    ViewBag.File = "File Is Not Uploaded";
                     //}
-                    //#endregion
+                    //else
+                    //{
+                    //    ModelState.AddModelError("File", "*");
+                    //    ViewBag.HFile = "File Extention Should Be In .Jpeg,.Png, .jpg";
+                    //}
 
-                    //#region Validate PDF File
-                    //if (Pdf_file == null)
+
+
+
+
+
+                    //string FileExtensionM = Path.GetExtension(main_image.FileName);
+                    //if (FileExtensionM.ToLower() == ".jpeg" || FileExtensionM.ToLower() == ".jpg" || FileExtensionM.ToLower() == ".png")
                     //{
 
-                    //    ModelState.AddModelError("PDFName", "File Is Not Uploaded");
-                    //    ViewBag.PDFFile = "PDF File Is Not Uploaded";
                     //}
-                    //#endregion
-                    //#region main Image File
-                    //if (main_image == null)
+                    //else
+                    //{
+                    //    ModelState.AddModelError("File", "*");
+                    //    ViewBag.MFile = "File Extention Should Be In .Jpeg,.Png, .jpg";
+                    //}
+
+
+
+
+
+
+
+                    //string FileExtensionP = Path.GetExtension(Pdf_file.FileName);
+                    //if (FileExtensionP.ToLower() == ".pdf" || FileExtensionP.ToLower() == ".PDF")
                     //{
 
-                    //    ModelState.AddModelError("", "File Is Not Uploaded");
-                    //    ViewBag.PDFFile = "PDF File Is Not Uploaded";
                     //}
-                    #endregion
-                    #region Validate card
-                    if (!int.TryParse(Ctype, out card_id))
-                    {
-                        ModelState.AddModelError("CardProviderId", "Select Card Type");
+                    //else
+                    //{
+                    //    ModelState.AddModelError("File", "*");
+                    //    ViewBag.PFile = "File Extention Should Be In .pdf,.PDF";
+                    //}
 
-                    }
-                    if (card_id == 0)
-                    {
-                        ModelState.AddModelError("CardProviderId", "Select Card Type");
-                    }
+
+
+
+
+
                     #endregion
 
                     if (ModelState.IsValid)
@@ -814,8 +918,8 @@ namespace LuminousMpartnerIB.Controllers
 
                         plh.ClassName = contactusd.ClassName;
                         plh.CardProviderName = contactusd.CardProviderName;
-                        plh.CardAction_Deeplink = "Scheme";
-                        plh.CardAction_Pagename = "Scheme";
+                        plh.CardAction_Deeplink = "Price";
+                        plh.CardAction_Pagename = "Price";
                         plh.CreatedBy = Session["userid"].ToString();
 
                         plh.CreatedOn = DateTime.Now;
@@ -843,7 +947,7 @@ namespace LuminousMpartnerIB.Controllers
                         plh.OriginalMainImage = contactusd.OriginalMainImage;
                         plh.SystemMainImage = contactusd.SystemMainImage;
                         plh.CardDataFlag = "0";
-                        plh.Pagename = "Scheme";
+                        plh.Pagename = "Price";
 
                         plh.Enddate = contactusd.Enddate;
 
@@ -907,22 +1011,26 @@ namespace LuminousMpartnerIB.Controllers
 
                         }
 
+
                         contactusd.CardProviderId = card_id.ToString();
+
+
+
 
                         var getclassname = db.Card_ProviderMaster.Where(c => c.Id == card_id).Select(c => new { c.Classname, c.CardProviderName }).SingleOrDefault();
                         contactusd.ClassName = getclassname.Classname;
                         contactusd.CardProviderName = getclassname.CardProviderName;
-                        contactusd.CardAction_Deeplink = "Scheme";
-                        contactusd.CardAction_Pagename = "Scheme";
+                        contactusd.CardAction_Deeplink = "Price";
+                        contactusd.CardAction_Pagename = "Price";
                         contactusd.CreatedBy = Session["userid"].ToString();
 
                         contactusd.CreatedOn = DateTime.Now;
                         contactusd.Startdate = Convert.ToDateTime(StartDate);
                         contactusd.Enddate = Convert.ToDateTime(EndDate);
 
-                        contactusd.Subcatid = "";
-
-                        contactusd.Subcatname = "";
+                        contactusd.Subcatid = ParentCatid.ToString();
+                        var pcatid = Convert.ToInt32(ParentCatid);
+                        contactusd.Subcatname = db.ParentCategories.Where(c => c.Pcid == pcatid).Select(c => c.PCName).SingleOrDefault();
                         contactusd.Title = Title;
                         contactusd.TitleColour = TitleColour;
                         contactusd.Sub_Title = Sub_Title;
@@ -938,7 +1046,7 @@ namespace LuminousMpartnerIB.Controllers
                         contactusd.Sub_TitleColour = Sub_TitleColour;
 
                         contactusd.CardDataFlag = "0";
-                        contactusd.Pagename = "Scheme";
+                        contactusd.Pagename = "Price";
                         string status = statusC ?? "off";
                         if (status == "on")
                         {
@@ -986,8 +1094,8 @@ namespace LuminousMpartnerIB.Controllers
 
                     plh.ClassName = contactusd.ClassName;
                     plh.CardProviderName = contactusd.CardProviderName;
-                    plh.CardAction_Deeplink = "Scheme";
-                    plh.CardAction_Pagename = "Scheme";
+                    plh.CardAction_Deeplink = "Price";
+                    plh.CardAction_Pagename = "Price";
                     plh.CreatedBy = Session["userid"].ToString();
 
                     plh.CreatedOn = DateTime.Now;
@@ -1015,7 +1123,7 @@ namespace LuminousMpartnerIB.Controllers
                     plh.OriginalMainImage = contactusd.OriginalMainImage;
                     plh.SystemMainImage = contactusd.SystemMainImage;
                     plh.CardDataFlag = "0";
-                    plh.Pagename = "Scheme";
+                    plh.Pagename = "Price";
 
                     plh.Enddate = contactusd.Enddate;
 

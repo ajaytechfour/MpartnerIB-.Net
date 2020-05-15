@@ -9,6 +9,11 @@
 
 <script type="text/javascript">
     $(function () {
+
+        $(".date").datepicker(
+            { dateFormat: "dd-mm-yy" }
+        );
+
         $.post("@Url.Content("~/ProductCategory/GetParentCategory")", null, function (data) { SetParentCategory(data); }, "Json");
         @*$.post("@Url.Content("~/CreatePermotionPrice_New/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");*@
         $.post("@Url.Content("~/CreatePermotionPrice_New/GetCardProvider")", null, function (data) { SetCardGrid(data); }, "Json");
@@ -16,9 +21,7 @@
         "Json");
         $.post("@Url.Content("~/Dealers/GetAllDestributors")", null, function (data) { SetProdcutCategory(data, 'DestributorList'); }, "Json");
         $.post("@Url.Content("~/Dealers/GetAllDealer")", null, function (data) { SetProdcutCategory(data, 'DealerList'); }, "Json");
-        $(".date").datepicker(
-     { dateFormat: "dd-mm-yy" }
-        );
+
         ValidationMessage();
     });
 
@@ -617,13 +620,13 @@
                                     <br />
                                     @*@Html.ValidationMessageFor(a => a.ImageSystemName, "", new { @class = "required" })*@
                                     <label style="display: block; width: 100%; display: block; width: 100%; position: absolute; left: 269px; top: 5px;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.HeaderImageName" style="height: 73px; width: 22%; position: absolute; left: 455px; top: 3px; " />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.HeaderImageName" style="height: 73px; width: 22%; position: absolute; left: 455px; top: 3px; " />
                                 </div>
 
 
                                 @*<div class="form-group">
                                             <label style="display:block; width:100%;">Previous Image</label>
-                                            <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.HeaderImageName" style="height:100px;width:30%;" />
+                                            <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.HeaderImageName" style="height:100px;width:30%;" />
 
                                     </div>*@
 
@@ -647,25 +650,28 @@
                                     <br />
                                     @*@Html.ValidationMessageFor(a => a.ImageSystemName, "", new { @class = "required" })*@
                                     <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.MainImageName" style="height: 100px; width: 70%;" />
+                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.MainImageName" style="height: 100px; width: 70%;" />
                                 </div>
 
                                 @*<div class="form-group">
                                         <label style="display:block; width:100%;">Previous Image</label>
-                                        <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.MainImageName" style="height:100px;width:100%;" />
+                                        <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.MainImageName" style="height:100px;width:100%;" />
                                     </div>*@
 
                             </div>
                             <div class="col-md-4">
                                 <div class="">
                                     <label>Start Date<span class="required">*</span></label>
-                                    <input id="sdate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="StartDate" />
+                                    @*<input id="sdate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="StartDate" /*@>
+                                    <input id="sdate" type="text" class="date form-control" name="StartDate" />
+
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="">
                                     <label>End Date<span class="required">*</span></label>
-                                    <input id="edate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="EndDate" />
+                                    <input id="edate" type="text" class="date form-control" name="EndDate" />
+                                    @*<input id="edate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="EndDate" />*@
                                     <br />
                                     @Html.ValidationMessageFor(a => a.Enddate, "", new { @class = "required" })
                                 </div>
@@ -683,8 +689,8 @@
                                 <div class="">
                                     <label>Permission For</label>
                                     @{
-            int id = Convert.ToInt32(Model.Id);
-            <a style="display: block; text-decoration: underline;" href="/EditPromotion_Price_Permission/Index/@id">Edit Permission</a>
+                                        int id = Convert.ToInt32(Model.Id);
+                                        <a style="display: block; text-decoration: underline;" href="/EditPromotion_Price_Permission/Index/@id">Edit Permission</a>
                                     }
                                 </div>
                             </div>

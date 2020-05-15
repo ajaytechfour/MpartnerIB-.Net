@@ -43,7 +43,7 @@ namespace LuminousMpartnerIB.Controllers
 
                 if (true)
                 {
-                    
+
                 }
                 else
                 {
@@ -76,7 +76,7 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
                     var contactDetails2 = (from c in contactdetails
-
+                                           where c.CreatedBy == Session["userid"].ToString()
 
                                            select new
                                            {
@@ -172,7 +172,7 @@ namespace LuminousMpartnerIB.Controllers
 
 
         [HttpPost]
-        public ActionResult SaveSurveyQuestion(string contesttype, string Type, string QuestionTitle, string Questiontype, string OptionA, string OptionB, string OptionC, string OptionD, string OptionE, string Answer, string StartDate, string enddate, string statusC)
+        public ActionResult SaveSurveyQuestion(string contesttype, string Type, string QuestionTitle, string Questiontype, string OptionA, string OptionB, string OptionC, string OptionD, string OptionE, string Answer, string StartDate, string enddate, string statusC,string Survey)
         {
             if (Session["userid"] == null)
             {
@@ -251,7 +251,7 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
                     #endregion
-                    if (Type =="")
+                    if (Type == "")
                     {
                         //rajesh
                         //if (Survey == "" || Survey == null)
@@ -292,7 +292,7 @@ namespace LuminousMpartnerIB.Controllers
                     if (ModelState.IsValid)
                     {
                         NotificationSurvey Nos = new NotificationSurvey();
-                        Nos.Survey = contesttype;
+                        Nos.Survey = Survey;
                         Nos.QuestionTitle = QuestionTitle;
                         Nos.QuestionType = Questiontype;
                         Nos.StartDate = Convert.ToDateTime(StartDate);
@@ -304,7 +304,7 @@ namespace LuminousMpartnerIB.Controllers
                         Nos.OptionE = OptionE;
                         Nos.CorrectAns = Answer;
                         Nos.CreatedOn = DateTime.Now;
-                        Nos.CreatedBy = Convert.ToString(Session["Id"]);
+                        Nos.CreatedBy = Session["userid"].ToString();
                         if (Type == "")
                         {
                             Nos.ContestId = 1;
@@ -326,7 +326,7 @@ namespace LuminousMpartnerIB.Controllers
 
                         db.NotificationSurveys.Add(Nos);
 
-                       
+
                         db.SaveChanges();
                         return Content("<script>alert('Record Save Successfully');location.href='../NotificationSurvey/Index';</script>");
 
@@ -359,17 +359,17 @@ namespace LuminousMpartnerIB.Controllers
                 {
                     NotificationSurvey cud = db.NotificationSurveys.Single(a => a.SurveyID == id);
                     ViewBag.status = cud.Status;
-                 
-                      if(cud.ContestId==1)
-                      {
-                          ViewBag.ContestData = "Survey";
-                      }
-                    if(cud.ContestId==2)
-                      {
-                          ViewBag.ContestData="Contest";
-                      }
-                  
-                 
+
+                    if (cud.ContestId == 1)
+                    {
+                        ViewBag.ContestData = "Survey";
+                    }
+                    if (cud.ContestId == 2)
+                    {
+                        ViewBag.ContestData = "Contest";
+                    }
+
+
                     if (cud.QuestionType == "MCQ")
                     {
                         ViewBag.Questypemcq = cud.QuestionType;
@@ -385,7 +385,7 @@ namespace LuminousMpartnerIB.Controllers
                     ViewBag.Correctans = cud.CorrectAns;
                     ViewBag.preStartDate = Convert.ToDateTime(cud.StartDate).ToString("dd-MM-yyyy");
                     ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToString("dd-MM-yyyy");
-                    ViewBag.contest = new SelectList(db.ContestMasters, "Id", "ContestName",cud.ContestId);
+                    ViewBag.contest = new SelectList(db.ContestMasters, "Id", "ContestName", cud.ContestId);
                     return View(cud);
                 }
                 else
@@ -521,7 +521,7 @@ namespace LuminousMpartnerIB.Controllers
                         CUDHistory.OptionD = contactusd.OptionD;
                         CUDHistory.OptionE = contactusd.OptionE;
                         CUDHistory.CorrectAns = contactusd.CorrectAns;
-                        CUDHistory.ModifyBy = Convert.ToInt32(Session["Id"].ToString());
+                        CUDHistory.ModifyBy = Session["userid"].ToString();
                         CUDHistory.ModifyOn = DateTime.Now;
                         CUDHistory.Status = contactUs.Status;
                         db.NotificationSurveyHistories.Add(CUDHistory);
@@ -539,7 +539,7 @@ namespace LuminousMpartnerIB.Controllers
                         contactusd.ModifyOn = DateTime.Now;
                         contactusd.StartDate = contactUs.StartDate;
                         contactusd.Enddate = contactUs.Enddate;
-                        contactusd.ModifyBy = Convert.ToInt32(Session["Id"].ToString());
+                        contactusd.ModifyBy = Session["userid"].ToString(); ;
                         string status = statusC ?? "off";
                         if (status == "on")
                         {
@@ -555,8 +555,8 @@ namespace LuminousMpartnerIB.Controllers
                         }
                     }
                     NotificationSurvey nots = db.NotificationSurveys.Single(a => a.SurveyID == contactUs.SurveyID);
-                   return View("Edit", nots);
-                  
+                    return View("Edit", nots);
+
                 }
                 else
                 {
@@ -593,7 +593,7 @@ namespace LuminousMpartnerIB.Controllers
                     CUDHistory.OptionD = contactUs.OptionD;
                     CUDHistory.OptionE = contactUs.OptionE;
                     CUDHistory.CorrectAns = contactUs.CorrectAns;
-                    CUDHistory.ModifyBy = Convert.ToInt32(Session["Id"].ToString());
+                    CUDHistory.ModifyBy = Session["userid"].ToString();
                     CUDHistory.ModifyOn = DateTime.Now;
 
                     db.NotificationSurveyHistories.Add(CUDHistory);

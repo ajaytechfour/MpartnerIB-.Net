@@ -34,7 +34,7 @@ namespace LuminousMpartnerIB.Controllers
                 else
                 {
                     return View();
-                }              
+                }
             }
         }
 
@@ -65,7 +65,7 @@ namespace LuminousMpartnerIB.Controllers
                     {
                         ParentCategory pcat = new ParentCategory();
                         pcat.PCName = Pcategory.PCName;
-                      
+
                         pcat.CreatedOn = DateTime.Now;
                         pcat.CreatedBy = Session["Id"].ToString();
                         string status = statusC ?? "off";
@@ -109,8 +109,8 @@ namespace LuminousMpartnerIB.Controllers
                 if (true)
                 {
                     var Parentcat = (from c in db.ParentCategories
-                                          where c.PCStatus != 0
-                                          select c).ToList();
+                                     where c.PCStatus != 0
+                                     select c).ToList();
                     int totalrecord;
                     if (page != null)
                     {
@@ -118,15 +118,15 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
                     var getParentCat = (from c in Parentcat
+                                        where c.CreatedBy == Session["userid"].ToString()
+                                        select new
+                                        {
 
-                                           select new
-                                           {
+                                            PCName = c.PCName,
+                                            status = c.PCStatus == 1 ? "Enable" : "Disable",
+                                            id = c.Pcid
 
-                                               PCName = c.PCName,
-                                               status = c.PCStatus == 1 ? "Enable" : "Disable",
-                                               id = c.Pcid
-
-                                           }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
+                                        }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
                     if (Parentcat.Count() % 15 == 0)
                     {
                         totalrecord = Parentcat.Count() / 15;
@@ -169,8 +169,8 @@ namespace LuminousMpartnerIB.Controllers
                     if (affectedReocrds > 0)
                     {
                         ParentCategoryhistory CUDHistory = new ParentCategoryhistory();
-                        CUDHistory.Pcid= contactUs.Pcid;
-                      
+                        CUDHistory.Pcid = contactUs.Pcid;
+
                         CUDHistory.PCName = contactUs.PCName;
                         CUDHistory.PCStatus = 0;
 
@@ -234,7 +234,7 @@ namespace LuminousMpartnerIB.Controllers
                     {
                         ModelState.AddModelError("PCName", "Product Category Already Exists");
                     }
-                    
+
 
                     if (ModelState.IsValid)
                     {
@@ -243,7 +243,7 @@ namespace LuminousMpartnerIB.Controllers
                         //Save Previous Record In History
                         ParentCategoryhistory CUDHistory = new ParentCategoryhistory();
                         CUDHistory.Pcid = parentcatogry.Pcid;
-                      
+
                         CUDHistory.PCName = parentcatogry.PCName;
                         CUDHistory.PCStatus = parentcatogry.PCStatus;
                         CUDHistory.ModifyBy = Session["Id"].ToString();
@@ -251,7 +251,7 @@ namespace LuminousMpartnerIB.Controllers
                         db.ParentCategoryhistories.Add(CUDHistory);
 
                         //Save New Record In Table
-                      
+
                         parentcatogry.PCName = parentcate.PCName;
                         parentcatogry.ModifyOn = DateTime.Now;
                         parentcatogry.ModifyBy = Session["Id"].ToString();

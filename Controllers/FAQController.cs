@@ -20,13 +20,14 @@ namespace LuminousMpartnerIB.Controllers
         string utype = string.Empty;
         public ActionResult Index()
         {
-            utype = Session["ctype"].ToString();
+           
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
             }
             else
             {
+                utype = Session["ctype"].ToString();
                 //dt = Session["permission"] as DataTable;
                 //string pageUrl2 = "/FAQ/Index";
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
@@ -185,6 +186,7 @@ namespace LuminousMpartnerIB.Controllers
                     }
 
                     var contactDetails2 = (from c in contactdetails
+                                           where c.CreatedBy == Session["userid"].ToString()
                                            select new
                                            {
                                                quesname = c.QuestionName,
@@ -192,9 +194,6 @@ namespace LuminousMpartnerIB.Controllers
                                                status = c.Status == 1 ? "Enable" : "Disable",
                                                startdate = Convert.ToDateTime(c.StartDate).ToShortDateString(),
                                                enddate = Convert.ToDateTime(c.EndDate).ToShortDateString(),
-
-
-
                                                id = c.Id,
                                            }).OrderByDescending(a => a.id).Skip(page ?? 0).Take(15).ToList();
                     if (contactdetails.Count() % 15 == 0)

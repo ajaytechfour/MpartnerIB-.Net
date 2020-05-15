@@ -168,7 +168,7 @@ namespace LuminousMpartnerIB.Controllers
                     //}
 
                     var contactDetails2 = (from c in contactdetails
-
+                                           where c.CreatedBy == Session["userid"].ToString()                                           
                                            select new
                                            {
                                                ParentCat = c.ParentCategory.PCName,

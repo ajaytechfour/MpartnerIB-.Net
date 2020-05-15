@@ -463,7 +463,7 @@ namespace LuminousMpartnerIB.Controllers
 
                                     c_dynamicpage_main.Sub_Title = "";
                                     c_dynamicpage_main.Sub_TitleColour = "";
-                                    c_dynamicpage_main.ImageOriginalName = mainimage[1].FileName; 
+                                    c_dynamicpage_main.ImageOriginalName = mainimage[1].FileName;
                                     c_dynamicpage_main.ImageSystemName = main_image1;
                                     c_dynamicpage_main.OriginalMainImage = "";
                                     c_dynamicpage_main.SystemMainImage = "";
@@ -1011,7 +1011,7 @@ namespace LuminousMpartnerIB.Controllers
                     if (Session["Search"] != null)
                     {
                         var contactDetails2 = (from c in db.HomePage_Paging(PageId ?? 1, 15, "HomePage")
-
+                                               where c.CreatedBy == Session["userid"].ToString()
                                                select new
                                                {
                                                    id = c.id,
@@ -1044,6 +1044,7 @@ namespace LuminousMpartnerIB.Controllers
                     else
                     {
                         var contactDetails2 = (from c in db.HomePage_Paging(PageId ?? 1, 15, "HomePage")
+                                               where c.CreatedBy == Session["userid"].ToString()
                                                select new
                                                {
                                                    id = c.id,
@@ -1216,7 +1217,7 @@ namespace LuminousMpartnerIB.Controllers
 
                         // ViewBag.ImageName = Cdp.ImageOriginalName;
                         ViewBag.ImageName = Cdp.ImageSystemName;
-                        ViewBag.Imagename1 = db.Card_dynamicPage.Where(x=>x.Id==id+1).AsEnumerable().ElementAt(0).ImageSystemName;
+                        ViewBag.Imagename1 = db.Card_dynamicPage.Where(x => x.Id == id + 1).AsEnumerable().ElementAt(0).ImageSystemName;
                         return View(Cdp);
                     }
 
@@ -1390,7 +1391,7 @@ namespace LuminousMpartnerIB.Controllers
 
                         if (ModelState.IsValid)
                         {
-                          //  PermotionsList contactusd = db.PermotionsLists.Single(a => a.id == id);
+                            //  PermotionsList contactusd = db.PermotionsLists.Single(a => a.id == id);
 
                             Card_dynamicPage cdynamic = db.Card_dynamicPage.Single(a => a.Id == id);
 
@@ -1398,7 +1399,7 @@ namespace LuminousMpartnerIB.Controllers
                             {
 
                                 string filename = Path.GetFileNameWithoutExtension(postedFile.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(postedFile.FileName);
-                               
+
                                 string str = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), filename);
                                 postedFile.SaveAs(str);
                                 cdynamic.ImageSystemName = filename;
@@ -1423,7 +1424,7 @@ namespace LuminousMpartnerIB.Controllers
                             }
                             else
                             {
-                                cdynamic.Status= 0;
+                                cdynamic.Status = 0;
                             }
 
                             db.SaveChanges();
@@ -1502,7 +1503,7 @@ namespace LuminousMpartnerIB.Controllers
                             //SchemeCard_MainImage.SaveAs(str2);
 
 
-                           // contactusd.createby = Session["userid"].ToString();
+                            // contactusd.createby = Session["userid"].ToString();
                             cdynamic.CreatedOn = DateTime.Now;
                             cdynamic.Startdate = Convert.ToDateTime(StartDate);
                             cdynamic.Enddate = Convert.ToDateTime(EndDate);
@@ -1561,7 +1562,7 @@ namespace LuminousMpartnerIB.Controllers
                             {
                                 //PermotionsList contactusd1 = db.PermotionsLists.Single(a => a.id == id+1);
 
-                                Card_dynamicPage cdynamic1 = db.Card_dynamicPage.Single(a => a.Id == id+1);
+                                Card_dynamicPage cdynamic1 = db.Card_dynamicPage.Single(a => a.Id == id + 1);
                                 if (SchemeCard_MainImage != null)
                                 {
 
@@ -1663,7 +1664,7 @@ namespace LuminousMpartnerIB.Controllers
 
                             if (first_upload_gridchildmainimage != null)
                             {
-                               // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
+                                // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild1 = Path.GetFileNameWithoutExtension(first_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(first_upload_gridchildmainimage.FileName);
                                 string strMain = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), Chaild1);
                                 first_upload_gridchildmainimage.SaveAs(strMain);
@@ -1673,7 +1674,7 @@ namespace LuminousMpartnerIB.Controllers
 
                             if (second_upload_gridchildmainimage != null)
                             {
-                               // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
+                                // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild2 = Path.GetFileNameWithoutExtension(second_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(second_upload_gridchildmainimage.FileName);
                                 string strMain = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), Chaild2);
                                 second_upload_gridchildmainimage.SaveAs(strMain);
@@ -1682,7 +1683,7 @@ namespace LuminousMpartnerIB.Controllers
 
                             if (third_upload_gridchildmainimage != null)
                             {
-                               // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
+                                // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild3 = Path.GetFileNameWithoutExtension(third_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(third_upload_gridchildmainimage.FileName);
                                 string strMain = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), Chaild3);
                                 third_upload_gridchildmainimage.SaveAs(strMain);
@@ -1691,7 +1692,7 @@ namespace LuminousMpartnerIB.Controllers
 
                             if (four_upload_gridchildmainimage != null)
                             {
-                               // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
+                                // string BackImage = Path.GetFileNameWithoutExtension(gridbackimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(gridbackimage.FileName);
                                 string Chaild4 = Path.GetFileNameWithoutExtension(four_upload_gridchildmainimage.FileName) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(four_upload_gridchildmainimage.FileName);
                                 string strMain = Path.Combine(Server.MapPath("~/MpartnerIB_Api/CardImage/"), Chaild4);
                                 four_upload_gridchildmainimage.SaveAs(strMain);
@@ -2042,7 +2043,7 @@ namespace LuminousMpartnerIB.Controllers
                 if (true)
                 {
                     //PermotionsList contactusd = db.PermotionsLists.Single(a => a.id == id);
-                    Card_dynamicPage contactusd = db.Card_dynamicPage.Single(a => a.Id==id);
+                    Card_dynamicPage contactusd = db.Card_dynamicPage.Single(a => a.Id == id);
 
                     //PermotionsListHistory plh = new PermotionsListHistory();
                     //plh.Descriptions = contactusd.Descriptions;
@@ -2059,7 +2060,7 @@ namespace LuminousMpartnerIB.Controllers
                     //db.PermotionsListHistories.AddObject(plh);
 
                     contactusd.Status = 2;
-                    contactusd.ModifiedBy= Session["userid"].ToString();
+                    contactusd.ModifiedBy = Session["userid"].ToString();
                     contactusd.ModifiedOn = DateTime.Now;
                     if (db.SaveChanges() > 0)
                     {

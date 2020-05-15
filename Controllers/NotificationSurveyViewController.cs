@@ -542,7 +542,7 @@ namespace LuminousMpartnerIB.Controllers
                         CUDHistory.OptionD = contactusd.OptionD;
                         CUDHistory.OptionE = contactusd.OptionE;
                         CUDHistory.CorrectAns = contactusd.CorrectAns;
-                        CUDHistory.ModifyBy = Convert.ToInt32(Session["Id"].ToString());
+                        CUDHistory.ModifyBy = Session["userid"].ToString();
                         CUDHistory.ModifyOn = DateTime.Now;
                         CUDHistory.Status = contactUs.Status;
                         db.NotificationSurveyHistories.Add(CUDHistory);
@@ -560,7 +560,7 @@ namespace LuminousMpartnerIB.Controllers
                         contactusd.ModifyOn = DateTime.Now;
                         contactusd.StartDate = contactUs.StartDate;
                         contactusd.Enddate = contactUs.Enddate;
-                        contactusd.ModifyBy = Convert.ToInt32(Session["Id"].ToString());
+                        contactusd.ModifyBy = Session["userid"].ToString();
                         string status = statusC ?? "off";
                         if (status == "on")
                         {
@@ -614,7 +614,7 @@ namespace LuminousMpartnerIB.Controllers
                     CUDHistory.OptionD = contactUs.OptionD;
                     CUDHistory.OptionE = contactUs.OptionE;
                     CUDHistory.CorrectAns = contactUs.CorrectAns;
-                    CUDHistory.ModifyBy = Convert.ToInt32(Session["Id"].ToString());
+                    CUDHistory.ModifyBy = Session["userid"].ToString();
                     CUDHistory.ModifyOn = DateTime.Now;
 
                     db.NotificationSurveyHistories.Add(CUDHistory);
