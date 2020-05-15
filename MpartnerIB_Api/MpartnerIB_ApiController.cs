@@ -6297,6 +6297,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 ul.CustomerType = "DEALER";
                 ul.Dis_Sap_Code = dealerData.sapcode;
                 ul.Dis_Name = dealerData.DealerName;
+                ul.RegId = dealerData.regionid;
                 ul.Dis_Address1 = dealerData.DealerAddress;
                 ul.Dis_City = dealerData.City;
                 ul.Dis_State = dealerData.State;
