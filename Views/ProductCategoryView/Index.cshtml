@@ -3,9 +3,9 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+
 <script src="@Url.Content("~/assets/js/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+
 <style type="text/css">
     .required {
         color: Red;
@@ -76,20 +76,13 @@
 <script type="text/javascript">
     $(function () {
 
-         $.post("@Url.Content("~/Price/GetDistributors")", null, function (data) { SetParentCategory(data); }, "Json");
+        $.post("@Url.Content("~/Price/GetDistributors")", null, function (data) { SetParentCategory(data); }, "Json");
 
-        $.post("@Url.Content("~/ProductCategoryView/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
-
-        $.post("@Url.Content("~/ProductCategory/GetParentCategory")", null, function (data) { SetParentCategory(data); }, "Json");
-        ValidationMessage();
+        @*$.post("@Url.Content("~/ProductCategoryView/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");*@
+              
     });
-    function ValidationMessage() {
-        if ('@ViewBag.File' != "") {
-            $("#file").text('@ViewBag.File');
-        }
-    }
-
-     //Set Parent Category//
+     
+    //Set Parent Category//
     function SetParentCategory(data)
     {
         if (data == "Login") {
@@ -110,6 +103,7 @@
             procat.append(option);
         }
     }
+
 
     function Getgriddata(e) {
         debugger;
@@ -161,9 +155,11 @@
 
     function Edit(id) {
 
-        location.href = "@Url.Content("~/ProductCategoryView/Edit/")" + id;
+        location.href = "@Url.Content("~/ProductCategoryView/View/")" + id;
     }
-    function SetParentCategory(data) {
+
+
+    @*function SetParentCategory(data) {
         if (data == "Login") {
             location.href = "@Url.Content("~/Logout/Logout")";
         }
@@ -181,7 +177,7 @@
             });
             procat.append(option);
         }
-    }
+    }*@
     //function SetPages(paging) {
     //    var pages = "";
     //    $("#Paging").empty();
@@ -305,7 +301,7 @@
                         {*@
                     <table class="headingHd">
                         <tr>
-                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Gallery List</th>
+                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Product Category List</th>
                             <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
                                 @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Gallery", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
 

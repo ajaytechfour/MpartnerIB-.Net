@@ -1,0 +1,128 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+<style>
+    ul.pagination {
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    table.tabelGridRow2 th {
+        border-top: none;
+    }
+</style>
+<script type="text/javascript">
+
+    var data = @Html.Raw(Json.Encode(@ViewBag.countryList));
+    var model = @Html.Raw(Json.Encode(@ViewBag.ContactUsModel));
+    
+    var i = 0;
+    $(function() {
+
+        debugger;
+        var i = 0;
+        var arr = [];
+
+        var option = '';
+
+
+        var markup = "<tr><input id='text1" + i + "' type='hidden' class='form-control' name=id value='"+model[0].ID+"' /></tr><tr><td>@LuminousMpartnerIB.Resource.Name<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=name value='"+model[0].Name+"' required /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Address<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=address value='"+model[0].Address+"' required /></td></tr><tr><td>@LuminousMpartnerIB.Resource.ContactNo<span class='required'>*</span></td><td><input id='text1" + i + "' type='number' class='form-control' name=contactNo value='"+model[0].ContactNo+"' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Email<span class='required'>*</span></td><td><input id='text1" + i + "' type='email' class='form-control' name=email value='"+model[0].Email+"' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Fax<span class='required'>*</span></td><td><input id='text1" + i + "' type='number' class='form-control' name=fax value='"+model[0].Fax+"' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Country<span class='required'>*</span></td><td><select name=country class='form-control' id='con" + i + "' onchange='CountryChange(this," + i + ")'><option></option></select></td></tr><tr><td>@LuminousMpartnerIB.Resource.State<span class='required'>*</span></td><td><select name=state class='form-control' id='st" + i + "' onchange='StateChange(this," + i + ")'><option></option></select></td></tr><tr><td>@LuminousMpartnerIB.Resource.City<span class='required'>*</span></td><td><select name=city class='form-control' id='cit" + i + "'><option></option></select></td></tr>";
+
+        $('#dynaTableContent tbody').append(markup);
+        option = '<option value=0 selected>@LuminousMpartnerIB.Resource.Select</option>';
+        $.each(data, function (key, value) {
+
+            option += "<option value=" + value.CountryID + ">" + value.CountryName + "</option>";
+        });
+
+        $("#con" + i + "").append(option);
+        option = '';
+        option = '<option value=0 selected>@LuminousMpartnerIB.Resource.Select</option>';
+        $("#st" + i + "").append(option);
+        $("#cit" + i + "").append(option);
+        option = '';
+
+    });
+
+
+    function CountryChange(e,index) {
+            debugger;
+        var option = e.options[e.selectedIndex].innerHTML;
+        var SelectedValue = $(e).val();
+        $.post("@Url.Content("~/Suggestion/StateList")", {countryId:SelectedValue}, function (data1) { SetStateList(data1); }, "Json");
+
+        function SetStateList(data1) {
+
+            debugger;
+           var  option ='';
+            $.each(data1, function (key, value) {
+
+            option += "<option value=" + value.StateID + ">" + value.StateName + "</option>";
+            });
+
+            $("#st" + index + "").append(option);
+            option = '';
+        }
+    }
+
+    function StateChange(e,index) {
+            debugger;
+        var option = e.options[e.selectedIndex].innerHTML;
+        var SelectedValue = $(e).val();
+        $.post("@Url.Content("~/Suggestion/CityList")", {stateId:SelectedValue}, function (data2) { SetCityList(data2); }, "Json");
+
+        function SetCityList(data2) {
+
+            debugger;
+           var  option = null;
+            $.each(data2, function (key, value) {
+
+            option += "<option value=" + value.id + ">" + value.cityname + "</option>";
+            });
+
+            $("#cit" + index + "").append(option);
+            option = '';
+        }
+    }
+</script>
+
+
+
+<div id="page-wrapper" style="background: #f2f4f8;">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="pageHeading"><span></span>@Luminous.Resource.ContactUs-@Luminous.Resource.Edit</h1>
+        </div>
+    </div>
+
+
+    @using (Html.BeginForm("Update", "Suggestion", FormMethod.Post, new { enctype = "multipart/form-data", @id = "forms" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="aos-init aos-animate" id="dynaRow">
+            <div class="addgift" style="padding-bottom: 10px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 style="margin-bottom:0px;">@LuminousMpartnerIB.Resource.ContactUs</h2>
+                        <table id="dynaTableContent" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    @*<input type="button" onclick="a();" value="Submit" class="submitBtn" style="margin-top:10px;  margin-left: 15px;" />*@
+                    <input type="submit" id="btnsubmit" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" style="margin-top:10px;margin-left: 15px;" />
+                    <label id="lblmessagesubmit" style="font-size: 15px; color:red;"></label>
+                </div>
+            </div>
+        </div>
+    }
+    </div>

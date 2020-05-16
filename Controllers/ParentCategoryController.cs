@@ -67,7 +67,7 @@ namespace LuminousMpartnerIB.Controllers
                         pcat.PCName = Pcategory.PCName;
 
                         pcat.CreatedOn = DateTime.Now;
-                        pcat.CreatedBy = Session["Id"].ToString();
+                        pcat.CreatedBy = Session["userid"].ToString();
                         string status = statusC ?? "off";
                         if (status == "on")
                         {

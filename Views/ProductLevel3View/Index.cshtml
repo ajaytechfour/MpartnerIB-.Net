@@ -116,33 +116,7 @@
 </script>
 @*Setting Of ValidationMessage*@
 <script type="text/javascript">
-    function ValidationMessage() {
-        if ('@ViewBag.StartDate' != "") {
-            $("#sdate").text('@ViewBag.StartDate');
-        }
-
-        if ('@ViewBag.EndDate' != "") {
-            $("#edate").text('@ViewBag.EndDate');
-        }
-
-        if ('@ViewBag.File' != "") {
-            $("#file").text('@ViewBag.File');
-        }
-        if ('@ViewBag.SaveStatus' != "") {
-            alert('@ViewBag.SaveStatus');
-            $("#file").text('@ViewBag.File');
-        }
-
-        if ('@ViewBag.FileCarousal' != "") {
-            $("#ImageCarousal").text('@ViewBag.FileCarousal');
-        }
-
-
-
-        $("#stdate").val('@ViewBag.preStartDate');
-        $("#etdate").val('@ViewBag.PreEndDate');
-
-    }
+   
 </script>
 <script type="text/javascript">
 

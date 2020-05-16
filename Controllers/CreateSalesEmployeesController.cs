@@ -184,67 +184,121 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                //var echkexist = db.UsersLists.Where(x => x.Dis_Name.Trim().ToLower() == obj.Name.Trim().ToLower() & x.CustomerType == "DISTY").ToList();
-                var echkexist = db.UsersLists.Where(x => x.Dis_Sap_Code == obj.SapCode & x.CustomerType == "DISTY").ToList();
-
-                if (echkexist.Count() > 0)
-                {
-                    data = new { result = new List<UsersListModel>(), TotalRecord = tcount, Message = "", MessageExist = "This Sap Code Already Exists" };
-                    return Json(data, JsonRequestBehavior.AllowGet);
-                }
-
-
-
                 UsersList objUsersList = new UsersList();
 
-                objUsersList.Dis_Name = obj.Name;
-                objUsersList.Dis_Address1 = obj.Address;
-                objUsersList.Dis_ContactNo = obj.ContactNo;
-                objUsersList.Dis_Email = obj.Email;
-                objUsersList.Dis_State = obj.State;
-                objUsersList.Dis_City = obj.City;
-
-                objUsersList.UserId = userid;
-                objUsersList.CustomerType = "SalesEmployee";
-                // objUsersList.Dis_Sap_Code = userid;
-                objUsersList.CreatedBY = userid;
-                objUsersList.CreatedON = DateTime.Now;
-
-                objUsersList.Dis_Sap_Code = obj.SapCode;
-                objUsersList.Country = obj.Country;
-
-                db.UsersLists.Add(objUsersList);
-                if (db.SaveChanges() > 0)
+                if (obj.id != null)
                 {
-                    userid = Session["userid"].ToString();
-                    var griddata = from vs in db.UsersLists
-                                   where vs.CustomerType == "SalesEmployee" & vs.CreatedBY == userid
-                                   orderby vs.CustomerType
-                                   select new UsersListModel
-                                   {
-                                       UserId = vs.UserId,
-                                       CustomerType = vs.CustomerType,
-                                       Name = vs.Dis_Name,
-                                       Address = vs.Dis_Address1,
-                                       City = vs.Dis_City,
-                                       State = vs.Dis_State,
-                                       ContactNo = vs.Dis_ContactNo,
-                                       Email = vs.Dis_Email,
-                                       //CreatedBY = vs.CreatedBY,
-                                   };
+                    objUsersList = db.UsersLists.Single(a => a.id == obj.id);
 
-                    UsersListModellst = griddata.ToList();
+                    objUsersList.CustomerType = "SalesEmployee";
+                    objUsersList.Dis_Name = obj.Name;
+                    objUsersList.Dis_Address1 = obj.Address;
+                    objUsersList.Dis_ContactNo = obj.ContactNo;
+                    objUsersList.Dis_Email = obj.Email;
+
+                    objUsersList.Dis_Sap_Code = obj.SapCode;
+                    objUsersList.Dis_State = obj.State;
+                    objUsersList.Dis_City = obj.City;
+                    objUsersList.Country = obj.Country;
+
+                    // objUsersList.UserId = userid;              
+
+                    objUsersList.UpdatedbY = userid;
+                    objUsersList.UpdatedOn = DateTime.Now;
+
+                    if (db.SaveChanges() > 0)
+                    {
+                        userid = Session["userid"].ToString();
+                        var griddata = from vs in db.UsersLists
+                                       where vs.CustomerType == "SalesEmployee" & vs.CreatedBY == userid
+                                       orderby vs.CustomerType
+                                       select new UsersListModel
+                                       {
+                                           UserId = vs.UserId,
+                                           CustomerType = vs.CustomerType,
+                                           Name = vs.Dis_Name,
+                                           Address = vs.Dis_Address1,
+                                           City = vs.Dis_City,
+                                           State = vs.Dis_State,
+                                           ContactNo = vs.Dis_ContactNo,
+                                           Email = vs.Dis_Email,
+                                           //CreatedBY = vs.CreatedBY,
+                                           SapCode = vs.Dis_Sap_Code,
+                                           Country = vs.Country,
+                                       };
+
+                        UsersListModellst = griddata.ToList();
 
 
-                    data = new { result = UsersListModellst, TotalRecord = UsersListModellst.Count(), Message = "Data save successfully", MessageExist = "" };
-
+                        data = new { result = UsersListModellst, TotalRecord = UsersListModellst.Count(), Message = "Data Update successfully", MessageExist = "" };
+                    }
                 }
-
                 else
                 {
-                    return Json(data, JsonRequestBehavior.AllowGet);
-                }
 
+                    //var echkexist = db.UsersLists.Where(x => x.Dis_Name.Trim().ToLower() == obj.Name.Trim().ToLower() & x.CustomerType == "DISTY").ToList();
+                    var echkexist = db.UsersLists.Where(x => x.Dis_Sap_Code == obj.SapCode & x.CustomerType == "SalesEmployee").ToList();
+
+                    if (echkexist.Count() > 0)
+                    {
+                        data = new { result = new List<UsersListModel>(), TotalRecord = tcount, Message = "", MessageExist = "This Sap Code Already Exists" };
+                        return Json(data, JsonRequestBehavior.AllowGet);
+                    }
+
+                    objUsersList = new UsersList();
+
+                    objUsersList.Dis_Name = obj.Name;
+                    objUsersList.Dis_Address1 = obj.Address;
+                    objUsersList.Dis_ContactNo = obj.ContactNo;
+                    objUsersList.Dis_Email = obj.Email;
+                    objUsersList.Dis_State = obj.State;
+                    objUsersList.Dis_City = obj.City;
+                    objUsersList.Dis_Sap_Code = obj.SapCode;
+                    objUsersList.Country = obj.Country;
+
+
+                    objUsersList.UserId = userid;
+                    objUsersList.CustomerType = "SalesEmployee";
+                    // objUsersList.Dis_Sap_Code = userid;
+                    objUsersList.CreatedBY = userid;
+                    objUsersList.CreatedON = DateTime.Now;
+
+
+                    db.UsersLists.Add(objUsersList);
+
+                    if (db.SaveChanges() > 0)
+                    {
+                        userid = Session["userid"].ToString();
+                        var griddata = from vs in db.UsersLists
+                                       where vs.CustomerType == "SalesEmployee" & vs.CreatedBY == userid
+                                       orderby vs.CustomerType
+                                       select new UsersListModel
+                                       {
+                                           UserId = vs.UserId,
+                                           CustomerType = vs.CustomerType,
+                                           Name = vs.Dis_Name,
+                                           Address = vs.Dis_Address1,
+                                           City = vs.Dis_City,
+                                           State = vs.Dis_State,
+                                           ContactNo = vs.Dis_ContactNo,
+                                           Email = vs.Dis_Email,
+                                           //CreatedBY = vs.CreatedBY,
+                                           SapCode = vs.Dis_Sap_Code,
+                                           Country = vs.Country,
+                                       };
+
+                        UsersListModellst = griddata.ToList();
+
+
+                        data = new { result = UsersListModellst, TotalRecord = UsersListModellst.Count(), Message = "Data save successfully", MessageExist = "" };
+
+                    }
+
+                    else
+                    {
+                        return Json(data, JsonRequestBehavior.AllowGet);
+                    }
+                }
             }
             return Json(data, JsonRequestBehavior.AllowGet);
         }
@@ -267,60 +321,16 @@ namespace LuminousMpartnerIB.Controllers
                     UsersList cud = db.UsersLists.Single(a => a.id == id);
 
 
-                    //objUsersList.Dis_Name = obj.Name;
-                    //objUsersList.Dis_Address1 = obj.Address;
-                    //objUsersList.Dis_ContactNo = obj.ContactNo;
-                    //objUsersList.Dis_Email = obj.Email;
-                    //objUsersList.Dis_State = obj.State;
-                    //objUsersList.Dis_City = obj.City;
+                    ViewBag.id = cud.id;
+                    ViewBag.EmployeeName = cud.Dis_Name;
+                    ViewBag.EmployeeAddress = cud.Dis_Address1;
+                    ViewBag.ContactNo = cud.Dis_ContactNo;
+                    ViewBag.Email = cud.Dis_Email;
+                    ViewBag.SapCode = cud.Dis_Sap_Code;
+                    ViewBag.Country = cud.Country;
+                    ViewBag.State = cud.Dis_State;
+                    ViewBag.City = cud.Dis_City;
 
-                    //objUsersList.UserId = userid;
-                    //objUsersList.CustomerType = "SalesEmployee";
-                    //// objUsersList.Dis_Sap_Code = userid;
-                    //objUsersList.CreatedBY = userid;
-                    //objUsersList.CreatedON = DateTime.Now;
-
-                    //objUsersList.Dis_Sap_Code = obj.SapCode;
-                    //objUsersList.Country = obj.Country;
-
-                    //****************************************************
-                    //objdata.Name = $('#EmployeeName').val();
-                    //objdata.Address = $('#EmployeeAddress').val();
-                    //objdata.ContactNo = $('#ContactNo').val();
-                    //objdata.Email = $('#Email').val();
-
-                    //objdata.State = $('#ddlStateMaster option:selected').text();
-                    //objdata.City = $('#ddlCityMaster option:selected').text();
-                    //objdata.SapCode = $('#SapCode').val();
-                    //objdata.Country = $('#ddlCountryMaster option:selected').text();
-
-
-                    if (cud. == 1)
-                    {
-                        ViewBag.EmployeeName = "Survey";
-                    }
-                    if (cud.ContestId == 2)
-                    {
-                        ViewBag.ContestData = "Contest";
-                    }
-
-
-                    if (cud.QuestionType == "MCQ")
-                    {
-                        ViewBag.Questypemcq = cud.QuestionType;
-                    }
-                    if (cud.QuestionType == "Text")
-                    {
-                        ViewBag.Questypetext = cud.QuestionType;
-                    }
-                    if (cud.CorrectAns == "OptionA" || cud.CorrectAns == "OptionB" || cud.CorrectAns == "OptionC" || cud.CorrectAns == "OptionD" || cud.CorrectAns == "OptionE")
-                    {
-                        ViewBag.CorrectAns = cud.CorrectAns;
-                    }
-                    ViewBag.Correctans = cud.CorrectAns;
-                    ViewBag.preStartDate = Convert.ToDateTime(cud.StartDate).ToString("dd-MM-yyyy");
-                    ViewBag.PreEndDate = Convert.ToDateTime(cud.Enddate).ToString("dd-MM-yyyy");
-                    ViewBag.contest = new SelectList(db.ContestMasters, "Id", "ContestName", cud.ContestId);
                     return View(cud);
                 }
                 else

@@ -226,7 +226,7 @@ namespace LuminousMpartnerIB.Controllers
         }
 
         [HttpGet]
-        public ActionResult Edit(int id)
+        public ActionResult View(int id)
         {
             if (Session["userid"] == null)
             {

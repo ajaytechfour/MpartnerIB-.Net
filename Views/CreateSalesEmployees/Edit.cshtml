@@ -1,20 +1,57 @@
-﻿@*@model LuminousMpartnerIB.Models*@
-{
-    ViewBag.Title = "Sales Employee";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@model LuminousMpartnerIB.EF.UsersList
 
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>*@
+@*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
 
 
 <script type="text/javascript">
+    function ValidationMessage() {
+
+        //$("#stdate").val('@ViewBag.preStartDate');
+       // $("#etdate").val('@ViewBag.PreEndDate');
+
+
+        //ViewBag.Country = cud.Country;
+        //ViewBag.State = cud.Dis_State;
+        //ViewBag.City = cud.Dis_City;
+
+
+        //objdata.State = $('#ddlStateMaster option:selected').text();
+        //objdata.City = $('#ddlCityMaster option:selected').text();
+        //objdata.Country = $('#ddlCountryMaster option:selected').text();
+
+    }
+</script>
+
+
+
+<script type="text/javascript">
+
+    $(function () {
+        debugger;           
+            $("#EmployeeName").val('@ViewBag.EmployeeName');
+            $("#EmployeeAddress").val('@ViewBag.EmployeeAddress');
+            $("#ContactNo").val('@ViewBag.ContactNo');
+            $("#Email").val('@ViewBag.Email');
+            $("#SapCode").val('@ViewBag.SapCode');
+            $("#EmpID").val('@ViewBag.id');
+    });
+
 
     $(document).ready(function () {
 
         $("#btnsubmit").click(function () {
             debugger;
-
+            var id = 0;
 
             if ($("#EmployeeName").val() == "") {
                 $("#lblmessagesubmit").text("Please fill Employee Name ");
@@ -60,8 +97,8 @@
 
 
             var objdata = new Object();
-
-
+            
+            objdata.id = $('#EmpID').val();;
             objdata.Name = $('#EmployeeName').val();
             objdata.Address = $('#EmployeeAddress').val();
             objdata.ContactNo = $('#ContactNo').val();
@@ -87,7 +124,28 @@
                         //alert(result);
                         $('#lblmessagesubmit').text("");
 
-                        if (data.Message != "") {
+                        //if (data.MessageExist != "") {
+                        //    debugger;
+                        //    $('#lblmessagesubmit').text(data.MessageExist);
+                        //}
+
+                        //if (data.Message == "Data save successfully") {
+
+                        //    $('#lblmessagesubmit').text(data.Message);
+                        //    $('#ddlCountryMaster').val(0);
+                        //    $('#ddlStateMaster').val(0);
+                        //    $('#ddlCityMaster').val(0);
+                        //    $('#EmployeeName').val('');
+                        //    $('#EmployeeAddress').val('');
+                        //    $('#ContactNo').val('');
+                        //    $('#Email').val('');
+
+                        //    SetGrid(data);
+
+                        //}
+
+                        if (data.Message == "Data Update successfully") {
+                            debugger;
 
                             $('#lblmessagesubmit').text(data.Message);
                             $('#ddlCountryMaster').val(0);
@@ -98,14 +156,11 @@
                             $('#ContactNo').val('');
                             $('#Email').val('');
 
-                            SetGrid(data);
+                           // SetGrid(data);
+                            
+                             window.location.href = '@Url.Action("Index", "CreateSalesEmployees")'
 
-                        }
-
-                        if (data.MessageExist != "") {
-                            debugger;
-                            $('#lblmessagesubmit').text(data.MessageExist);
-                        }
+                        }                     
 
                     }
                 },
@@ -113,13 +168,9 @@
                     debugger;
                     alert(errormessage.responseText);
                 }
-            });
-
-
+            });            
 
          });
-
-
 
     });
 
@@ -142,7 +193,7 @@
     $(function () {
         debugger;
          $.post("@Url.Content("~/CreateSalesEmployees/getCountryMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");
-      
+
         setTimeout(function () {
             $('#lblmessagesuccess').fadeOut("slow");
         }, 15000);
@@ -260,6 +311,7 @@
                                 <div class="">
                                     <label>Employee Name <span class="required"></span></label>
                                     <input id="EmployeeName" type="text" autocomplete="off" placeholder="Employee Name" class="date form-control" name="EmployeeName" />
+                                    <input id="EmpID" type="text" name="EmpID" style="display:none" />
 
                                 </div>
                             </div>

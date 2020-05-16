@@ -77,9 +77,8 @@
 
 <script type="text/javascript">
     $(function () {
-        $.post("@Url.Content("~/Price/GetDistributors")", null, function (data) { SetParentCategory(data); }, "Json");
-
-        ValidationMessage();
+        $.post("@Url.Content("~/Price/GetDistributors")", null, function (data) { SetDistributors(data); }, "Json");
+               
     });
     function ValidationMessage() {
 
@@ -108,12 +107,12 @@
     }
 
     function Edit(id) {
-        location.href = "@Url.Content("~/ProductLevelTwo/Edit/")" + id;
+        location.href = "@Url.Content("~/ProductLevelTwoView/View/")" + id;
     }
 
 
      //Set Parent Category//
-    function SetParentCategory(data)
+    function SetDistributors(data)
     {
         if (data == "Login") {
             location.href = "@Url.Content("~/Logout/Logout")";

@@ -38,6 +38,8 @@ namespace LuminousMpartnerIB.Controllers
                 }
             }
         }
+            
+
         public ActionResult SaveContact(ProductCatergory contactUs, string statusC, string pcId, HttpPostedFileBase Postedfile)
         {
             if (Session["userid"] == null)
@@ -260,7 +262,7 @@ namespace LuminousMpartnerIB.Controllers
         }
 
         [HttpGet]
-        public ActionResult Edit(int id)
+        public ActionResult View(int id)
         {
             if (Session["userid"] == null)
             {
