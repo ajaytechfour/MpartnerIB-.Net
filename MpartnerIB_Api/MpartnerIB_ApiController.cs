@@ -4835,6 +4835,741 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return Pcategorylist;
         }
 
+
+
+        //public List<ProductCatalog> getProduct_Catalog(string userid, int productcategoryid)
+        //{
+        //    string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
+
+        //    //Get Home Page List
+        //    List<ProductCatalog> Pcataloglist = new List<ProductCatalog>();
+        //    MessageData msgdata = new MessageData();
+
+
+        //    try
+        //    {
+        //        var usertype = luminous.UsersLists.Where(c => c.UserId == userid).Select(c => new { c.CustomerType, c.CreatedBY }).SingleOrDefault();
+        //        if (usertype.CustomerType == "Dealer" || usertype.CustomerType == "DEALER")
+        //        {
+        //            userid = usertype.CreatedBY;
+        //        }
+
+
+        //        var getproduct_catalog = (from prdcat in luminous.ProductLevelThrees
+        //                                  join prdimages in luminous.ProductthreeImageMappings
+        //                                  on prdcat.id equals prdimages.ProductLevelThreeid
+        //                                  join prd2 in luminous.ProductLevelTwoes
+        //                               on prdcat.pc_Lv2_oneId equals prd2.id
+        //                                  join attribute in luminous.ProductLevelOnes
+        //                                  on prdcat.ProductLevelOne equals attribute.id into ps
+        //                                  from p in ps.DefaultIfEmpty()
+        //                                  where prdcat.productCategoryid == productcategoryid && prdcat.CreatedBy == userid && prdcat.PlTwStatus == 1
+        //                                  select new
+        //                                  {
+        //                                      Id = prdcat.id,
+        //                                      productimages = prdimages.Primage,
+        //                                      rating = prdcat.Rating,
+        //                                      name = prdcat.Name,
+        //                                      keyfeature = prdcat.KeyFeature,
+        //                                      warrenty = prdcat.Warrenty,
+        //                                      maxcurrentcharge = prdcat.MaximumChargeCurrent,
+        //                                      noofbattery = prdcat.NoOfBattery,
+        //                                      supportedbatterytype = prdcat.SupportedBatteryType,
+        //                                      maxbulbload = prdcat.Maximumbulbload,
+        //                                      technology = prdcat.Technology,
+        //                                      nominalvoltage = prdcat.NominalVoltage,
+        //                                      dimensionmm = prdcat.DimensionMM,
+        //                                      weightfilledbattery = prdcat.Weight_Filled_battery,
+        //                                      prodcatid = prdcat.productCategoryid,
+        //                                      prd2name = prd2.Name,
+        //                                      attribute_name = p.Name,
+
+        //                                      RatedCapacity = prdcat.RatedCapacity,
+        //                                      FilledWeight = prdcat.FilledWeight,
+        //                                      DCOutputVoltage = prdcat.DCOutputVoltage,
+        //                                      DCOutputCurrent = prdcat.DCOutputCurrent,
+        //                                      MaxSupportedPanelpower = prdcat.MaxSupportedPanelpower,
+        //                                      MaxSolarPanelVoltage = prdcat.MaxSolarPanelVoltage,
+        //                                      VA = prdcat.VA,
+        //                                      NoofCells = prdcat.NoofCells,
+        //                                      PeakPowerPMax = prdcat.PeakPowerPMax,
+        //                                      RatedModuleVoltage = prdcat.RatedModuleVoltage,
+        //                                      MaximumPowerVoltage = prdcat.MaximumPowerVoltage,
+        //                                      MaximumPowerCurrent = prdcat.MaximumPowerCurrent,
+        //                                      NominalDCOutputVoltage = prdcat.NominalDCOutputVoltage,
+        //                                      MaxDCOutputCurrent = prdcat.MaxDCOutputCurrent,
+        //                                      Noof12VBatteriesinSeries = prdcat.Noof12VBatteriesinSeries,
+        //                                      SolarLength = prdcat.SolarLength,
+        //                                      SolarWidth = prdcat.SolarWidth,
+        //                                      Heightuptofloattop = prdcat.Heightuptofloattop,
+        //                                      DryWeight = prdcat.DryWeight,
+        //                                      RatedACpower = prdcat.RatedACpower,
+        //                                      OperatingVoltage = prdcat.OperatingVoltage,
+        //                                      ChargeControllerRating = prdcat.ChargeControllerRating,
+        //                                      NominalBatterybankvoltage = prdcat.NominalBatterybankvoltage,
+        //                                      InputVoltageWorkingRange = prdcat.InputVoltageWorkingRange,
+        //                                      OutputVoltageWorkingRange = prdcat.OutputVoltageWorkingRange,
+        //                                      MainsACLowCut = prdcat.MainsACLowCut,
+        //                                      MainACLowCutRecovery = prdcat.MainACLowCutRecovery,
+
+
+        //                                  }
+        //            ).ToList();
+
+
+        //        // Checked_data_existornot(pagename);
+        //        foreach (var data in getproduct_catalog)
+        //        {
+        //            List<Technicalspecification> techspecification = new List<Technicalspecification>();
+        //            ProductCatalog pcatalog = new ProductCatalog();
+        //            pcatalog.id = data.Id;
+        //            var pchildcatalog = luminous.ProductthreeImageMappings.Where(c => c.ProductLevelThreeid == pcatalog.id).Select(c => c.Primage).Take(1).Count();
+        //            if (pchildcatalog == 0)
+        //            {
+        //                if (data.productimages == "")
+        //                {
+        //                    pcatalog.productcatalog_image_url = "";
+        //                }
+        //            }
+        //            else
+        //            {
+        //                var pchildcatalogimg = luminous.ProductthreeImageMappings.Where(c => c.ProductLevelThreeid == pcatalog.id).Select(c => c.Primage).Take(1).SingleOrDefault();
+        //                pcatalog.productcatalog_image_url = ConfigurationSettings.AppSettings["UatUrl"].ToString() + "ProductImages/" + pchildcatalogimg;
+        //            }
+        //            if (data.name == "")
+        //            {
+        //                pcatalog.productioncatalog_name = "";
+        //            }
+        //            else
+        //            {
+        //                pcatalog.productioncatalog_name = data.name;
+        //            }
+        //            if (data.rating == "")
+        //            {
+        //                pcatalog.productioncatalog_rating = "";
+        //            }
+        //            else
+        //            {
+        //                pcatalog.productioncatalog_rating = data.rating;
+        //            }
+        //            if (data.keyfeature == "")
+        //            {
+        //                pcatalog.keyfeature = "";
+        //            }
+        //            else
+        //            {
+        //                pcatalog.keyfeature = data.keyfeature;
+        //            }
+        //            if (data.warrenty == "")
+        //            {
+        //                pcatalog.warrenty = "";
+        //            }
+        //            else
+        //            {
+        //                pcatalog.warrenty = data.warrenty;
+        //            }
+        //            if (data.prd2name == "")
+        //            {
+        //                pcatalog.productleveltwo = "";
+        //            }
+        //            else
+        //            {
+        //                pcatalog.productleveltwo = data.prd2name;
+        //            }
+        //            if (data.attribute_name == "" || data.attribute_name == null)
+        //            {
+        //                pcatalog.attribute_name = "";
+        //            }
+        //            else
+        //            {
+        //                pcatalog.attribute_name = data.attribute_name;
+        //            }
+        //            if (productcategoryid == 30) //HUPS
+        //            {
+        //                if (data.maxcurrentcharge == "" || data.maxcurrentcharge == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Maximum Charging current";
+        //                    techdata.Value = data.maxcurrentcharge;
+
+
+        //                    //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+
+        //                }
+
+        //                if (data.noofbattery == "" || data.noofbattery == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Number of battery";
+        //                    techdata.Value = data.noofbattery;
+        //                    //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+
+        //                }
+
+        //                if (data.supportedbatterytype == "" || data.supportedbatterytype == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Supported battery type";
+        //                    techdata.Value = data.supportedbatterytype;
+        //                    //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+
+        //                }
+
+        //                if (data.maxbulbload == "" || data.maxbulbload == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Maximum bulb load";
+        //                    techdata.Value = data.maxbulbload;
+        //                    //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+
+        //                }
+
+        //                if (data.technology == "" || data.technology == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Technology";
+        //                    techdata.Value = data.technology;
+        //                    //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+
+        //                }
+        //            }
+        //            if (productcategoryid == 31)
+        //            {
+        //                if (data.nominalvoltage == "" || data.nominalvoltage == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Nominal Voltage";
+        //                    techdata.Value = data.nominalvoltage;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.dimensionmm == "" || data.dimensionmm == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Dimension(in MM)";
+        //                    techdata.Value = data.dimensionmm;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.weightfilledbattery == "" || data.weightfilledbattery == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Weight (Filled battery)";
+        //                    techdata.Value = data.weightfilledbattery;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+
+        //            }
+        //            //New CR
+        //            if (productcategoryid == 32) //Charge Controller
+        //            {
+        //                if (data.DCOutputVoltage == "" || data.DCOutputVoltage == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "DC Output Voltage (V)";
+        //                    techdata.Value = data.DCOutputVoltage;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.DCOutputCurrent == "" || data.DCOutputCurrent == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "DC Output Current (Amp.)";
+        //                    techdata.Value = data.DCOutputCurrent;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Max Supported Panel power (Wp)";
+        //                    techdata.Value = data.MaxSupportedPanelpower;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.MaxSolarPanelVoltage == "" || data.MaxSolarPanelVoltage == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Max Solar Panel Voltage (V)";
+        //                    techdata.Value = data.MaxSolarPanelVoltage;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+        //            }
+
+        //            else if (productcategoryid == 33) //HKVA
+        //            {
+        //                if (data.VA == "" || data.VA == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "VA";
+        //                    techdata.Value = data.VA;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.maxcurrentcharge == "" || data.maxcurrentcharge == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Maximum Charging current";
+        //                    techdata.Value = data.maxcurrentcharge;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.noofbattery == "" || data.noofbattery == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Number of battery";
+        //                    techdata.Value = data.noofbattery;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.supportedbatterytype == "" || data.supportedbatterytype == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Supported battery type";
+        //                    techdata.Value = data.supportedbatterytype;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //            }
+
+        //            else if (productcategoryid == 34) //Panel
+        //            {
+        //                if (data.NoofCells == "" || data.NoofCells == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "No. of Cells";
+        //                    techdata.Value = data.NoofCells;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.PeakPowerPMax == "" || data.PeakPowerPMax == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Peak Power PMax (Wp)";
+        //                    techdata.Value = data.PeakPowerPMax;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.RatedModuleVoltage == "" || data.RatedModuleVoltage == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Rated Module Voltage (V)";
+        //                    techdata.Value = data.RatedModuleVoltage;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.MaximumPowerVoltage == "" || data.MaximumPowerVoltage == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Maximum Power Voltage Vmp (V)";
+        //                    techdata.Value = data.MaximumPowerVoltage;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.MaximumPowerCurrent == "" || data.MaximumPowerCurrent == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Maximum Power Current Imp (A)";
+        //                    techdata.Value = data.MaximumPowerCurrent;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+        //            }
+
+        //            else if (productcategoryid == 35) //Retrofit
+        //            {
+        //                if (data.NominalDCOutputVoltage == "" || data.NominalDCOutputVoltage == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Nominal DC Output Voltage (V)";
+        //                    techdata.Value = data.NominalDCOutputVoltage;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.MaxDCOutputCurrent == "" || data.MaxDCOutputCurrent == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Max DC Output Current (Amp.)";
+        //                    techdata.Value = data.MaxDCOutputCurrent;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Max Supported Panel power (Wp)";
+        //                    techdata.Value = data.MaxSupportedPanelpower;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.MaxSolarPanelVoltage == "" || data.MaxSolarPanelVoltage == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Max Solar Panel Voltage (V)";
+        //                    techdata.Value = data.MaxSolarPanelVoltage;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.Noof12VBatteriesinSeries == "" || data.Noof12VBatteriesinSeries == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "No. of 12V Batteries in Series";
+        //                    techdata.Value = data.Noof12VBatteriesinSeries;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+        //            }
+
+        //            else if (productcategoryid == 36) //Solar Battery
+        //            {
+        //                if (data.RatedCapacity == "" || data.RatedCapacity == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Rated Capacity (Ah) - C10";
+        //                    techdata.Value = data.RatedCapacity;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.SolarLength == "" || data.SolarLength == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Length +- 3 mm";
+        //                    techdata.Value = data.SolarLength;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.SolarWidth == "" || data.SolarWidth == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Width +- 3 mm";
+        //                    techdata.Value = data.SolarWidth;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.Heightuptofloattop == "" || data.Heightuptofloattop == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Height upto float top +- 3 mm";
+        //                    techdata.Value = data.Heightuptofloattop;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.DryWeight == "" || data.DryWeight == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Dry Weight +- 5% kg";
+        //                    techdata.Value = data.DryWeight;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //            }
+
+        //            else if (productcategoryid == 37) //Solar HUPS
+        //            {
+        //                if (data.RatedACpower == "" || data.RatedACpower == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Rated AC power (VA)";
+        //                    techdata.Value = data.RatedACpower;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Max Supported Panel power (Wp)";
+        //                    techdata.Value = data.MaxSupportedPanelpower;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.OperatingVoltage == "" || data.OperatingVoltage == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Operating Voltage";
+        //                    techdata.Value = data.OperatingVoltage;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.ChargeControllerRating == "" || data.ChargeControllerRating == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Charge Controller Rating";
+        //                    techdata.Value = data.ChargeControllerRating;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.NominalBatterybankvoltage == "" || data.NominalBatterybankvoltage == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Nominal Battery bank voltage";
+        //                    techdata.Value = data.NominalBatterybankvoltage;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //            }
+
+        //            else if (productcategoryid == 38) //Stabilizers
+        //            {
+        //                if (data.InputVoltageWorkingRange == "" || data.InputVoltageWorkingRange == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Input Voltage Working Range";
+        //                    techdata.Value = data.InputVoltageWorkingRange;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.OutputVoltageWorkingRange == "" || data.OutputVoltageWorkingRange == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Output Voltage Working Range";
+        //                    techdata.Value = data.OutputVoltageWorkingRange;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.MainsACLowCut == "" || data.MainsACLowCut == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Mains AC Low Cut";
+        //                    techdata.Value = data.MainsACLowCut;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //                if (data.MainACLowCutRecovery == "" || data.MainACLowCutRecovery == null)
+        //                {
+        //                    pcatalog.tech_specification = null;
+        //                }
+        //                else
+        //                {
+        //                    Technicalspecification techdata = new Technicalspecification();
+        //                    techdata.ColumnName = "Mains AC Low Cut Recovery";
+        //                    techdata.Value = data.MainACLowCutRecovery;
+        //                    techspecification.Add(techdata);
+        //                    pcatalog.tech_specification = techspecification;
+        //                }
+
+        //            }
+        //            //End New CR
+
+        //            // pcatalog.tech_specification = techspecification;
+
+        //            Pcataloglist.Add(pcatalog);
+
+        //        }
+
+        //        // }
+
+
+
+
+        //    }
+        //    catch (Exception exc)
+        //    {
+
+
+        //        SaveServiceLog("", url, "", "", 1, exc.InnerException.ToString(), "", DateTime.Now, "", "", "", "");
+        //    }
+        //    return Pcataloglist;
+        //}
         public List<ProductCatalog> getProduct_Catalog(string userid, int productcategoryid)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
@@ -4982,584 +5717,41 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                     {
                         pcatalog.attribute_name = data.attribute_name;
                     }
-                    if (productcategoryid == 30) //HUPS
+
+                    var getcolumn_technicalspecification = (from c in luminous.Mapping_Productlevelthree_TechnicalSpecification
+                                                            join c_master in luminous.Productlevelthree_ColumnMaster on c.ColumnId equals c_master.Id
+                                                            join p_lvl_3 in luminous.ProductLevelThrees on c.Productid equals p_lvl_3.id
+                                                            where p_lvl_3.id == pcatalog.id
+                                                            select new
+                                                            {
+
+                                                                columnname = c_master.App_ColumnName,
+                                                                value = c.Value
+
+
+                                                            }).ToList();
+
+                    foreach (var tech_specification in getcolumn_technicalspecification)
                     {
-                        if (data.maxcurrentcharge == "" || data.maxcurrentcharge == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Maximum Charging current";
-                            techdata.Value = data.maxcurrentcharge;
-
-
-                            //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-
-                        }
-
-                        if (data.noofbattery == "" || data.noofbattery == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Number of battery";
-                            techdata.Value = data.noofbattery;
-                            //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-
-                        }
-
-                        if (data.supportedbatterytype == "" || data.supportedbatterytype == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Supported battery type";
-                            techdata.Value = data.supportedbatterytype;
-                            //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-
-                        }
-
-                        if (data.maxbulbload == "" || data.maxbulbload == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Maximum bulb load";
-                            techdata.Value = data.maxbulbload;
-                            //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-
-                        }
-
-                        if (data.technology == "" || data.technology == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Technology";
-                            techdata.Value = data.technology;
-                            //List<Luminous.MpartnerNewApi.Model.Technicalspecification> techspecification = new List<Luminous.MpartnerNewApi.Model.Technicalspecification>();
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-
-                        }
+                        Technicalspecification techdata = new Technicalspecification();
+                        techdata.ColumnName = tech_specification.columnname;
+                        techdata.Value = tech_specification.value;
+                        techspecification.Add(techdata);
+                        pcatalog.tech_specification = techspecification;
                     }
-                    if (productcategoryid == 31)
-                    {
-                        if (data.nominalvoltage == "" || data.nominalvoltage == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Nominal Voltage";
-                            techdata.Value = data.nominalvoltage;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.dimensionmm == "" || data.dimensionmm == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Dimension(in MM)";
-                            techdata.Value = data.dimensionmm;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.weightfilledbattery == "" || data.weightfilledbattery == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Weight (Filled battery)";
-                            techdata.Value = data.weightfilledbattery;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-
-                    }
-                    //New CR
-                    if (productcategoryid == 32) //Charge Controller
-                    {
-                        if (data.DCOutputVoltage == "" || data.DCOutputVoltage == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "DC Output Voltage (V)";
-                            techdata.Value = data.DCOutputVoltage;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.DCOutputCurrent == "" || data.DCOutputCurrent == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "DC Output Current (Amp.)";
-                            techdata.Value = data.DCOutputCurrent;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Max Supported Panel power (Wp)";
-                            techdata.Value = data.MaxSupportedPanelpower;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.MaxSolarPanelVoltage == "" || data.MaxSolarPanelVoltage == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Max Solar Panel Voltage (V)";
-                            techdata.Value = data.MaxSolarPanelVoltage;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-                    }
-
-                    else if (productcategoryid == 33) //HKVA
-                    {
-                        if (data.VA == "" || data.VA == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "VA";
-                            techdata.Value = data.VA;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.maxcurrentcharge == "" || data.maxcurrentcharge == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Maximum Charging current";
-                            techdata.Value = data.maxcurrentcharge;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.noofbattery == "" || data.noofbattery == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Number of battery";
-                            techdata.Value = data.noofbattery;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.supportedbatterytype == "" || data.supportedbatterytype == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Supported battery type";
-                            techdata.Value = data.supportedbatterytype;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                    }
-
-                    else if (productcategoryid == 34) //Panel
-                    {
-                        if (data.NoofCells == "" || data.NoofCells == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "No. of Cells";
-                            techdata.Value = data.NoofCells;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.PeakPowerPMax == "" || data.PeakPowerPMax == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Peak Power PMax (Wp)";
-                            techdata.Value = data.PeakPowerPMax;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.RatedModuleVoltage == "" || data.RatedModuleVoltage == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Rated Module Voltage (V)";
-                            techdata.Value = data.RatedModuleVoltage;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.MaximumPowerVoltage == "" || data.MaximumPowerVoltage == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Maximum Power Voltage Vmp (V)";
-                            techdata.Value = data.MaximumPowerVoltage;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.MaximumPowerCurrent == "" || data.MaximumPowerCurrent == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Maximum Power Current Imp (A)";
-                            techdata.Value = data.MaximumPowerCurrent;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-                    }
-
-                    else if (productcategoryid == 35) //Retrofit
-                    {
-                        if (data.NominalDCOutputVoltage == "" || data.NominalDCOutputVoltage == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Nominal DC Output Voltage (V)";
-                            techdata.Value = data.NominalDCOutputVoltage;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.MaxDCOutputCurrent == "" || data.MaxDCOutputCurrent == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Max DC Output Current (Amp.)";
-                            techdata.Value = data.MaxDCOutputCurrent;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Max Supported Panel power (Wp)";
-                            techdata.Value = data.MaxSupportedPanelpower;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.MaxSolarPanelVoltage == "" || data.MaxSolarPanelVoltage == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Max Solar Panel Voltage (V)";
-                            techdata.Value = data.MaxSolarPanelVoltage;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.Noof12VBatteriesinSeries == "" || data.Noof12VBatteriesinSeries == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "No. of 12V Batteries in Series";
-                            techdata.Value = data.Noof12VBatteriesinSeries;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-                    }
-
-                    else if (productcategoryid == 36) //Solar Battery
-                    {
-                        if (data.RatedCapacity == "" || data.RatedCapacity == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Rated Capacity (Ah) - C10";
-                            techdata.Value = data.RatedCapacity;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.SolarLength == "" || data.SolarLength == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Length +- 3 mm";
-                            techdata.Value = data.SolarLength;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.SolarWidth == "" || data.SolarWidth == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Width +- 3 mm";
-                            techdata.Value = data.SolarWidth;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.Heightuptofloattop == "" || data.Heightuptofloattop == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Height upto float top +- 3 mm";
-                            techdata.Value = data.Heightuptofloattop;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.DryWeight == "" || data.DryWeight == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Dry Weight +- 5% kg";
-                            techdata.Value = data.DryWeight;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                    }
-
-                    else if (productcategoryid == 37) //Solar HUPS
-                    {
-                        if (data.RatedACpower == "" || data.RatedACpower == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Rated AC power (VA)";
-                            techdata.Value = data.RatedACpower;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.MaxSupportedPanelpower == "" || data.MaxSupportedPanelpower == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Max Supported Panel power (Wp)";
-                            techdata.Value = data.MaxSupportedPanelpower;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.OperatingVoltage == "" || data.OperatingVoltage == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Operating Voltage";
-                            techdata.Value = data.OperatingVoltage;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.ChargeControllerRating == "" || data.ChargeControllerRating == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Charge Controller Rating";
-                            techdata.Value = data.ChargeControllerRating;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.NominalBatterybankvoltage == "" || data.NominalBatterybankvoltage == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Nominal Battery bank voltage";
-                            techdata.Value = data.NominalBatterybankvoltage;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                    }
-
-                    else if (productcategoryid == 38) //Stabilizers
-                    {
-                        if (data.InputVoltageWorkingRange == "" || data.InputVoltageWorkingRange == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Input Voltage Working Range";
-                            techdata.Value = data.InputVoltageWorkingRange;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.OutputVoltageWorkingRange == "" || data.OutputVoltageWorkingRange == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Output Voltage Working Range";
-                            techdata.Value = data.OutputVoltageWorkingRange;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.MainsACLowCut == "" || data.MainsACLowCut == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Mains AC Low Cut";
-                            techdata.Value = data.MainsACLowCut;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                        if (data.MainACLowCutRecovery == "" || data.MainACLowCutRecovery == null)
-                        {
-                            pcatalog.tech_specification = null;
-                        }
-                        else
-                        {
-                            Technicalspecification techdata = new Technicalspecification();
-                            techdata.ColumnName = "Mains AC Low Cut Recovery";
-                            techdata.Value = data.MainACLowCutRecovery;
-                            techspecification.Add(techdata);
-                            pcatalog.tech_specification = techspecification;
-                        }
-
-                    }
-                    //End New CR
-
-                    // pcatalog.tech_specification = techspecification;
 
                     Pcataloglist.Add(pcatalog);
-
                 }
 
-                // }
+                //End New CR
 
+                // pcatalog.tech_specification = techspecification;
 
 
 
             }
+
+                // 
             catch (Exception exc)
             {
 
