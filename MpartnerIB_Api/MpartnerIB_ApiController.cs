@@ -24,6 +24,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 {
     public class MpartnerIB_ApiController : ApiController
     {
+        // API 
         LuminousMpartnerIBEntities luminous = new LuminousMpartnerIBEntities();
         #region Api
         [System.Web.Http.HttpGet]
