@@ -7,7 +7,7 @@ namespace LuminousMpartnerIB.Models
 {
     public class UsersListModel
     {
-        public int id { get; set; }
+        public int? id { get; set; }
         public string UserId { get; set; }
         public string UPassword { get; set; }
         public Nullable<int> RegId { get; set; }

@@ -103,31 +103,93 @@
 </style>
 <script type="text/javascript">
     $(function () {
-      
+        $(".date").datepicker(
+            { dateFormat: "dd-mm-yy" }
+        );
+        $("#DestributorList").chosen({ width: "100px" });
+        $("#DealerList").chosen({ width: "100px" });
+        ValidationMessage();
     });
 
 </script>
 @*Setting Of ValidationMessage*@
 <script type="text/javascript">
-    function ValidationMessage() {      
+    function ValidationMessage() {
+        if ('@ViewBag.StartDate' != "") {
+            $("#stdate").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#etdate").text('@ViewBag.EndDate');
+        }
+
+        if ('@ViewBag.File' != "") {
+            $("#file").text('@ViewBag.File');
+        }
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            $("#file").text('@ViewBag.File');
+        }
+
+        if ('@ViewBag.FileCarousal' != "") {
+            $("#ImageCarousal").text('@ViewBag.FileCarousal');
+        }
+
+
+
+        $("#stdate").val('@ViewBag.preStartDate');
+        $("#etdate").val('@ViewBag.PreEndDate');
 
     }
 </script>
 <script type="text/javascript">
 
     $(document).ready(function () {
-        
+        //$("#homeups_hkva1").hide();
+        //$("#homeups_hkva2").hide();
+        //$("#homeups_hkva3").hide();
+        //$("#Battery").hide();
+        //$("#Battery1").hide();
+
+        //$("#ProductCategory").change(function () {
+        //    //  yourdropdownid option:selected
+
+
+        //    if ($("#ProductCategory option:selected").val() == "9") {
+
+        //        $("#homeups_hkva1").show();
+        //        $("#homeups_hkva2").show();
+        //        $("#homeups_hkva3").show();
+        //        $("#Battery").hide();
+        //        $("#Battery1").hide();
+        //    }
+        //    if ($("#ProductCategory option:selected").val() == "15") {
+
+        //        $("#homeups_hkva1").show();
+        //        $("#homeups_hkva2").show();
+        //        $("#homeups_hkva3").show();
+        //        $("#Battery").hide();
+        //        $("#Battery1").hide();
+        //    }
+        //    if ($("#ProductCategory option:selected").val() == "8") {
+
+        //        $("#homeups_hkva1").hide();
+        //        $("#homeups_hkva2").hide();
+        //        $("#homeups_hkva3").hide();
+        //        $("#Battery").show();
+        //        $("#Battery1").show();
+        //    }
+
+        //});
 
     });
 
     $(function () {
         $.post("@Url.Content("~/ProductCategory/GetParentCategory")", null, function (data) { SetParentCategory(data); }, "Json");
         $.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },
-            "Json");
-
-        @*$.post("@Url.Content("~/ProductLevel3/GetProductCategory")", null, function (data) { SetProdcutCategoryPC(data, 'ProductCategory'); },
-        "Json");*@
-
+        "Json");
+        $.post("@Url.Content("~/ProductLevelOne/GetProductCategory")", null, function (data) { SetProdcutCategoryPC(data, 'ProductCategory'); },
+        "Json");
         $.post("@Url.Content("~/ProductLevel3/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
         $.post("@Url.Content("~/ProductLevelTwo/GetProductLevelOneCategory")", {}, function (data) { SetProdcutCategoryPC(data, 'pclvlOne'); }, "Json");
 
@@ -140,12 +202,8 @@
         }
         if ('@ViewBag.ProductCat3' != '') {
             $.post("@Url.Content("~/ProductLevelThree/GetProductLevel3")", { productid: '@ViewBag.ProductCat', ProductlvlOneid: '@ViewBag.ProductCat1', ProductLvlTwoId: '@ViewBag.ProductCat2' }, function (data) { SetProdcutCategoryLoad(data, 'pclvlthree'); }, "Json");
-        }              
-
-        if ('@ViewBag.productCategory' != '') {
-            debugger;
-            $.post("@Url.Content("~/ProductLevel3/GetProductCategory")", { procatid: '@ViewBag.productCategory' }, function (data) { SetProdcutCategory_ParentCategory(data); }, "Json");
         }
+
         //Set DropDown By Previous Values end
     });
     //Delete Record Begin
@@ -288,6 +346,7 @@
 
             });
             procat.append(option);
+            procat.val('@ViewBag.ProductCat1');
         }
 
     }
@@ -313,6 +372,8 @@
 
             });
             procat.append(option);
+            procat.val('@ViewBag.ProductCat');
+
             if ('@ViewBag.ProductCat' != "") {
 
                 $("#ProductCategory").val('@ViewBag.ProductCat');
@@ -325,6 +386,18 @@
             }
             if ('@ViewBag.ProductCat3' != "") {
                 $("#pclvlthree").val('@ViewBag.ProductCat3');
+            }
+            if ('@ViewBag.Warranty' != "") {
+                $("#txtwarranty").val('@ViewBag.Warranty');
+            }
+            if ('@ViewBag.Rating' != "") {
+                $("#txtrating").val('@ViewBag.Rating');
+            }
+            if ('@ViewBag.preStartDate' != "") {
+                $("#stdate").val('@ViewBag.preStartDate');
+            }
+            if ('@ViewBag.PreEndDate' != "") {
+                $("#etdate").val('@ViewBag.PreEndDate');
             }
         }
     }
@@ -343,41 +416,17 @@
             procat.empty();
             procat.append("<option value=0>Select</option>");
             $.each(data, function (key, value) {
-                option += "<option value=" + value.id + ">" + value.Name + "</option>";
+                if (value.id == '@ViewBag.Prntid') {
+                    $('#TextParentCategory').val(ParentCategory);
+                }
+                option += "<option value=" + value.id + ">" + ParentCategory + "</option>";
 
             });
             procat.append(option);
+            procat.val('@ViewBag.Prntid');
         }
     }
 
-    function SetProdcutCategory_ParentCategory(data) {
-        debugger;
-        if (data == "Login") {
-            location.href = "@Url.Content("~/Logout/Logout")";
-        }
-        else if (data == "snotallowed") {
-            location.href = "@Url.Content("~/snotallowed/snotallowed")";
-        }
-        else {
-            option = "";
-            var procat = $("#ProductCategory");
-            procat.empty();
-            procat.append("<option value=0>Select</option>");
-            $.each(data, function (key, value) {
-                option += "<option value=" + value.id + ">" + value.Name + "</option>";
-
-            });
-            procat.append(option);
-        }
-    }
-
-
-    function ProdcutCategory() {
-        debugger;
-        var procat = $("#ParentCategory :selected").val();
-
-        $.post("@Url.Content("~/ProductLevel3/GetProductCategory")", { procatid: procat }, function (data) { SetProdcutCategory_ParentCategory(data); }, "Json");
-    }
 
     // SetProduct Category end
 
@@ -389,12 +438,13 @@
     }*@
 
     function SetProdcutlevelTwo() {
+
         var procat = $("#ProductCategory :selected").val();
+
         var procat2 = $("#pclvlOne :selected").val();
 
-
-
         $.post("@Url.Content("~/ProductLevel3/GetProductLevelTwoCategory")", { procatid: procat }, function (data) { SetProdcutCategoryPC(data, 'pclvlTwo'); }, "Json");
+
     }
 
     function GetProductLvl3() {
@@ -426,6 +476,15 @@
 </script>
 
 @* Permisson For Script *@
+
+<script type="text/javascript">
+
+    $("body").on("click", "#addRowScroll", function (e) {
+        e.preventDefault();
+        $("table#dynaTableContent").append("<tr>" + $(".Scroll_cardprovider").html() + "</tr>");
+    });
+</script>
+
 <script type="text/javascript">
     function Allst() {
         if ($("#All").is(":checked")) {
@@ -461,42 +520,65 @@
         // debugger;
         var option = '';
 
-        $.post("@Url.Content("~/ProductLevel3/Column_Name")", null, function (data) { SetColumn(data); }, "Json");
+        $.post("@Url.Content("~/ProductLevel3View/Column_Name")", null, function (data) { SetColumn(data); }, "Json");
 
         function SetColumn(data) {
 
-            // debugger;
+            debugger;
+
+            var red = @Html.Raw(Json.Encode(@ViewBag.redirectId));
+            var redText=@Html.Raw(Json.Encode(@ViewBag.redirectText))
+            var val1 = @Html.Raw(Json.Encode(@ViewBag.redirectvalue));
+
+
 
             var d = JSON.stringify(data);
+            var temp=null;
 
-            var markup = "<tr><td>Redirect Option<span class='required'>*</span></td><td><select name='redirectpage' class='form-control' id='rd" + i + "'><option></option></select></td><td>Input Value<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name='inputval' value='' /></td><td><input type='button' id='addRow' class='form-control' value='Add' /></td></tr>";
+            var myTab = document.getElementById('dynaTableContent');
 
-            $('#dynaTableContent tbody').append(markup);
+            for(i=0;i<red.length;i++)
+            {
 
-            option = '<option value=0 selected>Select</option>';
+                if(red[i]>0){
 
-            $.each(data, function (key, value) {
+                    option='';
 
-                option += "<option value=" + value.ORDINAL_POSITION + ">" + value.COLUMN_NAME + "</option>";
+                    //var markup = "<tr><td>Redirect Option<span class='required'></span></td><td><select name='redirectpage' class='form-control' id='rd" + i + "'><option></option></select></td><td>Input Value<span class='required'></span></td><td><input id='text1" + i + "' type='text' class='form-control' readonly = 'readonly' name='inputval' value='"+val1[i]+"' /></td><td><input type='button' id='addRow' class='form-control' value='Add' /></td><td><input type='button' id='delRow' class='form-control' value='Remove' /></td></tr>";
 
-            });
+                    //var markup = "<tr><td>Redirect Option<span class='required'></span></td><td><select name='redirectpage' class='form-control' id='rd" + i + "'><option></option></select></td><td>Input Value<span class='required'></span></td><td><input id='text1" + i + "' type='text' class='form-control' readonly = 'readonly' name='inputval' value='" + val1[i] + "' /></td></tr>";
 
-            // alert(option);
+                    var markup = "<tr><td>Redirect Option<span class='required'></span></td><td><input id='rd" + i + "' type='text' class='form-control' readonly = 'readonly' name='inputval' value='" + redText[i] + "' /></td><td>Input Value<span class='required'></span></td><td><input id='text1" + i + "' type='text' class='form-control' readonly = 'readonly' name='inputval' value='" + val1[i] + "' /></td></tr>";
 
-            $("#rd" + i + "").append(option);
+
+                    //Rajesh
+                    $('#dynaTableContent tbody').append(markup);
+
+                    //$.each(data, function (key, value) {
+
+                    //    if((red[i]==value.ORDINAL_POSITION))
+                    //    {
+                    //        temp=value.ORDINAL_POSITION;
+                    //    }
+
+                    //    option += "<option value=" + value.ORDINAL_POSITION + ">" + value.COLUMN_NAME + "</option>";
+                    //});
+
+                    //$("#rd" + i + "").append(option);
+
+                    //$("#rd" + i + "").val(temp);
+                                                         
+                  
+                }
+
+              
+            }
+
         }
     });
 
 
-    $(function () {
-        $("#btnsubmit").click(function () {
-            debugger;
-            //if (($("#rd" + i + "").val() == 0 || $("#rd" + i + " option:selected").val() == 0) && $("#text1" + i + "").val() == '') {
-            //    $("#lblmessagesubmit").text("Please fill all the details");
-            //    return false;
-            //}
-        });
-    });
+
 
 
 
@@ -522,9 +604,12 @@
 
                 // debugger;
 
-                for (j = 0; j < data.length; j++) {
-                    for (k = 0; k < arr.length; k++) {
-                        if (data[j].ORDINAL_POSITION == parseInt(arr[k])) {
+                for (j = 0; j < data.length; j++)
+                {
+                    for(k=0;k<arr.length;k++)
+                    {
+                        if(data[j].ORDINAL_POSITION==parseInt(arr[k]))
+                        {
                             // data.splice(j, 1);
                             data.splice(j, 0);
                         }
@@ -540,7 +625,7 @@
 
                 //var d = JSON.stringify(data);
 
-                var markup = "<tr><td>Redirect Option<span class='required'>*</span></td><td><select name='redirectpage' class='form-control' id='rd" + i + "'><option></option></select></td><td>Input Value<span class='required'>*</span></td><td><input id='text1' type='text' class='form-control' name='inputval' value='' /></td><td><input type='button' id='addRow' class='form-control' value='Add' /></td><td><input type='button' id='delRow' class='form-control' value='Remove' /></td></tr>";
+                var markup = "<tr><td>Redirect Option<span class='required'>*</span></td><td><select name='redirectpage' class='form-control' id='rd" + i + "'><option></option></select></td><td>Input Value<span class='required'>*</span></td><td><input id='text1" +  i + "' type='text' class='form-control' name='inputval' value='' /></td><td><input type='button' id='addRow' class='form-control' value='Add' /></td><td><input type='button' id='delRow' class='form-control' value='Remove' /></td></tr>";
 
                 $('#dynaTableContent tbody').append(markup);
 
@@ -548,21 +633,18 @@
 
                 $.each(data, function (key, value) {
 
-
                     option += "<option value=" + value.ORDINAL_POSITION + ">" + value.COLUMN_NAME + "</option>";
-
-
 
                 });
 
                 // alert(option);
 
-                $("#rd" + i + "").append(option);
+                $("#rd"+i+"").append(option);
 
             }
         }
 
-        else {
+        else{
             alert("Please fill the data");
         }
 
@@ -665,9 +747,9 @@
         $("#Dealist").val($("#DealerList").val());
     }
 
-    function a() {
-        $("#forms").submit();
-    }
+    //function a() {
+    //    $("#forms").submit();
+    //}
 
     $(function () {
 
@@ -756,14 +838,18 @@
     }
 </script>
 
+
 <div id="page-wrapper" style="background: #f2f4f8; min-height:800px;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Catalog - </span>  Product Level Three</h1>
+            @if (Session["seldistributor"] != null)
+            {
+                <h1 class="pageHeading"><span>@Session["seldistributor"].ToString() </span></h1>
+            }
         </div>
     </div>
 
-    @using (Html.BeginForm("SaveContact", "ProductLevel3", FormMethod.Post, new { enctype = "multipart/form-data", @id = "forms" }))
+    @using (Html.BeginForm("Update", "ProductLevel3", FormMethod.Post, new { enctype = "multipart/form-data", @id = "forms" }))
     {
         @Html.AntiForgeryToken()
 
@@ -774,21 +860,22 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Parent Category <span class="required">*</span></label>
-                                <select name="ParentCatid" id="ParentCategory" onchange="ProdcutCategory();" class="form-control">
+                                <select name="ParentCatid" id="ParentCategory" class="form-control">
                                     <option>Select</option>
                                 </select>
-                                <br />
-                                @Html.ValidationMessageFor(model => model.ParentCatid, "", new { @class = "required" })
+                                <input id="textParentCategory" type="text" class="form-control" name="enddate" readonly="readonly" />
+                                <br />                                                               
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Product Category <span class="required">*</span></label>
+                                @Html.HiddenFor(c => c.id);
                                 <select name="pcId" onchange="SetProdcutlevelTwo();" id="ProductCategory" class="form-control">
                                     <option value="0">Select</option>
                                 </select>
                                 <br />
-                                @Html.ValidationMessageFor(model => model.productCategoryid, "", new { @class = "required" })
+                                <input id="textProductCategory" type="text" class="form-control" name="enddate" readonly="readonly" />
                                 <span id="pcIdValidation"></span>
                             </div>
                         </div>
@@ -798,9 +885,8 @@
                                 <select name="ProductCat2" onchange="SetProdcutlevelOne()" class="form-control" id="pclvlTwo">
                                     <option value="0">Select</option>
                                 </select>
+                                <input id="textpclvlTwo" type="text" class="form-control" name="enddate" readonly="readonly" />
                                 <br />
-                                @*rajesh*@
-                                @*@Html.ValidationMessageFor(model => model.ProductLevelTwo, "", new { @class = "required" })*@
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -809,12 +895,13 @@
                                 <select name="ProductCat1" class="form-control" id="pclvlOne">
                                     <option value="0">Select</option>
                                 </select>
+                                <input id="textpclvlOne" type="text" class="form-control" name="enddate" readonly="readonly" />
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Name<span class="required">*</span></label>
-                                @Html.TextBoxFor(a => a.Name, new { @class = "form-control" })
+                                @Html.TextBoxFor(a => a.Name, new { @class = "form-control", @readonly = "readonly" })
                                 <br />
                                 @Html.ValidationMessageFor(a => a.Name, "", new { @class = "required" })
                             </div>
@@ -822,7 +909,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Product Code</label>
-                                @Html.TextBoxFor(model => model.PrCode, new { @class = "form-control" })
+                                @Html.TextBoxFor(model => model.PrCode, new { @class = "form-control", @readonly = "readonly" })
                                 <br />
                                 @Html.ValidationMessageFor(model => model.PrCode, "", new { @class = "required" })
                             </div>
@@ -830,7 +917,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Key Feature<span class="required">*</span></label>
-                                @Html.TextAreaFor(model => model.KeyFeature, new { @class = "form-control ckeditor" })
+                                @Html.TextAreaFor(model => model.KeyFeature, new { @class = "form-control ckeditor", id = "txtfeature", @readonly = "readonly" })
                                 <br />
                                 @Html.ValidationMessageFor(model => model.KeyFeature, "", new { @class = "required" })
                             </div>
@@ -838,7 +925,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Warranty<span class="required">*</span></label>
-                                @Html.TextAreaFor(model => model.Warrenty, 5, 40, new { @class = "form-control" })
+                                @Html.TextAreaFor(model => model.Warrenty, 5, 40, new { @class = "form-control", id = "txtwarranty", @readonly = "readonly" })
                                 <br />
                                 @Html.ValidationMessageFor(model => model.Warrenty, "", new { @class = "required" })
                             </div>
@@ -846,7 +933,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Rating<span class="required">*</span></label>
-                                @Html.TextAreaFor(model => model.Rating, 5, 4, new { @class = "form-control" })
+                                @Html.TextAreaFor(model => model.Rating, 5, 4, new { @class = "form-control", id = "txtrating", @readonly = "readonly" })
                                 <br />
                                 @Html.ValidationMessageFor(model => model.Rating, "", new { @class = "required" })
                             </div>
@@ -873,8 +960,19 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Upload Product Images<span class="required">*</span></label>
-                                <input type="file" name="multiplepostedfiles" style="border:none; height:inherit;" />
+                                <label style="display:block; width:30px;height:30px;">Product Images</label>
+                                @*<input type="file" name="multiplepostedfiles" style="border:none; height:inherit;" />
+                                    <br />
+                                    <span id="ImageCarousal" class="required"></span>*@
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @*<label style="display:block; width:30px;height:30px;">Product Images</label>*@
+                                <img src="@Url.Content("~/ProductImages/")@ViewBag.primage" style="height:100px;width:100%;" />
                                 <br />
                                 <span id="ImageCarousal" class="required"></span>
                             </div>
@@ -882,7 +980,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Start Date <span class="required">*</span></label>
-                                <input id="stdate" type="text" class="date form-control" name="StartDate" placeholder="dd-mm-yyyy" autocomplete="off" />
+                                <input id="stdate" type="text" class="date form-control" name="StartDate" readonly="readonly" />
                                 <br />
                                 <span id="sdate" class="required"></span>
                             </div>
@@ -890,7 +988,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label> End Date <span class="required">*</span></label>
-                                <input id="etdate" type="text" class="date form-control" name="enddate" placeholder="dd-mm-yyyy" autocomplete="off" />
+                                <input id="etdate" type="text" class="date form-control" name="enddate" readonly="readonly" />
                                 <br />
                                 <span id="edate" class="required"></span>
                             </div>
@@ -945,98 +1043,31 @@
                                     </table>
                                 </div>
                             </div>*@
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Upload Brochure</label>
-                                <input type="file" name="Brochurename" style="border:none; height:inherit;" />
-                            </div>
-                        </div>
+                        @*<div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Upload Brochure</label>
+                                    <input type="file" name="Brochurename" style="border:none; height:inherit;" />
+                                </div>
+                            </div>*@
 
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Status</label>
-                                <input type="checkbox" checked="checked" name="statusC" />
-                            </div>
-                        </div>
+                        @*<div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <input type="checkbox" checked="checked" name="statusC" />
+                                </div>
+                            </div>*@
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <input type="button" onclick="a();" value="Submit" class="submitBtn" style="margin-top:10px;  margin-left: 15px;" />
-                        @*<input type="button" id="btnsubmit" value="Submit" class="submitBtn" style="margin-top:10px;margin-left: 15px;" />*@
-                        @if (ViewBag.StartDate != null)
-                        {
-                            <label id="lblmessagesubmit" style="font-size: 15px; color:red;">@ViewBag.StartDate</label>
-                        }
-                        @if (ViewBag.EndDate != null)
-                        {
-                            <label id="lblmessagesubmit" style="font-size: 15px; color:red;">@ViewBag.EndDate</label>
-                        }
-                        @if (ViewBag.result != null)
-                        {
-                            <label id="lblmessagesubmit" style="font-size: 15px; color:red;">@ViewBag.result</label>
-                        }
-                        @if (ViewBag.productCategory != null)
-                        {
-                            <label id="lblmessagesubmit" style="font-size: 15px; color:red;">@ViewBag.productCategory</label>
-                        }
-                        @if (ViewBag.ParentCat != null)
-                        {
-                            <label id="lblmessagesubmit" style="font-size: 15px; color:red;">@ViewBag.ParentCat</label>
-                        }
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                <div class="addgift" style="padding-bottom: 10px;">
-                    <div class="" style="overflow:hidden; overflow-x:scroll;">
-                        <div style="float:right;margin-right:12px; margin-top: -12px">
-
-                            <table class="headingHd" style="width:100%;">
-                                <tr>
-                                    <th style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;"> Product Data List</th>
-                                    <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
-                                        @*<input type="submit" id="btnsearch" value="Search" style="border:none; background: #ffaf38; padding: 7px 18px; border-radius: 5px;" />*@
-                                    </th>
-                                </tr>
-                            </table>
-
-                        </div>
-                        <div id="list" class="tabelGridRow">
-                            <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Parent&nbsp;Category</th>
-                                        <th>Product&nbsp;Category</th>
-                                        <th>Product&nbsp;Level&nbsp;Two</th>
-                                        <th>Attribute</th>
-                                        <th>Product&nbsp;Level&nbsp;Three</th>
-                                        <th>Product&nbsp;Code</th>
-                                        <th>Rating</th>
-                                        <th>Start&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                                        <th>End&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                                        <th>Status</th>
-                                        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
-                            <div>
-                                Pages :<span id="Paging"></span>
+            @*<div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="submit" onclick="a();" value="Update" class="submitBtn" style="margin-top:10px;
+                margin-left: 15px;" />
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </div>*@
         </div>
     }
 

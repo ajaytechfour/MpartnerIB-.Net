@@ -1051,7 +1051,7 @@ namespace LuminousMpartnerIB.Controllers
         }
 
         [HttpGet]
-        public ActionResult Edit(int id)
+        public ActionResult View(int id)
         {
             if (Session["userid"] == null)
             {
@@ -1071,8 +1071,9 @@ namespace LuminousMpartnerIB.Controllers
 
                     var temp1 = db.GetColumnNames().ToList();
 
-                    int[] arr = new int[temp1.Count()];
+                    int[] arr = new int[temp1.Count()];                   
                     string[] arr1 = new string[temp1.Count()];
+                    string[] arr2 = new string[temp1.Count()];
 
                     //int[] arr;
                     //string[] arr1;
@@ -1087,263 +1088,300 @@ namespace LuminousMpartnerIB.Controllers
                     if (temp.AsEnumerable().ElementAt(0).brochure != null)
                     {
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "brochure");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                     
                         arr1[i] = temp.AsEnumerable().ElementAt(0).brochure;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
 
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaximumChargeCurrent != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaximumChargeCurrent");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaximumChargeCurrent;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
 
                     }
                     if (temp.AsEnumerable().ElementAt(0).NoOfBattery != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "NoOfBattery");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                     
                         arr1[i] = temp.AsEnumerable().ElementAt(0).NoOfBattery;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
 
                     }
                     if (temp.AsEnumerable().ElementAt(0).SupportedBatteryType != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "SupportedBatteryType");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).SupportedBatteryType;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
 
                     }
                     if (temp.AsEnumerable().ElementAt(0).Maximumbulbload != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "Maximumbulbload");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                        
                         arr1[i] = temp.AsEnumerable().ElementAt(0).Maximumbulbload;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
 
                     }
                     if (temp.AsEnumerable().ElementAt(0).Technology != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "Technology");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                       arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).Technology;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
 
                     }
                     if (temp.AsEnumerable().ElementAt(0).NominalVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "NominalVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).NominalVoltage;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
 
                     }
                     if (temp.AsEnumerable().ElementAt(0).DimensionMM != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "DimensionMM");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).DimensionMM;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
 
                     }
                     if (temp.AsEnumerable().ElementAt(0).Weight_Filled_battery != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "Weight_Filled_battery");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).Weight_Filled_battery;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).RatedCapacity != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "RatedCapacity");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).RatedCapacity;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).FilledWeight != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "FilledWeight");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).FilledWeight;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).DCOutputVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "DCOutputVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).DCOutputVoltage;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).DCOutputCurrent != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "DCOutputCurrent");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                     
                         arr1[i] = temp.AsEnumerable().ElementAt(0).DCOutputCurrent;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaxSupportedPanelpower != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaxSupportedPanelpower");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaxSupportedPanelpower;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaxSolarPanelVoltage != null)
                     {
                         i++;
-                        var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaxSolarPanelVoltage");
+                        var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaxSolarPanelVoltage");                       
                         arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaxSolarPanelVoltage;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).VA != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "VA");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).VA;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).NoofCells != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "NoofCells");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                     
                         arr1[i] = temp.AsEnumerable().ElementAt(0).NoofCells;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).PeakPowerPMax != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "PeakPowerPMax");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                     
                         arr1[i] = temp.AsEnumerable().ElementAt(0).PeakPowerPMax;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).RatedModuleVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "RatedModuleVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).RatedModuleVoltage;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaximumPowerVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaximumPowerVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaximumPowerVoltage;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaximumPowerCurrent != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaximumPowerCurrent");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                     
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaximumPowerCurrent;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).NominalDCOutputVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "NominalDCOutputVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).NominalDCOutputVoltage;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaxDCOutputCurrent != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaxDCOutputCurrent");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaxDCOutputCurrent;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).Noof12VBatteriesinSeries != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "Noof12VBatteriesinSeries");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).Noof12VBatteriesinSeries;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).SolarLength != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "SolarLength");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).SolarLength;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).SolarWidth != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "SolarWidth");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).SolarWidth;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).Heightuptofloattop != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "Heightuptofloattop");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).Heightuptofloattop;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).DryWeight != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "DryWeight");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).DryWeight;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).RatedACpower != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "RatedACpower");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                     
                         arr1[i] = temp.AsEnumerable().ElementAt(0).RatedACpower;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).OperatingVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "OperatingVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                       arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).OperatingVoltage;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).ChargeControllerRating != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "ChargeControllerRating");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).ChargeControllerRating;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).NominalBatterybankvoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "NominalBatterybankvoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).NominalBatterybankvoltage;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).InputVoltageWorkingRange != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "InputVoltageWorkingRange");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).InputVoltageWorkingRange;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).OutputVoltageWorkingRange != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "OutputVoltageWorkingRange");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                      
                         arr1[i] = temp.AsEnumerable().ElementAt(0).OutputVoltageWorkingRange;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).MainsACLowCut != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MainsACLowCut");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                     
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MainsACLowCut;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     if (temp.AsEnumerable().ElementAt(0).MainACLowCutRecovery != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MainACLowCutRecovery");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);                       
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MainACLowCutRecovery;
+                        arr2[i] = Convert.ToString(temp2.COLUMN_NAME);
                     }
                     ViewBag.redirectId = arr;
+                    ViewBag.redirectText = arr2;
                     ViewBag.redirectvalue = arr1;
 
 

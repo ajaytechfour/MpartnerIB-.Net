@@ -103,14 +103,8 @@
 </style>
 <script type="text/javascript">
     $(function () {
+        $.post("@Url.Content("~/Price/GetDistributors")", null, function (data) { SetParentCategoryddl(data); }, "Json");
 
-         $.post("@Url.Content("~/Price/GetDistributors")", null, function (data) { SetParentCategory(data); }, "Json");
-
-        //$("#DestributorList").chosen({ width: "100px" });
-        //$("#DealerList").chosen({ width: "100px" });
-
-
-        ValidationMessage();
     });
 
 </script>
@@ -121,43 +115,7 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-        //$("#homeups_hkva1").hide();
-        //$("#homeups_hkva2").hide();
-        //$("#homeups_hkva3").hide();
-        //$("#Battery").hide();
-        //$("#Battery1").hide();
-
-        //$("#ProductCategory").change(function () {
-        //    //  yourdropdownid option:selected
-
-
-        //    if ($("#ProductCategory option:selected").val() == "9") {
-
-        //        $("#homeups_hkva1").show();
-        //        $("#homeups_hkva2").show();
-        //        $("#homeups_hkva3").show();
-        //        $("#Battery").hide();
-        //        $("#Battery1").hide();
-        //    }
-        //    if ($("#ProductCategory option:selected").val() == "15") {
-
-        //        $("#homeups_hkva1").show();
-        //        $("#homeups_hkva2").show();
-        //        $("#homeups_hkva3").show();
-        //        $("#Battery").hide();
-        //        $("#Battery1").hide();
-        //    }
-        //    if ($("#ProductCategory option:selected").val() == "8") {
-
-        //        $("#homeups_hkva1").hide();
-        //        $("#homeups_hkva2").hide();
-        //        $("#homeups_hkva3").hide();
-        //        $("#Battery").show();
-        //        $("#Battery1").show();
-        //    }
-
-        //});
-
+      
     });
 
     $(function () {
@@ -201,7 +159,7 @@
 
     //Edit Record Begin
     function Edit(id) {
-        location.href = "@Url.Content("~/ProductLevel3View/Edit/")" + id;
+        location.href = "@Url.Content("~/ProductLevel3View/View/")" + id;
     }
 
     function Detail(id) {
@@ -221,7 +179,7 @@
 
 
      //Set Parent Category//
-    function SetParentCategory(data)
+    function SetParentCategoryddl(data)
     {
         if (data == "Login") {
             location.href = "@Url.Content("~/Logout/Logout")";
