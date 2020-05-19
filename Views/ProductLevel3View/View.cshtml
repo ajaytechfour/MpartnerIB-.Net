@@ -368,24 +368,51 @@
             procat.empty();
             procat.append("<option value=0>Select</option>");
             $.each(data, function (key, value) {
+
+                if (id == 'ProductCategory') {
+                    debugger;
+                    if (value.id == '@ViewBag.ProductCat') {
+                        debugger;
+                          $("#textProductCategory").val(value.Name );
+                    }
+                }
+                if (id == 'pclvlOne') {
+                    debugger;
+                    if (value.id == '@ViewBag.ProductCat1') {
+                        debugger;
+                        $("#textpclvlOne").val(value.Name );
+                    }
+                }
+                if (id == 'pclvlTwo') {
+                    debugger;
+                    if (value.id == '@ViewBag.ProductCat2') {
+                        debugger;
+                        $("#textpclvlTwo").val(value.Name );
+                    }
+                }
+
                 option += "<option value=" + value.id + ">" + value.Name + "</option>";
 
             });
             procat.append(option);
             procat.val('@ViewBag.ProductCat');
 
+            debugger;
             if ('@ViewBag.ProductCat' != "") {
 
                 $("#ProductCategory").val('@ViewBag.ProductCat');
+               
             }
             if ('@ViewBag.ProductCat1' != "") {
                 $("#pclvlOne").val('@ViewBag.ProductCat1');
+               
             }
             if ('@ViewBag.ProductCat2' != "") {
                 $("#pclvlTwo").val('@ViewBag.ProductCat2');
+                 
             }
             if ('@ViewBag.ProductCat3' != "") {
-                $("#pclvlthree").val('@ViewBag.ProductCat3');
+                $("#pclvlthree").val('@ViewBag.ProductCat3');                 
             }
             if ('@ViewBag.Warranty' != "") {
                 $("#txtwarranty").val('@ViewBag.Warranty');
@@ -416,10 +443,12 @@
             procat.empty();
             procat.append("<option value=0>Select</option>");
             $.each(data, function (key, value) {
+                debugger;
                 if (value.id == '@ViewBag.Prntid') {
-                    $('#TextParentCategory').val(ParentCategory);
+                    debugger;
+                    $('#textParentCategory').val(value.Name);                    
                 }
-                option += "<option value=" + value.id + ">" + ParentCategory + "</option>";
+                option += "<option value=" + value.id + ">" + value.Name + "</option>";
 
             });
             procat.append(option);
@@ -860,10 +889,10 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Parent Category <span class="required">*</span></label>
-                                <select name="ParentCatid" id="ParentCategory" class="form-control">
+                                <select name="ParentCatid" id="ParentCategory" class="form-control" style="display:none">
                                     <option>Select</option>
                                 </select>
-                                <input id="textParentCategory" type="text" class="form-control" name="enddate" readonly="readonly" />
+                                <input id="textParentCategory" type="text" class="form-control" name="textParentCatid" readonly="readonly" />
                                 <br />                                                               
                             </div>
                         </div>
@@ -871,31 +900,31 @@
                             <div class="form-group">
                                 <label>Product Category <span class="required">*</span></label>
                                 @Html.HiddenFor(c => c.id);
-                                <select name="pcId" onchange="SetProdcutlevelTwo();" id="ProductCategory" class="form-control">
+                                <select name="pcId" onchange="SetProdcutlevelTwo();" id="ProductCategory" class="form-control" style="display:none">
                                     <option value="0">Select</option>
                                 </select>
                                 <br />
-                                <input id="textProductCategory" type="text" class="form-control" name="enddate" readonly="readonly" />
+                                <input id="textProductCategory" type="text" class="form-control" name="textpcId" readonly="readonly" />
                                 <span id="pcIdValidation"></span>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Product Level Two<span class="required">*</span></label>
-                                <select name="ProductCat2" onchange="SetProdcutlevelOne()" class="form-control" id="pclvlTwo">
+                                <select name="ProductCat2" onchange="SetProdcutlevelOne()" class="form-control" id="pclvlTwo" style="display:none">
                                     <option value="0">Select</option>
                                 </select>
-                                <input id="textpclvlTwo" type="text" class="form-control" name="enddate" readonly="readonly" />
+                                <input id="textpclvlTwo" type="text" class="form-control" name="textProductCat2" readonly="readonly" />
                                 <br />
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Attribute</label>
-                                <select name="ProductCat1" class="form-control" id="pclvlOne">
+                                <select name="ProductCat1" class="form-control" id="pclvlOne" style="display:none">
                                     <option value="0">Select</option>
                                 </select>
-                                <input id="textpclvlOne" type="text" class="form-control" name="enddate" readonly="readonly" />
+                                <input id="textpclvlOne" type="text" class="form-control" name="textProductCat1" readonly="readonly" />
                             </div>
                         </div>
                         <div class="col-md-4">

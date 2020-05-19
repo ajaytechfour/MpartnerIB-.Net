@@ -686,6 +686,21 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.EscalationMatrix_History' d
           <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
           <Property Name="ModifiedOn" Type="datetime" />
         </EntityType>
+        <EntityType Name="Mapping_Productlevelthree_TechnicalSpecification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Productid" Type="int" />
+          <Property Name="ProductCatId" Type="int" />
+          <Property Name="ColumnId" Type="int" />
+          <Property Name="Value" Type="varchar" MaxLength="100" />
+          <Property Name="Createdon" Type="datetime" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="20" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="20" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'LuminousMpartnerIB.dbo.MappingUrl_Page' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="MappingUrl_Page">
@@ -1151,6 +1166,19 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.ProductLevelOneHistory' doe
           <Property Name="MainsACLowCut" Type="nvarchar" MaxLength="100" />
           <Property Name="MainACLowCutRecovery" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="Productlevelthree_ColumnMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Db_ColumnName" Type="varchar" MaxLength="200" />
+          <Property Name="App_ColumnName" Type="varchar" MaxLength="200" />
+          <Property Name="Createdby" Type="varchar" MaxLength="20" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="20" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
         <EntityType Name="ProductLevelThreeHistory">
           <Key>
             <PropertyRef Name="id" />
@@ -1272,7 +1300,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.Regions' does not have a pr
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FunctionID" Type="int" />
           <Property Name="Suggestion" Type="varchar" MaxLength="500" />
           <Property Name="ImageName" Type="varchar" MaxLength="200" />
@@ -1690,6 +1718,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
           <EntitySet Name="GCM_NotificationLog" EntityType="Self.GCM_NotificationLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Logger" EntityType="Self.Logger" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mapping_Company_Distributor_Dealers" EntityType="Self.Mapping_Company_Distributor_Dealers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mapping_Productlevelthree_TechnicalSpecification" EntityType="Self.Mapping_Productlevelthree_TechnicalSpecification" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MediaData" EntityType="Self.MediaData" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MediaDataHistory" EntityType="Self.MediaDataHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MHrOtp" EntityType="Self.MHrOtp" Schema="dbo" store:Type="Tables" />
@@ -1707,6 +1736,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
           <EntitySet Name="ProductCatergoryHistory" EntityType="Self.ProductCatergoryHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductLevelOne" EntityType="Self.ProductLevelOne" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductLevelThree" EntityType="Self.ProductLevelThree" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Productlevelthree_ColumnMaster" EntityType="Self.Productlevelthree_ColumnMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductLevelThreeHistory" EntityType="Self.ProductLevelThreeHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductLevelTwo" EntityType="Self.ProductLevelTwo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductLevelTwoHistory" EntityType="Self.ProductLevelTwoHistory" Schema="dbo" store:Type="Tables" />
@@ -2935,14 +2965,10 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <EntitySet Name="GCM_NotificationLog" EntityType="LuminousMpartnerIBModel.GCM_NotificationLog" />
           <EntitySet Name="ContestMasters" EntityType="LuminousMpartnerIBModel.ContestMaster" />
           <EntitySet Name="ContestPicture_Tab" EntityType="LuminousMpartnerIBModel.ContestPicture_Tab" />
-          <FunctionImport Name="GetSurveyRecord">
-          <Parameter Name="Id" Mode="In" Type="Int32" />
-          </FunctionImport>
           <AssociationSet Name="FK__ProductLe__Prduc__5CA1C101" Association="LuminousMpartnerIBModel.FK__ProductLe__Prduc__5CA1C101">
             <End Role="ProductCatergory" EntitySet="ProductCatergories" />
             <End Role="ProductLevelTwo" EntitySet="ProductLevelTwoes" />
           </AssociationSet>
-          <FunctionImport Name="GetColumnNames" ReturnType="Collection(LuminousMpartnerIBModel.GetColumnNames_Result)" />
           <FunctionImport Name="GetProductLevelFourAccessTable" ReturnType="Collection(LuminousMpartnerIBModel.GetProductLevelFourAccessTable_Result)">
           <Parameter Name="Pid" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -3038,6 +3064,12 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <EntitySet Name="ProductLevelThreeHistories" EntityType="LuminousMpartnerIBModel.ProductLevelThreeHistory" />
           <EntitySet Name="NotificationSurveys" EntityType="LuminousMpartnerIBModel.NotificationSurvey" />
           <EntitySet Name="NotificationSurveyHistories" EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" />
+          <EntitySet Name="Mapping_Productlevelthree_TechnicalSpecification" EntityType="LuminousMpartnerIBModel.Mapping_Productlevelthree_TechnicalSpecification" />
+          <EntitySet Name="Productlevelthree_ColumnMaster" EntityType="LuminousMpartnerIBModel.Productlevelthree_ColumnMaster" />
+          <FunctionImport Name="GetColumnNames" ReturnType="Collection(LuminousMpartnerIBModel.GetColumnNames_Result)" />
+          <FunctionImport Name="GetSurveyRecord" ReturnType="Collection(LuminousMpartnerIBModel.GetSurveyRecord_Result)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -3399,10 +3431,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="GetColumnNames_Result">
-          <Property Type="Int32" Name="ORDINAL_POSITION" Nullable="true" />
-          <Property Type="String" Name="COLUMN_NAME" Nullable="true" MaxLength="128" />
-        </ComplexType>
         <ComplexType Name="GetProductLevelFourAccessTable_Result">
           <Property Type="Boolean" Name="AllAcess" Nullable="true" />
           <Property Type="String" Name="RegionName" Nullable="false" MaxLength="1" />
@@ -3991,6 +4019,53 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ModifyBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="Mapping_Productlevelthree_TechnicalSpecification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Productid" Type="Int32" />
+          <Property Name="ProductCatId" Type="Int32" />
+          <Property Name="ColumnId" Type="Int32" />
+          <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Createdon" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Productlevelthree_ColumnMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Db_ColumnName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="App_ColumnName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Createdby" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <ComplexType Name="GetColumnNames_Result">
+          <Property Type="Int32" Name="ORDINAL_POSITION" Nullable="false" />
+          <Property Type="String" Name="COLUMN_NAME" Nullable="true" MaxLength="200" />
+        </ComplexType>
+        <ComplexType Name="GetSurveyRecord_Result">
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="String" Name="QuestionTitle" Nullable="true" />
+          <Property Type="String" Name="SapCode" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="CustomerType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="State" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="OptionA" Nullable="true" />
+          <Property Type="String" Name="OptionB" Nullable="true" />
+          <Property Type="String" Name="OptionC" Nullable="true" />
+          <Property Type="String" Name="OptionD" Nullable="true" />
+          <Property Type="String" Name="OptionE" Nullable="true" />
+          <Property Type="String" Name="SelectOption" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="ResponseDate" Nullable="true" Precision="23" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -5144,15 +5219,6 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="GetSurveyRecord" FunctionName="LuminousMpartnerIBModel.Store.GetSurveyRecord" />
-          <FunctionImportMapping FunctionImportName="GetColumnNames" FunctionName="LuminousMpartnerIBModel.Store.GetColumnNames">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.GetColumnNames_Result">
-                <ScalarProperty Name="ORDINAL_POSITION" ColumnName="ORDINAL_POSITION" />
-                <ScalarProperty Name="COLUMN_NAME" ColumnName="COLUMN_NAME" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="GetProductLevelFourAccessTable" FunctionName="LuminousMpartnerIBModel.Store.GetProductLevelFourAccessTable">
             <ResultMapping>
               <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.GetProductLevelFourAccessTable_Result">
@@ -5779,6 +5845,63 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Mapping_Productlevelthree_TechnicalSpecification">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Mapping_Productlevelthree_TechnicalSpecification">
+              <MappingFragment StoreEntitySet="Mapping_Productlevelthree_TechnicalSpecification">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Createdon" ColumnName="Createdon" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="ColumnId" ColumnName="ColumnId" />
+                <ScalarProperty Name="ProductCatId" ColumnName="ProductCatId" />
+                <ScalarProperty Name="Productid" ColumnName="Productid" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Productlevelthree_ColumnMaster">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.Productlevelthree_ColumnMaster">
+              <MappingFragment StoreEntitySet="Productlevelthree_ColumnMaster">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+                <ScalarProperty Name="App_ColumnName" ColumnName="App_ColumnName" />
+                <ScalarProperty Name="Db_ColumnName" ColumnName="Db_ColumnName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetColumnNames" FunctionName="LuminousMpartnerIBModel.Store.GetColumnNames">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.GetColumnNames_Result">
+                <ScalarProperty Name="ORDINAL_POSITION" ColumnName="ORDINAL_POSITION" />
+                <ScalarProperty Name="COLUMN_NAME" ColumnName="COLUMN_NAME" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetSurveyRecord" FunctionName="LuminousMpartnerIBModel.Store.GetSurveyRecord">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.GetSurveyRecord_Result">
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="QuestionTitle" ColumnName="QuestionTitle" />
+                <ScalarProperty Name="SapCode" ColumnName="SapCode" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="OptionA" ColumnName="OptionA" />
+                <ScalarProperty Name="OptionB" ColumnName="OptionB" />
+                <ScalarProperty Name="OptionC" ColumnName="OptionC" />
+                <ScalarProperty Name="OptionD" ColumnName="OptionD" />
+                <ScalarProperty Name="OptionE" ColumnName="OptionE" />
+                <ScalarProperty Name="SelectOption" ColumnName="SelectOption" />
+                <ScalarProperty Name="ResponseDate" ColumnName="ResponseDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -110,6 +110,8 @@ namespace LuminousMpartnerIB.EF
         public DbSet<ProductLevelThreeHistory> ProductLevelThreeHistories { get; set; }
         public DbSet<NotificationSurvey> NotificationSurveys { get; set; }
         public DbSet<NotificationSurveyHistory> NotificationSurveyHistories { get; set; }
+        public DbSet<Mapping_Productlevelthree_TechnicalSpecification> Mapping_Productlevelthree_TechnicalSpecification { get; set; }
+        public DbSet<Productlevelthree_ColumnMaster> Productlevelthree_ColumnMaster { get; set; }
     
         public virtual ObjectResult<userpermission_Result> userpermission(Nullable<int> mode, string userid)
         {
@@ -140,20 +142,6 @@ namespace LuminousMpartnerIB.EF
                 new ObjectParameter("NotificationId", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<userIdForPushNotification_Result>("userIdForPushNotification", notificationIdParameter);
-        }
-    
-        public virtual int GetSurveyRecord(Nullable<int> id)
-        {
-            var idParameter = id.HasValue ?
-                new ObjectParameter("Id", id) :
-                new ObjectParameter("Id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("GetSurveyRecord", idParameter);
-        }
-    
-        public virtual ObjectResult<GetColumnNames_Result> GetColumnNames()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetColumnNames_Result>("GetColumnNames");
         }
     
         public virtual ObjectResult<GetProductLevelFourAccessTable_Result> GetProductLevelFourAccessTable(Nullable<int> pid)
@@ -364,6 +352,20 @@ namespace LuminousMpartnerIB.EF
                 new ObjectParameter("appversion", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Sp_MHrCreateOtp_Result>("Sp_MHrCreateOtp", empidParameter, imeinumberParameter, osversionParameter, devicenameParameter, appversionParameter);
+        }
+    
+        public virtual ObjectResult<GetColumnNames_Result> GetColumnNames()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetColumnNames_Result>("GetColumnNames");
+        }
+    
+        public virtual ObjectResult<GetSurveyRecord_Result> GetSurveyRecord(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("Id", id) :
+                new ObjectParameter("Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetSurveyRecord_Result>("GetSurveyRecord", idParameter);
         }
     }
 }

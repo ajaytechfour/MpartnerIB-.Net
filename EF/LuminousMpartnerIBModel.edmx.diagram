@@ -92,6 +92,8 @@
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.ProductLevelThreeHistory" Width="1.5" PointX="5.375" PointY="22.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurvey" Width="1.5" PointX="21.375" PointY="29.75" />
         <EntityTypeShape EntityType="LuminousMpartnerIBModel.NotificationSurveyHistory" Width="1.5" PointX="29.375" PointY="24.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Mapping_Productlevelthree_TechnicalSpecification" Width="1.5" PointX="29.375" PointY="3.75" />
+        <EntityTypeShape EntityType="LuminousMpartnerIBModel.Productlevelthree_ColumnMaster" Width="1.5" PointX="31.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -1419,6 +1419,12 @@ namespace LuminousMpartnerIB.Controllers
                     ViewBag.Rating = cud.Rating;
 
 
+                    ViewBag.ProductCattxt = cud.ProductCatergory;
+                  
+
+                    //var produccat=t 
+
+
                     return View(cud);
                 }
                 else

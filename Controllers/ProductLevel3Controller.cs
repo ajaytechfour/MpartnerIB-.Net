@@ -777,6 +777,23 @@ namespace LuminousMpartnerIB.Controllers
                         }
                         db.ProductLevelThrees.Add(contactusd);
                         int affectedValue = db.SaveChanges();
+                        int? pid = contactusd.id;
+
+                        for (j = 0; j < redirectpage.Count(); j++)
+                        {
+                            Mapping_Productlevelthree_TechnicalSpecification obj = new Mapping_Productlevelthree_TechnicalSpecification();
+                            var tempData = column.Find(x => x.ORDINAL_POSITION == Convert.ToInt32(redirectpage[j]));
+                            //item[j] = temp.COLUMN_NAME;
+                            obj.ColumnId = tempData.ORDINAL_POSITION;
+                            obj.Value = tempData.COLUMN_NAME;
+                            obj.Productid = pid;
+                            obj.ProductCatId = pcid;
+                            obj.CreatedBy = Session["userid"].ToString();
+                            obj.Createdon = DateTime.Now;
+                            obj.Status = 1;
+                            db.Mapping_Productlevelthree_TechnicalSpecification.Add(obj);
+                        }
+
                         if (affectedValue > 0)
                         {
                             if (Brochurename != null)

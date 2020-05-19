@@ -103,20 +103,103 @@
 </style>
 <script type="text/javascript">
     $(function () {
-      
+        $(".date").datepicker(
+            { dateFormat: "dd-mm-yy" }
+        );
+        $("#DestributorList").chosen({ width: "100px" });
+        $("#DealerList").chosen({ width: "100px" });
+        ValidationMessage();
     });
 
 </script>
 @*Setting Of ValidationMessage*@
 <script type="text/javascript">
-    function ValidationMessage() {      
+    function ValidationMessage() {
+        if ('@ViewBag.StartDate' != "") {
+            $("#sdate").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#edate").text('@ViewBag.EndDate');
+        }
+
+        if ('@ViewBag.File' != "") {
+            $("#file").text('@ViewBag.File');
+        }
+        if ('@ViewBag.SaveStatus' != "") {
+            alert('@ViewBag.SaveStatus');
+            $("#file").text('@ViewBag.File');
+        }
+
+        if ('@ViewBag.FileCarousal' != "") {
+            $("#ImageCarousal").text('@ViewBag.FileCarousal');
+        }
+
+
+
+        $("#stdate").val('@ViewBag.preStartDate');
+        $("#etdate").val('@ViewBag.PreEndDate');
+
+
+        if ('@ViewBag.StartDate' != "") {
+            $("#lblmessagesubmit").text('@ViewBag.StartDate');
+        }
+
+        if ('@ViewBag.EndDate' != "") {
+            $("#lblmessagesubmit").text('@ViewBag.EndDate');
+        }
+
+        if ('@ViewBag.result' != "") {
+            $("#lblmessagesubmit").text('@ViewBag.result');
+        }
+        if ('@ViewBag.productCategory' != "") {
+            $("#lblmessagesubmit").text('@ViewBag.productCategory');
+        }
+        if ('@ViewBag.ParentCat' != "") {
+            $("#lblmessagesubmit").text('@ViewBag.ParentCat');
+        }
 
     }
 </script>
 <script type="text/javascript">
 
     $(document).ready(function () {
-        
+        //$("#homeups_hkva1").hide();
+        //$("#homeups_hkva2").hide();
+        //$("#homeups_hkva3").hide();
+        //$("#Battery").hide();
+        //$("#Battery1").hide();
+
+        //$("#ProductCategory").change(function () {
+        //    //  yourdropdownid option:selected
+
+
+        //    if ($("#ProductCategory option:selected").val() == "9") {
+
+        //        $("#homeups_hkva1").show();
+        //        $("#homeups_hkva2").show();
+        //        $("#homeups_hkva3").show();
+        //        $("#Battery").hide();
+        //        $("#Battery1").hide();
+        //    }
+        //    if ($("#ProductCategory option:selected").val() == "15") {
+
+        //        $("#homeups_hkva1").show();
+        //        $("#homeups_hkva2").show();
+        //        $("#homeups_hkva3").show();
+        //        $("#Battery").hide();
+        //        $("#Battery1").hide();
+        //    }
+        //    if ($("#ProductCategory option:selected").val() == "8") {
+
+        //        $("#homeups_hkva1").hide();
+        //        $("#homeups_hkva2").hide();
+        //        $("#homeups_hkva3").hide();
+        //        $("#Battery").show();
+        //        $("#Battery1").show();
+        //    }
+
+        //});
 
     });
 
@@ -140,7 +223,7 @@
         }
         if ('@ViewBag.ProductCat3' != '') {
             $.post("@Url.Content("~/ProductLevelThree/GetProductLevel3")", { productid: '@ViewBag.ProductCat', ProductlvlOneid: '@ViewBag.ProductCat1', ProductLvlTwoId: '@ViewBag.ProductCat2' }, function (data) { SetProdcutCategoryLoad(data, 'pclvlthree'); }, "Json");
-        }              
+        }
 
         if ('@ViewBag.productCategory' != '') {
             debugger;

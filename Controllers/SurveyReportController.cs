@@ -96,7 +96,7 @@ namespace LuminousMpartnerIB.Controllers
 
                     var savesurvey = db.GetSurveyRecord((int)id);
 
-                    if (savesurvey > 0)
+                    if (savesurvey != null)
                     {
                         //TempData.Clear();
 

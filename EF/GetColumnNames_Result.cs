@@ -13,7 +13,7 @@ namespace LuminousMpartnerIB.EF
     
     public partial class GetColumnNames_Result
     {
-        public Nullable<int> ORDINAL_POSITION { get; set; }
+        public int ORDINAL_POSITION { get; set; }
         public string COLUMN_NAME { get; set; }
     }
 }
