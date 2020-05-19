@@ -12,7 +12,7 @@ namespace Luminous.Controllers
 {
     public class FAQController : MultiLanguageController
     {
-        //
+        //FAQ controller
         // GET: /ContactUs/
         private LuminousEntities db = new LuminousEntities();
         private DataTable dt = new DataTable();
