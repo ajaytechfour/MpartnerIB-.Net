@@ -1574,6 +1574,9 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
         }
 
 
+
+
+
         [System.Web.Http.HttpGet]
         [ActionName("GetSurveyNotificationList")]
         public object GetSurveyNotificationList(string user_id, string token, string app_version, string device_id, string device_name, string os_type, string os_version_name, string os_version_code, string ip_address, string language, string screen_name, string network_type, string network_operator, string time_captured, string channel, string browser = null, string Browser_version = null)
@@ -6064,7 +6067,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             string Filename = "";
 
             MessageData msgdata = new MessageData();
-            if (image != null)
+            if (image.Length > 0)
             {
                 Filename = Path.GetFileNameWithoutExtension(filename) + DateTime.Now.ToString("ddMMyyhhmmss") + Path.GetExtension(filename);
                 string str = Path.Combine(HttpContext.Current.Server.MapPath("~/SuggestionImage/"), Filename);
