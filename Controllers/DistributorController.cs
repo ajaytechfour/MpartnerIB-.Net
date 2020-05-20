@@ -32,8 +32,33 @@ namespace LuminousMpartnerIB.Controllers
             }
             else
             {
-                return View();
+                UsersListModel obj = new UsersListModel();
+                obj.ddlSelectLanguage = PopulateLanguage();
+                return View(obj);
             }
+        }
+
+        private List<SelectListItem> PopulateLanguage()
+        {
+            List<SelectListItem> items = new List<SelectListItem>();
+            var getLanguagelst = (from c in db.LanguageMasters
+                                  where c.Status != 0
+                                  select new
+                                  {
+                                      id = c.LangCode,
+                                      Name = c.Lang
+                                  }).ToList();
+
+            foreach (var item in getLanguagelst)
+            {
+                items.Add(new SelectListItem
+                {
+                    Text = item.Name.ToString(),
+                    Value = item.id.ToString()
+                });
+            }
+
+            return items;
         }
 
         public JsonResult GetGridData()
@@ -75,6 +100,27 @@ namespace LuminousMpartnerIB.Controllers
 
                 }
 
+            }
+        }
+
+
+        public JsonResult getLanguagMastere()
+        {
+            var getLanguagMasterelst = (from c in db.LanguageMasters
+                                            // where c.status != 0
+                                        select new
+                                        {
+                                            id = c.Id,
+                                            Name = c.Lang
+                                        }).ToList();
+
+            if (getLanguagMasterelst != null)
+            {
+                return Json(getLanguagMasterelst, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json("Null", JsonRequestBehavior.AllowGet);
             }
         }
 
@@ -198,7 +244,22 @@ namespace LuminousMpartnerIB.Controllers
                 objUsersList.CreatedON = DateTime.Now;
 
                 objUsersList.Dis_Sap_Code = obj.SapCode;
-                objUsersList.Country = obj.Country;                               
+                objUsersList.Country = obj.Country;
+
+                string selectedLanguagecode = string.Empty;
+                string[] language = obj.ddlSelectLanguageIDs;
+                foreach (var item in language)
+                {
+                    if (selectedLanguagecode != "")
+                    {
+                        selectedLanguagecode = selectedLanguagecode + "," + item.ToString();
+                    }
+                    else
+                    {
+                        selectedLanguagecode = item.ToString();
+                    }
+                }                
+                objUsersList.Language = selectedLanguagecode;
 
                 db.UsersLists.Add(objUsersList);
                 if (db.SaveChanges() > 0)

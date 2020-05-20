@@ -44,10 +44,10 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li>
                     @*@foreach (var i in LuminousMpartnerIB.Models.LanguageManage.AvailableLanguages)
-                    {
-                        @Html.ActionLink(i.LanguageFullName, "ChangeLanguage", "CustomerModule", new { lang = i.LanguageCultureName }, null)
-                        <text> </text>
-                    }*@
+                        {
+                            @Html.ActionLink(i.LanguageFullName, "ChangeLanguage", "CustomerModule", new { lang = i.LanguageCultureName }, null)
+                            <text> </text>
+                        }*@
                 </li>
                 <li class="dropdown">
                     <span><img src="/images/profileImg.png" alt="" title=""> Welcome</span>
@@ -77,7 +77,7 @@
             <div class="navbar-default sidebar">
                 <div class="sidebar-nav navbar-collapse" aria-expanded="false" style="height: 1px;">
                     <ul class="nav in" id="side-menu">
-                      
+
                         @Html.Partial("_SideBarMenu");
                     </ul>
                 </div>
@@ -86,14 +86,36 @@
         </nav>
 
         <!-- jQuery Start Here -->
-        <script src="/js/jquery.min.js"></script>
+        @*<script src="/js/jquery.min.js"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="/js/bootstrap.min.js"></script>
+            <script src="/js/metisMenu.min.js"></script>
+            <script src="/js/custom.js"></script>
+            <script type="text/javascript">
+                AOS.init();
+            </script>*@
+        @*//************************************************************@
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        @*<script src="/js/jquery.min.js"></script>*@
+        <script src="~/Scripts/jquery-1.8.2.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
+        @*<script src="/js/bootstrap.min.js"></script>*@
         <script src="/js/metisMenu.min.js"></script>
-        <script src="/js/custom.js"></script>
+        @*<script src="/js/custom.js"></script>*@
+
+
         <script type="text/javascript">
             AOS.init();
+
+            $(".dropdown-toggle").click(function () {
+                $(".dropdown-user").toggle();
+            });
         </script>
+
         @RenderBody()
     </div>
 </body>

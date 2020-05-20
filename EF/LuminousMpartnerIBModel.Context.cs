@@ -112,6 +112,7 @@ namespace LuminousMpartnerIB.EF
         public DbSet<NotificationSurveyHistory> NotificationSurveyHistories { get; set; }
         public DbSet<Mapping_Productlevelthree_TechnicalSpecification> Mapping_Productlevelthree_TechnicalSpecification { get; set; }
         public DbSet<Productlevelthree_ColumnMaster> Productlevelthree_ColumnMaster { get; set; }
+        public DbSet<LanguageMaster> LanguageMasters { get; set; }
     
         public virtual ObjectResult<userpermission_Result> userpermission(Nullable<int> mode, string userid)
         {

@@ -662,6 +662,19 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.EscalationMatrix_History' d
           <Property Name="CreatedOn" Type="datetime" />
           <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="LanguageMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lang" Type="varchar" MaxLength="20" />
+          <Property Name="LangCode" Type="varchar" MaxLength="20" />
+          <Property Name="Status" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="20" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="20" />
+        </EntityType>
         <EntityType Name="Logger">
           <Key>
             <PropertyRef Name="ID" />
@@ -1716,6 +1729,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
           <EntitySet Name="FooterCategory" EntityType="Self.FooterCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FooterCategoryHistory" EntityType="Self.FooterCategoryHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GCM_NotificationLog" EntityType="Self.GCM_NotificationLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LanguageMaster" EntityType="Self.LanguageMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Logger" EntityType="Self.Logger" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mapping_Company_Distributor_Dealers" EntityType="Self.Mapping_Company_Distributor_Dealers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mapping_Productlevelthree_TechnicalSpecification" EntityType="Self.Mapping_Productlevelthree_TechnicalSpecification" Schema="dbo" store:Type="Tables" />
@@ -3068,8 +3082,9 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <EntitySet Name="Productlevelthree_ColumnMaster" EntityType="LuminousMpartnerIBModel.Productlevelthree_ColumnMaster" />
           <FunctionImport Name="GetColumnNames" ReturnType="Collection(LuminousMpartnerIBModel.GetColumnNames_Result)" />
           <FunctionImport Name="GetSurveyRecord" ReturnType="Collection(LuminousMpartnerIBModel.GetSurveyRecord_Result)">
-            <Parameter Name="Id" Mode="In" Type="Int32" />
+          <Parameter Name="Id" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="LanguageMasters" EntityType="LuminousMpartnerIBModel.LanguageMaster" />
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -4066,6 +4081,19 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Type="String" Name="SelectOption" Nullable="true" MaxLength="1" />
           <Property Type="DateTime" Name="ResponseDate" Nullable="true" Precision="23" />
         </ComplexType>
+        <EntityType Name="LanguageMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lang" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LangCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -5902,6 +5930,20 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="LanguageMasters">
+            <EntityTypeMapping TypeName="LuminousMpartnerIBModel.LanguageMaster">
+              <MappingFragment StoreEntitySet="LanguageMaster">
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+                <ScalarProperty Name="Lang" ColumnName="Lang" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

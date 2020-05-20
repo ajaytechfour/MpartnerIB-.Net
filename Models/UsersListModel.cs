@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace LuminousMpartnerIB.Models
 {
@@ -61,6 +62,16 @@ namespace LuminousMpartnerIB.Models
         public string City { get; set; }
         public string SapCode { get; set; }
         public string Country { get; set; }
+
+        //public List<SelectListItem> ddlSelectDitributer { get; set; }
+
+        //public string[] ddlSelectDitributerIDs { get; set; }
+
+
+
+        public List<SelectListItem> ddlSelectLanguage { get; set; }
+
+        public string[] ddlSelectLanguageIDs { get; set; }
 
     }
 }

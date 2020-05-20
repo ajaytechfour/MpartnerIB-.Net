@@ -1,13 +1,39 @@
-﻿@*@model LuminousMpartnerIB.Models*@
+﻿@model LuminousMpartnerIB.Models.UsersListModel
 @{
     ViewBag.Title = "Distributor";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
-
-
 }
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+<script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"></script>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-@*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>*@
+
+<style>
+    .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+        color: #fff;
+        text-decoration: none;
+        background-color: #fff !important;
+        outline: 0;
+    }
+
+    button.multiselect.dropdown-toggle.btn.btn-default {
+        width: 200px;
+        text-align: left;
+        overflow: hidden;
+        padding-right: 10px;
+    }
+</style>
+
+
+<script>
+    $(function () {
+        $('.listbox').multiselect({
+            includeSelectAllOption: true
+        });
+    });
+</script>
 
 
 <script type="text/javascript">
@@ -48,7 +74,16 @@
                 return false;
             }
 
-            var email = $('#Email').val();
+            //|| $('#ddlLanguageId option:selected').val() == 0
+
+            if ($('#ddlLanguageId').val() == 0 || $('#ddlLanguageId option:selected').val() == 0) {
+                debugger;
+                $("#lblmessagesubmit").text("Please select State");
+                return false;
+            }
+
+
+            //var email = $('#Email').val();
 
             //if (IsEmail(email) == false) {
             //    $('#invalid_email').show();
@@ -67,7 +102,9 @@
             objdata.State = $('#ddlStateMaster option:selected').text();
             objdata.City = $('#ddlCityMaster option:selected').text();
             objdata.SapCode = $('#SapCode').val();
-            objdata.Country = $('#ddlCountryMaster option:selected').text(); 
+            objdata.Country = $('#ddlCountryMaster option:selected').text();
+
+            objdata.ddlSelectLanguageIDs = $('#ddlLanguageId').val();
 
             //debugger;
             $.ajax({
@@ -138,8 +175,13 @@
 
     $(function () {
         debugger;
-         $.post("@Url.Content("~/Distributor/getCountryMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");
-        @*$.post("@Url.Content("~/Distributor/getStateMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");*@
+
+
+
+        $.post("@Url.Content("~/Distributor/getCountryMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");
+
+        $.post("@Url.Content("~/Distributor/getLanguagMastere")", null, function (data) { SetLanguageMaster(data); }, "Json");
+
         $.post("@Url.Content("~/Distributor/GetGridData")", null, function (data) { SetGrid(data); }, "Json");
 
         setTimeout(function () {
@@ -159,6 +201,19 @@
 
 
     //Set Parent Category//
+    function SetLanguageMaster(data) {
+        option = "";
+        var procat = $("#ddlLanguage");
+        procat.empty();
+        procat.append("<option value=0>Select</option>");
+        $.each(data, function (key, value) {
+            option += "<option value=" + value.id + ">" + value.Name + "</option>";
+        });
+        procat.append(option);
+        //ddlStateMaster
+    }
+
+
     function SetDistributerMaster(data) {
         option = "";
         var procat = $("#ddlCountryMaster");
@@ -306,6 +361,12 @@
 
                                 </div>
                             </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Language <span class="required">*</span></label>
+                                    @Html.ListBoxFor(m => m.ddlSelectLanguageIDs, Model.ddlSelectLanguage, new { @class = "listbox form-control", @id = "ddlLanguageId" })
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -372,6 +433,19 @@
                                     <span style="display:none" class="error" id="invalid_email">Email-id is invalid</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="row">
+                            @*<div class="col-md-4">
+                                    <div class="">
+                                        <label>Language <span class="required">*</span></label>
+                                        @Html.ListBoxFor(m => m.ddlSelectLanguageIDs, Model.ddlSelectLanguage, new { @class = "listbox form-control", @id = "ddlLanguageId" })
+
+                                    </div>
+                                </div>*@
                         </div>
                     </div>
                 </div>
