@@ -366,57 +366,53 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 var getAppMessage = getAppversion(app_version, os_type, channel);
                 var getTokenMessage = getToken(user_id, app_version, device_id, token);
 
-                var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
-                var dataexistornot = Checked_data_existornot_customer_bottom_menu_data(user_id);
-
-
-                if (getTokenMessage.Status != "" || getAppMessage.Status != "" || checkedThreeUserLoggedIn.Status != "" || dataexistornot.Status == "0")
+                if (getAppMessage.Status != "")
                 {
-                    if (getTokenMessage.Status != "")
-                    {
-                        #region save request and response data in api log
-                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
-                        string ResponseParameter = "Message : " + getTokenMessage.Message + ",Status : " + getTokenMessage.Status + "";
-                        #endregion
-                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
-                        return getJson_customer_bottom_menu_data(getTokenMessage.Message, getTokenMessage.Status, "", null);
-                    }
-                    if (getAppMessage.Status != "")
-                    {
-                        #region save request and response data in api log
-                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
-                        string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
-                        #endregion
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + getAppMessage.Message + ",Status : " + getAppMessage.Status + "";
+                    #endregion
 
-                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
-                        return getJson_customer_bottom_menu_data(getAppMessage.Message, getAppMessage.Status, getTokenMessage.Token, null);
-                    }
-
-                    if (checkedThreeUserLoggedIn.Status != "")
-                    {
-                        #region save request and response data in api log
-                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
-                        string ResponseParameter = "Message : " + checkedThreeUserLoggedIn.Message + ",Status : " + checkedThreeUserLoggedIn.Status + "";
-                        #endregion
-                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
-                        return getJson_customer_bottom_menu_data(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
-                    }
-                    if (dataexistornot.Status == "0")
-                    {
-                        #region save request and response data in api log
-                        string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
-                        string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
-                        #endregion
-                        SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
-                        return getJson_customer_bottom_menu_data(dataexistornot.Message, dataexistornot.Status, "", null);
-                    }
-
-
-
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getAppMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    return getJson_customer_bottom_menu_data(getAppMessage.Message, getAppMessage.Status, getTokenMessage.Token, null);
                 }
+
+                if (getTokenMessage.Status != "")
+                {
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + getTokenMessage.Message + ",Status : " + getTokenMessage.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, getTokenMessage.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    return getJson_customer_bottom_menu_data(getTokenMessage.Message, getTokenMessage.Status, "", null);
+                }
+
+
+                var checkedThreeUserLoggedIn = checked_ThreeUserLoggedIn(user_id, device_id);
+                if (checkedThreeUserLoggedIn.Status != "")
+                {
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + checkedThreeUserLoggedIn.Message + ",Status : " + checkedThreeUserLoggedIn.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, checkedThreeUserLoggedIn.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    return getJson_customer_bottom_menu_data(checkedThreeUserLoggedIn.Message, checkedThreeUserLoggedIn.Status, "", null);
+                }
+                var dataexistornot = Checked_data_existornot_customer_bottom_menu_data(user_id, language);
+                if (dataexistornot.Status == "0")
+                {
+                    #region save request and response data in api log
+                    string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
+                    string ResponseParameter = "Message : " + dataexistornot.Message + ",Status : " + dataexistornot.Status + "";
+                    #endregion
+                    SaveServiceLog(user_id, url, RequestParameter, ResponseParameter, 1, dataexistornot.Message, user_id, DateTime.Now, device_id, app_version, os_type, os_version_code);
+                    return getJson_customer_bottom_menu_data(dataexistornot.Message, dataexistornot.Status, "", null);
+                }
+
+
                 if (dataexistornot.Status == "200")
                 {
-                    var permissiondata = getcustomer_bottom_menu_data(user_id);
+                    var permissiondata = getcustomer_bottom_menu_data(user_id, language);
                     //Save Api log data//
                     #region save request and response data in api log
                     string RequestParameter = "UserID :" + user_id + ",Token :" + token + ",DeviceID :" + device_id + ",DeviceName :" + device_name + ",AppVersion :" + app_version + ",OsType :" + os_type + ",OsVersion :" + os_version_code + ",OSVersionName :" + os_version_name + ",IPAddress :" + ip_address + ",Language :" + language + ",ScreenName :" + screen_name + ",NetworkType :" + network_type + ",NetworkOperator :" + network_operator + ",TimeCaptured :" + time_captured + ",Channel :" + channel + ",Browser :" + browser + ",Browser_version :" + Browser_version + "";
@@ -2509,12 +2505,12 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
             return msgdata;
         }
-        public MessageData Checked_data_existornot_customer_bottom_menu_data(string userid)
+        public MessageData Checked_data_existornot_customer_bottom_menu_data(string userid, string language)
         {
 
             MessageData msgdata = new MessageData();
 
-            var getPerm = luminous.CustomerModules.Where(x => x.MenuFlag == "b").Count();
+            var getPerm = luminous.SP_UserPermission_bottomMenu(userid, language).Count();
 
 
             if (getPerm == 0)
@@ -4052,7 +4048,7 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
             return permissionlist;
         }
 
-        public List<UserPermission> getcustomer_bottom_menu_data(string userid)
+        public List<UserPermission> getcustomer_bottom_menu_data(string userid, string language)
         {
             string url = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path);
 
@@ -4063,14 +4059,14 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
 
             try
             {
-                var getPerm = luminous.SP_UserPermission_bottomMenu(userid).ToList();
+                var getPerm = luminous.SP_UserPermission_bottomMenu(userid, language).ToList();
 
 
                 foreach (var data in getPerm)
                 {
                     UserPermission obj_permission = new UserPermission();
 
-                    obj_permission.ModuleName = data.ModuleName;
+                    obj_permission.ModuleName = data.Language;
                     obj_permission.ModuleImage = ConfigurationSettings.AppSettings["UatUrl"].ToString() + "AppMenuIcon/" + data.ModuleImage;
 
 
