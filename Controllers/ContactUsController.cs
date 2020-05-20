@@ -9,7 +9,7 @@ namespace Luminous.Controllers
 {
     public class ContactUsController : Controller
     {
-        //
+        //App
         // GET: /ContactUs/
         private LuminousEntities db = new LuminousEntities();
         private DataTable dt = new DataTable();
