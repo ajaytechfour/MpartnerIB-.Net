@@ -17,7 +17,7 @@ namespace LuminousMpartnerIB.Controllers
         DataTable dt = new DataTable();
         DataSet ds = new DataSet();
         LuminousMpartnerIBEntities db;
-        List<AllPage> sideBarMenuLst = new List<AllPage>();
+        List<AllPageModel> sideBarMenuLst = new List<AllPageModel>();
 
         public HomeController()
         {
@@ -26,7 +26,7 @@ namespace LuminousMpartnerIB.Controllers
 
         public ActionResult LuminousMpartnerIB()
         {
-            sideBarMenuLst = new List<AllPage>();
+            sideBarMenuLst = new List<AllPageModel>();
             if (Session["userid"] == null)
             {
                 return RedirectToAction("login", "login");
@@ -40,7 +40,7 @@ namespace LuminousMpartnerIB.Controllers
 
                 ds = dut.ExecuteDSProcedure("SP_GetSidebarMenu_Permission", pram);
 
-                List<AllPage> objData = SqlHelper.ConvertDataTable<AllPage>(ds.Tables[0]);
+                List<AllPageModel> objData = SqlHelper.ConvertDataTable<AllPageModel>(ds.Tables[0]);
 
                 //var ss = from al in objData
                 //         select new SideBarMenuModel

@@ -785,7 +785,7 @@ namespace LuminousMpartnerIB.Controllers
                             var tempData = column.Find(x => x.ORDINAL_POSITION == Convert.ToInt32(redirectpage[j]));
                             //item[j] = temp.COLUMN_NAME;
                             obj.ColumnId = tempData.ORDINAL_POSITION;
-                            obj.Value = tempData.COLUMN_NAME;
+                            obj.Value = inputval[j];//tempData.COLUMN_NAME;
                             obj.Productid = pid;
                             obj.ProductCatId = pcid;
                             obj.CreatedBy = Session["userid"].ToString();
@@ -1152,7 +1152,11 @@ namespace LuminousMpartnerIB.Controllers
                     if (temp.AsEnumerable().ElementAt(0).brochure != null)
                     {
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "brochure");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).brochure;
 
                     }
@@ -1160,7 +1164,11 @@ namespace LuminousMpartnerIB.Controllers
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaximumChargeCurrent");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaximumChargeCurrent;
 
                     }
@@ -1168,7 +1176,11 @@ namespace LuminousMpartnerIB.Controllers
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "NoOfBattery");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).NoOfBattery;
 
                     }
@@ -1176,7 +1188,11 @@ namespace LuminousMpartnerIB.Controllers
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "SupportedBatteryType");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).SupportedBatteryType;
 
                     }
@@ -1184,7 +1200,11 @@ namespace LuminousMpartnerIB.Controllers
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "Maximumbulbload");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).Maximumbulbload;
 
                     }
@@ -1192,7 +1212,11 @@ namespace LuminousMpartnerIB.Controllers
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "Technology");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).Technology;
 
                     }
@@ -1200,7 +1224,11 @@ namespace LuminousMpartnerIB.Controllers
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "NominalVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).NominalVoltage;
 
                     }
@@ -1208,7 +1236,11 @@ namespace LuminousMpartnerIB.Controllers
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "DimensionMM");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).DimensionMM;
 
                     }
@@ -1216,200 +1248,322 @@ namespace LuminousMpartnerIB.Controllers
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "Weight_Filled_battery");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).Weight_Filled_battery;
                     }
                     if (temp.AsEnumerable().ElementAt(0).RatedCapacity != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "RatedCapacity");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
                         arr1[i] = temp.AsEnumerable().ElementAt(0).RatedCapacity;
                     }
                     if (temp.AsEnumerable().ElementAt(0).FilledWeight != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "FilledWeight");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).FilledWeight;
                     }
                     if (temp.AsEnumerable().ElementAt(0).DCOutputVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "DCOutputVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).DCOutputVoltage;
                     }
                     if (temp.AsEnumerable().ElementAt(0).DCOutputCurrent != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "DCOutputCurrent");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).DCOutputCurrent;
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaxSupportedPanelpower != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaxSupportedPanelpower");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaxSupportedPanelpower;
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaxSolarPanelVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaxSolarPanelVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaxSolarPanelVoltage;
                     }
                     if (temp.AsEnumerable().ElementAt(0).VA != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "VA");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).VA;
                     }
                     if (temp.AsEnumerable().ElementAt(0).NoofCells != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "NoofCells");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).NoofCells;
                     }
                     if (temp.AsEnumerable().ElementAt(0).PeakPowerPMax != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "PeakPowerPMax");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).PeakPowerPMax;
                     }
                     if (temp.AsEnumerable().ElementAt(0).RatedModuleVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "RatedModuleVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).RatedModuleVoltage;
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaximumPowerVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaximumPowerVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaximumPowerVoltage;
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaximumPowerCurrent != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaximumPowerCurrent");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaximumPowerCurrent;
                     }
                     if (temp.AsEnumerable().ElementAt(0).NominalDCOutputVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "NominalDCOutputVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).NominalDCOutputVoltage;
                     }
                     if (temp.AsEnumerable().ElementAt(0).MaxDCOutputCurrent != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MaxDCOutputCurrent");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MaxDCOutputCurrent;
                     }
                     if (temp.AsEnumerable().ElementAt(0).Noof12VBatteriesinSeries != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "Noof12VBatteriesinSeries");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).Noof12VBatteriesinSeries;
                     }
                     if (temp.AsEnumerable().ElementAt(0).SolarLength != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "SolarLength");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).SolarLength;
                     }
                     if (temp.AsEnumerable().ElementAt(0).SolarWidth != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "SolarWidth");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).SolarWidth;
                     }
                     if (temp.AsEnumerable().ElementAt(0).Heightuptofloattop != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "Heightuptofloattop");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
+
                         arr1[i] = temp.AsEnumerable().ElementAt(0).Heightuptofloattop;
                     }
                     if (temp.AsEnumerable().ElementAt(0).DryWeight != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "DryWeight");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
                         arr1[i] = temp.AsEnumerable().ElementAt(0).DryWeight;
                     }
                     if (temp.AsEnumerable().ElementAt(0).RatedACpower != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "RatedACpower");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
                         arr1[i] = temp.AsEnumerable().ElementAt(0).RatedACpower;
                     }
                     if (temp.AsEnumerable().ElementAt(0).OperatingVoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "OperatingVoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
                         arr1[i] = temp.AsEnumerable().ElementAt(0).OperatingVoltage;
                     }
                     if (temp.AsEnumerable().ElementAt(0).ChargeControllerRating != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "ChargeControllerRating");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
                         arr1[i] = temp.AsEnumerable().ElementAt(0).ChargeControllerRating;
                     }
                     if (temp.AsEnumerable().ElementAt(0).NominalBatterybankvoltage != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "NominalBatterybankvoltage");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
                         arr1[i] = temp.AsEnumerable().ElementAt(0).NominalBatterybankvoltage;
                     }
                     if (temp.AsEnumerable().ElementAt(0).InputVoltageWorkingRange != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "InputVoltageWorkingRange");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
                         arr1[i] = temp.AsEnumerable().ElementAt(0).InputVoltageWorkingRange;
                     }
                     if (temp.AsEnumerable().ElementAt(0).OutputVoltageWorkingRange != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "OutputVoltageWorkingRange");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
                         arr1[i] = temp.AsEnumerable().ElementAt(0).OutputVoltageWorkingRange;
                     }
                     if (temp.AsEnumerable().ElementAt(0).MainsACLowCut != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MainsACLowCut");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MainsACLowCut;
                     }
                     if (temp.AsEnumerable().ElementAt(0).MainACLowCutRecovery != null)
                     {
                         i++;
                         var temp2 = temp1.Find(x => x.COLUMN_NAME == "MainACLowCutRecovery");
-                        arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        if (temp2 != null)
+                        {
+                            arr[i] = Convert.ToInt32(temp2.ORDINAL_POSITION);
+                        }
                         arr1[i] = temp.AsEnumerable().ElementAt(0).MainACLowCutRecovery;
                     }
-                    ViewBag.redirectId = arr;
-                    ViewBag.redirectvalue = arr1;
+
+                    //ViewBag.redirectId = arr;
+                    //ViewBag.redirectvalue = arr1;
+
+
+
+                    var tempData = db.GetColumnNamesByProductID(id).ToList();
+
+                    int[] arrr = new int[tempData.Count()];
+                    string[] arr11 = new string[tempData.Count()];
+
+                    int ii = 0;
+                    for (int m = 0; m < tempData.Count(); m++)
+                    {
+                        arrr[ii] = tempData[m].ORDINAL_POSITION;
+                        arr11[ii] = tempData[m].COLUMN_NAME;
+                        ii = ii + 1;
+                    }
+
+
+                    ViewBag.redirectId = arrr;
+                    ViewBag.redirectvalue = arr11;
 
 
                     //ViewBag.redirect = arr;
@@ -1456,6 +1610,8 @@ namespace LuminousMpartnerIB.Controllers
                 }
             }
         }
+
+
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
         [HttpPost]
@@ -1929,6 +2085,38 @@ namespace LuminousMpartnerIB.Controllers
                         try
                         {
                             db.SaveChanges();
+
+
+                            int? pid = contactusd.id;
+
+                            var dataLst = db.Mapping_Productlevelthree_TechnicalSpecification.Where(x => x.Productid == pid).ToList();
+
+                            foreach (var delItem in dataLst)
+                            {
+                                db.Mapping_Productlevelthree_TechnicalSpecification.Remove(delItem);
+
+                            }
+
+                            db.SaveChanges();
+
+
+                            for (j = 0; j < redirectpage.Count(); j++)
+                            {
+                                Mapping_Productlevelthree_TechnicalSpecification obj = new Mapping_Productlevelthree_TechnicalSpecification();
+                                var tempData = column.Find(x => x.ORDINAL_POSITION == Convert.ToInt32(redirectpage[j]));
+                                //item[j] = temp.COLUMN_NAME;
+                                obj.ColumnId = tempData.ORDINAL_POSITION;
+                                obj.Value = inputval[j];//tempData.COLUMN_NAME;
+                                obj.Productid = pid;
+                                obj.ProductCatId = pcid;
+                                obj.CreatedBy = Session["userid"].ToString();
+                                obj.Createdon = DateTime.Now;
+                                obj.Status = 1;
+                                db.Mapping_Productlevelthree_TechnicalSpecification.Add(obj);
+                            }
+
+                            db.SaveChanges();
+
                         }
                         catch (Exception ex)
                         {

@@ -3,7 +3,7 @@
     ViewBag.Title = "Distributor";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+@*<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>*@
 <link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
 <script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"></script>
 <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -78,7 +78,7 @@
 
             if ($('#ddlLanguageId').val() == 0 || $('#ddlLanguageId option:selected').val() == 0) {
                 debugger;
-                $("#lblmessagesubmit").text("Please select State");
+                $("#lblmessagesubmit").text("Please select Language");
                 return false;
             }
 
@@ -131,6 +131,9 @@
                             $('#DistributorAddress').val('');
                             $('#ContactNo').val('');
                             $('#Email').val('');
+                            $('#SapCode').val('');
+                            $('#ddlCountryMaster').val(0);
+                            $('#ddlLanguageId').val(0);
 
                             SetGrid(data);
 
@@ -300,10 +303,9 @@
 
                 //"<td style='text-align:right;'></td></tr>";
 
-                "<td style='text-align:right;'>  <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
+                //"<td style='text-align:right;'>  <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
 
-            //"<td style='text-align:right;'>  <a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
-
+                "<td style='text-align:right;'>  <a style='cursor:pointer' onclick=Edit(" + value.id + ");><i class='fas fa-pencil-alt' style='font-size: 13px; color: #737373;'></i></a> <a style='cursor:pointer' onclick=Delete(" + value.id + ");><i class='fas fa-trash-alt' style='font-size:13px; color: #ff6c6c; margin-left: 10px;'></i></a></td></tr>";
         });
         $("#Grid tbody").append(body);
         // SetPages(data.TotalRecord)
@@ -311,6 +313,10 @@
         paging();
     }
 
+     function Edit(id)
+    {
+        location.href = "@Url.Content("~/Distributor/Edit/")" + id;
+    }
 
     function Delete(id) {
         debugger;

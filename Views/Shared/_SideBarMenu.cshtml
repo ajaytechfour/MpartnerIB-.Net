@@ -1,6 +1,7 @@
 ﻿
 @{
-    var servicesMenu = Session["sidebarmenu"] as IEnumerable<LuminousMpartnerIB.EF.AllPage>;
+    //var servicesMenu = Session["sidebarmenu"] as IEnumerable<LuminousMpartnerIB.EF.AllPage>;
+    var servicesMenu = Session["sidebarmenu"] as IEnumerable<LuminousMpartnerIB.Models.AllPageModel>;
 }
 
 @if (servicesMenu != null)
@@ -13,7 +14,7 @@
         if (MenuLevel1.Count() > 0)
         {
             <li class="subctegory">
-                <a class="menuactive" href="#"><img src=@item.Image title=""> @item.PageName</a>
+                <a class="menuactive" href="#"><img src=@item.ModuleImage title=""> @item.PageName</a>
                 <ul class="nav nav-second-level">
                     @foreach (var itemlevel1 in MenuLevel1)
                     {
@@ -24,7 +25,7 @@
         }
         else
         {
-            <li c3ass="linkeffect"><a href=@item.ModuleName><img src=@item.Image title=""> @item.PageName</a></li>
+            <li c3ass="linkeffect"><a href=@item.ModuleName><img src=@item.ModuleImage title=""> @item.PageName</a></li>
         }
     }
 }

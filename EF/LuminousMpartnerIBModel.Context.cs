@@ -321,13 +321,17 @@ namespace LuminousMpartnerIB.EF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_Userverification", useridParameter, osversionParameter, ostypeParameter, appversionParameter, deviceidParameter, fcm_tokenParameter, tokenParameter);
         }
     
-        public virtual ObjectResult<SP_UserPermission_bottomMenu_Result> SP_UserPermission_bottomMenu(string userid)
+        public virtual ObjectResult<SP_UserPermission_bottomMenu_Result> SP_UserPermission_bottomMenu(string userid, string lang_code)
         {
             var useridParameter = userid != null ?
                 new ObjectParameter("userid", userid) :
                 new ObjectParameter("userid", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_UserPermission_bottomMenu_Result>("SP_UserPermission_bottomMenu", useridParameter);
+            var lang_codeParameter = lang_code != null ?
+                new ObjectParameter("lang_code", lang_code) :
+                new ObjectParameter("lang_code", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_UserPermission_bottomMenu_Result>("SP_UserPermission_bottomMenu", useridParameter, lang_codeParameter);
         }
     
         public virtual ObjectResult<Sp_MHrCreateOtp_Result> Sp_MHrCreateOtp(string empid, string imeinumber, string osversion, string devicename, string appversion)
@@ -367,6 +371,15 @@ namespace LuminousMpartnerIB.EF
                 new ObjectParameter("Id", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetSurveyRecord_Result>("GetSurveyRecord", idParameter);
+        }
+    
+        public virtual ObjectResult<GetColumnNamesByProductID_Result> GetColumnNamesByProductID(Nullable<int> pID)
+        {
+            var pIDParameter = pID.HasValue ?
+                new ObjectParameter("PID", pID) :
+                new ObjectParameter("PID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetColumnNamesByProductID_Result>("GetColumnNamesByProductID", pIDParameter);
         }
     }
 }

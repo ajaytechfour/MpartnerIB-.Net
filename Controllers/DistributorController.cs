@@ -248,17 +248,20 @@ namespace LuminousMpartnerIB.Controllers
 
                 string selectedLanguagecode = string.Empty;
                 string[] language = obj.ddlSelectLanguageIDs;
-                foreach (var item in language)
+                if (language != null)
                 {
-                    if (selectedLanguagecode != "")
+                    foreach (var item in language)
                     {
-                        selectedLanguagecode = selectedLanguagecode + "," + item.ToString();
+                        if (selectedLanguagecode != "")
+                        {
+                            selectedLanguagecode = selectedLanguagecode + "," + item.ToString();
+                        }
+                        else
+                        {
+                            selectedLanguagecode = item.ToString();
+                        }
                     }
-                    else
-                    {
-                        selectedLanguagecode = item.ToString();
-                    }
-                }                
+                }
                 objUsersList.Language = selectedLanguagecode;
 
                 db.UsersLists.Add(objUsersList);
@@ -296,6 +299,44 @@ namespace LuminousMpartnerIB.Controllers
             }
             return Json(data, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            if (Session["userid"] == null)
+            {
+                return RedirectToAction("login", "login");
+            }
+            else
+            {
+                //dt = Session["permission"] as DataTable;
+                //string pageUrl2 = PageUrl;
+                //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
+                if (true)
+                {
+                    UsersList cud = db.UsersLists.Single(a => a.id == id);
+
+
+                    ViewBag.id = cud.id;
+                    ViewBag.EmployeeName = cud.Dis_Name;
+                    ViewBag.EmployeeAddress = cud.Dis_Address1;
+                    ViewBag.ContactNo = cud.Dis_ContactNo;
+                    ViewBag.Email = cud.Dis_Email;
+                    ViewBag.SapCode = cud.Dis_Sap_Code;
+                    ViewBag.Country = cud.Country;
+                    ViewBag.State = cud.Dis_State;
+                    ViewBag.City = cud.Dis_City;
+
+                    return View(cud);
+                }
+                else
+                {
+                    return RedirectToAction("snotallowed", "snotallowed");
+                }
+            }
+        }
+
+
 
         public JsonResult Delete(int id)
         {

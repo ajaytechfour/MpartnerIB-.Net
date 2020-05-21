@@ -1636,6 +1636,9 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
           <Parameter Name="prodcatid" Type="int" Mode="In" />
         </Function>
         <Function Name="GetColumnNames" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetColumnNamesByProductID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PID" Type="int" Mode="In" />
+        </Function>
         <Function Name="getContactUs_Details" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Userid" Type="varchar" Mode="In" />
         </Function>
@@ -1684,6 +1687,7 @@ warning 6002: The table/view 'LuminousMpartnerIB.dbo.UsersListHistory' does not 
         </Function>
         <Function Name="SP_UserPermission_bottomMenu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="userid" Type="varchar(max)" Mode="In" />
+          <Parameter Name="lang_code" Type="varchar" Mode="In" />
         </Function>
         <Function Name="update_Userverification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Userid" Type="varchar" Mode="In" />
@@ -3065,6 +3069,7 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           </FunctionImport>
           <FunctionImport Name="SP_UserPermission_bottomMenu" ReturnType="Collection(LuminousMpartnerIBModel.SP_UserPermission_bottomMenu_Result)">
           <Parameter Name="userid" Mode="In" Type="String" />
+            <Parameter Name="lang_code" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="Sp_MHrCreateOtp" ReturnType="Collection(LuminousMpartnerIBModel.Sp_MHrCreateOtp_Result)">
             <Parameter Name="empid" Mode="In" Type="String" />
@@ -3085,6 +3090,9 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Parameter Name="Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <EntitySet Name="LanguageMasters" EntityType="LuminousMpartnerIBModel.LanguageMaster" />
+          <FunctionImport Name="GetColumnNamesByProductID" ReturnType="Collection(LuminousMpartnerIBModel.GetColumnNamesByProductID_Result)">
+            <Parameter Name="PID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -4094,6 +4102,10 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
           <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
           <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
+        <ComplexType Name="GetColumnNamesByProductID_Result">
+          <Property Type="Int32" Name="ORDINAL_POSITION" Nullable="false" />
+          <Property Type="String" Name="COLUMN_NAME" Nullable="true" MaxLength="100" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -5944,6 +5956,14 @@ FROM [dbo].[UsersListHistory] AS [UsersListHistory]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetColumnNamesByProductID" FunctionName="LuminousMpartnerIBModel.Store.GetColumnNamesByProductID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LuminousMpartnerIBModel.GetColumnNamesByProductID_Result">
+                <ScalarProperty Name="ORDINAL_POSITION" ColumnName="ORDINAL_POSITION" />
+                <ScalarProperty Name="COLUMN_NAME" ColumnName="COLUMN_NAME" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
