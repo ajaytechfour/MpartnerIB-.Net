@@ -4066,7 +4066,8 @@ namespace LuminousMpartnerIB.MpartnerIB_Api
                 {
                     UserPermission obj_permission = new UserPermission();
 
-                    obj_permission.ModuleName = data.Language;
+                    obj_permission.ModuleName = data.ModuleName;
+                    obj_permission.ModuleText = data.Language;
                     obj_permission.ModuleImage = ConfigurationSettings.AppSettings["UatUrl"].ToString() + "AppMenuIcon/" + data.ModuleImage;
 
 
