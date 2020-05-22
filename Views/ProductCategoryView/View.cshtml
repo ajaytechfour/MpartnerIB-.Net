@@ -92,7 +92,7 @@
         option = "";
         var procat = $("#ProductCategory");
         procat.empty();
-        procat.append("<option value=0>Select</option>");
+        procat.append("<option value=0>@LuminousMpartnerIB.Resource.Select</option>");
         $.each(data, function (key, value) {
 
             if (value.id == '@ViewBag.Pid') {
@@ -132,18 +132,18 @@
                     <div class="row" id="GridView">
                         <div class="col-md-3">
                             <div class="">
-                                <label>Parent Category <span class="required"></span></label>
+                                <label>@LuminousMpartnerIB.Resource.ParentCategory <span class="required"></span></label>
                                 <select name="pcId" class="form-control" id="ProductCategory" style="display:none">
                                     <option>Select</option>
                                 </select>
-                                <input type="tel" id="txtProductCategory" class ="form-control" name="txtProductCategory" readonly="readonly" />
+                                <input type="tel" id="txtProductCategory" class="form-control" name="txtProductCategory" readonly="readonly" />
                                 @Html.ValidationMessageFor(model => model.ParentCatid, "", new { @class = "required" })
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 @Html.HiddenFor(a => a.id)
-                                <label>Product Category <span class="required"></span></label>
+                                <label>@LuminousMpartnerIB.Resource.ProductCategory <span class="required"></span></label>
                                 @Html.TextBoxFor(a => a.PName, new { @class = "form-control", @readonly = "readonly" })
 
                                 @Html.ValidationMessageFor(a => a.PName, "", new { @class = "required" })

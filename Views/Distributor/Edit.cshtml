@@ -1,17 +1,45 @@
-﻿@model LuminousMpartnerIB.EF.UsersList
+﻿@model LuminousMpartnerIB.Models.UsersListModel
 
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
-<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
-<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
-<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
-<link href="@Url.Content("~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+@*<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+    <link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+    <link href="@Url.Content("~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />*@
 
+
+<link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+<script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"></script>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+<style>
+    .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+        color: #fff;
+        text-decoration: none;
+        background-color: #fff !important;
+        outline: 0;
+    }
+
+    button.multiselect.dropdown-toggle.btn.btn-default {
+        width: 200px;
+        text-align: left;
+        overflow: hidden;
+        padding-right: 10px;
+    }
+</style>
+
+<script>
+    $(function () {
+        $('.listbox').multiselect({
+            includeSelectAllOption: true
+        });
+    });
+</script>
 
 <script type="text/javascript">
     function ValidationMessage() {
@@ -37,13 +65,13 @@
 <script type="text/javascript">
 
     $(function () {
-        debugger;           
+        debugger;
             $("#EmployeeName").val('@ViewBag.EmployeeName');
             $("#EmployeeAddress").val('@ViewBag.EmployeeAddress');
             $("#ContactNo").val('@ViewBag.ContactNo');
             $("#Email").val('@ViewBag.Email');
             $("#SapCode").val('@ViewBag.SapCode');
-            $("#EmpID").val('@ViewBag.id');
+           $("#DistributorID").val('@ViewBag.id');
     });
 
 
@@ -94,11 +122,11 @@
             //    $('#invalid_email').show();
             //    return false;
             //}
-
+           
 
             var objdata = new Object();
-            
-            objdata.id = $('#EmpID').val();;
+
+            objdata.id = $('#DistributorID').val();;
             objdata.Name = $('#EmployeeName').val();
             objdata.Address = $('#EmployeeAddress').val();
             objdata.ContactNo = $('#ContactNo').val();
@@ -109,9 +137,10 @@
             objdata.SapCode = $('#SapCode').val();
             objdata.Country = $('#ddlCountryMaster option:selected').text();
 
+            objdata.ddlSelectLanguageIDs = $('#ddlLanguageId').val();
             //debugger;
             $.ajax({
-                url: "/CreateSalesEmployees/saveData",
+                url: "/Distributor/saveData",
                 type: "POST",
                 contentType: 'application/json; charset=utf-8',
                 data: JSON.stringify({ obj: objdata }),
@@ -157,10 +186,10 @@
                             $('#Email').val('');
 
                            // SetGrid(data);
-                            
-                             window.location.href = '@Url.Action("Index", "CreateSalesEmployees")'
 
-                        }                     
+                             window.location.href = '@Url.Action("Index", "Distributor")'
+
+                        }
 
                     }
                 },
@@ -168,7 +197,7 @@
                     debugger;
                     alert(errormessage.responseText);
                 }
-            });            
+            });
 
          });
 
@@ -297,7 +326,8 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>Distributor - Edit </h1>
+            @*<h1 class="pageHeading"><span></span>Distributor - Edit </h1>*@
+            <h1 class="pageHeading"><span>@LuminousMpartnerIB.Resource.Distributor - </span> @LuminousMpartnerIB.Resource.Edit </h1>
         </div>
     </div>
     <div id="form">
@@ -309,17 +339,24 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Employee Name <span class="required"></span></label>
-                                    <input id="EmployeeName" type="text" autocomplete="off" placeholder="Employee Name" class="date form-control" name="EmployeeName" />
-                                    <input id="EmpID" type="text" name="EmpID" style="display:none" />
+                                    <label>@LuminousMpartnerIB.Resource.Distributor @LuminousMpartnerIB.Resource.Name <span class="required">*</span></label>
+                                    <input id="DistributorName" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control" name="DistributorName" />
+
+                                    <input id="DistributorID" type="text" name="DistributorID" style="display:none" />
 
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Employee Address <span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.Distributor @LuminousMpartnerIB.Resource.Address <span class="required">*</span></label>
                                     <input id="EmployeeAddress" type="text" autocomplete="off" placeholder="Employee Address" class="date form-control" name="EmployeeAddress" />
 
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <label>Language <span class="required">*</span></label>
+                                    @Html.ListBoxFor(m => m.ddlSelectLanguageIDs, Model.ddlSelectLanguage, new { @class = "listbox form-control", @id = "ddlLanguageId" })
                                 </div>
                             </div>
                         </div>
@@ -331,14 +368,14 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Sap Code <span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.SapCode <span class="required">*</span></label>
                                     <input id="SapCode" type="text" autocomplete="off" placeholder="Sap Code" class="date form-control" name="SapCode" />
 
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Country <span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.Country <span class="required">*</span></label>
                                     <select name="Country" id="ddlCountryMaster" onchange="GetState(this.value);" class="form-control">
                                         <option>Select</option>
                                     </select>
@@ -353,7 +390,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>State <span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.State <span class="required">*</span></label>
                                     <select name="states" id="ddlStateMaster" onchange="GetCity(this.value);" class="form-control">
                                         <option>Select</option>
                                     </select>
@@ -361,7 +398,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>City<span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.City<span class="required">*</span></label>
                                     <select name="City" id="ddlCityMaster" class="form-control">
                                         <option>Select</option>
                                     </select>
@@ -376,14 +413,14 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Contact No <span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.ContactNo <span class="required">*</span></label>
                                     <input id="ContactNo" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control numeric" name="ContactNo" />
 
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Email<span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.Email<span class="required">*</span></label>
                                     <input id="Email" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control" name="Email" />
                                     <span style="display:none" class="error" id="invalid_email">Email-id is invalid</span>
                                 </div>
@@ -396,7 +433,7 @@
                     <div class="addgift" style="padding-bottom:30px;">
                         <div class="row" id="GridView">
                             <div class="col-md-12">
-                                <input type="button" id="btnsubmit" value="Submit" class="submitBtn" />
+                                <input type="button" id="btnsubmit" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" />
                                 <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
                                 <label id="lblmessagesuccess" style="font-size: 16px; color:red;"></label>
                             </div>

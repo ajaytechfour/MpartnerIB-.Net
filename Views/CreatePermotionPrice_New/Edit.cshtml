@@ -532,7 +532,7 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Price List - </span> Edit Price List</h1>
+            <h1 class="pageHeading"><span>@LuminousMpartnerIB.Resource.PriceList - </span> @LuminousMpartnerIB.Resource.Edit @LuminousMpartnerIB.Resource.PriceList</h1>
         </div>
     </div>
     <div id="form" style="margin-bottom: 11px">
@@ -545,9 +545,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="">
-                                    <label>Parent Category <span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.ParentCategory <span class="required">*</span></label>
                                     <select name="ParentCatid" style="color: black" id="ParentCategory" class="form-control">
-                                        <option>Select</option>
+                                        <option>@LuminousMpartnerIB.Resource.Select</option>
                                     </select>
                                     <br />
                                     @Html.HiddenFor(a => a.Id)
@@ -557,9 +557,9 @@
 
                             <div class="col-md-6">
                                 <div class="">
-                                    <label>Card Type<span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.CardType<span class="required">*</span></label>
                                     <select name="Ctype" style="color: black" id="Ctype" class="form-control">
-                                        <option>Select</option>
+                                        <option>@LuminousMpartnerIB.Resource.Select</option>
                                     </select>
                                     <br />
                                     @Html.ValidationMessageFor(a => a.CardProviderId, "", new { @class = "required" })
@@ -572,21 +572,21 @@
 
                 <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
                     <div class="addgift" style="padding-bottom: 10px;">
-                        <h2>Header</h2>
+                        <h2>@LuminousMpartnerIB.Resource.Header</h2>
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="">
-                                    <label> Title<span class="required">*</span></label>
-                                    @Html.TextBoxFor(a => a.Title, new { @class = "form-control", id = "txttitle", @placeholder = "Enter Title" })
+                                    <label> @LuminousMpartnerIB.Resource.Title<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Title, new { @class = "form-control", id = "txttitle", @placeholder = @LuminousMpartnerIB.Resource.EnterTitle })
                                     <br />
                                     @Html.ValidationMessageFor(a => a.Title, "", new { @class = "required" })
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="">
-                                    <label>Title Colour<span class="required">*</span></label>
-                                    @Html.TextBoxFor(a => a.TitleColour, new { @class = "form-control", id = "hex1Titlecolor", @placeholder = "Hex Code" })
-                                    <i style="font-size:11px; font-style:normal;"><a id="title_colour">Reference for Hex Code</a></i>
+                                    <label>@LuminousMpartnerIB.Resource.TitleColour<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.TitleColour, new { @class = "form-control", id = "hex1Titlecolor", @placeholder = @LuminousMpartnerIB.Resource.Hex_Code })
+                                    <i style="font-size:11px; font-style:normal;"><a id="title_colour">@LuminousMpartnerIB.Resource.ReferenceforHexCode</a></i>
                                     <label id="lblmessagehex1price" style=" font-size: 11px; color: red; position: absolute; top: 62px; left: 137px;"></label>
                                     <br />
                                     @Html.ValidationMessageFor(a => a.TitleColour, "", new { @class = "required" })
@@ -594,17 +594,17 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="">
-                                    <label>Sub Title<span class="required">*</span></label>
-                                    @Html.TextBoxFor(a => a.Sub_Title, new { @class = "form-control", id = "txtsubtitle", @placeholder = "Sub Title" })
+                                    <label>@LuminousMpartnerIB.Resource.SubTitle<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Sub_Title, new { @class = "form-control", id = "txtsubtitle", @placeholder = @LuminousMpartnerIB.Resource.SubTitle })
                                     <br />
                                     @Html.ValidationMessageFor(a => a.Sub_Title, "", new { @class = "required" })
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="">
-                                    <label>Sub Title Colour<span class="required">*</span></label>
-                                    @Html.TextBoxFor(a => a.Sub_TitleColour, new { @class = "form-control", id = "hex2subtitlecolor", @placeholder = "Hex Code" })
-                                    <i style="font-size:11px; font-style:normal;"><a id="subtitle_colour">Reference for Hex Code</a></i>
+                                    <label>@LuminousMpartnerIB.Resource.SubTitle Colour<span class="required">*</span></label>
+                                    @Html.TextBoxFor(a => a.Sub_TitleColour, new { @class = "form-control", id = "hex2subtitlecolor", @placeholder = @LuminousMpartnerIB.Resource.Hex_Code })
+                                    <i style="font-size:11px; font-style:normal;"><a id="subtitle_colour">@LuminousMpartnerIB.Resource.ReferenceforHexCode</a></i>
                                     <label id="lblmessagehex2price" style=" font-size: 11px; color: red; position: absolute; top: 62px; left: 137px;"></label>
                                     <br />
                                     @Html.ValidationMessageFor(a => a.Sub_TitleColour, "", new { @class = "required" })
@@ -612,14 +612,15 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="">
-                                    <label>Upload Header Images<span class="required">*</span></label>
-                                    <input type="file" multiple="multiple" name="header_image" id="file_headerimage" style="border:none; height:inherit; margin-top:5px;" />
+                                    <label>@LuminousMpartnerIB.Resource.UploadHeaderImages<span class="required">*</span></label>
+                                    <label for="file_headerimage" class="btn" style="display:block;padding:5px; border:1px solid #ccc; width:20%;">@LuminousMpartnerIB.Resource.SelectImage</label>
+                                    <input type="file" id="file_headerimage" name="header_image" style="border:none; visibility:hidden; height:inherit; margin-top:5px;" />
                                     <i style="font-size:11px; font-style:normal;">(Dimension-700*151  Size- 4kb)</i>
                                     <span class="h_file_error" style="color:red;font-size:11px;"></span>
                                     <span id="Hfile" class="required"></span>
                                     <br />
                                     @*@Html.ValidationMessageFor(a => a.ImageSystemName, "", new { @class = "required" })*@
-                                    <label style="display: block; width: 100%; display: block; width: 100%; position: absolute; left: 269px; top: 5px;">Previous Image</label>
+                                    <label style="display: block; width: 100%; display: block; width: 100%; position: absolute; left: 269px; top: 5px;">@LuminousMpartnerIB.Resource.PreviousImage</label>
                                     <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.HeaderImageName" style="height: 73px; width: 22%; position: absolute; left: 455px; top: 3px; " />
                                 </div>
 
@@ -638,18 +639,19 @@
 
                 <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
                     <div class="addgift" style="padding-bottom: 10px;">
-                        <h2>Main</h2>
+                        <h2>@LuminousMpartnerIB.Resource.Main</h2>
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="">
-                                    <label> Upload Main Images<span class="required">*</span></label>
-                                    <input type="file" multiple="multiple" name="main_image" id="file_mainimage" class="form-control" style="border:none; height:inherit;" />
-                                    <i style="font-size:11px; font-style:normal;">(Dimension-500*500  Size- 50kb)</i>
+                                    <label> @LuminousMpartnerIB.Resource.UploadMainImages<span class="required">*</span></label>
+                                    <label for="file_mainimage" class="btn" style="display:block;padding:5px; border:1px solid #ccc; width:50%;">@LuminousMpartnerIB.Resource.Select</label>
+                                    <input type="file" id="file_mainimage" name="main_image" class="form-control" style="border:none; visibility:hidden; height:inherit;" />
+                                    <i style="font-size:11px; font-style:normal;">(@LuminousMpartnerIB.Resource.Dimension-500*500  @LuminousMpartnerIB.Resource.Size- 50kb)</i>
                                     <span class="m_file_error" style=" color:red;font-size:11px;"></span>
                                     <span id="Mfile" class="required"></span>
                                     <br />
                                     @*@Html.ValidationMessageFor(a => a.ImageSystemName, "", new { @class = "required" })*@
-                                    <label style="display:block; width:100%;">Previous Image</label>
+                                    <label style="display:block; width:100%;">LuminousMpartnerIB.PreviousImage</label>
                                     <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.MainImageName" style="height: 100px; width: 70%;" />
                                 </div>
 
@@ -661,7 +663,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Start Date<span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.StartDate<span class="required">*</span></label>
                                     @*<input id="sdate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="StartDate" /*@>
                                     <input id="sdate" type="text" class="date form-control" name="StartDate" />
 
@@ -669,7 +671,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>End Date<span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.EndDate<span class="required">*</span></label>
                                     <input id="edate" type="text" class="date form-control" name="EndDate" />
                                     @*<input id="edate" type="text" class="date form-control" placeholder="dd-mm-yyyy" autocomplete="off" name="EndDate" />*@
                                     <br />
@@ -678,8 +680,9 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label> Upload PDF</label>
-                                    <input type="file" name="Pdf_file" style="border:none; height:inherit;" />
+                                    <label> @LuminousMpartnerIB.Resource.UploadPDF</label>
+                                    <label for="pdf" class="btn" style="display:block;padding:5px; border:1px solid #ccc; width:30%;">@LuminousMpartnerIB.Resource.Select</label>
+                                    <input type="file" name="Pdf_file" id="pdf" style="border:none; visibility:hidden;  height:inherit;" />
                                     <br />
                                     @*@Html.ValidationMessageFor(a => a.PdfSystemName, "", new { @class = "required" })*@
                                 </div>
@@ -687,17 +690,17 @@
 
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Permission For</label>
+                                    <label>@LuminousMpartnerIB.Resource.PermissionFor</label>
                                     @{
                                         int id = Convert.ToInt32(Model.Id);
-                                        <a style="display: block; text-decoration: underline;" href="/EditPromotion_Price_Permission/Index/@id">Edit Permission</a>
+                                        <a style="display: block; text-decoration: underline;" href="/EditPromotion_Price_Permission/Index/@id">@LuminousMpartnerIB.Resource.EditPermission</a>
                                     }
                                 </div>
                             </div>
 
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Status</label>
+                                    <label>@LuminousMpartnerIB.Resource.Status</label>
                                     <input type="checkbox" checked="checked" name="statusC" style="height: inherit; margin-left: 5px; vertical-align: -2px;" />
                                 </div>
                             </div>
@@ -710,7 +713,7 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <input type="submit" id="btnsubmit" value="Submit" class="submitBtn" />
+                    <input type="submit" id="btnsubmit" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" />
                     <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
                 </div>
             </div>

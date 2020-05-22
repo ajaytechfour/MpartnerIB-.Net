@@ -11,12 +11,12 @@
 
 
 <script type="text/javascript">
-      
+
     $(function () {
-        debugger;     
-        $.post("@Url.Content("~/ViewDealer/GetGridData")", null, function (data) { SetGrid(data); }, "Json");                
+        debugger;
+        $.post("@Url.Content("~/ViewDealer/GetGridData")", null, function (data) { SetGrid(data); }, "Json");
     });
-        
+
 
     //Set Parent Category//
 
@@ -30,7 +30,7 @@
 
             body += "<tr><td> " + value.SapCode + "</td>" +
                 "<td>" + value.CustomerType + "</td>" +
-                
+
                 "<td>" + value.Name + "</td>" +
                 "<td>" + value.Address + "</td>" +
                 "<td>" + value.country + "</td>" +
@@ -85,57 +85,57 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>View Dealer </h1>
+            <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.View @LuminousMpartnerIB.Resource.Dealer </h1>
         </div>
     </div>
-    <div id="form">      
-            <div class="row">                         
+    <div id="form">
+        <div class="row">
 
-                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                    <div class="addgift" style="padding-bottom:30px;">
-                        <div>
-                            @using (Html.BeginForm("Index", "CreatePermotionPrice_New", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                            {
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom:30px;">
+                    <div>
+                        @using (Html.BeginForm("Index", "CreatePermotionPrice_New", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
 
-                                <table class="headingHd" style="width:100%;">
-                                    <tr>
-                                        <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Dealer List</th>
+                            <table class="headingHd" style="width:100%;">
+                                <tr>
+                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@LuminousMpartnerIB.Resource.Dealer @LuminousMpartnerIB.Resource.List</th>
 
-                                    </tr>
-                                </table>
-                            }
-                        </div>
-                        <div id="list" class="tabelGridRow">
-                            <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:15px; margin-bottom:15px">
-                                <thead>
-                                    <tr>
-                                        <th>SapCode</th>
-                                        <th>Customer Type</th>
-                                        <th>Name</th>
-                                        <th>Address </th>
-                                        <th>country</th>
-                                        <th>City</th>
-                                        <th>State</th>
-                                        @*<th>Contact No</th>*@
-                                        @*<th>Email</th>*@
-                                        @*<th>Created BY</th>*@
-                                        <th style="display:none">id</th>
-                                        <th style="text-align:right; width:10%;">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-
+                                </tr>
                             </table>
-                            <div>
-                                Pages :<span id="Paging"></span>
-                            </div>
-                        </div>
+                        }
+                    </div>
+                    <div id="list" class="tabelGridRow">
+                        <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:15px; margin-bottom:15px">
+                            <thead>
+                                <tr>
+                                    <th>@LuminousMpartnerIB.Resource.SapCode</th>
+                                    <th>@LuminousMpartnerIB.Resource.CustomerType</th>
+                                    <th>@LuminousMpartnerIB.Resource.Name</th>
+                                    <th>@LuminousMpartnerIB.Resource.Address </th>
+                                    <th>@LuminousMpartnerIB.Resource.Country</th>
+                                    <th>@LuminousMpartnerIB.Resource.City</th>
+                                    <th>@LuminousMpartnerIB.Resource.State</th>
+                                    @*<th>Contact No</th>*@
+                                    @*<th>Email</th>*@
+                                    @*<th>Created BY</th>*@
+                                    <th style="display:none">id</th>
+                                    <th style="text-align:right; width:10%;">@LuminousMpartnerIB.Resource.Action</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
 
+                        </table>
+                        <div>
+                            Pages :<span id="Paging"></span>
+                        </div>
                     </div>
 
                 </div>
 
-            </div>      
+            </div>
+
+        </div>
     </div>
 
     <div class="space30"></div>

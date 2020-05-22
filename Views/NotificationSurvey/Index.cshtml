@@ -362,7 +362,7 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>Survey/Contest Poll log</h1>
+            <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.Survey_ContestPolllog</h1>
         </div>
     </div>
 
@@ -374,7 +374,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="">
-                                <label id="">Survey Name<span class="required">*</span></label>
+                                <label id="">@LuminousMpartnerIB.Resource.SurveyName<span class="required">*</span></label>
                                 <div class="" id="surveytxt">
                                     @Html.TextBoxFor(a => a.Survey, new { @class = "form-control" })
                                     <br />
@@ -407,9 +407,9 @@
                             </div>*@
                         <div class="col-md-6">
                             <div class="">
-                                <label style="display:block;">Type<span class="required">*</span></label>
-                                @Html.RadioButton("Questiontype", "MCQ", new { id = "MCQ", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">MCQ</span>
-                                @Html.RadioButton("Questiontype", "Text", new { id = "Text", @style = "border:none; Height:inherit" }) <span id="spntxt">Text</span>
+                                <label style="display:block;">@LuminousMpartnerIB.Resource.Type<span class="required">*</span></label>
+                                @Html.RadioButton("Questiontype", "MCQ", new { id = "MCQ", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">@LuminousMpartnerIB.Resource.MCQ</span>
+                                @Html.RadioButton("Questiontype", "Text", new { id = "Text", @style = "border:none; Height:inherit" }) <span id="spntxt">@LuminousMpartnerIB.Resource.Text</span>
                                 @Html.ValidationMessageFor(a => a.QuestionType, "", new { @class = "required" })
                             </div>
                         </div>
@@ -417,7 +417,7 @@
                         <div class="" style="display:block; float:left; height:1px; width:100%; margin-top:10px"></div>
                         <div class="col-md-6">
                             <div class="">
-                                <label>Question Title<span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.QuestionTitle<span class="required">*</span></label>
                                 @Html.TextAreaFor(a => a.QuestionTitle, 5, 50, new { @class = "form-control", @style = "Width:100%; Height:60px" })
 
                                 @Html.ValidationMessageFor(a => a.QuestionTitle, "", new { @class = "required" })
@@ -426,7 +426,7 @@
 
                         <div class="col-md-6">
                             <div class="">
-                                <label>Option A<span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.OptionA<span class="required">*</span></label>
                                 @Html.TextAreaFor(a => a.OptionA, 5, 50, new { @class = "form-control", @style = "Width:100%; Height:60px" })
 
                                 @Html.ValidationMessageFor(a => a.OptionA, "", new { @class = "required" })
@@ -434,7 +434,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="">
-                                <label>Option B<span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.OptionB<span class="required">*</span></label>
                                 @Html.TextAreaFor(a => a.OptionB, 5, 50, new { @class = "form-control", @style = "Width:100%; Height:60px" })
 
                                 @Html.ValidationMessageFor(a => a.OptionB, "", new { @class = "required" })
@@ -443,7 +443,7 @@
 
                         <div class="col-md-6">
                             <div class="">
-                                <label>Option C</label>
+                                <label>@LuminousMpartnerIB.Resource.OptionC</label>
                                 @Html.TextAreaFor(a => a.OptionC, 5, 50, new { @class = "form-control", @style = "Width:100%; Height:60px" })
 
                                 @Html.ValidationMessageFor(a => a.OptionC, "", new { @class = "required" })
@@ -452,7 +452,7 @@
 
                         <div class="col-md-6">
                             <div class="">
-                                <label>Option D</label>
+                                <label>@LuminousMpartnerIB.Resource.OptionD</label>
                                 @Html.TextAreaFor(a => a.OptionD, 5, 50, new { @class = "form-control", @style = "Width:100%; Height:60px" })
 
                                 @Html.ValidationMessageFor(a => a.OptionD, "", new { @class = "required" })
@@ -461,7 +461,7 @@
 
                         <div class="col-md-6">
                             <div class="">
-                                <label>Option E</label>
+                                <label>@LuminousMpartnerIB.Resource.OptionE</label>
                                 @Html.TextAreaFor(a => a.OptionE, 5, 50, new { @class = "form-control", @style = "Width:100%; Height:60px" })
 
                                 @Html.ValidationMessageFor(a => a.OptionE, "", new { @class = "required" })
@@ -470,7 +470,7 @@
 
                         <div class="col-md-6">
                             <div class="">
-                                <label> Start Date <span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.StartDate <span class="required">*</span></label>
                                 <input id="stdate" type="text" class="date form-control" name="startdate" />
 
                                 <span id="sdate" class="required"></span>
@@ -478,7 +478,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="">
-                                <label> End Date <span class="required">*</span></label>
+                                <label> @LuminousMpartnerIB.Resource.EndDate <span class="required">*</span></label>
                                 <input id="etdate" type="text" class="date form-control" name="enddate" />
 
                                 <span id="edate" class="required"></span>
@@ -487,12 +487,12 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label style="display:block;">Correct Answer</label>
-                                @Html.RadioButton("Answer", "OptionA", new { id = "OptionAAns", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">A</span>
-                                @Html.RadioButton("Answer", "OptionB", new { id = "OptionBAns", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">B</span>
-                                @Html.RadioButton("Answer", "OptionC", new { id = "OptionCAns", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">C</span>
-                                @Html.RadioButton("Answer", "OptionD", new { id = "OptionDAns", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">D</span>
-                                @Html.RadioButton("Answer", "OptionE", new { id = "OptionEAns", @style = "border:none; Height:inherit" }) <span>E</span>
+                                <label style="display:block;">@LuminousMpartnerIB.Resource.CorrectAnswer</label>
+                                @Html.RadioButton("Answer", "OptionA", new { id = "OptionAAns", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">@LuminousMpartnerIB.Resource.A</span>
+                                @Html.RadioButton("Answer", "OptionB", new { id = "OptionBAns", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">@LuminousMpartnerIB.Resource.B</span>
+                                @Html.RadioButton("Answer", "OptionC", new { id = "OptionCAns", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">@LuminousMpartnerIB.Resource.C</span>
+                                @Html.RadioButton("Answer", "OptionD", new { id = "OptionDAns", @style = "border:none; Height:inherit" }) <span style="margin-right:15px;">@LuminousMpartnerIB.Resource.D</span>
+                                @Html.RadioButton("Answer", "OptionE", new { id = "OptionEAns", @style = "border:none; Height:inherit" }) <span>@LuminousMpartnerIB.Resource.E</span>
 
                                 @Html.ValidationMessageFor(a => a.CorrectAns, "", new { @class = "required" })
                             </div>
@@ -500,14 +500,14 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Status</label>
+                                <label>@LuminousMpartnerIB.Resource.Status</label>
                                 <input type="checkbox" checked="checked" name="statusC" style="border:none; Height:inherit" />
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="submit" class="submitBtn" value="Submit" />
+                                <input type="submit" class="submitBtn" value=@LuminousMpartnerIB.Resource.Submit />
                             </div>
                         </div>
                     </div>
@@ -518,9 +518,9 @@
                 <div class="addgift" style="padding-bottom: 10px;">
                     <table class="headingHd">
                         <tr>
-                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Survey/Contest List</th>
+                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@LuminousMpartnerIB.Resource.Survey_ContestList</th>
                             <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = @LuminousMpartnerIB.Resource.Search, @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
 
                             </th>
                         </tr>
@@ -531,23 +531,23 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            ID
+                                            @LuminousMpartnerIB.Resource.ID
                                         </th>
 
                                         <th>
-                                            Survey
+                                            @LuminousMpartnerIB.Resource.Survey
                                         </th>
                                         <th>
-                                            Question
+                                            @LuminousMpartnerIB.Resource.Question
                                         </th>
                                         <th>
-                                            QuestionType
+                                            @LuminousMpartnerIB.Resource.QuestionType
                                         </th>
                                         <th>
-                                            Status
+                                            @LuminousMpartnerIB.Resource.Status
                                         </th>
                                         <th style="text-align:right;">
-                                            Action
+                                            @LuminousMpartnerIB.Resource.Action
                                         </th>
                                     </tr>
                                 </thead>
@@ -557,19 +557,19 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            ID
+                                            @LuminousMpartnerIB.Resource.ID
                                         </th>
                                         <th>
-                                            Question
+                                            @LuminousMpartnerIB.Resource.Question
                                         </th>
                                         <th>
-                                            QuestionType
+                                            @LuminousMpartnerIB.Resource.QuestionType
                                         </th>
                                         <th>
-                                            Status
+                                            @LuminousMpartnerIB.Resource.Status
                                         </th>
                                         <th style="text-align:right;">
-                                            Action
+                                            @LuminousMpartnerIB.Resource.Action
                                         </th>
                                     </tr>
                                 </thead>

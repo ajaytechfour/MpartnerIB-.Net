@@ -8,7 +8,7 @@ using System.Data;
 using System.IO;
 namespace LuminousMpartnerIB.Controllers
 {
-    public class ProductCategoryViewController : Controller
+    public class ProductCategoryViewController : MultiLanguageController
     {
         //
         // GET: /ProductCategory/

@@ -7,7 +7,7 @@ using System.Data;
 using LuminousMpartnerIB.EF;
 namespace LuminousMpartnerIB.Controllers
 {
-    public class ParentCategoryViewController : Controller
+    public class ParentCategoryViewController : MultiLanguageController
     {
         //
         // GET: /ParentCategory/

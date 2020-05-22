@@ -144,8 +144,17 @@
   <data name="B" xml:space="preserve">
     <value>ب</value>
   </data>
+  <data name="Banner" xml:space="preserve">
+    <value>بانر</value>
+  </data>
   <data name="C" xml:space="preserve">
     <value>ج</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="CARD" xml:space="preserve">
+    <value>بطاقة</value>
   </data>
   <data name="CardType" xml:space="preserve">
     <value>نوع البطاقة</value>
@@ -174,8 +183,14 @@
   <data name="CorrectAnswer" xml:space="preserve">
     <value>اجابة صحيحة</value>
   </data>
+  <data name="Country" xml:space="preserve">
+    <value>بلد</value>
+  </data>
   <data name="CreatedBy" xml:space="preserve">
     <value>انشأ من قبل</value>
+  </data>
+  <data name="CreateSalesEmployees" xml:space="preserve">
+    <value>إنشاء موظفي المبيعات</value>
   </data>
   <data name="CustomerName" xml:space="preserve">
     <value>اسم الزبون</value>
@@ -231,6 +246,9 @@
   <data name="Email" xml:space="preserve">
     <value>البريد الإلكتروني</value>
   </data>
+  <data name="Employee" xml:space="preserve">
+    <value>موظف</value>
+  </data>
   <data name="EndDate" xml:space="preserve">
     <value>تاريخ الانتهاء</value>
   </data>
@@ -255,6 +273,12 @@
   <data name="Hex Code" xml:space="preserve">
     <value>كود سداسي عشري</value>
   </data>
+  <data name="Home" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="HomeCard" xml:space="preserve">
+    <value>بطاقة المنزل</value>
+  </data>
   <data name="ID" xml:space="preserve">
     <value>هوية شخصية</value>
   </data>
@@ -266,6 +290,9 @@
   </data>
   <data name="KeyFeature" xml:space="preserve">
     <value>الميزة الرئيسية</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>قائمة</value>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>تسجيل خروج</value>
@@ -306,6 +333,9 @@
   <data name="OptionE" xml:space="preserve">
     <value>الخيار هـ</value>
   </data>
+  <data name="Pages" xml:space="preserve">
+    <value>الصفحات</value>
+  </data>
   <data name="ParentCategory" xml:space="preserve">
     <value>القسم الرئيسي</value>
   </data>
@@ -323,6 +353,9 @@
   </data>
   <data name="PriceList" xml:space="preserve">
     <value>قائمة الاسعار</value>
+  </data>
+  <data name="ProductCatalog" xml:space="preserve">
+    <value>بيان المنتج</value>
   </data>
   <data name="ProductCategory" xml:space="preserve">
     <value>فئة المنتج</value>
@@ -354,6 +387,9 @@
   <data name="Rating" xml:space="preserve">
     <value>تقييم</value>
   </data>
+  <data name="Redirect" xml:space="preserve">
+    <value>إعادة توجيه</value>
+  </data>
   <data name="RedirectOption" xml:space="preserve">
     <value>خيار إعادة التوجيه</value>
   </data>
@@ -362,6 +398,15 @@
   </data>
   <data name="Region" xml:space="preserve">
     <value>منطقة</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>نقل</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>مبيعات</value>
+  </data>
+  <data name="SapCode" xml:space="preserve">
+    <value>SapCode</value>
   </data>
   <data name="SchemeDataList" xml:space="preserve">
     <value>قائمة بيانات المخطط</value>
@@ -377,6 +422,9 @@
   </data>
   <data name="SelectForRearrangedata" xml:space="preserve">
     <value>حدد لإعادة ترتيب البيانات</value>
+  </data>
+  <data name="SelectImage" xml:space="preserve">
+    <value>اختر صورة</value>
   </data>
   <data name="Send To" xml:space="preserve">
     <value>ارسل إلى</value>
@@ -395,6 +443,9 @@
   </data>
   <data name="Subject" xml:space="preserve">
     <value>موضوع</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>إرسال</value>
   </data>
   <data name="SubTitle" xml:space="preserve">
     <value>العنوان الفرعي</value>
@@ -416,6 +467,12 @@
   </data>
   <data name="SurveyName" xml:space="preserve">
     <value>اسم المسح</value>
+  </data>
+  <data name="SurveyReport" xml:space="preserve">
+    <value>تقرير استطلاع</value>
+  </data>
+  <data name="Surveys" xml:space="preserve">
+    <value>الدراسات الاستقصائية</value>
   </data>
   <data name="TechnicalSpecification" xml:space="preserve">
     <value>المواصفات الفنية</value>
@@ -458,6 +515,15 @@
   </data>
   <data name="UserId" xml:space="preserve">
     <value>معرف المستخدم</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>رأي</value>
+  </data>
+  <data name="ViewDealer" xml:space="preserve">
+    <value>عرض التاجر</value>
+  </data>
+  <data name="ViewSalesOrder" xml:space="preserve">
+    <value>عرض أمر المبيعات</value>
   </data>
   <data name="Warranty" xml:space="preserve">
     <value>ضمان</value>

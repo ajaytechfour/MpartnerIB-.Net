@@ -93,7 +93,7 @@
 <div id="page-wrapper" style="background: #f2f4f8; height:800px;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Catalog - </span> Edit Parent Category</h1>
+            <h1 class="pageHeading"><span>@LuminousMpartnerIB.Resource.Catalog - </span> @LuminousMpartnerIB.Resource.Edit @LuminousMpartnerIB.Resource.ParentCategory</h1>
         </div>
     </div>
 
@@ -107,7 +107,7 @@
                         @Html.HiddenFor(a => a.Pcid)
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Parent Category <span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.ParentCategory <span class="required">*</span></label>
                                 @Html.TextBoxFor(a => a.PCName, new { @class = "form-control" })
                                 <br />
                                 @Html.ValidationMessageFor(a => a.PCName, "", new { @class = "required" })
@@ -115,14 +115,14 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Status</label>
+                                <label>@LuminousMpartnerIB.Resource.Status</label>
                                 <input type="checkbox" checked="checked" id="statusC" name="statusC" style="border:none; height:inherit;" />
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="submit" value="Submit" class="submitBtn" />
-                                <input type="button" value="Cancel" class="submitBtn" onclick="Cancel();" />
+                                <input type="submit" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" />
+                                <input type="button" value=@LuminousMpartnerIB.Resource.Cancel class="submitBtn" onclick="Cancel();" />
                             </div>
                         </div>
                     </div>

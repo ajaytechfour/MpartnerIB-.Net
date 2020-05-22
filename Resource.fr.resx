@@ -123,11 +123,20 @@
   <data name="Action" xml:space="preserve">
     <value>Action</value>
   </data>
+  <data name="Add" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="AddAnotherForm" xml:space="preserve">
+    <value>Ajouter un autre formulaire</value>
+  </data>
   <data name="Address" xml:space="preserve">
     <value>Address</value>
   </data>
   <data name="AddScheme" xml:space="preserve">
     <value>Ajouter un schéma</value>
+  </data>
+  <data name="AlertNotification" xml:space="preserve">
+    <value>Notification d'alerte</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>Toute</value>
@@ -144,8 +153,23 @@
   <data name="B" xml:space="preserve">
     <value>B</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>Retour</value>
+  </data>
+  <data name="Banner" xml:space="preserve">
+    <value>Bannière</value>
+  </data>
+  <data name="Brochure" xml:space="preserve">
+    <value>Brochure</value>
+  </data>
   <data name="C" xml:space="preserve">
     <value>C</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="CARD" xml:space="preserve">
+    <value>CARTE</value>
   </data>
   <data name="CardType" xml:space="preserve">
     <value>Type de carte</value>
@@ -174,8 +198,14 @@
   <data name="CorrectAnswer" xml:space="preserve">
     <value>Bonne réponse</value>
   </data>
+  <data name="Country" xml:space="preserve">
+    <value>Pays</value>
+  </data>
   <data name="CreatedBy" xml:space="preserve">
     <value>Créé par</value>
+  </data>
+  <data name="CreateSalesEmployees" xml:space="preserve">
+    <value>Créer des employés de vente</value>
   </data>
   <data name="CustomerName" xml:space="preserve">
     <value>Nom du client</value>
@@ -194,6 +224,9 @@
   </data>
   <data name="DealerManagement" xml:space="preserve">
     <value>Gestion des concessionnaires</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supprimer</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>La description</value>
@@ -228,8 +261,14 @@
   <data name="EditPermission" xml:space="preserve">
     <value>Modifier l'autorisation</value>
   </data>
+  <data name="EditReceiver" xml:space="preserve">
+    <value>Modifier le récepteur</value>
+  </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Employée</value>
   </data>
   <data name="EndDate" xml:space="preserve">
     <value>Date de fin</value>
@@ -243,6 +282,12 @@
   <data name="FAQs" xml:space="preserve">
     <value>FAQ</value>
   </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="FullProductDetails" xml:space="preserve">
+    <value>Détail complet du produit</value>
+  </data>
   <data name="Gallery" xml:space="preserve">
     <value>Galerie</value>
   </data>
@@ -255,6 +300,12 @@
   <data name="Hex Code" xml:space="preserve">
     <value>Code hexadécimal</value>
   </data>
+  <data name="Home" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="HomeCard" xml:space="preserve">
+    <value>Home Card</value>
+  </data>
   <data name="ID" xml:space="preserve">
     <value>Identifiant</value>
   </data>
@@ -266,6 +317,9 @@
   </data>
   <data name="KeyFeature" xml:space="preserve">
     <value>Caractéristique clé</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>liste</value>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Se déconnecter</value>
@@ -306,6 +360,9 @@
   <data name="OptionE" xml:space="preserve">
     <value>Option E</value>
   </data>
+  <data name="Pages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
   <data name="ParentCategory" xml:space="preserve">
     <value>Catégorie Parentale</value>
   </data>
@@ -324,6 +381,9 @@
   <data name="PriceList" xml:space="preserve">
     <value>Liste de prix</value>
   </data>
+  <data name="ProductCatalog" xml:space="preserve">
+    <value>Catalogue de produits</value>
+  </data>
   <data name="ProductCategory" xml:space="preserve">
     <value>catégorie de produit</value>
   </data>
@@ -332,6 +392,9 @@
   </data>
   <data name="ProductDataList" xml:space="preserve">
     <value>قائمة بيانات المنتج</value>
+  </data>
+  <data name="ProductImages" xml:space="preserve">
+    <value>Images du produit</value>
   </data>
   <data name="ProductLevelThree" xml:space="preserve">
     <value>Niveau de produit trois</value>
@@ -354,6 +417,9 @@
   <data name="Rating" xml:space="preserve">
     <value>Évaluation</value>
   </data>
+  <data name="Redirect" xml:space="preserve">
+    <value>Réorienter</value>
+  </data>
   <data name="RedirectOption" xml:space="preserve">
     <value>Option de redirection</value>
   </data>
@@ -362,6 +428,18 @@
   </data>
   <data name="Region" xml:space="preserve">
     <value>Région</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Retirer</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Rapport</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Ventes</value>
+  </data>
+  <data name="SapCode" xml:space="preserve">
+    <value>SapCode</value>
   </data>
   <data name="SchemeDataList" xml:space="preserve">
     <value>Liste des données du schéma</value>
@@ -375,8 +453,14 @@
   <data name="Select" xml:space="preserve">
     <value>Sélectionner</value>
   </data>
+  <data name="SelectedPermission" xml:space="preserve">
+    <value>Autorisation sélectionnée</value>
+  </data>
   <data name="SelectForRearrangedata" xml:space="preserve">
     <value>Sélectionnez Pour réorganiser les données</value>
+  </data>
+  <data name="SelectImage" xml:space="preserve">
+    <value>Sélectionnez l'image</value>
   </data>
   <data name="SendTo" xml:space="preserve">
     <value>Envoyer à</value>
@@ -395,6 +479,9 @@
   </data>
   <data name="Subject" xml:space="preserve">
     <value>Matière</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Soumettre</value>
   </data>
   <data name="SubTitle" xml:space="preserve">
     <value>Sous-titre</value>
@@ -416,6 +503,12 @@
   </data>
   <data name="SurveyName" xml:space="preserve">
     <value>Nom de l'enquête</value>
+  </data>
+  <data name="SurveyReport" xml:space="preserve">
+    <value>Rapport d'enquête</value>
+  </data>
+  <data name="Surveys" xml:space="preserve">
+    <value>Enquêtes</value>
   </data>
   <data name="TechnicalSpecification" xml:space="preserve">
     <value>Spécifications techniques</value>
@@ -458,6 +551,15 @@
   </data>
   <data name="UserId" xml:space="preserve">
     <value>Identifiant d'utilisateur</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Vue</value>
+  </data>
+  <data name="ViewDealer" xml:space="preserve">
+    <value>Voir le concessionnaire</value>
+  </data>
+  <data name="ViewSalesOrder" xml:space="preserve">
+    <value>Afficher la commande client</value>
   </data>
   <data name="Warranty" xml:space="preserve">
     <value>garantie</value>

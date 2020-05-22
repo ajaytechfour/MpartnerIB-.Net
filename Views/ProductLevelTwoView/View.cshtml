@@ -7,72 +7,71 @@
 
 
 <style type="text/css">
-    .required
-    {
+    .required {
         color: Red;
     }
-    table
-    {
+
+    table {
         border: 0;
         border-spacing: 0;
         font-size: 0.857em;
         margin: 10px 0;
         width: 100%;
     }
-    table table
-    {
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
         font-size: 1em;
     }
-    #footer-wrapper table
-    {
-        font-size: 1em;
-    }
-    table tr th
-    {
+
+    table tr th {
         background: #757575;
         background: rgba(0, 0, 0, 0.51);
         border-bottom-style: none;
     }
-    table tr th, table tr th a, table tr th a:hover
-    {
-        color: #FFF;
-        font-weight: bold;
-    }
-    table tbody tr th
-    {
+
+        table tr th, table tr th a, table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
         vertical-align: top;
     }
-    tr td, tr th
-    {
+
+    tr td, tr th {
         padding: 4px 9px;
         border: 1px solid #fff;
         text-align: left; /* LTR */
     }
-    #footer-wrapper tr td, #footer-wrapper tr th
-    {
+
+    #footer-wrapper tr td, #footer-wrapper tr th {
         border-color: #555;
         border-color: rgba(255, 255, 255, 0.18);
     }
-    tr.odd
-    {
+
+    tr.odd {
         background: #e4e4e4;
         background: rgba(0, 0, 0, 0.105);
     }
-    tr, tr.even
-    {
+
+    tr, tr.even {
         background: #efefef;
         background: rgba(0, 0, 0, 0.063);
     }
-    table ul.links
-    {
+
+    table ul.links {
         margin: 0;
         padding: 0;
         font-size: 1em;
     }
-    table ul.links li
-    {
-        padding: 0 1em 0 0;
-    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
 </style>
 <script type="text/javascript">
     $(function () {
@@ -100,7 +99,7 @@
             location.href = "@Url.Content("~/ProductLevelTwo/index")";
         }
     });
-        
+
 
     function Cancel() {
         location.href = "@Url.Content("~/ProductLevelTwo/index")";
@@ -113,9 +112,9 @@
         $.each(data, function (key, value) {
 
             option += "<option value=" + value.id + ">" + value.Name + "</option>";
-             if (value.id == '@ViewBag.Pid') {
+            if (value.id == '@ViewBag.Pid') {
                 debugger;
-                 $("#txtProductCategory").val(value.Name);
+                $("#txtProductCategory").val(value.Name);
             }
 
         });
@@ -138,9 +137,9 @@
         $.each(data, function (key, value) {
 
             option += "<option value=" + value.id + ">" + value.Name + "</option>";
-             if (value.id == '@ViewBag.Prntid') {
+            if (value.id == '@ViewBag.Prntid') {
                 debugger;
-                 $("#txtParentCategory").val(value.Name);
+                $("#txtParentCategory").val(value.Name);
             }
 
         });
@@ -174,7 +173,7 @@
                         <div class="row" id="GridView">
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Parent Category<span class="required"></span></label>
+                                    <label>@LuminousMpartnerIB.Resource.ParentCategory<span class="required"></span></label>
                                     <select name="ParentCatid" class="form-control" id="ParentCategory" style="display:none">
                                         <option>Select</option>
                                     </select>
@@ -184,7 +183,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Product Category <span class="required"></span></label>
+                                    <label>@LuminousMpartnerIB.Resource.ProductCategory <span class="required"></span></label>
                                     <select name="pcId" class="form-control" id="ProductCategory" style="display:none">
                                         <option>Select</option>
                                     </select>
@@ -196,27 +195,27 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Product Level Two</label>
+                                    <label>@LuminousMpartnerIB.Resource.ProductLevelTwo</label>
                                     @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @readonly = "readonly" })
                                     @Html.ValidationMessageFor(model => model.Name, "", new { @class = "required" })
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 @*<div class="form-group">
-                                    <label>Status</label>
-                                    <input type="checkbox" checked="checked" name="statusC" />
-                                </div>*@
+                                        <label>Status</label>
+                                        <input type="checkbox" checked="checked" name="statusC" />
+                                    </div>*@
                             </div>
                             @*<div class="col-md-12">
-                                <div class="form-group">
-                                    <input type="submit" value="Submit" class="submitBtn" />
-                                    <input type="button" value="Cancel" onclick="Cancel();" class="submitBtn" style="background:rgba(0, 0, 0, 0.51)" />
-                                </div>
-                            </div>*@
+                                    <div class="form-group">
+                                        <input type="submit" value="Submit" class="submitBtn" />
+                                        <input type="button" value="Cancel" onclick="Cancel();" class="submitBtn" style="background:rgba(0, 0, 0, 0.51)" />
+                                    </div>
+                                </div>*@
                         </div>
                     </div>
                 </div>
             </div>
-         }
-      </div>
+        }
+    </div>
 </div>

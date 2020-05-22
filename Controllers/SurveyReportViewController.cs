@@ -10,7 +10,7 @@ using System.Web.UI;
 namespace LuminousMpartnerIB.Controllers
 {
 
-    public class SurveyReportViewController : Controller
+    public class SurveyReportViewController : MultiLanguageController
     {
         //
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();

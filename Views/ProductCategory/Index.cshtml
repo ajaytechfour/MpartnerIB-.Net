@@ -238,7 +238,7 @@
 <div id="page-wrapper" style="background: #f2f4f8; min-height:800px;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Catalog - </span> Product Category</h1>
+            <h1 class="pageHeading"><span>@LuminousMpartnerIB.Resource.Catalog - </span> @LuminousMpartnerIB.Resource.ProductCategory</h1>
         </div>
     </div>
 
@@ -250,9 +250,9 @@
                     <div class="row" id="GridView">
                         <div class="col-md-3">
                             <div class="">
-                                <label>Parent Category <span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.ParentCategory <span class="required">*</span></label>
                                 <select name="pcId" id="ParentCategory" class="form-control">
-                                    <option>Select</option>
+                                    <option>@LuminousMpartnerIB.Resource.Select</option>
                                 </select>
                              
                                 @Html.ValidationMessageFor(model => model.ParentCatid, "", new { @class = "required" })
@@ -260,7 +260,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Product Category <span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.ProductCategory <span class="required">*</span></label>
                                 @Html.TextBoxFor(a => a.PName, new { @class = "form-control" })
 
                                 @Html.ValidationMessageFor(a => a.PName, "", new { @class = "required" })
@@ -268,20 +268,21 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Upload PDF<span class="required">*</span></label>
-                                <input type="file" name="Postedfile" style="border:none; height:inherit;" />
+                                <label>@LuminousMpartnerIB.Resource.UploadPDF<span class="required">*</span></label>                                
+                                <label for="pdf" class="btn" style="display:block;padding:5px; border:1px solid #ccc; width:50%;">@LuminousMpartnerIB.Resource.Select</label>
+                                <input type="file" id="pdf" name="Postedfile" style="border:none;visibility:hidden; height:inherit;" />
                                 <span id="file" class="required"></span>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Status</label>
+                                <label>@LuminousMpartnerIB.Resource.Status</label>
                                 <input type="checkbox" checked="checked" name="statusC" style="border:none; height:inherit;" />
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="submit" class="submitBtn" value="Submit" />
+                                <input type="submit" class="submitBtn" value=@LuminousMpartnerIB.Resource.Submit />
                             </div>
                         </div>
                     </div>
@@ -296,9 +297,9 @@
                             {*@
                             <table class="headingHd">
                                 <tr>
-                                    <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Gallery List</th>
+                                    <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@LuminousMpartnerIB.Resource.Gallery @LuminousMpartnerIB.Resource.List</th>
                                     <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Gallery", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = @LuminousMpartnerIB.Resource.Gallery, @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
 
                                     </th>
                                 </tr>
@@ -312,19 +313,19 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        ID
+                                        @LuminousMpartnerIB.Resource.ID
                                     </th>
                                     <th>
-                                        Parent Category
+                                        @LuminousMpartnerIB.Resource.ParentCategory
                                     </th>
                                     <th>
-                                        Product Category
+                                        @LuminousMpartnerIB.Resource.ProductCategory
                                     </th>
                                     <th>
-                                        Status
+                                        @LuminousMpartnerIB.Resource.Status
                                     </th>
                                     <th style="text-align:right;">
-                                        Action
+                                        @LuminousMpartnerIB.Resource.Action
                                     </th>
                                 </tr>
                             </thead>

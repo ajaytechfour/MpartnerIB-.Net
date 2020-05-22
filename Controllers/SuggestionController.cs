@@ -31,26 +31,26 @@ namespace LuminousMpartnerIB.Controllers
                 ViewBag.countryList = countryList;
 
                 var cd = (from co in db.contactUsDetails
-                                     join c in db.Countries
-                                     on co.Country equals c.CountryID
-                                     join st in db.States
-                                     on co.State equals st.StateID
-                                     join ci in db.cities
-                                     on co.City equals ci.id
-                                     where co.Cstatus==1
-                                     select new ContactUsModel
-                                     {
-                                         ID=co.id,
-                                         Name=co.Contact_Us_Type,
-                                         Address= co.CAddress,
-                                         ContactNo=co.PhoneNumber,
-                                         Email=co.Email,
-                                         Fax= co.Fax,
-                                         Country=c.CountryName,
-                                         State=st.StateName,
-                                         City=ci.cityname
+                          join c in db.Countries
+                          on co.Country equals c.CountryID
+                          join st in db.States
+                          on co.State equals st.StateID
+                          join ci in db.cities
+                          on co.City equals ci.id
+                          where co.Cstatus == 1
+                          select new ContactUsModel
+                          {
+                              ID = co.id,
+                              Name = co.Contact_Us_Type,
+                              Address = co.CAddress,
+                              ContactNo = co.PhoneNumber,
+                              Email = co.Email,
+                              Fax = co.Fax,
+                              Country = c.CountryName,
+                              State = st.StateName,
+                              City = ci.cityname
 
-                                     });     
+                          });
 
                 return View(cd);
 
@@ -64,7 +64,7 @@ namespace LuminousMpartnerIB.Controllers
             {
                 if (countryId > 0)
                 {
-                   // var StaleList = db.States.Where(x=>x.CountryID == countryId).Select(x => new { x.StateID, x.StateName }).ToList();
+                    // var StaleList = db.States.Where(x=>x.CountryID == countryId).Select(x => new { x.StateID, x.StateName }).ToList();
                     var StaleList = db.States.Select(x => new { x.StateID, x.StateName }).ToList();
                     if (StaleList.Count > 0)
                     {
@@ -94,7 +94,7 @@ namespace LuminousMpartnerIB.Controllers
                 if (stateId > 0)
                 {
                     // var StaleList = db.States.Where(x=>x.CountryID == countryId).Select(x => new { x.StateID, x.StateName }).ToList();
-                    var CityList = db.cities.Where(x=>x.stateid== stateId).Select(x => new { x.id, x.cityname }).ToList();
+                    var CityList = db.cities.Where(x => x.stateid == stateId).Select(x => new { x.id, x.cityname }).ToList();
                     if (CityList.Count > 0)
                     {
                         return Json(CityList, JsonRequestBehavior.AllowGet);
@@ -116,11 +116,11 @@ namespace LuminousMpartnerIB.Controllers
 
         }
 
-        public ActionResult SaveContact(string[] name,string[] address, string[] contactNo, string[] email, string[] fax, string[] country, string[] state, string[] city)
+        public ActionResult SaveContact(string[] name, string[] address, string[] contactNo, string[] email, string[] fax, string[] country, string[] state, string[] city)
         {
             try
             {
-                for (int i=0;i<name.Length;i++)
+                for (int i = 0; i < name.Length; i++)
                 {
                     contactUsDetail cd = new contactUsDetail();
                     cd.Contact_Us_Type = name[i];
@@ -158,7 +158,7 @@ namespace LuminousMpartnerIB.Controllers
                 ViewBag.countryList = countryList;
                 var item = (from c in db.contactUsDetails
                             where c.id == id
-                            select new 
+                            select new
                             {
                                 ID = c.id,
                                 Name = c.Contact_Us_Type,
@@ -167,7 +167,7 @@ namespace LuminousMpartnerIB.Controllers
                                 Email = c.Email,
                                 Fax = c.Fax,
                                 Country = c.Country,
-                                State =  c.State,
+                                State = c.State,
                                 City = c.City
 
                             });
@@ -180,12 +180,12 @@ namespace LuminousMpartnerIB.Controllers
             {
 
             }
-            return null;          
+            return null;
 
         }
 
 
-        public ActionResult Update(int id,string name, string address, string contactNo, string email, string fax, string country, string state,string city)
+        public ActionResult Update(int id, string name, string address, string contactNo, string email, string fax, string country, string state, string city)
         {
 
             try
@@ -201,13 +201,13 @@ namespace LuminousMpartnerIB.Controllers
                 cd.ModifiedBy = Session["userid"].ToString();
                 cd.Country = Convert.ToInt32(country);
                 cd.State = Convert.ToInt32(state);
-                cd.City = Convert.ToInt32(city);               
+                cd.City = Convert.ToInt32(city);
                 db.SaveChanges();
                 TempData["message"] = "Record Updated Successfully!";
                 return RedirectToAction("SuggestionList", "Suggestion");
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -222,10 +222,10 @@ namespace LuminousMpartnerIB.Controllers
 
             try
             {
-                var cd = db.contactUsDetails.Where(x => x.id == id).FirstOrDefault();                
+                var cd = db.contactUsDetails.Where(x => x.id == id).FirstOrDefault();
                 cd.Cstatus = 0;
                 cd.ModifiedDate = DateTime.Now;
-                cd.ModifiedBy = Session["userid"].ToString();                
+                cd.ModifiedBy = Session["userid"].ToString();
                 db.SaveChanges();
                 TempData["message"] = "Record Deleted Successfully!";
                 return RedirectToAction("SuggestionList", "Suggestion");

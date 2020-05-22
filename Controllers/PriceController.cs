@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class PriceController : Controller
+    public class PriceController : MultiLanguageController
     {
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();

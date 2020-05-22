@@ -11,7 +11,7 @@ using TVS;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : MultiLanguageController
     {
         datautility dut = new datautility();
         DataTable dt = new DataTable();

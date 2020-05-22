@@ -99,7 +99,7 @@
         @*$.post("@Url.Content("~/HomeCard/GetCardProvider")", null, function (data) { SetCardGrid(data); }, "Json");
         $.post("@Url.Content("~/HomeCard/GetRedirectPage")", null, function (data) { SetRedirectPage(data); }, "Json");*@
 
-    
+
         ValidationMessage();
 
     });
@@ -143,7 +143,7 @@
             option = "";
             var procat = $("#ddlDistributor");
             procat.empty();
-            procat.append("<option value=0>Select</option>");
+            procat.append("<option value=0>@LuminousMpartnerIB.Resource.Select</option>");
             $.each(data, function (key, value) {
                 option += "<option value=" + value.id + ">" + value.Name + "</option>";
 
@@ -237,7 +237,7 @@
             option = "";
             var procat = $("#Ctype");
             procat.empty();
-            procat.append("<option value=0>Select</option>");
+            procat.append("<option value=0>@LuminousMpartnerIB.Resource.Select</option>");
             $.each(data, function (key, value) {
                 option += "<option value=" + value.id + ">" + value.Name + "</option>";
 
@@ -1444,36 +1444,36 @@
 <div id="page-wrapper" style="background: #f2f4f8; min-height:800px;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span> Home Card</h1>
+            <h1 class="pageHeading"><span></span> @LuminousMpartnerIB.Resource.Home @LuminousMpartnerIB.Resource.CARD</h1>
         </div>
     </div>
     <div id="form" style="">
-     
-            <div class="row">
-                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="">
-                                    <label>Distributor Name <span class="required"></span></label>
-                                    <select name="ddlDistributor" id="ddlDistributor" onchange="Getgriddata(this.value);" class="form-control">
-                                        <option>Select</option>
-                                    </select>
-                                </div>
+
+        <div class="row">
+            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="">
+                                <label>@LuminousMpartnerIB.Resource.Distributor @LuminousMpartnerIB.Resource.Name <span class="required"></span></label>
+                                <select name="ddlDistributor" id="ddlDistributor" onchange="Getgriddata(this.value);" class="form-control">
+                                    <option>@LuminousMpartnerIB.Resource.Select</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                 </div>
-                           
-                <!-- Common Box -->
-                @*<div class="aos-init aos-animate datetime">                  
+            </div>
+
+            <!-- Common Box -->
+            @*<div class="aos-init aos-animate datetime">
                     <div class="col-md-12" style="margin:10px 0 25px 0;">
                         <input type="button" id="btnsubmit" value="Back" class="submitBtn" />
                         <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
                     </div>
                 </div>*@
-            </div>
-     
+        </div>
+
 
         <div class="aos-init aos-animate row">
             <div class="addgift" style="padding-bottom: 10px;">
@@ -1484,9 +1484,9 @@
                         {
                             <table class="headingHd" style="width:100%;">
                                 <tr>
-                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 71%;"> Banner List</th>
+                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 71%;"> @LuminousMpartnerIB.Resource.Banner @LuminousMpartnerIB.Resource.List</th>
                                     <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:19px; opacity: 0.7;">
+                                        @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = @LuminousMpartnerIB.Resource.Search, @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:19px; opacity: 0.7;">
                                         @*<input type="submit" id="btnsearch" value="Search" style="border:none; background: #ffaf38; padding: 7px 18px; border-radius: 5px;" />*@
                                     </th>
                                 </tr>
@@ -1497,14 +1497,14 @@
                         <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Card Type</th>
-                                    <th>Title</th>
-                                    <th>Sub Title</th>
-                                    <th>Start Date</th>
-                                    <th>End Date</th>
-                                    <th>Status</th>
-                                    <th style="text-align:right;">Action</th>
+                                    <th>@LuminousMpartnerIB.Resource.ID</th>
+                                    <th>@LuminousMpartnerIB.Resource.CardType</th>
+                                    <th>@LuminousMpartnerIB.Resource.Title</th>
+                                    <th>@LuminousMpartnerIB.Resource.SubTitle</th>
+                                    <th>@LuminousMpartnerIB.Resource.StartDate</th>
+                                    <th>@LuminousMpartnerIB.Resource.EndDate</th>
+                                    <th>@LuminousMpartnerIB.Resource.Status</th>
+                                    <th style="text-align:right;">@LuminousMpartnerIB.Resource.Action</th>
                                 </tr>
 
                             </thead>

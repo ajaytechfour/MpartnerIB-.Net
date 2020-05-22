@@ -724,7 +724,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label> Card Type<span class="required">*</span></label>
+                                <label> @LuminousMpartnerIB.Resource.CardType<span class="required">*</span></label>
                                 <select name="Ctype" class="form-control" id="Ctype" style="display:none">
                                     <option>Select</option>
                                 </select>
@@ -740,23 +740,24 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Redirect Page<span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.Redirect @LuminousMpartnerIB.Resource.Pages<span class="required">*</span></label>
                                 @Html.HiddenFor(c => c.Id)
                                 <select name="redirectpage1" class="redirectpage1 form-control">
-                                    <option>Select</option>
+                                    <option>@LuminousMpartnerIB.Resource.Select</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Upload Image<span class="required">*</span></label>
-                                <input type="file" name="postedFile" style="border:none;" />
+                                <label>@LuminousMpartnerIB.Resource.UploadImage<span class="required">*</span></label>
+                                <label for="file_headerimage" class="btn" style="display:block;padding:5px; border:1px solid #ccc; width:50%;">@LuminousMpartnerIB.Resource.SelectImage</label>
+                                <input type="file" id="file_headerimage" name="postedFile" style="border:none;visibility:hidden; " />
                                 <span class="file_error" style="color:red"></span>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label style="display:block; width:100%;">Previous Image</label>
+                                <label style="display:block; width:100%;">@LuminousMpartnerIB.Resource.PreviousImage</label>
                                 <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" readonly="readonly" />
                             </div>
                         </div>
@@ -834,13 +835,13 @@
                 <div class="addgift" style="padding-bottom: 10px;">
                     <div class="row">
                         @*<div class="col-md-4">
-                            <div class="form-group">
-                                <label>Redirect Page<span class="required">*</span></label>
-                                <select name="redirectpage1_SchemeCard" class="redirectpage1 form-control">
-                                    <option>Select</option>
-                                </select>
-                            </div>
-                        </div>*@
+                                <div class="form-group">
+                                    <label>Redirect Page<span class="required">*</span></label>
+                                    <select name="redirectpage1_SchemeCard" class="redirectpage1 form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>*@
                         @*<div class="col-md-4">
                                 <div class="form-group">
                                     <label> Upload Main Image<span class="required">*</span></label>
@@ -852,7 +853,7 @@
                             <div class="form-group">
                                 @*<label style="display:block; width:100%;">Previous Image</label>*@
                                 @*<label> Main Image<span class="required">*</span></label>
-                                <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Imagename1" style="height:100px;width:100%;" />*@
+                                    <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.Imagename1" style="height:100px;width:100%;" />*@
                             </div>
                         </div>
                     </div>
@@ -863,12 +864,12 @@
                 <div class="addgift" style="padding-bottom: 10px;">
                     <div class="row">
                         @*<div class="col-md-3">
-                            <div class="form-group">
-                                <label>Upload Main Image<span class="required">*</span></label>
-                                <input type="file" name="mainimageup" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>
-                            </div>
-                        </div>*@
+                                <div class="form-group">
+                                    <label>Upload Main Image<span class="required">*</span></label>
+                                    <input type="file" name="mainimageup" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>*@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Upload Main Image<span class="required"></span></label>
@@ -877,12 +878,12 @@
                             </div>
                         </div>
                         @*<div class="col-md-3">
-                            <div class="form-group">
-                                <label>Upload Grid Background Image<span class="required">*</span></label>
-                                <input type="file" name="gridbackimage" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>
-                            </div>
-                        </div>*@
+                                <div class="form-group">
+                                    <label>Upload Grid Background Image<span class="required">*</span></label>
+                                    <input type="file" name="gridbackimage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>
+                                </div>
+                            </div>*@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Upload Grid Background Image<span class="required"></span></label>
@@ -906,8 +907,8 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 @*<label>Upload Image<span class="required">*</span></label>
-                                <input type="file" name="first_upload_gridchildmainimage" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>*@
+                                    <input type="file" name="first_upload_gridchildmainimage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>*@
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -920,9 +921,9 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 @*<label>Redirect Page<span class="required">*</span></label>
-                                <select name="redirectpage1_Homecard" class="redirectpage1 form-control">
-                                    <option>Select</option>
-                                </select>*@
+                                    <select name="redirectpage1_Homecard" class="redirectpage1 form-control">
+                                        <option>Select</option>
+                                    </select>*@
                             </div>
                         </div>
                     </div>
@@ -942,8 +943,8 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 @*<label>Upload Image<span class="required">*</span></label>
-                                <input type="file" name="second_upload_gridchildmainimage" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>*@
+                                    <input type="file" name="second_upload_gridchildmainimage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>*@
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -956,9 +957,9 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 @*<label> Redirect Page<span class="required">*</span></label>
-                                <select name="redirectpage2_Homecard" class="redirectpage2 form-control">
-                                    <option>Select</option>
-                                </select>*@
+                                    <select name="redirectpage2_Homecard" class="redirectpage2 form-control">
+                                        <option>Select</option>
+                                    </select>*@
                             </div>
                         </div>
                     </div>
@@ -978,8 +979,8 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 @*<label>Upload Image<span class="required">*</span></label>
-                                <input type="file" name="third_upload_gridchildmainimage" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>*@
+                                    <input type="file" name="third_upload_gridchildmainimage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>*@
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -992,9 +993,9 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 @*<label>Redirect Page<span class="required">*</span></label>
-                                <select name="redirectpage3_Homecard" class="redirectpage3 form-control" >
-                                    <option>Select</option>
-                                </select>*@
+                                    <select name="redirectpage3_Homecard" class="redirectpage3 form-control" >
+                                        <option>Select</option>
+                                    </select>*@
                             </div>
                         </div>
                     </div>
@@ -1014,8 +1015,8 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 @*<label>Upload Image<span class="required">*</span></label>
-                                <input type="file" name="four_upload_gridchildmainimage" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>*@
+                                    <input type="file" name="four_upload_gridchildmainimage" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>*@
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -1028,9 +1029,9 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 @*<label> Redirect Page<span class="required">*</span></label>
-                                <select name="redirectpage4_Homecard" class="redirectpage4 form-control">
-                                    <option>Select</option>
-                                </select>*@
+                                    <select name="redirectpage4_Homecard" class="redirectpage4 form-control">
+                                        <option>Select</option>
+                                    </select>*@
                             </div>
                         </div>
                     </div>
@@ -1042,22 +1043,22 @@
                     <div class="row">
                         <div class="col-md-4">
                             @*<div class="form-group">
-                                <label>Redirect Page<span class="required"></span></label>
-                                <select name="redirectpage1_knowMore" class="redirectpage1 form-control">
-                                    <option>Select</option>
-                                </select>
-                            </div>*@
+                                    <label>Redirect Page<span class="required"></span></label>
+                                    <select name="redirectpage1_knowMore" class="redirectpage1 form-control">
+                                        <option>Select</option>
+                                    </select>
+                                </div>*@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 @*<label>Upload Image<span class="required">*</span></label>
-                                <input type="file" name="mainimage_KnowMoreCard" style="border:none;" />
-                                <span class="file_error" style="color:red"></span>*@
+                                    <input type="file" name="mainimage_KnowMoreCard" style="border:none;" />
+                                    <span class="file_error" style="color:red"></span>*@
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Upload Image<span class="required"></span></label>
+                                <label>@LuminousMpartnerIB.Resource.UploadImage<span class="required"></span></label>
                                 @*<label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>*@
                                 <img src="@Url.Content("~/MpartnerNewApi/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
                             </div>
@@ -1095,9 +1096,9 @@
                             <table id="dynaTableContent" class="tabelGridRow2" style="width:100%; display:inline-table;">
                                 <thead>
                                     <tr class="banner_cardprovider">
-                                        <th>Redirect Pages</th>
+                                        <th>@LuminousMpartnerIB.Resource.Redirect @LuminousMpartnerIB.Resource.Pages</th>
                                         <th>ImageName</th>
-                                        <th style="text-align:right;">Previous Image</th>
+                                        <th style="text-align:right;">@LuminousMpartnerIB.Resource.PreviousImage</th>
                                     </tr>
                                 </thead>
                                 <tbody></tbody>
@@ -1112,22 +1113,22 @@
                     <div class="row datetime">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Start Date<span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.StartDate<span class="required">*</span></label>
                                 <input id="sdate" type="text" class="date form-control" name="StartDate" value="@ViewBag.preStartDate" readonly="readonly" />
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>End Date<span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.EndDate<span class="required">*</span></label>
                                 <input id="edate" type="text" class="date form-control" name="EndDate" value="@ViewBag.PreEndDate" readonly="readonly" />
                             </div>
                         </div>
                         @*<div class="col-md-4">
-                            <div class="form-group">
-                                <label> Status</label>
-                                <input type="checkbox" checked="checked" name="statusC" disabled="disabled" />
-                            </div>
-                        </div>*@
+                                <div class="form-group">
+                                    <label> Status</label>
+                                    <input type="checkbox" checked="checked" name="statusC" disabled="disabled" />
+                                </div>
+                            </div>*@
                     </div>
                 </div>
             </div>

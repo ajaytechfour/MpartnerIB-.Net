@@ -12,7 +12,7 @@ using LuminousMpartnerIB.Models;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class CreateSalesEmployeesController : Controller
+    public class CreateSalesEmployeesController : MultiLanguageController
     {
         datautility dut = new datautility();
         DataTable dt = new DataTable();

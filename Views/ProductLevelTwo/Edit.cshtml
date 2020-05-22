@@ -156,7 +156,7 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Product Level Two - </span> Edit</h1>
+            <h1 class="pageHeading"><span>@LuminousMpartnerIB.Resource.ProductLevelTwo - </span> @LuminousMpartnerIB.Resource.Edit</h1>
         </div>
     </div>
 
@@ -170,18 +170,18 @@
                         <div class="row" id="GridView">
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Parent Category<span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.ParentCategory<span class="required">*</span></label>
                                     <select name="ParentCatid" class="form-control" id="ParentCategory">
-                                        <option>Select</option>
+                                        <option>@LuminousMpartnerIB.Resource.Select</option>
                                     </select>
                                     @Html.ValidationMessageFor(model => model.ParentCatid, "", new { @class = "required" })
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Product Category <span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.ProductCategory <span class="required">*</span></label>
                                     <select name="pcId" class="form-control" id="ProductCategory">
-                                        <option>Select</option>
+                                        <option>@LuminousMpartnerIB.Resource.Select</option>
                                     </select>
                                     @Html.HiddenFor(model => model.id)
                                     @Html.ValidationMessageFor(model => model.PrductID, "", new { @class = "required" })
@@ -190,21 +190,21 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Product Level Two</label>
+                                    <label>@LuminousMpartnerIB.Resource.ProductLevelTwo</label>
                                     @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.Name, "", new { @class = "required" })
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>Status</label>
+                                    <label>@LuminousMpartnerIB.Resource.Status</label>
                                     <input type="checkbox" checked="checked" name="statusC" />
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="submit" value="Submit" class="submitBtn" />
-                                    <input type="button" value="Cancel" onclick="Cancel();" class="submitBtn" style="background:rgba(0, 0, 0, 0.51)" />
+                                    <input type="submit" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" />
+                                    <input type="button" value=@LuminousMpartnerIB.Resource.Cancel onclick="Cancel();" class="submitBtn" style="background:rgba(0, 0, 0, 0.51)" />
                                 </div>
                             </div>
                         </div>

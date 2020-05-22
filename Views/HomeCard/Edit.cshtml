@@ -5,12 +5,13 @@
     var title1 = ViewData["Title"] as string[];
 
 }
-<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
-@*<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
-<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
-<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
-<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
-<link href="@Url.Content("~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content(" ~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+@*
+<script src="@Url.Content(" ~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+<script src="@Url.Content(" ~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+<link href="@Url.Content(" ~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content(" ~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+<link href="@Url.Content(" ~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
 <style type="text/css">
     #Button_addRow {
@@ -99,13 +100,13 @@
 
     $(function () {
 
-        @*$.post("@Url.Content("~/HomeCard/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");*@
+        @* $.post("@Url.Content("~/HomeCard/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");*@
         $.post("@Url.Content("~/HomeCard/GetCardProvider")", null, function (data) { SetCardGrid(data); }, "Json");
         $.post("@Url.Content("~/HomeCard/GetRedirectPage")", null, function (data) { SetRedirectPage(data); }, "Json");
-        @*$.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },"Json");*@
+        @* $.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); }, "Json");*@
 
         $(".date").datepicker(
-     { dateFormat: "dd-mm-yy" }
+            { dateFormat: "dd-mm-yy" }
         );
         $("#DestributorList").chosen({ width: "100px" });
         $("#DealerList").chosen({ width: "100px" });
@@ -216,20 +217,20 @@
 
 </script>
 <script type="text/javascript">
-    @*function Edit(id) {
-        location.href = "@Url.Content("~/HomeCard/Edit/")" + id;
-    }*@
-    function Delete(id) {
-        if (confirm("Do You Want To Delete This Record")) {
+    @* function Edit(id) {
+        location.href = "@Url.Content("~/HomeCard/Edit / ")" + id;
+    } *@
+        function Delete(id) {
+            if (confirm("Do You Want To Delete This Record")) {
 
-            $.post("@Url.Content("~/HomeCard/Delete")", { id: id }, function (data) {
-                $.post("@Url.Content("~/HomeCard/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
+                $.post("@Url.Content("~/HomeCard/Delete")", { id: id }, function (data) {
+                    $.post("@Url.Content("~/HomeCard/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");
 
-                alert(data);
+                    alert(data);
 
-            }, "Json");
+                }, "Json");
+            }
         }
-    }
 
     //Set Card Grid//
     function SetCardGrid(data) {
@@ -426,7 +427,7 @@
             //    alert(x);
             //});
 
-            option="";
+            option = "";
             if ('@ViewBag.cid' == '8') {
 
 
@@ -438,12 +439,12 @@
 
                 var myTab = document.getElementById('dynaTableContent');
 
-                for(var i=0;i< str.length ;i++){
-                    var temp1="";
-                    var temp2="";
+                for (var i = 0; i < str.length; i++) {
+                    var temp1 = "";
+                    var temp2 = "";
                     // debugger;
                     //   alert("aaaaaa");
-                    var markup = "<tr><td><select name='redirectpage1_ConnectPlus_banner_header' class='form-control' id='redirectpage1_Banner"+i+"' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' name='file_Images' style='border:none;' /></td><td style='text-align:right;'><img style='height:50px;' src='@Url.Content("~/MpartnerIB_Api/CardImage/")"+img[i]+"'></td></tr>";
+                    var markup = "<tr><td><select name='redirectpage1_ConnectPlus_banner_header' class='form-control' id='redirectpage1_Banner" + i + "' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' name='file_Images' style='border:none;' /></td><td style='text-align:right;'><img style='height:50px;' src='@Url.Content("~/MpartnerIB_Api/CardImage / ")" + img[i] + "'></td></tr>";
 
                     $('#dynaTableContent tbody').append(markup);
 
@@ -451,8 +452,7 @@
 
                         option += "<option value=" + value.id + ">" + value.Name + "</option>";
 
-                        if(value.Name == str[i])
-                        {
+                        if (value.Name == str[i]) {
                             temp1 = value.id;
                             temp2 = value.Name;
                         }
@@ -460,30 +460,28 @@
                     });
 
 
-                    $("#redirectpage1_Banner"+i+"").append(option);
+                    $("#redirectpage1_Banner" + i + "").append(option);
 
                     //  $(".redirectpage1_Banner").append("<option value=" + temp1 + " selected>" + temp2 + "</option>");
 
 
 
-                    option="";
+                    option = "";
 
 
-                    for (row = i+1; row < myTab.rows.length ; row++) {
+                    for (row = i + 1; row < myTab.rows.length; row++) {
 
                         for (c = 0; c < myTab.rows[row].cells.length; c++) {
 
                             var element = myTab.rows.item(row).cells[c];
-                            if (element.childNodes[0].type == "select-one" ) {
-                                var select = document.getElementById("redirectpage1_Banner"+i+"");
+                            if (element.childNodes[0].type == "select-one") {
+                                var select = document.getElementById("redirectpage1_Banner" + i + "");
 
-                                for(j=0;j<select.length;j++)
-                                {
+                                for (j = 0; j < select.length; j++) {
                                     var op = select.options[j];
 
-                                    if(op.value==str[i])
-                                    {
-                                        element.childNodes[0].selectedIndex=j;
+                                    if (op.value == str[i]) {
+                                        element.childNodes[0].selectedIndex = j;
                                     }
                                 }
 
@@ -502,30 +500,30 @@
     }
 
 
-    @*function NewRow() {
+    @* function NewRow() {
         $('#Button_addRow').click(function () {
 
-            var markup = "<tr><td><input type='checkbox' name='record'></td><td><select name='redirectpage1_Banner[]' style='color: black' id='redirectpage1_Banner' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' name='bannermainimage' /></td><td><img src='@Url.Content("~/MpartnerIB_Api/CardImage/")' style='width:30px; height:30px;'/></td></tr>";
+            var markup = "<tr><td><input type='checkbox' name='record'></td><td><select name='redirectpage1_Banner[]' style='color: black' id='redirectpage1_Banner' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' name='bannermainimage' /></td><td><img src='@Url.Content("~/MpartnerIB_Api/CardImage / ")' style='width:30px; height:30px;'/></td></tr>";
 
             $('#dynaTableContent tbody').append(markup);
 
         });
-    }*@
+    } *@
 
-    $(document).ready(function(){
+    $(document).ready(function () {
 
-        $('#getValue').on('click',function(){
+        $('#getValue').on('click', function () {
             var myTab = document.getElementById('dynaTableContent');
             var values = new Array();
             //debugger;
 
-            for (row = 1; row < myTab.rows.length ; row++) {
+            for (row = 1; row < myTab.rows.length; row++) {
 
                 for (c = 0; c < myTab.rows[row].cells.length; c++) {   // EACH CELL IN A ROW.
 
                     var element = myTab.rows.item(row).cells[c];
 
-                    if (element.childNodes[0].type == "select-one" ) {
+                    if (element.childNodes[0].type == "select-one") {
 
                         var temp = element.childNodes[0].value;
 
@@ -595,8 +593,7 @@
 
                 return false;
             }
-            else
-            {
+            else {
                 $(this).next(".file_error").html("");
                 return true;
             }
@@ -658,40 +655,39 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function(){
+    $(document).ready(function () {
 
-        $("#Button_addRow").click(function() {
+        $("#Button_addRow").click(function () {
 
             debugger;
 
             var rowCount = $("#dynaTableContent > tbody").children().length;
 
-            var i= rowCount;
+            var i = rowCount;
 
             if ('@ViewBag.cid' == '8') {
 
-                var markup1 = "<tr><td><select name='redirectpage1_ConnectPlus_banner_header' class='form-control' id='redirectpage1_Banner"+i+"' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' id='upload"+i+"' name='file_Images' onchange='myfn(this)' style='border:none;'/></td><td></td></tr>";
+                var markup1 = "<tr><td><select name='redirectpage1_ConnectPlus_banner_header' class='form-control' id='redirectpage1_Banner" + i + "' class='redirectpage1_Banner'><option></option></select></td><td><input type='file' id='upload" + i + "' name='file_Images' onchange='myfn(this)' style='border:none;'/></td><td></td></tr>";
                 $('#dynaTableContent tbody').append(markup1);
 
                 $.post("@Url.Content("~/HomeCard/GetRedirectPage")", null, function (data) { ABC(data); }, "Json");
 
-                function ABC(data)
-                {
+                function ABC(data) {
                     debugger;
-                    var d= JSON.stringify(data);
+                    var d = JSON.stringify(data);
                     // alert(d);
 
-                    option='';
+                    option = '';
                     debugger;
-                    $("#redirectpage1_Banner"+i+"").append("<option value=0>Select</option>");
+                    $("#redirectpage1_Banner" + i + "").append("<option value=0>Select</option>");
                     $.each(data, function (key, value) {
 
                         option += "<option value=" + value.id + ">" + value.Name + "</option>";
                     });
                     debugger;
 
-                    $("#redirectpage1_Banner"+i+"").append(option);
-                    $("#redirectpage1_Banner"+i+"").val(0);
+                    $("#redirectpage1_Banner" + i + "").append(option);
+                    $("#redirectpage1_Banner" + i + "").val(0);
 
                 }
 
@@ -715,413 +711,413 @@
         @using (Html.BeginForm("Update", "HomeCard", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
 
-            <div class="row">
-                <div class="aos-init aos-animate" style="margin-bottom:82px;">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label> Card Type<span class="required">*</span></label>
-                                    <select name="Ctype" class="form-control" id="Ctype">
-                                        <option>Select</option>
-                                    </select>
-                                </div>
+        <div class="row">
+            <div class="aos-init aos-animate" style="margin-bottom:82px;">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label> Card Type<span class="required">*</span></label>
+                                <select name="Ctype" class="form-control" id="Ctype">
+                                    <option>Select</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate oneimagecard">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Redirect Page<span class="required">*</span></label>
-                                    @Html.HiddenFor(c => c.Id)
-                                    <select name="redirectpage1" class="redirectpage1 form-control">
-                                        <option>Select</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Upload Image<span class="required">*</span></label>
-                                    <input type="file" name="postedFile" style="border:none;" />
-                                    <span class="file_error" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate scheme_Priceheader">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label> Header Title<span class="required">*</span></label>
-                                    @Html.TextBox("Title", (string)@ViewBag.HeaderTitle, new { @Name = "HeaderTitle_Schemecard", @class = "form-control" })
-                                    @Html.ValidationMessage("Title", "", new { @class = "required" })
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Header Title Colour<span class="required">*</span></label>
-                                    @Html.TextBox("TitleColor", (string)@ViewBag.HeaderTitlecolor, new { @Name = "HeaderTitleColor_Schemecard", @class = "form-control" })
-                                    @Html.ValidationMessage("TitleColour", "", new { @class = "required" })
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate scheme_Priceheader">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Header Sub Title<span class="required">*</span></label>
-                                    @Html.TextBox("SubTitle", (string)@ViewBag.SubTitle, new { @Name = "HeaderSubTitle_Schemecard", @class = "form-control" })
-                                    @Html.ValidationMessage("SubTitleColour", "", new { @class = "required" })
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Header SubTitle Colour<span class="required">*</span></label>
-                                    @Html.TextBox("SubTitle", (string)@ViewBag.SubTitleColor, new { @Name = "HeaderSubTitleColor_Schemecard", @class = "form-control" })
-                                    @Html.ValidationMessage("SubTitleColour", "", new { @class = "required" })
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate scheme_Priceheader">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Upload Header Image<span class="required">*</span></label>
-                                    <input type="file" name="SchemeCard_HeaderImage" style="border:none;" />
-                                    <span class="file_error" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate scheme_Priceheader">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Redirect Page<span class="required">*</span></label>
-                                    <select name="redirectpage1_SchemeCard" class="redirectpage1 form-control">
-                                        <option>Select</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label> Upload Main Image<span class="required">*</span></label>
-                                    <input type="file" name="SchemeCard_MainImage" style="border:none;" />
-                                    <span class="file_error" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Imagename1" style="height:100px;width:100%;" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate gridcard">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Upload Main Image<span class="required">*</span></label>
-                                    <input type="file" name="mainimageup" style="border:none;" />
-                                    <span class="file_error" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>
-                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Imagemain" style="height:100px;width:100%;" />
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Upload Grid Background Image<span class="required">*</span></label>
-                                    <input type="file" name="gridbackimage" style="border:none;" />
-                                    <span class="file_error" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label style="display:block; width:100%;"> previous image<span class="required">*</span></label>
-                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.ImageBack" style="height:100px;width:100%;" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="aos-init aos-animate grid_childimage">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>First Title<span class="required">*</span></label>
-                                    @Html.TextBox("First Title", (string)@ViewBag.Title1, new { @Name = "first_gridtitle", @class = "form-control" })
-                                    @Html.ValidationMessage("", new { @class = "required" })
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Upload Image<span class="required">*</span></label>
-                                    <input type="file" name="first_upload_gridchildmainimage" style="border:none;" />
-                                    <span class="file_error" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label style="display:block; width:100%;"> Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Image1" style="height:100px;" />
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Redirect Page<span class="required">*</span></label>
-                                    <select name="redirectpage1_Homecard" class="redirectpage1 form-control">
-                                        <option>Select</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate grid_childimage">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Second Title<span class="required">*</span></label>
-                                    @Html.TextBox("Second Title", (string)@ViewBag.Title2, new { @Name = "second_gridtitle", @class = "form-control" })
-                                    @Html.ValidationMessage("", new { @class = "required" })
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Upload Image<span class="required">*</span></label>
-                                    <input type="file" name="second_upload_gridchildmainimage" style="border:none;" />
-                                    <span class="file_error" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Image2" style="height:100px;" />
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label> Redirect Page<span class="required">*</span></label>
-                                    <select name="redirectpage2_Homecard" class="redirectpage2 form-control">
-                                        <option>Select</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate grid_childimage">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Third Title<span class="required">*</span></label>
-                                    @Html.TextBox("Third Title", (string)@ViewBag.Title3, new { @Name = "third_gridtitle", @class = "form-control" })
-                                    @Html.ValidationMessage("", new { @class = "required" })
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Upload Image<span class="required">*</span></label>
-                                    <input type="file" name="third_upload_gridchildmainimage" style="border:none;" />
-                                    <span class="file_error" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label style="display:block; width:100%;">Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Image3" style="height:100px;" />
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Redirect Page<span class="required">*</span></label>
-                                    <select name="redirectpage3_Homecard" class="redirectpage3 form-control">
-                                        <option>Select</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate grid_childimage">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Fourth Title<span class="required">*</span></label>
-                                    @Html.TextBox("Fourth Title", (string)@ViewBag.Title4, new { @Name = "four_gridtitle", @class = "form-control" })
-                                    @Html.ValidationMessage("", new { @class = "required" })
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>Upload Image<span class="required">*</span></label>
-                                    <input type="file" name="four_upload_gridchildmainimage" style="border:none;" />
-                                    <span class="file_error" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label style="display:block; width:100%;"> Previous Image</label>
-                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.Image4" style="height:100px;" />
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label> Redirect Page<span class="required">*</span></label>
-                                    <select name="redirectpage4_Homecard" class="redirectpage4 form-control">
-                                        <option>Select</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate more_cardprovider">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Redirect Page<span class="required">*</span></label>
-                                    <select name="redirectpage1_knowMore" class="redirectpage1 form-control">
-                                        <option>Select</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Upload Image<span class="required">*</span></label>
-                                    <input type="file" name="mainimage_KnowMoreCard" style="border:none;" />
-                                    <span class="file_error" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>
-                                    <img src="@Url.Content("~/MpartnerIB_Api/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate more_cardprovider">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Button Know More Colour<span class="required">*</span></label>
-                                    @Html.TextBox("Action1_Colour", (string)@ViewBag.Colour, new { @Name = "KnowMoreColor", @class = "form-control" })
-                                    @Html.ValidationMessage("Action1_Colour", "", new { @class = "required" })
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label> Button Know More Text<span class="required">*</span></label>
-                                    @Html.TextBox("Action1_Text", (string)@ViewBag.Text, new { @Name = "KnowMoreText", @class = "form-control" })
-                                    @Html.ValidationMessage("Action1_Text", "", new { @class = "required" })
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate" id="dynaRow">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table id="dynaTableContent" class="tabelGridRow2" style="width:100%; display:inline-table;">
-                                    <thead>
-                                        <tr class="banner_cardprovider">
-                                            <th>Redirect Pages</th>
-                                            <th>ImageName</th>
-                                            <th style="text-align:right;">Previous Image</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="aos-init aos-animate">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row datetime">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Start Date<span class="required">*</span></label>
-                                    <input id="sdate" type="text" class="date form-control" name="StartDate" value="@ViewBag.preStartDate" />
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>End Date<span class="required">*</span></label>
-                                    <input id="edate" type="text" class="date form-control" name="EndDate" value="@ViewBag.PreEndDate" />
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label> Status</label>
-                                    <input type="checkbox" checked="checked" name="statusC" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <input type="submit" value="Update" class="submit submitBtn" style="background:#ffaf38;" />
                     </div>
                 </div>
             </div>
+
+            <div class="aos-init aos-animate oneimagecard">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Redirect Page<span class="required">*</span></label>
+                                @Html.HiddenFor(c => c.Id)
+                                <select name="redirectpage1" class="redirectpage1 form-control">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Upload Image<span class="required">*</span></label>
+                                <input type="file" name="postedFile" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label style="display:block; width:100%;">Previous Image</label>
+                                <img src="@Url.Content(" ~/MpartnerIB_Api/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate scheme_Priceheader">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label> Header Title<span class="required">*</span></label>
+                                @Html.TextBox("Title", (string)@ViewBag.HeaderTitle, new { @Name = "HeaderTitle_Schemecard", @class = "form-control" })
+                                @Html.ValidationMessage("Title", "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Header Title Colour<span class="required">*</span></label>
+                                @Html.TextBox("TitleColor", (string)@ViewBag.HeaderTitlecolor, new { @Name = "HeaderTitleColor_Schemecard", @class = "form-control" })
+                                @Html.ValidationMessage("TitleColour", "", new { @class = "required" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate scheme_Priceheader">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Header Sub Title<span class="required">*</span></label>
+                                @Html.TextBox("SubTitle", (string)@ViewBag.SubTitle, new { @Name = "HeaderSubTitle_Schemecard", @class = "form-control" })
+                                @Html.ValidationMessage("SubTitleColour", "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Header SubTitle Colour<span class="required">*</span></label>
+                                @Html.TextBox("SubTitle", (string)@ViewBag.SubTitleColor, new { @Name = "HeaderSubTitleColor_Schemecard", @class = "form-control" })
+                                @Html.ValidationMessage("SubTitleColour", "", new { @class = "required" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate scheme_Priceheader">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Upload Header Image<span class="required">*</span></label>
+                                <input type="file" name="SchemeCard_HeaderImage" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label style="display:block; width:100%;">Previous Image</label>
+                                <img src="@Url.Content(" ~/MpartnerIB_Api/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate scheme_Priceheader">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Redirect Page<span class="required">*</span></label>
+                                <select name="redirectpage1_SchemeCard" class="redirectpage1 form-control">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label> Upload Main Image<span class="required">*</span></label>
+                                <input type="file" name="SchemeCard_MainImage" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label style="display:block; width:100%;">Previous Image</label>
+                                <img src="@Url.Content(" ~/MpartnerIB_Api/CardImage/")@ViewBag.Imagename1" style="height:100px;width:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate gridcard">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Upload Main Image<span class="required">*</span></label>
+                                <input type="file" name="mainimageup" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>
+                                <img src="@Url.Content(" ~/MpartnerIB_Api/CardImage/")@ViewBag.Imagemain" style="height:100px;width:100%;" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Upload Grid Background Image<span class="required">*</span></label>
+                                <input type="file" name="gridbackimage" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label style="display:block; width:100%;"> previous image<span class="required">*</span></label>
+                                <img src="@Url.Content(" ~/MpartnerIB_Api/CardImage/")@ViewBag.ImageBack" style="height:100px;width:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aos-init aos-animate grid_childimage">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>First Title<span class="required">*</span></label>
+                                @Html.TextBox("First Title", (string)@ViewBag.Title1, new { @Name = "first_gridtitle", @class = "form-control" })
+                                @Html.ValidationMessage("", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Upload Image<span class="required">*</span></label>
+                                <input type="file" name="first_upload_gridchildmainimage" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label style="display:block; width:100%;"> Previous Image</label>
+                                <img src="@Url.Content(" ~/MpartnerIB_Api/CardImage/")@ViewBag.Image1" style="height:100px;" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Redirect Page<span class="required">*</span></label>
+                                <select name="redirectpage1_Homecard" class="redirectpage1 form-control">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate grid_childimage">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Second Title<span class="required">*</span></label>
+                                @Html.TextBox("Second Title", (string)@ViewBag.Title2, new { @Name = "second_gridtitle", @class = "form-control" })
+                                @Html.ValidationMessage("", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Upload Image<span class="required">*</span></label>
+                                <input type="file" name="second_upload_gridchildmainimage" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label style="display:block; width:100%;">Previous Image</label>
+                                <img src="@Url.Content(" ~/MpartnerIB_Api/CardImage/")@ViewBag.Image2" style="height:100px;" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label> Redirect Page<span class="required">*</span></label>
+                                <select name="redirectpage2_Homecard" class="redirectpage2 form-control">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate grid_childimage">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Third Title<span class="required">*</span></label>
+                                @Html.TextBox("Third Title", (string)@ViewBag.Title3, new { @Name = "third_gridtitle", @class = "form-control" })
+                                @Html.ValidationMessage("", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Upload Image<span class="required">*</span></label>
+                                <input type="file" name="third_upload_gridchildmainimage" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label style="display:block; width:100%;">Previous Image</label>
+                                <img src="@Url.Content(" ~/MpartnerIB_Api/CardImage/")@ViewBag.Image3" style="height:100px;" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Redirect Page<span class="required">*</span></label>
+                                <select name="redirectpage3_Homecard" class="redirectpage3 form-control">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate grid_childimage">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Fourth Title<span class="required">*</span></label>
+                                @Html.TextBox("Fourth Title", (string)@ViewBag.Title4, new { @Name = "four_gridtitle", @class = "form-control" })
+                                @Html.ValidationMessage("", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Upload Image<span class="required">*</span></label>
+                                <input type="file" name="four_upload_gridchildmainimage" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label style="display:block; width:100%;"> Previous Image</label>
+                                <img src="@Url.Content(" ~/MpartnerIB_Api/CardImage/")@ViewBag.Image4" style="height:100px;" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label> Redirect Page<span class="required">*</span></label>
+                                <select name="redirectpage4_Homecard" class="redirectpage4 form-control">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate more_cardprovider">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Redirect Page<span class="required">*</span></label>
+                                <select name="redirectpage1_knowMore" class="redirectpage1 form-control">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Upload Image<span class="required">*</span></label>
+                                <input type="file" name="mainimage_KnowMoreCard" style="border:none;" />
+                                <span class="file_error" style="color:red"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label style="display:block; width:100%;">Previous Image<span class="required">*</span></label>
+                                <img src="@Url.Content(" ~/MpartnerIB_Api/CardImage/")@ViewBag.ImageName" style="height:100px;width:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate more_cardprovider">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Button Know More Colour<span class="required">*</span></label>
+                                @Html.TextBox("Action1_Colour", (string)@ViewBag.Colour, new { @Name = "KnowMoreColor", @class = "form-control" })
+                                @Html.ValidationMessage("Action1_Colour", "", new { @class = "required" })
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label> Button Know More Text<span class="required">*</span></label>
+                                @Html.TextBox("Action1_Text", (string)@ViewBag.Text, new { @Name = "KnowMoreText", @class = "form-control" })
+                                @Html.ValidationMessage("Action1_Text", "", new { @class = "required" })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate" id="dynaRow">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table id="dynaTableContent" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                                <thead>
+                                    <tr class="banner_cardprovider">
+                                        <th>Redirect Pages</th>
+                                        <th>ImageName</th>
+                                        <th style="text-align:right;">Previous Image</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aos-init aos-animate">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row datetime">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Start Date<span class="required">*</span></label>
+                                <input id="sdate" type="text" class="date form-control" name="StartDate" value="@ViewBag.preStartDate" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>End Date<span class="required">*</span></label>
+                                <input id="edate" type="text" class="date form-control" name="EndDate" value="@ViewBag.PreEndDate" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label> Status</label>
+                                <input type="checkbox" checked="checked" name="statusC" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="submit" value="Update" class="submit submitBtn" style="background:#ffaf38;" />
+                </div>
+            </div>
+        </div>
         }
         <button id="getValue" class="getValue">Get Value</button>
     </div>

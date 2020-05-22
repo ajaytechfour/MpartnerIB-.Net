@@ -43,11 +43,38 @@
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
+
+                    @{
+                        List<SelectListItem> languageList = new List<SelectListItem>();
+                        foreach (var i in LuminousMpartnerIB.Models.LanguageManage.AvailableLanguages)
+                        {
+                            languageList.Add(new SelectListItem
+                            {
+                                Text = i.LanguageFullName,
+                                Value = i.LanguageCultureName
+                            });
+                        }
+                    }
+
+                    @Html.DropDownList("Language", languageList, @LuminousMpartnerIB.Resource.Select, new { @class = "form-control", @onchange = "ChangeLanguage(this)" })
+                    <script type="text/javascript">
+                        function ChangeLanguage(e) {
+                            debugger;
+                            var temp = $(e).val();
+                            var option = e.options[e.selectedIndex].innerHTML;
+                            $.post("@Url.Content("~/CustomerModule/ChangeLanguage")", { lang: temp }, function () {
+                                //alert('Language Change');
+                                location.reload(true);
+                            });
+                        }
+                    </script>
+
+
                     @*@foreach (var i in LuminousMpartnerIB.Models.LanguageManage.AvailableLanguages)
-                    {
-                        @Html.ActionLink(i.LanguageFullName, "ChangeLanguage", "CustomerModule", new { lang = i.LanguageCultureName }, null)
-                        <text> </text>
-                    }*@
+        {
+            @Html.ActionLink(i.LanguageFullName, "ChangeLanguage", "CustomerModule", new { lang = i.LanguageCultureName }, null)
+            <text> </text>
+        }*@
                 </li>
                 <li class="dropdown">
                     <span><img src="/images/profileImg.png" alt="" title=""> Welcome</span>

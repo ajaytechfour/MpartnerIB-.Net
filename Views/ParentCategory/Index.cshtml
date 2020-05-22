@@ -210,7 +210,7 @@
 <div id="page-wrapper" style="background: #f2f4f8; height:800px;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Catalog - </span> Parent Category</h1>
+            <h1 class="pageHeading"><span>@LuminousMpartnerIB.Resource.Catalog - </span> @LuminousMpartnerIB.Resource.ParentCategory</h1>
         </div>
     </div>
 
@@ -222,7 +222,7 @@
                     <div class="row" id="GridView">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Parent Category <span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.ParentCategory <span class="required">*</span></label>
                                 @Html.TextBoxFor(a => a.PCName, new { @class = "form-control" })
                               
                                 @Html.ValidationMessageFor(a => a.PCName, "", new { @class = "required" })
@@ -230,13 +230,13 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Status</label>
+                                <label>@LuminousMpartnerIB.Resource.Status</label>
                                 <input type="checkbox" checked="checked" name="statusC" style="border:none; height:inherit;" />
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="submit" onclick="sub();" value="Submit" class="submitBtn" />
+                                <input type="submit" onclick="sub();" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" />
                             </div>
                         </div>
                     </div>
@@ -248,9 +248,9 @@
 
                     <table class="headingHd">
                         <tr>
-                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Parent Category List</th>
+                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@LuminousMpartnerIB.Resource.ParentCategoryList</th>
                             <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Parent Category", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = @LuminousMpartnerIB.Resource.ParentCategory, @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
 
                             </th>
                         </tr>
@@ -260,17 +260,17 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            ID
+                                            @LuminousMpartnerIB.Resource.ID
                                         </th>
 
                                         <th>
-                                            Product Category
+                                            @LuminousMpartnerIB.Resource.ProductCategory
                                         </th>
                                         <th>
-                                            Status
+                                            @LuminousMpartnerIB.Resource.Status
                                         </th>
                                         <th style="text-align:right;">
-                                            Action
+                                            @LuminousMpartnerIB.Resource.Action
                                         </th>
                                     </tr>
                                 </thead>

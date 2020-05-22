@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 using System.Text;
 namespace LuminousMpartnerIB.Controllers
 {
-    public class CreatePermotionScheme_NewController : Controller
+    public class CreatePermotionScheme_NewController : MultiLanguageController
     {
         //
         // GET: /CreatePermotions/

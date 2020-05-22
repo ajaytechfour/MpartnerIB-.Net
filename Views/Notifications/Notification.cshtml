@@ -287,7 +287,7 @@
 
     $(document).ready(function () {
         $("#btnSubmit").click(function () {
-            debugger;           
+            debugger;
             if ($("#NotificationText").val() == "") {
                 $("#lblmessagesubmit").text("Please fill all the fields");
                 return false;
@@ -296,7 +296,7 @@
             if ($("#NotificationSubject").val() == "") {
                 $("#lblmessagesubmit").text("Please fill all the fields");
                 return false;
-            }          
+            }
 
             //if ($('#file_headerimage').length == 0 || $('#file_headerimage').val() == '') {
             //    $("#lblmessagesubmit").text("Please fill all the fields");
@@ -307,7 +307,7 @@
             //    $("#lblmessagesubmit").text("Please fill all the fields");
             //    return false;
             //}
-           
+
         });
 
     });
@@ -317,7 +317,7 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>Notification</h1>
+            <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.Notification</h1>
         </div>
     </div>
 
@@ -367,7 +367,7 @@
                             </div>*@
                         <div class="col-md-4">
                             <div class="">
-                                <label>Subject </label>
+                                <label>@LuminousMpartnerIB.Resource.Subject </label>
                                 @Html.TextBoxFor(a => a.C_Subject, new { @class = "form-control", @id = "NotificationSubject" })
                                 @*<br />
                                     @Html.ValidationMessageFor(a => a.C_Subject, "", new { @class = "required" })*@
@@ -375,7 +375,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="">
-                                <label>Text @*<span class="required">*</span>*@</label>
+                                <label>@LuminousMpartnerIB.Resource.Text @*<span class="required">*</span>*@</label>
                                 @Html.TextAreaFor(a => a.C_text, 5, 50, new { @class = "form-control", @style = "Width:100%; Height:60px", @id = "NotificationText" })
                                 @*<br />
                                     @Html.ValidationMessageFor(a => a.C_text, "", new { @class = "required" })*@
@@ -383,21 +383,22 @@
                         </div>
                         <div class="col-md-4">
                             <div class="">
-                                <label>Upload Image</label>
-                                <input type="file" name="postedFile" style="border:none; height:inherit;" />
+                                <label>@LuminousMpartnerIB.Resource.UploadImage</label>
+                                <label for="pdf" class="btn" style="display:block;padding:5px; border:1px solid #ccc; width:50%;">@LuminousMpartnerIB.Resource.Select</label>
+                                <input type="file" id="pdf" name="postedFile" style="border:none;visibility:hidden;  height:inherit;" />
                                 <br />
                                 <span id="file" class="required"></span>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="">
-                                <label>Status</label>
+                                <label>@LuminousMpartnerIB.Resource.Status</label>
                                 <input type="checkbox" checked="checked" name="statusC" style="border:none; height:inherit;" />
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="submit" value="Submit" class="submitBtn" id="btnSubmit" />
+                                <input type="submit" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" id="btnSubmit" />
                                 <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
                             </div>
                         </div>
@@ -413,16 +414,16 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            ID
+                                            @LuminousMpartnerIB.Resource.ID
                                         </th>
                                         <th>
-                                            Subject
+                                            @LuminousMpartnerIB.Resource.Subject
                                         </th>
                                         <th>
-                                            Text
+                                            @LuminousMpartnerIB.Resource.Text
                                         </th>
                                         <th>
-                                            Image
+                                            @LuminousMpartnerIB.Resource.Image
                                         </th>
                                     </tr>
                                 </thead>

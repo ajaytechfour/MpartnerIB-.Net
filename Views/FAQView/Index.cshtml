@@ -28,7 +28,7 @@
             $("#edate").text('@ViewBag.EndDate');
         }
 
-      
+
         if ('@ViewBag.SaveStatus' != "") {
             alert('@ViewBag.SaveStatus');
             location.href = "@Url.Content("~/FAQ/Index")";
@@ -133,7 +133,7 @@
             option = "";
             var procat = $("#ddlDistributor");
             procat.empty();
-            procat.append("<option value=0>Select</option>");
+            procat.append("<option value=0>@LuminousMpartnerIB.Resource.Select</option>");
             $.each(data, function (key, value) {
                 option += "<option value=" + value.id + ">" + value.Name + "</option>";
 
@@ -166,7 +166,7 @@
             var body = "";
             $("#Grid tbody").empty();
             $.each(data.result, function (key, value) {
-               
+
 
                 body += "<tr><td>" + value.id + "</td>" +
              "<td>" + value.quesname + "</td>" +
@@ -281,64 +281,64 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>FAQs</h1>
+            <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.FAQs</h1>
         </div>
     </div>
 
-   
 
-        <div class="row">
-            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500" id="content_wrap">
-                <div class="addgift" style="padding-bottom: 10px;">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="">
-                                <label>Distributor Name <span class="required"></span></label>
-                                <select name="ddlDistributor" id="ddlDistributor" onchange="Getgriddata(this.value);" class="form-control">
-                                    <option>Select</option>
-                                </select>
-                            </div>
-                        </div>                      
+
+    <div class="row">
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500" id="content_wrap">
+            <div class="addgift" style="padding-bottom: 10px;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="">
+                            <label>@LuminousMpartnerIB.Resource.Distributor Name <span class="required"></span></label>
+                            <select name="ddlDistributor" id="ddlDistributor" onchange="Getgriddata(this.value);" class="form-control">
+                                <option>Select</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="aos-init aos-animate">
-                <div class="addgift" style="padding-bottom: 10px;">
-                    <table class="headingHd">
-                        <tr>
-                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">FAQ List</th>
-                            <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "FAQ", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
-
-                            </th>
-                        </tr>
-                    </table>
-                        <div id="list" class="tabelGridRow">
-                            <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>FAQS</th>
-                                        <th>Start Date</th>
-                                        <th>End Date</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>                           
-                            <div>
-                                Pages :<span id="Paging"></span>
-                            </div>                         
-                    </div>
-                </div>
-            </div>
-
         </div>
-        
-     
-                       
+
+        <div class="aos-init aos-animate">
+            <div class="addgift" style="padding-bottom: 10px;">
+                <table class="headingHd">
+                    <tr>
+                        <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@LuminousMpartnerIB.Resource.FAQList</th>
+                        <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
+                            @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = @LuminousMpartnerIB.Resource.FAQs, @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+
+                        </th>
+                    </tr>
+                </table>
+                <div id="list" class="tabelGridRow">
+                    <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                        <thead>
+                            <tr>
+                                <th>@LuminousMpartnerIB.Resource.ID</th>
+                                <th>@LuminousMpartnerIB.Resource.FAQs</th>
+                                <th>@LuminousMpartnerIB.Resource.StartDate</th>
+                                <th>@LuminousMpartnerIB.Resource.EndDate</th>
+                                <th>@LuminousMpartnerIB.Resource.Status</th>
+                                <th>@LuminousMpartnerIB.Resource.Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div>
+                        Pages :<span id="Paging"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
     <div class="space30"></div>
     <div class="row">
         <div class="col-md-12">

@@ -10,7 +10,7 @@ using LuminousMpartnerIB.EF;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class FAQViewController : Controller
+    public class FAQViewController : MultiLanguageController
     {
         //
         // GET: /ContactUs/

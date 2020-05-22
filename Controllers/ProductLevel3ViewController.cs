@@ -13,7 +13,7 @@ using System.Text;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class ProductLevel3ViewController : Controller
+    public class ProductLevel3ViewController : MultiLanguageController
     {
         private LuminousMpartnerIBEntities db = new LuminousMpartnerIBEntities();
         private DataTable dt = new DataTable();

@@ -152,7 +152,7 @@
             option = "";
             var procat = $("#ddlDistributor");
             procat.empty();
-            procat.append("<option value=0>Select</option>");
+            procat.append("<option value=0>@LuminousMpartnerIB.Resource.Select</option>");
             $.each(data, function (key, value) {
                 option += "<option value=" + value.id + ">" + value.Name + "</option>";
 
@@ -780,7 +780,7 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>Scheme</h1>
+            <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.Schemes</h1>
         </div>
     </div>
 
@@ -794,7 +794,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Distributor Name <span class="required"></span></label>
+                                    <label>@LuminousMpartnerIB.Resource.Distributor @LuminousMpartnerIB.Resource.Name <span class="required"></span></label>
                                     <select name="ddlDistributor" id="ddlDistributor" onchange="Getgriddata(this.value);" class="form-control">
                                         <option>Select</option>
                                     </select>
@@ -812,7 +812,7 @@
                                 {
                                     <table class="headingHd" style="width:100%;">
                                         <tr>
-                                            <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;"> Scheme Data List</th>                                           
+                                            <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;"> @LuminousMpartnerIB.Resource.SchemeDataList</th>                                           
                                         </tr>
                                     </table>
                                 }
@@ -822,29 +822,29 @@
                                     <thead>
                                         <tr>
                                             <th>
-                                                ID
+                                                @LuminousMpartnerIB.Resource.ID
                                             </th>
                                             <th>
-                                                Card Type
+                                                @LuminousMpartnerIB.Resource.CardType
                                             </th>
                                             <th>
-                                                Title
+                                                @LuminousMpartnerIB.Resource.Title
                                             </th>
                                             <th>
-                                                Sub Title
+                                                @LuminousMpartnerIB.Resource.SubTitle
                                             </th>
 
                                             <th>
-                                                Start Date
+                                                @LuminousMpartnerIB.Resource.StartDate
                                             </th>
                                             <th>
-                                                End Date
+                                                @LuminousMpartnerIB.Resource.EndDate
                                             </th>
                                             <th>
-                                                Status
+                                                @LuminousMpartnerIB.Resource.Status
                                             </th>
                                             <th style="text-align:right;">
-                                                Action
+                                                @LuminousMpartnerIB.Resource.Action
                                             </th>
                                         </tr>
 

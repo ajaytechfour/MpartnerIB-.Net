@@ -79,12 +79,11 @@
         $.post("@Url.Content("~/Price/GetDistributors")", null, function (data) { SetParentCategory(data); }, "Json");
 
         @*$.post("@Url.Content("~/ProductCategoryView/GetContactDetail")", null, function (data) { SetGrid(data); }, "Json");*@
-              
+
     });
-     
+
     //Set Parent Category//
-    function SetParentCategory(data)
-    {
+    function SetParentCategory(data) {
         if (data == "Login") {
             location.href = "@Url.Content("~/Logout/Logout")";
         }
@@ -95,7 +94,7 @@
             option = "";
             var procat = $("#ddlDistributor");
             procat.empty();
-            procat.append("<option value=0>Select</option>");
+            procat.append("<option value=0>@LuminousMpartnerIB.Resource.Select</option>");
             $.each(data, function (key, value) {
                 option += "<option value=" + value.id + ">" + value.Name + "</option>";
 
@@ -272,7 +271,7 @@
 <div id="page-wrapper" style="background: #f2f4f8; min-height:800px;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Catalog - </span> Product Category</h1>
+            <h1 class="pageHeading"><span>@LuminousMpartnerIB.Resource.Catalog - </span> @LuminousMpartnerIB.Resource.ProductCategory</h1>
         </div>
     </div>
 
@@ -283,7 +282,7 @@
                 <div class="row" id="GridView">
                     <div class="col-md-3">
                         <div class="">
-                            <label>Distributor Name <span class="required"></span></label>
+                            <label>@LuminousMpartnerIB.Resource.Distributor @LuminousMpartnerIB.Resource.Name <span class="required"></span></label>
                             <select name="ddlDistributor" id="ddlDistributor" onchange="Getgriddata(this.value);" class="form-control">
                                 <option>Select</option>
                             </select>
@@ -301,9 +300,9 @@
                         {*@
                     <table class="headingHd">
                         <tr>
-                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Product Category List</th>
+                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@LuminousMpartnerIB.Resource.ProductCategory List</th>
                             <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Gallery", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = @LuminousMpartnerIB.Resource.Gallery, @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
 
                             </th>
                         </tr>
@@ -317,19 +316,19 @@
                         <thead>
                             <tr>
                                 <th>
-                                    ID
+                                    @LuminousMpartnerIB.Resource.ID
                                 </th>
                                 <th>
-                                    Parent Category
+                                    @LuminousMpartnerIB.Resource.ParentCategory
                                 </th>
                                 <th>
-                                    Product Category
+                                    @LuminousMpartnerIB.Resource.ProductCategory
                                 </th>
                                 <th>
                                     Status
                                 </th>
                                 <th style="text-align:right;">
-                                    Action
+                                    @LuminousMpartnerIB.Resource.Action
                                 </th>
                             </tr>
                         </thead>

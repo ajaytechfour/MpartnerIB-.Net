@@ -123,11 +123,20 @@
   <data name="Action" xml:space="preserve">
     <value>Action</value>
   </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddAnotherForm" xml:space="preserve">
+    <value>Add Another Form</value>
+  </data>
   <data name="Address" xml:space="preserve">
     <value>Address</value>
   </data>
   <data name="AddScheme" xml:space="preserve">
     <value>Add Scheme</value>
+  </data>
+  <data name="AlertNotification" xml:space="preserve">
+    <value>Alert Notification</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>All</value>
@@ -144,8 +153,23 @@
   <data name="B" xml:space="preserve">
     <value>B</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Banner" xml:space="preserve">
+    <value>Banner</value>
+  </data>
+  <data name="Brochure" xml:space="preserve">
+    <value>Brochure</value>
+  </data>
   <data name="C" xml:space="preserve">
     <value>C</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CARD" xml:space="preserve">
+    <value>CARD</value>
   </data>
   <data name="CardType" xml:space="preserve">
     <value>Card Type</value>
@@ -174,8 +198,14 @@
   <data name="CorrectAnswer" xml:space="preserve">
     <value>Correct Answer</value>
   </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
   <data name="CreatedBy" xml:space="preserve">
     <value>Created By</value>
+  </data>
+  <data name="CreateSalesEmployees" xml:space="preserve">
+    <value>Create Sales Employees</value>
   </data>
   <data name="CustomerName" xml:space="preserve">
     <value>Customer Name</value>
@@ -194,6 +224,9 @@
   </data>
   <data name="DealerManagement" xml:space="preserve">
     <value>Dealer Management</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Description</value>
@@ -228,8 +261,14 @@
   <data name="EditPermission" xml:space="preserve">
     <value>Edit Permission</value>
   </data>
+  <data name="EditReceiver" xml:space="preserve">
+    <value>Edit Receiver</value>
+  </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Employee</value>
   </data>
   <data name="EndDate" xml:space="preserve">
     <value>EndDate</value>
@@ -243,6 +282,12 @@
   <data name="FAQs" xml:space="preserve">
     <value>FAQs</value>
   </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="FullProductDetails" xml:space="preserve">
+    <value>Full Product Details</value>
+  </data>
   <data name="Gallery" xml:space="preserve">
     <value>Gallery</value>
   </data>
@@ -255,6 +300,12 @@
   <data name="Hex Code" xml:space="preserve">
     <value>Hex Code</value>
   </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HomeCard" xml:space="preserve">
+    <value>Home Card</value>
+  </data>
   <data name="ID" xml:space="preserve">
     <value>ID</value>
   </data>
@@ -266,6 +317,9 @@
   </data>
   <data name="KeyFeature" xml:space="preserve">
     <value>Key Feature</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Logout</value>
@@ -306,6 +360,9 @@
   <data name="OptionE" xml:space="preserve">
     <value>Option E</value>
   </data>
+  <data name="Pages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
   <data name="ParentCategory" xml:space="preserve">
     <value>Parent Category </value>
   </data>
@@ -324,6 +381,9 @@
   <data name="PriceList" xml:space="preserve">
     <value>Price List</value>
   </data>
+  <data name="ProductCatalog" xml:space="preserve">
+    <value>Product Catalog</value>
+  </data>
   <data name="ProductCategory" xml:space="preserve">
     <value>Product Category</value>
   </data>
@@ -332,6 +392,9 @@
   </data>
   <data name="ProductDataList" xml:space="preserve">
     <value>Product Data List</value>
+  </data>
+  <data name="ProductImages" xml:space="preserve">
+    <value>Product Images</value>
   </data>
   <data name="ProductLevelThree" xml:space="preserve">
     <value>Product Level Three</value>
@@ -354,6 +417,9 @@
   <data name="Rating" xml:space="preserve">
     <value>Rating</value>
   </data>
+  <data name="Redirect" xml:space="preserve">
+    <value>Redirect</value>
+  </data>
   <data name="RedirectOption" xml:space="preserve">
     <value>Redirect Option</value>
   </data>
@@ -362,6 +428,18 @@
   </data>
   <data name="Region" xml:space="preserve">
     <value>Region</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="SapCode" xml:space="preserve">
+    <value>SapCode</value>
   </data>
   <data name="SchemeDataList" xml:space="preserve">
     <value>Scheme Data List</value>
@@ -375,8 +453,14 @@
   <data name="Select" xml:space="preserve">
     <value>Select</value>
   </data>
+  <data name="SelectedPermission" xml:space="preserve">
+    <value>Selected Permission</value>
+  </data>
   <data name="SelectForRearrangedata" xml:space="preserve">
     <value>Select For Rearrange data</value>
+  </data>
+  <data name="SelectImage" xml:space="preserve">
+    <value>Select Image</value>
   </data>
   <data name="SendTo" xml:space="preserve">
     <value>Send To</value>
@@ -395,6 +479,9 @@
   </data>
   <data name="Subject" xml:space="preserve">
     <value>Subject</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
   </data>
   <data name="SubTitle" xml:space="preserve">
     <value>SubTitle</value>
@@ -416,6 +503,12 @@
   </data>
   <data name="SurveyName" xml:space="preserve">
     <value>Survey Name</value>
+  </data>
+  <data name="SurveyReport" xml:space="preserve">
+    <value>Survey Report</value>
+  </data>
+  <data name="Surveys" xml:space="preserve">
+    <value>Surveys</value>
   </data>
   <data name="TechnicalSpecification" xml:space="preserve">
     <value>Technical Specification</value>
@@ -458,6 +551,15 @@
   </data>
   <data name="UserId" xml:space="preserve">
     <value>UserId</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="ViewDealer" xml:space="preserve">
+    <value>View Dealer</value>
+  </data>
+  <data name="ViewSalesOrder" xml:space="preserve">
+    <value>ViewSalesOrder</value>
   </data>
   <data name="Warranty" xml:space="preserve">
     <value>Warranty</value>

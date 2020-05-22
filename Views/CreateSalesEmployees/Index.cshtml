@@ -118,14 +118,14 @@
 
 
 
-         });
+        });
 
 
 
     });
 
 
-     @*function IsEmail(email)
+    @*function IsEmail(email)
         {
      //var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+ ([a - zA - Z0 - 9]{ 2, 4})+$ /;
 
@@ -142,7 +142,7 @@
 
     $(function () {
         debugger;
-         $.post("@Url.Content("~/CreateSalesEmployees/getCountryMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");
+        $.post("@Url.Content("~/CreateSalesEmployees/getCountryMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");
         @*$.post("@Url.Content("~/Distributor/getStateMasters")", null, function (data) { SetDistributerMaster(data); }, "Json");*@
         $.post("@Url.Content("~/CreateSalesEmployees/GetGridData")", null, function (data) { SetGrid(data); }, "Json");
 
@@ -167,7 +167,7 @@
         option = "";
         var procat = $("#ddlCountryMaster");
         procat.empty();
-        procat.append("<option value=0>Select</option>");
+        procat.append("<option value=0>@LuminousMpartnerIB.Resource.Select</option>");
         $.each(data, function (key, value) {
             option += "<option value=" + value.id + ">" + value.Name + "</option>";
         });
@@ -260,7 +260,7 @@
         paging();
     }
 
-       function Edit(id) {
+    function Edit(id) {
         location.href = "@Url.Content("~/CreateSalesEmployees/Edit/")" + id;
     }
 
@@ -270,7 +270,7 @@
 
             $.post("@Url.Content("~/CreateSalesEmployees/Delete")", { id: id }, function (data) {
 
-               $.post("@Url.Content("~/CreateSalesEmployees/GetGridData")", null, function (data) { SetGrid(data); }, "Json");
+                $.post("@Url.Content("~/CreateSalesEmployees/GetGridData")", null, function (data) { SetGrid(data); }, "Json");
 
                 alert(data);
 
@@ -289,7 +289,7 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>Sales Employee </h1>
+            <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.Sales @LuminousMpartnerIB.Resource.Employee </h1>
         </div>
     </div>
     <div id="form">
@@ -301,15 +301,15 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Employee Name <span class="required"></span></label>
-                                    <input id="EmployeeName" type="text" autocomplete="off" placeholder="Employee Name" class="date form-control" name="EmployeeName" />
+                                    <label>@LuminousMpartnerIB.Resource.Employee @LuminousMpartnerIB.Resource.Name <span class="required"></span></label>
+                                    <input id="EmployeeName" type="text" autocomplete="off" placeholder=@LuminousMpartnerIB.Resource.Employee @LuminousMpartnerIB.Resource.Name class="date form-control" name="EmployeeName" />
 
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Employee Address <span class="required">*</span></label>
-                                    <input id="EmployeeAddress" type="text" autocomplete="off" placeholder="Employee Address" class="date form-control" name="EmployeeAddress" />
+                                    <label>@LuminousMpartnerIB.Resource.Employee @LuminousMpartnerIB.Resource.Address <span class="required">*</span></label>
+                                    <input id="EmployeeAddress" type="text" autocomplete="off" placeholder=@LuminousMpartnerIB.Resource.Employee @LuminousMpartnerIB.Resource.Address class="date form-control" name="EmployeeAddress" />
 
                                 </div>
                             </div>
@@ -322,16 +322,16 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Sap Code <span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.SapCode <span class="required">*</span></label>
                                     <input id="SapCode" type="text" autocomplete="off" placeholder="Sap Code" class="date form-control" name="SapCode" />
 
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Country <span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.Country <span class="required">*</span></label>
                                     <select name="Country" id="ddlCountryMaster" onchange="GetState(this.value);" class="form-control">
-                                        <option>Select</option>
+                                        <option>@LuminousMpartnerIB.Resource.Select</option>
                                     </select>
                                 </div>
                             </div>
@@ -344,17 +344,17 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>State <span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.State <span class="required">*</span></label>
                                     <select name="states" id="ddlStateMaster" onchange="GetCity(this.value);" class="form-control">
-                                        <option>Select</option>
+                                        <option>@LuminousMpartnerIB.Resource.Select</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>City<span class="required">*</span></label>
+                                    <label>@LuminousMpartnerIB.Resource.City<span class="required">*</span></label>
                                     <select name="City" id="ddlCityMaster" class="form-control">
-                                        <option>Select</option>
+                                        <option>@LuminousMpartnerIB.Resource.Select</option>
                                     </select>
                                 </div>
                             </div>
@@ -367,15 +367,15 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Contact No <span class="required">*</span></label>
-                                    <input id="ContactNo" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control numeric" name="ContactNo" />
+                                    <label>@LuminousMpartnerIB.Resource.ContactNo <span class="required">*</span></label>
+                                    <input id="ContactNo" type="text" autocomplete="off" placeholder=@LuminousMpartnerIB.Resource.ContactNo class="date form-control numeric" name="ContactNo" />
 
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="">
-                                    <label>Email<span class="required">*</span></label>
-                                    <input id="Email" type="text" autocomplete="off" placeholder="Distributor Name" class="date form-control" name="Email" />
+                                    <label>@LuminousMpartnerIB.Resource.Email<span class="required">*</span></label>
+                                    <input id="Email" type="text" autocomplete="off" placeholder=@LuminousMpartnerIB.Resource.Distributor @LuminousMpartnerIB.Resource.Email class="date form-control" name="Email" />
                                     <span style="display:none" class="error" id="invalid_email">Email-id is invalid</span>
                                 </div>
                             </div>
@@ -387,7 +387,7 @@
                     <div class="addgift" style="padding-bottom:30px;">
                         <div class="row" id="GridView">
                             <div class="col-md-12">
-                                <input type="button" id="btnsubmit" value="Submit" class="submitBtn" />
+                                <input type="button" id="btnsubmit" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" />
                                 <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
                                 <label id="lblmessagesuccess" style="font-size: 16px; color:red;"></label>
                             </div>
@@ -403,7 +403,7 @@
 
                                 <table class="headingHd" style="width:100%;">
                                     <tr>
-                                        <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Distributor List</th>
+                                        <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@LuminousMpartnerIB.Resource.DistributorList</th>
 
                                         @*<th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
                                                 @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:19px; top:15px; opacity: 0.2;">
@@ -417,17 +417,17 @@
                             <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:15px; margin-bottom:15px">
                                 <thead>
                                     <tr>
-                                        <th>SapCode</th>
-                                        <th>Customer Type</th>
-                                        <th>Name</th>
-                                        <th>Address </th>
-                                        <th>City</th>
-                                        <th>State</th>
-                                        <th>Contact No</th>
+                                        <th>@LuminousMpartnerIB.Resource.SapCode</th>
+                                        <th>@LuminousMpartnerIB.Resource.CustomerType</th>
+                                        <th>@LuminousMpartnerIB.Resource.Name</th>
+                                        <th>@LuminousMpartnerIB.Resource.Address </th>
+                                        <th>@LuminousMpartnerIB.Resource.City</th>
+                                        <th>@LuminousMpartnerIB.Resource.State</th>
+                                        <th>@LuminousMpartnerIB.Resource.ContactNo</th>
                                         @*<th>Email</th>*@
                                         @*<th>Created BY</th>*@
                                         <th style="display:none">id</th>
-                                        <th style="text-align:right; width:10%;">Action</th>
+                                        <th style="text-align:right; width:10%;">@LuminousMpartnerIB.Resource.Action</th>
                                     </tr>
                                 </thead>
                                 <tbody></tbody>

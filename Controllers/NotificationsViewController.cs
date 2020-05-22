@@ -15,7 +15,7 @@ using System.Configuration;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class NotificationsViewController : Controller
+    public class NotificationsViewController : MultiLanguageController
     {
         //
         // GET: /Notifications/

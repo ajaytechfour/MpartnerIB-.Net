@@ -1,293 +1,296 @@
 ﻿@*@using PagedList;
 @using PagedList.Mvc;
-@model IPagedList<Luminous.EF.contactUsDetail>*@
+@model IPagedList<Luminous.EF.contactUsDetail>
+    *@
 
-@model IQueryable<LuminousMpartnerIB.Models.ContactUsModel>
+    @model IQueryable<LuminousMpartnerIB.Models.ContactUsModel>
 
 
 
-@{
-    ViewBag.Title = "SuggestionList";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    var i = 0;
-}
+        @{
+        ViewBag.Title = "SuggestionList";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+        var i = 0;
+        }
 
-@*<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
+        @*<link href="@Url.Content(" ~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+        <script src="@Url.Content(" ~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>*@
 
-<style>
-    ul.pagination {
-        margin: 0px;
-        margin-top: 10px;
-    }
+        <style>
+            ul.pagination {
+                margin: 0px;
+                margin-top: 10px;
+            }
 
-    table.tabelGridRow2 th {
-        border-top: none;
-    }
-</style>
-@*<script type="text/javascript">
-        $(document).ready(function () {
-            $('#img').click(function () {
+            table.tabelGridRow2 th {
+                border-top: none;
+            }
+        </style>
+        @*
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#img').click(function () {
+
+                    debugger;
+                    var str = $(this).attr('href');
+                    //var substr = str.match('/SuggestionImage/"(.*)"');
+                    //alert(substr[1]);
+                    window.open(str);
+                    // return false;
+
+                    //alert(substr[1]);
+                });
+
+            });
+
+        </script>*@
+
+        <script type="text/javascript">
+            debugger;
+            var data = @Html.Raw(Json.Encode(@ViewBag.countryList));
+
+
+            if ('@TempData["message"]' != '') {
+
+                alert(@Html.Raw(Json.Encode(TempData["message"])));
+            }
+
+
+
+
+
+
+            var i = 0;
+            $(function () {
 
                 debugger;
-                var str = $(this).attr('href');
-                //var substr = str.match('/SuggestionImage/"(.*)"');
-                //alert(substr[1]);
-                window.open(str);
-               // return false;
 
-                //alert(substr[1]);
+                var option = '';
+
+
+                var markup = "<tr><td>@LuminousMpartnerIB.Resource.Name<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=name value='' required /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Address<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=address value='' required /></td></tr><tr><td>@LuminousMpartnerIB.Resource.ContactNo<span class='required'>*</span></td><td><input id='text1" + i + "' type='number' class='form-control' name=contactNo value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Email<span class='required'>*</span></td><td><input id='text1" + i + "' type='email' class='form-control' name=email value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Fax<span class='required'>*</span></td><td><input id='text1" + i + "' type='number' class='form-control' name=fax value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Country<span class='required'>*</span></td><td><select name=country class='form-control' id='con" + i + "' onchange='CountryChange(this," + i + ")' required><option></option></select></td></tr><tr><td>@LuminousMpartnerIB.Resource.State<span class='required'>*</span></td><td><select name=state class='form-control' id='st" + i + "' onchange='StateChange(this," + i + ")'><option></option></select></td></tr><tr><td>@LuminousMpartnerIB.Resource.City<span class='required'>*</span></td><td><select name=city class='form-control' id='cit" + i + "'><option></option></select></td><td><input type='button' id='addRow' class='form-control' value=@LuminousMpartnerIB.Resource.AddAnotherForm /></td></tr>";
+
+                $('#dynaTableContent tbody').append(markup);
+                option = '<option value="" selected>@LuminousMpartnerIB.Resource.Select</option>';
+                $.each(data, function (key, value) {
+
+                    option += "<option value=" + value.CountryID + ">" + value.CountryName + "</option>";
+                });
+
+                $("#con" + i + "").append(option);
+                option = '';
+                option = '<option value=0 selected>@LuminousMpartnerIB.Resource.Select</option>';
+                $("#st" + i + "").append(option);
+                $("#cit" + i + "").append(option);
+                option = '';
+
             });
 
-        });
 
-    </script>*@
+            function CountryChange(e, index) {
+                debugger;
+                var option = e.options[e.selectedIndex].innerHTML;
+                var SelectedValue = $(e).val();
+                $.post("@Url.Content("~/Suggestion/StateList")", { countryId: SelectedValue }, function (data1) { SetStateList(data1); }, "Json");
 
-<script type="text/javascript">
-    debugger;
-    var data = @Html.Raw(Json.Encode(@ViewBag.countryList));  
+                function SetStateList(data1) {
 
-   
-    if ('@TempData["message"]' != '') {
+                    debugger;
+                    var option = '';
+                    $.each(data1, function (key, value) {
 
-        alert(@Html.Raw(Json.Encode(TempData["message"])));
-    }
-   
+                        option += "<option value=" + value.StateID + ">" + value.StateName + "</option>";
+                    });
 
-    
+                    $("#st" + index + "").append(option);
+                    option = '';
+                }
+            }
 
-    
-   
-    var i = 0;
-    $(function() {
+            function StateChange(e, index) {
+                debugger;
+                var option = e.options[e.selectedIndex].innerHTML;
+                var SelectedValue = $(e).val();
+                $.post("@Url.Content("~/Suggestion/CityList")", { stateId: SelectedValue }, function (data2) { SetCityList(data2); }, "Json");
 
-        debugger;        
+                function SetCityList(data2) {
 
-        var option = '';
+                    debugger;
+                    var option = null;
+                    $.each(data2, function (key, value) {
 
+                        option += "<option value=" + value.id + ">" + value.cityname + "</option>";
+                    });
 
-        var markup = "<tr><td>@LuminousMpartnerIB.Resource.Name<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=name value='' required /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Address<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=address value='' required /></td></tr><tr><td>@LuminousMpartnerIB.Resource.ContactNo<span class='required'>*</span></td><td><input id='text1" + i + "' type='number' class='form-control' name=contactNo value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Email<span class='required'>*</span></td><td><input id='text1" + i + "' type='email' class='form-control' name=email value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Fax<span class='required'>*</span></td><td><input id='text1" + i + "' type='number' class='form-control' name=fax value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Country<span class='required'>*</span></td><td><select name=country class='form-control' id='con" + i + "' onchange='CountryChange(this,"+i+")' required><option></option></select></td></tr><tr><td>@LuminousMpartnerIB.Resource.State<span class='required'>*</span></td><td><select name=state class='form-control' id='st" + i + "' onchange='StateChange(this,"+i+")'><option></option></select></td></tr><tr><td>@LuminousMpartnerIB.Resource.City<span class='required'>*</span></td><td><select name=city class='form-control' id='cit" + i + "'><option></option></select></td><td><input type='button' id='addRow' class='form-control' value=@LuminousMpartnerIB.Resource.AddAnotherForm /></td></tr>";
-
-        $('#dynaTableContent tbody').append(markup);
-        option = '<option value="" selected>@LuminousMpartnerIB.Resource.Select</option>';
-        $.each(data, function (key, value) {
-
-            option += "<option value=" + value.CountryID + ">" + value.CountryName + "</option>";
-        });
-
-        $("#con" + i + "").append(option);
-        option = '';
-        option = '<option value=0 selected>@LuminousMpartnerIB.Resource.Select</option>';
-        $("#st" + i + "").append(option);
-        $("#cit" + i + "").append(option);
-        option = '';
-
-    });
+                    $("#cit" + index + "").append(option);
+                    option = '';
+                }
+            }
 
 
-    function CountryChange(e,index) {
-            debugger;
-        var option = e.options[e.selectedIndex].innerHTML;
-        var SelectedValue = $(e).val();
-        $.post("@Url.Content("~/Suggestion/StateList")", {countryId:SelectedValue}, function (data1) { SetStateList(data1); }, "Json");
 
-        function SetStateList(data1) {
+            $("body").on("click", "#addRow", function (e) {
+                debugger;
+                i += 1;
+                var option = '';
 
-            debugger;
-           var  option ='';
-            $.each(data1, function (key, value) {
 
-            option += "<option value=" + value.StateID + ">" + value.StateName + "</option>";
+                var markup = "<tr><td>@LuminousMpartnerIB.Resource.Name<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=name value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Address<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=address value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.ContactNo<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=contactNo value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Email<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=email value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Fax<span class='required'>*</span></td><td><input id='text1" + i + "' type='number' class='form-control' name=fax value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Country<span class='required'>*</span></td><td><select name=country class='form-control' id='con" + i + "' onchange='CountryChange(this," + i + ")'><option></option></select></td></tr><tr><td>@LuminousMpartnerIB.Resource.State<span class='required'>*</span></td><td><select name=state class='form-control' id='st" + i + "' onchange='StateChange(this," + i + ")'><option></option></select></td></tr><tr><td>@LuminousMpartnerIB.Resource.City<span class='required'>*</span></td><td><select name=city class='form-control' id='cit" + i + "'><option></option></select></td><td><input type='button' id='addRow' class='form-control' value=@LuminousMpartnerIB.Resource.AddAnotherForm /></td></tr>";
+
+                $('#dynaTableContent tbody').append(markup);
+                option = '<option value=0 selected>@LuminousMpartnerIB.Resource.Select</option>';
+                $.each(data, function (key, value) {
+
+                    option += "<option value=" + value.CountryID + ">" + value.CountryName + "</option>";
+                });
+
+                $("#con" + i + "").append(option);
+                option = '';
+                option = '<option value=0 selected>@LuminousMpartnerIB.Resource.Select</option>';
+                $("#st" + i + "").append(option);
+                $("#cit" + i + "").append(option);
+                option = '';
+
             });
 
-            $("#st" + index + "").append(option);
-            option = '';
-        }
-    }
-
-    function StateChange(e,index) {
-            debugger;
-        var option = e.options[e.selectedIndex].innerHTML;
-        var SelectedValue = $(e).val();
-        $.post("@Url.Content("~/Suggestion/CityList")", {stateId:SelectedValue}, function (data2) { SetCityList(data2); }, "Json");
-
-        function SetCityList(data2) {
-
-            debugger;
-           var  option = null;
-            $.each(data2, function (key, value) {
-
-            option += "<option value=" + value.id + ">" + value.cityname + "</option>";
-            });
-
-            $("#cit" + index + "").append(option);
-            option = '';
-        }
-    }
 
 
 
-    $("body").on("click", "#addRow", function (e) {
-        debugger;
-            i += 1;
-            var option = '';
 
-
-         var markup = "<tr><td>@LuminousMpartnerIB.Resource.Name<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=name value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Address<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=address value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.ContactNo<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=contactNo value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Email<span class='required'>*</span></td><td><input id='text1" + i + "' type='text' class='form-control' name=email value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Fax<span class='required'>*</span></td><td><input id='text1" + i + "' type='number' class='form-control' name=fax value='' /></td></tr><tr><td>@LuminousMpartnerIB.Resource.Country<span class='required'>*</span></td><td><select name=country class='form-control' id='con" + i + "' onchange='CountryChange(this,"+i+")'><option></option></select></td></tr><tr><td>@LuminousMpartnerIB.Resource.State<span class='required'>*</span></td><td><select name=state class='form-control' id='st" + i + "' onchange='StateChange(this,"+i+")'><option></option></select></td></tr><tr><td>@LuminousMpartnerIB.Resource.City<span class='required'>*</span></td><td><select name=city class='form-control' id='cit" + i + "'><option></option></select></td><td><input type='button' id='addRow' class='form-control' value=@LuminousMpartnerIB.Resource.AddAnotherForm /></td></tr>";
-
-        $('#dynaTableContent tbody').append(markup);
-        option = '<option value=0 selected>@LuminousMpartnerIB.Resource.Select</option>';
-        $.each(data, function (key, value) {
-
-            option += "<option value=" + value.CountryID + ">" + value.CountryName + "</option>";
-        });
-
-        $("#con" + i + "").append(option);
-        option = '';
-        option = '<option value=0 selected>@LuminousMpartnerIB.Resource.Select</option>';
-        $("#st" + i + "").append(option);
-        $("#cit" + i + "").append(option);
-        option = '';
-
-        });
+        </script>
 
 
 
 
 
-</script>
+        <div id="page-wrapper" style="background: #f2f4f8;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.ContactUs</h1>
+                </div>
+            </div>
+            @using (Html.BeginForm("SaveContact", "Suggestion", FormMethod.Post, new { enctype = "multipart/form-data", @id = "forms" }))
+            {
+            @Html.AntiForgeryToken()
 
+            <div class="aos-init aos-animate" id="dynaRow">
+                <div class="addgift" style="padding-bottom: 10px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 style="margin-bottom:0px;">@LuminousMpartnerIB.Resource.ContactUs</h2>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2 style="margin-bottom:0px;">@LuminousMpartnerIB.Resource.ContactUs</h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="button" id="addRow" class="form-control" style="width:40%;float:right; " value=@LuminousMpartnerIB.Resource.AddAnotherForm />
+                                </div>
 
-
-
-
-<div id="page-wrapper" style="background: #f2f4f8;">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.ContactUs</h1>
-        </div>
-    </div>
-    @using (Html.BeginForm("SaveContact", "Suggestion", FormMethod.Post, new { enctype = "multipart/form-data", @id = "forms" }))
-    {
-        @Html.AntiForgeryToken()
-
-        <div class="aos-init aos-animate" id="dynaRow">
-            <div class="addgift" style="padding-bottom: 10px;">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 style="margin-bottom:0px;">@LuminousMpartnerIB.Resource.ContactUs</h2>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h2 style="margin-bottom:0px;">@LuminousMpartnerIB.Resource.ContactUs</h2>
                             </div>
-                            <div class="col-md-6">
-                                <input type="button" id="addRow" class="form-control" style="width:40%;float:right; " value="@Luminous.Resource.AddAnotherForm" />
-                            </div>
-                           
+                            <table id="dynaTableContent" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                                <tbody></tbody>
+                            </table>
                         </div>
-                            <tbody></tbody>
-                        </table>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    @*<input type="button" onclick="a();" value="Submit" class="submitBtn" style="margin-top:10px;  margin-left: 15px;" />*@
-                    <input type="submit" id="btnsubmit" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" style="margin-top:10px;margin-left: 15px;" />
-                    <label id="lblmessagesubmit" style="font-size: 15px; color:red;"></label>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        @*<input type="button" onclick="a();" value="Submit" class="submitBtn" style="margin-top:10px;  margin-left: 15px;" />*@
+                        <input type="submit" id="btnsubmit" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" style="margin-top:10px;margin-left: 15px;" />
+                        <label id="lblmessagesubmit" style="font-size: 15px; color:red;"></label>
+                    </div>
                 </div>
             </div>
-        </div>
-    }
-    <div class="row">
-        <div class="aos-init aos-animate">
-            <div class="addgift" style="padding-bottom: 10px;">
-                <div class="">
-                    <div id="list" class="tabelGridRow">
-                        <table id="GridView" class="tabelGridRow2" style="width:100%; display:inline-table;">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        @LuminousMpartnerIB.Resource.CustomerName
-                                    </th>
+            }
+            <div class="row">
+                <div class="aos-init aos-animate">
+                    <div class="addgift" style="padding-bottom: 10px;">
+                        <div class="">
+                            <div id="list" class="tabelGridRow">
+                                <table id="GridView" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @LuminousMpartnerIB.Resource.CustomerName
+                                            </th>
 
-                                    <th>
-                                        @LuminousMpartnerIB.Resource.Address
-                                    </th>
-                                    <th>
-                                        @LuminousMpartnerIB.Resource.ContactNo
-                                    </th>
-                                    <th>
-                                        @LuminousMpartnerIB.Resource.Email
-                                    </th>
-                                    <th>
-                                        @LuminousMpartnerIB.Resource.Fax
-                                    </th>
-                                    <th>
-                                        @LuminousMpartnerIB.Resource.Country
-                                    </th>
-                                    <th>
-                                        @LuminousMpartnerIB.Resource.State
-                                    </th>
-                                    <th>
-                                        @LuminousMpartnerIB.Resource.City
-                                    </th>
-                                    <th>
-                                        @LuminousMpartnerIB.Resource.Action
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var suggestion in Model)
+                                            <th>
+                                                @LuminousMpartnerIB.Resource.Address
+                                            </th>
+                                            <th>
+                                                @LuminousMpartnerIB.Resource.ContactNo
+                                            </th>
+                                            <th>
+                                                @LuminousMpartnerIB.Resource.Email
+                                            </th>
+                                            <th>
+                                                @LuminousMpartnerIB.Resource.Fax
+                                            </th>
+                                            <th>
+                                                @LuminousMpartnerIB.Resource.Country
+                                            </th>
+                                            <th>
+                                                @LuminousMpartnerIB.Resource.State
+                                            </th>
+                                            <th>
+                                                @LuminousMpartnerIB.Resource.City
+                                            </th>
+                                            <th>
+                                                @LuminousMpartnerIB.Resource.Action
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var suggestion in Model)
                                         {
 
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(model => suggestion.Name)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(model => suggestion.Address)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(model => suggestion.ContactNo)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(model => suggestion.Email)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(model => suggestion.Fax)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(model => suggestion.Country)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(model => suggestion.State)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(model => suggestion.City)
-                                    </td>
-                                    <td>
-                                        @Html.ActionLink(" ", "Edit", new { id = suggestion.ID }, new { @class = "fas fa-pencil-alt" })
-                                        @Html.ActionLink(" ", "Delete", new { id = suggestion.ID }, new { @class = "fas fa-trash-alt" })
-                                    </td>
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(model => suggestion.Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => suggestion.Address)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => suggestion.ContactNo)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => suggestion.Email)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => suggestion.Fax)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => suggestion.Country)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => suggestion.State)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(model => suggestion.City)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink(" ", "Edit", new { id = suggestion.ID }, new { @class = "fas fa-pencil-alt" })
+                                                @Html.ActionLink(" ", "Delete", new { id = suggestion.ID }, new { @class = "fas fa-trash-alt" })
+                                            </td>
 
-                                </tr>
+                                        </tr>
                                         }
                                     </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td colspan="4" style="border:none;padding-left: 0px;">
-                                        @*@Html.PagedListPager(Model, page => Url.Action("SuggestionList", new { page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })*@
-                                    </td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="4" style="border:none;padding-left: 0px;">
+                                                @*@Html.PagedListPager(Model, page => Url.Action("SuggestionList", new { page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })*@
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>

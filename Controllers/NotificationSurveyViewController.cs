@@ -7,7 +7,7 @@ using LuminousMpartnerIB.EF;
 using System.Data;
 namespace LuminousMpartnerIB.Controllers
 {
-    public class NotificationSurveyViewController : Controller
+    public class NotificationSurveyViewController : MultiLanguageController
     {
         //
         // GET: /NotificationSurvey/

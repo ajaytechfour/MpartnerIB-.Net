@@ -3,72 +3,83 @@
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link href="@Url.Content("~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
-<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
-<script src="@Url.Content("~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
-<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+<link href="@Url.Content(" ~/assets/css/Formstyle.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content(" ~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content(" ~/assets/js/jquery-1.10.2.js")" type="text/javascript"></script>
+<script src="@Url.Content(" ~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
 
 <style type="text/css">
-    .required
-  {
-    	color:Red;
- }
-table {
-border: 0;
-border-spacing: 0;
-font-size: 0.857em;
-margin: 10px 0;
-width: 100%;
-}
-table table {
-font-size: 1em;
-}
-#footer-wrapper table {
-font-size: 1em;
-}
-table tr th {
-background: #757575;
-background: rgba(0, 0, 0, 0.51);
-border-bottom-style: none;
-}
-table tr th,
-table tr th a,
-table tr th a:hover {
-color: #FFF;
-font-weight: bold;
-}
-table tbody tr th {
-vertical-align: top;
-}
-tr td,
-tr th {
-padding: 4px 9px;
-border: 1px solid #fff;
-text-align: left; /* LTR */
-}
-#footer-wrapper tr td,
-#footer-wrapper tr th {
-border-color: #555;
-border-color: rgba(255, 255, 255, 0.18);
-}
-tr.odd {
-background: #e4e4e4;
-background: rgba(0, 0, 0, 0.105);
-}
-tr,
-tr.even {
-background: #efefef;
-background: rgba(0, 0, 0, 0.063);
-}
-table ul.links {
-margin: 0;
-padding: 0;
-font-size: 1em;
-}
-table ul.links li {
-padding: 0 1em 0 0;
-}
-</style> 
+    .required {
+        color: Red;
+    }
+
+    table {
+        border: 0;
+        border-spacing: 0;
+        font-size: 0.857em;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        table table {
+            font-size: 1em;
+        }
+
+    #footer-wrapper table {
+        font-size: 1em;
+    }
+
+    table tr th {
+        background: #757575;
+        background: rgba(0, 0, 0, 0.51);
+        border-bottom-style: none;
+    }
+
+        table tr th,
+        table tr th a,
+        table tr th a:hover {
+            color: #FFF;
+            font-weight: bold;
+        }
+
+    table tbody tr th {
+        vertical-align: top;
+    }
+
+    tr td,
+    tr th {
+        padding: 4px 9px;
+        border: 1px solid #fff;
+        text-align: left; /* LTR */
+    }
+
+    #footer-wrapper tr td,
+    #footer-wrapper tr th {
+        border-color: #555;
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    tr.odd {
+        background: #e4e4e4;
+        background: rgba(0, 0, 0, 0.105);
+    }
+
+    tr,
+    tr.even {
+        background: #efefef;
+        background: rgba(0, 0, 0, 0.063);
+    }
+
+    table ul.links {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+
+        table ul.links li {
+            padding: 0 1em 0 0;
+        }
+</style>
 <script type="text/javascript">
     $(function () {
         $.post("@Url.Content("~/Media/GetCategory")", null, function (data) { SetParentCategory(data); }, "Json");
@@ -94,7 +105,7 @@ padding: 0 1em 0 0;
     }
     function SetParentCategory(data) {
 
-     
+
         option = "";
         var procat = $("#ParentCategory");
         procat.empty();
@@ -115,74 +126,74 @@ padding: 0 1em 0 0;
 @using (@Html.BeginForm("Update", "Media", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 
-    <div id="content_wrap">
-      <div class="msgbar msg_Info heading">Edit Media</div>
-      <div class="content_main" >
+<div id="content_wrap">
+    <div class="msgbar msg_Info heading">Edit Media</div>
+    <div class="content_main">
         <div class="boxes1">
 
 
-         
-        <table style="width: 100%;">
-            <tr>
-                <td style="width: 137px;">
-                    Category<span class="required">*</span>
-                </td>
-                <td style="width: 221px">
-                    <select name="ParentCatid" style="color: black" id="ParentCategory">
-                        <option>Select</option>
-                    </select>
-                    @Html.HiddenFor(a => a.Id)
-                    <br />
-                    @Html.ValidationMessageFor(model => model.LabelId, "", new { @class = "required" })
 
-                </td>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 137px;">
+                        Category<span class="required">*</span>
+                    </td>
+                    <td style="width: 221px">
+                        <select name="ParentCatid" style="color: black" id="ParentCategory">
+                            <option>Select</option>
+                        </select>
+                        @Html.HiddenFor(a => a.Id)
+                        <br />
+                        @Html.ValidationMessageFor(model => model.LabelId, "", new { @class = "required" })
 
-                <td style="width: 137px;">
-                    Description <span style="color: red;">*</span>
-                </td>
-                <td  style="width: 221px">
-                    @Html.TextAreaFor(model => model.VideoName, new { @style = "Width:300px;Height:100px" })<br />
+                    </td>
 
-                    @Html.ValidationMessageFor(model => model.VideoName, "", new { @class = "required" })
-                </td>
+                    <td style="width: 137px;">
+                        Description <span style="color: red;">*</span>
+                    </td>
+                    <td style="width: 221px">
+                        @Html.TextAreaFor(model => model.VideoName, new { @style = "Width:300px;Height:100px" })<br />
 
-            </tr>
+                        @Html.ValidationMessageFor(model => model.VideoName, "", new { @class = "required" })
+                    </td>
 
-          
+                </tr>
 
-          
-            <tr>
-                <td style="width: 137px;">
-                    URL <span style="color: red;">*</span>
-                </td>
-                <td>
-                    @Html.TextAreaFor(model => model.Url, new { @style = "Width:200px" })<br />
-                    @*@Html.TextBoxFor(model => model.Url)<br />*@
-                    @Html.ValidationMessageFor(model => model.Url, "", new { @class = "required" })
-                </td>
-                <td>
-                    Status <span style="color: red;">*</span>
-                </td>
-                <td>
-                    <input id="status" type="checkbox" checked="checked" name="Status" />
-                    <br />
-                    <span class="Status"></span>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4" align="center">
-                    <input type="submit" class="save-but-m" value="Submit" />
-                </td>
 
-            </tr>
-        </table>
+
+
+                <tr>
+                    <td style="width: 137px;">
+                        URL <span style="color: red;">*</span>
+                    </td>
+                    <td>
+                        @Html.TextAreaFor(model => model.Url, new { @style = "Width:200px" })<br />
+                        @*@Html.TextBoxFor(model => model.Url)<br />*@
+                        @Html.ValidationMessageFor(model => model.Url, "", new { @class = "required" })
+                    </td>
+                    <td>
+                        Status <span style="color: red;">*</span>
+                    </td>
+                    <td>
+                        <input id="status" type="checkbox" checked="checked" name="Status" />
+                        <br />
+                        <span class="Status"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="center">
+                        <input type="submit" class="save-but-m" value="Submit" />
+                    </td>
+
+                </tr>
+            </table>
+
+        </div>
 
     </div>
-    
-    </div>
-    </div>
-    
-  
+</div>
 
-  
+
+
+
 }

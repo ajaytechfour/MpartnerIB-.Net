@@ -86,7 +86,7 @@
             option = "";
             var procat = $("#ddlDistributor");
             procat.empty();
-            procat.append("<option value=0>Select</option>");
+            procat.append("<option value=0>@LuminousMpartnerIB.Resource.Select</option>");
             $.each(data, function (key, value) {
                 option += "<option value=" + value.id + ">" + value.Name + "</option>";
 
@@ -198,7 +198,7 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>Sales Employee View</h1>
+            <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.Sales @LuminousMpartnerIB.Resource.Employee @LuminousMpartnerIB.Resource.View</h1>
         </div>
     </div>
     <div id="form">
@@ -208,9 +208,9 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="">
-                                <label>Distributor Name <span class="required"></span></label>
+                                <label>@LuminousMpartnerIB.Resource.Distributor @LuminousMpartnerIB.Resource.Name <span class="required"></span></label>
                                 <select name="ddlDistributor" id="ddlDistributor" onchange="Getgriddata(this.value);" class="form-control">
-                                    <option>Select</option>
+                                    <option>@LuminousMpartnerIB.Resource.Select</option>
                                 </select>
                             </div>
                         </div>
@@ -226,7 +226,7 @@
 
                             <table class="headingHd" style="width:100%;">
                                 <tr>
-                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Sales Employee List</th>
+                                    <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@LuminousMpartnerIB.Resource.Sales @LuminousMpartnerIB.Resource.Employee @LuminousMpartnerIB.Resource.List</th>
                                 </tr>
                             </table>
                         }
@@ -235,18 +235,18 @@
                         <table id="Grid" class="tabelGridRow2" style="width:100%; margin-top:15px; margin-bottom:15px">
                             <thead>
                                 <tr>
-                                    <th>SapCode</th>
-                                    <th>Customer Type</th>
-                                    <th>Name</th>
-                                    <th>Address </th>
-                                    <th>Country</th>
-                                    <th>State</th>
-                                    <th>City</th>
+                                    <th>@LuminousMpartnerIB.Resource.SapCode</th>
+                                    <th>@LuminousMpartnerIB.Resource.CustomerType</th>
+                                    <th>@LuminousMpartnerIB.Resource.Name</th>
+                                    <th>@LuminousMpartnerIB.Resource.Address </th>
+                                    <th>@LuminousMpartnerIB.Resource.Country</th>
+                                    <th>@LuminousMpartnerIB.Resource.State</th>
+                                    <th>@LuminousMpartnerIB.Resource.City</th>
                                     @*<th>Contact No</th>*@
                                     @*<th>Email</th>*@
                                     @*<th>Created BY</th>*@
                                     <th style="display:none">id</th>
-                                    <th style="text-align:right; width:10%;">Action</th>
+                                    <th style="text-align:right; width:10%;">@LuminousMpartnerIB.Resource.Action</th>
                                 </tr>
                             </thead>
                             <tbody></tbody>

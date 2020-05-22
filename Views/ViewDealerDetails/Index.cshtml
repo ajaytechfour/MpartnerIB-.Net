@@ -1,278 +1,279 @@
 ﻿@model List<LuminousMpartnerIB.EF.Dealer_Save_Image>
-@{
-    List<LuminousMpartnerIB.EF.Dealer_Save_Image> data = ViewBag.dlrimage;
-    ViewBag.Title = "Dealer View Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-<link href="@Url.Content("~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
-
-<script src="@Url.Content("~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
-<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
-<link href="@Url.Content("~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
-
-<style type="text/css">
-    .required {
-        color: Red;
-    }
-
-    table {
-        border: 0;
-        border-spacing: 0;
-        font-size: 0.857em;
-        margin: 10px 0;
-        width: 100%;
-    }
-
-        table table {
-            font-size: 1em;
+    @{
+    List<LuminousMpartnerIB.EF.Dealer_Save_Image>
+        data = ViewBag.dlrimage;
+        ViewBag.Title = "Dealer View Details";
+        Layout = "~/Views/Shared/_Layout.cshtml";
         }
+        <link href="@Url.Content(" ~/assets/css/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
 
-    #footer-wrapper table {
-        font-size: 1em;
-    }
+        <script src="@Url.Content(" ~/assets/js/jquery-ui.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content(" ~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+        <link href="@Url.Content(" ~/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
 
-    table tr th {
-        background: #757575;
-        background: rgba(0, 0, 0, 0.51);
-        border-bottom-style: none;
-    }
+        <style type="text/css">
+            .required {
+                color: Red;
+            }
 
-        table tr th, table tr th a, table tr th a:hover {
-            color: #FFF;
-            font-weight: bold;
-        }
+            table {
+                border: 0;
+                border-spacing: 0;
+                font-size: 0.857em;
+                margin: 10px 0;
+                width: 100%;
+            }
 
-    table tbody tr th {
-        vertical-align: top;
-    }
+                table table {
+                    font-size: 1em;
+                }
 
-    tr td, tr th {
-        padding: 4px 9px;
-        border: 1px solid #fff;
-        text-align: left; /* LTR */
-    }
+            #footer-wrapper table {
+                font-size: 1em;
+            }
 
-    #footer-wrapper tr td, #footer-wrapper tr th {
-        border-color: #555;
-        border-color: rgba(255, 255, 255, 0.18);
-    }
+            table tr th {
+                background: #757575;
+                background: rgba(0, 0, 0, 0.51);
+                border-bottom-style: none;
+            }
 
-    tr.odd {
-        background: #e4e4e4;
-        background: rgba(0, 0, 0, 0.105);
-    }
+                table tr th, table tr th a, table tr th a:hover {
+                    color: #FFF;
+                    font-weight: bold;
+                }
 
-    tr, tr.even {
-        background: #efefef;
-        background: rgba(0, 0, 0, 0.063);
-    }
+            table tbody tr th {
+                vertical-align: top;
+            }
 
-    table ul.links {
-        margin: 0;
-        padding: 0;
-        font-size: 1em;
-    }
+            tr td, tr th {
+                padding: 4px 9px;
+                border: 1px solid #fff;
+                text-align: left; /* LTR */
+            }
 
-        table ul.links li {
-            padding: 0 1em 0 0;
-        }
-</style>
-<style>
-    .FullDes {
-        position: relative;
-        background-color: #1D1D1D;
-        width: 245px;
-        color: white;
-        border: 1px solid black;
-        display: none;
-    }
-</style>
+            #footer-wrapper tr td, #footer-wrapper tr th {
+                border-color: #555;
+                border-color: rgba(255, 255, 255, 0.18);
+            }
 
-<script type="text/javascript">
-    $(function () {
-        //ValidationMessage();
-    });
+            tr.odd {
+                background: #e4e4e4;
+                background: rgba(0, 0, 0, 0.105);
+            }
 
-</script>
-<script type="text/javascript">
-    function ValidationMessage() {
-        if ('@ViewBag.StartDate' != "") {
-            $("#sdate").text('@ViewBag.StartDate');
-        }
+            tr, tr.even {
+                background: #efefef;
+                background: rgba(0, 0, 0, 0.063);
+            }
 
-        if ('@ViewBag.EndDate' != "") {
-            $("#edate").text('@ViewBag.EndDate');
-        }
+            table ul.links {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+            }
 
-        if ('@ViewBag.File' != "") {
-            $("#file").text('@ViewBag.File');
-        }
+                table ul.links li {
+                    padding: 0 1em 0 0;
+                }
+        </style>
+        <style>
+            .FullDes {
+                position: relative;
+                background-color: #1D1D1D;
+                width: 245px;
+                color: white;
+                border: 1px solid black;
+                display: none;
+            }
+        </style>
+
+        <script type="text/javascript">
+            $(function () {
+                //ValidationMessage();
+            });
+
+        </script>
+        <script type="text/javascript">
+            function ValidationMessage() {
+                if ('@ViewBag.StartDate' != "") {
+                    $("#sdate").text('@ViewBag.StartDate');
+                }
+
+                if ('@ViewBag.EndDate' != "") {
+                    $("#edate").text('@ViewBag.EndDate');
+                }
+
+                if ('@ViewBag.File' != "") {
+                    $("#file").text('@ViewBag.File');
+                }
 
 
-        @*if ('@ViewBag.Providerid' != "") {
-            $("#Ctype").text('@ViewBag.Providerid');
-        }*@
+                @*if ('@ViewBag.Providerid' != "") {
+                    $("#Ctype").text('@ViewBag.Providerid');
+                }*@
 
-        if ('@ViewBag.CardProviderName' != "") {
-            debugger;
-              $("#Ctype").val('@ViewBag.CardProviderName');
-        }
+                if ('@ViewBag.CardProviderName' != "") {
+                    debugger;
+                    $("#Ctype").val('@ViewBag.CardProviderName');
+                }
 
-        if ('@ViewBag.SaveStatus' != "") {
-            alert('@ViewBag.SaveStatus');
-            location.href = "@Url.Content("~/CreatePermotionScheme_New/Index")";
-        }
-        $("#sdate").val('@ViewBag.preStartDate');
-        $("#edate").val('@ViewBag.PreEndDate');
+                if ('@ViewBag.SaveStatus' != "") {
+                    alert('@ViewBag.SaveStatus');
+                    location.href = "@Url.Content("~/CreatePermotionScheme_New/Index")";
+                }
+                $("#sdate").val('@ViewBag.preStartDate');
+                $("#edate").val('@ViewBag.PreEndDate');
 
-    }
-</script>
+            }
+        </script>
 
-<div id="page-wrapper" style="background: #f2f4f8;">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Dealer View Details </span></h1>
-        </div>
-    </div>
-    <div id="form" style="margin-bottom: 11px">
+        <div id="page-wrapper" style="background: #f2f4f8;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="pageHeading"><span>Dealer View Details </span></h1>
+                </div>
+            </div>
+            <div id="form" style="margin-bottom: 11px">
 
-        <div class="row" id="GridView">
-            @*<div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                    <div class="addgift" style="padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Card Type<span class="required">*</span></label>
-                                    <input type="text" id="Ctype" name="Ctype" class="form-control" readonly="readonly">
+                <div class="row" id="GridView">
+                    @*<div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                        <div class="addgift" style="padding-bottom: 10px;">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Card Type<span class="required">*</span></label>
+                                        <input type="text" id="Ctype" name="Ctype" class="form-control" readonly="readonly">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+
+                    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                        <div class="addgift" style="padding-bottom: 10px;">
+                            @*<h2>Header</h2>*@
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Sap Code<span class="required"></span></label>
+                                        <input id="SapCode" type="text" class=" form-control" autocomplete="off" value="@ViewBag.SapCode" name="SapCode" readonly="readonly" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Customer Type<span class="required">*</span></label>
+                                        <input id="CustomerType" type="text" class=" form-control" autocomplete="off" value="@ViewBag.CustomerType" name="CustomerType" readonly="readonly" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Name<span class="required">*</span></label>
+                                        <input id="Name" type="text" class=" form-control" autocomplete="off" value="@ViewBag.Name" name="Name" readonly="readonly" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Address<span class="required">*</span></label>
+                                        <input id="Address" type="text" class=" form-control" value="@ViewBag.Address" autocomplete="off" name="Address" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Country<span class="required">*</span></label>
+                                        <input id="Country" type="text" class=" form-control" value="@ViewBag.Country" autocomplete="off" name="Country" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>State<span class="required">*</span></label>
+                                        <input id="State" type="text" class=" form-control" value="@ViewBag.State" autocomplete="off" name="State" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>City<span class="required">*</span></label>
+                                        <input id="City" type="text" class=" form-control" autocomplete="off" value="@ViewBag.City" name="City" readonly="readonly" />
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Contact No<span class="required"></span></label>
+                                        <input id="ContactNo" type="text" class=" form-control" autocomplete="off" value="@ViewBag.ContactNo" name="ContactNo" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Email<span class="required">*</span></label>
+                                        <input id="Email" type="text" class=" form-control" autocomplete="off" value="@ViewBag.Email" name="Email" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    @*@if (data != null)
+                                    {
+                                    <ul class="nav in" id="ss">
+                                        @foreach (var r in data)
+                                        {
+                                        if (r.ImageName != null)
+                                        {
+                                        <li>
+                                            <img src="@Url.Content(" ~/MpartnerNewApi/WebImages/")@r.ImageName" style="height: 100px; width: 200px; position: absolute; left: 399px;" />
+
+                                        </li>
+                                        }
+                                        }
+                                    </ul>
+                                    }*@
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>*@
 
-            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                <div class="addgift" style="padding-bottom: 10px;">
-                    @*<h2>Header</h2>*@
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Sap Code<span class="required"></span></label>
-                                <input id="SapCode" type="text" class=" form-control" autocomplete="off" value="@ViewBag.SapCode" name="SapCode" readonly="readonly" />
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Customer Type<span class="required">*</span></label>
-                                <input id="CustomerType" type="text" class=" form-control" autocomplete="off" value="@ViewBag.CustomerType" name="CustomerType" readonly="readonly" />
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Name<span class="required">*</span></label>
-                                <input id="Name" type="text" class=" form-control" autocomplete="off" value="@ViewBag.Name" name="Name" readonly="readonly" />
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Address<span class="required">*</span></label>
-                                <input id="Address" type="text" class=" form-control" value="@ViewBag.Address" autocomplete="off" name="Address" readonly="readonly" />
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Country<span class="required">*</span></label>
-                                <input id="Country" type="text" class=" form-control" value="@ViewBag.Country" autocomplete="off" name="Country" readonly="readonly" />
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>State<span class="required">*</span></label>
-                                <input id="State" type="text" class=" form-control" value="@ViewBag.State" autocomplete="off" name="State" readonly="readonly" />
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>City<span class="required">*</span></label>
-                                <input id="City" type="text" class=" form-control" autocomplete="off" value="@ViewBag.City" name="City" readonly="readonly" />
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Contact No<span class="required"></span></label>
-                                <input id="ContactNo" type="text" class=" form-control" autocomplete="off" value="@ViewBag.ContactNo" name="ContactNo" readonly="readonly" />
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Email<span class="required">*</span></label>
-                                <input id="Email" type="text" class=" form-control" autocomplete="off" value="@ViewBag.Email" name="Email" readonly="readonly" />
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            @*@if (data != null)
-                                {
-                                    <ul class="nav in" id="ss">
-                                        @foreach (var r in data)
-                                        {
-                                            if (r.ImageName != null)
-                                            {
-                                                <li>
-                                                    <img src="@Url.Content("~/MpartnerNewApi/WebImages/")@r.ImageName" style="height: 100px; width: 200px; position: absolute; left: 399px;" />
-
-                                                </li>
-                                            }
-                                        }
-                                    </ul>
-                                }*@
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
-                <div class="addgift" style="padding-bottom: 10px;">
-                    <div class="row">
-                        <table class="table">
-                            @if (data != null)
-                            {
-                                foreach (var r in data)
-                                {
+                    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
+                        <div class="addgift" style="padding-bottom: 10px;">
+                            <div class="row">
+                                <table class="table">
+                                    @if (data != null)
+                                    {
+                                    foreach (var r in data)
+                                    {
                                     <tr>
                                         <td>
                                             @if (r.ImageName != null)
                                             {
-                                                <img src="@Url.Content("~/MpartnerNewApi/WebImages/")@r.ImageName" style="height: 100px; width: 200px; position: absolute; left: 399px;" />
+                                            <img src="@Url.Content(" ~/MpartnerNewApi/WebImages/")@r.ImageName" style="height: 100px; width: 200px; position: absolute; left: 399px;" />
                                             }
                                         </td>
                                     </tr>
-                                }
-                            }
-                        </table>
+                                    }
+                                    }
+                                </table>
+                            </div>
+                        </div>
                     </div>
+
+                    @*<div class="col-md-12" style=" margin-top: 15px;">
+                        <input type="button" id="btnsubmit" value="Back" class="submitBtn" />
+                        <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
+                    </div>*@
                 </div>
             </div>
 
-            @*<div class="col-md-12" style=" margin-top: 15px;">
-                <input type="button" id="btnsubmit" value="Back" class="submitBtn" />
-                <label id="lblmessagesubmit" style="font-size: 16px; color:red;"></label>
-            </div>*@
         </div>
-    </div>
-
-</div>
-<div class="space30"></div>
-<div class="row">
-    <div class="col-md-12">
-        <div class="footerRow">
-            © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+        <div class="space30"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footerRow">
+                    © Copyright 2019 LuminousMpartnerIB | All Rights Reserved
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</div>
+        </div>

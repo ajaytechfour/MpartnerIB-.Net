@@ -10,7 +10,7 @@ using TVS;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class DistributorController : Controller
+    public class DistributorController : MultiLanguageController
     {
         datautility dut = new datautility();
         DataTable dt = new DataTable();
@@ -216,86 +216,162 @@ namespace LuminousMpartnerIB.Controllers
                 return Json(data, JsonRequestBehavior.AllowGet);
             }
             else
-            {
-                //var echkexist = db.UsersLists.Where(x => x.Dis_Name.Trim().ToLower() == obj.Name.Trim().ToLower() & x.CustomerType == "DISTY").ToList();
-                var echkexist = db.UsersLists.Where(x => x.Dis_Sap_Code == obj.SapCode & x.CustomerType == "DISTY").ToList();
-
-                if (echkexist.Count() > 0)
-                {
-                    data = new { result = new List<UsersListModel>(), TotalRecord = tcount, Message = "", MessageExist = "This Sap Code Already Exists" };
-                    return Json(data, JsonRequestBehavior.AllowGet);
-                }
-
-
-
+            {               
                 UsersList objUsersList = new UsersList();
 
-                objUsersList.Dis_Name = obj.Name;
-                objUsersList.Dis_Address1 = obj.Address;
-                objUsersList.Dis_ContactNo = obj.ContactNo;
-                objUsersList.Dis_Email = obj.Email;
-                objUsersList.Dis_State = obj.State;
-                objUsersList.Dis_City = obj.City;
-
-                objUsersList.UserId = userid;
-                objUsersList.CustomerType = "DISTY";
-                objUsersList.Dis_Sap_Code = userid;
-                objUsersList.CreatedBY = userid;
-                objUsersList.CreatedON = DateTime.Now;
-
-                objUsersList.Dis_Sap_Code = obj.SapCode;
-                objUsersList.Country = obj.Country;
-
-                string selectedLanguagecode = string.Empty;
-                string[] language = obj.ddlSelectLanguageIDs;
-                if (language != null)
+                if (obj.id != null)
                 {
-                    foreach (var item in language)
+                    objUsersList = db.UsersLists.Single(a => a.id == obj.id);
+
+                    objUsersList.Dis_Name = obj.Name;
+                    objUsersList.Dis_Address1 = obj.Address;
+                    objUsersList.Dis_ContactNo = obj.ContactNo;
+                    objUsersList.Dis_Email = obj.Email;
+                    objUsersList.Dis_State = obj.State;
+                    objUsersList.Dis_City = obj.City;
+
+                    objUsersList.UserId = userid;
+                    objUsersList.CustomerType = "DISTY";
+                   // objUsersList.Dis_Sap_Code = userid;
+                    //objUsersList.CreatedBY = userid;
+                    //objUsersList.CreatedON = DateTime.Now;
+
+                    objUsersList.Dis_Sap_Code = obj.SapCode;
+                    objUsersList.Country = obj.Country;
+
+                    string selectedLanguagecode = string.Empty;
+                    string[] language = obj.ddlSelectLanguageIDs;
+                    if (language != null)
                     {
-                        if (selectedLanguagecode != "")
+                        foreach (var item in language)
                         {
-                            selectedLanguagecode = selectedLanguagecode + "," + item.ToString();
-                        }
-                        else
-                        {
-                            selectedLanguagecode = item.ToString();
+                            if (selectedLanguagecode != "")
+                            {
+                                selectedLanguagecode = selectedLanguagecode + "," + item.ToString();
+                            }
+                            else
+                            {
+                                selectedLanguagecode = item.ToString();
+                            }
                         }
                     }
+                    objUsersList.Language = selectedLanguagecode;
+
+                    objUsersList.UpdatedbY = userid;
+                    objUsersList.UpdatedOn = DateTime.Now;
+
+                    //db.UsersLists.Add(objUsersList);
+                    if (db.SaveChanges() > 0)
+                    {
+
+                        var griddata = from vs in db.UsersLists
+                                       where vs.CustomerType == "DISTY"
+                                       orderby vs.CustomerType
+                                       select new UsersListModel
+                                       {
+                                           UserId = vs.UserId,
+                                           CustomerType = vs.CustomerType,
+                                           Name = vs.Dis_Name,
+                                           Address = vs.Dis_Address1,
+                                           City = vs.Dis_City,
+                                           State = vs.Dis_State,
+                                           ContactNo = vs.Dis_ContactNo,
+                                           Email = vs.Dis_Email,
+                                           //CreatedBY = vs.CreatedBY,
+                                       };
+
+                        UsersListModellst = griddata.ToList();
+
+
+                        data = new { result = UsersListModellst, TotalRecord = UsersListModellst.Count(), Message = "Data save successfully", MessageExist = "" };
+
+                    }
+
+                    else
+                    {
+                        return Json(data, JsonRequestBehavior.AllowGet);
+                    }
                 }
-                objUsersList.Language = selectedLanguagecode;
-
-                db.UsersLists.Add(objUsersList);
-                if (db.SaveChanges() > 0)
-                {
-
-                    var griddata = from vs in db.UsersLists
-                                   where vs.CustomerType == "DISTY"
-                                   orderby vs.CustomerType
-                                   select new UsersListModel
-                                   {
-                                       UserId = vs.UserId,
-                                       CustomerType = vs.CustomerType,
-                                       Name = vs.Dis_Name,
-                                       Address = vs.Dis_Address1,
-                                       City = vs.Dis_City,
-                                       State = vs.Dis_State,
-                                       ContactNo = vs.Dis_ContactNo,
-                                       Email = vs.Dis_Email,
-                                       //CreatedBY = vs.CreatedBY,
-                                   };
-
-                    UsersListModellst = griddata.ToList();
-
-
-                    data = new { result = UsersListModellst, TotalRecord = UsersListModellst.Count(), Message = "Data save successfully", MessageExist = "" };
-
-                }
-
                 else
                 {
-                    return Json(data, JsonRequestBehavior.AllowGet);
-                }
 
+                    //var echkexist = db.UsersLists.Where(x => x.Dis_Name.Trim().ToLower() == obj.Name.Trim().ToLower() & x.CustomerType == "DISTY").ToList();
+                    var echkexist = db.UsersLists.Where(x => x.Dis_Sap_Code == obj.SapCode & x.CustomerType == "DISTY").ToList();
+
+                    if (echkexist.Count() > 0)
+                    {
+                        data = new { result = new List<UsersListModel>(), TotalRecord = tcount, Message = "", MessageExist = "This Sap Code Already Exists" };
+                        return Json(data, JsonRequestBehavior.AllowGet);
+                    }
+
+                    objUsersList.Dis_Name = obj.Name;
+                    objUsersList.Dis_Address1 = obj.Address;
+                    objUsersList.Dis_ContactNo = obj.ContactNo;
+                    objUsersList.Dis_Email = obj.Email;
+                    objUsersList.Dis_State = obj.State;
+                    objUsersList.Dis_City = obj.City;
+
+                    objUsersList.UserId = userid;
+                    objUsersList.CustomerType = "DISTY";
+                   // objUsersList.Dis_Sap_Code = userid;
+                    objUsersList.CreatedBY = userid;
+                    objUsersList.CreatedON = DateTime.Now;
+
+                    objUsersList.Dis_Sap_Code = obj.SapCode;
+                    objUsersList.Country = obj.Country;
+
+                    string selectedLanguagecode = string.Empty;
+                    string[] language = obj.ddlSelectLanguageIDs;
+                    if (language != null)
+                    {
+                        foreach (var item in language)
+                        {
+                            if (selectedLanguagecode != "")
+                            {
+                                selectedLanguagecode = selectedLanguagecode + "," + item.ToString();
+                            }
+                            else
+                            {
+                                selectedLanguagecode = item.ToString();
+                            }
+                        }
+                    }
+                    objUsersList.Language = selectedLanguagecode;
+
+                    db.UsersLists.Add(objUsersList);
+                    if (db.SaveChanges() > 0)
+                    {
+
+                        var griddata = from vs in db.UsersLists
+                                       where vs.CustomerType == "DISTY"
+                                       orderby vs.CustomerType
+                                       select new UsersListModel
+                                       {
+                                           UserId = vs.UserId,
+                                           CustomerType = vs.CustomerType,
+                                           Name = vs.Dis_Name,
+                                           Address = vs.Dis_Address1,
+                                           City = vs.Dis_City,
+                                           State = vs.Dis_State,
+                                           ContactNo = vs.Dis_ContactNo,
+                                           Email = vs.Dis_Email,
+                                           //CreatedBY = vs.CreatedBY,
+                                       };
+
+                        UsersListModellst = griddata.ToList();
+
+
+                        data = new { result = UsersListModellst, TotalRecord = UsersListModellst.Count(), Message = "Data save successfully", MessageExist = "" };
+
+                    }
+
+                    else
+                    {
+                        return Json(data, JsonRequestBehavior.AllowGet);
+                    }
+
+                }               
+                               
             }
             return Json(data, JsonRequestBehavior.AllowGet);
         }
@@ -314,6 +390,10 @@ namespace LuminousMpartnerIB.Controllers
                 //DataRow[] result = dt.Select("pageurl ='" + pageUrl2 + "'");
                 if (true)
                 {
+
+                    UsersListModel obj = new UsersListModel();
+                    obj.ddlSelectLanguage = PopulateLanguage();
+
                     UsersList cud = db.UsersLists.Single(a => a.id == id);
 
 
@@ -327,7 +407,7 @@ namespace LuminousMpartnerIB.Controllers
                     ViewBag.State = cud.Dis_State;
                     ViewBag.City = cud.Dis_City;
 
-                    return View(cud);
+                    return View(obj);
                 }
                 else
                 {

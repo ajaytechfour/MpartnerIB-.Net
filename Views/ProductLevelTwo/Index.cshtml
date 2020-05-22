@@ -188,7 +188,6 @@
         var procat = $("#ParentCategory :selected").val();
 
         $.post("@Url.Content("~/ProductLevelTwo/GetProductCategory")", { procatid: procat }, function (data) { SetProdcutCategory_ParentCategory(data); }, "Json");
-
     }
 
 
@@ -306,7 +305,7 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span>Catalog - </span> Product Level To</h1>
+            <h1 class="pageHeading"><span>@LuminousMpartnerIB.Resource.Catalog - </span> @LuminousMpartnerIB.Resource.ProductLevelTwo</h1>
         </div>
     </div>
     @using (Html.BeginForm("SaveContact", "ProductLevelTwo", FormMethod.Post, new { @id = "forms", enctype = "multipart/form-data" }))
@@ -317,9 +316,9 @@
                     <div class="row" id="GridView">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Parent Category <span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.ParentCategory <span class="required">*</span></label>
                                 <select name="ParentCatid" onchange="ProdcutCategory();" id="ParentCategory" class="form-control">
-                                    <option>Select</option>
+                                    <option>@LuminousMpartnerIB.Resource.Select</option>
                                 </select>
                                 <br />
                                 @Html.ValidationMessageFor(model => model.ParentCatid, "", new { @class = "required" })
@@ -327,9 +326,9 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Product Category <span class="required">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.ProductCategory <span class="required">*</span></label>
                                 <select name="pcId" class="form-control" id="ProductCategory">
-                                    <option>Select</option>
+                                    <option>@LuminousMpartnerIB.Resource.Select</option>
                                 </select>
                                 <br />
                                 @Html.ValidationMessageFor(model => model.PrductID, "", new { @class = "required" })
@@ -338,7 +337,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Product Level Two</label>
+                                <label>@LuminousMpartnerIB.Resource.ProductLevelTwo</label>
                                 @Html.TextBoxFor(model => model.Name, new { @class = "form-control"})
                                 <br />
                                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "required" })
@@ -346,13 +345,13 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Status</label>
+                                <label>@LuminousMpartnerIB.Resource.Status</label>
                                 <input type="checkbox" checked="checked" name="statusC" style="border:none; height:inherit;" />
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="button" onclick="sub();" value="Submit" class="submitBtn" />
+                                <input type="button" onclick="sub();" value=@LuminousMpartnerIB.Resource.Submit class="submitBtn" />
                             </div>
                         </div>
                     </div>
@@ -368,9 +367,9 @@
 
                                 <table class="headingHd" style="width:100%;">
                                     <tr>
-                                        <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">Product Level Two List</th>
+                                        <th colspan="8" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@LuminousMpartnerIB.Resource.ProductLevelTwo @LuminousMpartnerIB.Resource.List</th>
                                         <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                            @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "Search", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+                                            @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = @LuminousMpartnerIB.Resource.Search, @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
                                             @*<input type="submit" id="btnsearch" value="Search" style="border:none; background: #ffaf38; padding: 7px 18px; border-radius: 5px;" />*@
                                         </th>
                                     </tr>
@@ -382,22 +381,22 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            ID
+                                            @LuminousMpartnerIB.Resource.ID
                                         </th>
                                         <th>
-                                            Parent Category
+                                            @LuminousMpartnerIB.Resource.ParentCategory
                                         </th>
                                         <th>
-                                            Product Category
+                                            @LuminousMpartnerIB.Resource.ProductCategory
                                         </th>
                                         <th>
-                                            Prodcut Level Two
+                                            @LuminousMpartnerIB.Resource.ProductLevelTwo
                                         </th>
                                         <th>
-                                            Status
+                                            @LuminousMpartnerIB.Resource.Status
                                         </th>
                                         <th style="text-align:right;">
-                                            Action
+                                            @LuminousMpartnerIB.Resource.Action
                                         </th>
                                     </tr>
                                 </thead>

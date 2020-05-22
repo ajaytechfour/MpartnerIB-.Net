@@ -11,7 +11,7 @@ using System.Data;
 using System.Web.Routing;
 namespace LuminousMpartnerIB.Controllers
 {
-    public class GalleryViewController : Controller
+    public class GalleryViewController : MultiLanguageController
     {
         //
         // GET: /Media/

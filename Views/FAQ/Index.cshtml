@@ -28,7 +28,7 @@
             $("#edate").text('@ViewBag.EndDate');
         }
 
-      
+
         if ('@ViewBag.SaveStatus' != "") {
             alert('@ViewBag.SaveStatus');
             location.href = "@Url.Content("~/FAQ/Index")";
@@ -129,7 +129,7 @@
             var body = "";
             $("#Grid tbody").empty();
             $.each(data.result, function (key, value) {
-               
+
 
                 body += "<tr><td>" + value.id + "</td>" +
              "<td>" + value.quesname + "</td>" +
@@ -244,7 +244,7 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>FAQs</h1>
+            <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.FAQs</h1>
         </div>
     </div>
 
@@ -258,21 +258,21 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="">
-                                <label style="display:block;">Question Text <span style="color: red;">*</span></label>
+                                <label style="display:block;">@LuminousMpartnerIB.Resource.QuestionText <span style="color: red;">*</span></label>
                                 @Html.TextAreaFor(a => a.FirstOrDefault().QuestionName, new { @class = "form-control" })<br />
                                 @Html.ValidationMessageFor(a => a.FirstOrDefault().QuestionName, "", new { @class = "required" })
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="">
-                                <label style="display:block;">Answer Text <span style="color: red;">*</span></label>
+                                <label style="display:block;">@LuminousMpartnerIB.Resource.AnswerText <span style="color: red;">*</span></label>
                                 @Html.TextAreaFor(a => a.FirstOrDefault().Answer, new { @class = "form-control" })<br />
                                 @Html.ValidationMessageFor(a => a.FirstOrDefault().Answer, "", new { @class = "required" })
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="">
-                                <label style="display:block;">Start Date<span style="color: red;">*</span></label>
+                                <label style="display:block;">@LuminousMpartnerIB.Resource.StartDate<span style="color: red;">*</span></label>
                                 @*<input id="stdate" type="text" class="date form-control" name="StartDate" /><br />*@
                                 <input id="sdate" type="text" placeholder="dd-mm-yyyy" autocomplete="off" class="date form-control" name="StartDate" /><br />
                                 <span id="sdate" class="required"></span>
@@ -280,7 +280,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="">
-                                <label style="display:block;"> End Date <span style="color: red;">*</span></label>
+                                <label style="display:block;"> @LuminousMpartnerIB.Resource.EndDate <span style="color: red;">*</span></label>
                                 @*<input id="etdate" type="text" class="date form-control" name="EndDate" />*@
                                 <input id="edate" type="text" placeholder="dd-mm-yyyy" autocomplete="off" class="date form-control" name="EndDate" />
                                 <br />
@@ -289,7 +289,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Status <span style="color: red;">*</span></label>
+                                <label>@LuminousMpartnerIB.Resource.Status <span style="color: red;">*</span></label>
                                 <input id="status" type="checkbox" checked="checked" name="Status" style="border:none; height:inherit;" />
                                 <br />
                                 <span class="Status"></span>
@@ -297,7 +297,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="submit" class="submitBtn" value="Submit" />
+                                <input type="submit" class="submitBtn" value=@LuminousMpartnerIB.Resource.Submit />
                             </div>
                         </div>
                     </div>
@@ -308,38 +308,38 @@
                 <div class="addgift" style="padding-bottom: 10px;">
                     <table class="headingHd">
                         <tr>
-                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">FAQ List</th>
+                            <th colspan="1" style="font-size: 20px;font-weight: normal;background: none; color: #595959; width: 79%;">@LuminousMpartnerIB.Resource.FAQList</th>
                             <th style="font-weight:normal;position: relative; background: none;  padding: 2px 0 0 0px;  font-size: 13px;">
-                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = "FAQ", @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
+                                @Html.TextBox("Search", null, new { Id = "txtsearch", @placeholder = @LuminousMpartnerIB.Resource.FAQs, @style = "padding: 7px 15px; border: 1px solid #eee; border-radius: 3px; color:#595959;" })<img src="/images/searchIcon.png" alt="" title="" style="position: absolute;right:12px; top:15px; opacity: 0.2;">
 
                             </th>
                         </tr>
                     </table>
-                        <div id="list" class="tabelGridRow">
-                            <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>FAQS</th>
-                                        <th>Start Date</th>
-                                        <th>End Date</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>                           
-                            <div>
-                                Pages :<span id="Paging"></span>
-                            </div>                         
+                    <div id="list" class="tabelGridRow">
+                        <table id="Grid" class="tabelGridRow2" style="width:100%; display:inline-table;">
+                            <thead>
+                                <tr>
+                                    <th>@LuminousMpartnerIB.Resource.ID</th>
+                                    <th>@LuminousMpartnerIB.Resource.FAQs</th>
+                                    <th>@LuminousMpartnerIB.Resource.StartDate</th>
+                                    <th>@LuminousMpartnerIB.Resource.EndDate</th>
+                                    <th>@LuminousMpartnerIB.Resource.Status</th>
+                                    <th>@LuminousMpartnerIB.Resource.Action</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <div>
+                            Pages :<span id="Paging"></span>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </div>
-        
-         }
-                       
+
+    }
+
     <div class="space30"></div>
     <div class="row">
         <div class="col-md-12">

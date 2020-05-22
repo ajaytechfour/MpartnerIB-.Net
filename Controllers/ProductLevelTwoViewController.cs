@@ -6,10 +6,11 @@ using System.Web.Mvc;
 using Luminous.EF;
 using System.Data;
 using LuminousMpartnerIB.EF;
+using LuminousMpartnerIB.Controllers;
 
 namespace Luminous.Controllers
 {
-    public class ProductLevelTwoViewController : Controller
+    public class ProductLevelTwoViewController : MultiLanguageController
     {
         //
         // GET: /ProductLevelTwo/

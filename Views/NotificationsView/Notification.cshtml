@@ -87,7 +87,7 @@
         //$("#DealerList").chosen({ width: "100px" });
         //ValidationMessage();
         $.post("@Url.Content("~/Price/GetDistributors")", null, function (data) { SetParentCategory(data); }, "Json");
-        
+
         $.post("@Url.Content("~/Destributor/GetRegions")", null, function (data) { SetProdcutCategory(data, 'RegionList'); },
         "Json");
         $.post("@Url.Content("~/Notifications/GetNotificationsDetail")", null, function (data) { SetGrid(data); }, "Json");
@@ -105,7 +105,7 @@
             option = "";
             var procat = $("#ddlDistributor");
             procat.empty();
-            procat.append("<option value=0>Select</option>");
+            procat.append("<option value=0>@LuminousMpartnerIB.Resource.Select</option>");
             $.each(data, function (key, value) {
                 option += "<option value=" + value.id + ">" + value.Name + "</option>";
 
@@ -324,7 +324,7 @@
 
     $(document).ready(function () {
         $("#btnSubmit").click(function () {
-            debugger;           
+            debugger;
             if ($("#NotificationText").val() == "") {
                 $("#lblmessagesubmit").text("Please fill all the fields");
                 return false;
@@ -333,7 +333,7 @@
             if ($("#NotificationSubject").val() == "") {
                 $("#lblmessagesubmit").text("Please fill all the fields");
                 return false;
-            }          
+            }
 
             //if ($('#file_headerimage').length == 0 || $('#file_headerimage').val() == '') {
             //    $("#lblmessagesubmit").text("Please fill all the fields");
@@ -344,7 +344,7 @@
             //    $("#lblmessagesubmit").text("Please fill all the fields");
             //    return false;
             //}
-           
+
         });
 
     });
@@ -354,7 +354,7 @@
 <div id="page-wrapper" style="background: #f2f4f8;">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="pageHeading"><span></span>Notification</h1>
+            <h1 class="pageHeading"><span></span>@LuminousMpartnerIB.Resource.Notification</h1>
         </div>
     </div>
 
@@ -365,15 +365,15 @@
             <div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="2500">
                 <div class="addgift" style="padding-bottom: 10px;">
                     <div class="row">
-                        
+
                         <div class="col-md-4">
                             <div class="">
-                                <label>Distributor Name <span class="required"></span></label>
+                                <label>@LuminousMpartnerIB.Resource.Distributor @LuminousMpartnerIB.Resource.Name <span class="required"></span></label>
                                 <select name="ddlDistributor" id="ddlDistributor" onchange="Getgriddata(this.value);" class="form-control">
-                                    <option>Select</option>
+                                    <option>@LuminousMpartnerIB.Resource.Select</option>
                                 </select>
                             </div>
-                        </div>                      
+                        </div>
                     </div>
                 </div>
             </div>
@@ -386,16 +386,16 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            ID
+                                            @LuminousMpartnerIB.Resource.ID
                                         </th>
                                         <th>
-                                            Subject
+                                            @LuminousMpartnerIB.Resource.Subject
                                         </th>
                                         <th>
-                                            Text
+                                            @LuminousMpartnerIB.Resource.Text
                                         </th>
                                         <th>
-                                            Image
+                                            @LuminousMpartnerIB.Resource.Image
                                         </th>
                                     </tr>
                                 </thead>

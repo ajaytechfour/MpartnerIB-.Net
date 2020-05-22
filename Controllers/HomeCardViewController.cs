@@ -16,7 +16,7 @@ using System.Dynamic;
 
 namespace LuminousMpartnerIB.Controllers
 {
-    public class HomeCardViewController : Controller
+    public class HomeCardViewController : MultiLanguageController
     {
         //
         // GET: /CreatePermotions/
